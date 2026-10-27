@@ -1,0 +1,8 @@
+{
+  "_": "Скопируйте этот файл в local/tokens.json и заполните. Файл local/ закрыт .gitignore — токены не попадут на GitHub. Ключ объекта = slug канала из config/channels.json.",
+  "example": {
+    "token": "ВСТАВЬТЕ_ТОКЕН_БОТА_ИЗ_business.max.ru",
+    "chat_id": 0,
+    "bot_username": "имя_бота_без_собаки"
+  }
+}

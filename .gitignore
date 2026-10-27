@@ -1,0 +1,15 @@
+# Секреты: токены, ключи, .env — никогда не коммитим
+local/tokens.json
+local/*.secret*
+.env
+.env.*
+
+# Служебные файлы
+*.log
+vendor/
+node_modules/
+__pycache__/
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
