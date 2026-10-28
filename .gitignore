@@ -1,6 +1,8 @@
-# Секреты: токены, ключи, .env — никогда не коммитим
-local/tokens.json
-local/*.secret*
+# Секреты и локальные файлы: вся папка local/ кроме шаблона токенов
+local/*
+!local/tokens.example.json
+
+# Прочие секреты
 .env
 .env.*
 
