@@ -49,6 +49,22 @@ if (!$chatId) {
     exit;
 }
 
+// служебное действие: удаление сообщения (тестовые посты, исправления)
+if (($in['action'] ?? '') === 'delete') {
+    $ch = curl_init('https://api.telegram.org/bot' . $cfg['token'] . '/deleteMessage');
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => ['chat_id' => $chatId, 'message_id' => (int)($in['message_id'] ?? 0)],
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_TIMEOUT => 20,
+    ]);
+    $out = curl_exec($ch);
+    $err = curl_error($ch);
+    curl_close($ch);
+    echo $out !== false ? $out : json_encode(['ok' => false, 'error' => 'relay: curl: ' . $err]);
+    exit;
+}
+
 $hasFile = !empty($_FILES['photo_file']['tmp_name']) && is_uploaded_file($_FILES['photo_file']['tmp_name']);
 $method = ($hasFile || !empty($in['photo'])) ? 'sendPhoto' : 'sendMessage';
 
