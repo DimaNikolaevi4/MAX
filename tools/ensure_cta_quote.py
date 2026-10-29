@@ -1,16 +1,22 @@
 # -*- coding: utf-8 -*-
-"""Правка старых постов: привести нижний блок к цитате-призыву (CTA) с ссылкой
+"""Правка постов канала: привести нижний блок к цитате-призыву (CTA) с ссылкой
 на канал + применить текстовые исправления из файла-задания.
 
+Работает для ЛЮБОГО канала проекта (параметр --channel, по умолчанию ainow).
+Конфиг канала берётся из config/channels.json (cta_label, cta_url),
+токен — из local/tokens.json[<канал>]["token"] (файл gitignored),
+фразы призыва — из channels/<канал>/cta-phrases.json.
+
 Использование:
-  python tools/ensure_cta_quote.py <post.md> [<post2.md> ...] [--dry-run]
+  python tools/ensure_cta_quote.py [--channel ainow] <post.md> [<post2.md> ...]
+                                   [--dry-run] [--dump-md]
 
 Файлы задания (необязательные): local/fix-<slug>.json
   {"replacements": [["старый точный текст", "новый текст"], ...]}
-Каждая замена должна встречаться ровно 1 раз, иначе пост пропускается.
+Каждая замена должна встречаться ровно 1 раз, иначе пост пропускается
+(PUT не выполняется, текущий md сохраняется в local/md-<slug>.txt).
 
-Фразы CTA: local/cta-assignments.json — {"<имя файла поста>": "фраза"}.
-Отчёт: local/cta-batch-report.txt (UTF-8).
+Отчёт: local/cta-batch-report-<канал>.txt (UTF-8).
 """
 import json
 import re
@@ -20,19 +26,39 @@ import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-REPO = Path(r"E:\github\MAX")
-TOKEN = json.loads((REPO / "local" / "tokens.json").read_text(encoding="utf-8"))
-# токен бота ainow лежит под ключом канала
-AINOW = TOKEN.get("ainow") or TOKEN
-TOKEN_STR = AINOW.get("token") if isinstance(AINOW, dict) else None
-if not TOKEN_STR:
-    raise SystemExit("не нашёл токен в local/tokens.json")
+REPO = Path(__file__).resolve().parent.parent
 API = "https://platform-api2.max.ru"
-CTA_URL = "https://max.ru/channel_ainow"
 REPORT = []
 
-DRY = "--dry-run" in sys.argv
-POSTS = [a for a in sys.argv[1:] if not a.startswith("--")]
+# --- аргументы ---
+args = sys.argv[1:]
+CHANNEL = "ainow"
+if "--channel" in args:
+    i = args.index("--channel")
+    CHANNEL = args[i + 1]
+    del args[i:i + 2]
+DRY = "--dry-run" in args
+DUMP = "--dump-md" in args
+POSTS = [a for a in args if not a.startswith("--")]
+
+# --- конфигурация канала ---
+cfg_all = json.loads((REPO / "config" / "channels.json").read_text(encoding="utf-8"))
+cfg = next((c for c in cfg_all["channels"] if c["slug"] == CHANNEL), None)
+if not cfg:
+    raise SystemExit(f"канал {CHANNEL!r} не найден в config/channels.json")
+CTA_LABEL = cfg.get("cta_label")
+CTA_URL = cfg.get("cta_url")
+if not (CTA_LABEL and CTA_URL):
+    raise SystemExit(f"в config/channels.json для {CHANNEL!r} нет cta_label/cta_url")
+
+tokens = json.loads((REPO / "local" / "tokens.json").read_text(encoding="utf-8"))
+entry = tokens.get(CHANNEL) or {}
+TOKEN_STR = entry.get("token") if isinstance(entry, dict) else None
+if not TOKEN_STR:
+    raise SystemExit(f"в local/tokens.json нет записи {CHANNEL!r} с полем token")
+
+cta_assign = json.loads(
+    (REPO / "channels" / CHANNEL / "cta-phrases.json").read_text(encoding="utf-8"))
 
 
 def api(method: str, url: str, payload_path: Path | None = None, out: Path | None = None) -> int:
@@ -92,7 +118,8 @@ def build_markdown(text: str, markup: list) -> str:
     return "".join(out)
 
 
-cta_assign = json.loads((REPO / "local" / "cta-assignments.json").read_text(encoding="utf-8"))
+get_json = REPO / "local" / f"cta-get-{CHANNEL}.json"
+put_json = REPO / "local" / f"cta-put-{CHANNEL}.json"
 
 for post_path in POSTS:
     p = Path(post_path)
@@ -109,7 +136,6 @@ for post_path in POSTS:
         mid = mid_m.group(1)
 
         # 1. GET текущего состояния
-        get_json = REPO / "local" / "cta-get.json"
         if api("GET", f"/messages/{mid}", out=get_json) != 0:
             raise ValueError("GET failed (curl)")
         d = json.loads(get_json.read_text(encoding="utf-8"))
@@ -122,8 +148,8 @@ for post_path in POSTS:
         #    предыдущему абзацу одиночным \n — блок целиком заменять нельзя)
         reason = cta_assign.get(name)
         if not reason:
-            raise ValueError("нет фразы CTA в cta-assignments.json")
-        cta_line = f"> **Подписывайтесь на [AI]({CTA_URL})** — {reason}"
+            raise ValueError(f"нет фразы в channels/{CHANNEL}/cta-phrases.json")
+        cta_line = f"> **Подписывайтесь на [{CTA_LABEL}]({CTA_URL})** — {reason}"
         lines = md.split("\n")
         cta_lines = [i for i, ln in enumerate(lines) if "Подписывайтесь" in ln]
         if len(cta_lines) > 1:
@@ -141,7 +167,7 @@ for post_path in POSTS:
         md = "\n".join(lines).rstrip("\n") + "\n\n" + cta_line + "\n"
         blocks = md.split("\n\n")
 
-        if "--dump-md" in sys.argv:
+        if DUMP:
             (REPO / "local" / f"md-{slug}.txt").write_text("\n\n".join(blocks), encoding="utf-8")
             REPORT.append(f"[DUMP] {name}: md сохранён")
             continue
@@ -166,7 +192,6 @@ for post_path in POSTS:
             raise ValueError(f"длина {len(final_md)} > 4000")
 
         # 4. PUT
-        put_json = REPO / "local" / "cta-put.json"
         put_json.write_text(json.dumps({"text": final_md.rstrip("\n"), "format": "markdown"},
                                        ensure_ascii=False), encoding="utf-8")
         if DRY:
@@ -183,7 +208,7 @@ for post_path in POSTS:
         b2 = json.loads(get_json.read_text(encoding="utf-8"))["body"]
         t2 = b2["text"]
         checks = {
-            "CTA в тексте": "Подписывайтесь на AI" in t2[-200:],
+            "CTA в тексте": f"Подписывайтесь на {CTA_LABEL}" in t2[-200:],
             "нет '>' в тексте": ">" not in t2,
             "ссылка канала в разметке": any(m.get("url") == CTA_URL for m in (b2.get("markup") or [])),
             "вложение сохранено": len(b2.get("attachments") or []) == atts_before,
@@ -205,5 +230,5 @@ for post_path in POSTS:
     except Exception as e:
         REPORT.append(f"FAIL {name}: {e}")
 
-(REPO / "local" / "cta-batch-report.txt").write_text("\n".join(REPORT), encoding="utf-8")
+(REPO / "local" / f"cta-batch-report-{CHANNEL}.txt").write_text("\n".join(REPORT), encoding="utf-8")
 print(f"done: {len(REPORT)} записей")

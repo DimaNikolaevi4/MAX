@@ -9,7 +9,9 @@
     {
       "slug": "ainow",
       "title": "AI",
-      "description": "Обзоры лучших нейросетей для работы, бизнеса и творчества. AI-инструменты, готовые промпты, реальные кейсы. https://max.ru/channel_ainow"
+      "description": "Обзоры лучших нейросетей для работы, бизнеса и творчества. AI-инструменты, готовые промпты, реальные кейсы. https://max.ru/channel_ainow",
+      "cta_label": "AI",
+      "cta_url": "https://max.ru/channel_ainow"
     },
     {
       "slug": "al",
