@@ -53,6 +53,10 @@
 - Загрузка изображения: `POST /uploads?type=image` → одноразовый url →
   `curl -F "data=@file"` → токен из `{"photos":{"0":{"token":...}}}` →
   `attachments: [{"type":"image","payload":{"token":...}}]`.
+- Закреп поста: `PUT /chats/{chat_id}/pin` с `{"message_id": "..."}`;
+  проверка — `GET /chats/{chat_id}`, поле `pinned_message`. Снятие —
+  тот же эндпоинт с `{"message_id": null}` (не проверено).
+- Описание канала: `PATCH /chats/{chat_id}` с `{"description": "..."}`.
 
 ## 5. Жизненный цикл (кратко; полностью — `AGENTS.md`, раздел 3)
 
