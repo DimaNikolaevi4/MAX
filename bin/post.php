@@ -111,7 +111,7 @@ foreach ($args as $arg) {
 }
 
 if ($postPath === null) {
-    fail('Укажите путь к файлу поста. Пример: php bin/post.php channels/example/posts/2026-10-27-primer.md');
+    fail('Укажите путь к файлу поста. Пример: php bin/post.php channels/ainow/posts/2026-10-29-brauzernye-aiagenty-ustupayut-rabochemu-stolu.md');
 }
 if (!is_file($postPath)) {
     fail("Файл поста не найден: {$postPath}");

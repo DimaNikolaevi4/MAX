@@ -264,7 +264,9 @@ Content-Type: application/json
 2. Внести текстовые правки в файл поста в архиве.
 3. Собрать Markdown точными заменами по фрагментам разметки, каждая замена —
    с проверкой числа вхождений (ожидалось/найдено). Рабочие примеры —
-   `tools/example-*.py` (сборка, снятие фрагментов, проверка после PUT).
+   `tools/build_markdown.py` (сборка md из текста и разметки),
+   `tools/markup_fragments.py` (снятие фрагментов) и
+   `tools/ensure_cta_quote.py` (пакетные правки + проверка после PUT).
 4. `PUT /messages?message_id=...` с `{"text": ..., "format": "markdown"}`,
    без вложений.
 5. `GET /messages/{message_id}` — проверить: правки на месте, вложение

@@ -13,14 +13,17 @@ MAX/
 ├── AGENTS.md               # Методика и правила для ИИ-агентов (главный файл)
 ├── README.md               # Этот файл (для людей)
 ├── docs/
-│   └── bot-setup.md        # Пошаговая настройка бота с нуля (проверено на практике)
+│   ├── bot-setup.md          # Пошаговая настройка бота с нуля (проверено на практике)
+│   └── agent-onboarding.md   # Вход для нового ИИ-агента (что читать, чего не делать)
 ├── bin/
 │   └── post.php            # CLI-скрипт отправки поста (PHP 8.1+, расширение curl)
 ├── config/
-│   └── channels.json       # Реестр каналов (slug, название, описание; БЕЗ токенов)
+│   └── channels.json       # Реестр каналов (slug, название, cta_label/cta_url; БЕЗ токенов)
 ├── channels/
 │   └── <slug>/             # Отдельная папка на каждый канал
 │       ├── style.md        # Описание стиля канала (тон, темы, оформление)
+│       ├── cta-phrases.json# Реестр фраз призыва (CTA) — не повторяются между постами
+│       ├── proofread.md    # Статус вычитки/правок (если есть)
 │       └── posts/          # Все посты канала: черновики и опубликованные
 └── local/
     ├── tokens.example.json # Шаблон файла с токенами
@@ -33,7 +36,7 @@ MAX/
 
 ```markdown
 ---
-channel: example          # slug канала (должен совпадать с папкой)
+channel: ainow            # slug канала (должен совпадать с папкой)
 status: draft             # draft -> approved -> published
 format: markdown          # markdown | html
 notify: true              # push-уведомления (для каналов должно быть true)
@@ -57,7 +60,7 @@ url: null                 # заполняется скриптом (публи�
 На машине/хостинге с PHP 8.1+ и расширением curl:
 
 ```bash
-php bin/post.php channels/example/posts/2026-10-27-primer-posta.md
+php bin/post.php channels/ainow/posts/2026-10-29-brauzernye-aiagenty-ustupayut-rabochemu-stolu.md
 ```
 
 Опции:
