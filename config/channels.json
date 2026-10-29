@@ -10,6 +10,11 @@
       "slug": "ainow",
       "title": "AI",
       "description": "Обзоры лучших нейросетей для работы, бизнеса и творчества. AI-инструменты, готовые промпты, реальные кейсы. https://max.ru/channel_ainow"
+    },
+    {
+      "slug": "al",
+      "title": "AL",
+      "description": "Канал AL. Ещё не подключён к боту: правила оформления — channels/al/style.md (обязательный формат поста). После подключения заполнить title/description и добавить token/chat_id в local/tokens.json."
     }
   ]
 }
