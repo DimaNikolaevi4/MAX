@@ -10,7 +10,7 @@ channel_id: -76964086179165
 url: https://max.ru/channel_ainow/AaDnNea7FzY
 views: 122
 image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQRC0h5HZUj1M4laKJHK5vvq3kZUliB_SZNjEh_WXpQz_UOGBs6U1V3UoABf40QEXEOaFJWBdAm3JmfBPfDYPg
-edited_at: 2026-10-29T06:09:50+03:00
+edited_at: 2026-10-29T06:59:11+03:00
 ---
 
 🧰 **Replit + GitHub: как выдать ИИ-агенту не кабинет, а цех**
@@ -69,3 +69,5 @@ Replit даёт агенту руки, GitHub — память. Вместе —
 Попробуйте: цель → 5–7 задач → чек-лист в GitHub → репозиторий к Replit → промпт из шага 4.
 
 А как у вас? Пробовали Replit? Используете GitHub как рабочее пространство для агента? Напишите — разберём под ваши задачи.
+
+> **Подписывайтесь на [AI](https://max.ru/channel_ainow)** — методики работы с ИИ — проверенные на практике!
