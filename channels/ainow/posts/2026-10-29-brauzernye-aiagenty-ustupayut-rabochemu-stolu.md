@@ -7,6 +7,7 @@ published_at: 2026-10-29T06:09:19+03:00
 message_id: mid.ffffba0066fb9aa301a185a22936405d
 channel_id: -76964086179165
 url: https://max.ru/channel_ainow/AaGFoik2QF0
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCSg8ylJk64-nHY0jU0FSi5w69jgMG6Zt6MyyYOqaXU2N4aRXA61E58_x2IwPGAN3FwS9FWKQtCeU1kctmfj54w
 ---
 
 🧭 **Браузерные ИИ-агенты сдают позиции: индустрия перебирается на рабочий стол**
@@ -19,7 +20,7 @@ url: https://max.ru/channel_ainow/AaGFoik2QF0
 — Google перевела команду браузерного агента Project Mariner на агентную стратегию Gemini.
 — Anthropic развивает Claude Cowork — десктопного агента с доступом к файлам и приложениям и бесшовным продолжением задачи с телефона на компьютер.
 — Microsoft строит Copilot Cowork — агента, живущего прямо в Windows.
-— Z.ai выпустила AutoClaw — десктопного агента, который ставит и настраивает окружение OpenClaw в один клик.
+— [Z.ai](https://Z.ai) выпустила AutoClaw — десктопного агента, который ставит и настраивает окружение OpenClaw в один клик.
 
 Когда пять крупнейших игроков одновременно делают одно и то же — это не совпадение, а смена парадигмы.
 

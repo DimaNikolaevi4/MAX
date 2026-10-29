@@ -154,6 +154,28 @@ channels/<slug>: опубликован пост <файл>
   репозитории не появится планировщик.
 - Стратегия отладки: сначала `--dry-run`, затем отправка.
 
+## 8а. Загрузка изображения и прикрепление к посту
+
+1. `POST /uploads?type=image` (токен в `Authorization`) → ответ
+   `{"url": "https://iu.oneme.ru/uploadImage?r=..."}` — одноразовый URL загрузки.
+2. `curl.exe -X POST -F "data=@файл.png;type=image/png;filename=имя.png" "<url>"`
+   → ответ `{"photos": {"0": {"token": "..."}}}` — токен вложения.
+3. Прикрепление: в `POST /messages` или `PUT /messages?message_id=...` передать
+   `"attachments": [{"type": "image", "payload": {"token": "<токен>"}}]`.
+   `PUT` принимает вложения так же, как `POST`; текст при этом передаётся как
+   обычно (Markdown), существующие вложения без поля `attachments` сохраняются.
+4. Ссылку на картинку на CDN берём из `GET /messages/{mid}` →
+   `body.attachments[0].payload.url` (домен `i.oneme.ru`) — её записываем в
+   `image:` front matter поста.
+5. Проверка: `GET /messages/{mid}` — `attachments == 1`, текст и разметка не
+   изменились.
+
+Генерация карточек (если у агента нет готовой картинки): Pillow (тёмный
+градиент + неоновые элементы, шрифты `C:\Windows\Fonts\segoeuib.ttf` /
+`seguisb.ttf`, размер 1400×788). Свечение — только через paste с растушёванной
+маской: blend всего холста затемняет уже нарисованный текст. Пример:
+`local/make_card_1029.py`.
+
 ## 9. Правка опубликованного поста
 
 Правка делается в том же сообщении канала (`PUT /messages?message_id=...`) —
