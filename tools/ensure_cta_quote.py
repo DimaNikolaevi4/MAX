@@ -132,12 +132,19 @@ for post_path in POSTS:
             old_line = lines[cta_lines[0]].strip()
             changed_cta = f"CTA заменён (был: {old_line[:70]!r})"
             lines.pop(cta_lines[0])
-            md = "\n".join(lines).rstrip("\n")
-            changed_cta += "; приклеенные пустые хвосты убраны"
+            # сироты-хвосты: оторванные знаки и пустые строки после CTA
+            JUNK = {"", ".", "!", "—", "–", "-", "🚀", "👇"}
+            while lines and lines[-1].strip() in JUNK:
+                lines.pop()
         else:
             changed_cta = "CTA добавлен (не было строки призыва)"
-        md = md.rstrip("\n") + "\n\n" + cta_line + "\n"
+        md = "\n".join(lines).rstrip("\n") + "\n\n" + cta_line + "\n"
         blocks = md.split("\n\n")
+
+        if "--dump-md" in sys.argv:
+            (REPO / "local" / f"md-{slug}.txt").write_text("\n\n".join(blocks), encoding="utf-8")
+            REPORT.append(f"[DUMP] {name}: md сохранён")
+            continue
 
         # 3. Текстовые замены (если есть файл задания)
         fix_file = REPO / "local" / f"fix-{slug}.json"
@@ -148,7 +155,8 @@ for post_path in POSTS:
             for old, new in fixes:
                 n = joined.count(old)
                 if n != 1:
-                    raise ValueError(f"замена {old[:40]!r}: вхождений {n}, нужно 1")
+                    (REPO / "local" / f"md-{slug}.txt").write_text(joined, encoding="utf-8")
+                    raise ValueError(f"замена {old[:40]!r}: вхождений {n}, нужно 1 (md в local/md-{slug}.txt)")
                 joined = joined.replace(old, new)
                 applied_fixes.append(old[:40])
             blocks = joined.split("\n\n")
