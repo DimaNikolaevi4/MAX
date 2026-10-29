@@ -1,8 +1,9 @@
 {
-  "_": "Реестр каналов проекта. slug должен совпадать с именем папки в channels/ и записью в local/tokens.json. Токены здесь НЕ хранятся! cta_label/cta_url — куда ведёт призыв в постах ЭТОГО канала (у закрывающихся каналов это основной канал ainow).",
+  "_": "Реестр каналов проекта. slug должен совпадать с именем папки в channels/ и записью в local/tokens.json. Токены здесь НЕ хранятся! platform — max или telegram (способ публикации). cta_label/cta_url — куда ведёт призыв в постах ЭТОГО канала (у закрывающихся каналов это основной канал ainow).",
   "channels": [
     {
       "slug": "ainow",
+      "platform": "max",
       "title": "AI",
       "description": "Обзоры лучших нейросетей для работы, бизнеса и творчества. AI-инструменты, готовые промпты, реальные кейсы. https://max.ru/channel_ainow",
       "cta_label": "AI",
@@ -10,6 +11,7 @@
     },
     {
       "slug": "na100",
+      "platform": "max",
       "title": "Нейросети и ИИ",
       "description": "Закрывающийся канал (https://max.ru/channel_na100), объединяется с ainow. Задача — перелинковка подписчиков на основной канал. CTA всех постов ведёт на https://max.ru/channel_ainow",
       "cta_label": "AI",
@@ -17,9 +19,18 @@
     },
     {
       "slug": "administrator",
+      "platform": "max",
       "title": "Администрирование каналов",
       "description": "Закрывающийся канал (https://max.ru/channel_administrator), объединяется с ainow. Аудитория — авторы и админы каналов MAX. Задача — перелинковка подписчиков на основной канал. CTA всех постов ведёт на https://max.ru/channel_ainow",
       "cta_label": "AI",
+      "cta_url": "https://max.ru/channel_ainow"
+    },
+    {
+      "slug": "tg_neuro",
+      "platform": "telegram",
+      "title": "Neuro Animation Studio",
+      "description": "Telegram-канал https://t.me/Neuro_Animation_Studio, закрывается: аудитория переливается в ainow (MAX). Публикация — через релей на хостинге (deploy/tg-relay.php), т.к. api.telegram.org из локальной среды недоступен.",
+      "cta_label": "AI в MAX",
       "cta_url": "https://max.ru/channel_ainow"
     }
   ]
