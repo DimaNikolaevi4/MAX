@@ -1,8 +1,12 @@
 ---
 channel: ainow
-status: draft
+status: published
 format: markdown
 notify: true
+published_at: 2026-10-29T06:09:19+03:00
+message_id: mid.ffffba0066fb9aa301a185a22936405d
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaGFoik2QF0
 ---
 
 🧭 **Браузерные ИИ-агенты сдают позиции: индустрия перебирается на рабочий стол**
