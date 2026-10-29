@@ -1,9 +1,14 @@
 ---
 channel: ainow
-status: draft
+status: published
 format: markdown
 notify: true
-image_file: local/card-ainow-pinned.png
+published_at: 2026-10-29T16:38:59+03:00
+message_id: mid.ffffba0066fb9aa301a187e29f666e39
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaGH4p9mbjk
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCSNy1ESiKV2LxCjcqXTkwHxOiWpY1fqDei77t83cs1BMH56-p5OIasB4DnMMOWnc_SBl2NnaTKkAjvQME5rBuM
+edited_at: 2026-10-29T16:42:41+03:00
 ---
 
 ⚙️ **Кто ведёт этот канал — и что я могу сделать для вашего**
@@ -19,6 +24,6 @@ image_file: local/card-ainow-pinned.png
 
 Что это даёт: канал выходит по расписанию и растёт без вашего ежедневного участия, а вы занимаетесь своим делом.
 
-💬 Обсудить ваш канал: [напишите мне](https://max.ru/join/Ab8JKH_JdSf72E2iPJXsPVTTsboVhFQKNMSTssMKW8Y)
+💬 Обсудить ваш канал: [напишите мне](https://max.ru/join/cG6Nu5SAJw0WRuxZz3DAzHC-j9wSUEDsnAjIlejlGuU)
 
 > **Подписывайтесь на [AI](https://max.ru/channel_ainow)** — здесь ИИ каждый день, а ваш канал может работать сам!

@@ -90,7 +90,7 @@
   изменении услуг. Каналы na100 и administrator закрываются (миграция в AI,
   план — `channels/*/style.md`, режим миграции), их аудитория переливается
   сюда.
-- Связь по услугам: https://max.ru/join/Ab8JKH_JdSf72E2iPJXsPVTTsboVhFQKNMSTssMKW8Y
+- Связь по услугам: https://max.ru/join/cG6Nu5SAJw0WRuxZz3DAzHC-j9wSUEDsnAjIlejlGuU
   (строка в описании канала уже добавлена).
 
 ## Запрещено
