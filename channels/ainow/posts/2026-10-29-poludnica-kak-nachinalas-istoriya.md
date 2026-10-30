@@ -1,8 +1,13 @@
 ---
 channel: ainow
-status: draft
+status: published
 format: markdown
 notify: true
+published_at: 2026-10-30T08:16:40+03:00
+message_id: mid.ffffba0066fb9aa301a18b3d147633b5
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaGLPRR2M7U
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCS5AMiqP7kIw_BAGVJnvSsS4g_eFcPiIB2PbxhyoH4W8-bB0VRIS17opJpcGsYZpaCwAfJntIr2biDEYCKUDkw
 ---
 
 🎬 **Нейро-мультфильм «Полудница»: как это начиналось**
