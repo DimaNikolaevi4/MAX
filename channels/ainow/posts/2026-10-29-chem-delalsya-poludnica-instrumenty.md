@@ -1,8 +1,13 @@
 ---
 channel: ainow
-status: draft
+status: published
 format: markdown
 notify: true
+published_at: 2026-10-30T08:16:50+03:00
+message_id: mid.ffffba0066fb9aa301a18b3d3b4a5e8c
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaGLPTtKXow
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQia-SLZLQl9r1ENGfoTfgpX9TFRDe21G6GdY6OzTmOIfmDqxTMW0y8gvNabGP54kVlnpjwHpH4pPmkSyKc3FU
 ---
 
 🛠 **Чем делался «Полудница»: четыре инструмента в связке**
