@@ -7,7 +7,8 @@ published_at: 2026-10-30T08:16:50+03:00
 message_id: mid.ffffba0066fb9aa301a18b3d3b4a5e8c
 channel_id: -76964086179165
 url: https://max.ru/channel_ainow/AaGLPTtKXow
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQia-SLZLQl9r1ENGfoTfgpX9TFRDe21G6GdY6OzTmOIfmDqxTMW0y8gvNabGP54kVlnpjwHpH4pPmkSyKc3FU
+video: https://maxvd697.okcdn.ru/?expires=1793424964667&srcIp=10.131.192.104&pr=112&srcAg=UNKNOWN&ms=130.49.230.13&type=3&sig=t7zKpcs0lJM&ct=0&urls=130.49.231.37&clientType=51&id=19380959775371&scl=1
+media_replaced_at: 2026-10-30T08:36:05+03:00
 ---
 
 🛠 **Чем делался «Полудница»: четыре инструмента в связке**

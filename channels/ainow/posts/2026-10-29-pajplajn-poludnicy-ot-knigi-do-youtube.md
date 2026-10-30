@@ -7,7 +7,8 @@ published_at: 2026-10-30T08:16:59+03:00
 message_id: mid.ffffba0066fb9aa301a18b3d602f646e
 channel_id: -76964086179165
 url: https://max.ru/channel_ainow/AaGLPWAvZG4
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCSvDJPZCpUVnzEzl5TNWtlU9HJ3oWzurxMB7J83GdCOOAN3yuS6xJA2JeP-uUsm0DxcFBGoeqTRkcFzUnvTgd4
+video: https://maxvd694.okcdn.ru/?expires=1793425389417&srcIp=10.131.192.195&pr=112&srcAg=UNKNOWN&ms=130.49.230.10&type=4&sig=ka6_bmRzgKw&ct=27&urls=130.49.229.68&clientType=51&id=19381100350091&scl=1
+media_replaced_at: 2026-10-30T08:43:09+03:00
 ---
 
 ⚙️ **Пайплайн нейро-мультфильма: от текста книги до YouTube**
