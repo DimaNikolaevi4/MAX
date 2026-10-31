@@ -7,7 +7,7 @@ published_at: 2026-10-29T16:34:41+03:00
 message_id: mid.ffffba0776009aa301a187dde60f0227
 channel_id: -76933769422173
 url: https://max.ru/channel_administrator/AaGH3eYPAic
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCSt71dcIIUdtXCmAg1WTdvzWpnpK1iZN3PE7AE7L4PAoMdx_JJconqNIDKx8qCmwQcS8SOM1GJREfdSkkDdk8M
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCR8aI2h28xeLoqck7RRkNETEVGvqY2Nu58LJrymLhCwpxkgEmvWxmVdVPjmxghHHY0QjZMZs4jsIdyrBPzRP4M
 ---
 
 🚀 **Канал объединяется с AI: инструменты для авторов каналов теперь там**
