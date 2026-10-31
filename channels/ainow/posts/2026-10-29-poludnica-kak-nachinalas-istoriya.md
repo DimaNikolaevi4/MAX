@@ -9,6 +9,7 @@ channel_id: -76964086179165
 url: https://max.ru/channel_ainow/AaGLPRR2M7U
 image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQxKssA6YsAdgshXbAISaAAhUjpe85eFFFi5MvNUtFqn5PG4Gvhwa_VIaQEHtFknFxpFUjA1gL4YG0OKEo_KeI
 media_replaced_at: 2026-10-30T08:43:20+03:00
+edited_at: 2026-10-31T14:47:11+03:00
 ---
 
 🎬 **Нейро-мультфильм «Полудница»: как это начиналось**
@@ -24,5 +25,11 @@ media_replaced_at: 2026-10-30T08:43:20+03:00
 Вывод, который я сделал тогда и подтверждаю до сих пор: нейросети уже способны на цельный авторский продукт — но только в руках того, кто готов дорабатывать вручную.
 
 💬 Смотрели «Полудницу» или делаете своё нейровидео? Расскажите в комментариях, что у вас получилось.
+
+📚 **По теме в канале:**
+
+— [Чем делался «Полудница»: четыре инструмента](https://max.ru/channel_ainow/AaGLPTtKXow);
+
+— [Готовая серия мультфильма: переход от кадров к эпизоду](https://max.ru/channel_ainow/AaGRwLmfXcs).
 
 > **Подписывайтесь на [AI](https://max.ru/channel_ainow)** — показываем ИИ-творчество из первых рук!
