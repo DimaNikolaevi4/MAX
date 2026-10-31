@@ -7,7 +7,7 @@ published_at: 2026-10-30T08:52:36+03:00
 message_id: mid.ffffba0776009aa301a18b5dfd476e7d
 channel_id: -76933769422173
 url: https://max.ru/channel_administrator/AaGLXf1Hbn0
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQd8vWjRfpl2BSAuR0BOEifbJC6dktu7tiRMPT2mvr_-c3pqHlZKMjqZH3qn0XlAV71bAOtvry9hdcTKjTQfbo
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQc50B0Xa-qUUPZHQsjFK68gyC-koflzXDLvBjoLdJPh7mTCs-Ec9Z8Ku1sStlGjglQ0ixH_Bc7jCdYDCaJ3Do
 ---
 
 🛠 **ИИ-агент для канала: что уже можно автоматизировать**

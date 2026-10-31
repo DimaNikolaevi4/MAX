@@ -7,7 +7,7 @@ published_at: 2026-10-30T08:52:26+03:00
 message_id: mid.ffffba08e9ee9aa301a18b5dd5700dfb
 channel_id: -76927529477469
 url: https://max.ru/channel_na100/AaGLXdVwDfs
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQf4XmxbfyxESqrrvPzvztM9PtOMp8NwvF2qCkJJmY5jzoSXyl24u4oGz6kWmplqwS-jLfj_3ANW9rcAn8ZjE8
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQR5Mu6vh86qsafW90RF1Ea124IDT3jy96-t_iRlpK7p59wCjrcwMMWCP-xglvjcXut82W8IBkPeTkXFd9S_bQ
 ---
 
 🎯 **Что вы найдёте в AI: три поста, с которых удобно начать**

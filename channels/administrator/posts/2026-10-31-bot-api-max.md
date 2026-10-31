@@ -7,7 +7,7 @@ published_at: 2026-10-31T13:49:25+03:00
 message_id: mid.ffffba0776009aa301a1919419964749
 channel_id: -76933769422173
 url: https://max.ru/channel_administrator/AaGRlBmWR0k
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQHie9ltvGhEWD2E8HfSMPSsBOyfImZdAZj9TRXsIlM_yvLdBxNqtpRHV1fgy_60b3FDc51u4Y_xs0rPtwAkEI
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCSMweq0fpN6Dq6HnFUI75DT8vyxNIvlZhEL_sntYz0XWJ_4NRkyZhsOip5S_rr29kHaAxjXnEPzSNfxPJBma2E
 ---
 
 🛠 **Bot API MAX: что реально умеет бот канала**

@@ -7,7 +7,7 @@ published_at: 2026-10-31T13:49:16+03:00
 message_id: mid.ffffba08e9ee9aa301a19193f5f53afd
 channel_id: -76927529477469
 url: https://max.ru/channel_na100/AaGRk_X1Ov0
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTPWQ_ZcY7epnNx84jJyy0bCjUyaiCoH_RByBRsIM8I5WUQVgVcLma2TZWCWZwPeFgRzohEgK3rDiI-AATR75M
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQr9n2MNsd1iXALgJBJ5lIGikK_mFze8NhL9S9IBBtLuMx47b8KcyumhULHtdX1SuFHkdelicxl-_xFyvcAwsc
 ---
 
 🎯 **Нейросети, доступные из России: что открыть прямо сейчас**
