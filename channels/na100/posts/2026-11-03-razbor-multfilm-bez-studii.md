@@ -3,7 +3,7 @@ channel: na100
 status: draft
 format: markdown
 notify: true
-image_file: local/cards/card-na100-2026-11-03.png
+image_file: local/images/ainow/2026-07-16-4-aiinstrumenta-kotorye-sekonomyat-vam-5.jpg
 ---
 
 🎥 **Разбор: как собрать мультфильм без студии**

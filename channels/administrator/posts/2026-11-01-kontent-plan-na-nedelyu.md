@@ -3,7 +3,7 @@ channel: administrator
 status: draft
 format: markdown
 notify: true
-image_file: local/cards/card-administrator-2026-11-01.png
+image_file: local/images/ainow/2026-07-23-zabudte-pro-muki-verstki-v-powerpoint.jpg
 ---
 
 📅 **Контент-план на неделю: как собрать его с ИИ за час**

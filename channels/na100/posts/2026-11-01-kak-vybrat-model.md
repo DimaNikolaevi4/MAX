@@ -3,7 +3,7 @@ channel: na100
 status: draft
 format: markdown
 notify: true
-image_file: local/cards/card-na100-2026-11-01.png
+image_file: local/images/ainow/2026-10-12-chatgpt-vs-qwen-chestnoe-sravnenie-v.jpg
 ---
 
 🧠 **Как выбрать модель под задачу: четыре вопроса**

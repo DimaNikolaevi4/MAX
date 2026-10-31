@@ -3,7 +3,7 @@ channel: na100
 status: draft
 format: markdown
 notify: true
-image_file: local/cards/card-na100-2026-11-02.png
+image_file: local/images/ainow/2026-08-16-besplatnye-brauzernye-aiagenty-kak-oboyti-ogranichenie.jpg
 ---
 
 ⚡ **Пять промптов, которые экономят час в день**

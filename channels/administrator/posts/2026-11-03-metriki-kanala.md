@@ -3,7 +3,7 @@ channel: administrator
 status: draft
 format: markdown
 notify: true
-image_file: local/cards/card-administrator-2026-11-03.png
+image_file: local/images/ainow/2026-09-28-replit-github-kak-vydat-iiagentu-ne.jpg
 ---
 
 📊 **Пять метрик канала, которые стоит смотреть раз в неделю**

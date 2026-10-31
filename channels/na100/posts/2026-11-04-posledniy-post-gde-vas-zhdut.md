@@ -3,7 +3,7 @@ channel: na100
 status: draft
 format: markdown
 notify: true
-image_file: local/cards/card-na100-2026-11-04.png
+image_file: local/images/ainow/2026-10-20-kak-na-ii-zarabatyvayut.jpg
 ---
 
 🚪 **Последний пост здесь: где вас ждут**

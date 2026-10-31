@@ -3,7 +3,7 @@ channel: tg_neuro
 status: draft
 format: markdown
 notify: true
-image_file: local/cards/card-tg_neuro-2026-11-04.png
+image_file: local/images/ainow/2026-09-24-neyroset-zavisla-na-fayle-kogda-eto.jpg
 ---
 
 🚪 **Последний пост здесь**

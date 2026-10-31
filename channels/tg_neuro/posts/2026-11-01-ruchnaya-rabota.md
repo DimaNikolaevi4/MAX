@@ -3,7 +3,7 @@ channel: tg_neuro
 status: draft
 format: markdown
 notify: true
-image_file: local/cards/card-tg_neuro-2026-11-01.png
+image_file: local/images/ainow/2026-10-29-poludnica-kak-nachinalas-istoriya.jpg
 ---
 
 🎨 **Ручная работа, которую ИИ не заменит**
