@@ -1,9 +1,10 @@
 ---
 channel: tg_neuro
-status: draft
-format: markdown
-notify: true
-image_file: local/images/ainow/2026-10-29-poludnica-kak-nachinalas-istoriya.jpg
+status: published
+format: html
+published_at: 2026-11-01T10:01:52+03:00
+message_id: 65
+chat_id: -1002087111322
 ---
 
 🎨 **Ручная работа, которую ИИ не заменит**
