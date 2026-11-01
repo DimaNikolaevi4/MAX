@@ -8,7 +8,8 @@ message_id: mid.ffffba0066fb9aa301a1967e32ec014c
 channel_id: -76964086179165
 url: https://max.ru/channel_ainow/AaGWfjLsAUw
 video: https://maxvd665.okcdn.ru/?expires=1793612766263&srcIp=10.201.79.240&pr=95&srcAg=UNKNOWN&ms=130.49.231.16&type=3&sig=gmHtcovLwu0&ct=0&urls=130.49.229.38&clientType=51&id=20597253933691&scl=1
-edited_at: 2026-11-01T12:46:06+03:00
+edited_at: 2026-11-01T12:51:46+03:00
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTrnKR2EyVSn4FHTBjjv-BU5HVYFcZdlIf4CSERkd4V9i-8CdVuTEbNupUgR8Pjyrui4G_w3Xvz8Hv4GcOXuDE
 ---
 
 🧠 **Можно ли брать ИИ-картинки в коммерцию: разбор по сервисам**
