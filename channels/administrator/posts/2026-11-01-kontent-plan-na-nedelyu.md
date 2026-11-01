@@ -1,9 +1,13 @@
 ---
 channel: administrator
-status: draft
+status: published
 format: markdown
 notify: true
-image_file: local/images/ainow/2026-07-23-zabudte-pro-muki-verstki-v-powerpoint.jpg
+published_at: 2026-11-01T10:01:40+03:00
+message_id: mid.ffffba0776009aa301a195e9ed554d97
+channel_id: -76933769422173
+url: https://max.ru/channel_administrator/AaGV6e1VTZc
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTqrcC3Ki1PpNXlO7XotMxJ9LYLnluWNLAi5qHx8oIMs1vCx5qvLu2QcDy-djRx9gyijW5ZZjcTklYW8BqobnY
 ---
 
 📅 **Контент-план на неделю: как собрать его с ИИ за час**
