@@ -1,9 +1,13 @@
 ---
 channel: na100
-status: draft
+status: published
 format: markdown
 notify: true
-image_file: local/images/ainow/2026-10-12-chatgpt-vs-qwen-chestnoe-sravnenie-v.jpg
+published_at: 2026-11-01T10:01:29+03:00
+message_id: mid.ffffba08e9ee9aa301a195e9c7d175b1
+channel_id: -76927529477469
+url: https://max.ru/channel_na100/AaGV6cfRdbE
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTig5TlGnJ6Awfx1DcjOhwnPkauecf6EKsRbAOV-TJYQLFGC3DsO5ZJCLxwGIpuwFs6tsjzfqVPbrwYcqVlUlM
 ---
 
 🧠 **Как выбрать модель под задачу: четыре вопроса**
