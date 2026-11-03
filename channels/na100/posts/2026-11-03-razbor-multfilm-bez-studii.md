@@ -1,9 +1,13 @@
 ---
 channel: na100
-status: draft
+status: published
 format: markdown
 notify: true
-image_file: local/images/ainow/2026-07-16-4-aiinstrumenta-kotorye-sekonomyat-vam-5.jpg
+published_at: 2026-11-03T09:06:42+03:00
+message_id: mid.ffffba08e9ee9aa301a1a0045c886f65
+channel_id: -76927529477469
+url: https://max.ru/channel_na100/AaGgBFyIb2U
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCR8aI2h28xeLoqck7RRkNETEVGvqY2Nu58LJrymLhCwpxkgEmvWxmVdVPjmxghHHY0QjZMZs4jsIdyrBPzRP4M
 ---
 
 🎥 **Разбор: как собрать мультфильм без студии**

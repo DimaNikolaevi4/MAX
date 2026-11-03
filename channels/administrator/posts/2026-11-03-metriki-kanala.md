@@ -1,9 +1,13 @@
 ---
 channel: administrator
-status: draft
+status: published
 format: markdown
 notify: true
-image_file: local/images/ainow/2026-09-28-replit-github-kak-vydat-iiagentu-ne.jpg
+published_at: 2026-11-03T09:06:54+03:00
+message_id: mid.ffffba0776009aa301a1a004884d0b5a
+channel_id: -76933769422173
+url: https://max.ru/channel_administrator/AaGgBIhNC1o
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCS274uMkldZ8MvId-uDvHXguzAP9BBYKTQyympdTQfcXtuW-quJA4ZOkJ8Ncd_BW08k5ceF5tvNbiDy0Q-vXw4
 ---
 
 📊 **Пять метрик канала, которые стоит смотреть раз в неделю**
