@@ -212,28 +212,25 @@ def main() -> None:
         glist = sorted(groups[y], key=lambda g: (g["key"], natural_key(g["name"])))
         n_files = sum(len(g["files"]) for g in glist)
         n_bytes = sum(g["bytes"] for g in glist)
-        entries.append({"kind": "year_header",
+        entries.append({"kind": "year_header", "year": y,
                         "text": f"**{y}** — {folders_phrase(len(glist))} · "
                                 f"{files_phrase(n_files)} · {human(n_bytes)}"})
         catalog[y] = {"folders": len(glist), "files": n_files, "bytes": n_bytes, "items": []}
         for g in glist:
-            kept = []
-            for p, s in g["files"]:
-                if s > LIMIT:
-                    oversized.append((p, s))
-                else:
-                    kept.append((p, s))
-            g["files"] = kept
-            g["bytes"] = sum(s for _, s in kept)
+            g["bytes"] = sum(s for _, s in g["files"])
             if not g["files"]:
                 continue
-            entries.append({"kind": "folder_header",
+            entries.append({"kind": "folder_header", "year": y,
                             "text": f"**{y} · {g['name']}** — "
                                     f"{files_phrase(len(g['files']))} · {human(g['bytes'])}"})
             catalog[y]["items"].append({"name": g["name"], "files": len(g["files"]),
                                         "bytes": g["bytes"]})
             for p, s in g["files"]:
-                entries.append({"kind": "file", "path": str(p), "bytes": s,
+                # больше 4 ГБ: загрузчик порежет на части по 1,9 ГБ
+                kind = "file_split" if s > LIMIT else "file"
+                if s > LIMIT:
+                    oversized.append((p, s))
+                entries.append({"kind": kind, "path": str(p), "bytes": s,
                                 "caption": f"{y} · {g['name']}",
                                 "folder": g["name"], "year": y})
 
@@ -268,8 +265,10 @@ def main() -> None:
     out_json.write_text(json.dumps(plan, ensure_ascii=False), encoding="utf-8")
 
     # --- отчёт ---
+    n_plain = sum(1 for e in entries if e["kind"] == "file")
+    n_split = sum(1 for e in entries if e["kind"] == "file_split")
     rep = [f"план: {out_json}", f"постов: {len(entries)}",
-           f"файлов: {sum(1 for e in entries if e['kind'] == 'file')}",
+           f"файлов: {n_plain + n_split} (из них частями: {n_split})",
            f"объём: {human(sum(e.get('bytes', 0) for e in entries if e['kind'] == 'file'))}", ""]
     for y in sorted(catalog):
         c = catalog[y]
@@ -277,7 +276,7 @@ def main() -> None:
                    f"{human(c['bytes'])}")
     if oversized:
         rep.append("")
-        rep.append("НЕ ВЛЕЗАЮТ (больше 4 ГБ, нужно решение):")
+        rep.append("РЕЖУТСЯ НА ЧАСТИ (больше 4 ГБ, по 1,9 ГБ):")
         for p, s in oversized:
             rep.append(f"  {human(s)}  {p}")
     OUT_TXT.write_text("\n".join(rep), encoding="utf-8")

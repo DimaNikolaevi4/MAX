@@ -3,12 +3,17 @@
 
 Использование:
   python tools/archive_upload.py [--plan local/archive-plan.json] [--limit N]
-                                 [--from I] [--dry-run] [--sha] [--stop-on-error]
+                                 [--from I] [--year YYYY] [--dry-run] [--sha]
+                                 [--stop-on-error]
 
 Что делает:
   * читает план из tools/archive_plan.py (local/archive-plan.json);
   * постит по порядку: заголовки, файлы как `type=file` (байт-в-байт),
     годовые каталоги, закрепляемое оглавление;
+  * файлы больше 4 ГБ режет на части по 1,9 ГБ в local/split/ и грузит
+    частями, затем постит инструкцию склейки (copy /b) и sha256;
+  * `--year YYYY` — залить только один год (без годовых каталогов и закрепа:
+    они уходят последним общим прогоном);
   * каждый успешный пост пишет в журнал local/archive-journal.jsonl —
     повторный запуск продолжает с места остановки (докачка);
   * после каждого поста GET-контроль: вложение на месте, имя и размер совпали;
@@ -18,6 +23,7 @@
 
 Отчёт: local/archive-run.txt (UTF-8). Консоль — только ASCII.
 """
+import hashlib
 import json
 import os
 import subprocess
@@ -32,6 +38,9 @@ MSK = timezone(timedelta(hours=3))
 PLAN = REPO / "local" / "archive-plan.json"
 JOURNAL = REPO / "local" / "archive-journal.jsonl"
 REPORT = REPO / "local" / "archive-run.txt"
+SPLIT_DIR = REPO / "local" / "split"
+SPLIT_MANIFEST = REPO / "local" / "split-manifest.json"
+PART = 1900 * 1024**2      # часть файла >4 ГБ (лимит MAX — 4 ГБ)
 PAUSE = 0.65          # лимит 2 сообщения/сек на канал
 READY_DELAYS = [2, 4, 8, 16, 32, 64, 120]
 
@@ -89,6 +98,105 @@ def upload_file(path: Path):
         last = f"upload {code2}: {body2[:160]}"
         time.sleep(2 * (attempt + 1))
     raise RuntimeError(last or "upload failed")
+
+
+def sha256_of(path: Path) -> str:
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for block in iter(lambda: f.read(4 << 20), b""):
+            h.update(block)
+    return h.hexdigest()
+
+
+def load_manifest() -> dict:
+    if SPLIT_MANIFEST.exists():
+        try:
+            return json.loads(SPLIT_MANIFEST.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001
+            return {}
+    return {}
+
+
+def split_file(path: Path):
+    """Режет файл на части <= PART. Кэш в local/split. Возвращает (части, sha256)."""
+    st = path.stat()
+    key = f"{path}|{st.st_size}|{int(st.st_mtime)}"
+    man = load_manifest()
+    rec = man.get(key)
+    if rec:
+        parts = [SPLIT_DIR / n for n in rec["parts"]]
+        if all(p.exists() and p.stat().st_size == s
+               for p, s in zip(parts, rec["sizes"])):
+            return parts, rec["sha256"]
+
+    SPLIT_DIR.mkdir(parents=True, exist_ok=True)
+    n_parts = -(-st.st_size // PART)
+    parts, sizes = [], []
+    h = hashlib.sha256()
+    with open(path, "rb") as src:
+        for n in range(1, n_parts + 1):
+            dst = SPLIT_DIR / f"{path.name}.part{n:02d}"
+            left = min(PART, st.st_size - (n - 1) * PART)
+            with open(dst, "wb") as out:
+                while left > 0:
+                    block = src.read(min(8 << 20, left))
+                    if not block:
+                        break
+                    out.write(block)
+                    h.update(block)
+                    left -= len(block)
+            parts.append(dst)
+            sizes.append(dst.stat().st_size)
+    digest = h.hexdigest()
+    man[key] = {"parts": [p.name for p in parts], "sizes": sizes, "sha256": digest}
+    SPLIT_MANIFEST.write_text(json.dumps(man, ensure_ascii=False, indent=1),
+                              encoding="utf-8")
+    return parts, digest
+
+
+def join_note(path: Path, parts, digest: str) -> str:
+    """Инструкция склейки частей — отдельный пост после частей."""
+    n = len(parts)
+    return "\n".join([
+        f"**Склейка файла:** {path.name}",
+        "",
+        f"Файл больше лимита MAX (4 ГБ) и выложен {n} частями по 1,9 ГБ.",
+        "Скачайте все части в одну папку и склейте:",
+        "",
+        "Windows (cmd):",
+        f'copy /b "{path.name}.part*" "{path.name}"',
+        "",
+        "Linux / macOS:",
+        f'cat "{path.name}".part* > "{path.name}"',
+        "",
+        f"sha256 исходного файла: `{digest}`",
+        f"Размер: {path.stat().st_size} байт",
+    ])
+
+
+def upload_split(i: int, e: dict, want_sha: bool):
+    """Части файла >4 ГБ + пост с инструкцией склейки. Возвращает число байт."""
+    path = Path(e["path"])
+    if not path.exists():
+        raise RuntimeError(f"нет файла {path}")
+    parts, digest = split_file(path)
+    sent = 0
+    mids = []
+    for k, part in enumerate(parts, 1):
+        tok = upload_file(part)
+        mid, err = wait_ready(f"{e['caption']} · часть {k} из {len(parts)}", tok)
+        if not mid:
+            raise RuntimeError(f"POST часть {k}: {err}")
+        time.sleep(0.4)
+        ok, why = verify(mid, part)
+        if not ok:
+            raise RuntimeError(f"часть {k} не сошлась: {why}")
+        mids.append({"mid": mid, "name": part.name, "size": part.stat().st_size})
+        sent += part.stat().st_size
+    mid, err = post_message(join_note(path, parts, digest))
+    if not mid:
+        raise RuntimeError(f"POST инструкция: {err}")
+    return sent, {"parts": mids, "sha256": digest, "note_mid": mid}
 
 
 def post_message(text: str, attachment_token: str | None = None):
@@ -163,6 +271,7 @@ def main() -> None:
         plan_path = Path(args[args.index("--plan") + 1])
     limit = int(args[args.index("--limit") + 1]) if "--limit" in args else 0
     start = int(args[args.index("--from") + 1]) if "--from" in args else 0
+    year = int(args[args.index("--year") + 1]) if "--year" in args else None
     dry = "--dry-run" in args
     stop_on_error = "--stop-on-error" in args
     want_sha = "--sha" in args
@@ -171,7 +280,10 @@ def main() -> None:
     entries = plan["entries"]
     done = journal_done()
     lines = [f"прогон: {now()}", f"план: {plan_path} ({plan.get('generated')})",
-             f"постов в плане: {len(entries)}, уже сделано: {len(done)}", ""]
+             f"постов в плане: {len(entries)}, уже сделано: {len(done)}"]
+    if year is not None:
+        lines.append(f"фильтр: только {year} год (каталоги и закреп — последним прогоном)")
+    lines.append("")
     processed = failed = 0
     t0 = time.time()
     bytes_sent = 0
@@ -179,6 +291,10 @@ def main() -> None:
     for i, e in enumerate(entries):
         if i < start or i in done:
             continue
+        if year is not None:
+            # в режиме одного года каталоги и закреп не трогаем: они идут в конце ленты
+            if e.get("year") != year or e["kind"] == "year_catalog":
+                continue
         if limit and processed >= limit:
             break
         kind = e["kind"]
@@ -188,13 +304,23 @@ def main() -> None:
             continue
 
         try:
-            if kind == "file":
+            if kind in ("file", "file_split"):
                 path = Path(e["path"])
                 if not path.exists():
                     journal_add({"i": i, "kind": kind, "status": "failed",
                                  "error": "нет файла", "path": str(path), "ts": now()})
                     failed += 1
                     lines.append(f"FAIL {i}: нет файла {path}")
+                    continue
+                if kind == "file_split":
+                    sent, extra = upload_split(i, e, want_sha)
+                    journal_add({"i": i, "kind": kind, "status": "done",
+                                 "path": str(path), "bytes": e["bytes"],
+                                 "folder": e.get("folder"), "year": e.get("year"),
+                                 "sha256": extra["sha256"], "parts": extra["parts"],
+                                 "note_mid": extra["note_mid"], "ts": now()})
+                    processed += 1
+                    bytes_sent += sent
                     continue
                 tok = upload_file(path)
                 mid, err = wait_ready(e["caption"], tok)
@@ -207,12 +333,7 @@ def main() -> None:
                        "folder": e.get("folder"), "year": e.get("year"),
                        "verify": why, "ts": now()}
                 if want_sha:
-                    import hashlib
-                    h = hashlib.sha256()
-                    with open(path, "rb") as f:
-                        for chunk in iter(lambda: f.read(4 << 20), b""):
-                            h.update(chunk)
-                    rec["sha256"] = h.hexdigest()
+                    rec["sha256"] = sha256_of(path)
                 journal_add(rec)
                 if ok:
                     processed += 1
