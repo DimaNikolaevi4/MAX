@@ -8,15 +8,17 @@
 
 Что делает:
   * читает план из tools/archive_plan.py (local/archive-plan.json);
-  * постит по порядку: заголовки, файлы как `type=file` (байт-в-байт),
-    годовые каталоги, закрепляемое оглавление;
+  * фото (`as: image`) конвертирует в WEBP 1920×1440 q90 и постит как `image` —
+    видно в ленте на телефоне и на компьютере;
+  * видео до 250 МБ (`as: video`) постит как `video` — кадр-превью и play;
+  * всё остальное (`as: file`) постит как `file` — байт-в-байт;
   * файлы больше 4 ГБ режет на части по 1,9 ГБ в local/split/ и грузит
     частями, затем постит инструкцию склейки (copy /b) и sha256;
   * `--year YYYY` — залить только один год (без годовых каталогов и закрепа:
     они уходят последним общим прогоном);
   * каждый успешный пост пишет в журнал local/archive-journal.jsonl —
     повторный запуск продолжает с места остановки (докачка);
-  * после каждого поста GET-контроль: вложение на месте, имя и размер совпали;
+  * после каждого поста GET-контроль: тип вложения и (для файлов) имя и размер;
   * соблюдает лимит 2 сообщения/сек, повторяет отправку при
     `attachment.not.ready` с растущим интервалом;
   * ошибки не роняют прогон: пост помечается failed и остаётся в очереди.
@@ -25,7 +27,6 @@
 """
 import hashlib
 import json
-import os
 import subprocess
 import sys
 import time
@@ -40,8 +41,11 @@ JOURNAL = REPO / "local" / "archive-journal.jsonl"
 REPORT = REPO / "local" / "archive-run.txt"
 SPLIT_DIR = REPO / "local" / "split"
 SPLIT_MANIFEST = REPO / "local" / "split-manifest.json"
+WEBP_DIR = REPO / "local" / "webp"
 PART = 1900 * 1024**2      # часть файла >4 ГБ (лимит MAX — 4 ГБ)
-PAUSE = 0.65          # лимит 2 сообщения/сек на канал
+IMAGE_MAX = 1920           # MAX всё равно режет до 1920 по длинной стороне
+IMAGE_QUALITY = 90
+PAUSE = 0.65               # лимит 2 сообщения/сек на канал
 READY_DELAYS = [2, 4, 8, 16, 32, 64, 120]
 
 
@@ -77,27 +81,120 @@ def api(method: str, path: str, payload: dict | None = None):
     return curl(args)
 
 
-def upload_file(path: Path):
-    """Возвращает токен вложения или бросает исключение."""
+def find_token(obj):
+    if isinstance(obj, dict):
+        if isinstance(obj.get("token"), str):
+            return obj["token"]
+        for v in obj.values():
+            t = find_token(v)
+            if t:
+                return t
+    elif isinstance(obj, list):
+        for v in obj:
+            t = find_token(v)
+            if t:
+                return t
+    return None
+
+
+def upload_media(path: Path, kind: str) -> str:
+    """Загружает файл и возвращает токен вложения указанного типа."""
     last = ""
     for attempt in range(3):
-        body, code = api("POST", "/uploads?type=file")
+        body, code = api("POST", f"/uploads?type={kind}")
         try:
-            up_url = json.loads(body)["url"]
+            data = json.loads(body)
+            up_url = data["url"]
         except Exception:  # noqa: BLE001
             last = f"/uploads {code}: {body[:160]}"
             time.sleep(2 * (attempt + 1))
             continue
-        body2, code2 = curl(["-X", "POST", "-F", f"data=@{path}", up_url])
-        try:
-            tok = json.loads(body2).get("token", "")
-        except Exception:  # noqa: BLE001
-            tok = ""
+        # у video/audio токен приходит сразу в ответе /uploads
+        tok = data.get("token") if kind in ("video", "audio") else None
+        body2, code2 = curl(["-X", "POST", "-H", "Content-Type: multipart/form-data",
+                             "-F", f"data=@{path}", up_url])
+        if not tok and body2.strip().startswith("{"):
+            try:
+                tok = find_token(json.loads(body2))
+            except Exception:  # noqa: BLE001
+                tok = None
         if tok:
             return tok
         last = f"upload {code2}: {body2[:160]}"
         time.sleep(2 * (attempt + 1))
     raise RuntimeError(last or "upload failed")
+
+
+def prepare_image(path: Path) -> Path:
+    """Фото -> WEBP 1920×1440 q90. Кэш в local/webp (по пути и mtime)."""
+    from PIL import Image, ImageOps
+
+    st = path.stat()
+    key = hashlib.sha1(f"{path}|{st.st_size}|{int(st.st_mtime)}".encode()).hexdigest()[:20]
+    dst = WEBP_DIR / f"{key}.webp"
+    if dst.exists() and dst.stat().st_mtime >= st.st_mtime:
+        return dst
+    WEBP_DIR.mkdir(parents=True, exist_ok=True)
+    with Image.open(path) as im:
+        im = ImageOps.exif_transpose(im)
+        if im.mode not in ("RGB", "RGBA"):
+            im = im.convert("RGB")
+        im.thumbnail((IMAGE_MAX, IMAGE_MAX), Image.LANCZOS)
+        im.save(dst, "WEBP", quality=IMAGE_QUALITY, method=6)
+    return dst
+
+
+def post_message(text: str, attachment_token: str | None = None, kind: str = "file"):
+    payload = {"text": text, "format": "markdown", "notify": True}
+    if attachment_token:
+        payload["attachments"] = [{"type": kind, "payload": {"token": attachment_token}}]
+    body, code = api("POST", f"/messages?chat_id={CHAT}", payload)
+    try:
+        msg = json.loads(body)
+    except Exception:  # noqa: BLE001
+        return None, f"{code}: {body[:160]}"
+    if msg.get("code"):
+        return None, f"{msg.get('code')}: {msg.get('message')}"
+    mid = (msg.get("message") or {}).get("body", {}).get("mid")
+    if not mid:
+        return None, f"нет mid: {body[:160]}"
+    return mid, ""
+
+
+def wait_ready(text: str, token: str, kind: str = "file"):
+    """Отправка с повтором при attachment.not.ready."""
+    mid, err = post_message(text, token, kind)
+    for delay in READY_DELAYS:
+        if mid or "attachment.not.ready" not in err:
+            return mid, err
+        time.sleep(delay)
+        mid, err = post_message(text, token, kind)
+    return mid, err
+
+
+def verify(mid: str, kind: str, path: Path | None):
+    """GET-контроль: тип вложения, для файла — имя и размер."""
+    body, _code = api("GET", f"/messages/{mid}")
+    try:
+        msg = json.loads(body)
+    except Exception:  # noqa: BLE001
+        return False, "GET не JSON"
+    atts = (msg.get("body") or {}).get("attachments") or []
+    if not atts:
+        return False, "нет вложения"
+    a = atts[0]
+    if a.get("type") != kind:
+        return False, f"тип {a.get('type')} вместо {kind}"
+    if kind == "file":
+        size = a.get("size")
+        name = a.get("filename")
+        ok = size == path.stat().st_size and name == path.name
+        return ok, f"size={size} name={name!r}"
+    if kind == "video":
+        return a.get("duration") is not None, f"duration={a.get('duration')}"
+    if kind == "image":
+        return bool((a.get("payload") or {}).get("photo_id")), "photo_id есть"
+    return True, ""
 
 
 def sha256_of(path: Path) -> str:
@@ -174,8 +271,8 @@ def join_note(path: Path, parts, digest: str) -> str:
     ])
 
 
-def upload_split(i: int, e: dict, want_sha: bool):
-    """Части файла >4 ГБ + пост с инструкцией склейки. Возвращает число байт."""
+def upload_split(e: dict):
+    """Части файла >4 ГБ + пост с инструкцией склейки. Возвращает (байты, детали)."""
     path = Path(e["path"])
     if not path.exists():
         raise RuntimeError(f"нет файла {path}")
@@ -183,12 +280,12 @@ def upload_split(i: int, e: dict, want_sha: bool):
     sent = 0
     mids = []
     for k, part in enumerate(parts, 1):
-        tok = upload_file(part)
-        mid, err = wait_ready(f"{e['caption']} · часть {k} из {len(parts)}", tok)
+        tok = upload_media(part, "file")
+        mid, err = wait_ready(f"{e['caption']} · часть {k} из {len(parts)}", tok, "file")
         if not mid:
             raise RuntimeError(f"POST часть {k}: {err}")
         time.sleep(0.4)
-        ok, why = verify(mid, part)
+        ok, why = verify(mid, "file", part)
         if not ok:
             raise RuntimeError(f"часть {k} не сошлась: {why}")
         mids.append({"mid": mid, "name": part.name, "size": part.stat().st_size})
@@ -197,52 +294,6 @@ def upload_split(i: int, e: dict, want_sha: bool):
     if not mid:
         raise RuntimeError(f"POST инструкция: {err}")
     return sent, {"parts": mids, "sha256": digest, "note_mid": mid}
-
-
-def post_message(text: str, attachment_token: str | None = None):
-    payload = {"text": text, "format": "markdown", "notify": True}
-    if attachment_token:
-        payload["attachments"] = [{"type": "file", "payload": {"token": attachment_token}}]
-    body, code = api("POST", f"/messages?chat_id={CHAT}", payload)
-    try:
-        msg = json.loads(body)
-    except Exception:  # noqa: BLE001
-        return None, f"{code}: {body[:160]}"
-    if msg.get("code"):
-        return None, f"{msg.get('code')}: {msg.get('message')}"
-    mid = (msg.get("message") or {}).get("body", {}).get("mid")
-    if not mid:
-        return None, f"нет mid: {body[:160]}"
-    return mid, ""
-
-
-def wait_ready(text: str, token: str):
-    """Отправка с повтором при attachment.not.ready."""
-    mid, err = post_message(text, token)
-    for delay in READY_DELAYS:
-        if mid or "attachment.not.ready" not in err:
-            return mid, err
-        time.sleep(delay)
-        mid, err = post_message(text, token)
-    return mid, err
-
-
-def verify(mid: str, path: Path | None):
-    body, _code = api("GET", f"/messages/{mid}")
-    try:
-        msg = json.loads(body)
-    except Exception:  # noqa: BLE001
-        return False, "GET не JSON"
-    if not path:
-        return True, ""
-    atts = (msg.get("body") or {}).get("attachments") or []
-    if not atts:
-        return False, "нет вложения"
-    a = atts[0]
-    size = a.get("size")
-    name = a.get("filename")
-    ok = size == path.stat().st_size and name == path.name
-    return ok, f"size={size} name={name!r}"
 
 
 def journal_add(entry: dict):
@@ -262,6 +313,62 @@ def journal_done() -> dict:
         if e.get("status") == "done":
             done[e["i"]] = e
     return done
+
+
+def send_media(i: int, e: dict, as_: str):
+    """Один пост: image (webp), video или file. Возвращает (байты, запись)."""
+    path = Path(e["path"])
+    if not path.exists():
+        raise RuntimeError(f"нет файла {path}")
+
+    if as_ == "image":
+        src = prepare_image(path)
+        tok = upload_media(src, "image")
+        mid, err = wait_ready(e["caption"], tok, "image")
+        if not mid:
+            raise RuntimeError(f"POST image: {err}")
+        time.sleep(0.4)
+        ok, why = verify(mid, "image", None)
+        return src.stat().st_size, {"mid": mid, "status": "done" if ok else "failed",
+                                    "as": "image", "uploaded": src.stat().st_size,
+                                    "verify": why}
+
+    if as_ == "video":
+        try:
+            tok = upload_media(path, "video")
+            mid, err = wait_ready(e["caption"], tok, "video")
+            if not mid:
+                raise RuntimeError(f"POST video: {err}")
+            time.sleep(0.4)
+            ok, why = verify(mid, "video", None)
+            if not ok:
+                raise RuntimeError(f"video не сошлось: {why}")
+            return path.stat().st_size, {"mid": mid, "status": "done", "as": "video",
+                                         "uploaded": path.stat().st_size,
+                                         "verify": why}
+        except Exception as exc:  # noqa: BLE001
+            # формат не принят как video — падаем на файл, оригинал важнее
+            tok = upload_media(path, "file")
+            mid, err = wait_ready(e["caption"], tok, "file")
+            if not mid:
+                raise RuntimeError(f"POST file после video ({exc}): {err}") from exc
+            time.sleep(0.4)
+            ok, why = verify(mid, "file", path)
+            return path.stat().st_size, {"mid": mid,
+                                         "status": "done" if ok else "failed",
+                                         "as": "file", "fallback_from": "video",
+                                         "uploaded": path.stat().st_size,
+                                         "verify": why}
+
+    tok = upload_media(path, "file")
+    mid, err = wait_ready(e["caption"], tok, "file")
+    if not mid:
+        raise RuntimeError(f"POST file: {err}")
+    time.sleep(0.4)
+    ok, why = verify(mid, "file", path)
+    return path.stat().st_size, {"mid": mid, "status": "done" if ok else "failed",
+                                 "as": "file", "uploaded": path.stat().st_size,
+                                 "verify": why}
 
 
 def main() -> None:
@@ -299,57 +406,47 @@ def main() -> None:
             break
         kind = e["kind"]
         if dry:
-            lines.append(f"[dry] {i} {kind} {e.get('path') or e['text'][:60]!r}")
+            extra = f" as={e.get('as')}" if e.get("as") else ""
+            lines.append(f"[dry] {i} {kind}{extra} {e.get('path') or e['text'][:60]!r}")
             processed += 1
             continue
 
         try:
-            if kind in ("file", "file_split"):
-                path = Path(e["path"])
-                if not path.exists():
-                    journal_add({"i": i, "kind": kind, "status": "failed",
-                                 "error": "нет файла", "path": str(path), "ts": now()})
-                    failed += 1
-                    lines.append(f"FAIL {i}: нет файла {path}")
-                    continue
-                if kind == "file_split":
-                    sent, extra = upload_split(i, e, want_sha)
-                    journal_add({"i": i, "kind": kind, "status": "done",
-                                 "path": str(path), "bytes": e["bytes"],
-                                 "folder": e.get("folder"), "year": e.get("year"),
-                                 "sha256": extra["sha256"], "parts": extra["parts"],
-                                 "note_mid": extra["note_mid"], "ts": now()})
+            if kind == "file_split":
+                sent, extra = upload_split(e)
+                journal_add({"i": i, "kind": kind, "status": "done",
+                             "path": e["path"], "bytes": e["bytes"],
+                             "folder": e.get("folder"), "year": e.get("year"),
+                             "sha256": extra["sha256"], "parts": extra["parts"],
+                             "note_mid": extra["note_mid"], "ts": now()})
+                processed += 1
+                bytes_sent += sent
+                continue
+
+            if kind == "file":
+                sent, rec = send_media(i, e, e.get("as", "file"))
+                rec.update({"i": i, "kind": kind, "path": e["path"],
+                            "bytes": e["bytes"], "folder": e.get("folder"),
+                            "year": e.get("year"), "ts": now()})
+                if want_sha:
+                    rec["sha256"] = sha256_of(Path(e["path"]))
+                journal_add(rec)
+                if rec["status"] == "done":
                     processed += 1
                     bytes_sent += sent
-                    continue
-                tok = upload_file(path)
-                mid, err = wait_ready(e["caption"], tok)
-                if not mid:
-                    raise RuntimeError(f"POST: {err}")
-                time.sleep(0.4)
-                ok, why = verify(mid, path)
-                rec = {"i": i, "kind": kind, "status": "done" if ok else "failed",
-                       "mid": mid, "path": str(path), "bytes": e["bytes"],
-                       "folder": e.get("folder"), "year": e.get("year"),
-                       "verify": why, "ts": now()}
-                if want_sha:
-                    rec["sha256"] = sha256_of(path)
-                journal_add(rec)
-                if ok:
-                    processed += 1
-                    bytes_sent += e["bytes"]
                 else:
                     failed += 1
-                    lines.append(f"VERIFY FAIL {i} {path.name}: {why}")
-            else:
-                mid, err = post_message(e["text"])
-                if not mid:
-                    raise RuntimeError(f"POST: {err}")
-                if kind == "index_pin":
-                    api("PUT", f"/chats/{CHAT}/pin", {"message_id": mid})
-                journal_add({"i": i, "kind": kind, "status": "done", "mid": mid,
-                             "ts": now()})
-                processed += 1
+                    lines.append(f"VERIFY FAIL {i} {e['path']}: {rec.get('verify')}")
+                continue
+
+            mid, err = post_message(e["text"])
+            if not mid:
+                raise RuntimeError(f"POST: {err}")
+            if kind == "index_pin":
+                api("PUT", f"/chats/{CHAT}/pin", {"message_id": mid})
+            journal_add({"i": i, "kind": kind, "status": "done", "mid": mid,
+                         "ts": now()})
+            processed += 1
         except Exception as exc:  # noqa: BLE001
             failed += 1
             journal_add({"i": i, "kind": kind, "status": "failed", "error": str(exc)[:300],

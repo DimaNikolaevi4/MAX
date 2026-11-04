@@ -37,6 +37,10 @@ CAMERA = Path(r"E:\наши изображения\камера")
 OUT_JSON = REPO / "local" / "archive-plan.json"
 OUT_TXT = REPO / "local" / "archive-plan.txt"
 LIMIT = 4 * 1024**3  # лимит MAX на файл типа `file`
+VIDEO_LIMIT = 250 * 1024**2  # лимит MAX на файл типа `video`
+IMG_EXT = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".heic", ".heif"}
+VIDEO_EXT = {".mp4", ".mov", ".mkv", ".webm", ".avi", ".wmv", ".3gp", ".mts",
+             ".m2ts", ".mpg", ".mpeg", ".flv", ".ts", ".m4v"}
 JUNK_EXT = {".db", ".cfg", ".info"}
 MONTHS = {
     "январ": 1, "феврал": 2, "март": 3, "апрел": 4, "ма": 5, "июн": 6,
@@ -50,6 +54,16 @@ Y_M_D = re.compile(r"(?<!\d)(19\d{2}|20[0-2]\d)[-.\s](\d{1,2})[-.\s](\d{1,2})(?!
 
 def is_junk(name: str) -> bool:
     return name.lower() == "thumbs.db" or Path(name).suffix.lower() in JUNK_EXT
+
+
+def media_kind(p: Path, size: int) -> str:
+    """Как выкладывать: image (WEBP), video (до 250 МБ) или file (оригинал)."""
+    ext = p.suffix.lower()
+    if ext in IMG_EXT:
+        return "image"
+    if ext in VIDEO_EXT and size <= VIDEO_LIMIT:
+        return "video"
+    return "file"
 
 
 def year_from_name(name: str):
@@ -230,7 +244,9 @@ def main() -> None:
                 kind = "file_split" if s > LIMIT else "file"
                 if s > LIMIT:
                     oversized.append((p, s))
-                entries.append({"kind": kind, "path": str(p), "bytes": s,
+                # image -> WEBP в ленте, video -> кадр+play, file -> оригинал
+                as_ = "file" if kind == "file_split" else media_kind(p, s)
+                entries.append({"kind": kind, "path": str(p), "bytes": s, "as": as_,
                                 "caption": f"{y} · {g['name']}",
                                 "folder": g["name"], "year": y})
 
@@ -267,8 +283,12 @@ def main() -> None:
     # --- отчёт ---
     n_plain = sum(1 for e in entries if e["kind"] == "file")
     n_split = sum(1 for e in entries if e["kind"] == "file_split")
+    n_img = sum(1 for e in entries if e.get("as") == "image")
+    n_vid = sum(1 for e in entries if e.get("as") == "video")
+    n_fil = sum(1 for e in entries if e.get("as") == "file")
     rep = [f"план: {out_json}", f"постов: {len(entries)}",
            f"файлов: {n_plain + n_split} (из них частями: {n_split})",
+           f"по типам: image {n_img}, video {n_vid}, file {n_fil}",
            f"объём: {human(sum(e.get('bytes', 0) for e in entries if e['kind'] == 'file'))}", ""]
     for y in sorted(catalog):
         c = catalog[y]
