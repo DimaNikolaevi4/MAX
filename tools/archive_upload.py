@@ -310,7 +310,7 @@ def journal_done() -> dict:
             e = json.loads(line)
         except Exception:  # noqa: BLE001
             continue
-        if e.get("status") == "done":
+        if e.get("status") in ("done", "skipped"):
             done[e["i"]] = e
     return done
 
@@ -420,10 +420,17 @@ def main() -> None:
         if limit and processed >= limit:
             break
         kind = e["kind"]
+        missing = kind in ("file", "file_split") and not Path(e["path"]).exists()
         if dry:
             extra = f" as={e.get('as')}" if e.get("as") else ""
+            if missing:
+                extra += " (нет файла)"
             lines.append(f"[dry] {i} {kind}{extra} {e.get('path') or e['text'][:60]!r}")
             processed += 1
+            continue
+        if missing:
+            journal_add({"i": i, "kind": kind, "status": "skipped",
+                         "reason": "нет файла", "path": e["path"], "ts": now()})
             continue
 
         try:
