@@ -1,9 +1,10 @@
 ---
 channel: tg_neuro
-status: draft
-format: markdown
-notify: true
-image_file: local/images/ainow/2026-09-24-neyroset-zavisla-na-fayle-kogda-eto.jpg
+status: published
+format: html
+published_at: 2026-11-04T15:11:23+03:00
+message_id: 66
+chat_id: -1002087111322
 ---
 
 🚪 **Последний пост здесь**
