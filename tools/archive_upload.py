@@ -322,7 +322,22 @@ def send_media(i: int, e: dict, as_: str):
         raise RuntimeError(f"нет файла {path}")
 
     if as_ == "image":
-        src = prepare_image(path)
+        try:
+            src = prepare_image(path)
+        except Exception as exc:  # noqa: BLE001
+            # битый/нечитаемый файл с расширением фото: кладём оригинал как file
+            tok = upload_media(path, "file")
+            mid, err = wait_ready(e["caption"], tok, "file")
+            if not mid:
+                raise RuntimeError(f"POST file вместо image ({exc}): {err}") from exc
+            time.sleep(0.4)
+            ok, why = verify(mid, "file", path)
+            return path.stat().st_size, {"mid": mid,
+                                         "status": "done" if ok else "failed",
+                                         "as": "file", "fallback_from": "image",
+                                         "fallback_reason": str(exc)[:120],
+                                         "uploaded": path.stat().st_size,
+                                         "verify": why}
         tok = upload_media(src, "image")
         mid, err = wait_ready(e["caption"], tok, "image")
         if not mid:
