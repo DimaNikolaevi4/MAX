@@ -1,9 +1,13 @@
 ---
 channel: administrator
-status: draft
+status: published
 format: markdown
 notify: true
-image_file: local/images/ainow/2026-07-18-znakomtes-qwen-vash-novyy-moschnyy-iiassistent.jpg
+published_at: 2026-11-04T15:10:17+03:00
+message_id: mid.ffffba0776009aa301a1a677902c3baa
+channel_id: -76933769422173
+url: https://max.ru/channel_administrator/AaGmd5AsO6o
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCRNqF2wmMBmxENIq0aowkZqVPCMS9IeoRXix11Mc5WkEY0AJpLw5ontHM24ic2sDWffcJ94DB174FKDFsEbHGs
 ---
 
 🚪 **Последний пост здесь: где вас ждут**
