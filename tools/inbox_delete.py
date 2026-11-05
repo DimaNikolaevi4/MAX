@@ -49,8 +49,7 @@ for m in msgs:
 
 idx = next((i for i, r in enumerate(rows) if MARK in r["text"].lower()), None)
 if idx is None:
-    (REPO / "local" / "inbox-deleted.txt").write_text(
-        "входящих нет: объявление не найдено, удалять нечего", encoding="utf-8")
+    # протокол прошлого удаления не затираем
     print("ok nothing to delete")
     raise SystemExit(0)
 inbox = rows[:idx + 1]
