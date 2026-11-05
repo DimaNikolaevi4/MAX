@@ -387,10 +387,15 @@ def send_media(i: int, e: dict, as_: str):
 
 
 def main() -> None:
+    global JOURNAL, REPORT
     args = sys.argv[1:]
     plan_path = PLAN
     if "--plan" in args:
         plan_path = Path(args[args.index("--plan") + 1])
+    if "--journal" in args:
+        JOURNAL = Path(args[args.index("--journal") + 1])
+    if "--report" in args:
+        REPORT = Path(args[args.index("--report") + 1])
     limit = int(args[args.index("--limit") + 1]) if "--limit" in args else 0
     start = int(args[args.index("--from") + 1]) if "--from" in args else 0
     year = int(args[args.index("--year") + 1]) if "--year" in args else None
