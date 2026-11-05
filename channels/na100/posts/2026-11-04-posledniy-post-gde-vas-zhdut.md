@@ -8,9 +8,10 @@ message_id: mid.ffffba08e9ee9aa301a1a6777e8d7d93
 channel_id: -76927529477469
 url: https://max.ru/channel_na100/AaGmd36NfZM
 image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTrnKR2EyVSn4FHTBjjv-BU5HVYFcZdlIf4CSERkd4V9i-8CdVuTEbNupUgR8Pjyrui4G_w3Xvz8Hv4GcOXuDE
+edited_at: 2026-11-05T07:47:38+03:00
 ---
 
-🚪 **Последний пост здесь: где вас ждут**
+🚪 **Мы переехали на [AI](https://max.ru/channel_ainow)**
 
 Канал «Нейросети и ИИ» закрывается сегодня. Спасибо, что читали — история канала остаётся, новые посты выходят в **AI**.
 
