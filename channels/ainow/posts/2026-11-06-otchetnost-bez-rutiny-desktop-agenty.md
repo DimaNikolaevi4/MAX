@@ -3,6 +3,7 @@ channel: ainow
 status: draft
 format: markdown
 notify: true
+image_file: local/images/2026-11-06-cover.png
 ---
 
 📊 **Отчётность без рутины: десктопные ИИ-агенты на практике**
