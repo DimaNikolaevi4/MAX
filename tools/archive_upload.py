@@ -136,6 +136,12 @@ def prepare_image(path: Path) -> Path:
         return dst
     WEBP_DIR.mkdir(parents=True, exist_ok=True)
     with Image.open(path) as im:
+        # уже готовый webp не больше 1920 (например, скачанный из MAX) отдаём
+        # как есть: лишнее поколение сжатия только портит картинку
+        if (im.format == "WEBP" and max(im.size) <= IMAGE_MAX
+                and im.mode in ("RGB", "RGBA")
+                and getattr(im, "n_frames", 1) == 1):
+            return path
         im = ImageOps.exif_transpose(im)
         if im.mode not in ("RGB", "RGBA"):
             im = im.convert("RGB")

@@ -38,7 +38,7 @@ OUT_JSON = REPO / "local" / "archive-plan.json"
 OUT_TXT = REPO / "local" / "archive-plan.txt"
 LIMIT = 4 * 1024**3  # лимит MAX на файл типа `file`
 VIDEO_LIMIT = 250 * 1024**2  # лимит MAX на файл типа `video`
-IMG_EXT = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".heic", ".heif"}
+IMG_EXT = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".heic", ".heif", ".webp"}
 VIDEO_EXT = {".mp4", ".mov", ".mkv", ".webm", ".avi", ".wmv", ".3gp", ".mts",
              ".m2ts", ".mpg", ".mpeg", ".flv", ".ts", ".m4v"}
 JUNK_EXT = {".db", ".cfg", ".info"}
