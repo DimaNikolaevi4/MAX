@@ -2,8 +2,10 @@
 """Удаление «входящих» из канала: всё новее объявления + само объявление.
 
 Перед удалением сверяет, что каждое вложение уже сохранено на диск
-(local/devices-manifest.json) — при расхождении останавливается.
+(local/devices-manifest.json) — при расхождении останавливается. Посты архива
+(«2011 · …», «Сканированные фото») в «входящие» не попадают никогда.
 
+  python tools/dump_channel.py            # обновить local/channel-dump.json
   python tools/inbox_delete.py            # только проверка, ничего не удаляет
   python tools/inbox_delete.py --yes      # проверить и удалить
 
@@ -11,6 +13,7 @@
 local/inbox-deleted.json.
 """
 import json
+import re
 import subprocess
 import sys
 import time
@@ -20,39 +23,24 @@ REPO = Path(__file__).resolve().parent.parent
 API = "https://platform-api2.max.ru"
 TOKEN = json.loads((REPO / "local" / "tokens.json").read_text(encoding="utf-8"))["archive"]["token"]
 CHAT = -80815063000413
-MARK = "переместить с других устройств"
+DUMP = REPO / "local" / "channel-dump.json"
+MARKERS = ("переместить с других устройств", "фото от ани")
+ARCHIVE = re.compile(r"^(\d{4} · |\*\*|Сканированные фото)")
 
-msgs, marker = [], None
-for _ in range(8):
-    path = f"/messages?chat_id={CHAT}&count=100"
-    if marker:
-        path += f"&from={marker}"
-    r = subprocess.run(["curl.exe", "-s", "-H", f"Authorization: {TOKEN}", API + path],
-                       capture_output=True)
-    try:
-        batch = json.loads((r.stdout or b"").decode("utf-8", errors="replace")).get("messages") or []
-    except Exception:  # noqa: BLE001
-        break
-    if not batch:
-        break
-    msgs += batch
-    marker = (batch[-1].get("body") or {}).get("mid")
-    if len(batch) < 100:
-        break
+if not DUMP.exists():
+    raise SystemExit("нет local/channel-dump.json — сначала python tools/dump_channel.py")
+rows = json.loads(DUMP.read_text(encoding="utf-8"))
 
-rows = []
-for m in msgs:
-    b = m.get("body") or {}
-    rows.append({"mid": b.get("mid"), "ts": m.get("timestamp"),
-                 "text": b.get("text") or "",
-                 "atts": b.get("attachments") or []})
-
-idx = next((i for i, r in enumerate(rows) if MARK in r["text"].lower()), None)
+idx = next((i for i, r in enumerate(rows)
+            if any(m in (r.get("text") or "").lower() for m in MARKERS)), None)
 if idx is None:
-    # протокол прошлого удаления не затираем
     print("ok nothing to delete")
     raise SystemExit(0)
+
 inbox = rows[:idx + 1]
+bad = [r for r in inbox if ARCHIVE.match((r.get("text") or "").strip())]
+if bad:
+    raise SystemExit(f"СТОП: во «входящих» {len(bad)} постов архива — удаление отменено")
 
 man = json.loads((REPO / "local" / "devices-manifest.json").read_text(encoding="utf-8"))
 man_mids = {v["mid"] for v in man.values()}
@@ -61,17 +49,19 @@ missing = inbox_mids - man_mids
 if missing:
     raise SystemExit(f"СТОП: {len(missing)} вложений не сохранены на диск: {sorted(missing)[:5]}")
 
-(REPO / "local" / "inbox-deleted.json").write_text(
-    json.dumps(inbox, ensure_ascii=False, indent=1), encoding="utf-8")
-
-lines = [f"к удалению: {len(inbox)} сообщений", ""]
+lines = [f"к удалению: {len(inbox)} сообщений "
+         f"(вложений {sum(len(r['atts']) for r in inbox)})", ""]
 if "--yes" not in sys.argv:
     lines.append("режим проверки: добавьте --yes, чтобы удалить")
     for r in inbox:
-        lines.append(f"БУДЕТ УДАЛЕНО {r['mid']} вложений={len(r['atts'])} {r['text'][:40]!r}")
+        lines.append(f"БУДЕТ УДАЛЕНО {r['mid']} вложений={len(r['atts'])} "
+                     f"{(r.get('text') or '')[:40]!r}")
     (REPO / "local" / "inbox-deleted.txt").write_text("\n".join(lines), encoding="utf-8")
     print(f"ok dry-run inbox={len(inbox)} (--yes to delete)")
     raise SystemExit(0)
+
+(REPO / "local" / "inbox-deleted.json").write_text(
+    json.dumps(inbox, ensure_ascii=False, indent=1), encoding="utf-8")
 
 ok = failed = 0
 for r in inbox:
@@ -88,10 +78,12 @@ for r in inbox:
         time.sleep(1.5 * (attempt + 1))
     if code.strip() in ("200", "204"):
         ok += 1
-        lines.append(f"OK   {r['mid']}  вложений={len(r['atts'])}  {r['text'][:40]!r}")
+        lines.append(f"OK   {r['mid']}  вложений={len(r['atts'])}  "
+                     f"{(r.get('text') or '')[:40]!r}")
     else:
         failed += 1
-        lines.append(f"FAIL {r['mid']}  code={code}  {body[:160]}  {r['text'][:40]!r}")
+        lines.append(f"FAIL {r['mid']}  code={code}  {body[:160]}  "
+                     f"{(r.get('text') or '')[:40]!r}")
     time.sleep(0.5)
 
 lines += ["", f"удалено: {ok}, ошибок: {failed}"]
