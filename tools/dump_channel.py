@@ -10,11 +10,11 @@ TOKEN = json.loads((REPO / "local" / "tokens.json").read_text(encoding="utf-8"))
 CHAT = -80815063000413
 OUT = REPO / "local" / "channel-dump.json"
 
-msgs, marker = [], None
-for _ in range(6):
+msgs, to = [], None
+for _ in range(40):
     path = f"/messages?chat_id={CHAT}&count=100"
-    if marker:
-        path += f"&from={marker}"
+    if to is not None:
+        path += f"&to={to}"
     r = subprocess.run(["curl.exe", "-s", "-H", f"Authorization: {TOKEN}", API + path],
                        capture_output=True)
     try:
@@ -24,7 +24,10 @@ for _ in range(6):
     if not batch:
         break
     msgs += batch
-    marker = (batch[-1].get("body") or {}).get("mid")
+    oldest = min((m.get("timestamp") or 0) for m in batch)
+    if to is not None and oldest >= to:
+        break
+    to = oldest - 1
     if len(batch) < 100:
         break
 
