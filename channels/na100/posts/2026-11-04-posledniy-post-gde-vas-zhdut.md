@@ -6,9 +6,10 @@ notify: true
 published_at: 2026-11-04T15:10:13+03:00
 message_id: mid.ffffba08e9ee9aa301a1a6777e8d7d93
 channel_id: -76927529477469
+image_source: https://max.ru/channel_administrator/AZ-OBWLoRwI
 url: https://max.ru/channel_na100/AaGmd36NfZM
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTrnKR2EyVSn4FHTBjjv-BU5HVYFcZdlIf4CSERkd4V9i-8CdVuTEbNupUgR8Pjyrui4G_w3Xvz8Hv4GcOXuDE
-edited_at: 2026-11-05T07:47:38+03:00
+edited_at: 2026-11-05T07:50:10+03:00
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQWyGiYZF-c-QTiRjwY837yMxxq7hGSPwpSTNAx-TNvvU9tu1O4zUc8EluE3ZP46YctdCR7lOYW6yYwsYvQYMM
 ---
 
 🚪 **Мы переехали на [AI](https://max.ru/channel_ainow)**
