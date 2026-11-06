@@ -3,6 +3,7 @@ channel: ainow
 status: draft
 format: markdown
 notify: true
+image_file: local/images/digest-saturday-cover.png
 ---
 
 🗞 **Главное за неделю: 5 новостей ИИ, которые изменят работу**
