@@ -20,10 +20,15 @@ config/channels.json (cta_label/cta_url).
 консоль в cp1251).
 """
 import json
+import os
 import re
 import subprocess
 import sys
 import time
+import urllib.error
+import urllib.request
+import ssl
+import uuid
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -32,9 +37,54 @@ API = "https://platform-api2.max.ru"
 REPORT = []
 
 
+def py_api(channel_token: str, method: str, url: str, payload: Path | None,
+           form_file: Path | None, out: Path | None) -> str:
+    """Запасной транспорт: stdlib urllib. Используется, когда TLS curl/schannel
+    не принимает сертификат Минцифры (MAX_HTTP=python, см. README)."""
+    if not url.startswith("http"):
+        url = f"{API}{url}"
+    if form_file:
+        boundary = "----mxagent" + uuid.uuid4().hex
+        body = (f"--{boundary}\r\n"
+                f'Content-Disposition: form-data; name="data"; '
+                f'filename="{form_file.name}"\r\n'
+                f"Content-Type: image/png\r\n\r\n").encode("utf-8")
+        body += form_file.read_bytes()
+        body += f"\r\n--{boundary}--\r\n".encode("utf-8")
+        headers = {"Content-Type": f"multipart/form-data; boundary={boundary}"}
+    elif payload:
+        body = payload.read_bytes()
+        headers = {"Content-Type": "application/json"}
+    else:
+        body, headers = None, {}
+    req = urllib.request.Request(url, data=body, method=method)
+    req.add_header("Authorization", channel_token)
+    for k, v in headers.items():
+        req.add_header(k, v)
+    ctx = ssl.create_default_context()  # системное хранилище Windows
+    ca = os.environ.get("MAX_CA_CERT")
+    if ca:
+        ctx.load_verify_locations(cafile=ca)
+    https_handler = urllib.request.HTTPSHandler(context=ctx)
+    opener = urllib.request.build_opener(https_handler)
+    try:
+        with opener.open(req, timeout=180) as r:
+            resp = r.read().decode("utf-8", errors="replace")
+    except urllib.error.HTTPError as e:
+        resp = e.read().decode("utf-8", errors="replace")
+    if out:
+        Path(out).write_text(resp, encoding="utf-8")
+    return resp
+
+
 def api(channel_token: str, method: str, url: str, payload: Path | None = None,
         out: Path | None = None, form_file: Path | None = None) -> str:
+    if os.environ.get("MAX_HTTP") == "python":
+        return py_api(channel_token, method, url, payload, form_file, out)
     cmd = ["curl.exe", "-s", "-X", method, "-H", f"Authorization: {channel_token}"]
+    ca = os.environ.get("MAX_CA_CERT")
+    if ca:
+        cmd += ["--cacert", ca]
     if payload:
         cmd += ["-H", "Content-Type: application/json", "--data-binary", f"@{payload}"]
     if form_file:
