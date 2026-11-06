@@ -1,9 +1,13 @@
 ---
 channel: ainow
-status: draft
+status: published
 format: markdown
 notify: true
-image_file: local/images/2026-11-06-cover.png
+published_at: 2026-11-06T08:41:02+03:00
+message_id: mid.ffffba0066fb9aa301a1af5ee90c728a
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaGvXukMcoo
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCRJB1mkWqci2AjqnvkcDD8u6nq1Dvw6migS2C71UpYisB2T1EuCtTAh8I1tMcvXqCqagHlqSVA0lwr1C6_x36c
 ---
 
 📊 **Отчётность без рутины: десктопные ИИ-агенты на практике**
