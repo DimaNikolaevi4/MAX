@@ -80,6 +80,10 @@ for h, v in internal.items():
     lines.append(f"  {h[:12]} x{len(v)}")
     for it in v:
         lines.append(f"    {it['name']} y={it['year']}")
+lines.append("внутри пачки (точные):")
+for h, v in internal.items():
+    for it in v[1:]:
+        lines.append(f"  d=0 {it['name']} (y={it['year']}) ~ {v[0]['name']} (y={v[0]['year']})")
 
 # против папки назначения
 dest_by_hash = {}
@@ -90,6 +94,11 @@ hit_dest = [(h, v) for h, v in by_hash.items() if h in dest_by_hash]
 lines.append(f"совпало с папкой «с телефонов и ноутбука»: {len(hit_dest)}")
 for h, v in hit_dest[:20]:
     lines.append(f"  {h[:12]} {[i['name'] for i in v]} = {[str(x) for x in dest_by_hash[h]]}")
+lines.append("против папки (точные):")
+for h, v in hit_dest:
+    for it in v:
+        for p in dest_by_hash[h]:
+            lines.append(f"  d=0 {it['name']} (y={it['year']}) ~ {p}")
 
 # против архива: предфильтр по размеру
 sizes = {it["sha256"]: it["bytes"] for it in items}
@@ -106,12 +115,13 @@ for root in ROOTS:
                 arch_by_size[s].append(p)
 hit_arch = 0
 lines.append(f"кандидатов по размеру в архиве: {sum(len(v) for v in arch_by_size.values())}")
+lines.append("против архива (точные):")
 for it in items:
     cands = arch_by_size.get(it["bytes"], [])
     for c in cands:
         if sha256(c) == it["sha256"]:
             hit_arch += 1
-            lines.append(f"  СОВПАЛО {it['name']} = {c}")
+            lines.append(f"  d=0 {it['name']} (y={it['year']}) ~ {c}")
 lines.append(f"точных совпадений с архивом: {hit_arch}")
 
 # --- 2. dHash ---

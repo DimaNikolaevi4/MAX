@@ -30,13 +30,13 @@ section = None
 pairs = []
 for line in DEDUPE.read_text(encoding="utf-8").splitlines():
     s = line.strip()
-    if s.startswith("внутри пачки:"):
+    if s.startswith("внутри пачки"):
         section = "batch"
         continue
     if s.startswith("против папки"):
         section = "folder"
         continue
-    if s.startswith("против архива:"):
+    if s.startswith("против архива"):
         section = "archive"
         continue
     if s.startswith("===") or s.startswith("пар:") or s.startswith("совпадений:"):

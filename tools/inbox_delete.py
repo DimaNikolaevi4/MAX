@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-"""Удаление «входящих» из канала: всё новее объявления + само объявление.
+"""Удаление «входящих» из канала: всё, что новее последнего поста архива.
 
-Перед удалением сверяет, что каждое вложение уже сохранено на диск
-(local/devices-manifest.json) — при расхождении останавливается. Посты архива
-(«2011 · …», «Сканированные фото») в «входящие» не попадают никогда.
+Граница — первый сверху пост архива («2011 · …», «Сканированные фото»).
+Всё выше него считается «входящими» и удаляется, включая текстовые
+объявления. Перед удалением сверяет, что каждое вложение уже сохранено на
+диск (local/devices-manifest.json) — при расхождении останавливается.
 
   python tools/dump_channel.py            # обновить local/channel-dump.json
   python tools/inbox_delete.py            # только проверка, ничего не удаляет
@@ -24,23 +25,20 @@ API = "https://platform-api2.max.ru"
 TOKEN = json.loads((REPO / "local" / "tokens.json").read_text(encoding="utf-8"))["archive"]["token"]
 CHAT = -80815063000413
 DUMP = REPO / "local" / "channel-dump.json"
-MARKERS = ("переместить с других устройств", "фото от ани")
 ARCHIVE = re.compile(r"^(\d{4} · |\*\*|Сканированные фото)")
 
 if not DUMP.exists():
     raise SystemExit("нет local/channel-dump.json — сначала python tools/dump_channel.py")
 rows = json.loads(DUMP.read_text(encoding="utf-8"))
 
-idx = next((i for i, r in enumerate(rows)
-            if any(m in (r.get("text") or "").lower() for m in MARKERS)), None)
-if idx is None:
+cut = next((i for i, r in enumerate(rows)
+            if ARCHIVE.match((r.get("text") or "").strip())), None)
+if cut is None:
+    raise SystemExit("СТОП: в дампе нет ни одного поста архива — граница не найдена")
+inbox = rows[:cut]
+if not inbox:
     print("ok nothing to delete")
     raise SystemExit(0)
-
-inbox = rows[:idx + 1]
-bad = [r for r in inbox if ARCHIVE.match((r.get("text") or "").strip())]
-if bad:
-    raise SystemExit(f"СТОП: во «входящих» {len(bad)} постов архива — удаление отменено")
 
 man = json.loads((REPO / "local" / "devices-manifest.json").read_text(encoding="utf-8"))
 man_mids = {v["mid"] for v in man.values()}
@@ -49,7 +47,8 @@ missing = inbox_mids - man_mids
 if missing:
     raise SystemExit(f"СТОП: {len(missing)} вложений не сохранены на диск: {sorted(missing)[:5]}")
 
-lines = [f"к удалению: {len(inbox)} сообщений "
+lines = [f"граница: {rows[cut]['mid']} {(rows[cut]['text'] or '')[:40]!r}",
+         f"к удалению: {len(inbox)} сообщений "
          f"(вложений {sum(len(r['atts']) for r in inbox)})", ""]
 if "--yes" not in sys.argv:
     lines.append("режим проверки: добавьте --yes, чтобы удалить")
