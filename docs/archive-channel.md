@@ -220,6 +220,13 @@ curl -X DELETE "https://platform-api2.max.ru/chats/-80815063000413/members?user_
    («уфа 2025» → следующие фото 2025 года); группа без подписи — 2026.
    Такой сбор делает `tools/inbox_batch_download.py` (промежуточная папка
    `local/inbox2-tmp`, манифест `local/inbox2-manifest.json`).
+
+   Если файлы присланы как документы (`type=file`) и у них есть имена, год
+   берётся из имени (`20260503_163926.jpg`, `IMG_20250928_120825_240.jpg`), затем
+   из EXIF (DateTimeOriginal), затем из подписи, иначе 2026. У каждой партии
+   своя нумерация (`--batch inbox3` у общих инструментов): свои
+   `inbox3-manifest.json`, `inbox3-tmp`, `inbox3-applied.txt`. HEIC/HEIF требуют
+   `pillow-heif` (`pip install pillow-heif`), иначе Pillow их не откроет.
 3. **Проверка дублей — три слоя** (`tools/inbox_batch_dedupe.py`, затем
    `tools/inbox_batch_verify.py`):
    - sha256 внутри пачки, против папки назначения и против архива

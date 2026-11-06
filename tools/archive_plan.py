@@ -41,7 +41,7 @@ VIDEO_LIMIT = 250 * 1024**2  # лимит MAX на файл типа `video`
 IMG_EXT = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".heic", ".heif", ".webp"}
 VIDEO_EXT = {".mp4", ".mov", ".mkv", ".webm", ".avi", ".wmv", ".3gp", ".mts",
              ".m2ts", ".mpg", ".mpeg", ".flv", ".ts", ".m4v"}
-JUNK_EXT = {".db", ".cfg", ".info"}
+JUNK_EXT = {".db", ".cfg", ".info", ".dps"}
 MONTHS = {
     "январ": 1, "феврал": 2, "март": 3, "апрел": 4, "ма": 5, "июн": 6,
     "июл": 7, "август": 8, "сентябр": 9, "октябр": 10, "ноябр": 11, "декабр": 12,

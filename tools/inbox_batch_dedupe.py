@@ -19,11 +19,12 @@ from pathlib import Path
 from PIL import Image
 
 REPO = Path(__file__).resolve().parent.parent
+BATCH = sys.argv[sys.argv.index("--batch") + 1] if "--batch" in sys.argv else "inbox2"
 DEST = Path(r"E:\наши изображения\с телефонов и ноутбука")
 ROOTS = [Path(r"E:\наши изображения\мои"), Path(r"E:\наши изображения\камера")]
-MANIFEST = REPO / "local" / "inbox2-manifest.json"
+MANIFEST = REPO / "local" / f"{BATCH}-manifest.json"
 CACHE = REPO / "local" / "archive-dhash.json"
-OUT = REPO / "local" / "inbox2-dedupe.txt"
+OUT = REPO / "local" / f"{BATCH}-dedupe.txt"
 IMG_EXT = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".heic", ".heif", ".webp"}
 THRESH = 6
 

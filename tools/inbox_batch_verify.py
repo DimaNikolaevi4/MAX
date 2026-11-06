@@ -9,15 +9,17 @@ MAD (средняя абсолютная разница) по серому 128x1
 """
 import json
 import re
+import sys
 from pathlib import Path
 
 from PIL import Image, ImageOps
 
 REPO = Path(__file__).resolve().parent.parent
-DEDUPE = REPO / "local" / "inbox2-dedupe.txt"
-MANIFEST = REPO / "local" / "inbox2-manifest.json"
-OUT_TXT = REPO / "local" / "inbox2-verify.txt"
-OUT_JSON = REPO / "local" / "inbox2-verify.json"
+BATCH = sys.argv[sys.argv.index("--batch") + 1] if "--batch" in sys.argv else "inbox2"
+DEDUPE = REPO / "local" / f"{BATCH}-dedupe.txt"
+MANIFEST = REPO / "local" / f"{BATCH}-manifest.json"
+OUT_TXT = REPO / "local" / f"{BATCH}-verify.txt"
+OUT_JSON = REPO / "local" / f"{BATCH}-verify.json"
 SIZE = 128
 
 man = json.loads(MANIFEST.read_text(encoding="utf-8"))

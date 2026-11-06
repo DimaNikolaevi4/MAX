@@ -12,7 +12,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO / "tools"))
-from archive_plan import files_phrase, folders_phrase, human  # noqa: E402
+from archive_plan import files_phrase, folders_phrase, human, is_junk  # noqa: E402
 
 PLAN = REPO / "local" / "archive-plan.json"
 plan = json.loads(PLAN.read_text(encoding="utf-8"))
@@ -20,7 +20,7 @@ entries = plan["entries"]
 
 for e in entries:
     if e["kind"] in ("file", "file_split"):
-        e["skip"] = not Path(e["path"]).exists()
+        e["skip"] = (not Path(e["path"]).exists()) or is_junk(e["path"])
 
 years = OrderedDict()
 cur_year = None

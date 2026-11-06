@@ -13,15 +13,17 @@
 """
 import json
 import shutil
+import sys
 from collections import Counter
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
+BATCH = sys.argv[sys.argv.index("--batch") + 1] if "--batch" in sys.argv else "inbox2"
 DEST = Path(r"E:\наши изображения\с телефонов и ноутбука")
-MANIFEST = REPO / "local" / "inbox2-manifest.json"
+MANIFEST = REPO / "local" / f"{BATCH}-manifest.json"
 DEV_MANIFEST = REPO / "local" / "devices-manifest.json"
-VERIFY = REPO / "local" / "inbox2-verify.json"
-OUT = REPO / "local" / "inbox2-applied.txt"
+VERIFY = REPO / "local" / f"{BATCH}-verify.json"
+OUT = REPO / "local" / f"{BATCH}-applied.txt"
 
 man = json.loads(MANIFEST.read_text(encoding="utf-8"))
 items = list(man.values())

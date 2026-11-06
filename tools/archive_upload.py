@@ -129,6 +129,12 @@ def prepare_image(path: Path) -> Path:
     """Фото -> WEBP 1920×1440 q90. Кэш в local/webp (по пути и mtime)."""
     from PIL import Image, ImageOps
 
+    try:  # HEIC/HEIF с телефонов: без этого Pillow их не открывает
+        import pillow_heif
+        pillow_heif.register_heif_opener()
+    except ImportError:
+        pass
+
     st = path.stat()
     key = hashlib.sha1(f"{path}|{st.st_size}|{int(st.st_mtime)}".encode()).hexdigest()[:20]
     dst = WEBP_DIR / f"{key}.webp"
