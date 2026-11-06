@@ -438,16 +438,20 @@ def main() -> None:
             break
         kind = e["kind"]
         missing = kind in ("file", "file_split") and not Path(e["path"]).exists()
+        skip = bool(e.get("skip"))
         if dry:
             extra = f" as={e.get('as')}" if e.get("as") else ""
             if missing:
                 extra += " (нет файла)"
+            elif skip:
+                extra += " (исключено)" if e.get("excluded") else " (пропуск)"
             lines.append(f"[dry] {i} {kind}{extra} {e.get('path') or e['text'][:60]!r}")
             processed += 1
             continue
-        if missing:
+        if missing or skip:
             journal_add({"i": i, "kind": kind, "status": "skipped",
-                         "reason": "нет файла", "path": e["path"], "ts": now()})
+                         "reason": "исключено" if e.get("excluded") else "нет файла",
+                         "path": e.get("path") or e["text"][:80], "ts": now()})
             continue
 
         try:

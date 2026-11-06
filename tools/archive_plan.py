@@ -56,6 +56,25 @@ def is_junk(name: str) -> bool:
     return name.lower() == "thumbs.db" or Path(name).suffix.lower() in JUNK_EXT
 
 
+# Никогда не публиковать: пути (префиксы) и имена файлов. Дополняется по
+# указанию владельца архива; проверяется и планировщиком, и патчем заголовков.
+EXCLUDE_DIRS = [
+    r"E:\наши изображения\мои\мульт",
+]
+EXCLUDE_NAMES = [
+    "свидетельство о рождении риты.pdf",
+]
+
+
+def is_excluded(path: str | Path) -> bool:
+    low = str(path).lower().replace("/", "\\")
+    for d in EXCLUDE_DIRS:
+        if low == d.lower() or low.startswith(d.lower() + "\\"):
+            return True
+    name = Path(str(path)).name.lower()
+    return name in EXCLUDE_NAMES
+
+
 def media_kind(p: Path, size: int) -> str:
     """Как выкладывать: image (WEBP), video (до 250 МБ) или file (оригинал)."""
     ext = p.suffix.lower()
@@ -119,9 +138,9 @@ def scan_folder(folder: Path):
     files, total, dates = [], 0, []
     for dp, _dn, fn in os.walk(folder):
         for f in sorted(fn):
-            if is_junk(f):
-                continue
             p = Path(dp) / f
+            if is_junk(f) or is_excluded(p):
+                continue
             try:
                 s = p.stat().st_size
             except OSError:
@@ -191,7 +210,7 @@ def main() -> None:
             groups[y].append({"kind": "folder", "name": name, "path": str(p),
                               "files": files, "bytes": total, "key": key.isoformat()})
         else:
-            if is_junk(name):
+            if is_junk(name) or is_excluded(p):
                 continue
             s = p.stat().st_size
             y = year_from_name(name) or datetime.datetime.fromtimestamp(
@@ -209,7 +228,7 @@ def main() -> None:
     cam = defaultdict(list)
     for f in sorted(os.listdir(CAMERA)):
         p = CAMERA / f
-        if not p.is_file() or is_junk(f):
+        if not p.is_file() or is_junk(f) or is_excluded(p):
             continue
         y = year_from_name(f) or datetime.datetime.fromtimestamp(p.stat().st_mtime).year
         cam[y].append((p, p.stat().st_size))
