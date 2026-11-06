@@ -74,8 +74,22 @@ php bin/post.php <файл> --chat-id=123456   # временно переопр
 
 - `MAX_TOKENS_FILE` — путь к файлу токенов (по умолчанию `local/tokens.json`);
 - `MAX_API_BASE` — адрес API (по умолчанию `https://platform-api2.max.ru`);
-- `MAX_CA_CERT` — путь к сертификату Минцифры, если хостинг его требует;
+- `MAX_HTTP=python` — транспорт `tools/publish_post.py` на stdlib urllib
+  (рекомендуется на Windows-машинах: TLS curl/schannel не принимает
+  российские цепочки сертификатов CDN `iu.oneme.ru`, см. AGENTS.md, раздел 5);
+- `MAX_CA_CERT` — путь к CA-бандлу (корень + промежуточный Минцифры,
+  `local/russian_ca_bundle.pem`) — добавляется в системное доверие
+  py-транспорта и `--cacert` при HTTP через curl;
 - `MAX_INSECURE=1` — отключить проверку TLS (только для отладки, не рекомендуем).
+
+Альтернатива без PHP — публикация через python (на рабочей машине так
+выходили все посты, включая 06.11 с обложкой):
+
+```powershell
+$env:MAX_HTTP='python'
+$env:MAX_CA_CERT=(Resolve-Path local/russian_ca_bundle.pem).Path
+py tools/publish_post.py --channel ainow channels/ainow/posts/<файл>.md
+```
 
 ## Правила безопасности
 

@@ -123,20 +123,63 @@ Content-Type: application/json
 4. Обновите front matter файла поста: `status: published` + эти поля.
    Тело поста не меняйте.
 
-Если PHP установлен, но API-запрос идёт с машины без сертификатов (ошибка TLS) —
-см. переменные `MAX_CA_CERT` / `MAX_INSECURE` в `README.md`.
+### TLS и транспорт — источник сбоев №1 (актуально 06.11.2026, проверено)
 
-Проверено на практике: в изолированных средах (Node-песочницы и т.п.) запрос к
-`platform-api2.max.ru` может падать с ошибкой `unable to get local issuer
-certificate`. Решения: системный `curl` (на Windows использует хранилище
-сертификатов ОС и работает), либо переменная `MAX_CA_CERT` с сертификатом
-Минцифры.
+У API MAX два HTTPS-хоста с разными цепочками сертификатов:
+
+- `platform-api2.max.ru` — российская цепочка (корень Минцифры);
+- `iu.oneme.ru` (CDN загрузок, раздел 8а) — до 03.11.2026 отдавал глобальную
+  цепочку, с 06.11.2026 — тоже российскую (загрузки перестали проходить
+  через обычный curl).
+
+Ловушки, обе проверены на практике:
+
+1. **curl.exe на Windows (schannel) ненадёжен для загрузки файлов.** Бэкенд
+   schannel отклоняет российскую цепочку `iu.oneme.ru` даже с `--cacert`
+   (`SEC_E_UNTRUSTED_ROOT` / `CERT_TRUST_IS_UNTRUSTED_ROOT`; проверено на
+   curl 8.13.0 системном и 8.18.0 Git-овом — оба schannel, `--cacert` у
+   schannel не заменяет системное доверие). С `--cacert` проходит
+   `platform-api2`, но не CDN.
+2. **Python с дефолтным контекстом** проходит `iu.oneme.ru` (берёт системные
+   хранилища), но падает на `platform-api2.max.ru` с `unable to get local
+   issuer certificate`, если русского корня нет в хранилище. Лечится
+   совместным доверием: системное хранилище + cafile-бандл.
+
+Рабочая схема (по умолчанию с 06.11.2026):
+
+```powershell
+# однократно: собрать бандл (корень + промежуточный с gu-st.ru)
+curl.exe -s -o local/russian_trusted_root_ca.pem https://gu-st.ru/content/lending/russian_trusted_root_ca_pem.crt
+curl.exe -s -o local/russian_trusted_sub_ca.pem https://gu-st.ru/content/lending/russian_trusted_sub_ca_pem.crt
+py -c "from pathlib import Path; r=Path('local/russian_trusted_root_ca.pem').read_text(); s=Path('local/russian_trusted_sub_ca.pem').read_text(); Path('local/russian_ca_bundle.pem').write_text(r.rstrip()+'\n\n'+s.rstrip()+'\n')"
+
+$env:MAX_HTTP='python'
+$env:MAX_CA_CERT=(Resolve-Path local/russian_ca_bundle.pem).Path
+py tools/publish_post.py --channel <slug> channels/<slug>/posts/<файл>.md
+```
+
+- `MAX_HTTP=python` — транспорт urllib в `tools/publish_post.py`: и JSON-запросы,
+  и multipart-загрузка обложки делаются на stdlib; доверие = системное
+  хранилище + `MAX_CA_CERT`.
+- Вне скрипта тот же рецепт: `ssl.create_default_context(cafile=<бандл>)`
+  и заголовок `User-Agent: curl/8.13.0` (с ним API отвечает охотнее).
+- `MAX_CA_CERT` без `MAX_HTTP` работает только через curl — добавляется
+  `--cacert` (проходит `platform-api2`, но не CDN, см. п. 1).
+- `MAX_INSECURE=1` — крайняя мера отладки, в работе не использовать.
+- Диагностика за минуту: `py -c` запрос к хосту — если HTTP-код пришёл
+  (даже 404), TLS в порядке, проблема в другом; если ошибка сертификата/000 —
+  TLS, переходите на py-транспорт.
+
+Если PHP установлен, но API-запрос идёт с машины без сертификатов (ошибка TLS) —
+см. переменные `MAX_CA_CERT` / `MAX_INSECURE` в `README.md`, либо выполнить
+публикацию `tools/publish_post.py` с `MAX_HTTP=python`.
 
 Ещё нюансы рабочей машины (Windows): консоль PowerShell работает в cp1251 —
 эмодзи и кириллицу из Python в консоль не вывести (`UnicodeEncodeError`).
 Пишите результаты в файл и читайте его инструментом чтения файлов; срезы строк
-для отладки выводите через `ascii(...)`. Из инструментов доступны `python`
-(3.14) и `curl.exe`; локального PHP нет — API-запросы только через `curl.exe`.
+для отладки выводите через `ascii(...)`. Python — запуск через **`py`**
+(3.14; команда `python` перехватывается заглушкой Microsoft Store и падает) и
+`curl.exe`; локального PHP нет — API-запросы через `py`-транспорт или `curl.exe`.
 
 ## 5а. Чек-лист перед публикацией (обязателен для каждого поста)
 
@@ -248,6 +291,10 @@ channels/<slug>: опубликован пост <файл>
    `{"url": "https://iu.oneme.ru/uploadImage?r=..."}` — одноразовый URL загрузки.
 2. `curl.exe -X POST -F "data=@файл.png;type=image/png;filename=имя.png" "<url>"`
    → ответ `{"photos": {"0": {"token": "..."}}}` — токен вложения.
+   Если curl (schannel) не проходит TLS до `iu.oneme.ru` — используйте
+   транспорт `MAX_HTTP=python` из раздела 5: он делает оба шага, включая
+   multipart-загрузку файла, на urllib (так опубликован пост 06.11).
+   `tools/publish_post.py` делает эти шаги сам при наличии `image_file`.
 3. Прикрепление: в `POST /messages` или `PUT /messages?message_id=...` передать
    `"attachments": [{"type": "image", "payload": {"token": "<токен>"}}]`.
    `PUT` принимает вложения так же, как `POST`; текст при этом передаётся как

@@ -4,6 +4,13 @@
 Использование:
   python tools/publish_post.py [--channel ainow] <post.md>
 
+Транспорт (раздел 5 AGENTS.md, TLS-проблемы 06.11):
+  $env:MAX_HTTP='python'                          # весь HTTP на stdlib urllib
+  $env:MAX_CA_CERT=local/russian_ca_bundle.pem    # доверие += бандл Минцифры
+  По умолчанию HTTP идёт через curl.exe (--cacert, если MAX_CA_CERT задан);
+  schannel не принимает российскую цепочку iu.oneme.ru даже с --cacert,
+  поэтому для загрузки обложки на Windows использовать MAX_HTTP=python.
+
 Файл поста: front matter + тело (Markdown). Обязательные поля front matter:
   channel: <slug>            — должен совпадать с --channel (или папкой)
   image_file: <путь>         — карточка поста (относительно корня репозитория)
