@@ -20,7 +20,7 @@ message_id, channel_id, url, image.
 
 Проверки перед POST: длина <= 4000; последний блок — CTA-цитата
 `> **Подписывайтесь на [<метка>](<url>)** — ...`; конфиг канала —
-config/channels.json (cta_label/cta_url).
+roles/blogger/config/channels.json (cta_label/cta_url).
 После POST: GET-контроль (вложение, ссылки, длина) и запись архива.
 
 Отчёт: local/publish-<канал>.txt (UTF-8, читать инструментом чтения файлов —
@@ -119,7 +119,7 @@ def main() -> None:
     cfg = json.loads((CONFIG / "channels.json").read_text(encoding="utf-8"))
     ch = next((c for c in cfg["channels"] if c["slug"] == channel), None)
     if not ch:
-        raise SystemExit(f"канал {channel!r} не найден в config/channels.json")
+        raise SystemExit(f"канал {channel!r} не найден в roles/blogger/config/channels.json")
     cta_label, cta_url = ch.get("cta_label"), ch.get("cta_url")
     if not (cta_label and cta_url):
         raise SystemExit(f"для {channel!r} нет cta_label/cta_url")

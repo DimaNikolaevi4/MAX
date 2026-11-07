@@ -5,7 +5,7 @@
 единицы), поэтому перед срезом позиции пересчитываются в кодовые точки.
 
 Использование:
-    python tools/markup_fragments.py <message.json> <out.txt>
+    python roles/blogger/tools/markup_fragments.py <message.json> <out.txt>
 
 где message.json — ответ GET /messages/{mid} (или body сообщения).
 """
@@ -16,7 +16,7 @@ from pathlib import Path
 
 def main() -> None:
     if len(sys.argv) != 3:
-        raise SystemExit("Использование: python tools/markup_fragments.py <message.json> <out.txt>")
+        raise SystemExit("Использование: python roles/blogger/tools/markup_fragments.py <message.json> <out.txt>")
     d = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
     body = d.get("body", d)
     text = body["text"]

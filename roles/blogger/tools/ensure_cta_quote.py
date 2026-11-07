@@ -3,7 +3,7 @@
 на канал + применить текстовые исправления из файла-задания.
 
 Работает для ЛЮБОГО канала проекта (параметр --channel, по умолчанию ainow).
-Конфиг канала берётся из config/channels.json (cta_label, cta_url),
+Конфиг канала берётся из roles/blogger/config/channels.json (cta_label, cta_url),
 токен — из local/tokens.json[<канал>]["token"] (файл gitignored),
 фразы призыва — из roles/blogger/channels/<канал>/cta-phrases.json.
 
@@ -46,11 +46,11 @@ POSTS = [a for a in args if not a.startswith("--")]
 cfg_all = json.loads((CONFIG / "channels.json").read_text(encoding="utf-8"))
 cfg = next((c for c in cfg_all["channels"] if c["slug"] == CHANNEL), None)
 if not cfg:
-    raise SystemExit(f"канал {CHANNEL!r} не найден в config/channels.json")
+    raise SystemExit(f"канал {CHANNEL!r} не найден в roles/blogger/config/channels.json")
 CTA_LABEL = cfg.get("cta_label")
 CTA_URL = cfg.get("cta_url")
 if not (CTA_LABEL and CTA_URL):
-    raise SystemExit(f"в config/channels.json для {CHANNEL!r} нет cta_label/cta_url")
+    raise SystemExit(f"в roles/blogger/config/channels.json для {CHANNEL!r} нет cta_label/cta_url")
 
 tokens = json.loads((REPO / "local" / "tokens.json").read_text(encoding="utf-8"))
 entry = tokens.get(CHANNEL) or {}

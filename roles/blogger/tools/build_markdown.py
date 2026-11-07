@@ -2,7 +2,7 @@
 """Сборка Markdown поста точными заменами (с проверкой числа вхождений).
 
 Использование:
-    python tools/build_markdown.py <пост.md> <replacements.json> <out.md> [--payload out.json]
+    python roles/blogger/tools/build_markdown.py <пост.md> <replacements.json> <out.md> [--payload out.json]
 
 replacements.json — массив объектов:
     [ {"old": "текст как в файле", "new": "**текст**", "expect": 1}, ... ]
@@ -25,7 +25,7 @@ def main() -> None:
         del argv[i:i + 2]
     if len(argv) != 3:
         raise SystemExit(
-            "Использование: python tools/build_markdown.py <пост.md> <replacements.json> <out.md> [--payload out.json]")
+            "Использование: python roles/blogger/tools/build_markdown.py <пост.md> <replacements.json> <out.md> [--payload out.json]")
 
     post_path, repl_path, out_path = argv
     raw = Path(post_path).read_text(encoding="utf-8")

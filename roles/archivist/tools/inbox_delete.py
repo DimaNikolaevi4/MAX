@@ -6,9 +6,9 @@
 объявления. Перед удалением сверяет, что каждое вложение уже сохранено на
 диск (local/devices-manifest.json) — при расхождении останавливается.
 
-  python tools/dump_channel.py            # обновить local/channel-dump.json
-  python tools/inbox_delete.py            # только проверка, ничего не удаляет
-  python tools/inbox_delete.py --yes      # проверить и удалить
+  python roles/archivist/tools/dump_channel.py            # обновить local/channel-dump.json
+  python roles/archivist/tools/inbox_delete.py            # только проверка, ничего не удаляет
+  python roles/archivist/tools/inbox_delete.py --yes      # проверить и удалить
 
 Протокол: local/inbox-deleted.txt, копия удалённых сообщений —
 local/inbox-deleted.json.
@@ -29,7 +29,7 @@ DUMP = REPO / "local" / "channel-dump.json"
 ARCHIVE = re.compile(r"^(\d{4} · |\*\*|Сканированные фото)")
 
 if not DUMP.exists():
-    raise SystemExit("нет local/channel-dump.json — сначала python tools/dump_channel.py")
+    raise SystemExit("нет local/channel-dump.json — сначала python roles/archivist/tools/dump_channel.py")
 rows = json.loads(DUMP.read_text(encoding="utf-8"))
 
 cut = next((i for i, r in enumerate(rows)

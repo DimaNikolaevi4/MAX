@@ -2,12 +2,12 @@
 """Исполнение плана наполнения канала-архива MAX.
 
 Использование:
-  python tools/archive_upload.py [--plan local/archive-plan.json] [--limit N]
+  python roles/archivist/tools/archive_upload.py [--plan local/archive-plan.json] [--limit N]
                                  [--from I] [--year YYYY] [--dry-run] [--sha]
                                  [--stop-on-error]
 
 Что делает:
-  * читает план из tools/archive_plan.py (local/archive-plan.json);
+  * читает план из roles/archivist/tools/archive_plan.py (local/archive-plan.json);
   * фото (`as: image`) конвертирует в WEBP 1920×1440 q90 и постит как `image` —
     видно в ленте на телефоне и на компьютере;
   * видео до 250 МБ (`as: video`) постит как `video` — кадр-превью и play;

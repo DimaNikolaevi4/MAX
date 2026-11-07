@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """Выбирает изображение из архива AI для поста закрывающегося канала.
 
-    python tools/pick_image.py --channel na100
-    python tools/pick_image.py --channel administrator --topic дашборд
-    python tools/pick_image.py --channel tg_neuro --show     # только посмотреть
+    python roles/blogger/tools/pick_image.py --channel na100
+    python roles/blogger/tools/pick_image.py --channel administrator --topic дашборд
+    python roles/blogger/tools/pick_image.py --channel tg_neuro --show     # только посмотреть
 
 Правило проекта: карточки для na100 / administrator / tg_neuro не рисуются,
 изображение берётся из архива основного канала AI (local/images/ainow).
@@ -37,7 +37,7 @@ def main() -> None:
 
     files = sorted(POOL.glob("*.jpg"))
     if not files:
-        raise SystemExit("библиотека пуста: сначала python tools/fetch_images.py")
+        raise SystemExit("библиотека пуста: сначала python roles/blogger/tools/fetch_images.py")
     if a.topic:
         filtered = [f for f in files if a.topic.lower() in f.stem.lower()]
         files = filtered or files

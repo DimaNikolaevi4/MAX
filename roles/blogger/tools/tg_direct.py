@@ -3,7 +3,7 @@
 
 Используется, когда релей 0s3.ru недоступен: api.telegram.org открывается
 по конкретному IP через --resolve. Логика разметки и записи архива — как в
-tools/publish_telegram.py.
+roles/blogger/tools/publish_telegram.py.
 
     python roles/blogger/tools/tg_direct.py roles/blogger/channels/tg_neuro/posts/<файл>.md --ip 149.154.167.220
 """

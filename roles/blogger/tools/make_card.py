@@ -6,7 +6,7 @@
 генерация картинок запрещена (AGENTS.md, разделы 5а, 5б и 8а).
 
 Использование:
-  python tools/make_card.py --title "Строка 1" [--title2 "Строка 2 (акцент)"]
+  python roles/blogger/tools/make_card.py --title "Строка 1" [--title2 "Строка 2 (акцент)"]
       [--subtitle "подзаголовок"] [--footer "AI · ..."] --out local/card.png
 
 Палитра и композиция повторяют карточку поста 29.10 (тёмный градиент,
