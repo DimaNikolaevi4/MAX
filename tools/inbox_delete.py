@@ -20,7 +20,8 @@ import sys
 import time
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
+from shared.paths import REPO  # noqa: E402
 API = "https://platform-api2.max.ru"
 TOKEN = json.loads((REPO / "local" / "tokens.json").read_text(encoding="utf-8"))["archive"]["token"]
 CHAT = -80815063000413

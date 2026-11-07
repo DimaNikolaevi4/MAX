@@ -42,7 +42,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from post_guard import assert_channel_chat_id  # noqa: E402
 
-REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
+from shared.paths import REPO  # noqa: E402
 API = "https://platform-api2.max.ru"
 REPORT = []
 

@@ -14,7 +14,8 @@ from pathlib import Path
 
 from PIL import Image, ImageOps
 
-REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
+from shared.paths import REPO  # noqa: E402
 BATCH = sys.argv[sys.argv.index("--batch") + 1] if "--batch" in sys.argv else "inbox2"
 DEDUPE = REPO / "local" / f"{BATCH}-dedupe.txt"
 MANIFEST = REPO / "local" / f"{BATCH}-manifest.json"

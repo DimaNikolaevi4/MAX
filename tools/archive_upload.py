@@ -33,7 +33,8 @@ import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
+from shared.paths import REPO  # noqa: E402
 API = "https://platform-api2.max.ru"
 MSK = timezone(timedelta(hours=3))
 PLAN = REPO / "local" / "archive-plan.json"
@@ -327,6 +328,45 @@ def journal_done() -> dict:
     return done
 
 
+HEADER_KINDS = ("year_header", "folder_header", "year_catalog", "index_pin")
+
+
+def journal_done_paths() -> set[str]:
+    """Пути уже отправленных файлов.
+
+    Нужны, потому что при пересборке плана индексы сдвигаются, и проверка
+    «i уже в журнале» начинает пропускать не те файлы / слать дубли.
+    """
+    paths: set[str] = set()
+    if not JOURNAL.exists():
+        return paths
+    for line in JOURNAL.read_text(encoding="utf-8").splitlines():
+        try:
+            e = json.loads(line)
+        except Exception:  # noqa: BLE001
+            continue
+        if e.get("status") in ("done", "skipped") and e.get("path"):
+            paths.add(e["path"])
+    return paths
+
+
+def journal_done_headers() -> set[tuple]:
+    """Уже отправленные заголовки/каталоги — по содержимому, а не по индексу."""
+    seen: set[tuple] = set()
+    if not JOURNAL.exists():
+        return seen
+    for line in JOURNAL.read_text(encoding="utf-8").splitlines():
+        try:
+            e = json.loads(line)
+        except Exception:  # noqa: BLE001
+            continue
+        if e.get("status") not in ("done", "skipped"):
+            continue
+        if e.get("kind") in HEADER_KINDS and e.get("text"):
+            seen.add((e["kind"], e.get("year"), e["text"]))
+    return seen
+
+
 def send_media(i: int, e: dict, as_: str):
     """Один пост: image (webp), video или file. Возвращает (байты, запись)."""
     path = Path(e["path"])
@@ -418,6 +458,8 @@ def main() -> None:
     plan = json.loads(plan_path.read_text(encoding="utf-8"))
     entries = plan["entries"]
     done = journal_done()
+    done_paths = journal_done_paths()
+    done_headers = journal_done_headers()
     lines = [f"прогон: {now()}", f"план: {plan_path} ({plan.get('generated')})",
              f"постов в плане: {len(entries)}, уже сделано: {len(done)}"]
     if year is not None:
@@ -428,7 +470,19 @@ def main() -> None:
     bytes_sent = 0
 
     for i, e in enumerate(entries):
-        if i < start or i in done:
+        if i < start:
+            continue
+        kind = e["kind"]
+        # Совпадение индекса учитываем только при том же содержимом: после
+        # пересборки плана индекс мог переехать на другой файл.
+        prev = done.get(i)
+        if (prev is not None and prev.get("kind") == kind
+                and prev.get("path") == e.get("path")):
+            continue
+        if e.get("path") and e["path"] in done_paths:
+            continue
+        if (kind in HEADER_KINDS
+                and (kind, e.get("year"), e.get("text")) in done_headers):
             continue
         if year is not None:
             # в режиме одного года каталоги и закреп не трогаем: они идут в конце ленты
@@ -436,7 +490,6 @@ def main() -> None:
                 continue
         if limit and processed >= limit:
             break
-        kind = e["kind"]
         missing = kind in ("file", "file_split") and not Path(e["path"]).exists()
         skip = bool(e.get("skip"))
         if dry:
@@ -488,6 +541,7 @@ def main() -> None:
             if kind == "index_pin":
                 api("PUT", f"/chats/{CHAT}/pin", {"message_id": mid})
             journal_add({"i": i, "kind": kind, "status": "done", "mid": mid,
+                         "year": e.get("year"), "text": (e.get("text") or "")[:200],
                          "ts": now()})
             processed += 1
         except Exception as exc:  # noqa: BLE001

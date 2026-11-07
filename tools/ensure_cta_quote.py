@@ -26,7 +26,8 @@ import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
+from shared.paths import REPO  # noqa: E402
 API = "https://platform-api2.max.ru"
 REPORT = []
 

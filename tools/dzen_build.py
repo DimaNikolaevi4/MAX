@@ -15,7 +15,9 @@ from email.utils import format_datetime
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parent.parent
+import sys  # noqa: E402
+sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
+from shared.paths import REPO  # noqa: E402
 OUT = REPO / "dzen"
 MSK = timezone(timedelta(hours=3))
 LIMIT = 16

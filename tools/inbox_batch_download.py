@@ -14,7 +14,9 @@ from pathlib import Path
 
 from PIL import Image
 
-REPO = Path(__file__).resolve().parent.parent
+import sys  # noqa: E402
+sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
+from shared.paths import REPO  # noqa: E402
 ROWS = REPO / "local" / "channel-dump.json"
 TMP = REPO / "local" / "inbox2-tmp"
 MANIFEST = REPO / "local" / "inbox2-manifest.json"

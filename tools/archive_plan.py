@@ -31,7 +31,8 @@ try:
 except ImportError:
     Image = None
 
-REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
+from shared.paths import REPO  # noqa: E402
 MOI = Path(r"E:\наши изображения\мои")
 CAMERA = Path(r"E:\наши изображения\камера")
 OUT_JSON = REPO / "local" / "archive-plan.json"

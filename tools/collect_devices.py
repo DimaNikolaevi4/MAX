@@ -17,7 +17,9 @@ from pathlib import Path
 
 from PIL import Image, ImageOps
 
-REPO = Path(__file__).resolve().parent.parent
+import sys  # noqa: E402
+sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
+from shared.paths import REPO  # noqa: E402
 DUMP = REPO / "local" / "channel-dump.json"
 DEST = Path(r"E:\наши изображения\с телефонов и ноутбука")
 TMP = REPO / "local" / "devices-tmp"

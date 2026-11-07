@@ -15,7 +15,9 @@ import json
 from datetime import date
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parent.parent
+import sys  # noqa: E402
+sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
+from shared.paths import REPO  # noqa: E402
 POOL = REPO / "local" / "images" / "ainow"
 USED = REPO / "local" / "images" / "used.json"
 

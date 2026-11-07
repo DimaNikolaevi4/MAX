@@ -17,7 +17,8 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
+from shared.paths import REPO  # noqa: E402
 BATCH = sys.argv[sys.argv.index("--batch") + 1] if "--batch" in sys.argv else "inbox2"
 DEST = Path(r"E:\наши изображения\с телефонов и ноутбука")
 MANIFEST = REPO / "local" / f"{BATCH}-manifest.json"
