@@ -38,10 +38,10 @@
 
 ## Что уже сделано
 
-`tools/dzen_build.py` собирает пакет для выкладки:
+`roles/blogger/tools/dzen_build.py` собирает пакет для выкладки:
 
 ```
-python tools/dzen_build.py --channel ainow --base https://0s3.ru/dzen
+python roles/blogger/tools/dzen_build.py --channel ainow --base https://0s3.ru/dzen
 ```
 
 Результат — папка `dzen/`:

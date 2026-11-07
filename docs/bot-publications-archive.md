@@ -15,7 +15,7 @@
 1. **Архивариус** — публикация личных данных в «архив изображения» и будущие
    приватные каналы.
 2. **Блогер** — основной канал `ainow` и резервные каналы.
-3. **Новостной бот** — личные дайджесты (`experiments/personal-news/`).
+3. **Новостной бот** — личные дайджесты (`roles/newsbot/`).
 
 Личный диалог закреплён за ролью 3: там живёт событийный поток новостного
 бота. Согласование постов перенесено в окно ИИ-агента (рабочий чат), а
@@ -62,7 +62,7 @@
 
 ## Как это работало
 
-1. Агент готовил пост в `channels/<slug>/posts/`.
+1. Агент готовил пост в `roles/blogger/channels/<slug>/posts/`.
 2. `bin/review.php` (или локальный скрипт) отправлял черновик в
    `POST /messages?chat_id={review_chat_id}` с заголовком «📋 ЧЕРНОВИК ПОСТА…»
    и футером «✅ Ответьте „ок“…».
@@ -76,8 +76,8 @@
 
 - Правила: `AGENTS.md`, раздел «Запрет публикации в личный диалог бота»;
   `docs/agent-onboarding.md`.
-- Код: `tools/post_guard.py` — проверка, что `chat_id` канала отрицательный;
-  вызовы в `tools/publish_post.py` и `bin/post.php`.
+- Код: `shared/post_guard.py` — проверка, что `chat_id` канала отрицательный;
+  вызовы в `roles/blogger/tools/publish_post.py` и `roles/blogger/bin/post.php`.
 - `archive/review.php` требует явного `MAX_ALLOW_ARCHIVED_BOT_DIALOG=1` и
   используется только для восстановления методики, не для работы.
 
@@ -85,13 +85,13 @@
 
 1. Вернуть файлы: `git mv archive/review.php bin/review.php`; локальные
    скрипты — из `local/_archive/bot-notify/` обратно в `local/`.
-2. Убрать/ослабить проверки `tools/post_guard.py` и `bin/post.php` для
+2. Убрать/ослабить проверки `shared/post_guard.py` и `roles/blogger/bin/post.php` для
    диалоговых `chat_id`.
 3. Согласовать с новостным ботом разделение событийного потока: один токен не
    должен обслуживаться двумя программами одновременно. Маркер long polling
    (`local/pnews_pollstate.json`) принадлежит новостному боту.
 4. Обновить `AGENTS.md`, `docs/agent-onboarding.md`,
-   `channels/ainow/proofread.md` и этот документ.
+   `roles/blogger/channels/ainow/proofread.md` и этот документ.
 
 ## Безопасность
 

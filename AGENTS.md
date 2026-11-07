@@ -15,33 +15,35 @@
 
 | Путь | Назначение |
 | --- | --- |
-| `config/channels.json` | Реестр каналов: `slug`, название, описание, `cta_label`/`cta_url` для призыва. Сначала посмотрите сюда. |
-| `channels/<slug>/style.md` | Стиль канала: тон, темы, оформление, что запрещено. Обязательно прочитайте перед написанием поста. |
-| `channels/<slug>/cta-phrases.json` | Реестр использованных фраз призыва (CTA) — фразы не должны повторяться. |
-| `channels/<slug>/posts/` | Все посты канала (черновики и опубликованные). Файл поста = архив поста. |
-| `bin/post.php` | Скрипт отправки поста в MAX (для сред с PHP). |
-| `tools/post_guard.py` | Сторож публикаций: пропускает только каналы (`chat_id < 0`), диалоги и группы запрещены. |
+| `roles/` | Роли бота: `archivist/` (личный архивариус), `blogger/` (каналы), `newsbot/` (личные дайджесты). Структура — `README.md`. |
+| `shared/` | Общие модули для всех ролей: `paths.py` (корень репозитория), `post_guard.py` (запрет диалогов). |
+| `roles/blogger/config/channels.json` | Реестр каналов: `slug`, название, описание, `cta_label`/`cta_url` для призыва. Сначала посмотрите сюда. |
+| `roles/blogger/channels/<slug>/style.md` | Стиль канала: тон, темы, оформление, что запрещено. Обязательно прочитайте перед написанием поста. |
+| `roles/blogger/channels/<slug>/cta-phrases.json` | Реестр использованных фраз призыва (CTA) — фразы не должны повторяться. |
+| `roles/blogger/channels/<slug>/posts/` | Все посты канала (черновики и опубликованные). Файл поста = архив поста. |
+| `roles/blogger/bin/post.php` | Скрипт отправки поста в MAX (для сред с PHP). |
+| `shared/post_guard.py` | Сторож публикаций: пропускает только каналы (`chat_id < 0`), диалоги и группы запрещены. |
 | `archive/review.php` | АРХИВ: старый скрипт отправки черновика/уведомления в личку бота. Публикация в диалог запрещена. |
-| `tools/publish_post.py` | Публикация поста из файла архива: загрузка карточки, POST, GET-контроль, запись архива. `--channel <slug>`. |
-| `tools/make_card.py` | Генератор карточки поста — запускать только по прямому указанию владельца. |
-| `tools/ensure_cta_quote.py` | Пакетные правки опубликованных постов: CTA-цитата + текстовые замены с контролем вхождений. `--channel <slug>`. |
-| `tools/build_markdown.py` | Сборка Markdown точными заменами (с проверкой числа вхождений). |
-| `tools/markup_fragments.py` | Снятие фрагментов разметки из GET-ответа. |
-| `docs/archive-channel.md` | Приватный канал-архив MAX: проверенные лимиты и поведение типов загрузки, состояние, открытое решение по схеме наполнения. В постовый цикл не входит. |
+| `roles/blogger/tools/publish_post.py` | Публикация поста из файла архива: загрузка карточки, POST, GET-контроль, запись архива. `--channel <slug>`. |
+| `roles/blogger/tools/make_card.py` | Генератор карточки поста — запускать только по прямому указанию владельца. |
+| `roles/blogger/tools/ensure_cta_quote.py` | Пакетные правки опубликованных постов: CTA-цитата + текстовые замены с контролем вхождений. `--channel <slug>`. |
+| `roles/blogger/tools/build_markdown.py` | Сборка Markdown точными заменами (с проверкой числа вхождений). |
+| `roles/blogger/tools/markup_fragments.py` | Снятие фрагментов разметки из GET-ответа. |
+| `roles/archivist/docs/archive-channel.md` | Приватный канал-архив MAX: проверенные лимиты и поведение типов загрузки, состояние, открытое решение по схеме наполнения. В постовый цикл не входит. |
 | `docs/bot-publications-archive.md` | Архив методики публикации в личку бота AI Now: что заархивировано, почему запрещено, как восстановить. |
 | `local/tokens.json` | Токены ботов и `chat_id` каналов. Файл gitignored, живёт только локально. |
 | `local/tokens.example.json` | Шаблон файла токенов с описанием полей. |
-| `experiments/personal-news/` | Эксперимент «личный новостной бот»: код в git, состояние в `local/pnews_*`, токен — ключ `newsbot`. В постовый цикл не входит; правила и гигиена токена — `experiments/personal-news/TASK.md`. |
+| `roles/newsbot/` | Эксперимент «личный новостной бот»: код в git, состояние в `local/pnews_*`, токен — ключ `newsbot`. В постовый цикл не входит; правила и гигиена токена — `roles/newsbot/TASK.md`. |
 
 ## 2а. Запрет публикации в личный диалог бота
 
 С 07.11.2026 личка бота AI Now (`@se14808890_bot`) закреплена за новостным
-ботом (`experiments/personal-news/`). Всем остальным инструментам методики
+ботом (`roles/newsbot/`). Всем остальным инструментам методики
 запрещено отправлять `POST /messages` в диалоговые и групповые `chat_id`
 (неотрицательные). Разрешены только каналы (`chat_id < 0`).
 
-- Сторож в коде: `tools/post_guard.py` (вызовы в `tools/publish_post.py` и
-  `bin/post.php`).
+- Сторож в коде: `shared/post_guard.py` (вызовы в `roles/blogger/tools/publish_post.py` и
+  `roles/blogger/bin/post.php`).
 - Архив старой методики: `archive/review.php`,
   `local/_archive/bot-notify/`, описание — `docs/bot-publications-archive.md`.
 - Восстанавливать старую методику можно только после согласования с новостным
@@ -65,7 +67,7 @@
 draft ──(чек-лист 5а)──> показан человеку в рабочем чате ──(«ок» здесь)──> approved ──> published
 ```
 
-1. **`draft`.** Агент создаёт файл поста в `channels/<slug>/posts/`. Имя файла:
+1. **`draft`.** Агент создаёт файл поста в `roles/blogger/channels/<slug>/posts/`. Имя файла:
    `YYYY-MM-DD-kratkiy-slug.md` (дата — планируемая дата публикации).
 2. **Чек-лист 5а** — прогнать до показа человеку, а не после.
 3. **Показ черновика человеку** — текст поста целиком в рабочем чате с
@@ -90,12 +92,12 @@ draft ──(чек-лист 5а)──> показан человеку в ра
 
 ## 4. Как писать новый пост
 
-1. Откройте `config/channels.json`, найдите канал (или попросите человека
+1. Откройте `roles/blogger/config/channels.json`, найдите канал (или попросите человека
    добавить новый, отредактировав реестр).
-2. Прочитайте `channels/<slug>/style.md`.
-3. Прочитайте **3–5 последних опубликованных** постов из `channels/<slug>/posts/`
+2. Прочитайте `roles/blogger/channels/<slug>/style.md`.
+3. Прочитайте **3–5 последних опубликованных** постов из `roles/blogger/channels/<slug>/posts/`
    (файлы со `status: published`) — удерживайте стиль и не повторяйте темы.
-4. Прочитайте `channels/<slug>/style.md` целиком. Если в нём есть раздел
+4. Прочитайте `roles/blogger/channels/<slug>/style.md` целиком. Если в нём есть раздел
    **«Формат поста (ОБЯЗАТЕЛЬНЫЕ правила)»** — выполняйте эти правила
    буквально, пост с их нарушением публиковать нельзя (обязательные правила
    формата действуют в обоих каналах: `ainow` и `al` — изображение, жирный
@@ -108,9 +110,9 @@ draft ──(чек-лист 5а)──> показан человеку в ра
 ### Вариант А: есть терминал с PHP (хостинг, машина с PHP)
 
 ```bash
-php bin/post.php channels/<slug>/posts/<файл>.md
+php roles/blogger/bin/post.php roles/blogger/channels/<slug>/posts/<файл>.md
 # предварительный просмотр:
-php bin/post.php channels/<slug>/posts/<файл>.md --dry-run
+php roles/blogger/bin/post.php roles/blogger/channels/<slug>/posts/<файл>.md --dry-run
 ```
 
 Скрипт сам найдёт токен и `chat_id` по `channel` из front matter
@@ -171,10 +173,10 @@ py -c "from pathlib import Path; r=Path('local/russian_trusted_root_ca.pem').rea
 
 $env:MAX_HTTP='python'
 $env:MAX_CA_CERT=(Resolve-Path local/russian_ca_bundle.pem).Path
-py tools/publish_post.py --channel <slug> channels/<slug>/posts/<файл>.md
+py roles/blogger/tools/publish_post.py --channel <slug> roles/blogger/channels/<slug>/posts/<файл>.md
 ```
 
-- `MAX_HTTP=python` — транспорт urllib в `tools/publish_post.py`: и JSON-запросы,
+- `MAX_HTTP=python` — транспорт urllib в `roles/blogger/tools/publish_post.py`: и JSON-запросы,
   и multipart-загрузка обложки делаются на stdlib; доверие = системное
   хранилище + `MAX_CA_CERT`.
 - Вне скрипта тот же рецепт: `ssl.create_default_context(cafile=<бандл>)`
@@ -188,7 +190,7 @@ py tools/publish_post.py --channel <slug> channels/<slug>/posts/<файл>.md
 
 Если PHP установлен, но API-запрос идёт с машины без сертификатов (ошибка TLS) —
 см. переменные `MAX_CA_CERT` / `MAX_INSECURE` в `README.md`, либо выполнить
-публикацию `tools/publish_post.py` с `MAX_HTTP=python`.
+публикацию `roles/blogger/tools/publish_post.py` с `MAX_HTTP=python`.
 
 Ещё нюансы рабочей машины (Windows): консоль PowerShell работает в cp1251 —
 эмодзи и кириллицу из Python в консоль не вывести (`UnicodeEncodeError`).
@@ -203,7 +205,7 @@ py tools/publish_post.py --channel <slug> channels/<slug>/posts/<файл>.md
 механические проверки — пост, опубликованный с нарушением формата, потом
 приходится править в канале, а это лишний цикл согласования:
 
-1. **Правила формата канала.** Открыть `channels/<slug>/style.md`, раздел
+1. **Правила формата канала.** Открыть `roles/blogger/channels/<slug>/style.md`, раздел
    «Формат поста (ОБЯЗАТЕЛЬНЫЕ правила)», и проверить пост по каждому пункту
    буквально (сейчас такие разделы есть у обоих каналов — `ainow` и `al`).
 2. **Изображение** (если правило требует): картинку присылает владелец.
@@ -211,7 +213,7 @@ py tools/publish_post.py --channel <slug> channels/<slug>/posts/<файл>.md
    токен включён в `attachments`. Если картинки нет — **не генерировать её
    самостоятельно**, а запросить у владельца и придержать публикацию.
    Если в посте есть видео — картинка не нужна: видео заменяет обложку
-   (`channels/ainow/style.md`, раздел 1а).
+   (`roles/blogger/channels/ainow/style.md`, раздел 1а).
 3. **Длина:** финальный текст (с разметкой) ≤ 4000 символов — посчитать
    скриптом, не на глаз.
 4. **Финальная цитата-призыв:** последний блок — цитата `> **Подписывайтесь
@@ -221,7 +223,7 @@ py tools/publish_post.py --channel <slug> channels/<slug>/posts/<файл>.md
 6. **Воздух:** блоки разделены `\n\n`, один блок — одна мысль.
 7. **Перелинковка:** 1–2 ссылки на прошлые посты канала AI вплетены в
    текст поста, в подходящий абзац. Отдельного блока ссылок в конце
-   поста нет (правило 7 в `channels/ainow/style.md`).
+   поста нет (правило 7 в `roles/blogger/channels/ainow/style.md`).
 
 После публикации: `GET /messages/{mid}` — вложение на месте, текст совпадает,
 инлайн-разметка цела (цитату GET не показывает — см. раздел 9).
@@ -232,13 +234,13 @@ py tools/publish_post.py --channel <slug> channels/<slug>/posts/<файл>.md
 берётся из архива основного канала **AI** — любое подходящее по теме:
 
 1. Библиотека: `local/images/ainow/*.jpg` — обложки опубликованных постов AI.
-   Обновить: `python tools/fetch_images.py`.
-2. Выбор: `python tools/pick_image.py --channel <slug>` — отдаёт путь к файлу,
+   Обновить: `python roles/blogger/tools/fetch_images.py`.
+2. Выбор: `python roles/blogger/tools/pick_image.py --channel <slug>` — отдаёт путь к файлу,
    который дольше всех не использовался в этом канале; путь записывается в
    `image_file:` front matter поста.
 3. Одна и та же картинка не ставится в соседние посты канала; подбирать по
    смыслу (тема, инструмент, сюжет поста).
-4. Генерация карточек (`tools/make_card.py`, Pillow) **запрещена без прямого
+4. Генерация карточек (`roles/blogger/tools/make_card.py`, Pillow) **запрещена без прямого
    и явного указания владельца** — в любом канале. По умолчанию изображения
    присылает владелец.
 
@@ -247,14 +249,14 @@ py tools/publish_post.py --channel <slug> channels/<slug>/posts/<файл>.md
 
 ### 5в. Telegram: если релей недоступен
 
-Основной путь — релей `deploy/tg-relay.php` на `0s3.ru` (`tools/publish_telegram.py`).
+Основной путь — релей `deploy/tg-relay.php` на `0s3.ru` (`roles/blogger/tools/publish_telegram.py`).
 Проверка живости: `curl.exe -s -o NUL -w "%{http_code}" https://0s3.ru/tg-relay/tg-relay.php`
 — ожидаем `200`, `000` означает недоступность.
 
-Резерв: `python tools/tg_direct.py <файл> --ip 149.154.167.220` — отправка напрямую
+Резерв: `python roles/blogger/tools/tg_direct.py <файл> --ip 149.154.167.220` — отправка напрямую
 в `api.telegram.org` через `--resolve` (из этой среды домен блокируется, а IP
 `149.154.167.220:443` открыт). Разметка и запись архива — те же, что у
-`tools/publish_telegram.py`. Перед сменой IP проверять
+`roles/blogger/tools/publish_telegram.py`. Перед сменой IP проверять
 `Test-NetConnection 149.154.167.220 -Port 443`.
 
 Кейс 2026-11-02…04: NS Beget отдавали `SERVFAIL`, затем хостинг перестал
@@ -275,7 +277,7 @@ py tools/publish_post.py --channel <slug> channels/<slug>/posts/<файл>.md
 историей канала:
 
 ```
-channels/<slug>: опубликован пост <файл>
+roles/blogger/channels/<slug>: опубликован пост <файл>
 ```
 
 Коммиты делает агент (или человек) после успешной отправки. Пуш в GitHub — по
@@ -314,7 +316,7 @@ channels/<slug>: опубликован пост <файл>
    Если curl (schannel) не проходит TLS до `iu.oneme.ru` — используйте
    транспорт `MAX_HTTP=python` из раздела 5: он делает оба шага, включая
    multipart-загрузку файла, на urllib (так опубликован пост 06.11).
-   `tools/publish_post.py` делает эти шаги сам при наличии `image_file`.
+   `roles/blogger/tools/publish_post.py` делает эти шаги сам при наличии `image_file`.
 3. Прикрепление: в `POST /messages` или `PUT /messages?message_id=...` передать
    `"attachments": [{"type": "image", "payload": {"token": "<токен>"}}]`.
    `PUT` принимает вложения так же, как `POST`; текст при этом передаётся как
@@ -326,7 +328,7 @@ channels/<slug>: опубликован пост <файл>
    изменились.
 
 **Изображения не генерируются.** Картинку для поста присылает владелец —
-это правило по умолчанию. Генерация (Pillow, `tools/make_card.py` и любые
+это правило по умолчанию. Генерация (Pillow, `roles/blogger/tools/make_card.py` и любые
 другие способы) допускается только по прямому и явному указанию владельца
 в текущей задаче. Если картинки нет — запросить её и придержать публикацию;
 подставлять заглушку или генерировать «по своему усмотрению» нельзя.
@@ -394,9 +396,9 @@ Content-Type: application/json
 2. Внести текстовые правки в файл поста в архиве.
 3. Собрать Markdown точными заменами по фрагментам разметки, каждая замена —
    с проверкой числа вхождений (ожидалось/найдено). Рабочие примеры —
-   `tools/build_markdown.py` (сборка md из текста и разметки),
-   `tools/markup_fragments.py` (снятие фрагментов) и
-   `tools/ensure_cta_quote.py` (пакетные правки + проверка после PUT).
+   `roles/blogger/tools/build_markdown.py` (сборка md из текста и разметки),
+   `roles/blogger/tools/markup_fragments.py` (снятие фрагментов) и
+   `roles/blogger/tools/ensure_cta_quote.py` (пакетные правки + проверка после PUT).
 4. `PUT /messages?message_id=...` с `{"text": ..., "format": "markdown"}`,
    без вложений.
 5. `GET /messages/{message_id}` — проверить: правки на месте, вложение
@@ -417,7 +419,7 @@ Content-Type: application/json
 [AI](https://max.ru/channel_ainow)** — …`). Если строки призыва нет или она
 не цитата — привести к формату правила 4 из `style.md`. Текст призыва каждый
 раз новый (фразы не повторяются между постами; машинный реестр фраз —
-`channels/<канал>/cta-phrases.json`, человекочитаемая таблица —
+`roles/blogger/channels/<канал>/cta-phrases.json`, человекочитаемая таблица —
 `proofread.md`, раздел «CTA»). Проверка выполняется и для «чистых» постов —
 сам по себе она повод для правки.
 
@@ -431,9 +433,9 @@ Content-Type: application/json
 
 При входе в проект агент должен:
 1. перечитать этот файл и `README.md`;
-2. сверить `config/channels.json` с фактическими папками в `channels/`;
+2. сверить `roles/blogger/config/channels.json` с фактическими папками в `roles/blogger/channels/`;
 3. проверить `git status` — незакоммиченные черновики/правки забрать в работу;
-4. открыть `channels/<slug>/proofread.md` (если есть) — статус вычитки и
+4. открыть `roles/blogger/channels/<slug>/proofread.md` (если есть) — статус вычитки и
    правок. Внимание: файл поста может опережать канал (правка внесена в файл,
    но `PUT` ещё не выполнялся — статус ⏳; правки применяются сразу, раздел
    3.2, так что ⏳ — сигнал доделать, а не ждать);

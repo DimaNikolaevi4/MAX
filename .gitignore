@@ -16,5 +16,5 @@ __pycache__/
 Thumbs.db
 .DS_Store
 
-# Сгенерированный пакет для Дзена (собирается tools/dzen_build.py)
+# Сгенерированный пакет для Дзена (собирается roles/blogger/tools/dzen_build.py)
 dzen/

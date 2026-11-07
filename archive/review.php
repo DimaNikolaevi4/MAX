@@ -89,7 +89,7 @@ foreach ($args as $arg) {
 }
 
 if ($postPath === null) {
-    fail('Укажите путь к файлу поста. Пример: php archive/review.php channels/ainow/posts/2026-11-01-moi-post.md');
+    fail('Укажите путь к файлу поста. Пример: php archive/review.php roles/blogger/channels/ainow/posts/2026-11-01-moi-post.md');
 }
 if (!is_file($postPath)) {
     fail("Файл поста не найден: {$postPath}");

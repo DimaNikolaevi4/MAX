@@ -85,7 +85,7 @@ curl -H "Authorization: <токен>" https://platform-api2.max.ru/chats/<chat_i
 Нюанс TLS: в изолированных средах (Node-песочницы, некоторые CI) возможна ошибка
 `unable to get local issuer certificate`. Решения: системный `curl` (на Windows
 использует хранилище сертификатов ОС), либо сертификат Минцифры через
-`MAX_CA_CERT` (см. `bin/post.php`).
+`MAX_CA_CERT` (см. `roles/blogger/bin/post.php`).
 
 ## 7. Один бот на несколько каналов
 
@@ -101,7 +101,7 @@ curl -H "Authorization: <токен>" https://platform-api2.max.ru/chats/<chat_i
 ```
 
 Один и тот же токен в двух записях = один бот ведёт оба канала. Скрипт
-`bin/post.php` сам выберет нужный `chat_id` по полю `channel` в front matter
+`roles/blogger/bin/post.php` сам выберет нужный `chat_id` по полю `channel` в front matter
 поста. Лимиты (2 сообщения/сек на канал, 30 rps на API) это позволяют.
 
 Либо можно завести отдельного бота на каждый канал — чуть чище с точки зрения

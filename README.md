@@ -14,19 +14,30 @@ MAX/
 ├── README.md               # Этот файл (для людей)
 ├── docs/
 │   ├── bot-setup.md          # Пошаговая настройка бота с нуля (проверено на практике)
-│   └── agent-onboarding.md   # Вход для нового ИИ-агента (что читать, чего не делать)
-├── bin/
-│   └── post.php            # CLI-скрипт отправки поста (PHP 8.1+, расширение curl)
-├── config/
-│   └── channels.json       # Реестр каналов (slug, название, cta_label/cta_url; БЕЗ токенов)
-├── channels/
-│   └── <slug>/             # Отдельная папка на каждый канал
-│       ├── style.md        # Описание стиля канала (тон, темы, оформление)
-│       ├── cta-phrases.json# Реестр фраз призыва (CTA) — не повторяются между постами
-│       ├── proofread.md    # Статус вычитки/правок (если есть)
-│       └── posts/          # Все посты канала: черновики и опубликованные
-├── experiments/
-│   └── personal-news/      # Эксперимент «личный новостной бот» (в постовый цикл не входит)
+│   ├── agent-onboarding.md   # Вход для нового ИИ-агента (что читать, чего не делать)
+│   └── bot-publications-archive.md  # Архив методики публикации в личку бота
+├── roles/
+│   ├── archivist/          # Роль 1: личный архивариус (архив изображения)
+│   │   ├── docs/           # archive-channel.md — лимиты и схема наполнения
+│   │   └── tools/          # archive_plan.py, archive_upload.py, inbox_*.py
+│   ├── blogger/            # Роль 2: блогер (основной и резервные каналы)
+│   │   ├── bin/post.php    # CLI-скрипт отправки поста (PHP 8.1+, curl)
+│   │   ├── config/
+│   │   │   └── channels.json  # Реестр каналов (slug, cta_label/cta_url; БЕЗ токенов)
+│   │   ├── channels/
+│   │   │   └── <slug>/     # Отдельная папка на каждый канал
+│   │   │       ├── style.md        # Стиль канала (тон, темы, оформление)
+│   │   │       ├── cta-phrases.json# Реестр фраз призыва (не повторяются)
+│   │   │       ├── proofread.md    # Статус вычитки/правок (если есть)
+│   │   │       └── posts/          # Все посты: черновики и опубликованные
+│   │   └── tools/          # publish_post.py, publish_telegram.py, make_card.py…
+│   └── newsbot/            # Роль 3: личный новостной бот (в постовый цикл не входит)
+│       ├── TASK.md         # Правила и состояние эксперимента
+│       └── src/            # digest_bot.py, brief.py, news_digest.py…
+├── shared/                 # Общее для всех ролей
+│   ├── paths.py            # Корень репозитория и общие пути
+│   └── post_guard.py       # Запрет публикации в диалоги/группы
+├── archive/                # Устаревшие методики (review.php)
 └── local/
     ├── tokens.example.json # Шаблон файла с токенами
     └── tokens.json         # Реальные токены (НЕ коммитится, в .gitignore)
@@ -62,21 +73,21 @@ url: null                 # заполняется скриптом (публи�
 На машине/хостинге с PHP 8.1+ и расширением curl:
 
 ```bash
-php bin/post.php channels/ainow/posts/2026-10-29-brauzernye-aiagenty-ustupayut-rabochemu-stolu.md
+php roles/blogger/bin/post.php roles/blogger/channels/ainow/posts/2026-10-29-brauzernye-aiagenty-ustupayut-rabochemu-stolu.md
 ```
 
 Опции:
 
 ```bash
-php bin/post.php <файл> --dry-run          # показать payload, не отправляя
-php bin/post.php <файл> --chat-id=123456   # временно переопределить chat_id
+php roles/blogger/bin/post.php <файл> --dry-run          # показать payload, не отправляя
+php roles/blogger/bin/post.php <файл> --chat-id=123456   # временно переопределить chat_id
 ```
 
 Переменные окружения:
 
 - `MAX_TOKENS_FILE` — путь к файлу токенов (по умолчанию `local/tokens.json`);
 - `MAX_API_BASE` — адрес API (по умолчанию `https://platform-api2.max.ru`);
-- `MAX_HTTP=python` — транспорт `tools/publish_post.py` на stdlib urllib
+- `MAX_HTTP=python` — транспорт `roles/blogger/tools/publish_post.py` на stdlib urllib
   (рекомендуется на Windows-машинах: TLS curl/schannel не принимает
   российские цепочки сертификатов CDN `iu.oneme.ru`, см. AGENTS.md, раздел 5);
 - `MAX_CA_CERT` — путь к CA-бандлу (корень + промежуточный Минцифры,
@@ -90,7 +101,7 @@ php bin/post.php <файл> --chat-id=123456   # временно переопр
 ```powershell
 $env:MAX_HTTP='python'
 $env:MAX_CA_CERT=(Resolve-Path local/russian_ca_bundle.pem).Path
-py tools/publish_post.py --channel ainow channels/ainow/posts/<файл>.md
+py roles/blogger/tools/publish_post.py --channel ainow roles/blogger/channels/ainow/posts/<файл>.md
 ```
 
 ## Правила безопасности
