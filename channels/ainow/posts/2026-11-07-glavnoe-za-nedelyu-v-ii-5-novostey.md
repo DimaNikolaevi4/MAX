@@ -1,9 +1,13 @@
 ---
 channel: ainow
-status: draft
+status: published
 format: markdown
 notify: true
-image_file: local/images/digest-saturday-cover.png
+published_at: 2026-11-07T07:39:11+03:00
+message_id: mid.ffffba0066fb9aa301a1b44da8f979e2
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaG0Taj5eeI
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQjnH94exFlWloaZ1RL6G1qEiARgZ1bFffAWttpC5JLo9a4K8M3A50eiXVDWZNFSw-gXRNqzw2ruWEJMT41zZo
 ---
 
 🗞 **Главное за неделю: 5 новостей ИИ, которые изменят работу**
