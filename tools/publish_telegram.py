@@ -17,8 +17,7 @@
   "<slug>": {
     "relay_url": "https://<домен>/tg-relay.php",
     "secret": "<секрет из tg-config.php на хостинге>",
-    "chat_id": "@username_канала",
-    "review_chat_id": 537566305
+    "chat_id": "@username_канала"
   }
 
 Front matter поста: channel, status: draft, image_file (карточка),

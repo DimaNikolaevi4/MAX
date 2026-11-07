@@ -1,13 +1,13 @@
 <?php
 /**
- * review.php — отправка черновика поста на согласование в личную переписку
- * с ботом (канал согласования). Пост показывается человеку ровно так,
- * как он будет выглядеть в мессенджере.
+ * review.php — АРХИВ (07.11.2026). Отправка черновика поста на согласование
+ * в личную переписку с ботом. Публикация в личку AI Now запрещена;
+ * файл сохранён как история методики (docs/bot-publications-archive.md).
  *
  * Использование:
- *   php bin/review.php <путь-к-посту.md>            — отправить черновик на согласование
- *   php bin/review.php <путь-к-посту.md> --dry-run — показать, что будет отправлено
- *   php bin/review.php <путь-к-посту.md> --note="Комментарий" — добавить примечание
+ *   php archive/review.php <путь-к-посту.md>            — отправить черновик на согласование
+ *   php archive/review.php <путь-к-посту.md> --dry-run — показать, что будет отправлено
+ *   php archive/review.php <путь-к-посту.md> --note="Комментарий" — добавить примечание
  *
  * Куда отправлять: поле review_chat_id в local/tokens.json (диалог человека
  * с ботом). Переопределить: --chat-id=N или переменная MAX_REVIEW_CHAT_ID.
@@ -19,6 +19,15 @@
 declare(strict_types=1);
 
 const API_BASE_DEFAULT = 'https://platform-api2.max.ru';
+
+// АРХИВ с 07.11.2026: публикация в личный диалог бота AI Now запрещена.
+// Файл сохранён как история методики; для запуска нужно явно разрешить.
+if (getenv('MAX_ALLOW_ARCHIVED_BOT_DIALOG') !== '1') {
+    fwrite(STDERR, "Архивная методика: публикация в личку AI Now запрещена. "
+        . "См. docs/bot-publications-archive.md. "
+        . "Для восстановления задайте MAX_ALLOW_ARCHIVED_BOT_DIALOG=1." . PHP_EOL);
+    exit(1);
+}
 
 function fail(string $message): never
 {
@@ -80,7 +89,7 @@ foreach ($args as $arg) {
 }
 
 if ($postPath === null) {
-    fail('Укажите путь к файлу поста. Пример: php bin/review.php channels/ainow/posts/2026-11-01-moi-post.md');
+    fail('Укажите путь к файлу поста. Пример: php archive/review.php channels/ainow/posts/2026-11-01-moi-post.md');
 }
 if (!is_file($postPath)) {
     fail("Файл поста не найден: {$postPath}");

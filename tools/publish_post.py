@@ -39,6 +39,9 @@ import uuid
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from post_guard import assert_channel_chat_id  # noqa: E402
+
 REPO = Path(__file__).resolve().parent.parent
 API = "https://platform-api2.max.ru"
 REPORT = []
@@ -127,6 +130,8 @@ def main() -> None:
     chat_id = tokens.get(channel, {}).get("chat_id")
     if not (tok and chat_id):
         raise SystemExit(f"в local/tokens.json нет token/chat_id для {channel!r}")
+    # Сторож: каналы — только отрицательный chat_id (диалоги/группы запрещены).
+    assert_channel_chat_id(chat_id, tool="publish_post")
 
     raw = post_path.read_text(encoding="utf-8")
     m = re.match(r"\A---\r?\n(.*?)\r?\n---\r?\n?", raw, re.S)

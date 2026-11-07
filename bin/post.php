@@ -148,6 +148,12 @@ $chatId = $chatIdOverride ?? (int) ($creds['chat_id'] ?? 0);
 if ($chatId === 0) {
     fail("Для канала «{$slug}» не задан chat_id (можно временно задать опцией --chat-id=N).");
 }
+// Сторож: каналы — только отрицательный chat_id (диалоги/группы запрещены).
+if ($chatId > 0) {
+    fail("Публикация в диалог/группу запрещена (chat_id={$chatId}). "
+        . "Разрешены только каналы (chat_id < 0). Личка бота AI Now зарезервирована "
+        . "за experiments/personal-news; см. docs/bot-publications-archive.md.");
+}
 
 // --- Payload ---
 $payload = ['text' => $text];
