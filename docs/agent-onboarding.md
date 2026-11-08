@@ -19,8 +19,11 @@
 - `local/tokens.json` существует и содержит запись вашего канала
   (`token`, `chat_id`) — файл gitignored, в свежем клоне его нет: создайте по
   шаблону `local/tokens.example.json`, токен возьмите у человека.
-- Проверка связи: `curl.exe -H "Authorization: <токен>" https://platform-api2.max.ru/me`
-  → HTTP 200 и `is_bot: true`.
+- Проверка связи: `curl.exe --cacert local/russian_ca_bundle.pem -H "Authorization: <токен>"
+  https://platform-api2.max.ru/me` → HTTP 200 и `is_bot: true`. Если бандла ещё
+  нет или пришла ошибка сертификата — переходите на py-транспорт
+  (`MAX_HTTP=python`, `MAX_CA_CERT`) из `AGENTS.md` §5: голый `curl.exe`
+  без `--cacert` на этой машине падает по TLS.
 
 ## 3. Железные правила (нарушать нельзя)
 
@@ -42,8 +45,13 @@
 - Windows: консоль в cp1251 — Unicode в консоль не печатать, писать в файл
   и читать инструментом чтения файлов; inline-python с кавычками в PowerShell
   ломается — скрипты сохранять в файлы.
-- TLS: в изолированных средах python-requests падает по сертификатам —
-  использовать системный `curl.exe`.
+- TLS — самый частый источник сбоев (полностью — `AGENTS.md` §5). Оба хоста
+  (`platform-api2.max.ru` и CDN `iu.oneme.ru`) отдают российскую цепочку
+  сертификатов. Рабочая схема: `MAX_HTTP=python` +
+  `MAX_CA_CERT=local/russian_ca_bundle.pem` — транспорт urllib в
+  `publish_post.py`, включая multipart-загрузку обложки. `curl.exe` (schannel)
+  к `platform-api2` проходит только с `--cacert`, а к `iu.oneme.ru` не проходит
+  вовсе; `python-requests` с дефолтным контекстом падает на `platform-api2`.
 - Позиции разметки в API — в UTF-16 кодовых единицах (эмодзи вне BMP = 2
   единицы; пересчёт префикс-суммами, образец — `roles/blogger/tools/ensure_cta_quote.py`).
 - MAX НЕ рендерит markdown-списки (`- `, `1. `) и таблицы (`| |`) — маркеры
@@ -51,8 +59,10 @@
 - Цитата `>` работает при отправке, но GET её в markup не возвращает —
   признак успеха: `>` исчез из текста, инлайн-разметка внутри цела.
 - Загрузка изображения: `POST /uploads?type=image` → одноразовый url →
-  `curl -F "data=@file"` → токен из `{"photos":{"0":{"token":...}}}` →
-  `attachments: [{"type":"image","payload":{"token":...}}]`.
+  multipart `data=@file` → токен из `{"photos":{"0":{"token":...}}}` →
+  `attachments: [{"type":"image","payload":{"token":...}}]`. Multipart делайте
+  python-транспортом (`MAX_HTTP=python`) или через `publish_post.py` с
+  `image_file`; `curl -F` на `iu.oneme.ru` с 06.11.2026 не проходит по TLS.
 - Закреп поста: `PUT /chats/{chat_id}/pin` с `{"message_id": "..."}`;
   проверка — `GET /chats/{chat_id}`, поле `pinned_message`. Снятие —
   тот же эндпоинт с `{"message_id": null}` (не проверено).
