@@ -1,9 +1,13 @@
 ---
 channel: ainow
-status: draft
+status: published
 format: markdown
 notify: true
-image_file: local/images/2026-11-08-cover.png
+published_at: 2026-11-08T08:58:43+03:00
+message_id: mid.ffffba0066fb9aa301a1b9bcd1a838c0
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaG5vNGoOMA
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCSw_9AECEta2eBaVJcwvki3qaFGrpAmePebSJRE5E3EypqrhT_q1YJURS7fyBIe5vlMwQBeZSHgSUkpDk841dI
 ---
 
 📩 **ИИ-секретарь: почта и 3 промпта на каждый день**
