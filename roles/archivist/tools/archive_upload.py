@@ -139,7 +139,9 @@ def prepare_image(path: Path) -> Path:
     st = path.stat()
     key = hashlib.sha1(f"{path}|{st.st_size}|{int(st.st_mtime)}".encode()).hexdigest()[:20]
     dst = WEBP_DIR / f"{key}.webp"
-    if dst.exists() and dst.stat().st_mtime >= st.st_mtime:
+    # размер > 0: прерванная конвертация оставляет пустой файл с новым mtime,
+    # и без проверки он уходит в API как «свежий» кэш (ответ NO_IMAGE)
+    if dst.exists() and dst.stat().st_size > 0 and dst.stat().st_mtime >= st.st_mtime:
         return dst
     WEBP_DIR.mkdir(parents=True, exist_ok=True)
     with Image.open(path) as im:
