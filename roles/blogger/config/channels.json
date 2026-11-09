@@ -32,6 +32,14 @@
       "description": "Telegram-канал https://t.me/Neuro_Animation_Studio (chat_id -1002087111322), закрывается: аудитория переливается в ainow (MAX). Публикация — через релей на хостинге 0s3.ru (deploy/tg-relay.php), т.к. api.telegram.org из локальной среды недоступен.",
       "cta_label": "AI в MAX",
       "cta_url": "https://max.ru/channel_ainow"
+    },
+    {
+      "slug": "zabava",
+      "platform": "max",
+      "title": "Забавное",
+      "description": "Юмор и забавные моменты из жизни домашних питомцев и диких животных. Короткие видео для хорошего настроения. https://max.ru/channel_zabava",
+      "cta_label": "Забавное",
+      "cta_url": "https://max.ru/channel_zabava"
     }
   ]
 }
