@@ -90,10 +90,10 @@ image_file: local/images/<файл>.png
   - практические гайды: промпты, чек-листы, workflow;
   - **субботний дайджест** — обложка всегда одна: `local/images/digest-saturday-cover.png`, не заменять и не перегенерировать;
   - **услуги** — раз в 2–4 недели, кейс-пост об администрировании каналов MAX.
-- Состояние на 08.11.2026:
+- Состояние на 09.11.2026:
   - 07.11 — дайджест опубликован: https://max.ru/channel_ainow/AaG0Taj5eeI
   - 08.11 — «ИИ-секретарь: почта и 3 промпта» опубликован: https://max.ru/channel_ainow/AaG5vNGoOMA
-  - 09.11 — запланирован пост «Как подключить бесплатный ИИ к боту из России: 5 путей»; черновик готов: `roles/blogger/channels/ainow/posts/2026-11-09-besplatnyy-ii-dlya-bota-5-putey.md`, обложка: `local/images/2026-11-09-cover.png`
+  - 09.11 — «Как подключить бесплатный ИИ к боту из России: 5 путей» опубликован: https://max.ru/channel_ainow/AaG-ebq7H_g
   - 10.11 — запланирован пост «Как я автоматизировал канал и рутину на OpenCode и GitHub»; черновик готов: `roles/blogger/channels/ainow/posts/2026-11-10-kak-avtomatiziroval-kanal-opencode-github.md`, обложка: `local/images/2026-11-10-cover.png`
   - 12.11 — запланирован пост «Безопасность данных в ИИ», обложка уже есть: `local/images/2026-11-12-cover.png`.
 

@@ -1,9 +1,13 @@
 ---
 channel: ainow
-status: draft
+status: published
 format: markdown
 notify: true
-image_file: local/images/2026-11-09-cover.png
+published_at: 2026-11-09T07:03:33+03:00
+message_id: mid.ffffba0066fb9aa301a1be79babb1ff8
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaG-ebq7H_g
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQaAHMOqs9uEDvdXlwfz7Ru7qrupAOu6mHZMtAIdtQQCOdeuADKzjXfrs3y5F9sSZzopT9abC3uYfDPe7Y8w94
 ---
 
 🧭 **Как подключить бесплатный ИИ к боту из России: 5 путей**
