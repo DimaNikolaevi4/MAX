@@ -131,8 +131,7 @@ def main() -> None:
     ch = next((c for c in cfg["channels"] if c["slug"] == channel), None)
     if not ch:
         raise SystemExit(f"канал {channel!r} не найден в roles/blogger/config/channels.json")
-    cta_label, cta_url = ch.get("cta_label"), ch.get("cta_url")
-    if not (cta_label and cta_url):
+    if not (ch.get("cta_label") and ch.get("cta_url")):
         raise SystemExit(f"для {channel!r} нет cta_label/cta_url")
 
     tokens = json.loads((REPO / "local" / "tokens.json").read_text(encoding="utf-8"))
@@ -154,6 +153,9 @@ def main() -> None:
             k, v = line.split(":", 1)
             fm[k.strip()] = v.strip()
     text = raw[m.end():].strip()
+    # CTA можно переопределить во front matter поста (рекламные посты).
+    cta_label = fm.get("cta_label") or ch.get("cta_label")
+    cta_url = fm.get("cta_url") or ch.get("cta_url")
 
     if fm.get("channel") != channel:
         raise SystemExit(f"front matter channel={fm.get('channel')!r} != --channel {channel!r}")
@@ -223,7 +225,7 @@ def main() -> None:
         resp = json.loads(post_resp)
     except json.JSONDecodeError:
         raise SystemExit(f"POST /messages не JSON: {post_resp[:200]}")
-    if not resp.get("success", True) or "message" not in resp:
+    if not resp.get("success", True) or not isinstance(resp.get("message"), dict):
         raise SystemExit(f"POST /messages ошибка: {post_resp[:300]}")
     msg = resp["message"]
     mid = msg.get("body", {}).get("mid")
