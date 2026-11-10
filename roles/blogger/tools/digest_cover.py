@@ -11,6 +11,9 @@
       [--title2 "новостей"] [--subtitle "что случилось за сутки"] \
       [--footer "Техно-дайджест"] --out local/digest/cover-YYYY-MM-DD.png
 
+Стиль paper (заставка-оглавление): слова названия могут идти в двух строках
+(--title / --title2), справа колонка «формат» из --items "a|b|c".
+
 Композиция: тёмный фон с холодным свечением, крупный заголовок,
 акцентная строка, дата выпуска и подпись снизу.
 """
@@ -25,6 +28,91 @@ FONT_SB = r"C:\Windows\Fonts\seguisb.ttf"    # Segoe UI Semibold
 MSK = timezone(timedelta(hours=3))
 
 
+def _make_paper(a) -> None:
+    """Стиль paper: заставка-оглавление.
+
+    Слева мачхед: надстрока, крупное название, акцентная линия, подзаголовок,
+    футер с ссылкой канала и датой. Справа — колонка «формат» с пунктами из
+    --items. Репродюсируется программно, без внешних изображений.
+    """
+    img = Image.new("RGB", (W, H), "#07141b")
+
+    c1, c2 = (7, 20, 27), (18, 30, 55)
+    px = img.load()
+    for y in range(H):
+        t_y = y / H * 0.55
+        for x in range(0, W, 4):
+            t = x / W * 0.45 + t_y
+            col = tuple(int(u + (v - u) * t) for u, v in zip(c1, c2))
+            for dx in range(4):
+                if x + dx < W:
+                    px[x + dx, y] = col
+
+    glow = Image.new("RGB", (W, H), "#000000")
+    gd = ImageDraw.Draw(glow)
+    gd.ellipse([-360, -300, 380, 260], fill="#123a4a")     # левый верх
+    gd.ellipse([880, 420, 1560, 1000], fill="#0e3326")     # правый низ
+    gd.ellipse([540, 560, 1120, 900], fill="#101f38")
+    glow = glow.filter(ImageFilter.GaussianBlur(120))
+    img = Image.blend(img, Image.blend(img, glow, 0.55), 0.9)
+    d = ImageDraw.Draw(img)
+
+    def fit_left(s, max_w, start):
+        f = ImageFont.truetype(FONT_B, start)
+        while d.textlength(s, font=f) > max_w and start > 22:
+            start -= 2
+            f = ImageFont.truetype(FONT_B, start)
+        return f
+
+    LX = 96
+    d.text((LX, 112), "Т Е Х Н О - Д А Й Д Ж Е С Т",
+           font=ImageFont.truetype(FONT_SB, 28), fill="#8fb8c8")
+
+    t1_f = fit_left(a.title, 660, 96)
+    title_lh = t1_f.size + 22
+    d.text((LX, 168), a.title, font=t1_f, fill="#ffffff")
+    y2 = 168 + title_lh
+    if a.title2:
+        t2_f = fit_left(a.title2, 660, 96)
+        d.text((LX, y2), a.title2, font=t2_f, fill="#ffffff")
+        y_line = y2 + t2_f.size + 40
+    else:
+        y_line = y2 + 28
+    d.rounded_rectangle([LX, y_line, LX + 232, y_line + 6], radius=3, fill="#3edb9a")
+
+    if a.subtitle:
+        d.text((LX, y_line + 46), a.subtitle,
+               font=ImageFont.truetype(FONT_SB, 40), fill="#7fffd4")
+
+    foot_f = ImageFont.truetype(FONT_SB, 27)
+    d.text((LX, 716), "max.ru/channel_na100", font=foot_f, fill="#7fa8b8")
+    if a.show_date:
+        date_s = f"{datetime.now(MSK):%d.%m.%Y}"
+        d.text((W - 96 - d.textlength(date_s, font=foot_f), 716),
+               date_s, font=foot_f, fill="#7fa8b8")
+
+    # --- правая колонка «формат» ---
+    if a.items:
+        RX, RM = 904, W - 96
+        d.line([860, 108, 860, 690], fill="#23405a", width=2)
+        d.text((RX, 116), "Ф О Р М А Т",
+               font=ImageFont.truetype(FONT_SB, 26), fill="#8fb8c8")
+
+        items = [s.strip() for s in a.items.split("|") if s.strip()]
+        row_y = 186
+        for i, s in enumerate(items, start=1):
+            d.text((RX, row_y), f"0{i}",
+                   font=ImageFont.truetype(FONT_B, 34), fill="#3edb9a")
+            f_t = fit_left(s, RM - RX - 92, 30)
+            d.text((RX + 92, row_y + 4), s, font=f_t, fill="#edf4f8")
+            if i < len(items):
+                d.line([RX, row_y + 78, RM, row_y + 78], fill="#23405a", width=2)
+            row_y += 110
+
+    img.save(a.out, "PNG")
+    print("ok (paper)")
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--title", required=True, help="заголовок, строка 1 (белый)")
@@ -36,7 +124,16 @@ def main() -> None:
                     help="добавить MSK-дату первой строкой подписи")
     ap.add_argument("--no-date", dest="show_date", action="store_false")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--style", choices=["dark", "paper"], default="dark",
+                    help="dark — центрированная классика; paper — заставка-"
+                         "оглавление (мачхед слева, формат канала справа)")
+    ap.add_argument("--items", default="",
+                    help="пункты оглавления через | (только style=paper)")
     a = ap.parse_args()
+
+    if a.style == "paper":
+        _make_paper(a)
+        return
 
     img = Image.new("RGB", (W, H), "#07141b")
 
