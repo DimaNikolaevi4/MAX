@@ -14,6 +14,10 @@
 Файл поста: front matter + тело (Markdown). Обязательные поля front matter:
   channel: <slug>            — должен совпадать с --channel (или папкой)
   image_file: <путь>         — карточка поста (относительно корня репозитория)
+  video_file: <путь>         — видео вместо карточки (что-то одно: image_file
+                               или video_file); видео и есть обложка поста
+  video_source: <канал>:<mid> — откуда взять видео, если файла нет на этой
+                               машине (скачивание с CDN по GET /messages/{mid})
   notify: true|false         — пуш-уведомление подписчикам
 Поля, дописываемые после публикации: status: published, published_at,
 message_id, channel_id, url, image.
@@ -47,8 +51,14 @@ API = "https://platform-api2.max.ru"
 REPORT = []
 
 
+MIME = {".mp4": "video/mp4", ".mov": "video/quicktime",
+        ".mkv": "video/x-matroska", ".webm": "video/webm"}
+READY_DELAYS = (5, 10, 20, 30, 60)
+
+
 def py_api(channel_token: str, method: str, url: str, payload: Path | None,
-           form_file: Path | None, out: Path | None) -> str:
+           form_file: Path | None, out: Path | None,
+           mime: str = "image/png") -> str:
     """Запасной транспорт: stdlib urllib. Используется, когда TLS curl/schannel
     не принимает сертификат Минцифры (MAX_HTTP=python, см. README)."""
     if not url.startswith("http"):
@@ -58,7 +68,7 @@ def py_api(channel_token: str, method: str, url: str, payload: Path | None,
         body = (f"--{boundary}\r\n"
                 f'Content-Disposition: form-data; name="data"; '
                 f'filename="{form_file.name}"\r\n'
-                f"Content-Type: image/png\r\n\r\n").encode("utf-8")
+                f"Content-Type: {mime}\r\n\r\n").encode("utf-8")
         body += form_file.read_bytes()
         body += f"\r\n--{boundary}--\r\n".encode("utf-8")
         headers = {"Content-Type": f"multipart/form-data; boundary={boundary}"}
@@ -88,9 +98,10 @@ def py_api(channel_token: str, method: str, url: str, payload: Path | None,
 
 
 def api(channel_token: str, method: str, url: str, payload: Path | None = None,
-        out: Path | None = None, form_file: Path | None = None) -> str:
+        out: Path | None = None, form_file: Path | None = None,
+        mime: str = "image/png") -> str:
     if os.environ.get("MAX_HTTP") == "python":
-        return py_api(channel_token, method, url, payload, form_file, out)
+        return py_api(channel_token, method, url, payload, form_file, out, mime)
     cmd = ["curl.exe", "-s", "-X", method, "-H", f"Authorization: {channel_token}"]
     ca = os.environ.get("MAX_CA_CERT")
     if ca:
@@ -98,7 +109,7 @@ def api(channel_token: str, method: str, url: str, payload: Path | None = None,
     if payload:
         cmd += ["-H", "Content-Type: application/json", "--data-binary", f"@{payload}"]
     if form_file:
-        cmd += ["-F", f"data=@{form_file}"]
+        cmd += ["-F", f"data=@{form_file};type={mime}"]
     cmd.append(url if url.startswith("http") else f"{API}{url}")
     if out:
         cmd += ["-o", str(out)]
@@ -196,23 +207,67 @@ def main() -> None:
                 raise SystemExit(
                     f"орфография/грамматика: ошибок {len(spell['errors'])}, см. отчёт")
 
-    # --- загрузка изображения ---
+    # --- загрузка медиа: картинка или видео (видео заменяет обложку) ---
     image_file = fm.get("image_file")
+    video_file = fm.get("video_file")
+    if image_file and video_file:
+        raise SystemExit("укажите что-то одно: image_file или video_file")
     attachments = []
-    if image_file:
-        img_path = REPO / image_file
-        if not img_path.exists():
-            raise SystemExit(f"карточка не найдена: {img_path}")
-        up_resp = api(tok, "POST", "/uploads?type=image")
-        up_url = json.loads(up_resp).get("url")
+    media_kind = ""
+    if video_file and not (REPO / video_file).exists() and fm.get("video_source"):
+        # файла нет на этой машине: берём ссылку на файл из поста-источника
+        src_channel, _, src_mid = fm["video_source"].partition(":")
+        src_token = tokens.get(src_channel, {}).get("token")
+        if not src_token or not src_mid:
+            raise SystemExit(f"video_source не разобран: {fm['video_source']!r}")
+        src_file = REPO / "local" / "media-cache" / f"{src_mid.replace('.', '_')}.mp4"
+        src_file.parent.mkdir(parents=True, exist_ok=True)
+        src_resp = api(src_token, "GET", f"/messages/{src_mid}",
+                       out=src_file.with_suffix(".json"))
+        try:
+            src_url = (((json.loads(src_resp)["body"].get("attachments") or [{}])[0]
+                        .get("payload") or {}).get("url"))
+        except (KeyError, IndexError, json.JSONDecodeError):
+            src_url = None
+        if not src_url:
+            raise SystemExit(f"в {fm['video_source']} нет видео: {src_resp[:200]}")
+        req = urllib.request.Request(src_url, headers={"User-Agent": "curl/8.13.0"})
+        ctx_dl = ssl.create_default_context()
+        ca_dl = os.environ.get("MAX_CA_CERT")
+        if ca_dl:
+            ctx_dl.load_verify_locations(cafile=ca_dl)
+        with urllib.request.urlopen(req, timeout=600, context=ctx_dl) as r, \
+                src_file.open("wb") as fh:
+            while True:
+                chunk = r.read(1 << 20)
+                if not chunk:
+                    break
+                fh.write(chunk)
+        video_file = str(src_file.relative_to(REPO)).replace("\\", "/")
+        REPORT.append(f"видео скачано из {fm['video_source']}: {src_file.stat().st_size} Б")
+    if image_file or video_file:
+        media_kind = "video" if video_file else "image"
+        media_path = REPO / (video_file or image_file)
+        if not media_path.exists():
+            raise SystemExit(f"медиа не найдено: {media_path}")
+        mime = MIME.get(media_path.suffix.lower(), "application/octet-stream")
+        up_resp = api(tok, "POST", f"/uploads?type={media_kind}")
+        up_json_head = json.loads(up_resp)
+        up_url = up_json_head.get("url")
         if not up_url:
             raise SystemExit(f"POST /uploads без url: {up_resp[:200]}")
-        up_done = api(tok, "POST", up_url, form_file=img_path)
+        up_done = api(tok, "POST", up_url, form_file=media_path, mime=mime)
         up_json = json.loads(up_done)
-        img_token = (up_json.get("photos", {}).get("0", {}) or {}).get("token")
-        if not img_token:
+        media_token = up_json_head.get("token")
+        if not media_token:
+            media_token = (up_json.get("photos", {}).get("0", {}) or {}).get("token")
+        if not media_token:
+            media_token = (up_json.get("videos", {}).get("0", {}) or {}).get("token")
+        if not media_token:
             raise SystemExit(f"upload без токена: {up_done[:200]}")
-        attachments = [{"type": "image", "payload": {"token": img_token}}]
+        attachments = [{"type": media_kind, "payload": {"token": media_token}}]
+        if media_kind == "video":
+            REPORT.append(f"видео загружено: {media_path.name} ({media_path.stat().st_size} Б)")
 
     # --- POST /messages ---
     payload = {"text": text, "format": "markdown", "notify": fm.get("notify") == "true"}
@@ -221,6 +276,12 @@ def main() -> None:
     pay_f = REPO / "local" / f"publish-payload-{channel}.json"
     pay_f.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
     post_resp = api(tok, "POST", f"/messages?chat_id={chat_id}", payload=pay_f)
+    for delay in READY_DELAYS:
+        if "attachment.not.ready" not in (post_resp or ""):
+            break
+        REPORT.append(f"медиа ещё обрабатывается, повтор через {delay} с")
+        time.sleep(delay)
+        post_resp = api(tok, "POST", f"/messages?chat_id={chat_id}", payload=pay_f)
     try:
         resp = json.loads(post_resp)
     except json.JSONDecodeError:
@@ -241,7 +302,7 @@ def main() -> None:
     t2 = body["text"]
     markup = body.get("markup") or []
     checks = {
-        "вложение 1": len(body.get("attachments") or []) == (1 if image_file else 0),
+        "вложение 1": len(body.get("attachments") or []) == (1 if media_kind else 0),
         "длина <=4000": len(t2) <= 4000,
         "CTA в конце": f"Подписывайтесь на {cta_label}" in t2[-200:],
         "нет '>' в тексте": ">" not in t2,
@@ -257,17 +318,27 @@ def main() -> None:
 
     # --- архив: дописываем front matter ---
     now = datetime.now(timezone(timedelta(hours=3))).strftime("%Y-%m-%dT%H:%M:%S+03:00")
-    img_url = ""
-    if image_file:
+    media_url = ""
+    media_extra = {}
+    if media_kind:
         atts = body.get("attachments") or []
-        img_url = (atts[0].get("payload", {}) or {}).get("url", "") if atts else ""
+        media_url = (atts[0].get("payload", {}) or {}).get("url", "") if atts else ""
+        if media_kind == "video" and atts:
+            if atts[0].get("duration"):
+                media_extra["video_duration"] = atts[0]["duration"]
+            media_extra["media_count"] = 1
     fm_out = {"channel": channel, "status": "published", "format": "markdown",
               "notify": fm.get("notify", "true"), "published_at": now,
               "message_id": mid, "channel_id": str(chat_id)}
     if url:
         fm_out["url"] = url
-    if img_url:
-        fm_out["image"] = img_url
+    if video_file:
+        fm_out["video_file"] = video_file
+    if image_file:
+        fm_out["image_file"] = image_file
+    if media_url:
+        fm_out["video" if media_kind == "video" else "image"] = media_url
+    fm_out.update(media_extra)
     fm_lines = "\n".join(f"{k}: {v}" for k, v in fm_out.items())
     post_path.write_text(f"---\n{fm_lines}\n---\n\n{text}\n", encoding="utf-8", newline="\n")
 

@@ -6,7 +6,8 @@
     не позже сегодняшней (МСК);
   * за один запуск публикуются все готовые посты (`--limit 0` — без ограничения);
   * перед публикацией: `git fetch`, отказ, если origin/main ушёл вперёд;
-  * проверки: картинка существует, CTA-цитата в формате канала, фраза
+  * проверки: медиа (картинка или видео) существует, CTA-цитата в формате
+    канала, фраза
     призыва не дублирует `cta-phrases.json`;
   * публикация — через `publish_post.py` (он делает upload, POST и GET-контроль);
   * после успеха CTA-фраза дописывается в реестр, пост и реестр коммитятся
@@ -175,9 +176,11 @@ def run(args, now):
         if args.limit and published >= args.limit:
             break
 
-        img = fm.get("image_file")
-        if not img or not (REPO / img).exists():
-            say(f"FAIL: {path.name} — нет картинки ({img!r})")
+        media = fm.get("image_file") or fm.get("video_file")
+        # видео может подтягиваться из поста-источника (video_source) на машине
+        # публикатора — тогда локального файла до публикации может не быть
+        if (not media or not (REPO / media).exists()) and not fm.get("video_source"):
+            say(f"FAIL: {path.name} — нет медиа ({media!r})")
             continue
         m = cta_re.search(body)
         if not m:
