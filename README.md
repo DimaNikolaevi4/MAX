@@ -72,7 +72,7 @@ MAX/
 │   │   ├── config/channels.json     # реестр каналов (без токенов)
 │   │   ├── channels/<slug>/         # style.md, cta-phrases.json, posts/;
 │   │   │                            # proofread.md — статус вычитки (ainow)
-│   │   └── tools/                   # 15 инструментов публикации — см. ниже
+│   │   └── tools/                   # 16 инструментов — см. ниже
 │   └── newsbot/
 │       ├── TASK.md                  # правила и состояние эксперимента
 │       └── src/                     # digest_bot.py, brief.py, news_digest.py,
