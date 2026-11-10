@@ -1,15 +1,14 @@
 ---
 channel: na100
-deleted_at: 2026-11-10T21:29:01+03:00
-status: deleted
+status: published
 format: markdown
 notify: true
-published_at: 2026-11-10T20:30:24+03:00
-message_id: mid.ffffba08e9ee9aa301a1c682cd2a722b
+published_at: 2026-11-10T21:29:31+03:00
+message_id: mid.ffffba08e9ee9aa301a1c6b8eaa5001b
 channel_id: -76927529477469
-url: https://max.ru/channel_na100/AaHGgs0qcis
-image_file: local/digest/cover-relaunch.png
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTBQi-Yn1Ug1nX_WUdXgS4XV6vcP989d917WhiY89TiwU1GO16ViL55gMamg4hA0xZmz-p8w1Eo0f7eojB9M4Q
+url: https://max.ru/channel_na100/AaHGuOqlABs
+image_file: local/digest/cover-relaunch-v2.png
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCSjlzUwGey8s-IzVBd2Q3Y-qxTuuyAxs3w8YyVe-iMrD0DR9lMdQoRQpj7UpD8HTbKX-uE7xVPsdjtOFuhj7r4
 ---
 
 🚀 **Канал переродился — теперь это «Новости мира техники»**
