@@ -30,7 +30,7 @@ def main() -> None:
     ap.add_argument("--title", required=True, help="заголовок, строка 1 (белый)")
     ap.add_argument("--title2", default=None, help="заголовок, строка 2 (акцент)")
     ap.add_argument("--subtitle", default=None, help="подзаголовок под линией")
-    ap.add_argument("--footer", default="Техно-дайджест")
+    ap.add_argument("--footer", default="Новости мира техники")
     ap.add_argument("--show-date", action="store_true",
                     help="добавить MSK-дату первой строкой подписи")
     ap.add_argument("--out", required=True)
