@@ -1,0 +1,131 @@
+{
+  "_": "Список RSS-фидов техно-дайджеста na100 (норма отбора: 1 РФ + 1 Китай + 3 мира). Проверка curl -4 -m 25 с машины в РФ 10.11.2026 (см. раздел 9 docs/na100-relaunch-2026-11-10.md): ok = HTTP 200 и валидный RSS, fail = недоступен. digest_build обязан дедуплицировать одни и те же новости между фидами и брать лучшую версию; The Verge и путь feeds.arstechnica.com требуют User-Agent / недоступны — учтено.",
+  "feeds": [
+    {
+      "region": "ru",
+      "name": "Habr news",
+      "url": "https://habr.com/ru/rss/news/?fl=ru",
+      "status": "ok",
+      "note": "10.11: HTTP 200, 95 КБ"
+    },
+    {
+      "region": "ru",
+      "name": "Opennet",
+      "url": "https://www.opennet.ru/opennews/opennews_all.rss",
+      "status": "ok",
+      "note": "10.11: HTTP 200, 35 КБ"
+    },
+    {
+      "region": "ru",
+      "name": "CNews",
+      "url": "https://www.cnews.ru/inc/rss/news.xml",
+      "status": "ok",
+      "note": "10.11: HTTP 200, 187 КБ"
+    },
+    {
+      "region": "cn",
+      "name": "TechNode (China Tech)",
+      "url": "https://technode.com/feed/",
+      "status": "ok",
+      "note": "10.11: HTTP 200, но 12 МБ — отдавать кусками/ограничивать выборку"
+    },
+    {
+      "region": "cn",
+      "name": "SCMP Tech",
+      "url": "https://www.scmp.com/rss/91/feed",
+      "status": "ok",
+      "note": "10.11: HTTP 200, 82 КБ"
+    },
+    {
+      "region": "cn",
+      "name": "Global Times (outbrain, общий фид с техно-пунктом)",
+      "url": "https://www.globaltimes.cn/rss/outbrain.xml",
+      "status": "ok",
+      "note": "10.11: HTTP 200, валидный RSS, свежие техно-заголовки есть; фильтровать по рубрике tech"
+    },
+    {
+      "region": "cn",
+      "name": "Xinhua Tech",
+      "url": "http://www.xinhuanet.com/english/rss/technology.xml",
+      "status": "fail",
+      "note": "10.11: HTTP 404; xml-фид Xinhua больше не отдаётся. Держим как кандидата на замену, не использовать"
+    },
+    {
+      "region": "world",
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "status": "ok",
+      "note": "10.11: HTTP 200"
+    },
+    {
+      "region": "world",
+      "name": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "status": "ok",
+      "note": "10.11: HTTP 200 только с User-Agent — в digest_build обязателен UA-заголовок"
+    },
+    {
+      "region": "world",
+      "name": "Tom's Hardware",
+      "url": "https://www.tomshardware.com/feeds.xml",
+      "status": "ok",
+      "note": "10.11: HTTP 200, 1.1 МБ"
+    },
+    {
+      "region": "world",
+      "name": "TechRadar",
+      "url": "https://www.techradar.com/rss",
+      "status": "ok",
+      "note": "10.11: HTTP 200, 1 МБ"
+    },
+    {
+      "region": "world",
+      "name": "Phys.org",
+      "url": "https://phys.org/rss-feed/",
+      "status": "ok",
+      "note": "10.11: HTTP 200 — научный уклон, полезен для «небанальных» новостей мира"
+    },
+    {
+      "region": "world",
+      "name": "IEEE Spectrum AI",
+      "url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss",
+      "status": "ok",
+      "note": "10.11: HTTP 200 — тематический фид по ИИ"
+    },
+    {
+      "region": "world",
+      "name": "VentureBeat",
+      "url": "https://venturebeat.com/feed/",
+      "status": "flaky",
+      "note": "10.11: HTTP 429 (rate limit) — работает нестабильно, держим как запасной с backoff"
+    },
+    {
+      "region": "world",
+      "name": "Ars Technica",
+      "url": "https://arstechnica.com/feed/",
+      "status": "fail",
+      "note": "10.11: оба адреса (arstechnica.com/feed/ и feeds.arstechnica.com) — таймаут, недоступен с этой машины"
+    },
+    {
+      "region": "world",
+      "name": "BBC Technology",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+      "status": "fail",
+      "note": "10.11: соединение сброшено (connection reset), недоступен с этой машины"
+    },
+    {
+      "region": "world",
+      "name": "Wired",
+      "url": "https://www.wired.com/feed/rss",
+      "status": "fail",
+      "note": "10.11: таймаут, недоступен с этой машины"
+    },
+    {
+      "region": "world",
+      "name": "Engadget",
+      "url": "https://www.engadget.com/rss.xml",
+      "status": "fail",
+      "note": "10.11: HTTP 202 c 0 байт — Cloudflare-подобная проверка, RSS не отдаётся"
+    }
+  ]
+}
