@@ -4,6 +4,7 @@ status: draft
 format: markdown
 notify: true
 image_file: local/images/ainow/2026-07-22-nashli-krutuyu-i-dostupnuyu-neyroset-kotoraya.jpg
+hold: ждём команду владельца — публиковать, когда появится возможность
 ---
 
 🎬 **Вторая часть «Полудницы»: что уже готово**

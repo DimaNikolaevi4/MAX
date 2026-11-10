@@ -69,6 +69,11 @@ def main() -> None:
     channel = channel or fm.get("channel")
     if not channel:
         raise SystemExit("не определён канал (front matter channel или --channel)")
+    if fm.get("hold"):
+        raise SystemExit(
+            "пост на паузе до команды владельца: " + fm["hold"] +
+            " — снимите hold в front matter, когда канал будет доступен"
+        )
 
     tokens = json.loads((REPO / "local" / "tokens.json").read_text(encoding="utf-8"))
     entry = tokens.get(channel, {})

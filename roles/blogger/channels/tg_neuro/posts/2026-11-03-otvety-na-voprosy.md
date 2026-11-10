@@ -4,6 +4,7 @@ status: draft
 format: markdown
 notify: true
 image_file: local/images/ainow/2026-10-22-kakuyu-model-glm-vybrat-polnyy-gid.jpg
+hold: ждём команду владельца — публиковать, когда появится возможность
 ---
 
 💬 **Отвечаю на вопросы из комментариев**

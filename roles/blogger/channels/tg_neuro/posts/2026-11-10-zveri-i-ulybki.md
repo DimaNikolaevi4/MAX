@@ -6,6 +6,7 @@ published_at: null
 message_id: null
 chat_id: -1002087111322
 image_file: local/images/ainow/2026-07-23-zabudte-pro-muki-verstki-v-powerpoint.jpg
+hold: ждём команду владельца — публиковать, когда появится возможность
 ---
 
 🧡 **Пока здесь тишина — есть «Забавное»**

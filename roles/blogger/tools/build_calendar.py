@@ -128,6 +128,7 @@ def collect_posts() -> tuple[list[dict], list[dict]]:
                     "deleted_at": deleted_at,
                     "url": (fm.get("url") or "").strip(),
                     "views": as_int(fm.get("views")),
+                    "hold": (fm.get("hold") or "").strip(),
                 }
             )
     return posts, channels
@@ -323,8 +324,9 @@ def render(posts: list[dict], channels: list[dict], plan: list[dict], days: int)
     out.append("")
     if drafts:
         rows = [[title_of.get(p["channel"], p["channel"]), p["title"],
-                 p["date"].strftime("%d.%m.%Y") if p["date"] else "—"] for p in drafts]
-        out.extend(table(["канал", "пост", "дата в имени"], rows))
+                 p["date"].strftime("%d.%m.%Y") if p["date"] else "—",
+                 p["hold"] or "—"] for p in drafts]
+        out.extend(table(["канал", "пост", "дата в имени", "пауза"], rows))
     else:
         out.append("Черновиков нет.")
     out.append("")
