@@ -1,14 +1,13 @@
 ---
 channel: ozon_group
-status: approved
+status: published
 format: markdown
 notify: true
-disable_link_preview: false
-published_at: null
-message_id: null
-channel_id: null
-url: null
-image_file: local/images/ainow/2026-07-16-4-aiinstrumenta-kotorye-sekonomyat-vam-5.jpg
+published_at: 2026-11-10T11:43:45+03:00
+message_id: mid.ffffb9f0714e9aa301a1c49fa18904ab
+channel_id: -77032632444253
+url: https://max.ru/channel_ozon_group/AaHEn6GJBKs
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCR8aI2h28xeLoqck7RRkNETEVGvqY2Nu58LJrymLhCwpxkgEmvWxmVdVPjmxghHHY0QjZMZs4jsIdyrBPzRP4M
 ---
 
 🛍 **Канал про Ozon закрывается — тема будет другой**
