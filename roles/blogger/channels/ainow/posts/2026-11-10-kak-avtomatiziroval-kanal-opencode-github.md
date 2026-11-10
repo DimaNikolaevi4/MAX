@@ -1,9 +1,13 @@
 ---
 channel: ainow
-status: approved
+status: published
 format: markdown
 notify: true
-image_file: local/images/2026-11-10-cover.png
+published_at: 2026-11-10T07:20:41+03:00
+message_id: mid.ffffba0066fb9aa301a1c3afcd296ea0
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaHDr80pbqA
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCRoR1i6oOgKfC2eSHgh85OtJcLaOWHnFsAiWRQ2bR2na-AMd3e15D7VNqXezuGywP7Fu1HHZAlsTtia_tj60Oo
 ---
 
 🚀 **Как я автоматизировал канал и рутину на OpenCode и GitHub**
