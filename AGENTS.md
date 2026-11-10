@@ -329,6 +329,21 @@ roles/blogger/channels/<slug>: опубликован пост <файл>
 
 ## 8а. Загрузка изображения и прикрепление к посту
 
+`publish_post.py` принимает `image_file` **или** `video_file` (видео заменяет
+обложку: загрузка `POST /uploads?type=video`, при `attachment.not.ready`
+публикатор повторяет отправку). Если файла нет на машине публикатора, поле
+`video_source: <канал>:<mid>` заставляет скачать видео из поста-источника
+через `GET /messages/{mid}` — так видео-пост можно поставить в расписание,
+не копируя файл руками и не коммитя его в git.
+
+publish_post.py принимает image_file **или** ideo_file (видео заменяет
+обложку: загрузка POST /uploads?type=video, при ttachment.not.ready
+публикатор повторяет отправку). Если файла нет на машине публикатора, поле
+ideo_source: <канал>:<mid> заставляет скачать видео из поста-источника
+через GET /messages/{mid} — так видео-пост можно поставить в расписание,
+не копируя файл руками и не коммитя его в git.
+
+
 1. `POST /uploads?type=image` (токен в `Authorization`) → ответ
    `{"url": "https://iu.oneme.ru/uploadImage?r=..."}` — одноразовый URL загрузки.
 2. `curl.exe -X POST -F "data=@файл.png;type=image/png;filename=имя.png" "<url>"`
