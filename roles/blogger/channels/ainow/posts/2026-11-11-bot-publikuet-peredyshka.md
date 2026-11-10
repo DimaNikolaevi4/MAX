@@ -1,6 +1,6 @@
 ---
 channel: ainow
-status: draft
+status: approved
 format: markdown
 notify: true
 video_file: local/video/zabava/AaDUOugvVWY.mp4
