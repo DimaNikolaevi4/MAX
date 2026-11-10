@@ -8,7 +8,7 @@ message_id: mid.ffffba0066fb9aa301a1c3afcd296ea0
 channel_id: -76964086179165
 url: https://max.ru/channel_ainow/AaHDr80pbqA
 image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCRoR1i6oOgKfC2eSHgh85OtJcLaOWHnFsAiWRQ2bR2na-AMd3e15D7VNqXezuGywP7Fu1HHZAlsTtia_tj60Oo
-edited_at: 2026-11-10T13:03:14+03:00
+edited_at: 2026-11-10T13:39:14+03:00
 ---
 
 🚀 **Как я автоматизировал канал и рутину на OpenCode и GitHub**
@@ -33,7 +33,7 @@ OpenCode — рабочая среда: агент читает файлы, пр
 
 🛠 **Как подключить бота к каналу**
 
-Решение работает на платформе [web.max.ru](https://web.max.ru) и подходит самозанятым, ИП и организациям. Порядок действий важен:
+Решение работает на данной платформе MAX и подходит самозанятым, ИП и организациям. Порядок действий важен:
 
 — найдите бота в поиске MAX и нажмите «Запустить» — начнётся диалог;
 
