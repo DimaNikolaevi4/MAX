@@ -75,6 +75,9 @@ def py_api(channel_token: str, method: str, url: str, payload: Path | None,
     elif payload:
         body = payload.read_bytes()
         headers = {"Content-Type": "application/json"}
+    elif method in ("POST", "PUT", "PATCH"):
+        # API ждёт тело: без Content-Length запрос к /uploads возвращает пустой ответ
+        body, headers = b"{}", {"Content-Type": "application/json"}
     else:
         body, headers = None, {}
     req = urllib.request.Request(url, data=body, method=method)
@@ -257,7 +260,12 @@ def main() -> None:
         if not up_url:
             raise SystemExit(f"POST /uploads без url: {up_resp[:200]}")
         up_done = api(tok, "POST", up_url, form_file=media_path, mime=mime)
-        up_json = json.loads(up_done)
+        try:
+            up_json = json.loads(up_done)
+        except json.JSONDecodeError:
+            # загрузка видео на okcdn отвечает не JSON, а <retval>1</retval>;
+            # токен вложения приходит в первом ответе POST /uploads
+            up_json = {}
         media_token = up_json_head.get("token")
         if not media_token:
             media_token = (up_json.get("photos", {}).get("0", {}) or {}).get("token")
