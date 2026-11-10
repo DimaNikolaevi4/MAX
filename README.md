@@ -49,8 +49,9 @@ Bot API и коммитит результат в git.
 MAX/
 ├── AGENTS.md                 # методика и правила для ИИ-агентов (главный файл)
 ├── README.md                 # этот файл
-├── docs/                     # 9 документов методики
+├── docs/                     # 10 документов методики
 │   ├── bot-setup.md              # настройка бота с нуля (проверено на практике)
+│   ├── blogger-calendar.md       # календарь: что вышло, что в плане, что удалено (собирается 07:20)
 │   ├── agent-onboarding.md       # вход для нового ИИ-агента
 │   ├── blogger-ainow-prompt.md   # промт ИИ-блогера канала AI
 │   ├── layout-verification.md    # что проверяет shared/verify_layout.py
@@ -107,6 +108,7 @@ MAX/
 | `markup_fragments.py` | снятие фрагментов разметки из ответа `GET /messages` (UTF-16) |
 | `delete_post_by_slug.py` | удаление поста канала по короткому URL |
 | `stats_snapshot.py` | снимок статистики: подписчики, просмотры, прирост |
+| `build_calendar.py` | сборка `docs/blogger-calendar.md`: публикации, план, удаления (`--push` — коммит и пуш) |
 | `zabava_random_plan.py` | случайный старый видео-пост «Забавного» → в план публикации |
 
 ## Формат поста
@@ -221,10 +223,25 @@ front matter или `cta_url` канала).
 | `MAX stats snapshot` | 07:00 | снимок подписчиков и просмотров ainow и zabava |
 | `MAX ainow - publish approved` | 07:15 | публикует посты `status: approved` с датой ≤ сегодня |
 | `MAX zabava - publish plan` | 07:16 | публикует `pending`-посты из `local/zabava-plan.json` |
+| `MAX blogger calendar` | 07:20 | пересобирает календарь `docs/blogger-calendar.md` и пушит его |
 
 Настройка задач и логи — `docs/scheduled-tasks.md`, `local/logs/`.
 `publish_scheduled.py` перед публикацией делает `git fetch` и отказывается
 работать, если `origin/main` ушёл вперёд: сначала `git pull --rebase`.
+
+## Календарь блогера
+
+`docs/blogger-calendar.md` — сводка по всем каналам: что вышло за последние 30
+дней (с просмотрами и ссылками), что стоит в плане, что удалено, какие каналы
+ждут удаления. Файл пересобирается каждый день в 07:20 (`build_calendar.py`) и
+пушится; вручную его править не нужно — данные берутся из front matter постов,
+плана «Забавного» и реестра каналов.
+
+```powershell
+py roles/blogger/tools/build_calendar.py                 # пересобрать локально
+py roles/blogger/tools/build_calendar.py --days 7        # короткий горизонт
+py roles/blogger/tools/build_calendar.py --push          # пересобрать, закоммитить, запушить
+```
 
 ## Статистика
 

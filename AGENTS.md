@@ -32,6 +32,7 @@
 | `roles/blogger/tools/build_markdown.py` | Сборка Markdown точными заменами (с проверкой числа вхождений). |
 | `roles/blogger/tools/markup_fragments.py` | Снятие фрагментов разметки из GET-ответа. |
 | `roles/archivist/docs/archive-channel.md` | Приватный канал-архив MAX: проверенные лимиты и поведение типов загрузки, состояние, открытое решение по схеме наполнения. В постовый цикл не входит. |
+| `docs/blogger-calendar.md` | Календарь блогера: публикации за 30 дней с просмотрами, план и удаления по всем каналам. Собирается автоматически в 07:20 (`roles/blogger/tools/build_calendar.py --push`); руками не правится. |
 | `docs/bot-publications-archive.md` | Архив методики публикации в личку бота AI Now: что заархивировано, почему запрещено, как восстановить. |
 | `local/tokens.json` | Токены ботов и `chat_id` каналов. Файл gitignored, живёт только локально. |
 | `local/tokens.example.json` | Шаблон файла токенов с описанием полей. |
@@ -326,6 +327,12 @@ roles/blogger/channels/<slug>: опубликован пост <файл>
 
 Коммиты делает агент (или человек) после успешной отправки. Пуш в GitHub — по
 обычному workflow команды (например, в конце рабочей сессии).
+
+Календарь блогера (`docs/blogger-calendar.md`) обновляется сам: задача
+`MAX blogger calendar` собирает его в 07:20 и пушит. Удаление поста фиксируется
+автоматически — `delete_post_by_slug.py` ставит в файл поста `status: deleted` и
+`deleted_at`. Если нужно обновить календарь сразу, не дожидаясь утра:
+`py roles/blogger/tools/build_calendar.py --push`.
 
 ## 7. Токены и доступ
 
