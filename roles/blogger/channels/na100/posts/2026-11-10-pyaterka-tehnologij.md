@@ -1,15 +1,14 @@
 ---
 channel: na100
-deleted_at: 2026-11-10T21:12:09+03:00
-status: deleted
+status: published
 format: markdown
 notify: true
-published_at: 2026-11-10T20:52:57+03:00
-message_id: mid.ffffba08e9ee9aa301a1c697722626e2
+published_at: 2026-11-10T21:13:30+03:00
+message_id: mid.ffffba08e9ee9aa301a1c6aa40ef354f
 channel_id: -76927529477469
-url: https://max.ru/channel_na100/AaHGl3ImJuI
-image_file: local/digest/cover-first-issue-v2.png
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCRVZPYPewnDfRPnm-AysZtUasyCzcFxzJmeMdlX4lBSmtpkeTTgcd0AuyLEhji4P9x3aj-TmLRIgbXBOZtgO28
+url: https://max.ru/channel_na100/AaHGqkDvNU8
+image_file: local/digest/2026-11-10/dgx-spark-oblique.jpg
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCSKgJ0N_cQx-YezgGpPHDyIcmmOWShJ8TWthMdBbM00zq4sBNC34M9UngA1rz-2V62yppgyfc6nkLqENxgfaz4
 ---
 
 **Скандал в Nvidia, IPO за $1,4 трлн и санкции: итоги дня**
@@ -19,6 +18,8 @@ image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCRVZPYPewnDfRPnm-AysZtUasyCzcFxzJ
 Что случилось: Дженсен Хуанг признал роман с Алисой Хуанг, которую СМИ называют подозреваемой в связях с китайской разведкой. По данным расследований, за её роль в сделках в Китай ушли чипы более чем на $7,5 млрд. Расследование ведёт ФБР, Nvidia вызвана в Конгресс, на компанию подан коллективный иск после падения акций.
 
 Почему важно: на Nvidia держится вся индустрия ИИ. Если история дойдёт до санкционной политики, пострадают цены и доступность того, на чём обучают все модели мира.
+
+На фото: персональный AI-суперкомпьютер Nvidia DGX Spark. Фото: Wikimedia Commons / Daniel Lu (CC BY-SA 4.0).
 
 🌍 **Мир: Anthropic готовится к IPO с оценкой до $1,4 трлн**
 
