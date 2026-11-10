@@ -34,7 +34,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
-from shared.paths import REPO, CONFIG  # noqa: E402
+from shared.paths import REPO, CONFIG, ensure_publish_allowed  # noqa: E402
 REPORT = []
 
 
@@ -79,6 +79,7 @@ def main() -> None:
 
     cfg = json.loads((CONFIG / "channels.json").read_text(encoding="utf-8"))
     ch = next((c for c in cfg["channels"] if c["slug"] == channel), None)
+    ensure_publish_allowed(channel, tool="publish_telegram")
     cta_url = (ch or {}).get("cta_url") or fm.get("button_url")
     if not cta_url:
         raise SystemExit("нет cta_url канала и button_url в front matter")

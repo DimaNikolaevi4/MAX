@@ -30,7 +30,7 @@ def load_used() -> dict:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--channel", required=True, choices=["na100", "administrator", "tg_neuro", "ozon_group"])
+    ap.add_argument("--channel", required=True, choices=["na100", "administrator", "tg_neuro"])
     ap.add_argument("--topic", default=None, help="подстрока в имени файла (пост AI-источника)")
     ap.add_argument("--show", action="store_true", help="не записывать выбор")
     a = ap.parse_args()

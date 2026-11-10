@@ -46,7 +46,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
-from shared.paths import REPO, CONFIG  # noqa: E402
+from shared.paths import REPO, CONFIG, ensure_publish_allowed  # noqa: E402
 from shared.post_guard import assert_channel_chat_id  # noqa: E402
 from shared.text_check import check_text, format_issue  # noqa: E402
 
@@ -340,6 +340,7 @@ def main() -> None:
     cfg = next((c for c in cfg_all["channels"] if c["slug"] == channel), None)
     if not cfg:
         raise SystemExit(f"канал {channel!r} не найден в channels.json")
+    ensure_publish_allowed(channel, tool="publish_video")
     for key in ("cta_label", "cta_url"):
         if not cfg.get(key):
             raise SystemExit(f"для {channel!r} нет {key}")

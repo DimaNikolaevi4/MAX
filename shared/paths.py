@@ -7,6 +7,7 @@
 """
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 
@@ -49,6 +50,21 @@ def post_dir(slug: str) -> Path:
 def tokens_path() -> Path:
     """Файл токенов (gitignored)."""
     return LOCAL / "tokens.json"
+
+
+def channels_config() -> dict:
+    """Реестр каналов `roles/blogger/config/channels.json`."""
+    return json.loads((CONFIG / "channels.json").read_text(encoding="utf-8"))
+
+
+def ensure_publish_allowed(slug: str, tool: str = "публикатор") -> None:
+    """Запрет публикации в канал со `status: to_delete` (канал закрыт, ждёт удаления)."""
+    for record in channels_config().get("channels", []):
+        if record.get("slug") == slug and record.get("status") == "to_delete":
+            raise SystemExit(
+                f"{tool}: канал {slug!r} под удаление "
+                f"({record.get('delete_on', 'дата не указана')}) — публикация запрещена"
+            )
 
 
 def find_post_file(path: str | Path) -> Path:

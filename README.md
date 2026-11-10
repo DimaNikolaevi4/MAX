@@ -36,7 +36,7 @@ Bot API и коммитит результат в git.
 | `ainow` | MAX | AI — https://max.ru/channel_ainow | основной: нейросети, промпты, кейсы |
 | `na100` | MAX | Нейросети и ИИ | закрывается, подписчики переливаются в `ainow` |
 | `administrator` | MAX | Администрирование каналов | закрывается, перелив в `ainow` |
-| `ozon_group` | MAX | Ozon Находки | закрывается, перелив в `ainow` |
+| `ozon_group` | MAX | Ozon Находки | под удаление 12.11.2026: публикация не ведётся, храним только дату |
 | `zabava` | MAX | Забавное — https://max.ru/channel_zabava | юмор, короткие видео |
 | `tg_neuro` | Telegram | Нейро Мульт Студия — https://t.me/Neuro_Animation_Studio | закрывается, перелив в `ainow` |
 

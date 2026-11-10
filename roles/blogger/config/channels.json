@@ -45,9 +45,9 @@
       "slug": "ozon_group",
       "platform": "max",
       "title": "Ozon Находки",
-      "description": "Закрывающийся канал (https://max.ru/channel_ozon_group), объединяется с ainow. Задача — перелинковка подписчиков на основной канал. CTA всех постов ведёт на https://max.ru/channel_ainow",
-      "cta_label": "AI",
-      "cta_url": "https://max.ru/channel_ainow"
+      "status": "to_delete",
+      "delete_on": "2026-11-12",
+      "description": "Под удаление: канал https://max.ru/channel_ozon_group закрыт и будет удалён 12.11.2026. Публикация не ведётся, токен не нужен. Храним только дату удаления."
     }
   ]
 }
