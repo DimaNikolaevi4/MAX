@@ -1,4 +1,4 @@
-# Планировщик Windows: публикация постов «Забавного» (07:16 МСК, на минуту
+﻿# Планировщик Windows: публикация постов «Забавного» (07:16 МСК, на минуту
 # позже ainow, чтобы git-push каналов не сталкивались).
 # Шаг 1: zabava_random_plan.py выбирает случайный старый пост (видео/фото +
 #        текст, без призыва), скачивает медиа и добавляет его в план pending.
@@ -14,6 +14,16 @@ if (Test-Path -LiteralPath $ca) { $env:MAX_CA_CERT = $ca }
 
 New-Item -ItemType Directory -Force -Path 'local\logs' | Out-Null
 $log = 'local\logs\zabava-publish.console.log'
+
+# «Только утром»: StartWhenAvailable может догнать пропущенный запуск при
+# включении ПК днём. Вне утреннего окна (07:00-10:00) ничего не делаем.
+$now = Get-Date
+if ($now.Hour -lt 7 -or $now.Hour -ge 10) {
+    "вне утреннего окна 07:00-10:00, запуск пропущен: $(Get-Date -Format 'dd.MM HH:mm:ss')" |
+        Out-File -Append -Encoding UTF8 $log
+    exit 0
+}
+
 $planPath = 'local\zabava-plan.json'
 
 & py 'roles\blogger\tools\zabava_random_plan.py' 2>&1 |
