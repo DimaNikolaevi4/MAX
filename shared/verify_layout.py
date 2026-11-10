@@ -195,7 +195,7 @@ def check_paths_in_code() -> None:
     tool_names = (
         "add_devices_to_plan|archive_plan|archive_upload|collect_devices|dump_channel|"
         "inbox_batch_apply|inbox_batch_dedupe|inbox_batch_download|inbox_batch_plan|"
-        "inbox_batch_verify|inbox_delete|patch_plan_missing|build_markdown|dzen_build|"
+        "inbox_batch_verify|inbox_delete|patch_plan_missing|build_markdown|"
         "ensure_cta_quote|fetch_images|make_card|markup_fragments|pick_image|"
         "publish_post|publish_telegram|tg_direct|post_guard"
     )
