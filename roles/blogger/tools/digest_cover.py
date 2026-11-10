@@ -30,9 +30,11 @@ def main() -> None:
     ap.add_argument("--title", required=True, help="заголовок, строка 1 (белый)")
     ap.add_argument("--title2", default=None, help="заголовок, строка 2 (акцент)")
     ap.add_argument("--subtitle", default=None, help="подзаголовок под линией")
-    ap.add_argument("--footer", default="Новости мира техники")
-    ap.add_argument("--show-date", action="store_true",
+    ap.add_argument("--footer", default=None,
+                    help="подпись перед датой; по умолчанию None (только дата)")
+    ap.add_argument("--show-date", action="store_true", default=True,
                     help="добавить MSK-дату первой строкой подписи")
+    ap.add_argument("--no-date", dest="show_date", action="store_false")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
 
@@ -92,11 +94,15 @@ def main() -> None:
     if a.subtitle:
         text_center(y_line + 52, a.subtitle, sub_f, "#8fb8c8")
 
-    # --- нижняя подпись: дата (опционально) + футер ---
-    footer = a.footer
+    # --- нижняя подпись: дата (по умолчанию) + опциональный футер ---
+    parts = []
+    if a.footer:
+        parts.append(a.footer)
     if a.show_date:
-        footer += f" · {datetime.now(MSK):%d.%m.%Y}"
-    text_center(706, footer, foot_f, "#7fa8b8")
+        parts.append(f"{datetime.now(MSK):%d.%m.%Y}")
+    footer = " · ".join(parts)
+    if footer:
+        text_center(706, footer, foot_f, "#7fa8b8")
 
     img.save(a.out, "PNG")
     print("ok")

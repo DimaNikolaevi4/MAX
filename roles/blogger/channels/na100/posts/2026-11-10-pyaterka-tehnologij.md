@@ -1,15 +1,14 @@
 ---
 channel: na100
-deleted_at: 2026-11-10T20:51:08+03:00
-status: deleted
+status: published
 format: markdown
 notify: true
-published_at: 2026-11-10T20:39:48+03:00
-message_id: mid.ffffba08e9ee9aa301a1c68b67d74640
+published_at: 2026-11-10T20:52:57+03:00
+message_id: mid.ffffba08e9ee9aa301a1c697722626e2
 channel_id: -76927529477469
-url: https://max.ru/channel_na100/AaHGi2fXRkA
-image_file: local/digest/cover-first-issue.png
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCScvKdHzPgrHdiJpl6G6v0J1RBcpc4GKzM_MymF0KTblb_C0TUTGy1X-af_bvjY6JRMW8pt5_wX55bM75y9baI
+url: https://max.ru/channel_na100/AaHGl3ImJuI
+image_file: local/digest/cover-first-issue-v2.png
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCRVZPYPewnDfRPnm-AysZtUasyCzcFxzJmeMdlX4lBSmtpkeTTgcd0AuyLEhji4P9x3aj-TmLRIgbXBOZtgO28
 ---
 
 **Скандал в Nvidia, IPO за $1,4 трлн и санкции: итоги дня**
