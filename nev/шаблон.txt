@@ -1,0 +1,8 @@
+<p style="text-align: justify;"></p>
+</blockquote>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" title="Кот зенитчик" src="images/main/zenit/zenit.jpg" alt="Кот зенитчик" width="80%" /><br /><span style="font-size: 8pt;"><em>Кот зенитчик</em></span></p>
+<hr id="system-readmore" />
+
+<div class="button button-3 button-xlarge button-block" style="text-align: center;">
+<p>{likebtn}<br />Нравятся кошки. Ставьте лайки <i class="fa fa-thumbs-up">,</i>подписывайтесь на<span style="color: #ff0000;"> <strong><a style="color: #ff0000;" title="Яндекс Дзен" href="https://zen.yandex.ru/catkis" target="_blank" rel="noopener noreferrer">канал</a></strong></span>?, делайте репост в социальных сетях??</p>
+</div>
