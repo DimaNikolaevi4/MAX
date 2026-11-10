@@ -1,0 +1,19 @@
+---
+channel: tg_neuro
+status: draft
+format: html
+published_at: null
+message_id: null
+chat_id: -1002087111322
+image_file: local/images/ainow/2026-07-23-zabudte-pro-muki-verstki-v-powerpoint.jpg
+---
+
+🧡 **Пока здесь тишина — есть «Забавное»**
+
+Это TG-канал уходит в архив после переезда студии в MAX, но упомянуть хочу один канал — **«Забавное»**.
+
+Там короткие видео с питомцами и дикими животными. От первого лица скажу честно: идеи для анимации часто родом именно из таких роликов. Вот, например, медвежонок Момота и его конусы: [смотреть](https://max.ru/channel_zabava/AaHDe-IvLts) 🐻
+
+А мультфильм- и ИИ-тема — в канале **AI** в MAX: [перейти](https://max.ru/channel_ainow)
+
+**Подписывайтесь на [Забавное](https://max.ru/channel_zabava)** — звери играют без сценария!
