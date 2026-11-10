@@ -42,6 +42,7 @@ from pathlib import Path
 sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
 from shared.paths import REPO, CONFIG  # noqa: E402
 from shared.post_guard import assert_channel_chat_id  # noqa: E402
+from shared.text_check import check_text, format_issue  # noqa: E402
 API = "https://platform-api2.max.ru"
 REPORT = []
 
@@ -159,6 +160,29 @@ def main() -> None:
     stray = [ln for ln in text.splitlines() if ln.startswith(">") and not cta_re.match(ln)]
     if stray:
         raise SystemExit(f"литеральные '>' вне CTA: {stray[:2]}")
+
+    # --- проверка русского языка (LanguageTool) ---
+    spellcheck = "--no-spellcheck" not in args
+    if not spellcheck:
+        args.remove("--no-spellcheck")
+    if spellcheck:
+        spell_ignore = [w.strip() for w in (fm.get("spell_ignore") or "").split(",") if w.strip()]
+        spell = check_text(text, ignore_words=spell_ignore)
+        if spell.get("status") == "unavailable":
+            REPORT.append("WARN: проверка орфографии недоступна: " + spell.get("message", ""))
+        else:
+            for issue in spell.get("errors") or []:
+                REPORT.append("FAIL: " + format_issue(issue))
+            for issue in spell.get("warnings") or []:
+                REPORT.append("WARN: " + format_issue(issue))
+            REPORT.append("проверка текста: " + spell.get("message", ""))
+            if spell.get("ignored"):
+                REPORT.append(f"исключённые слова: {spell['ignored']}")
+            if spell.get("errors"):
+                (REPO / f"local/publish-{channel}.txt").write_text(
+                    "\n".join(REPORT), encoding="utf-8")
+                raise SystemExit(
+                    f"орфография/грамматика: ошибок {len(spell['errors'])}, см. отчёт")
 
     # --- загрузка изображения ---
     image_file = fm.get("image_file")
