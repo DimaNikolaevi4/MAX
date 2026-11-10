@@ -524,6 +524,8 @@ def main() -> None:
                              "folder": e.get("folder"), "year": e.get("year"),
                              "sha256": extra["sha256"], "parts": extra["parts"],
                              "note_mid": extra["note_mid"], "ts": now()})
+                # дубль того же пути в плане не должен уйти вторым постом
+                done_paths.add(e["path"])
                 processed += 1
                 bytes_sent += sent
                 continue
@@ -537,6 +539,7 @@ def main() -> None:
                     rec["sha256"] = sha256_of(Path(e["path"]))
                 journal_add(rec)
                 if rec["status"] == "done":
+                    done_paths.add(e["path"])
                     processed += 1
                     bytes_sent += sent
                 else:
@@ -552,6 +555,7 @@ def main() -> None:
             journal_add({"i": i, "kind": kind, "status": "done", "mid": mid,
                          "year": e.get("year"), "text": (e.get("text") or "")[:200],
                          "ts": now()})
+            done_headers.add((kind, e.get("year"), e.get("text")))
             processed += 1
         except Exception as exc:  # noqa: BLE001
             failed += 1
