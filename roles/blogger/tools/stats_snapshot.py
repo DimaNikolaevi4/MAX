@@ -7,12 +7,12 @@
   * сохраняет снимок `local/stats/<канал>-<дата>.json` (один на день);
   * сравнивает с предыдущим снимком: прирост подписчиков, новые посты,
     прирост просмотров и скорость просмотров;
-  * пишет отчёт `local/stats-report.txt`.
+  * пишет отчёт `local/stats-report-<канал>.txt`.
 
-Запуск:
+Запуск (по умолчанию ainow, для второго канала — --channel zabava):
   py roles\\blogger\\tools\\stats_snapshot.py [--channel ainow] [--weekly]
 
-`--weekly` собирает сводку за 7 дней в `local/stats-weekly.txt`.
+`--weekly` собирает сводку за 7 дней в `local/stats-weekly-<канал>.txt`.
 """
 import argparse
 import json
@@ -26,10 +26,16 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[3]
 MSK = timezone(timedelta(hours=3))
 STATS = REPO / "local" / "stats"
-REPORT = REPO / "local" / "stats-report.txt"
-WEEKLY = REPO / "local" / "stats-weekly.txt"
 CA = REPO / "local" / "russian_ca_bundle.pem"
 TOKENS = REPO / "local" / "tokens.json"
+
+
+def report_path(channel):
+    return REPO / "local" / f"stats-report-{channel}.txt"
+
+
+def weekly_path(channel):
+    return REPO / "local" / f"stats-weekly-{channel}.txt"
 
 
 def api(token, path):
@@ -114,14 +120,16 @@ def main():
         prev_at = datetime.fromisoformat(prev["taken_at"])
         hours = max((now - prev_at).total_seconds() / 3600, 0.1)
         dp = (snap["participants"] or 0) - (prev.get("participants") or 0)
-        lines.append(f"предыдущий снимок: {prev_at:%Y-%m-%d %H:%M}, "
-                     f"подписчики: {dp:+d} за {hours:.1f} ч")
+        span = "сутки" if 20 <= hours <= 28 else f"{hours:.1f} ч"
+        lines.append(f"период: {prev_at:%Y-%m-%d %H:%M} → {now:%Y-%m-%d %H:%M} ({span})")
+        lines.append(f"подписчики за период: {dp:+d} "
+                     f"(было {prev.get('participants')}, стало {snap['participants']})")
 
         prev_posts = {p["mid"]: p for p in prev.get("posts", [])}
         new_posts = [p for p in posts if p["mid"] not in prev_posts]
         if new_posts:
             lines.append("")
-            lines.append("новые посты с прошлого снимка:")
+            lines.append("новые посты за период:")
             for p in new_posts:
                 lines.append(f"  {p['views'] if p['views'] is not None else '-'} просм.  "
                              f"{p['title'][:70]}")
@@ -136,7 +144,7 @@ def main():
         gains.sort(key=lambda x: -x[0])
         if gains:
             lines.append("")
-            lines.append("прирост просмотров (топ-5):")
+            lines.append("прирост просмотров за период (топ-5):")
             for delta, p in gains[:5]:
                 lines.append(f"  +{delta:<4} {p['views']:>4}  "
                              f"{p['dt'][:10]}  {p['title'][:60]}")
@@ -150,7 +158,8 @@ def main():
                      f"median={int(statistics.median(views))}, max={max(views)}")
     lines.append(f"снимок сохранён: {snap_path.relative_to(REPO)}")
 
-    REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    report = report_path(args.channel)
+    report.write_text("\n".join(lines) + "\n", encoding="utf-8")
     log = REPO / "local" / "logs" / "stats.log"
     log.parent.mkdir(parents=True, exist_ok=True)
     with log.open("a", encoding="utf-8") as f:
@@ -189,7 +198,7 @@ def write_weekly(channel):
         new_posts = [p for p in last.get("posts", []) if p["mid"] not in old]
         lines.append("")
         lines.append(f"новых постов за неделю: {len(new_posts)}")
-    WEEKLY.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    weekly_path(channel).write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

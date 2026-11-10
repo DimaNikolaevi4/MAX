@@ -4,7 +4,7 @@
 Логика запуска:
   * берутся посты канала со `status: approved`, у которых дата из имени файла
     не позже сегодняшней (МСК);
-  * за один запуск публикуется не больше `--limit` постов (по умолчанию 1);
+  * за один запуск публикуются все готовые посты (`--limit 0` — без ограничения);
   * перед публикацией: `git fetch`, отказ, если origin/main ушёл вперёд;
   * проверки: картинка существует, CTA-цитата в формате канала, фраза
     призыва не дублирует `cta-phrases.json`;
@@ -89,7 +89,8 @@ def acquire_lock():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--channel", default="ainow")
-    ap.add_argument("--limit", type=int, default=1)
+    ap.add_argument("--limit", type=int, default=0,
+                    help="0 — без ограничения, иначе максимум постов за запуск")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -149,7 +150,8 @@ def run(args, now):
         flush()
         return 0
 
-    say(f"кандидатов: {len(candidates)}; лимит за запуск: {args.limit}")
+    limit_text = "без ограничения" if not args.limit else str(args.limit)
+    say(f"кандидатов: {len(candidates)}; лимит за запуск: {limit_text}")
 
     reg_path = posts_dir.parent / "cta-phrases.json"
     registry = json.loads(reg_path.read_text(encoding="utf-8"))
@@ -170,7 +172,7 @@ def run(args, now):
 
     published = 0
     for path, fm, body, plan_date in candidates:
-        if published >= args.limit:
+        if args.limit and published >= args.limit:
             break
 
         img = fm.get("image_file")

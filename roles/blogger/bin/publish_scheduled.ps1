@@ -1,5 +1,5 @@
 # Планировщик Windows: публикация approved-постов ainow.
-# Запускается ежедневно в 09:00 и 18:00 (МСК). Логи — local/logs/.
+# Запускается ежедневно в 07:15 и 17:15 (МСК). Логи — local/logs/.
 $ErrorActionPreference = 'Stop'
 Set-Location -LiteralPath 'E:\github\MAX'
 $OutputEncoding = [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding $false

@@ -272,14 +272,29 @@ def verify(token: str, mid: str, body: str, phrase: str, cfg: dict,
     expected = f"{body}\n\n{phrase}"
     label = cfg["cta_label"]
     label_at = text.rfind(label)
-    strong_ok = any(
-        m.get("type") == "strong"
-        and m.get("from", 0) <= label_at < m.get("from", 0) + m.get("length", 0)
-        for m in markup)
+
+    def markup_span(m):
+        """MAX отдаёт from/length в единицах UTF-16, а Python-строки — в символах.
+
+        Без перевода любой пост с эмодзи до призыва даёт ложный FAIL: смещение
+        уезжает на число суррогатных пар (эмодзи = 2 единицы UTF-16).
+        """
+        start_u = m.get("from", 0)
+        end_u = start_u + m.get("length", 0)
+        raw = text.encode("utf-16-le")
+        start = len(raw[:start_u * 2].decode("utf-16-le", "ignore"))
+        end = len(raw[:end_u * 2].decode("utf-16-le", "ignore"))
+        return start, end
+
+    def covers_label(m):
+        start, end = markup_span(m)
+        return start <= label_at < end
+
+    strong_ok = any(m.get("type") == "strong" and covers_label(m) for m in markup)
     link_ok = any(
         m.get("type") == "link"
         and m.get("url") == cfg["cta_url"]
-        and m.get("from", 0) <= label_at < m.get("from", 0) + m.get("length", 0)
+        and covers_label(m)
         for m in markup)
     checks = {
         "вложений: %d" % len(expected_types): len(atts) == len(expected_types),
@@ -440,10 +455,6 @@ def main() -> None:
         raise SystemExit("POST /messages не удался, см. отчёт")
 
     checks, got = verify(token, mid, body, phrase, cfg, expected_types)
-    if not all(checks.values()):
-        REPORT.append(f"FAIL: контроль не пройден, mid={mid}")
-        write_report(channel)
-        raise SystemExit("контроль FAIL, см. отчёт")
 
     duration = None
     media_urls = []
@@ -488,6 +499,12 @@ def main() -> None:
     cta_data["recent"] = recent[-RECENT_KEEP:]
     cta_data.setdefault("by_post", {})[post_path.name] = phrase
     cta_path.write_text(json.dumps(cta_data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    if not all(checks.values()):
+        REPORT.append(f"FAIL: контроль не пройден, mid={mid}, пост опубликован, "
+                      f"front matter и реестр CTA обновлены")
+        write_report(channel)
+        raise SystemExit("контроль FAIL, см. отчёт")
 
     REPORT.append(f"OK: {post_path.name} -> {url or mid}")
     REPORT.append(f"текст {len(got['text'])} симв., разметка {len(got['markup'])}, "
