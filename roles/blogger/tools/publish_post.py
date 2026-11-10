@@ -106,6 +106,16 @@ def api(channel_token: str, method: str, url: str, payload: Path | None = None,
     return (r.stdout or b"").decode("utf-8", errors="replace")
 
 
+def plain_text(md: str) -> str:
+    """LanguageTool должен читать человеческий текст, а не markdown:
+    убираем ссылки (оставляя текст), выделение, цитаты и заголовки."""
+    t = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", md)
+    t = re.sub(r"[*_`]{1,3}", "", t)
+    t = re.sub(r"^>\s?", "", t, flags=re.M)
+    t = re.sub(r"^#{1,6}\s?", "", t, flags=re.M)
+    return t
+
+
 def main() -> None:
     args = sys.argv[1:]
     channel = "ainow"
@@ -167,7 +177,7 @@ def main() -> None:
         args.remove("--no-spellcheck")
     if spellcheck:
         spell_ignore = [w.strip() for w in (fm.get("spell_ignore") or "").split(",") if w.strip()]
-        spell = check_text(text, ignore_words=spell_ignore)
+        spell = check_text(plain_text(text), ignore_words=spell_ignore)
         if spell.get("status") == "unavailable":
             REPORT.append("WARN: проверка орфографии недоступна: " + spell.get("message", ""))
         else:

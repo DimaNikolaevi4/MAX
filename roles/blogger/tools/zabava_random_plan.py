@@ -4,7 +4,7 @@
 Что делает:
   * читает историю канала (GET /messages, последние 100);
   * отбирает старые посты: есть видео или фото(+) и текст, нет призыва,
-    нет ссылок и хештегов, текст не длиннее 800 символов;
+    нет ссылок, текст не длиннее 800 символов;
   * этот пост и его источники не должны уже участвовать в плане;
   * прогоняет текст через LanguageTool (shared/text_check.py) — кандидаты
     с ошибками орфографии пропускаются;
@@ -104,7 +104,7 @@ def candidates(msgs, plan):
         low = text.lower()
         if any(mark in low for mark in NO_CTA_MARKS):
             continue
-        if "http" in low or "max.ru/" in low or "#" in text:
+        if "http" in low or "max.ru/" in low:
             continue
         if "**" in text or "](" in text:
             continue

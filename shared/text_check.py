@@ -57,9 +57,28 @@ def _line_col(text: str, offset: int) -> tuple[int, int]:
     return line, col
 
 
+def _u16_to_py(text: str, u16: int) -> int:
+    """Смещение в UTF-16-кодовых единицах (так их отдаёт LanguageTool)
+    перевести в индекс строки Python (кодовые точки). Разница возникает
+    на символах вне BMP (эмодзи): в UTF-16 они занимают 2 единицы."""
+    if u16 <= 0:
+        return 0
+    acc = 0
+    for i, ch in enumerate(text):
+        w = 2 if ord(ch) > 0xFFFF else 1
+        if acc + w > u16:
+            return i  # граница попала внутрь суррогатной пары — берём начало
+        acc += w
+        if acc == u16:
+            return i + 1
+    return len(text)
+
+
 def _normalize(text: str, match: dict) -> dict:
-    offset = int(match.get("offset", 0))
-    length = int(match.get("length", 0))
+    offset = _u16_to_py(text, int(match.get("offset", 0)))
+    end = _u16_to_py(text,
+                     int(match.get("offset", 0)) + int(match.get("length", 0)))
+    length = max(0, end - offset)
     rule = match.get("rule") or {}
     issue_type = rule.get("issueType") or ""
     category = rule.get("category") or {}

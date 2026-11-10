@@ -132,7 +132,7 @@ py roles\blogger\tools\publish_post.py --channel ainow roles\blogger\channels\ai
 - `MAX ainow - publish approved` — 07:15 МСК: публикует **только** посты со `status: approved`, дата из имени файла ≤ сегодня, за запуск — все готовые посты (лимитов нет); сам делает GET-контроль, коммит и пуш.
 - `MAX stats snapshot` — 07:00 МСК: снимает подписчиков и просмотры по ainow и zabava в `local/stats/`, пишет анализ **за предыдущие сутки** в `local/stats-report-<канал>.txt`. Идёт раньше публикации, чтобы новый пост попал в следующий отчёт с полными сутками просмотров.
 - `draft` задача не публикует: после «ок» статус переводится в `approved`. Без «ок» статус не менять.
-- `MAX zabava - publish plan` — 07:15 МСК: публикует все `pending` посты из `local/zabava-plan.json`, без интервалов и дневных лимитов; git по `zabava` автоматически не коммитится.
+- `MAX zabava - publish plan` — 07:16 МСК (на минуту позже ainow, чтобы git-push не сталкивались): публикует все `pending` посты из `local/zabava-plan.json`, без интервалов и дневных лимитов; после публикации сам коммитит `.md` поста и пушит (медиа в git не попадают — остаются в `local/`).
 - Отчёты автопубликации — `local/scheduled-publish.txt`, логи — `local/logs/`; в рабочем чате их нужно пересказать в следующей сессии.
 - Подробно: `docs/scheduled-tasks.md`.
 
