@@ -69,6 +69,12 @@ def main() -> None:
     ap.add_argument("--items", default="",
                     help="пункты панели через | (обычно 5 заголовков выпуска)")
     ap.add_argument("--no-date", action="store_true")
+    ap.add_argument("--wash", default="auto",
+                    help="полупрозрачная подложка на весь кадр; по умолчанию "
+                         "auto: светлый кадр -> белая вуаль 0.55, тёмный -> "
+                         "выкл (стандарт обложек na100, решение владельца "
+                         "11.11.2026); число 0..1 — задать плотность, "
+                         "0 — выключить")
     a = ap.parse_args()
     src = str(Path(a.src).resolve())   # ffmpeg работает с cwd=tmp — пути абсолютные
     out = str(Path(a.out).resolve())
@@ -110,6 +116,16 @@ def main() -> None:
     col_blue = GRAY_LIGHT if light else "0x9FC4D4"
     col_gray = GRAY_LIGHT if light else GRAY_DARK
     shadow = "white@0.6" if light else "black@0.45"
+
+    # вуаль (стандарт обложек na100, 11.11.2026): auto = светлая тема -> 0.55
+    raw_wash = str(a.wash).strip().lower()
+    if raw_wash in ("", "auto"):
+        wash_a = 0.55 if light else 0.0
+    elif raw_wash in ("0", "off", "none"):
+        wash_a = 0.0
+    else:
+        wash_a = min(1.0, float(raw_wash))
+    print(f"wash: {wash_a:.2f}" if wash_a > 0 else "wash: off")
 
     def tf(name: str, text: str) -> Path:
         p = tmp / name
@@ -184,6 +200,10 @@ def main() -> None:
     y_sub = y_acc + acc_h + gap_sub
 
     f = [
+        # вуаль на весь кадр (стандарт 11.11.2026: светлый кадр -> белая 0.55,
+        # тёмный -> выкл; drawbox стоит первым — панель и текст поверх неё)
+        ] + ([f"drawbox=x=0:y=0:w=iw:h=ih:color=white@{wash_a:.2f}:t=fill"]
+             if wash_a > 0 else []) + [
         # подложка панели «ФОРМАТ»
         f"drawbox=x={PX1}:y=80:w={PX2 - PX1}:h=940:color="
         + ("white@0.72" if light else "black@0.45") + ":t=fill",

@@ -60,11 +60,12 @@ def main() -> None:
     ap.add_argument("--items", default="",
                     help="пункты панели через | (обычно 5 заголовков выпуска)")
     ap.add_argument("--no-date", action="store_true")
-    ap.add_argument("--wash", type=float, default=0.0,
-                    help="полупрозрачная подложка на ВСЁ изображение, 0..1 "
-                         "(0 = выкл); цвет темы — как у панели справа; "
-                         "вводил решение владельца 11.11.2026 для светлых "
-                         "фонов, где заголовок плохо читается")
+    ap.add_argument("--wash", default="auto",
+                    help="полупрозрачная подложка на ВСЁ изображение; "
+                         "по умолчанию auto: светлый фон -> 0.55, тёмный -> "
+                         "выкл (стандарт обложек na100, решение владельца "
+                         "11.11.2026); число 0..1 — задать плотность явно, "
+                         "0 — выключить")
     a = ap.parse_args()
 
     im = Image.open(a.bg).convert("RGBA")
@@ -77,10 +78,17 @@ def main() -> None:
         print(auto_note)
     dark = theme == "dark"
 
-    if a.wash > 0:
-        # подложка на весь кадр цветом темы (решение владельца 11.11.2026):
-        # светлый фон -> белая вуаль, тёмный -> тёмная, контраст растёт
-        wash_a = min(1.0, a.wash)
+    raw_wash = str(a.wash).strip().lower()
+    if raw_wash in ("", "auto"):
+        wash_a = 0.0 if dark else 0.55
+    elif raw_wash in ("0", "off", "none"):
+        wash_a = 0.0
+    else:
+        wash_a = min(1.0, float(raw_wash))
+    if wash_a > 0:
+        # подложка на весь кадр цветом темы (стандарт 11.11.2026): светлый
+        # фон -> белая вуаль 0.55 (заголовок читается на любом светлом фото),
+        # тёмный -> тёмная (там уже есть градиент слева, вуаль не нужна)
         fill = (255, 255, 255, round(wash_a * 255)) if not dark \
             else (5, 10, 18, round(wash_a * 255))
         im.alpha_composite(Image.new("RGBA", im.size, fill))
