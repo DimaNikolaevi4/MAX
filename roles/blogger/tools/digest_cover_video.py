@@ -126,7 +126,7 @@ def main() -> None:
         return size, lines[0]
 
     ov_size, over_txt = fit1(a.over or release_stamp(datetime.now(MSK)),
-                             FONT_SB, 40, 30)
+                             FONT_SB, 46, 34)
     t1_size, t1_txt = fit1(a.t1, FONT, 106, 70)
     t2_size, t2_txt = fit1(a.t2, FONT, 106, 70)
     sub_size, sub_txt = fit1(a.sub, FONT_SB, 64, 44)
@@ -184,9 +184,8 @@ def main() -> None:
         f":x={LX}:y={y_sub}:shadowx=2:shadowy=2:shadowcolor={shadow}",
         f"drawtext=fontfile=font_sb.ttf:textfile={f_foot.name}:fontsize={foot_size}:fontcolor={col_gray}:x={LX}:y=985",
     ]
-    if not a.no_date:
-        f.append(f"drawtext=fontfile=font_sb.ttf:text={datetime.now():%d.%m.%Y}"
-                 f":fontsize=36:fontcolor={col_gray}:x=w-text_w-{LX}:y=985")
+    # нижняя дата убрана (решение 11.11.2026, вечер): дата есть только
+    # в надстройке выпуска сверху; --no-date оставлен для совместимости
 
     f.append(f"drawtext=fontfile=font_sb.ttf:textfile={f_fmt.name}:fontsize=34:fontcolor={col_gray}:x={RX}:y=140")
     row_y = 230

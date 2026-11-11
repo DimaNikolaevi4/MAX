@@ -69,7 +69,7 @@ def _make_paper(a) -> None:
     LX = 96
     over_txt = a.over or release_stamp(datetime.now(MSK))
     d.text((LX, 112), over_txt,
-           font=ImageFont.truetype(FONT_SB, 28), fill="#8fb8c8")
+           font=ImageFont.truetype(FONT_SB, 34), fill="#8fb8c8")
 
     # название — по вертикальному центру мачхеда (решение 11.11.2026): блок
     # название+линия+подзаголовок центрируется между надстройкой и футером —
@@ -100,10 +100,9 @@ def _make_paper(a) -> None:
 
     foot_f = ImageFont.truetype(FONT_SB, 27)
     d.text((LX, 716), "max.ru/channel_na100", font=foot_f, fill="#7fa8b8")
-    if a.show_date:
-        date_s = f"{datetime.now(MSK):%d.%m.%Y}"
-        d.text((W - 96 - d.textlength(date_s, font=foot_f), 716),
-               date_s, font=foot_f, fill="#7fa8b8")
+    # нижняя дата в paper-стиле убрана (решение 11.11.2026, вечер):
+    # дата есть только в надстройке выпуска сверху
+    # (--show-date/--no-date действуют для стиля dark)
 
     # --- правая колонка «формат» ---
     if a.items:

@@ -109,7 +109,7 @@ def main() -> None:
         return size, lines[0], trunc
 
     ov_size, over_txt, ov_tr = fit1(a.over or release_stamp(datetime.now(MSK)),
-                                    FONT_SB, round(56 * s), round(40 * s))
+                                    FONT_SB, round(64 * s), round(46 * s))
     t1_size, t1_txt, t1_tr = fit1(a.t1, FONT_B, round(200 * s), round(110 * s))
     t2_size, t2_txt, t2_tr = fit1(a.t2, FONT_B, round(200 * s), round(110 * s))
     sub_size, sub_txt, sub_tr = fit1(a.sub, FONT_SB, round(84 * s), round(48 * s))
@@ -146,12 +146,8 @@ def main() -> None:
 
     foot_f = ImageFont.truetype(FONT_SB, round(56 * s))
     d.text((LX, round(1380 * s)), "max.ru/channel_na100", font=foot_f, fill=col_gray)
-    if not a.no_date:
-        date_s = f"{datetime.now(MSK):%d.%m.%Y}"
-        # дата — слева от панели, на одной строке с адресом канала:
-        # внутри панели она наезжала на вторую строку пункта 05 (11.11)
-        date_x = px1 - round(60 * s) - d.textlength(date_s, font=foot_f)
-        d.text((date_x, round(1380 * s)), date_s, font=foot_f, fill=col_gray)
+    # нижняя дата убрана (решение 11.11.2026, вечер): дата есть только
+    # в надстройке выпуска сверху; --no-date оставлен для совместимости
 
     # правая колонка «ФОРМАТ»
     if a.items:
