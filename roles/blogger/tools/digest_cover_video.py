@@ -27,8 +27,12 @@ import argparse
 import imageio_ffmpeg
 import shutil
 import subprocess
+from datetime import datetime
 from pathlib import Path
 from tempfile import mkdtemp
+from PIL import Image
+from cover_theme import (aspect_info, resolve_theme, ASPECT_TOL,
+                         OVERLAY_VIDEO_DARK, OVERLAY_VIDEO_LIGHT)
 
 FONT = r"C:\Windows\Fonts\segoeuib.ttf"    # Segoe UI Bold
 FONT_SB = r"C:\Windows\Fonts\seguisb.ttf"  # Segoe UI Semibold
@@ -50,7 +54,8 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--src", required=True, help="фоновое видео (mp4)")
     ap.add_argument("--out", required=True)
-    ap.add_argument("--theme", choices=["light", "dark"], default="light")
+    ap.add_argument("--theme", choices=["auto", "light", "dark"], default="auto",
+                    help="auto — тема по первому кадру (контраст, худшая зона)")
     ap.add_argument("--over", default="Т Е Х Н О - Д А Й Д Ж Е С Т")
     ap.add_argument("--t1", default="Новости")
     ap.add_argument("--t2", default="мира техники")
@@ -59,17 +64,46 @@ def main() -> None:
                     help="пункты панели через | (обычно 5 заголовков выпуска)")
     ap.add_argument("--no-date", action="store_true")
     a = ap.parse_args()
+    src = str(Path(a.src).resolve())   # ffmpeg работает с cwd=tmp — пути абсолютные
+    out = str(Path(a.out).resolve())
 
-    light = a.theme == "light"
+    ff = imageio_ffmpeg.get_ffmpeg_exe()
+
+    # кадр для анализа: тема (auto) и проверка 16:9
+    tmp = Path(mkdtemp(prefix="cover_video_"))
+    shutil.copy(FONT, tmp / "font.ttf")
+    shutil.copy(FONT_SB, tmp / "font_sb.ttf")
+    frame_png = tmp / "frame.png"
+    r0 = subprocess.run([ff, "-y", "-i", src, "-frames:v", "1", "-q:v", "2",
+                         str(frame_png)],
+                        capture_output=True, timeout=120, cwd=str(tmp))
+    if r0.returncode != 0 or not frame_png.exists():
+        print(r0.stderr.decode("utf-8", "replace")[-800:])
+        raise SystemExit(1)
+    frame = Image.open(frame_png)
+    ar, rel = aspect_info(frame)
+    if abs(rel - 1) > ASPECT_TOL:
+        raise SystemExit(f"background video not 16:9: aspect {ar:.3f} "
+                         f"({rel:.2f}x), rejected")
+    crop = ""
+    W0, H0 = frame.size
+    if abs(rel - 1) > 0.01:  # подгонка до точных 16:9 до наложения текста
+        if rel > 1:
+            crop = f"crop={round(H0 * 16 / 9) // 2 * 2}:{H0},"
+        else:
+            crop = f"crop={W0}:{round(W0 * 9 / 16) // 2 * 2},"
+        print(f"aspect {ar:.3f} -> center-crop filter to 16:9")
+
+    theme, auto_note = resolve_theme(a.theme, frame, OVERLAY_VIDEO_DARK,
+                                     OVERLAY_VIDEO_LIGHT)
+    if auto_note:
+        print(auto_note)
+    light = theme == "light"
     col_text = NAVY if light else "0xFFFFFF"
     col_green = GREEN_DARK if light else GREEN
     col_blue = GRAY_LIGHT if light else "0x9FC4D4"
     col_gray = GRAY_LIGHT if light else GRAY_DARK
     shadow = "white@0.6" if light else "black@0.45"
-
-    tmp = Path(mkdtemp(prefix="cover_video_"))
-    shutil.copy(FONT, tmp / "font.ttf")
-    shutil.copy(FONT_SB, tmp / "font_sb.ttf")
 
     def tf(name: str, text: str) -> Path:
         p = tmp / name
@@ -103,7 +137,7 @@ def main() -> None:
         f"drawtext=fontfile=font_sb.ttf:textfile={f_foot.name}:fontsize=36:fontcolor={col_gray}:x={LX}:y=985",
     ]
     if not a.no_date:
-        f.append(f"drawtext=fontfile=font_sb.ttf:text={__import__('datetime').datetime.now():%d.%m.%Y}"
+        f.append(f"drawtext=fontfile=font_sb.ttf:text={datetime.now():%d.%m.%Y}"
                  f":fontsize=36:fontcolor={col_gray}:x=w-text_w-{LX}:y=985")
 
     f.append(f"drawtext=fontfile=font_sb.ttf:textfile={f_fmt.name}:fontsize=34:fontcolor={col_gray}:x={RX}:y=140")
@@ -118,19 +152,19 @@ def main() -> None:
 
     ff = imageio_ffmpeg.get_ffmpeg_exe()
     cmd = [
-        ff, "-y", "-i", a.src,
-        "-vf", ",".join(f),
+        ff, "-y", "-i", src,
+        "-vf", crop + ",".join(f),
         "-c:v", "libx264", "-preset", "medium", "-crf", "22",
         "-pix_fmt", "yuv420p",
         "-c:a", "copy",
         "-movflags", "+faststart",
-        a.out,
+        out,
     ]
     r = subprocess.run(cmd, capture_output=True, timeout=900, cwd=str(tmp))
     if r.returncode != 0:
         print(r.stderr.decode("utf-8", "replace")[-1500:])
         raise SystemExit(1)
-    print("ok (video-paper)", Path(a.out).stat().st_size)
+    print("ok (video-paper)", Path(out).stat().st_size)
 
 
 if __name__ == "__main__":

@@ -7,8 +7,11 @@
 
 Использование:
   python roles/blogger/tools/digest_cover_photo.py --bg <фон.png> --out <файл.png> \
-      [--theme dark|light] [--items "a|b|c|d|e"] [--sub "итоги суток"] [--no-date]
+      [--theme auto|dark|light] [--items "a|b|c|d|e"] [--sub "итоги суток"] [--no-date]
 
+theme auto (по умолчанию) — тема определяется по фону: замер зон мачхеда и
+              панели, контраст WCAG-подобный, победа по худшей зоне
+              (модуль cover_theme.py). Текст всегда противоположен фону.
 theme dark  — светлый текст для тёмного фона (градиент затемнения слева,
               полупрозрачная тёмная панель);
 theme light — тёмно-синий текст для светлого фона (полупрозрачная белая панель).
@@ -20,6 +23,8 @@ import argparse
 from datetime import datetime, timedelta, timezone
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
+from cover_theme import (fit_16_9, resolve_theme,
+                         OVERLAY_PHOTO_DARK, OVERLAY_PHOTO_LIGHT)
 
 FONT_B = r"C:\Windows\Fonts\segoeuib.ttf"    # Segoe UI Bold
 FONT_SB = r"C:\Windows\Fonts\seguisb.ttf"    # Segoe UI Semibold
@@ -33,7 +38,8 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--bg", required=True, help="фоновая картинка (PNG/JPG)")
     ap.add_argument("--out", required=True)
-    ap.add_argument("--theme", choices=["dark", "light"], default="dark")
+    ap.add_argument("--theme", choices=["auto", "dark", "light"], default="auto",
+                    help="auto — тема по фону (контраст, худшая зона)")
     ap.add_argument("--over", default="Т Е Х Н О - Д А Й Д Ж Е С Т")
     ap.add_argument("--t1", default="Новости")
     ap.add_argument("--t2", default="мира техники")
@@ -43,8 +49,15 @@ def main() -> None:
     ap.add_argument("--no-date", action="store_true")
     a = ap.parse_args()
 
-    dark = a.theme == "dark"
     im = Image.open(a.bg).convert("RGBA")
+    im, ar_note = fit_16_9(im)
+    if im is None:
+        raise SystemExit(f"background not 16:9: {ar_note} (crop it or use another source)")
+    print(ar_note)
+    theme, auto_note = resolve_theme(a.theme, im, OVERLAY_PHOTO_DARK, OVERLAY_PHOTO_LIGHT)
+    if auto_note:
+        print(auto_note)
+    dark = theme == "dark"
     W, H = im.size
     s = H / BASE_H
     LX = round(190 * s)
