@@ -7,11 +7,12 @@ published_at: 2026-11-11T13:15:11+03:00
 message_id: mid.ffffba08e9ee9aa301a1ca19b2176f94
 channel_id: -76927529477469
 url: https://max.ru/channel_na100/AaHKGbIXb5Q
-image_file: local/digest/cover-second-issue.png
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCRUGD4vNQHrOlXX4wo303PP51DR0hZX9wxFsuzK6nf8RmMQ15Ft-SVyPzu4X37sUU0lbKjNCAdc9vK8CGXmpPg
+image_file: local/digest/cover-new-2026-11-11-pyaterka-tehnologij.png
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTVRhmSmxMsHncI8oNt3pG4rWDZKo3zd5Iwj1bUgxKXotI8DUXS3ZEECPFwgKBYbg2QZq3MNMCPb1lh1Wxn39Y
 edited_at: 2026-11-11
 edited_by: владелец, правка постфактум в канале
 edit_reason: ритм/эвфония — добавлен союз «и» в «поставщики памяти и двигают цены»
+edited_note: обложка заменена в канале на собранную по новой методике 11.11.2026 (время / «Новости ИИ и технологий» / акцент-дата / «Ежедневный утренний обзор»); при замене вложения CTA-строка пострадала от артефакта round-trip и была отремонтирована PUT канонического текста
 ---
 
 **Видеокарты подорожают, ИИ — в ядерной повестке: итоги дня**

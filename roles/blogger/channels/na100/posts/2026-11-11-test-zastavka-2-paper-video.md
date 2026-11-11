@@ -7,13 +7,11 @@ published_at: 2026-11-11T07:33:12+03:00
 message_id: mid.ffffba08e9ee9aa301a1c8e19bb211e7
 channel_id: -76927529477469
 url: https://max.ru/channel_na100/AaHI4ZuyEec
-image_file: local/digest/cover-rework-1111.png
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCSRSucJdpAidYg1F_-rzKlh-hJv6ozA7H6sfK0f9M29s5Y0h0WLJXd7e0Ar7dewPGsVwWxDxksU2Q4H-P4oh1E
+image_file: local/digest/cover-new-2026-11-11-test-zastavka-2-paper-video.png
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCSYMHgCJ90axDzh03FliUOd4zVWspYha3IIZOXEm3_bcWiBAI1PGPtPvq8PrXQoeWN6Z-o_idpg5gjlJG5HQ-k
 media_count: 1
 edited_at: 2026-11-11T10:44:36+03:00
-edited_note: подача по методике 11.11 (нумерация и флаги региона,
-  без гео-надписей, порядок перемешан); вложение-видео заменено
-  обложкой на фоне из пула канала (шаг 4 цепочки поставки)
+edited_note: обложка заменена в канале на собранную по новой методике 11.11.2026 (время / «Новости ИИ и технологий» / акцент-дата / «Ежедневный утренний обзор»), вложение обновлено через PUT /messages, текст не менялся
 ---
 
 **Скандал в Nvidia, IPO за $1,4 трлн и санкции: итоги дня**
