@@ -16,7 +16,7 @@
 Используется digest_cover_photo.py и digest_cover_video.py (--theme auto,
 значение по умолчанию); ручной --theme dark|light сохранён как override.
 """
-from PIL import Image
+from PIL import Image, ImageFont
 
 # зоны раскладки в долях размера кадра: (x0, x1, y0, y1)
 ZONES = {
@@ -142,3 +142,68 @@ def fit_16_9(im: Image.Image, tol: float = ASPECT_TOL):
         y0 = (H - nh) // 2
         im = im.crop((0, y0, W, y0 + nh))
     return im, f"aspect {ar:.3f} ({rel:.2f}x of 16:9) -> center-crop to 16:9"
+
+
+# --- Подгонка текста: перенос -> уменьшение кегля -> многоточие ---
+# Введено 11.11.2026 по итогам поста AaHI4ZuyEec (пункт 03 «ФОРМАТ» вылезал
+# за затенение панели). Правило: текст живёт внутри безопасной зоны
+# (внутренняя ширина панели/мачхеда с отступом), приоритет подгонки —
+# перенос строк (сохраняет кегль), затем уменьшение шрифта до min_size,
+# затем обрезка с «…» (крайняя мера). Профилактика — короткие формулировки
+# тем на этапе сборки выпуска (3–5 слов, cover-method.md).
+
+def wrap_lines(text: str, font, max_w: float) -> list:
+    """Перенос по словам под ширину max_w (px). Одиночное слово шире max_w
+    режется по символам."""
+    words = text.split()
+    if not words:
+        return [""]
+    lines, cur = [], words[0]
+    for w in words[1:]:
+        trial = f"{cur} {w}"
+        if font.getlength(trial) <= max_w:
+            cur = trial
+        else:
+            lines.append(cur)
+            cur = w
+    lines.append(cur)
+    out = []
+    for ln in lines:
+        if font.getlength(ln) <= max_w or not ln:
+            out.append(ln)
+            continue
+        chunk = ""
+        for ch in ln:
+            if chunk and font.getlength(chunk + ch) > max_w:
+                out.append(chunk)
+                chunk = ch
+            else:
+                chunk += ch
+        out.append(chunk)
+    return out
+
+
+def fit_text_block(text: str, font_path: str, max_w: float, max_lines: int = 2,
+                   start: int = 56, min_size: int = 30, step: int = 2):
+    """Возвращает (size, lines, truncated): минимально инвазивная подгонка.
+
+    Уровень 1 — перенос строк при исходном кегле (len(lines) <= max_lines).
+    Уровень 2 — кегль уменьшается на step, пока блок не войдёт по строкам.
+    Уровень 3 — на min_size берутся первые max_lines строк, последняя
+    обрезается с «…».
+    """
+    size = start
+    while size >= min_size:
+        font = ImageFont.truetype(font_path, size)
+        lines = wrap_lines(text, font, max_w)
+        if len(lines) <= max_lines:
+            return size, lines, False
+        size -= step
+    font = ImageFont.truetype(font_path, min_size)
+    lines = wrap_lines(text, font, max_w)[:max_lines]
+    last = lines[-1] if lines else ""
+    tail = ""
+    while last and font.getlength(last + "…") > max_w:
+        last = last[:-1]
+    lines[-1] = last.rstrip() + "…" if last else "…"
+    return min_size, lines, True

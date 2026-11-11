@@ -31,7 +31,7 @@ from datetime import datetime
 from pathlib import Path
 from tempfile import mkdtemp
 from PIL import Image
-from cover_theme import (aspect_info, resolve_theme, ASPECT_TOL,
+from cover_theme import (aspect_info, fit_text_block, resolve_theme, ASPECT_TOL,
                          OVERLAY_VIDEO_DARK, OVERLAY_VIDEO_LIGHT)
 
 FONT = r"C:\Windows\Fonts\segoeuib.ttf"    # Segoe UI Bold
@@ -110,14 +110,41 @@ def main() -> None:
         p.write_text(text, encoding="utf-8", newline="\n")  # БЕЗ \r\n (см. докстринг)
         return p
 
-    f_over = tf("over.txt", a.over)
-    f_t1 = tf("t1.txt", a.t1)
-    f_t2 = tf("t2.txt", a.t2)
-    f_sub = tf("sub.txt", a.sub)
-    f_foot = tf("foot.txt", "max.ru/channel_na100")
+    # подгонка текста: перенос -> уменьшение кегля -> «…» (правило 11.11,
+    # пост AaHI4ZuyEec: пункт 03 вылезал за затенение панели)
+    MAST_W = PX1 - LX - 40          # безопасная ширина мачхеда (до панели)
+    ITEM_MAX_W = PX2 - 30 - TX      # безопасная ширина пункта внутри панели
+
+    def fit1(text, font_path, start, min_size):
+        size, lines, trunc = fit_text_block(text, font_path, MAST_W,
+                                            max_lines=1, start=start,
+                                            min_size=min_size)
+        if trunc:
+            print("warning: masthead text truncated to fit")
+        return size, lines[0]
+
+    ov_size, over_txt = fit1(a.over, FONT_SB, 40, 30)
+    t1_size, t1_txt = fit1(a.t1, FONT, 106, 70)
+    t2_size, t2_txt = fit1(a.t2, FONT, 106, 70)
+    sub_size, sub_txt = fit1(a.sub, FONT_SB, 64, 44)
+    foot_size, foot_txt = fit1("max.ru/channel_na100", FONT_SB, 36, 28)
+
+    f_over = tf("over.txt", over_txt)
+    f_t1 = tf("t1.txt", t1_txt)
+    f_t2 = tf("t2.txt", t2_txt)
+    f_sub = tf("sub.txt", sub_txt)
+    f_foot = tf("foot.txt", foot_txt)
     f_fmt = tf("fmt.txt", "Ф О Р М А Т")
-    item_files = [tf(f"it{i}.txt", s.strip())
-                  for i, s in enumerate(a.items.split("|"), 1) if s.strip()]
+
+    raw_items = [s.strip() for s in a.items.split("|") if s.strip()]
+    fitted_items = []
+    for i, s_txt in enumerate(raw_items, 1):
+        size, lines, trunc = fit_text_block(s_txt, FONT, ITEM_MAX_W,
+                                            max_lines=2, start=40, min_size=24)
+        if trunc:
+            print(f"warning: panel item {i} truncated to fit")
+        fitted_items.append((size, [tf(f"it{i}_{k}.txt", ln)
+                                    for k, ln in enumerate(lines)], len(lines)))
 
     f = [
         # подложка панели «ФОРМАТ»
@@ -127,14 +154,14 @@ def main() -> None:
         # акцентная линия под заголовком
         f"drawbox=x={LX}:y=522:w=230:h=9:color={col_green}:t=fill",
         # мачхед
-        f"drawtext=fontfile=font_sb.ttf:textfile={f_over.name}:fontsize=40:fontcolor={col_gray}:x={LX}:y=100",
-        f"drawtext=fontfile=font.ttf:textfile={f_t1.name}:fontsize=106:fontcolor={col_text}"
+        f"drawtext=fontfile=font_sb.ttf:textfile={f_over.name}:fontsize={ov_size}:fontcolor={col_gray}:x={LX}:y=100",
+        f"drawtext=fontfile=font.ttf:textfile={f_t1.name}:fontsize={t1_size}:fontcolor={col_text}"
         f":x={LX}:y=170:shadowx=2:shadowy=2:shadowcolor={shadow}",
-        f"drawtext=fontfile=font.ttf:textfile={f_t2.name}:fontsize=106:fontcolor={col_text}"
+        f"drawtext=fontfile=font.ttf:textfile={f_t2.name}:fontsize={t2_size}:fontcolor={col_text}"
         f":x={LX}:y=330:shadowx=2:shadowy=2:shadowcolor={shadow}",
-        f"drawtext=fontfile=font_sb.ttf:textfile={f_sub.name}:fontsize=64:fontcolor={col_green}"
+        f"drawtext=fontfile=font_sb.ttf:textfile={f_sub.name}:fontsize={sub_size}:fontcolor={col_green}"
         f":x={LX}:y=560:shadowx=2:shadowy=2:shadowcolor={shadow}",
-        f"drawtext=fontfile=font_sb.ttf:textfile={f_foot.name}:fontsize=36:fontcolor={col_gray}:x={LX}:y=985",
+        f"drawtext=fontfile=font_sb.ttf:textfile={f_foot.name}:fontsize={foot_size}:fontcolor={col_gray}:x={LX}:y=985",
     ]
     if not a.no_date:
         f.append(f"drawtext=fontfile=font_sb.ttf:text={datetime.now():%d.%m.%Y}"
@@ -142,11 +169,13 @@ def main() -> None:
 
     f.append(f"drawtext=fontfile=font_sb.ttf:textfile={f_fmt.name}:fontsize=34:fontcolor={col_gray}:x={RX}:y=140")
     row_y = 230
-    for i, p in enumerate(item_files, 1):
+    for i, (size, line_files, n_lines) in enumerate(fitted_items, 1):
         f.append(f"drawtext=fontfile=font.ttf:text=0{i}:fontsize=46:fontcolor={col_green}:x={RX}:y={row_y}")
-        f.append(f"drawtext=fontfile=font.ttf:textfile={p.name}:fontsize=40:fontcolor={col_text}"
-                 f":x={TX}:y={row_y + 5}:shadowx=1:shadowy=1:shadowcolor={shadow}")
-        if i < len(item_files):
+        lh = round(size * 1.15)
+        for k, p in enumerate(line_files):
+            f.append(f"drawtext=fontfile=font.ttf:textfile={p.name}:fontsize={size}:fontcolor={col_text}"
+                     f":x={TX}:y={row_y + 5 + k * lh}:shadowx=1:shadowy=1:shadowcolor={shadow}")
+        if i < len(fitted_items):
             f.append(f"drawbox=x={RX}:y={row_y + 118}:w={PX2 - RX - 10}:h=2:color={col_gray}@0.35:t=fill")
         row_y += 158
 

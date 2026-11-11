@@ -23,7 +23,7 @@ import argparse
 from datetime import datetime, timedelta, timezone
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
-from cover_theme import (fit_16_9, resolve_theme,
+from cover_theme import (fit_16_9, fit_text_block, resolve_theme,
                          OVERLAY_PHOTO_DARK, OVERLAY_PHOTO_LIGHT)
 
 FONT_B = r"C:\Windows\Fonts\segoeuib.ttf"    # Segoe UI Bold
@@ -96,19 +96,40 @@ def main() -> None:
     col_blue = (159, 196, 212, 255) if dark else (74, 110, 140, 255)   # надстрока
     col_gray = (143, 184, 200, 255) if dark else (74, 110, 140, 255)   # футер/дата
 
-    d.text((LX, round(210 * s)), a.over, font=ImageFont.truetype(FONT_SB, round(56 * s)), fill=col_blue)
-    d.text((LX, round(330 * s)), a.t1, font=ImageFont.truetype(FONT_B, round(200 * s)), fill=col_text)
-    d.text((LX, round(590 * s)), a.t2, font=ImageFont.truetype(FONT_B, round(200 * s)), fill=col_text)
+    # безопасная ширина мачхеда: от LX до внутренней кромки панели с отступом
+    # (текст не должен заходить на панель «ФОРМАТ» — правило подгонки 11.11)
+    px1 = round(1640 * s)
+    mast_w = px1 - round(60 * s) - LX
+
+    def fit1(text, font_path, start, min_size):
+        size, lines, trunc = fit_text_block(text, font_path, mast_w,
+                                            max_lines=1, start=start,
+                                            min_size=min_size)
+        return size, lines[0], trunc
+
+    ov_size, over_txt, ov_tr = fit1(a.over, FONT_SB, round(56 * s), round(40 * s))
+    t1_size, t1_txt, t1_tr = fit1(a.t1, FONT_B, round(200 * s), round(110 * s))
+    t2_size, t2_txt, t2_tr = fit1(a.t2, FONT_B, round(200 * s), round(110 * s))
+    sub_size, sub_txt, sub_tr = fit1(a.sub, FONT_SB, round(84 * s), round(48 * s))
+    for name, trunc in (("over", ov_tr), ("t1", t1_tr), ("t2", t2_tr), ("sub", sub_tr)):
+        if trunc:
+            print(f"warning: masthead '{name}' truncated to fit")
+
+    d.text((LX, round(210 * s)), over_txt, font=ImageFont.truetype(FONT_SB, ov_size), fill=col_blue)
+    d.text((LX, round(330 * s)), t1_txt, font=ImageFont.truetype(FONT_B, t1_size), fill=col_text)
+    d.text((LX, round(590 * s)), t2_txt, font=ImageFont.truetype(FONT_B, t2_size), fill=col_text)
     d.rounded_rectangle([LX, round(868 * s), LX + round(460 * s), round(880 * s)],
                         radius=round(6 * s), fill=col_green)
-    d.text((LX, round(950 * s)), a.sub, font=ImageFont.truetype(FONT_SB, round(84 * s)), fill=col_mint)
+    d.text((LX, round(950 * s)), sub_txt, font=ImageFont.truetype(FONT_SB, sub_size), fill=col_mint)
 
     foot_f = ImageFont.truetype(FONT_SB, round(56 * s))
     d.text((LX, round(1380 * s)), "max.ru/channel_na100", font=foot_f, fill=col_gray)
     if not a.no_date:
         date_s = f"{datetime.now(MSK):%d.%m.%Y}"
-        d.text((RM - d.textlength(date_s, font=foot_f), round(1290 * s)), date_s,
-               font=foot_f, fill=col_gray)
+        # дата — слева от панели, на одной строке с адресом канала:
+        # внутри панели она наезжала на вторую строку пункта 05 (11.11)
+        date_x = px1 - round(60 * s) - d.textlength(date_s, font=foot_f)
+        d.text((date_x, round(1380 * s)), date_s, font=foot_f, fill=col_gray)
 
     # правая колонка «ФОРМАТ»
     if a.items:
@@ -117,20 +138,26 @@ def main() -> None:
                font=ImageFont.truetype(FONT_SB, round(52 * s)), fill=col_blue)
         items = [x.strip() for x in a.items.split("|") if x.strip()]
 
-        def fit(s_txt, max_w, start):
-            f = ImageFont.truetype(FONT_B, start)
-            while d.textlength(s_txt, font=f) > max_w and start > 30:
-                start -= 2
-                f = ImageFont.truetype(FONT_B, start)
-            return f
-
         row_y = round(388 * s)
         step = round(212 * s)
         num_f = ImageFont.truetype(FONT_B, round(64 * s))
+        text_x = RX + round(170 * s)
+        # безопасная ширина пункта: до внутренней кромки панели с отступом 48s
+        max_w = px2 - round(48 * s) - text_x
         for i, s_item in enumerate(items, start=1):
             d.text((RX, row_y), f"0{i}", font=num_f, fill=col_green)
-            f_t = fit(s_item, RM - RX - round(170 * s), round(56 * s))
-            d.text((RX + round(170 * s), row_y + round(8 * s)), s_item, font=f_t, fill=col_text)
+            # подгонка: перенос (до 2 строк) -> уменьшение кегля -> «…»
+            size, lines, trunc = fit_text_block(s_item, FONT_B, max_w,
+                                                max_lines=2,
+                                                start=round(56 * s),
+                                                min_size=round(30 * s))
+            f_t = ImageFont.truetype(FONT_B, size)
+            lh = round(size * 1.18)
+            for k, ln in enumerate(lines):
+                d.text((text_x, row_y + round(8 * s) + k * lh), ln,
+                       font=f_t, fill=col_text)
+            if trunc:
+                print(f"warning: panel item {i} truncated to fit")
             if i < len(items):
                 d.line([RX, row_y + round(152 * s), RM, row_y + round(152 * s)],
                        fill=(143, 184, 200, 110) if dark else (22, 48, 94, 64),
