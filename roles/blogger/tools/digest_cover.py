@@ -21,6 +21,8 @@ import argparse
 from datetime import datetime, timedelta, timezone
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
+from cover_theme import release_stamp
+
 W, H = 1400, 788
 FONT_B = r"C:\Windows\Fonts\segoeuib.ttf"    # Segoe UI Bold
 FONT_SB = r"C:\Windows\Fonts\seguisb.ttf"    # Segoe UI Semibold
@@ -65,23 +67,35 @@ def _make_paper(a) -> None:
         return f
 
     LX = 96
-    d.text((LX, 112), "Т Е Х Н О - Д А Й Д Ж Е С Т",
+    over_txt = a.over or release_stamp(datetime.now(MSK))
+    d.text((LX, 112), over_txt,
            font=ImageFont.truetype(FONT_SB, 28), fill="#8fb8c8")
 
+    # название — по вертикальному центру мачхеда (решение 11.11.2026): блок
+    # название+линия+подзаголовок центрируется между надстройкой и футером —
+    # раньше название стояло на жёстком y=168 и висело высоко
     t1_f = fit_left(a.title, 660, 96)
-    title_lh = t1_f.size + 22
-    d.text((LX, 168), a.title, font=t1_f, fill="#ffffff")
-    y2 = 168 + title_lh
-    if a.title2:
-        t2_f = fit_left(a.title2, 660, 96)
+    t1_h = t1_f.size + 22
+    t2_f = fit_left(a.title2, 660, 96) if a.title2 else None
+    t2_h = (t2_f.size + 22) if t2_f else 0
+    line_h, gap_line, gap_sub = 6, 40, 46
+    sub_h = 48 if a.subtitle else 0
+    zone_top = 112 + 42          # низ надстроки (28 * 1.5)
+    zone_bot = 716 - 20          # верх футера
+    group_h = t1_h + t2_h + gap_line + line_h + (gap_sub + sub_h if sub_h else 0)
+    y_t1 = zone_top + max(0, (zone_bot - zone_top - group_h) // 2)
+
+    d.text((LX, y_t1), a.title, font=t1_f, fill="#ffffff")
+    y2 = y_t1 + t1_h
+    if t2_f:
         d.text((LX, y2), a.title2, font=t2_f, fill="#ffffff")
-        y_line = y2 + t2_f.size + 40
+        y_line = y2 + t2_h + 18
     else:
         y_line = y2 + 28
-    d.rounded_rectangle([LX, y_line, LX + 232, y_line + 6], radius=3, fill="#3edb9a")
+    d.rounded_rectangle([LX, y_line, LX + 232, y_line + line_h], radius=3, fill="#3edb9a")
 
     if a.subtitle:
-        d.text((LX, y_line + 46), a.subtitle,
+        d.text((LX, y_line + line_h + gap_sub), a.subtitle,
                font=ImageFont.truetype(FONT_SB, 40), fill="#7fffd4")
 
     foot_f = ImageFont.truetype(FONT_SB, 27)
@@ -123,6 +137,9 @@ def main() -> None:
     ap.add_argument("--show-date", action="store_true", default=True,
                     help="добавить MSK-дату первой строкой подписи")
     ap.add_argument("--no-date", dest="show_date", action="store_false")
+    ap.add_argument("--over", default=None,
+                    help="надстрока paper-стиля; по умолчанию — время, дата, "
+                         "день недели выпуска (вместо «Т Е Х Н О - Д А Й Д Ж Е С Т»)")
     ap.add_argument("--out", required=True)
     ap.add_argument("--style", choices=["dark", "paper"], default="dark",
                     help="dark — центрированная классика; paper — заставка-"

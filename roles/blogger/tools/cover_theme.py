@@ -114,6 +114,15 @@ def resolve_theme(arg: str, im: Image.Image, overlay_dark: dict, overlay_light: 
 TARGET_AR = 16 / 9
 ASPECT_TOL = 0.15   # допуск отклонения от 16:9 (±15%)
 
+WEEKDAYS_RU = ["Понедельник", "Вторник", "Среда", "Четверг",
+               "Пятница", "Суббота", "Воскресенье"]
+
+
+def release_stamp(dt) -> str:
+    """Надстрока выпуска вместо «Т Е Х Н О - Д А Й Д Ж Е С Т» (решение
+    11.11.2026): реальное время, дата, день недели — «7:30 11.11.2026 Среда»."""
+    return f"{dt.hour}:{dt:%M} {dt:%d.%m.%Y} {WEEKDAYS_RU[dt.weekday()]}"
+
 
 def aspect_info(im: Image.Image):
     """(соотношение сторон, отклонение от 16:9 в долях: 1.0 = идеально)."""

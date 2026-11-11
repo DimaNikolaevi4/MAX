@@ -27,15 +27,16 @@ import argparse
 import imageio_ffmpeg
 import shutil
 import subprocess
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from tempfile import mkdtemp
 from PIL import Image
-from cover_theme import (aspect_info, fit_text_block, resolve_theme, ASPECT_TOL,
-                         OVERLAY_VIDEO_DARK, OVERLAY_VIDEO_LIGHT)
+from cover_theme import (aspect_info, fit_text_block, release_stamp, resolve_theme,
+                         ASPECT_TOL, OVERLAY_VIDEO_DARK, OVERLAY_VIDEO_LIGHT)
 
 FONT = r"C:\Windows\Fonts\segoeuib.ttf"    # Segoe UI Bold
 FONT_SB = r"C:\Windows\Fonts\seguisb.ttf"  # Segoe UI Semibold
+MSK = timezone(timedelta(hours=3))
 
 NAVY = "0x16305E"
 GREEN_DARK = "0x1F9D66"   # акцент на светлом фоне
@@ -56,7 +57,8 @@ def main() -> None:
     ap.add_argument("--out", required=True)
     ap.add_argument("--theme", choices=["auto", "light", "dark"], default="auto",
                     help="auto — тема по первому кадру (контраст, худшая зона)")
-    ap.add_argument("--over", default="Т Е Х Н О - Д А Й Д Ж Е С Т")
+    ap.add_argument("--over", default=None,
+                    help="надстрока; по умолчанию — время, дата, день недели выпуска")
     ap.add_argument("--t1", default="Новости")
     ap.add_argument("--t2", default="мира техники")
     ap.add_argument("--sub", default="итоги суток")
@@ -123,7 +125,8 @@ def main() -> None:
             print("warning: masthead text truncated to fit")
         return size, lines[0]
 
-    ov_size, over_txt = fit1(a.over, FONT_SB, 40, 30)
+    ov_size, over_txt = fit1(a.over or release_stamp(datetime.now(MSK)),
+                             FONT_SB, 40, 30)
     t1_size, t1_txt = fit1(a.t1, FONT, 106, 70)
     t2_size, t2_txt = fit1(a.t2, FONT, 106, 70)
     sub_size, sub_txt = fit1(a.sub, FONT_SB, 64, 44)
@@ -146,21 +149,39 @@ def main() -> None:
         fitted_items.append((size, [tf(f"it{i}_{k}.txt", ln)
                                     for k, ln in enumerate(lines)], len(lines)))
 
+    # вертикальное центрирование мачхеда (решение 11.11.2026): блок
+    # название+линия+подзаголовок центрируется между надстрокой и футером —
+    # раньше t1/t2 стояли на жёстких y=170/330, название висело высоко
+    t1_h = round(t1_size * 1.16)
+    t2_h = round(t2_size * 1.16)
+    sub_h = round(sub_size * 1.22)
+    gap_t2 = 30       # между строками названия
+    gap_line = 44     # название -> акцентная линия
+    gap_sub = 34      # линия -> подзаголовок
+    line_h = 9
+    zone_top = 100 + round(ov_size * 1.5)
+    zone_bot = 985 - 20
+    group_h = t1_h + gap_t2 + t2_h + gap_line + line_h + gap_sub + sub_h
+    y_t1 = zone_top + max(0, (zone_bot - zone_top - group_h) // 2)
+    y_t2 = y_t1 + t1_h + gap_t2
+    y_line = y_t2 + t2_h + gap_line
+    y_sub = y_line + line_h + gap_sub
+
     f = [
         # подложка панели «ФОРМАТ»
         f"drawbox=x={PX1}:y=80:w={PX2 - PX1}:h=940:color="
         + ("white@0.72" if light else "black@0.45") + ":t=fill",
         f"drawbox=x={PX1 + 8}:y=130:w=3:h=840:color={col_gray}@0.55:t=fill",
         # акцентная линия под заголовком
-        f"drawbox=x={LX}:y=522:w=230:h=9:color={col_green}:t=fill",
+        f"drawbox=x={LX}:y={y_line}:w=230:h={line_h}:color={col_green}:t=fill",
         # мачхед
         f"drawtext=fontfile=font_sb.ttf:textfile={f_over.name}:fontsize={ov_size}:fontcolor={col_gray}:x={LX}:y=100",
         f"drawtext=fontfile=font.ttf:textfile={f_t1.name}:fontsize={t1_size}:fontcolor={col_text}"
-        f":x={LX}:y=170:shadowx=2:shadowy=2:shadowcolor={shadow}",
+        f":x={LX}:y={y_t1}:shadowx=2:shadowy=2:shadowcolor={shadow}",
         f"drawtext=fontfile=font.ttf:textfile={f_t2.name}:fontsize={t2_size}:fontcolor={col_text}"
-        f":x={LX}:y=330:shadowx=2:shadowy=2:shadowcolor={shadow}",
+        f":x={LX}:y={y_t2}:shadowx=2:shadowy=2:shadowcolor={shadow}",
         f"drawtext=fontfile=font_sb.ttf:textfile={f_sub.name}:fontsize={sub_size}:fontcolor={col_green}"
-        f":x={LX}:y=560:shadowx=2:shadowy=2:shadowcolor={shadow}",
+        f":x={LX}:y={y_sub}:shadowx=2:shadowy=2:shadowcolor={shadow}",
         f"drawtext=fontfile=font_sb.ttf:textfile={f_foot.name}:fontsize={foot_size}:fontcolor={col_gray}:x={LX}:y=985",
     ]
     if not a.no_date:

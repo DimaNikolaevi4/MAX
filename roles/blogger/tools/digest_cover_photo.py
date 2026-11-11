@@ -23,7 +23,7 @@ import argparse
 from datetime import datetime, timedelta, timezone
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
-from cover_theme import (fit_16_9, fit_text_block, resolve_theme,
+from cover_theme import (fit_16_9, fit_text_block, release_stamp, resolve_theme,
                          OVERLAY_PHOTO_DARK, OVERLAY_PHOTO_LIGHT)
 
 FONT_B = r"C:\Windows\Fonts\segoeuib.ttf"    # Segoe UI Bold
@@ -40,7 +40,8 @@ def main() -> None:
     ap.add_argument("--out", required=True)
     ap.add_argument("--theme", choices=["auto", "dark", "light"], default="auto",
                     help="auto — тема по фону (контраст, худшая зона)")
-    ap.add_argument("--over", default="Т Е Х Н О - Д А Й Д Ж Е С Т")
+    ap.add_argument("--over", default=None,
+                    help="надстрока; по умолчанию — время, дата, день недели выпуска")
     ap.add_argument("--t1", default="Новости")
     ap.add_argument("--t2", default="мира техники")
     ap.add_argument("--sub", default="итоги суток")
@@ -107,7 +108,8 @@ def main() -> None:
                                             min_size=min_size)
         return size, lines[0], trunc
 
-    ov_size, over_txt, ov_tr = fit1(a.over, FONT_SB, round(56 * s), round(40 * s))
+    ov_size, over_txt, ov_tr = fit1(a.over or release_stamp(datetime.now(MSK)),
+                                    FONT_SB, round(56 * s), round(40 * s))
     t1_size, t1_txt, t1_tr = fit1(a.t1, FONT_B, round(200 * s), round(110 * s))
     t2_size, t2_txt, t2_tr = fit1(a.t2, FONT_B, round(200 * s), round(110 * s))
     sub_size, sub_txt, sub_tr = fit1(a.sub, FONT_SB, round(84 * s), round(48 * s))
@@ -116,11 +118,31 @@ def main() -> None:
             print(f"warning: masthead '{name}' truncated to fit")
 
     d.text((LX, round(210 * s)), over_txt, font=ImageFont.truetype(FONT_SB, ov_size), fill=col_blue)
-    d.text((LX, round(330 * s)), t1_txt, font=ImageFont.truetype(FONT_B, t1_size), fill=col_text)
-    d.text((LX, round(590 * s)), t2_txt, font=ImageFont.truetype(FONT_B, t2_size), fill=col_text)
-    d.rounded_rectangle([LX, round(868 * s), LX + round(460 * s), round(880 * s)],
+
+    # название «Новости / мира техники» — по вертикальному центру мачхеда
+    # (решение 11.11.2026: блок название+линия+подзаголовок центрируется между
+    # надстрокой и футером; раньше t1/t2 стояли на жёстких 330s/590s, название
+    # висело высоко, а низ мачхеда пустовал)
+    t1_h = round(t1_size * 1.16)
+    t2_h = round(t2_size * 1.16)
+    sub_h = round(sub_size * 1.22)
+    gap_t2 = round(60 * s)      # между строками названия
+    gap_line = round(80 * s)    # название -> акцентная линия
+    gap_sub = round(66 * s)     # линия -> подзаголовок
+    line_h = round(12 * s)
+    zone_top = round(210 * s) + round(ov_size * 1.5)
+    zone_bot = round(1380 * s) - round(40 * s)
+    group_h = t1_h + gap_t2 + t2_h + gap_line + line_h + gap_sub + sub_h
+    y_t1 = zone_top + max(0, (zone_bot - zone_top - group_h) // 2)
+    y_t2 = y_t1 + t1_h + gap_t2
+    y_line = y_t2 + t2_h + gap_line
+    y_sub = y_line + line_h + gap_sub
+
+    d.text((LX, y_t1), t1_txt, font=ImageFont.truetype(FONT_B, t1_size), fill=col_text)
+    d.text((LX, y_t2), t2_txt, font=ImageFont.truetype(FONT_B, t2_size), fill=col_text)
+    d.rounded_rectangle([LX, y_line, LX + round(460 * s), y_line + line_h],
                         radius=round(6 * s), fill=col_green)
-    d.text((LX, round(950 * s)), sub_txt, font=ImageFont.truetype(FONT_SB, sub_size), fill=col_mint)
+    d.text((LX, y_sub), sub_txt, font=ImageFont.truetype(FONT_SB, sub_size), fill=col_mint)
 
     foot_f = ImageFont.truetype(FONT_SB, round(56 * s))
     d.text((LX, round(1380 * s)), "max.ru/channel_na100", font=foot_f, fill=col_gray)
