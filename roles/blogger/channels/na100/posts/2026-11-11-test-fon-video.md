@@ -1,6 +1,7 @@
 ---
 channel: na100
-status: published
+deleted_at: 2026-11-11T11:12:30+03:00
+status: deleted
 format: markdown
 notify: true
 published_at: 2026-11-11T07:20:18+03:00
