@@ -1,0 +1,236 @@
+{
+  "075d66a0f4f64b5faf08a677d62be453.jpg": {
+    "source": "075d66a0f4f64b5faf08a677d62be453.png",
+    "width": 2501,
+    "height": 1407,
+    "aspect": 1.778,
+    "source_aspect": 1.792,
+    "bytes": 389254,
+    "bg_color": "#99B9E8",
+    "theme": "light",
+    "text_color": "#16305E",
+    "accent_color": "#1F9D66",
+    "shading": {
+      "panel": {
+        "color": "#FFFFFF",
+        "alpha": 0.72
+      },
+      "masthead": null
+    },
+    "zone_lums": {
+      "masthead": 0.469,
+      "panel": 0.483
+    },
+    "contrast_worst": 6.42,
+    "note": "фоновый пул канала (материал владельца) - брендированная заставка, внешняя атрибуция не требуется"
+  },
+  "0cc2d9bf4fc342488b534e0ee48af857.jpg": {
+    "source": "0cc2d9bf4fc342488b534e0ee48af857.png",
+    "width": 2510,
+    "height": 1412,
+    "aspect": 1.778,
+    "source_aspect": 1.792,
+    "bytes": 885777,
+    "bg_color": "#101260",
+    "theme": "dark",
+    "text_color": "#FFFFFF",
+    "accent_color": "#3EDB9A",
+    "shading": {
+      "panel": {
+        "color": "#071018",
+        "alpha": 0.47
+      },
+      "masthead": {
+        "color": "#050A12",
+        "alpha": 0.33
+      }
+    },
+    "zone_lums": {
+      "masthead": 0.025,
+      "panel": 0.023
+    },
+    "contrast_worst": 15.5,
+    "note": "фоновый пул канала (материал владельца) - брендированная заставка, внешняя атрибуция не требуется"
+  },
+  "0e6c30183fa9482e9b136992616a6d52.jpg": {
+    "source": "0e6c30183fa9482e9b136992616a6d52.png",
+    "width": 2507,
+    "height": 1410,
+    "aspect": 1.778,
+    "source_aspect": 1.791,
+    "bytes": 664641,
+    "bg_color": "#121F55",
+    "theme": "dark",
+    "text_color": "#FFFFFF",
+    "accent_color": "#3EDB9A",
+    "shading": {
+      "panel": {
+        "color": "#071018",
+        "alpha": 0.47
+      },
+      "masthead": {
+        "color": "#050A12",
+        "alpha": 0.33
+      }
+    },
+    "zone_lums": {
+      "masthead": 0.023,
+      "panel": 0.044
+    },
+    "contrast_worst": 13.93,
+    "note": "фоновый пул канала (материал владельца) - брендированная заставка, внешняя атрибуция не требуется"
+  },
+  "c9dcd75805bd4983ba97c17d9a185b22.jpg": {
+    "source": "c9dcd75805bd4983ba97c17d9a185b22.png",
+    "width": 2500,
+    "height": 1406,
+    "aspect": 1.778,
+    "source_aspect": 1.792,
+    "bytes": 666708,
+    "bg_color": "#101A44",
+    "theme": "dark",
+    "text_color": "#FFFFFF",
+    "accent_color": "#3EDB9A",
+    "shading": {
+      "panel": {
+        "color": "#071018",
+        "alpha": 0.47
+      },
+      "masthead": {
+        "color": "#050A12",
+        "alpha": 0.33
+      }
+    },
+    "zone_lums": {
+      "masthead": 0.014,
+      "panel": 0.044
+    },
+    "contrast_worst": 13.9,
+    "note": "фоновый пул канала (материал владельца) - брендированная заставка, внешняя атрибуция не требуется"
+  },
+  "techno_v2_holo_geometric.jpg": {
+    "source": "techno_v2_holo_geometric.png",
+    "width": 1344,
+    "height": 756,
+    "aspect": 1.778,
+    "source_aspect": 1.75,
+    "bytes": 114974,
+    "bg_color": "#C8BCB3",
+    "theme": "light",
+    "text_color": "#16305E",
+    "accent_color": "#1F9D66",
+    "shading": {
+      "panel": {
+        "color": "#FFFFFF",
+        "alpha": 0.72
+      },
+      "masthead": null
+    },
+    "zone_lums": {
+      "masthead": 0.551,
+      "panel": 0.462
+    },
+    "contrast_worst": 7.43,
+    "note": "фоновый пул канала (материал владельца) - брендированная заставка, внешняя атрибуция не требуется"
+  },
+  "techno_v3_neural_net.jpg": {
+    "source": "techno_v3_neural_net.png",
+    "width": 1344,
+    "height": 756,
+    "aspect": 1.778,
+    "source_aspect": 1.75,
+    "bytes": 120872,
+    "bg_color": "#C5AF96",
+    "theme": "light",
+    "text_color": "#16305E",
+    "accent_color": "#1F9D66",
+    "shading": {
+      "panel": {
+        "color": "#FFFFFF",
+        "alpha": 0.72
+      },
+      "masthead": null
+    },
+    "zone_lums": {
+      "masthead": 0.351,
+      "panel": 0.621
+    },
+    "contrast_worst": 4.96,
+    "note": "фоновый пул канала (материал владельца) - брендированная заставка, внешняя атрибуция не требуется"
+  },
+  "techno_v4_blueprint_iso.jpg": {
+    "source": "techno_v4_blueprint_iso.png",
+    "width": 1344,
+    "height": 756,
+    "aspect": 1.778,
+    "source_aspect": 1.75,
+    "bytes": 204439,
+    "bg_color": "#C6CAD5",
+    "theme": "light",
+    "text_color": "#16305E",
+    "accent_color": "#1F9D66",
+    "shading": {
+      "panel": {
+        "color": "#FFFFFF",
+        "alpha": 0.72
+      },
+      "masthead": null
+    },
+    "zone_lums": {
+      "masthead": 0.583,
+      "panel": 0.598
+    },
+    "contrast_worst": 7.82,
+    "note": "фоновый пул канала (материал владельца) - брендированная заставка, внешняя атрибуция не требуется"
+  },
+  "techno_v6_wave_particles.jpg": {
+    "source": "techno_v6_wave_particles.png",
+    "width": 1344,
+    "height": 756,
+    "aspect": 1.778,
+    "source_aspect": 1.75,
+    "bytes": 171422,
+    "bg_color": "#F2D3B4",
+    "theme": "light",
+    "text_color": "#16305E",
+    "accent_color": "#1F9D66",
+    "shading": {
+      "panel": {
+        "color": "#FFFFFF",
+        "alpha": 0.72
+      },
+      "masthead": null
+    },
+    "zone_lums": {
+      "masthead": 0.733,
+      "panel": 0.683
+    },
+    "contrast_worst": 9.68,
+    "note": "фоновый пул канала (материал владельца) - брендированная заставка, внешняя атрибуция не требуется"
+  },
+  "techno_v7_datacenter.jpg": {
+    "source": "techno_v7_datacenter.png",
+    "width": 1344,
+    "height": 756,
+    "aspect": 1.778,
+    "source_aspect": 1.75,
+    "bytes": 164986,
+    "bg_color": "#BDAEA5",
+    "theme": "light",
+    "text_color": "#16305E",
+    "accent_color": "#1F9D66",
+    "shading": {
+      "panel": {
+        "color": "#FFFFFF",
+        "alpha": 0.72
+      },
+      "masthead": null
+    },
+    "zone_lums": {
+      "masthead": 0.491,
+      "panel": 0.416
+    },
+    "contrast_worst": 6.69,
+    "note": "фоновый пул канала (материал владельца) - брендированная заставка, внешняя атрибуция не требуется"
+  }
+}
