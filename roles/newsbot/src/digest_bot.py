@@ -5,11 +5,15 @@
 #   py digest_bot.py registry             сводка реестра
 #
 # Реестр: local/pnews_registry.json. Маркер long polling: local/pnews_pollstate.json.
+# Журнал подписок/отписок: local/pnews_churn.jsonl (пишет ТОЛЬКО poll —
+# /updates доставляет события один раз, второй консьюмер их не увидит;
+# stats_snapshot.py читает журнал, но сам /updates не вызывает).
 # Гигиена (TASK.md): только /updates, GET /messages/{mid}, POST /messages в диалоги.
 from __future__ import annotations
 
 import datetime
 import json
+import re
 import ssl
 import sys
 import urllib.error
@@ -21,8 +25,19 @@ from shared.paths import REPO as ROOT  # noqa: E402
 LOCAL = ROOT / "local"
 REGISTRY_PATH = LOCAL / "pnews_registry.json"
 POLLSTATE_PATH = LOCAL / "pnews_pollstate.json"
+CHURN_PATH = LOCAL / "pnews_churn.jsonl"
 LOG_PATH = LOCAL / "pnews_log.csv"
 API = "https://platform-api2.max.ru"
+
+# Решение владельца 11.11.2026: БОТ ПОКА МОЛЧИТ. Автоответы (приветствие
+# на «Старт», квитанция на обращения) отключены до переезда поллера на
+# хостинг (PHP-скрипт, always-on): ПК владельца работает не круглосуточно,
+# при выключенном ПК человек получал бы ответ с задержкой, а при паузах
+# дольше окна хранения /updates (~сутки) первый контакт терялся вовсе.
+# poll при этом продолжает работать: журнал подписок/отписок (чирн) для
+# снапшота 07:00 и фиксация контактов в реестре — без единой отправки.
+# Вернуть автоответы: AUTO_REPLY = True.
+AUTO_REPLY = False
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from brief import FORM_HINT, is_stop, parse_brief  # noqa: E402
@@ -92,6 +107,30 @@ def send_dialog(token: str, chat_id: int, text: str) -> tuple[int, str]:
 
 # ---------- тексты ответов ----------
 
+# Приветствие на «Старт» (текст владельца 11.11.2026, дословно).
+GREETING_TEXT = (
+    "Я бот — волшебная палочка. Как и мой хозяин, могу почти всё. "
+    "Сейчас помогаю ему вести каналы:\n\n"
+    "• «Забавное» — https://max.ru/channel_zabava\n"
+    "• «Новости технологий ИИ, нейросетей и инноваций» — https://max.ru/channel_na100\n"
+    "• «AI» — https://max.ru/channel_ainow\n\n"
+    "Если у вас есть вопрос или нужна помощь — особенно в сфере IT — напишите "
+    "здесь. Единственное, что нам не подвластно, — время, а помощь нужна "
+    "многим. Но если напишете что-то интересное, обязательно ответим и "
+    "постараемся помочь."
+)
+
+# Автоответ-квитанция на любое обращение (решение владельца 11.11.2026:
+# фикс-текст сразу, содержательный ответ — когда владелец прочтёт;
+# копия обращения пересылается в его диалог с ботом).
+ACK_TEXT = (
+    "✅ Ваше сообщение принято. Отвечаем по мере прочтения — "
+    "как только освободимся, ответим здесь же."
+)
+
+# Ответ владельца из своего диалога с ботом: «отв <user_id> текст».
+REPLY_RE = re.compile(r"^\s*(?:отв|ответ)\s+(\d+)\s*[:\-—]?\s*(.+)$", re.S)
+
 FREQUENCY_LABEL = {
     "daily": "раз в день",
     "twice": "дважды в день (утром и вечером)",
@@ -141,6 +180,50 @@ def remember_mid(user: dict, mid: str) -> None:
         del seen[:-200]
 
 
+def load_owner() -> tuple[int, int]:
+    """user_id и chat_id владельца (его диалог с ботом). Приоритет —
+    tokens.json (newsbot: owner_user_id / owner_chat_id), ниже — константы."""
+    try:
+        entry = json.loads((LOCAL / "tokens.json").read_text(encoding="utf-8")).get("newsbot", {})
+        return (int(entry.get("owner_user_id") or 3623517),
+                int(entry.get("owner_chat_id") or 537566305))
+    except Exception:
+        return 3623517, 537566305
+
+
+def owner_reply(token: str, reg: dict, text: str) -> None:
+    """Ответ владельца из своего диалога: «отв <user_id> текст».
+    Работает и при AUTO_REPLY=False (инициатива всегда исходит от владельца)."""
+    owner_id, owner_chat = load_owner()
+    m = REPLY_RE.match(text)
+    if not m:
+        send_dialog(token, owner_chat,
+                    "Формат ответа: «отв <id> <текст>» — id есть в пересланных "
+                    "обращениях. Например: отв 326451299 Здравствуйте!")
+        log_line("owner_reply_fail", "bad format")
+        return
+    target = reg["users"].get(m.group(1))
+    if not target or not target.get("dialog_chat_id"):
+        send_dialog(token, owner_chat,
+                    f"Нет диалога с пользователем {m.group(1)} в реестре — "
+                    "он не стартовал бота или диалог не зафиксирован.")
+        log_line("owner_reply_fail", f"no dialog {m.group(1)}")
+        return
+    status, _ = send_dialog(token, target["dialog_chat_id"], m.group(2).strip())
+    log_line("owner_reply", f"-> {m.group(1)} status={status}")
+
+
+def forward_inquiry(token: str, reg: dict, user: dict, user_id: str, text: str) -> None:
+    """Квитанция автору обращения + копия в диалог владельца."""
+    _, owner_chat = load_owner()
+    send_dialog(token, user.get("dialog_chat_id"), ACK_TEXT)
+    stamp = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=3)))
+    fwd = (f"**Обращение** от {user.get('owner_name') or 'без имени'} "
+           f"(id {user_id}, {stamp:%H:%M}):\n\n{text[:2000]}")
+    send_dialog(token, owner_chat, fwd)
+    log_line("inquiry", f"owner={user_id} len={len(text)}")
+
+
 def process_message(token: str, reg: dict, mid: str, sender: dict, text: str) -> None:
     owner_user_id = str((sender or {}).get("user_id") or "")
     if not owner_user_id:
@@ -148,24 +231,45 @@ def process_message(token: str, reg: dict, mid: str, sender: dict, text: str) ->
     if (sender or {}).get("is_bot"):
         return  # Ч5: свои сообщения бота не парсим
 
+    owner_id, _ = load_owner()
+    if owner_user_id == str(owner_id):
+        # сообщения владельца в его диалоге = ручные ответы адресатам
+        owner_reply(token, reg, text)
+        return
+
     user = reg["users"].get(owner_user_id) or {
         "owner_user_id": int(owner_user_id),
         "owner_name": f"{sender.get('first_name', '')} {sender.get('last_name', '')}".strip(),
     }
     remember_mid(user, mid)
-    remembered = user.get("seen_mids") or []
 
     if is_stop(text):
         user["state"] = "stopped"
+        reg["users"][owner_user_id] = user
         save_registry(reg)
         log_line("stop", f"owner={owner_user_id}")
         return
 
-    parsed = parse_brief(text)
-    if not parsed["ok"]:
+    is_brief_attempt = "темы:" in text.lower()
+    parsed = parse_brief(text) if is_brief_attempt else {"ok": False, "reason": ""}
+    if is_brief_attempt and not parsed["ok"]:
+        # человек пытался задать дайджест, но с ошибками формы
         reply = f"Не распознал настройку.\n\n{parsed['reason']}\n\n{FORM_HINT}"
-        send_dialog(token, user.get("dialog_chat_id") or 0, reply) if user.get("dialog_chat_id") else None
+        if user.get("dialog_chat_id"):
+            send_dialog(token, user["dialog_chat_id"], reply)
+        reg["users"][owner_user_id] = user
+        save_registry(reg)
         log_line("brief_fail", f"owner={owner_user_id}")
+        return
+    if not parsed["ok"]:
+        # обычное обращение: квитанция + копия владельцу (только при
+        # AUTO_REPLY; в консервации — фиксируем контакт молча)
+        reg["users"][owner_user_id] = user
+        save_registry(reg)
+        if AUTO_REPLY:
+            forward_inquiry(token, reg, user, owner_user_id, text)
+        else:
+            log_line("inquiry_silent", f"owner={owner_user_id} len={len(text)}")
         return
 
     user.update({
@@ -183,9 +287,61 @@ def process_message(token: str, reg: dict, mid: str, sender: dict, text: str) ->
     send_dialog(token, user.get("dialog_chat_id"), receipt_text(user, parsed.get("warnings") or []))
 
 
+def record_churn(update: dict) -> None:
+    """Подписки/отписки каналов бота — в журнал для stats_snapshot.py.
+    Вызывается ДО фильтра лички: события канальных чатов в обработку
+    диалогов не идут, но в журнал попадают все."""
+    if update.get("update_type") not in ("user_added", "user_removed"):
+        return
+    chat_id = update.get("chat_id")
+    if not isinstance(chat_id, int) or chat_id >= 0:
+        return  # интересуют только каналы/группы
+    u = update.get("user") or {}
+    ts = update.get("timestamp") or 0
+    rec = {
+        "ts": datetime.datetime.fromtimestamp(
+            ts / 1000, datetime.timezone(datetime.timedelta(hours=3))).isoformat() if ts else "",
+        "event": update["update_type"],
+        "chat_id": chat_id,
+        "user_id": u.get("user_id"),
+        "name": (u.get("name") or "").strip(),
+    }
+    with CHURN_PATH.open("a", encoding="utf-8") as fh:
+        fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+
+
+def process_bot_started(token: str, reg: dict, update: dict) -> None:
+    """«Старт» в диалоге: фиксируем пользователя; приветствие — только при
+    AUTO_REPLY (консервация до переезда на хостинг, решение 11.11.2026)."""
+    chat_id = update.get("chat_id")
+    u = update.get("user") or {}
+    owner_user_id = str(u.get("user_id") or "")
+    if not owner_user_id or not isinstance(chat_id, int) or chat_id <= 0:
+        return
+    user = reg["users"].get(owner_user_id) or {
+        "owner_user_id": int(owner_user_id),
+        "owner_name": (u.get("name") or "").strip(),
+    }
+    user.setdefault("dialog_chat_id", chat_id)
+    if not user.get("owner_name"):
+        user["owner_name"] = (u.get("name") or "").strip()
+    if user.get("state") == "stopped":
+        user["state"] = "new"  # вернулся — снова ждём бриф
+    reg["users"][owner_user_id] = user
+    save_registry(reg)
+    log_line("bot_started", f"owner={owner_user_id} chat={chat_id}")
+    if AUTO_REPLY:
+        send_dialog(token, chat_id, GREETING_TEXT)
+
+
 def process_updates(token: str, updates: list[dict], reg: dict, seen_mids: set[str]) -> int:
     handled = 0
     for u in updates:
+        record_churn(u)
+        if u.get("update_type") == "bot_started":
+            process_bot_started(token, reg, u)
+            handled += 1
+            continue
         if u.get("update_type") not in ("message_created", "message_edited"):
             continue
         m = u.get("message") or {}

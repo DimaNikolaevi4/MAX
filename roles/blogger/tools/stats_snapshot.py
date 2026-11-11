@@ -7,6 +7,9 @@
   * сохраняет снимок `local/stats/<канал>-<дата>.json` (один на день);
   * сравнивает с предыдущим снимком: прирост подписчиков, новые посты,
     прирост просмотров и скорость просмотров;
+  * подписки/отписки за сутки: из журнала local/pnews_churn.jsonl,
+    который пишет poll roles/newsbot/src/digest_bot.py (единственный
+    консьюмер /updates — снапшот сам этот метод не вызывает);
   * пишет отчёт `local/stats-report-<канал>.txt`.
 
 Запуск (по умолчанию ainow, для второго канала — --channel zabava):
@@ -66,6 +69,62 @@ def title_of(text):
     return ""
 
 
+def churn_events(token, chat_id):
+    """Подписки/отписки канала за последние ~24 часа — из журнала
+    local/pnews_churn.jsonl. Журнал пишет ТОЛЬКО poll digest_bot.py:
+    /updates у MAX доставляет события один раз, поэтому снапшот сам
+    этот метод вызывать НЕ должен — иначе он украдёт события у бота.
+    """
+    journal = REPO / "local" / "pnews_churn.jsonl"
+    if not journal.exists():
+        return [], [], "журнала нет — нужен запущенный poll digest_bot.py"
+    cutoff = datetime.now(MSK) - timedelta(hours=24)
+    joined, left, seen = [], [], set()
+    for line in journal.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            rec = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if rec.get("chat_id") != chat_id:
+            continue
+        dt = rec.get("ts") or ""
+        try:
+            when = datetime.fromisoformat(dt)
+        except ValueError:
+            continue
+        if when < cutoff:
+            continue
+        key = (rec.get("user_id"), rec.get("event"), dt)
+        if key in seen:
+            continue
+        seen.add(key)
+        item = {"user_id": rec.get("user_id"), "name": rec.get("name") or "",
+                "dt": when.isoformat()}
+        (joined if rec.get("event") == "user_added" else left).append(item)
+    joined.sort(key=lambda r: r["dt"])
+    left.sort(key=lambda r: r["dt"])
+    return joined, left, None
+
+
+def churn_lines(joined, left, err):
+    if err:
+        return [f"подписки/отписки: {err}"]
+    if not joined and not left:
+        return ["подписки/отписки за сутки: событий нет"]
+    out = [f"подписки/отписки за сутки: +{len(joined)} / −{len(left)} "
+           f"(нетто {len(joined) - len(left):+d})"]
+    for r in joined:
+        out.append(f"  + {r['dt'][11:16] if r['dt'] else '--:--'}  "
+                   f"{r['name'] or '(без имени)'} (id {r['user_id']})")
+    for r in left:
+        out.append(f"  − {r['dt'][11:16] if r['dt'] else '--:--'}  "
+                   f"{r['name'] or '(без имени)'} (id {r['user_id']})")
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--channel", default="ainow")
@@ -106,12 +165,20 @@ def main():
         "messages_count": c.get("messages_count"),
         "posts": posts,
     }
+    joined, left, churn_err = churn_events(entry["token"], chat_id)
+    snap["churn"] = {
+        "joined": joined,
+        "left": left,
+        "note": ("события user_added/user_removed из журнала poll "
+                 "digest_bot.py за последние 24 часа"),
+    }
     STATS.mkdir(parents=True, exist_ok=True)
     snap_path = STATS / f"{args.channel}-{now:%Y-%m-%d}.json"
     snap_path.write_text(json.dumps(snap, ensure_ascii=False, indent=2), encoding="utf-8")
 
     lines = [f"снимок: {now:%Y-%m-%d %H:%M} MSK, канал: {snap['title']} ({args.channel})",
              f"подписчиков: {snap['participants']}, сообщений: {snap['messages_count']}"]
+    lines.extend(churn_lines(joined, left, churn_err))
 
     prev_snaps = [s for s in load_snapshots(args.channel)
                   if s.get("taken_at", "")[:10] < now.strftime("%Y-%m-%d")]

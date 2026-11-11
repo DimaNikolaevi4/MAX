@@ -232,5 +232,30 @@
     },
     "contrast_worst": 6.69,
     "note": "фоновый пул канала (материал владельца) - брендированная заставка, внешняя атрибуция не требуется"
+  },
+  "techno_v8_matte_grey_light.jpg": {
+    "source": "Agent_Image___Render_a_calm__minimalist_technology_themed_scene_a_soft_matte_light_grey_surface_with.webp",
+    "width": 1906,
+    "height": 1072,
+    "aspect": 1.778,
+    "source_aspect": 1.791,
+    "bytes": 65233,
+    "bg_color": "#C1C5CC",
+    "theme": "light",
+    "text_color": "#16305E",
+    "accent_color": "#1F9D66",
+    "shading": {
+      "panel": {
+        "color": "#FFFFFF",
+        "alpha": 0.72
+      },
+      "masthead": null
+    },
+    "zone_lums": {
+      "masthead": 0.656,
+      "panel": 0.527
+    },
+    "contrast_worst": 8.73,
+    "note": "фоновый пул канала (материал владельца) - брендированная заставка, внешняя атрибуция не требуется"
   }
 }
