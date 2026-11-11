@@ -47,6 +47,8 @@ sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / 
 from shared.paths import REPO, CONFIG, ensure_publish_allowed  # noqa: E402
 from shared.post_guard import assert_channel_chat_id  # noqa: E402
 from shared.text_check import check_text, format_issue  # noqa: E402
+from shared.readability import check_readability, format_issue as format_read_issue  # noqa: E402
+from shared.lexicon import check_lexicon  # noqa: E402
 API = "https://platform-api2.max.ru"
 REPORT = []
 
@@ -194,6 +196,13 @@ def main() -> None:
         args.remove("--no-spellcheck")
     if spellcheck:
         spell_ignore = [w.strip() for w in (fm.get("spell_ignore") or "").split(",") if w.strip()]
+        # канальный список исключений: channels/<slug>/spell-ignore.json
+        ign_path = REPO / "roles" / "blogger" / "channels" / channel / "spell-ignore.json"
+        if ign_path.exists():
+            ign_data = json.loads(ign_path.read_text(encoding="utf-8"))
+            spell_ignore = sorted(
+                {w.strip() for w in spell_ignore}
+                | {w.strip() for w in ign_data.get("words", []) if w.strip()})
         spell = check_text(plain_text(text), ignore_words=spell_ignore)
         if spell.get("status") == "unavailable":
             REPORT.append("WARN: проверка орфографии недоступна: " + spell.get("message", ""))
@@ -210,6 +219,25 @@ def main() -> None:
                     "\n".join(REPORT), encoding="utf-8")
                 raise SystemExit(
                     f"орфография/грамматика: ошибок {len(spell['errors'])}, см. отчёт")
+
+    # --- эвристики читаемости (только предупреждения, не блокируют) ---
+    for issue in check_readability(plain_text(text)):
+        REPORT.append("WARN (читаемость): " + format_read_issue(issue))
+
+    # --- сканер штампов humanizer-ru (опционально, только предупреждения) ---
+    lex_ign_path = REPO / "roles" / "blogger" / "channels" / channel / "lexicon-ignore.json"
+    lex_ignore = []
+    if lex_ign_path.exists():
+        lex_ignore = [c.strip() for c in
+                      json.loads(lex_ign_path.read_text(encoding="utf-8")).get("categories", [])
+                      if c.strip()]
+    lex = check_lexicon(plain_text(text), ignore_categories=lex_ignore)
+    if lex.get("status") == "unavailable":
+        REPORT.append("WARN (лексика): сканер недоступен: " + lex.get("message", ""))
+    else:
+        for item in lex.get("items") or []:
+            REPORT.append("WARN (лексика): " + item)
+        REPORT.append("сканер лексики: " + lex.get("message", ""))
 
     # --- загрузка медиа: картинка или видео (видео заменяет обложку) ---
     image_file = fm.get("image_file")
