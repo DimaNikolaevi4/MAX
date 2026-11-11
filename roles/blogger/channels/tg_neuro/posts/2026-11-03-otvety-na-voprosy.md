@@ -1,10 +1,10 @@
 ---
 channel: tg_neuro
-status: draft
-format: markdown
-notify: true
-image_file: local/images/ainow/2026-10-22-kakuyu-model-glm-vybrat-polnyy-gid.jpg
-hold: ждём команду владельца — публиковать, когда появится возможность
+status: published
+format: html
+published_at: 2026-11-11T18:34:34+03:00
+message_id: 70
+chat_id: -1002087111322
 ---
 
 💬 **Отвечаю на вопросы из комментариев**
