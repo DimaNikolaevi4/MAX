@@ -8,7 +8,7 @@ message_id: mid.ffffba08e9ee9aa301a1c8e19bb211e7
 channel_id: -76927529477469
 url: https://max.ru/channel_na100/AaHI4ZuyEec
 image_file: local/digest/cover-rework-1111.png
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQljyZfH2p4SfjAcoKBCD4_mNobQWSZoA-iIiuLVrg4JqhjrkDSm4RrghzQ6ffPGUU7N_7446vW6FpZOeLhkM8
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCSRSucJdpAidYg1F_-rzKlh-hJv6ozA7H6sfK0f9M29s5Y0h0WLJXd7e0Ar7dewPGsVwWxDxksU2Q4H-P4oh1E
 media_count: 1
 edited_at: 2026-11-11T10:44:36+03:00
 edited_note: подача по методике 11.11 (нумерация и флаги региона,

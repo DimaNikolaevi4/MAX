@@ -21,7 +21,7 @@ import argparse
 from datetime import datetime, timedelta, timezone
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
-from cover_theme import release_stamp
+from cover_theme import release_stamp, type_size
 
 W, H = 1400, 788
 FONT_B = r"C:\Windows\Fonts\segoeuib.ttf"    # Segoe UI Bold
@@ -67,20 +67,22 @@ def _make_paper(a) -> None:
         return f
 
     LX = 96
+    ov_ref = type_size(H, "over")   # единая типографика (cover_theme.py)
     over_txt = a.over or release_stamp(datetime.now(MSK))
     d.text((LX, 112), over_txt,
-           font=ImageFont.truetype(FONT_SB, 34), fill="#8fb8c8")
+           font=ImageFont.truetype(FONT_SB, ov_ref), fill="#8fb8c8")
 
     # название — по вертикальному центру мачхеда (решение 11.11.2026): блок
     # название+линия+подзаголовок центрируется между надстройкой и футером —
     # раньше название стояло на жёстком y=168 и висело высоко
-    t1_f = fit_left(a.title, 660, 96)
+    title_ref = type_size(H, "title")
+    t1_f = fit_left(a.title, 660, title_ref)
     t1_h = t1_f.size + 22
-    t2_f = fit_left(a.title2, 660, 96) if a.title2 else None
+    t2_f = fit_left(a.title2, 660, title_ref) if a.title2 else None
     t2_h = (t2_f.size + 22) if t2_f else 0
     line_h, gap_line, gap_sub = 6, 40, 46
-    sub_h = 48 if a.subtitle else 0
-    zone_top = 112 + 42          # низ надстроки (28 * 1.5)
+    sub_h = round(type_size(H, "sub") * 1.22) if a.subtitle else 0
+    zone_top = 112 + round(ov_ref * 1.5)   # низ надстроки
     zone_bot = 716 - 20          # верх футера
     group_h = t1_h + t2_h + gap_line + line_h + (gap_sub + sub_h if sub_h else 0)
     y_t1 = zone_top + max(0, (zone_bot - zone_top - group_h) // 2)
@@ -96,9 +98,10 @@ def _make_paper(a) -> None:
 
     if a.subtitle:
         d.text((LX, y_line + line_h + gap_sub), a.subtitle,
-               font=ImageFont.truetype(FONT_SB, 40), fill="#7fffd4")
+               font=ImageFont.truetype(FONT_SB, type_size(H, "sub")),
+               fill="#7fffd4")
 
-    foot_f = ImageFont.truetype(FONT_SB, 27)
+    foot_f = ImageFont.truetype(FONT_SB, type_size(H, "footer"))
     d.text((LX, 716), "max.ru/channel_na100", font=foot_f, fill="#7fa8b8")
     # нижняя дата в paper-стиле убрана (решение 11.11.2026, вечер):
     # дата есть только в надстройке выпуска сверху
@@ -109,14 +112,16 @@ def _make_paper(a) -> None:
         RX, RM = 904, W - 96
         d.line([860, 108, 860, 690], fill="#23405a", width=2)
         d.text((RX, 116), "Ф О Р М А Т",
-               font=ImageFont.truetype(FONT_SB, 26), fill="#8fb8c8")
+               font=ImageFont.truetype(FONT_SB, type_size(H, "fmt")),
+               fill="#8fb8c8")
 
         items = [s.strip() for s in a.items.split("|") if s.strip()]
         row_y = 186
         for i, s in enumerate(items, start=1):
             d.text((RX, row_y), f"0{i}",
-                   font=ImageFont.truetype(FONT_B, 34), fill="#3edb9a")
-            f_t = fit_left(s, RM - RX - 92, 30)
+                   font=ImageFont.truetype(FONT_B, type_size(H, "num")),
+                   fill="#3edb9a")
+            f_t = fit_left(s, RM - RX - 92, type_size(H, "item"))
             d.text((RX + 92, row_y + 4), s, font=f_t, fill="#edf4f8")
             if i < len(items):
                 d.line([RX, row_y + 78, RM, row_y + 78], fill="#23405a", width=2)

@@ -24,7 +24,7 @@ from datetime import datetime, timedelta, timezone
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
 from cover_theme import (fit_16_9, fit_text_block, release_stamp, resolve_theme,
-                         OVERLAY_PHOTO_DARK, OVERLAY_PHOTO_LIGHT)
+                         type_size, OVERLAY_PHOTO_DARK, OVERLAY_PHOTO_LIGHT)
 
 FONT_B = r"C:\Windows\Fonts\segoeuib.ttf"    # Segoe UI Bold
 FONT_SB = r"C:\Windows\Fonts\seguisb.ttf"    # Segoe UI Semibold
@@ -109,10 +109,14 @@ def main() -> None:
         return size, lines[0], trunc
 
     ov_size, over_txt, ov_tr = fit1(a.over or release_stamp(datetime.now(MSK)),
-                                    FONT_SB, round(64 * s), round(46 * s))
-    t1_size, t1_txt, t1_tr = fit1(a.t1, FONT_B, round(200 * s), round(110 * s))
-    t2_size, t2_txt, t2_tr = fit1(a.t2, FONT_B, round(200 * s), round(110 * s))
-    sub_size, sub_txt, sub_tr = fit1(a.sub, FONT_SB, round(84 * s), round(48 * s))
+                                    FONT_SB, type_size(H, "over"),
+                                    round(type_size(H, "over") * 0.72))
+    t1_size, t1_txt, t1_tr = fit1(a.t1, FONT_B, type_size(H, "title"),
+                                  type_size(H, "title_min"))
+    t2_size, t2_txt, t2_tr = fit1(a.t2, FONT_B, type_size(H, "title"),
+                                  type_size(H, "title_min"))
+    sub_size, sub_txt, sub_tr = fit1(a.sub, FONT_SB, type_size(H, "sub"),
+                                     type_size(H, "sub_min"))
     for name, trunc in (("over", ov_tr), ("t1", t1_tr), ("t2", t2_tr), ("sub", sub_tr)):
         if trunc:
             print(f"warning: masthead '{name}' truncated to fit")
@@ -144,7 +148,7 @@ def main() -> None:
                         radius=round(6 * s), fill=col_green)
     d.text((LX, y_sub), sub_txt, font=ImageFont.truetype(FONT_SB, sub_size), fill=col_mint)
 
-    foot_f = ImageFont.truetype(FONT_SB, round(56 * s))
+    foot_f = ImageFont.truetype(FONT_SB, type_size(H, "footer"))
     d.text((LX, round(1380 * s)), "max.ru/channel_na100", font=foot_f, fill=col_gray)
     # нижняя дата убрана (решение 11.11.2026, вечер): дата есть только
     # в надстройке выпуска сверху; --no-date оставлен для совместимости
@@ -153,12 +157,12 @@ def main() -> None:
     if a.items:
         RX = round(1790 * s)
         d.text((RX, round(236 * s)), "Ф О Р М А Т",
-               font=ImageFont.truetype(FONT_SB, round(52 * s)), fill=col_blue)
+               font=ImageFont.truetype(FONT_SB, type_size(H, "fmt")), fill=col_blue)
         items = [x.strip() for x in a.items.split("|") if x.strip()]
 
         row_y = round(388 * s)
         step = round(212 * s)
-        num_f = ImageFont.truetype(FONT_B, round(64 * s))
+        num_f = ImageFont.truetype(FONT_B, type_size(H, "num"))
         text_x = RX + round(170 * s)
         # безопасная ширина пункта: до внутренней кромки панели с отступом 48s
         max_w = px2 - round(48 * s) - text_x
@@ -167,8 +171,8 @@ def main() -> None:
             # подгонка: перенос (до 2 строк) -> уменьшение кегля -> «…»
             size, lines, trunc = fit_text_block(s_item, FONT_B, max_w,
                                                 max_lines=2,
-                                                start=round(56 * s),
-                                                min_size=round(30 * s))
+                                                start=type_size(H, "item"),
+                                                min_size=type_size(H, "item_min"))
             f_t = ImageFont.truetype(FONT_B, size)
             lh = round(size * 1.18)
             for k, ln in enumerate(lines):

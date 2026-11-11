@@ -32,7 +32,8 @@ from pathlib import Path
 from tempfile import mkdtemp
 from PIL import Image
 from cover_theme import (aspect_info, fit_text_block, release_stamp, resolve_theme,
-                         ASPECT_TOL, OVERLAY_VIDEO_DARK, OVERLAY_VIDEO_LIGHT)
+                         type_size, ASPECT_TOL, OVERLAY_VIDEO_DARK,
+                         OVERLAY_VIDEO_LIGHT)
 
 FONT = r"C:\Windows\Fonts\segoeuib.ttf"    # Segoe UI Bold
 FONT_SB = r"C:\Windows\Fonts\seguisb.ttf"  # Segoe UI Semibold
@@ -126,11 +127,17 @@ def main() -> None:
         return size, lines[0]
 
     ov_size, over_txt = fit1(a.over or release_stamp(datetime.now(MSK)),
-                             FONT_SB, 46, 34)
-    t1_size, t1_txt = fit1(a.t1, FONT, 106, 70)
-    t2_size, t2_txt = fit1(a.t2, FONT, 106, 70)
-    sub_size, sub_txt = fit1(a.sub, FONT_SB, 64, 44)
-    foot_size, foot_txt = fit1("max.ru/channel_na100", FONT_SB, 36, 28)
+                             FONT_SB, type_size(1080, "over"),
+                             round(type_size(1080, "over") * 0.72))
+    t1_size, t1_txt = fit1(a.t1, FONT, type_size(1080, "title"),
+                           type_size(1080, "title_min"))
+    t2_size, t2_txt = fit1(a.t2, FONT, type_size(1080, "title"),
+                           type_size(1080, "title_min"))
+    sub_size, sub_txt = fit1(a.sub, FONT_SB, type_size(1080, "sub"),
+                             type_size(1080, "sub_min"))
+    foot_size, foot_txt = fit1("max.ru/channel_na100", FONT_SB,
+                               type_size(1080, "footer"),
+                               round(type_size(1080, "footer") * 0.75))
 
     f_over = tf("over.txt", over_txt)
     f_t1 = tf("t1.txt", t1_txt)
@@ -143,7 +150,9 @@ def main() -> None:
     fitted_items = []
     for i, s_txt in enumerate(raw_items, 1):
         size, lines, trunc = fit_text_block(s_txt, FONT, ITEM_MAX_W,
-                                            max_lines=2, start=40, min_size=24)
+                                            max_lines=2,
+                                            start=type_size(1080, "item"),
+                                            min_size=type_size(1080, "item_min"))
         if trunc:
             print(f"warning: panel item {i} truncated to fit")
         fitted_items.append((size, [tf(f"it{i}_{k}.txt", ln)
@@ -187,10 +196,12 @@ def main() -> None:
     # нижняя дата убрана (решение 11.11.2026, вечер): дата есть только
     # в надстройке выпуска сверху; --no-date оставлен для совместимости
 
-    f.append(f"drawtext=fontfile=font_sb.ttf:textfile={f_fmt.name}:fontsize=34:fontcolor={col_gray}:x={RX}:y=140")
+    f.append(f"drawtext=fontfile=font_sb.ttf:textfile={f_fmt.name}"
+             f":fontsize={type_size(1080, 'fmt')}:fontcolor={col_gray}:x={RX}:y=140")
     row_y = 230
     for i, (size, line_files, n_lines) in enumerate(fitted_items, 1):
-        f.append(f"drawtext=fontfile=font.ttf:text=0{i}:fontsize=46:fontcolor={col_green}:x={RX}:y={row_y}")
+        f.append(f"drawtext=fontfile=font.ttf:text=0{i}"
+                 f":fontsize={type_size(1080, 'num')}:fontcolor={col_green}:x={RX}:y={row_y}")
         lh = round(size * 1.15)
         for k, p in enumerate(line_files):
             f.append(f"drawtext=fontfile=font.ttf:textfile={p.name}:fontsize={size}:fontcolor={col_text}"
