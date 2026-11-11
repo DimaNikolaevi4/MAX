@@ -7,7 +7,15 @@
 
 Использование:
   python roles/blogger/tools/digest_cover_photo.py --bg <фон.png> --out <файл.png> \
-      [--theme auto|dark|light] [--items "a|b|c|d|e"] [--sub "итоги суток"] [--no-date]
+      [--theme auto|dark|light] [--items "a|b|c|d|e"] [--accent "Среда, 11 ноября"] \
+      [--over "7:30"] [--t1 "Новости ИИ"] [--t2 "и технологий"]
+
+Мачхед (решение владельца 11.11.2026, вечер): надстрока — только время;
+название «Новости ИИ / и технологий»; под названием — акцентная строка
+цветом «Среда, 11 ноября» (по умолчанию генерируется из текущей даты,
+задать свою можно --accent); ниже — подзаголовок «Ежедневный утренний
+обзор». Зелёная линия-разделитель убрана — её место заняла акцентная
+строка.
 
 theme auto (по умолчанию) — тема определяется по фону: замер зон мачхеда и
               панели, контраст WCAG-подобный, победа по худшей зоне
@@ -23,8 +31,9 @@ import argparse
 from datetime import datetime, timedelta, timezone
 from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
-from cover_theme import (fit_16_9, fit_text_block, release_stamp, resolve_theme,
-                         type_size, OVERLAY_PHOTO_DARK, OVERLAY_PHOTO_LIGHT)
+from cover_theme import (accent_date, fit_16_9, fit_text_block, release_stamp,
+                         resolve_theme, type_size, OVERLAY_PHOTO_DARK,
+                         OVERLAY_PHOTO_LIGHT)
 
 FONT_B = r"C:\Windows\Fonts\segoeuib.ttf"    # Segoe UI Bold
 FONT_SB = r"C:\Windows\Fonts\seguisb.ttf"    # Segoe UI Semibold
@@ -41,10 +50,13 @@ def main() -> None:
     ap.add_argument("--theme", choices=["auto", "dark", "light"], default="auto",
                     help="auto — тема по фону (контраст, худшая зона)")
     ap.add_argument("--over", default=None,
-                    help="надстрока; по умолчанию — время, дата, день недели выпуска")
-    ap.add_argument("--t1", default="Новости")
-    ap.add_argument("--t2", default="мира техники")
-    ap.add_argument("--sub", default="итоги суток")
+                    help="надстрока; по умолчанию — только время выпуска")
+    ap.add_argument("--t1", default="Новости ИИ")
+    ap.add_argument("--t2", default="и технологий")
+    ap.add_argument("--accent", default="",
+                    help="акцентная строка цветом; пусто — «Среда, 11 ноября» "
+                         "(автодата выпуска)")
+    ap.add_argument("--sub", default="Ежедневный утренний обзор")
     ap.add_argument("--items", default="",
                     help="пункты панели через | (обычно 5 заголовков выпуска)")
     ap.add_argument("--no-date", action="store_true")
@@ -115,38 +127,45 @@ def main() -> None:
                                   type_size(H, "title_min"))
     t2_size, t2_txt, t2_tr = fit1(a.t2, FONT_B, type_size(H, "title"),
                                   type_size(H, "title_min"))
+    acc_txt = a.accent.strip() or accent_date(datetime.now(MSK))
+    acc_size, acc_txt, acc_tr = fit1(acc_txt, FONT_SB, type_size(H, "accent"),
+                                     type_size(H, "accent_min"))
     sub_size, sub_txt, sub_tr = fit1(a.sub, FONT_SB, type_size(H, "sub"),
                                      type_size(H, "sub_min"))
-    for name, trunc in (("over", ov_tr), ("t1", t1_tr), ("t2", t2_tr), ("sub", sub_tr)):
+    for name, trunc in (("over", ov_tr), ("t1", t1_tr), ("t2", t2_tr),
+                        ("accent", acc_tr), ("sub", sub_tr)):
         if trunc:
             print(f"warning: masthead '{name}' truncated to fit")
 
     d.text((LX, round(210 * s)), over_txt, font=ImageFont.truetype(FONT_SB, ov_size), fill=col_blue)
 
-    # название «Новости / мира техники» — по вертикальному центру мачхеда
-    # (решение 11.11.2026: блок название+линия+подзаголовок центрируется между
+    # название «Новости ИИ / и технологий» — по вертикальному центру мачхеда
+    # (решение 11.11.2026: блок название+акцент+подзаголовок центрируется между
     # надстрокой и футером; раньше t1/t2 стояли на жёстких 330s/590s, название
     # висело высоко, а низ мачхеда пустовал)
     t1_h = round(t1_size * 1.16)
     t2_h = round(t2_size * 1.16)
+    acc_h = round(acc_size * 1.24)
     sub_h = round(sub_size * 1.22)
     gap_t2 = round(60 * s)      # между строками названия
-    gap_line = round(80 * s)    # название -> акцентная линия
-    gap_sub = round(66 * s)     # линия -> подзаголовок
-    line_h = round(12 * s)
+    gap_acc = round(56 * s)     # название -> акцентная строка с датой
+    gap_sub = round(46 * s)     # акцент -> подзаголовок
     zone_top = round(210 * s) + round(ov_size * 1.5)
     zone_bot = round(1380 * s) - round(40 * s)
-    group_h = t1_h + gap_t2 + t2_h + gap_line + line_h + gap_sub + sub_h
+    group_h = t1_h + gap_t2 + t2_h + gap_acc + acc_h + gap_sub + sub_h
     y_t1 = zone_top + max(0, (zone_bot - zone_top - group_h) // 2)
     y_t2 = y_t1 + t1_h + gap_t2
-    y_line = y_t2 + t2_h + gap_line
-    y_sub = y_line + line_h + gap_sub
+    y_acc = y_t2 + t2_h + gap_acc
+    y_sub = y_acc + acc_h + gap_sub
 
     d.text((LX, y_t1), t1_txt, font=ImageFont.truetype(FONT_B, t1_size), fill=col_text)
     d.text((LX, y_t2), t2_txt, font=ImageFont.truetype(FONT_B, t2_size), fill=col_text)
-    d.rounded_rectangle([LX, y_line, LX + round(460 * s), y_line + line_h],
-                        radius=round(6 * s), fill=col_green)
-    d.text((LX, y_sub), sub_txt, font=ImageFont.truetype(FONT_SB, sub_size), fill=col_mint)
+    # акцентная строка цветом вместо зелёной линии (решение владельца
+    # 11.11.2026, вечер: «Среда, 11 ноября» под названием)
+    d.text((LX, y_acc), acc_txt, font=ImageFont.truetype(FONT_SB, acc_size), fill=col_green)
+    # подзаголовок приглушённый: акцентная строка должна выделяться цветом
+    # (в светлой теме mint совпадал с зелёным акцентом — строки сливались)
+    d.text((LX, y_sub), sub_txt, font=ImageFont.truetype(FONT_SB, sub_size), fill=col_gray)
 
     foot_f = ImageFont.truetype(FONT_SB, type_size(H, "footer"))
     d.text((LX, round(1380 * s)), "max.ru/channel_na100", font=foot_f, fill=col_gray)

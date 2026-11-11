@@ -485,8 +485,7 @@ def make_cover(channel: str, path: Path, fm: dict, body: str) -> str | None:
     items = numbered_items(body)
     out = DIGEST / f"cover-{path.stem}.png"
     cmd = [sys.executable, str(REPO / "roles/blogger/tools/digest_cover_photo.py"),
-           "--bg", str(REPO / bg), "--out", str(out), "--theme", "auto",
-           "--sub", "итоги суток"]
+           "--bg", str(REPO / bg), "--out", str(out), "--theme", "auto"]
     if items:
         cmd += ["--items", "|".join(items)]
     cov = subprocess.run(cmd, cwd=str(REPO), capture_output=True, text=True,

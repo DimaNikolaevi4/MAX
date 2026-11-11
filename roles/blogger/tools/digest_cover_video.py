@@ -7,7 +7,7 @@
 
 Использование:
   python roles/blogger/tools/digest_cover_video.py --src <фон.mp4> --out <файл.mp4> \
-      [--theme light|dark] [--items "a|b|c|d|e"] [--sub "итоги суток"]
+      [--theme light|dark] [--items "a|b|c|d|e"] [--accent "Среда, 11 ноября"]
 
 ffmpeg берётся из пакета imageio-ffmpeg (pip install imageio-ffmpeg) —
 системного ffmpeg на машинах может не быть.
@@ -31,9 +31,9 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from tempfile import mkdtemp
 from PIL import Image
-from cover_theme import (aspect_info, fit_text_block, release_stamp, resolve_theme,
-                         type_size, ASPECT_TOL, OVERLAY_VIDEO_DARK,
-                         OVERLAY_VIDEO_LIGHT)
+from cover_theme import (accent_date, aspect_info, fit_text_block, release_stamp,
+                         resolve_theme, type_size, ASPECT_TOL,
+                         OVERLAY_VIDEO_DARK, OVERLAY_VIDEO_LIGHT)
 
 FONT = r"C:\Windows\Fonts\segoeuib.ttf"    # Segoe UI Bold
 FONT_SB = r"C:\Windows\Fonts\seguisb.ttf"  # Segoe UI Semibold
@@ -59,10 +59,13 @@ def main() -> None:
     ap.add_argument("--theme", choices=["auto", "light", "dark"], default="auto",
                     help="auto — тема по первому кадру (контраст, худшая зона)")
     ap.add_argument("--over", default=None,
-                    help="надстрока; по умолчанию — время, дата, день недели выпуска")
-    ap.add_argument("--t1", default="Новости")
-    ap.add_argument("--t2", default="мира техники")
-    ap.add_argument("--sub", default="итоги суток")
+                    help="надстрока; по умолчанию — только время выпуска")
+    ap.add_argument("--t1", default="Новости ИИ")
+    ap.add_argument("--t2", default="и технологий")
+    ap.add_argument("--accent", default="",
+                    help="акцентная строка цветом; пусто — «Среда, 11 ноября» "
+                         "(автодата выпуска)")
+    ap.add_argument("--sub", default="Ежедневный утренний обзор")
     ap.add_argument("--items", default="",
                     help="пункты панели через | (обычно 5 заголовков выпуска)")
     ap.add_argument("--no-date", action="store_true")
@@ -133,6 +136,9 @@ def main() -> None:
                            type_size(1080, "title_min"))
     t2_size, t2_txt = fit1(a.t2, FONT, type_size(1080, "title"),
                            type_size(1080, "title_min"))
+    acc_size, acc_txt = fit1(a.accent.strip() or accent_date(datetime.now(MSK)),
+                             FONT_SB, type_size(1080, "accent"),
+                             type_size(1080, "accent_min"))
     sub_size, sub_txt = fit1(a.sub, FONT_SB, type_size(1080, "sub"),
                              type_size(1080, "sub_min"))
     foot_size, foot_txt = fit1("max.ru/channel_na100", FONT_SB,
@@ -142,6 +148,7 @@ def main() -> None:
     f_over = tf("over.txt", over_txt)
     f_t1 = tf("t1.txt", t1_txt)
     f_t2 = tf("t2.txt", t2_txt)
+    f_acc = tf("acc.txt", acc_txt)
     f_sub = tf("sub.txt", sub_txt)
     f_foot = tf("foot.txt", foot_txt)
     f_fmt = tf("fmt.txt", "Ф О Р М А Т")
@@ -163,33 +170,35 @@ def main() -> None:
     # раньше t1/t2 стояли на жёстких y=170/330, название висело высоко
     t1_h = round(t1_size * 1.16)
     t2_h = round(t2_size * 1.16)
+    acc_h = round(acc_size * 1.24)
     sub_h = round(sub_size * 1.22)
     gap_t2 = 30       # между строками названия
-    gap_line = 44     # название -> акцентная линия
-    gap_sub = 34      # линия -> подзаголовок
-    line_h = 9
+    gap_acc = 32      # название -> акцентная строка с датой
+    gap_sub = 26      # акцент -> подзаголовок
     zone_top = 100 + round(ov_size * 1.5)
     zone_bot = 985 - 20
-    group_h = t1_h + gap_t2 + t2_h + gap_line + line_h + gap_sub + sub_h
+    group_h = t1_h + gap_t2 + t2_h + gap_acc + acc_h + gap_sub + sub_h
     y_t1 = zone_top + max(0, (zone_bot - zone_top - group_h) // 2)
     y_t2 = y_t1 + t1_h + gap_t2
-    y_line = y_t2 + t2_h + gap_line
-    y_sub = y_line + line_h + gap_sub
+    y_acc = y_t2 + t2_h + gap_acc
+    y_sub = y_acc + acc_h + gap_sub
 
     f = [
         # подложка панели «ФОРМАТ»
         f"drawbox=x={PX1}:y=80:w={PX2 - PX1}:h=940:color="
         + ("white@0.72" if light else "black@0.45") + ":t=fill",
         f"drawbox=x={PX1 + 8}:y=130:w=3:h=840:color={col_gray}@0.55:t=fill",
-        # акцентная линия под заголовком
-        f"drawbox=x={LX}:y={y_line}:w=230:h={line_h}:color={col_green}:t=fill",
         # мачхед
         f"drawtext=fontfile=font_sb.ttf:textfile={f_over.name}:fontsize={ov_size}:fontcolor={col_gray}:x={LX}:y=100",
         f"drawtext=fontfile=font.ttf:textfile={f_t1.name}:fontsize={t1_size}:fontcolor={col_text}"
         f":x={LX}:y={y_t1}:shadowx=2:shadowy=2:shadowcolor={shadow}",
         f"drawtext=fontfile=font.ttf:textfile={f_t2.name}:fontsize={t2_size}:fontcolor={col_text}"
         f":x={LX}:y={y_t2}:shadowx=2:shadowy=2:shadowcolor={shadow}",
-        f"drawtext=fontfile=font_sb.ttf:textfile={f_sub.name}:fontsize={sub_size}:fontcolor={col_green}"
+        # акцентная строка цветом вместо зелёной линии (решение владельца
+        # 11.11.2026, вечер: «Среда, 11 ноября» под названием)
+        f"drawtext=fontfile=font_sb.ttf:textfile={f_acc.name}:fontsize={acc_size}:fontcolor={col_green}"
+        f":x={LX}:y={y_acc}:shadowx=2:shadowy=2:shadowcolor={shadow}",
+        f"drawtext=fontfile=font_sb.ttf:textfile={f_sub.name}:fontsize={sub_size}:fontcolor={col_gray}"
         f":x={LX}:y={y_sub}:shadowx=2:shadowy=2:shadowcolor={shadow}",
         f"drawtext=fontfile=font_sb.ttf:textfile={f_foot.name}:fontsize={foot_size}:fontcolor={col_gray}:x={LX}:y=985",
     ]
