@@ -132,10 +132,16 @@ def main() -> None:
     try:
         resp = json.loads(body_resp)
     except json.JSONDecodeError:
-        raise SystemExit(f"релей вернул не JSON (HTTP {http_code.strip()}): {resp_text[:300]}")
+        REPORT.append(f"FAIL: релей вернул не JSON (HTTP {http_code.strip()}): "
+                      f"{resp_text[:300]}")
+        (REPO / "local" / f"publish-{channel}.txt").write_text(
+            "\n".join(REPORT), encoding="utf-8")
+        raise SystemExit("релей вернул не JSON, см. отчёт")
 
     if not resp.get("ok"):
         REPORT.append(f"FAIL: Telegram отклонил: {json.dumps(resp, ensure_ascii=False)[:300]}")
+        (REPO / "local" / f"publish-{channel}.txt").write_text(
+            "\n".join(REPORT), encoding="utf-8")
         raise SystemExit("публикация FAIL, см. отчёт")
 
     result = resp["result"]

@@ -1,10 +1,10 @@
 ---
 channel: tg_neuro
-status: draft
-format: markdown
-notify: true
-image_file: local/images/ainow/2026-07-22-nashli-krutuyu-i-dostupnuyu-neyroset-kotoraya.jpg
-hold: ждём команду владельца — публиковать, когда появится возможность
+status: published
+format: html
+published_at: 2026-11-11T18:27:53+03:00
+message_id: 69
+chat_id: -1002087111322
 ---
 
 🎬 **Вторая часть «Полудницы»: что уже готово**
