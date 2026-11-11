@@ -60,6 +60,11 @@ def main() -> None:
     ap.add_argument("--items", default="",
                     help="пункты панели через | (обычно 5 заголовков выпуска)")
     ap.add_argument("--no-date", action="store_true")
+    ap.add_argument("--wash", type=float, default=0.0,
+                    help="полупрозрачная подложка на ВСЁ изображение, 0..1 "
+                         "(0 = выкл); цвет темы — как у панели справа; "
+                         "вводил решение владельца 11.11.2026 для светлых "
+                         "фонов, где заголовок плохо читается")
     a = ap.parse_args()
 
     im = Image.open(a.bg).convert("RGBA")
@@ -71,6 +76,16 @@ def main() -> None:
     if auto_note:
         print(auto_note)
     dark = theme == "dark"
+
+    if a.wash > 0:
+        # подложка на весь кадр цветом темы (решение владельца 11.11.2026):
+        # светлый фон -> белая вуаль, тёмный -> тёмная, контраст растёт
+        wash_a = min(1.0, a.wash)
+        fill = (255, 255, 255, round(wash_a * 255)) if not dark \
+            else (5, 10, 18, round(wash_a * 255))
+        im.alpha_composite(Image.new("RGBA", im.size, fill))
+        print(f"wash: {wash_a:.2f} ({'белая' if not dark else 'тёмная'})")
+
     W, H = im.size
     s = H / BASE_H
     LX = round(190 * s)
