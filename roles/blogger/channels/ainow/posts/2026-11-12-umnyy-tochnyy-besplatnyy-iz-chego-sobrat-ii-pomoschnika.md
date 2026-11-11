@@ -3,6 +3,7 @@ channel: ainow
 status: approved
 format: markdown
 notify: true
+image_file: local/images/ainow/2026-11-12-ii-pomoschnik-pipeline.jpg
 ---
 
 **Умный, точный, бесплатный: из чего собрать ИИ-помощника**
