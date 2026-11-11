@@ -239,6 +239,25 @@ def main() -> None:
             REPORT.append("WARN (лексика): " + item)
         REPORT.append("сканер лексики: " + lex.get("message", ""))
 
+    # --- калибровочный лог слоя 3 (дополнение к отчёту, не влияет на выпуск) ---
+    # Сырые баллы по каждому выпуску копятся в канальном jsonl; по ним
+    # калибруется порог номинальности (сейчас 2.5 откалиброван под marketing).
+    try:
+        if lex.get("status") == "ok":
+            rec = {
+                "type": "scan",
+                "ts": datetime.now(timezone(timedelta(hours=3))).isoformat(),
+                "post": post_path.name,
+                "readability_warn": len(check_readability(plain_text(text))),
+                **(lex.get("metrics") or {}),
+            }
+            cal = REPO / "roles" / "blogger" / "channels" / channel / \
+                "lexicon-calibration.jsonl"
+            with cal.open("a", encoding="utf-8") as f:
+                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+    except Exception as e:  # noqa: BLE001
+        REPORT.append(f"WARN (лексика): калибровочный лог не записан: {e!r}"[:160])
+
     # --- загрузка медиа: картинка или видео (видео заменяет обложку) ---
     image_file = fm.get("image_file")
     video_file = fm.get("video_file")

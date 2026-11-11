@@ -10,11 +10,29 @@
 
 | Задача | Когда (МСК) | Что делает |
 |---|---|---|
+| `MAX na100 - build digest` | ежедневно 06:30 | детерминированная сборка выпуска na100: RSS → фильтр → скоринг → черновик-шортлист + обложка для approved-поста без медиа + dry-run (`digest_build_na100.ps1`) |
 | `MAX stats snapshot` | ежедневно 07:00 | снимает подписчиков и просмотры для ainow и zabava, отчёт за предыдущие сутки |
 | `MAX ainow - publish approved` | ежедневно 07:15 | публикует все посты со `status: approved`, дата из имени файла ≤ сегодня |
 | `MAX zabava - publish plan` | ежедневно 07:16 | публикует все `pending` посты из `local/zabava-plan.json` |
 | `MAX blogger calendar` | ежедневно 07:20 | пересобирает `docs/blogger-calendar.md` (публикации, план, удаления) и пушит его |
 | `MAX na100 - publish approved` | ежедневно 07:30 | публикует `approved`-выпуск дайджеста na100 (обёртка `publish_scheduled_na100.ps1`) |
+
+**Сборка na100 в 06:30 (введено 11.11.2026).** `roles/blogger/tools/digest_build.py`
+делает детерминированную часть: тянет фиды (записи за 36 ч) →
+`local/digest/raw-<дата>.json`; режет нетех-темы и стоп-лист; дедуплицирует
+сюжеты между фидами; скорит по формуле методологии
+(свежесть×0.3 + влияние×0.4 + новизна×0.2 + авторитет×0.1, порог 5.0);
+пишет черновик-шортлист `local/digest/<дата>-draft.json` с предложенным
+отбором (1 РФ + 1 Китай + 3 мира; пустой Китай → 4 мира с пометкой) и
+обновляет память новизны `last_7_days.json`. **Текст выпуска по черновику
+пишет агент в рабочей сессии** — скрипт тексты не пишет (решение
+10.11.2026; LLM в пайплайн не подключается — решение владельца 11.11.2026).
+Если к 06:30 уже есть approved-пост без обложки — скрипт собирает её сам
+из пула фонов (`pick_fallback.py` + `digest_cover_photo.py`, пункты панели
+— заголовки 1️⃣–5️⃣ в порядке поста) и коммитит. Завершает dry-run
+публикации. Отчёт — `local/digest-build.txt`, лог —
+`local/logs/digest-build-na100.console.log`. Ручной запуск:
+`py roles\blogger\tools\digest_build.py --channel na100`.
 
 Ограничений по количеству публикаций в день или неделю и по интервалу между
 постами нет: в 07:15 (ainow) и 07:16 (zabava) выходит всё, что готово. Zabava
@@ -185,8 +203,8 @@ py roles\blogger\tools\stats_snapshot.py --channel zabava --weekly
 powershell -NoProfile -ExecutionPolicy Bypass -File roles\blogger\bin\register_tasks.ps1
 ```
 
-Скрипт создаёт все пять задач с `LogonType Interactive`, `RunLevel Limited`,
-`StartWhenAvailable` и границами старта ровно в 07:00 / 07:15 / 07:16 / 07:20 / 07:30
+Скрипт создаёт все шесть задач с `LogonType Interactive`, `RunLevel Limited`,
+`StartWhenAvailable` и границами старта ровно в 06:30 / 07:00 / 07:15 / 07:16 / 07:20 / 07:30
 без случайной задержки.
 
 **Ловушки:**

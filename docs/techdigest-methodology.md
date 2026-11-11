@@ -213,5 +213,9 @@ Blog, Microsoft News, Samsung Newsroom, NVIDIA Newsroom) и сохранения
 - Правила зафиксированы: `style.md` канала + этот документ + конфиги
   (`image_sources.json`, `techdigest_feeds.json`, `major_players.json`,
   `stop_list.json`).
-- Автоматизация (`digest_build.ps1` / `digest_publish.ps1`, окно 06:30/07:30)
-  — в разработке, отдельная задача.
+- Автоматизация — **реализована 11.11.2026**:
+  - `digest_build.py` (задача 06:30, обёртка `bin/digest_build_na100.ps1`) —
+    сбор RSS, фильтр, дедуп, скоринг, черновик-шортлист, обложка для
+    approved-поста без медиа, dry-run; текст выпуска — агент в сессии;
+  - публикация 07:30 — `publish_scheduled.py --channel na100` (была).
+- Ссылка: `docs/scheduled-tasks.md`, раздел «Сборка na100 в 06:30».

@@ -13,6 +13,7 @@ $ps = Join-Path $env:SystemRoot 'System32\WindowsPowerShell\v1.0\powershell.exe'
 
 # имя задачи, время, скрипт-обёртка
 $tasks = @(
+    @{ Name = 'MAX na100 - build digest';      At = '06:30'; File = 'digest_build_na100.ps1' },
     @{ Name = 'MAX stats snapshot';            At = '07:00'; File = 'stats_snapshot.ps1' },
     @{ Name = 'MAX ainow - publish approved';  At = '07:15'; File = 'publish_scheduled.ps1' },
     @{ Name = 'MAX zabava - publish plan';     At = '07:16'; File = 'zabava_publish.ps1' },

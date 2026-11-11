@@ -73,6 +73,23 @@ def check_lexicon(text: str, genre: str = "news",
     ignore = {str(c).strip().lower() for c in ignore_categories if str(c).strip()}
     ignored = {"hard_bans": 0, "markers": 0, "penalties": 0}
 
+    # сырые метрики для калибровочного лога (см. tools/lexicon_calibrate.py)
+    morph = data.get("morph") or {}
+    metrics = {
+        "score": data.get("score"),
+        "band": data.get("band"),
+        "genre": data.get("genre"),
+        "words": data.get("words"),
+        "noun_verb_ratio": morph.get("noun_verb_ratio"),
+        "nominalizations": morph.get("nominalizations"),
+        "para_cv": (data.get("structure") or {}).get("para_cv"),
+        "mattr": (data.get("lexical") or {}).get("mattr"),
+        "hard_ban_count": data.get("hard_ban_count"),
+        "marker_count": data.get("marker_count"),
+        "penalties": [{"reason": p.get("reason"), "points": p.get("points")}
+                      for p in (data.get("penalties") or [])],
+    }
+
     def is_ignored(category: str) -> bool:
         c = (category or "").strip().lower()
         return any(w in c for w in ignore)
@@ -104,6 +121,7 @@ def check_lexicon(text: str, genre: str = "news",
         "status": "ok",
         "items": items,
         "score": data.get("score"),
+        "metrics": metrics,
         "message": f"чистота {data.get('score')}/100"
                    + (f", скрыто легальных: {sum(ignored.values())}" if ignored else ""),
     }
