@@ -205,6 +205,23 @@ def main() -> None:
                 "полная атрибуция живёт в черновике выпуска и из текста "
                 "вычищается до публикации: " + ", ".join(bad[:3]))
 
+    # --- упоминания запрещённых организаций (все каналы) ---
+    # Правило владельца 12.11.2026: любое упоминание организации из реестров
+    # (Минюст — экстремистские, ФСБ — террористические; см.
+    # docs/forbidden-orgs.md) запрещено: весь связанный контекст удаляется,
+    # новость заменяется другой. Дисклеймер «организация запрещена в РФ»
+    # не применяется. Гейт блокирует публикацию/правку до вычистки.
+    fob_path = CONFIG / "forbidden_orgs.json"
+    if fob_path.exists():
+        fob_cfg = json.loads(fob_path.read_text(encoding="utf-8"))
+        for p in fob_cfg.get("patterns", []):
+            pat = (p.get("pattern", "") if isinstance(p, dict) else str(p)).strip()
+            if pat and re.search(rf"\b{re.escape(pat)}\b", text, re.I):
+                raise SystemExit(
+                    f"запрещённая организация: упоминание {pat!r} — весь "
+                    "связанный контекст удаляется, новость заменяется другой "
+                    "(правило владельца 12.11.2026, docs/forbidden-orgs.md)")
+
     # --- проверка русского языка (LanguageTool) ---
     spellcheck = "--no-spellcheck" not in args
     if not spellcheck:

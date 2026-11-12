@@ -11,7 +11,9 @@
   1. Тянет RSS (config/techdigest_feeds.json, status ok/flaky), записи за
      последние 36 часов → local/digest/raw-<дата>.json (runtime, в git не идёт).
   2. Фильтрует: общий тех-словарь (кл. слова + игроки из major_players.json),
-     стоп-лист exclude_topics (stop_list.json).
+     стоп-лист exclude_topics (stop_list.json), запрещённые организации
+     (forbidden_orgs.json — упоминания в выпуск не проходят, новость
+     заменяется другой; docs/forbidden-orgs.md).
   3. Дедуплицирует сюжеты между фидами (Жаккар токенов заголовка ≥ 0.6),
      берёт лучшую версию, источники объединяет; размер подхвата (число
      фидов) — сигнал влияния №5.
@@ -54,6 +56,7 @@ MSK = timezone(timedelta(hours=3))
 FEEDS_CFG = REPO / "roles" / "blogger" / "config" / "techdigest_feeds.json"
 MAJOR_CFG = REPO / "roles" / "blogger" / "config" / "major_players.json"
 STOP_CFG = REPO / "roles" / "blogger" / "config" / "stop_list.json"
+FORB_CFG = REPO / "roles" / "blogger" / "config" / "forbidden_orgs.json"
 DIGEST = REPO / "local" / "digest"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) digest_build/0.2"
 CUTOFF_HOURS = 36
@@ -249,6 +252,31 @@ def excluded_by_stop(title: str, exclude_topics: list[str]) -> str | None:
     return None
 
 
+def load_forbidden_patterns() -> list[tuple[str, re.Pattern]]:
+    """Запрещённые организации (правило владельца 12.11.2026): слово целиком,
+    регистр не важен, латиница и кириллица. Отсев — на этапе сборки, новость
+    заменяется другой; гейт публикации — publish_post.py (все каналы)."""
+    try:
+        cfg = json.loads(FORB_CFG.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    out = []
+    for p in cfg.get("patterns", []):
+        pat = p.get("pattern", "") if isinstance(p, dict) else str(p)
+        pat = pat.strip()
+        if pat:
+            out.append((pat, re.compile(rf"\b{re.escape(pat)}\b", re.I)))
+    return out
+
+
+def forbidden_org_match(title: str,
+                        patterns: list[tuple[str, re.Pattern]]) -> str | None:
+    for pat, rx in patterns:
+        if rx.search(title):
+            return pat
+    return None
+
+
 def freshness_score(dt_str: str) -> tuple[int, float]:
     d = parse_date(dt_str)
     if not d:
@@ -374,11 +402,18 @@ def build_draft(raw: dict, date: str) -> dict:
     company_re = re.compile("|".join(parts), re.I) if parts else re.compile(r"$^")
 
     memory_tokens = load_memory()
+    fob_pats = load_forbidden_patterns()
     records, dropped = [], []
     for feed_name, fd in raw.items():
         for it in fd.get("items") or []:
             r = {"feed": feed_name, "region": fd["region"],
                  "title": it["title"], "link": it["link"], "dt": it["dt"]}
+            fob = forbidden_org_match(it["title"], fob_pats)
+            if fob:
+                dropped.append({"title": it["title"],
+                                "reason": f"запрещённая организация: {fob} "
+                                          "(упоминания в выпуск не проходят)"})
+                continue
             topic = excluded_by_stop(it["title"], stop.get("exclude_topics", []))
             if topic:
                 dropped.append({"title": it["title"], "reason": f"стоп-лист: {topic}"})
