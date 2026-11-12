@@ -18,7 +18,9 @@
   4. Скоринг: свежесть×0.3 + влияние×0.4 + новизна×0.2 + авторитет×0.1
      (0–10, порог 5.0; сигналы влияния — бинарный чек-лист, авторитет —
      таблица доменов). Память новизны — local/digest/last_7_days.json.
-  5. Пишет черновик для агента local/digest/<дата>-draft.json: кандидаты по
+  5. Пишет черновик для агента channels/<канал>/digests/<дата>-draft.json
+     (В РЕПОЗИТОРИИ — синхронизируется на все машины, решение владельца
+     12.11.2026): кандидаты по
      регионам с разбором баллов + предложенный отбор (1 РФ + 1 Китай + 3 мира;
      пустой Китай → 1 РФ + 4 мира с пометкой).
   6. Обложка: если для сегодня есть approved-пост na100 без действующего
@@ -560,10 +562,24 @@ def main() -> None:
     say(f"raw: {raw_path.name}")
 
     draft = build_draft(raw, date)
-    draft_path = DIGEST / f"{date}-draft.json"
+    drafts_dir = (REPO / "roles" / "blogger" / "channels" / a.channel / "digests")
+    drafts_dir.mkdir(parents=True, exist_ok=True)
+    draft_path = drafts_dir / f"{date}-draft.json"
     draft_path.write_text(json.dumps(draft, ensure_ascii=False, indent=1),
                           encoding="utf-8")
-    say(f"черновик: {draft_path.name}")
+    say(f"черновик: {draft_path.relative_to(REPO).as_posix()}")
+    # черновик — в git (атрибуция живёт только здесь; решение владельца
+    # 12.11.2026): коммит и пуш, чтобы был на всех машинах
+    add = git("add", draft_path.relative_to(REPO).as_posix())
+    com = git("commit", "-m",
+              f"roles/blogger: digest draft {date} ({a.channel})",
+              "--", draft_path.relative_to(REPO).as_posix())
+    if com.returncode != 0:
+        say("WARN: коммит черновика не выполнен: " + (com.stderr or "")[-300:])
+    else:
+        push = git("push", "origin", "main")
+        say("push черновика: " + ("ok" if push.returncode == 0
+                                  else "FAIL " + (push.stderr or "")[-300:]))
     say("предложенный отбор:")
     for n in draft["proposed"]:
         say(f"  [{n['region']}] {n['total']:>4} — {n['title'][:80]}")
