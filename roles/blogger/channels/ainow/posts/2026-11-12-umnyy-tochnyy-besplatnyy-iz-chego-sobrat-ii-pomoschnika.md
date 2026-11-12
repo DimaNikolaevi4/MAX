@@ -1,9 +1,14 @@
 ---
 channel: ainow
-status: approved
+status: published
 format: markdown
 notify: true
+published_at: 2026-11-12T07:15:16+03:00
+message_id: mid.ffffba0066fb9aa301a1cdf78ec979ac
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaHN947Jeaw
 image_file: local/images/ainow/2026-11-12-ii-pomoschnik-pipeline.jpg
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTMGgBt6fE64SHzAa4nALpsjUcE6FwFehzZ89W60zBN523ERW1yULc5XpA1n9D6lvQVJbZgBZt3vLJ8WaPHjjI
 ---
 
 **Умный, точный, бесплатный: из чего собрать ИИ-помощника**
