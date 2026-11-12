@@ -293,6 +293,11 @@ def main() -> None:
     # --- загрузка медиа: картинка или видео (видео заменяет обложку) ---
     image_file = fm.get("image_file")
     video_file = fm.get("video_file")
+    # альбом: список картинок через " | " (catden, решение 12.11.2026)
+    image_files_raw = fm.get("image_files")
+    image_files = [x.strip() for x in image_files_raw.split("|")] if image_files_raw else []
+    if image_files and (image_file or video_file):
+        raise SystemExit("укажите что-то одно: image_file, video_file или image_files")
     if image_file and video_file:
         raise SystemExit("укажите что-то одно: image_file или video_file")
     attachments = []
@@ -356,6 +361,29 @@ def main() -> None:
         attachments = [{"type": media_kind, "payload": {"token": media_token}}]
         if media_kind == "video":
             REPORT.append(f"видео загружено: {media_path.name} ({media_path.stat().st_size} Б)")
+    if image_files:
+        media_kind = "image"
+        for pth in image_files:
+            media_path = REPO / pth
+            if not media_path.exists():
+                raise SystemExit(f"медиа не найдено: {media_path}")
+            mime = MIME.get(media_path.suffix.lower(), "application/octet-stream")
+            up_resp = api(tok, "POST", "/uploads?type=image")
+            up_json_head = json.loads(up_resp)
+            up_url = up_json_head.get("url")
+            if not up_url:
+                raise SystemExit(f"POST /uploads без url: {up_resp[:200]}")
+            up_done = api(tok, "POST", up_url, form_file=media_path, mime=mime)
+            try:
+                up_json = json.loads(up_done)
+            except json.JSONDecodeError:
+                up_json = {}
+            media_token = up_json_head.get("token") or \
+                (up_json.get("photos", {}).get("0", {}) or {}).get("token")
+            if not media_token:
+                raise SystemExit(f"upload без токена: {up_done[:200]}")
+            attachments.append({"type": "image", "payload": {"token": media_token}})
+            REPORT.append(f"картинка загружена: {media_path.name}")
 
     # --- POST /messages ---
     payload = {"text": text, "format": "markdown", "notify": fm.get("notify") == "true"}
@@ -390,7 +418,8 @@ def main() -> None:
     t2 = body["text"]
     markup = body.get("markup") or []
     checks = {
-        "вложение 1": len(body.get("attachments") or []) == (1 if media_kind else 0),
+        "вложения": len(body.get("attachments") or []) == (
+            len(image_files) if image_files else (1 if media_kind else 0)),
         "длина <=4000": len(t2) <= 4000,
         "CTA в конце": f"Подписывайтесь на {cta_label}" in t2[-200:],
         "нет '>' в тексте": ">" not in t2,
@@ -424,6 +453,8 @@ def main() -> None:
         fm_out["video_file"] = video_file
     if image_file:
         fm_out["image_file"] = image_file
+    if image_files:
+        fm_out["image_files"] = image_files_raw
     if media_url:
         fm_out["video" if media_kind == "video" else "image"] = media_url
     fm_out.update(media_extra)

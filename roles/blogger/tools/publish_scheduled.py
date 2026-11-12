@@ -177,9 +177,15 @@ def run(args, now):
             break
 
         media = fm.get("image_file") or fm.get("video_file")
-        # видео может подтягиваться из поста-источника (video_source) на машине
-        # публикатора — тогда локального файла до публикации может не быть
-        if (not media or not (REPO / media).exists()) and not fm.get("video_source"):
+        image_files = [x.strip() for x in (fm.get("image_files") or "").split("|") if x.strip()]
+        # медиа: один файл (image_file/video_file), альбом (image_files) или
+        # пост-текст без вложений (допустимо для catden, решение владельца 12.11.2026)
+        missing_media = [f for f in image_files if not (REPO / f).exists()]
+        if image_files and missing_media:
+            say(f"FAIL: {path.name} — нет картинок альбома: {missing_media[:2]}")
+            continue
+        elif not image_files and not fm.get("video_source") \
+                and (not media or not (REPO / media).exists()):
             say(f"FAIL: {path.name} — нет медиа ({media!r})")
             continue
         m = cta_re.search(body)
@@ -187,10 +193,13 @@ def run(args, now):
             say(f"FAIL: {path.name} — нет CTA-цитаты в формате канала")
             continue
         phrase = m.group(1).strip()
+        # окно 6 (правило zabava 08.11, расширено на все каналы 12.11.2026):
+        # фраза не должна повторяться в последних 6 записях реестра
+        recent = [v for k, v in list(registry.items())[-6:] if k != "_"]
         dup = [k for k, v in registry.items()
-               if k not in ("_", path.name) and v == phrase]
+               if k not in ("_", path.name) and v == phrase and v in recent]
         if dup:
-            say(f"FAIL: {path.name} — CTA-фраза уже есть у {dup[0]}")
+            say(f"FAIL: {path.name} — CTA-фраза повторяется в окне 6 ({dup[0]})")
             continue
 
         say("")

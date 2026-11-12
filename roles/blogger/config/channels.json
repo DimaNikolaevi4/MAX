@@ -34,6 +34,14 @@
       "cta_url": "https://max.ru/channel_ainow"
     },
     {
+      "slug": "catden",
+      "platform": "max",
+      "title": "Коты, кошки и котята",
+      "description": "Породы кошек, истории о котах и котятах, уход и здоровье. Как назвать котёнка, чем кормить, все породы — с фото. https://max.ru/channel_catden",
+      "cta_label": "Коты, кошки и котята",
+      "cta_url": "https://max.ru/channel_catden"
+    },
+    {
       "slug": "zabava",
       "platform": "max",
       "title": "Забавное",
@@ -45,9 +53,9 @@
       "slug": "ozon_group",
       "platform": "max",
       "title": "Ozon Находки",
-      "status": "to_delete",
+      "status": "deleted",
       "delete_on": "2026-11-12",
-      "description": "Под удаление: канал https://max.ru/channel_ozon_group закрыт и будет удалён 12.11.2026. Публикация не ведётся, токен не нужен. Храним только дату удаления."
+      "description": "Удалено: канал https://max.ru/channel_ozon_group закрыт и удалён владельцем 12.11.2026 (график освобождения слота). Публикация не ведётся, токен не нужен. Слот отдан каналу catden («Коты, кошки и котята»)."
     }
   ]
 }
