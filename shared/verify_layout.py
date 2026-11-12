@@ -96,10 +96,12 @@ def check_configs() -> None:
         return
 
     slugs = [c["slug"] for c in channels]
-    active = [c["slug"] for c in channels if c.get("status") != "to_delete"]
+    active = [c["slug"] for c in channels if c.get("status") not in ("to_delete", "deleted")]
     for c in channels:
         if c.get("status") == "to_delete":
             ok(f"под удаление: {c['slug']} — {c.get('delete_on', 'дата не указана')}, токен не требуется")
+        elif c.get("status") == "deleted":
+            ok(f"удалён: {c['slug']} — токен не требуется")
     dirs = {p.name for p in paths.CHANNELS.iterdir() if p.is_dir()} if paths.CHANNELS.exists() else set()
     for slug in sorted(set(slugs) - dirs):
         fail(f"канал {slug!r} есть в channels.json, но нет папки")

@@ -1,4 +1,4 @@
-# Задачи Планировщика Windows (ainow + zabava + na100)
+# Задачи Планировщика Windows (ainow + zabava + na100 + catden)
 
 Настроены 09.11.2026, расписание упрощено 10.11.2026: один слот сбора данных и
 один слот публикации. 11.11.2026 задачи были обнаружены отсутствующими
@@ -17,6 +17,7 @@
 | `MAX zabava - publish plan` | ежедневно 07:16 | публикует все `pending` посты из `local/zabava-plan.json` |
 | `MAX blogger calendar` | ежедневно 07:20 | пересобирает `docs/blogger-calendar.md` (публикации, план, удаления) и пушит его |
 | `MAX na100 - publish approved` | ежедневно 07:30 | публикует `approved`-выпуск дайджеста na100 (обёртка `publish_scheduled_na100.ps1`) |
+| `MAX catden - publish approved` | ежедневно 07:32 | публикует посты `catden` со `status: approved`, дата из имени файла ≤ сегодня (обёртка `publish_scheduled_catden.ps1`; зарегистрирована 12.11.2026) |
 
 **Сборка na100 в 06:30 (введено 11.11.2026).** `roles/blogger/tools/digest_build.py`
 делает детерминированную часть: тянет фиды (записи за 36 ч) →

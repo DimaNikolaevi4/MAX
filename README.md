@@ -34,14 +34,15 @@ Bot API и коммитит результат в git.
 | slug | площадка | канал | назначение |
 | --- | --- | --- | --- |
 | `ainow` | MAX | AI — https://max.ru/channel_ainow | основной: нейросети, промпты, кейсы |
+| `catden` | MAX | Коты, кошки и котята — https://max.ru/channel_catden | запущен 12.11.2026: породы кошек, истории о котах, уход |
 | `na100` | MAX | Нейросети и ИИ | закрывается, подписчики переливаются в `ainow` |
 | `administrator` | MAX | Администрирование каналов | закрывается, перелив в `ainow` |
-| `ozon_group` | MAX | Ozon Находки | под удаление 12.11.2026: публикация не ведётся, храним только дату |
+| `ozon_group` | MAX | Ozon Находки | удалён 12.11.2026, слот отдал каналу `catden` |
 | `zabava` | MAX | Забавное — https://max.ru/channel_zabava | юмор, короткие видео |
 | `tg_neuro` | Telegram | Нейро Мульт Студия — https://t.me/Neuro_Animation_Studio | закрывается, перелив в `ainow` |
 
 У закрывающихся каналов призыв (CTA) ведёт на основной канал `ainow`
-(`cta_label`/`cta_url` в реестре). У `ainow` и `zabava` — на себя.
+(`cta_label`/`cta_url` в реестре). У `ainow`, `zabava` и `catden` — на себя.
 
 ## Карта репозитория
 
@@ -49,7 +50,7 @@ Bot API и коммитит результат в git.
 MAX/
 ├── AGENTS.md                 # методика и правила для ИИ-агентов (главный файл)
 ├── README.md                 # этот файл
-├── docs/                     # 10 документов методики
+├── docs/                     # 16 документов методики
 │   ├── bot-setup.md              # настройка бота с нуля (проверено на практике)
 │   ├── blogger-calendar.md       # календарь: что вышло, что в плане, что удалено (собирается 07:20)
 │   ├── agent-onboarding.md       # вход для нового ИИ-агента
@@ -59,7 +60,13 @@ MAX/
 │   ├── stats-analysis.md         # анализ утренних снимков статистики
 │   ├── migration-plan.md         # план миграции закрывающихся каналов
 │   ├── closure-2026-11-05.md     # итог закрытия каналов 05.11.2026
-│   └── bot-publications-archive.md  # архив методики публикации в личку бота
+│   ├── na100-relaunch-2026-11-10.md  # перезапуск na100 как дайджеста
+│   ├── forbidden-orgs.md         # правило: запрещённые организации (удаление контекста целиком)
+│   ├── techdigest-methodology.md # методология дайджеста na100
+│   ├── alice-browser-editing.md  # правка постов через ИИ «Алиса» в браузере
+│   ├── bot-hosting-webhook-plan.md   # план переезда поллера на хостинг
+│   ├── bot-publications-archive.md   # архив методики публикации в личку бота
+│   └── handoff-2026-11-12.md     # сводка передачи между машинами от 12.11.2026
 ├── roles/
 │   ├── archivist/
 │   │   ├── docs/archive-channel.md   # лимиты и схема наполнения архива
@@ -68,11 +75,13 @@ MAX/
 │   ├── blogger/
 │   │   ├── bin/                     # post.php (PHP-публикатор) и задачи
 │   │   │                            # Планировщика: publish_scheduled.ps1,
+│   │   │                            # publish_scheduled_catden.ps1,
+│   │   │                            # publish_scheduled_na100.ps1,
 │   │   │                            # stats_snapshot.ps1, zabava_publish.ps1
 │   │   ├── config/channels.json     # реестр каналов (без токенов)
 │   │   ├── channels/<slug>/         # style.md, cta-phrases.json, posts/;
 │   │   │                            # proofread.md — статус вычитки (ainow)
-│   │   └── tools/                   # 16 инструментов — см. ниже
+│   │   └── tools/                   # 24 инструмента — см. ниже
 │   └── newsbot/
 │       ├── TASK.md                  # правила и состояние эксперимента
 │       └── src/                     # digest_bot.py, brief.py, news_digest.py,
@@ -94,12 +103,14 @@ MAX/
 
 | Скрипт | Назначение |
 | --- | --- |
-| `publish_post.py` | пост в канал MAX: текст, обложка (`image_file`), видео (`video_file`/`video_source`), CTA |
+| `publish_post.py` | пост в канал MAX: текст, обложка (`image_file`), альбом (`image_files`, до 12), видео (`video_file`/`video_source`), CTA |
 | `publish_video.py` | пост с медиа (формат «Забавное»): видео или альбом до 6 фото (`image_files`) |
 | `publish_plan.py` | следующий `pending`-пост из плана «Забавного» (`local/zabava-plan.json`) |
 | `publish_scheduled.py` | все посты `status: approved` с датой из имени ≤ сегодня (для Планировщика) |
 | `publish_telegram.py` | пост в Telegram через релей `deploy/tg-relay.php` |
 | `tg_direct.py` | резервная отправка в Telegram напрямую (`--ip`), если релей недоступен |
+| `digest_build.py` | детерминированная сборка выпуска na100 (06:30): фиды → скоринг → черновик |
+| `digest_cover*.py`, `pick_fallback.py`, `cover_theme.py` | обложки дайджеста: сборка из заголовков, фоновые пулы |
 | `pick_image.py` | подбор картинки из архива AI для поста закрывающегося канала |
 | `fetch_images.py` | выгрузка обложек постов AI в локальную библиотеку |
 | `make_card.py` | титульная карточка поста — только по прямому указанию владельца |
@@ -109,6 +120,7 @@ MAX/
 | `delete_post_by_slug.py` | удаление поста канала по короткому URL |
 | `stats_snapshot.py` | снимок статистики: подписчики, просмотры, прирост |
 | `build_calendar.py` | сборка `docs/blogger-calendar.md`: публикации, план, удаления (`--push` — коммит и пуш) |
+| `lexicon_calibrate.py`, `pool_add.py` | калибровка лексикона чистоты; добавление обложек в пул |
 | `zabava_random_plan.py` | случайный старый видео-пост «Забавного» → в план публикации |
 
 ## Формат поста
