@@ -1,9 +1,14 @@
 ---
 channel: na100
-status: approved
+status: published
 format: markdown
 notify: true
+published_at: 2026-11-12T07:35:17+03:00
+message_id: mid.ffffba08e9ee9aa301a1ce09e1915db9
+channel_id: -76927529477469
+url: https://max.ru/channel_na100/AaHOCeGRXbk
 image_file: local/digest/cover-2026-11-12-pyaterka-tehnologij.png
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCRnhX8gRnGNDql67ToD7tgStdNpsn7jyuMKGhOz7EDRyDIJgg2Z41-Qq5A8uKpDDz2Snub5LQyS3fZBId5TS5M
 ---
 
 **Отставка Хуанга, дешёвый Gemini и ИИ на запястье**
