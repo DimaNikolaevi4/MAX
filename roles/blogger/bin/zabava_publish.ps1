@@ -1,9 +1,12 @@
 ﻿# Планировщик Windows: публикация постов «Забавного» (07:16 МСК, на минуту
 # позже ainow, чтобы git-push каналов не сталкивались).
 # Шаг 1: zabava_random_plan.py выбирает случайный старый пост (видео/фото +
-#        текст, без призыва), скачивает медиа и добавляет его в план pending.
-# Шаг 2: publish_plan.py публикует pending-посты и удаляет старый оригинал.
-# Ограничений по интервалу и количеству постов нет.
+#        текст, без призыва), скачивает медиа и добавляет его в план pending
+#        (только если pending в плане ещё нет).
+# Шаг 2: publish_plan.py публикует ПЕРВЫЙ pending-пост и удаляет старый
+#        оригинал. Правило 13.11.2026 (владелец): план можно заполнять на
+#        несколько дней вперёд — за один утренний запуск выходит только ОДИН
+#        пост (никаких циклов; следующий pending уйдёт завтра в это же время).
 $ErrorActionPreference = 'Stop'
 Set-Location -LiteralPath 'E:\github\MAX'
 $OutputEncoding = [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding $false
@@ -29,23 +32,9 @@ $planPath = 'local\zabava-plan.json'
 & py 'roles\blogger\tools\zabava_random_plan.py' 2>&1 |
     Out-File -Append -Encoding UTF8 $log
 
-function Get-PendingCount {
-    $plan = Get-Content -LiteralPath $planPath -Encoding UTF8 -Raw | ConvertFrom-Json
-    return @($plan.posts | Where-Object { $_.status -eq 'pending' }).Count
-}
-
-$remaining = Get-PendingCount
-$runs = 0
-while ($true) {
-    & py 'roles\blogger\tools\publish_plan.py' 2>&1 | Out-File -Append -Encoding UTF8 $log
-    $code = $LASTEXITCODE
-    $runs++
-    if ($code -ne 0) { exit $code }
-    if ($remaining -eq 0) { break }
-
-    $after = Get-PendingCount
-    if ($after -ge $remaining) { break }
-    $remaining = $after
-    if ($runs -ge 30) { break }
-}
-exit 0
+# Один pending за запуск: при заполненном на несколько дней плане
+# zabava_random_plan.py сам не добавит новый (pending уже есть),
+# а publish_plan.py опубликует только первый пост из очереди.
+& py 'roles\blogger\tools\publish_plan.py' 2>&1 |
+    Out-File -Append -Encoding UTF8 $log
+exit $LASTEXITCODE

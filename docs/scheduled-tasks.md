@@ -150,10 +150,17 @@ py roles\blogger\tools\stats_snapshot.py --channel zabava --weekly
 
 - Задача `MAX zabava - publish plan` — ежедневно в **07:16** (на минуту позже
   ainow, чтобы git-push каналов не сталкивались).
-- Запускает `roles/blogger/tools/publish_plan.py`: берёт первый `pending` пост
+- Шаг 1: `roles/blogger/tools/zabava_random_plan.py` — если в плане нет
+  `pending`, выбирает случайный старый пост из истории канала и добавляет его
+  в план; при наличии `pending` ничего не делает.
+- Шаг 2: `roles/blogger/tools/publish_plan.py` — берёт первый `pending` пост
   из `local/zabava-plan.json` и публикует его. Никаких проверок интервала и
-  дневного лимита нет; обёртка повторяет запуск, пока в плане остаются
-  `pending` — то есть за один слот уходит всё, что подготовлено.
+  дневного лимита нет.
+- Правило 13.11.2026 (владелец): план можно заполнять на несколько дней
+  вперёд — за один утренний запуск выходит только ОДИН пост (обёртка
+  публикует первый `pending` без цикла; следующий уйдёт завтра в то же
+  время). Заполнение очереди — `local/zabava_fill_plan.py` (переиспользует
+  `zabava_random_plan.py`, добавляет N записей за запуск).
 - Отчёты: `local/publish-plan.txt`, лог — `local/logs/zabava-publish.console.log`.
 - Публикует через `publish_video.py`: проверка текста, загрузка медиа, POST,
   GET-контроль, обновление front matter, CTA-фраза дописывается в
