@@ -1,0 +1,1289 @@
+{
+ "date": "2026-11-13",
+ "generated_at": "2026-11-13T06:12:21.198938+03:00",
+ "formula": "свежесть*0.3 + влияние*0.4 + новизна*0.2 + авторитет*0.1 (0-10, порог 5.0); шаг 4 — обложка/текст у агента",
+ "notes": [],
+ "proposed": [
+  {
+   "title": "Nvidia объявила об отставке Дженсена Хуанга с поста генерального директора",
+   "link": "https://habr.com/ru/articles/1107234/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107234",
+   "dt": "2026-11-12T18:18:26+03:00",
+   "region": "ru",
+   "feeds": [
+    "Habr news"
+   ],
+   "hours": 11.9,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 7,
+   "total": 6.7,
+   "signals": [
+    "игрок/государство",
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://habr.com/ru/articles/1107234/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107234"
+   ]
+  },
+  {
+   "title": "Nvidia’s hunt for Jensen Huang’s successor: insiders, rivals and a Trump pick",
+   "link": "https://www.scmp.com/news/china/diplomacy/article/3374268/nvidias-hunt-jensen-huangs-successor-insiders-rivals-and-trump-pick",
+   "dt": "2026-11-13T00:08:47+03:00",
+   "region": "cn",
+   "feeds": [
+    "SCMP Tech"
+   ],
+   "hours": 6.1,
+   "fresh": 8,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.0,
+   "signals": [
+    "игрок/государство"
+   ],
+   "sources": [
+    "https://www.scmp.com/news/china/diplomacy/article/3374268/nvidias-hunt-jensen-huangs-successor-insiders-rivals-and-trump-pick"
+   ]
+  },
+  {
+   "title": "Democrats launch Nvidia investigation, write scathing letter on Huang’s ‘scheme’ with Trump",
+   "link": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
+   "dt": "2026-11-13T01:42:51+03:00",
+   "region": "world",
+   "feeds": [
+    "TechCrunch"
+   ],
+   "hours": 4.5,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.8,
+   "signals": [
+    "игрок/государство",
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/"
+   ]
+  },
+  {
+   "title": "Donald Trump really wants Tim Cook to run Nvidia",
+   "link": "https://www.theverge.com/tech/1032774/president-donald-trump-tim-cook-nvidia-jensen-huang",
+   "dt": "2026-11-13T03:46:07+03:00",
+   "region": "world",
+   "feeds": [
+    "The Verge"
+   ],
+   "hours": 2.4,
+   "fresh": 10,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.6,
+   "signals": [
+    "игрок/государство"
+   ],
+   "sources": [
+    "https://www.theverge.com/tech/1032774/president-donald-trump-tim-cook-nvidia-jensen-huang"
+   ]
+  },
+  {
+   "title": "Microsoft Outlook is still down",
+   "link": "https://www.theverge.com/tech/1032226/microsoft-outlook-is-down",
+   "dt": "2026-11-13T02:24:13+03:00",
+   "region": "world",
+   "feeds": [
+    "The Verge"
+   ],
+   "hours": 3.8,
+   "fresh": 10,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.6,
+   "signals": [
+    "игрок/государство"
+   ],
+   "sources": [
+    "https://www.theverge.com/tech/1032226/microsoft-outlook-is-down"
+   ]
+  }
+ ],
+ "candidates": {
+  "ru": [
+   {
+    "title": "Nvidia объявила об отставке Дженсена Хуанга с поста генерального директора",
+    "link": "https://habr.com/ru/articles/1107234/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107234",
+    "dt": "2026-11-12T18:18:26+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 11.9,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 7,
+    "total": 6.7,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1107234/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107234"
+    ]
+   },
+   {
+    "title": "Релиз Red Hat Enterprise Linux 10.3",
+    "link": "https://habr.com/ru/articles/1107248/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107248",
+    "dt": "2026-11-13T05:15:28+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news",
+     "Opennet"
+    ],
+    "hours": 0.9,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 6.5,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1107248/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107248",
+     "https://www.opennet.ru/opennews/art.shtml?num=66674"
+    ]
+   },
+   {
+    "title": "Новости нейронок от Google: Gemini 4, Omni 1.2 Flash и ИИ для робототехники",
+    "link": "https://habr.com/ru/companies/bothub/articles/1107320/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107320",
+    "dt": "2026-11-13T04:51:03+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 1.4,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 6.5,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://habr.com/ru/companies/bothub/articles/1107320/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107320"
+    ]
+   },
+   {
+    "title": "Глава Минцифры на CNews FORUM: Для разработок с генеративным ИИ не будет ограничений при включении в Реестр российского ПО",
+    "link": "https://www.cnews.ru/news/top/2026-11-12_glava_mintsifry_na_cnews_forum",
+    "dt": "2026-11-12T13:49:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 16.4,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-12_glava_mintsifry_na_cnews_forum"
+    ]
+   },
+   {
+    "title": "VK Tech выпустила новую версию платформы корпоративного ИИ VK AI Space",
+    "link": "https://www.cnews.ru/news/line/2026-11-12_vk_tech_vypustila_novuyu_versiyu",
+    "dt": "2026-11-12T13:21:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 16.9,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-12_vk_tech_vypustila_novuyu_versiyu"
+    ]
+   },
+   {
+    "title": "HP выпустила настольный ПК на Linux по цене жилого дома",
+    "link": "https://www.cnews.ru/news/top/2026-11-12_nachalis_prodazhi_nastolnogo",
+    "dt": "2026-11-12T12:58:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 17.2,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "цена/регулирование/доступность",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-12_nachalis_prodazhi_nastolnogo"
+    ]
+   },
+   {
+    "title": "Чего не видит рекрутер: ИИ и оценка адаптивности на интервью",
+    "link": "https://habr.com/ru/articles/1107298/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107298",
+    "dt": "2026-11-12T23:41:20+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 6.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1107298/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107298"
+    ]
+   },
+   {
+    "title": "Профили критических сбоев ИИ-агентов с функцией вызова с реальным эффектом: DeepSeek V4 Pro и Gemini 3.8 Flash",
+    "link": "https://habr.com/ru/articles/1107288/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107288",
+    "dt": "2026-11-12T22:54:25+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 7.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1107288/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107288"
+    ]
+   },
+   {
+    "title": "Когда закончится безумие и чего ждать от цен на оперативную память и видеокарты?",
+    "link": "https://habr.com/ru/articles/1107286/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107286",
+    "dt": "2026-11-12T22:32:57+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 7.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1107286/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107286"
+    ]
+   },
+   {
+    "title": "Руцентр запускает облачную инфраструктуру с Kubernetes, S3 и GPU",
+    "link": "https://habr.com/ru/companies/runity/articles/1107190/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107190",
+    "dt": "2026-11-12T18:20:23+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 11.9,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://habr.com/ru/companies/runity/articles/1107190/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107190"
+    ]
+   },
+   {
+    "title": "«Яндекс» инвестировал в безопасность поездок на самокатах 1 млрд рублей за пять лет",
+    "link": "https://www.cnews.ru/news/line/2026-11-12_yandeks_investiroval_v",
+    "dt": "2026-11-12T18:27:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 11.8,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-12_yandeks_investiroval_v"
+    ]
+   },
+   {
+    "title": "Власти Нью‑Йорка обвинили T‑Mobile в незаконном ограничении трафика домашнего интернета для малоимущих на уровне 50 ГБ",
+    "link": "https://habr.com/ru/articles/1107220/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107220",
+    "dt": "2026-11-12T17:27:01+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 12.8,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1107220/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107220"
+    ]
+   },
+   {
+    "title": "Первый выпуск 64-разрядной версии клиента Steam для Linux",
+    "link": "https://www.opennet.ru/opennews/art.shtml?num=66671",
+    "dt": "2026-11-12T08:44:20+03:00",
+    "region": "ru",
+    "feeds": [
+     "Opennet"
+    ],
+    "hours": 21.5,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.opennet.ru/opennews/art.shtml?num=66671"
+    ]
+   },
+   {
+    "title": "VK заподозрила подрядчиков в обучении ИИ на ее данных",
+    "link": "https://www.cnews.ru/news/top/2026-11-10_vk_menyaet_it-partnera_dlya",
+    "dt": "2026-11-12T17:04:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 13.1,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-10_vk_menyaet_it-partnera_dlya"
+    ]
+   },
+   {
+    "title": "Китай устроил массовую ИИ-слежку за своими гражданами по всему миру, чтобы вербовать их в разведку",
+    "link": "https://www.cnews.ru/news/top/2026-11-12_kitaj_ustroil_massovuyu_ii-slezhku",
+    "dt": "2026-11-12T15:07:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 15.1,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-12_kitaj_ustroil_massovuyu_ii-slezhku"
+    ]
+   }
+  ],
+  "cn": [
+   {
+    "title": "Nvidia’s hunt for Jensen Huang’s successor: insiders, rivals and a Trump pick",
+    "link": "https://www.scmp.com/news/china/diplomacy/article/3374268/nvidias-hunt-jensen-huangs-successor-insiders-rivals-and-trump-pick",
+    "dt": "2026-11-13T00:08:47+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 6.1,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/china/diplomacy/article/3374268/nvidias-hunt-jensen-huangs-successor-insiders-rivals-and-trump-pick"
+    ]
+   },
+   {
+    "title": "Why Hong Kong is losing ground in AI data centre race as Malaysia, Singapore advance",
+    "link": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3374262/why-hong-kong-losing-ground-ai-data-centre-race-malaysia-singapore-advance",
+    "dt": "2026-11-13T03:30:05+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 2.7,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.8,
+    "signals": [],
+    "sources": [
+     "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3374262/why-hong-kong-losing-ground-ai-data-centre-race-malaysia-singapore-advance"
+    ]
+   },
+   {
+    "title": "Megaspeed ex-CEO Alice Huang barred from Singapore amid Nvidia saga",
+    "link": "https://www.scmp.com/week-asia/economics/article/3374256/megaspeed-ex-ceo-alice-huang-barred-singapore-amid-nvidia-scandal",
+    "dt": "2026-11-12T17:07:35+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 13.1,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/week-asia/economics/article/3374256/megaspeed-ex-ceo-alice-huang-barred-singapore-amid-nvidia-scandal"
+    ]
+   },
+   {
+    "title": "Loyalty vs accountability: a look at the Nvidia board deciding CEO Jensen Huang’s fate",
+    "link": "https://www.scmp.com/tech/big-tech/article/3374203/loyalty-vs-accountability-look-nvidia-board-deciding-ceo-jensen-huangs-fate",
+    "dt": "2026-11-12T13:30:04+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 16.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/tech/big-tech/article/3374203/loyalty-vs-accountability-look-nvidia-board-deciding-ceo-jensen-huangs-fate"
+    ]
+   },
+   {
+    "title": "Cross-industry association in Hong Kong releases guide on responsible AI use",
+    "link": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3374227/cross-industry-association-hong-kong-releases-guide-responsible-ai-use",
+    "dt": "2026-11-12T13:29:39+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 16.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3374227/cross-industry-association-hong-kong-releases-guide-responsible-ai-use"
+    ]
+   },
+   {
+    "title": "Former ByteDance AI scientist touts drug-discovery model that tops world leaders",
+    "link": "https://www.scmp.com/business/companies/article/3374201/former-bytedance-ai-scientist-touts-drug-discovery-model-tops-world-leaders",
+    "dt": "2026-11-12T13:00:14+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 17.2,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/business/companies/article/3374201/former-bytedance-ai-scientist-touts-drug-discovery-model-tops-world-leaders"
+    ]
+   },
+   {
+    "title": "Jensen Huang’s departure may signal tighter US controls on AI chip exports to China",
+    "link": "https://www.scmp.com/news/china/diplomacy/article/3374270/jensen-huangs-departure-may-signal-tighter-us-controls-ai-chip-exports-china",
+    "dt": "2026-11-13T01:35:06+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 4.6,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://www.scmp.com/news/china/diplomacy/article/3374270/jensen-huangs-departure-may-signal-tighter-us-controls-ai-chip-exports-china"
+    ]
+   }
+  ],
+  "world": [
+   {
+    "title": "Democrats launch Nvidia investigation, write scathing letter on Huang’s ‘scheme’ with Trump",
+    "link": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
+    "dt": "2026-11-13T01:42:51+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 4.5,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.8,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/"
+    ]
+   },
+   {
+    "title": "Donald Trump really wants Tim Cook to run Nvidia",
+    "link": "https://www.theverge.com/tech/1032774/president-donald-trump-tim-cook-nvidia-jensen-huang",
+    "dt": "2026-11-13T03:46:07+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 2.4,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1032774/president-donald-trump-tim-cook-nvidia-jensen-huang"
+    ]
+   },
+   {
+    "title": "Microsoft Outlook is still down",
+    "link": "https://www.theverge.com/tech/1032226/microsoft-outlook-is-down",
+    "dt": "2026-11-13T02:24:13+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 3.8,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1032226/microsoft-outlook-is-down"
+    ]
+   },
+   {
+    "title": "I wasn't expecting these Ninja Black Friday deals so early — Amazon's already slashed prices by up to 57%",
+    "link": "https://www.techradar.com/home/small-appliances/i-wasnt-expecting-these-ninja-black-friday-deals-so-early-amazons-already-slashed-prices-by-up-to-57-percent",
+    "dt": "2026-11-13T01:46:28+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 4.4,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/home/small-appliances/i-wasnt-expecting-these-ninja-black-friday-deals-so-early-amazons-already-slashed-prices-by-up-to-57-percent"
+    ]
+   },
+   {
+    "title": "Apple TV 4K (2026) review: great device, rough price",
+    "link": "https://www.techradar.com/televisions/streaming-devices/apple-tv-4k-4th-gen-review",
+    "dt": "2026-11-12T19:43:58+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 10.5,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/televisions/streaming-devices/apple-tv-4k-4th-gen-review"
+    ]
+   },
+   {
+    "title": "Microsoft Outlook is down for many: Here's what we know",
+    "link": "https://www.techradar.com/news/live/outlook-outage-nov-2026",
+    "dt": "2026-11-13T02:38:07+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 3.6,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/news/live/outlook-outage-nov-2026"
+    ]
+   },
+   {
+    "title": "Techie uses voltage glitching hack to turn $2,500 Nvidia 8GB cryptomining GPU into a full-fat $20,000 A100 with 80GB of VRAM",
+    "link": "https://www.tomshardware.com/pc-components/gpus/techie-turns-usd2-500-cmp-170hx-8gb-mining-card-into-a-full-fat-a100-80gb-with-voltage-glitching-carefully-blowing-onboard-fuses-to-unlock-entire-vram-and-shader-modules",
+    "dt": "2026-11-12T13:30:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 16.7,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.2,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/gpus/techie-turns-usd2-500-cmp-170hx-8gb-mining-card-into-a-full-fat-a100-80gb-with-voltage-glitching-carefully-blowing-onboard-fuses-to-unlock-entire-vram-and-shader-modules"
+    ]
+   },
+   {
+    "title": "Google’s latest Search upgrade promises better answers to your most complicated questions",
+    "link": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
+    "dt": "2026-11-12T22:27:45+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 7.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/"
+    ]
+   },
+   {
+    "title": "Nectar launches an AI agent to automate creator discovery and outreach for brands",
+    "link": "https://techcrunch.com/2026/11/12/nectar-launches-an-ai-agent-to-automate-creator-discovery-and-outreach-for-brands/",
+    "dt": "2026-11-12T22:11:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 8.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/12/nectar-launches-an-ai-agent-to-automate-creator-discovery-and-outreach-for-brands/"
+    ]
+   },
+   {
+    "title": "Microsoft’s Outlook email hit by new outage",
+    "link": "https://techcrunch.com/2026/11/12/microsofts-outlook-email-hit-by-new-outage/",
+    "dt": "2026-11-12T22:03:39+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 8.1,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/12/microsofts-outlook-email-hit-by-new-outage/"
+    ]
+   },
+   {
+    "title": "Jensen Huang’s exit puts Nvidia’s support for open source in question",
+    "link": "https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/",
+    "dt": "2026-11-12T21:39:23+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 8.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/"
+    ]
+   },
+   {
+    "title": "SoftBank’s billion-dollar loss may have put a cap on AI’s natural gas ambitions",
+    "link": "https://techcrunch.com/2026/11/12/softbanks-billion-dollar-loss-may-have-put-a-cap-on-ais-natural-gas-ambitions/",
+    "dt": "2026-11-12T20:00:52+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 10.2,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/12/softbanks-billion-dollar-loss-may-have-put-a-cap-on-ais-natural-gas-ambitions/"
+    ]
+   },
+   {
+    "title": "Five ways Jensen Huang’s ouster from Nvidia could damage the AI industry",
+    "link": "https://techcrunch.com/2026/11/12/five-ways-jensen-huangs-ouster-from-nvidia-could-damage-the-ai-industry/",
+    "dt": "2026-11-12T19:32:33+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 10.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/12/five-ways-jensen-huangs-ouster-from-nvidia-could-damage-the-ai-industry/"
+    ]
+   },
+   {
+    "title": "Trump floats Apple chairman Tim Cook as Jensen Huang’s successor",
+    "link": "https://techcrunch.com/2026/11/12/trump-floats-apple-chairman-tim-cook-as-jensen-huangs-successor/",
+    "dt": "2026-11-12T19:12:44+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 11.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/12/trump-floats-apple-chairman-tim-cook-as-jensen-huangs-successor/"
+    ]
+   },
+   {
+    "title": "Jensen Huang is out at Nvidia — who is Colette Kress, his interim replacement?",
+    "link": "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/",
+    "dt": "2026-11-12T18:37:29+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 11.6,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/12/jensen-huang-is-out-at-nvidia-who-is-colette-kress-his-interim-replacement/"
+    ]
+   },
+   {
+    "title": "Google’s new Gemini model is better at understanding complicated questions",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
+    "dt": "2026-11-13T00:55:32+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 5.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen"
+    ]
+   },
+   {
+    "title": "Russia’s Google says nearly 3% of its data was lost after crippling Ukraine drone strikes, opens secret availability zones",
+    "link": "https://www.tomshardware.com/tech-industry/data-centers/russias-google-says-nearly-3-percent-of-its-data-was-lost-after-crippling-ukraine-drone-strikes-opens-secret-availability-zones-yandex-cloud-blames-lack-of-user-backups-for-lost-data-now-forcibly-applies-backup-rules-by-default",
+    "dt": "2026-11-13T00:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 6.2,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/data-centers/russias-google-says-nearly-3-percent-of-its-data-was-lost-after-crippling-ukraine-drone-strikes-opens-secret-availability-zones-yandex-cloud-blames-lack-of-user-backups-for-lost-data-now-forcibly-applies-backup-rules-by-default"
+    ]
+   },
+   {
+    "title": "President Trump says Apple’s Tim Cook is the only man to replace Jensen Huang as Nvidia CEO",
+    "link": "https://www.tomshardware.com/tech-industry/president-trump-says-apples-tim-cook-is-the-only-man-to-replace-jensen-huang-as-nvidia-ceo-proposes-a-legend-replaces-a-legend-in-call-for-apples-executive-chairman-of-its-board",
+    "dt": "2026-11-12T19:19:56+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 10.9,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/president-trump-says-apples-tim-cook-is-the-only-man-to-replace-jensen-huang-as-nvidia-ceo-proposes-a-legend-replaces-a-legend-in-call-for-apples-executive-chairman-of-its-board"
+    ]
+   },
+   {
+    "title": "Elon Musk says it ‘would be an honor’ to hire ousted Nvidia CEO Jensen Huang",
+    "link": "https://www.tomshardware.com/tech-industry/semiconductors/elon-musk-says-it-would-be-an-honor-to-hire-ousted-nvidia-ceo-jensen-huang-possible-projects-could-include-terafab-spacexs-planned-gpu-manufacturing-or-teslas-ai-accelerators",
+    "dt": "2026-11-12T19:07:55+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 11.1,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/semiconductors/elon-musk-says-it-would-be-an-honor-to-hire-ousted-nvidia-ceo-jensen-huang-possible-projects-could-include-terafab-spacexs-planned-gpu-manufacturing-or-teslas-ai-accelerators"
+    ]
+   },
+   {
+    "title": "Nvidia CEO Jensen Huang resigns in the wake of multiple affairs, Chinese spy allegations",
+    "link": "https://www.tomshardware.com/tech-industry/nvidia-confirms-jensen-huang-has-resigned-as-ceo-colette-kress-executive-vice-president-and-chief-financial-officer-appointed-interim-ceo",
+    "dt": "2026-11-12T18:48:31+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar",
+     "Tom's Hardware"
+    ],
+    "hours": 11.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/nvidia-confirms-jensen-huang-has-resigned-as-ceo-colette-kress-executive-vice-president-and-chief-financial-officer-appointed-interim-ceo",
+     "https://www.techradar.com/news/live/jensen-huang-resigns-as-nvidia-ceo"
+    ]
+   },
+   {
+    "title": "Noctua brings space-grade carbon nanotube thermal pad to AMD AM5 and AM4 processors",
+    "link": "https://www.tomshardware.com/pc-components/thermal-paste/noctua-brings-space-grade-carbon-nanotube-thermal-pad-to-amd-am5-and-am4-processors-promises-years-of-maintenance-free-performance-for-usd24-95",
+    "dt": "2026-11-12T19:07:32+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 11.1,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/thermal-paste/noctua-brings-space-grade-carbon-nanotube-thermal-pad-to-amd-am5-and-am4-processors-promises-years-of-maintenance-free-performance-for-usd24-95"
+    ]
+   },
+   {
+    "title": "Google reworks TPU silicon into specialized systems for agents and security",
+    "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-adds-two-new-specialized-chips-for-ai-agents-and-security-to-8th-gen-tpu-lineup-tpu-8i-max-puts-two-chips-on-one-package-for-long-context-work-tpu-8tx-swaps-arm-hosts-for-amd-epyc",
+    "dt": "2026-11-12T19:36:36+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 10.6,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-adds-two-new-specialized-chips-for-ai-agents-and-security-to-8th-gen-tpu-lineup-tpu-8i-max-puts-two-chips-on-one-package-for-long-context-work-tpu-8tx-swaps-arm-hosts-for-amd-epyc"
+    ]
+   },
+   {
+    "title": "The RTX PRO 5500 runs the exact same GB202 configuration as the RTX 5090 that launched at $1,999",
+    "link": "https://www.techradar.com/pro/the-rtx-pro-5500-runs-the-exact-same-gb202-configuration-as-the-rtx-5090-that-launched-at-usd1-999-the-added-52gb-of-vram-costs-professionals-an-eyewatering-usd16-000-markup",
+    "dt": "2026-11-13T01:20:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 4.9,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/the-rtx-pro-5500-runs-the-exact-same-gb202-configuration-as-the-rtx-5090-that-launched-at-usd1-999-the-added-52gb-of-vram-costs-professionals-an-eyewatering-usd16-000-markup"
+    ]
+   },
+   {
+    "title": "Microsoft is pulling free emails for schools, colleges, and universities",
+    "link": "https://www.techradar.com/pro/the-next-chapter-is-shaped-by-what-education-leaders-are-asking-for-microsoft-is-pulling-free-emails-for-schools-colleges-and-universities-who-now-face-big-bills-to-keep-student-mailboxes",
+    "dt": "2026-11-12T20:35:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 9.6,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/the-next-chapter-is-shaped-by-what-education-leaders-are-asking-for-microsoft-is-pulling-free-emails-for-schools-colleges-and-universities-who-now-face-big-bills-to-keep-student-mailboxes"
+    ]
+   },
+   {
+    "title": "I've been hunting for early Black Friday phone deals: these are the 22 best on the iPhone Duo, 18 Pro, Samsung Galaxy S26, Pixel 11, and more",
+    "link": "https://www.techradar.com/phones/ive-been-hunting-for-early-black-friday-phone-deals-these-are-the-22-best-on-the-iphone-duo-18-pro-samsung-galaxy-s26-pixel-11-and-more",
+    "dt": "2026-11-12T19:45:54+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 10.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/phones/ive-been-hunting-for-early-black-friday-phone-deals-these-are-the-22-best-on-the-iphone-duo-18-pro-samsung-galaxy-s26-pixel-11-and-more"
+    ]
+   },
+   {
+    "title": "Nvidia in a post-Jensen Huang world could be a disaster for PC gamers",
+    "link": "https://www.techradar.com/computing/gpu/nvidia-is-now-in-a-post-jensen-huang-world-heres-why-that-could-be-a-disaster-for-pc-gamers",
+    "dt": "2026-11-12T19:44:06+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 10.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/computing/gpu/nvidia-is-now-in-a-post-jensen-huang-world-heres-why-that-could-be-a-disaster-for-pc-gamers"
+    ]
+   },
+   {
+    "title": "AntiFox AI agents hijacked by hackers to carry out theft of AWS credentials",
+    "link": "https://www.techradar.com/pro/security/antifox-ai-agents-hijacked-by-hackers-to-carry-out-theft-of-aws-credentials",
+    "dt": "2026-11-12T18:35:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 11.6,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/security/antifox-ai-agents-hijacked-by-hackers-to-carry-out-theft-of-aws-credentials"
+    ]
+   },
+   {
+    "title": "I'm finding the best early Black Friday deals — Amazon, Best Buy, LG C6 OLED TV, Walmart, Ninja, and more",
+    "link": "https://www.techradar.com/live/news/early-black-friday-sales-us-amazon-best-buy-walmart-live",
+    "dt": "2026-11-12T20:40:38+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 9.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/live/news/early-black-friday-sales-us-amazon-best-buy-walmart-live"
+    ]
+   },
+   {
+    "title": "Using AI to predict how bioplastics behave under heat",
+    "link": "https://phys.org/news/2026-11-ai-bioplastics.html",
+    "dt": "2026-11-13T03:20:04+03:00",
+    "region": "world",
+    "feeds": [
+     "Phys.org"
+    ],
+    "hours": 2.9,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://phys.org/news/2026-11-ai-bioplastics.html"
+    ]
+   },
+   {
+    "title": "'Speed is not a creative strategy': Adobe execs say that while AI is delivering results faster, its humans who still bring the quality",
+    "link": "https://www.techradar.com/pro/speed-is-not-a-creative-strategy-adobe-execs-say-that-while-ai-is-delivering-results-faster-its-humans-who-still-bring-the-quality",
+    "dt": "2026-11-13T05:40:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 0.5,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.6,
+    "signals": [],
+    "sources": [
+     "https://www.techradar.com/pro/speed-is-not-a-creative-strategy-adobe-execs-say-that-while-ai-is-delivering-results-faster-its-humans-who-still-bring-the-quality"
+    ]
+   }
+  ]
+ },
+ "dropped": {
+  "count": 186,
+  "examples": [
+   {
+    "title": "Рисуем шестерни и не только, в программе OpenSCAD",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Вышел Tails 7.17",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Нефть и змеевики",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "По косточкам: что видео финиша расскажет о бегуне",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "UFO Hosting получил больше сайтов, чем Timeweb. Куда переезжает рунет после сбоя Beget?",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Я сделал продукт, который полюбили. Хотя мне говорили, что он никому не нужен",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Как работать с кодинг агентами (Claude Code, Codex, Gemini CLI, Antigravity CLI) через Telegram",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Универсальный ридер кодов libscanner‑unir против zxing‑cpp, ZBar и OpenCV на 6900 снимках из открытых наборов",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Вышел Cozystack v1.7.0: поддержка ARM, Proxmox как альтернатива KubeVirt, автоматическая миграция с VMware и другое",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "«Рубаи» Омар Хайям",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "VPN Admin: от панели для AmneziaWG к визуальному управлению VPN-инфраструктурой",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Портируем прошивку PCAN на китайскую плату",
+    "reason": "не тех-тема"
+   }
+  ]
+ },
+ "feeds_ok": [
+  "Habr news",
+  "Opennet",
+  "CNews",
+  "SCMP Tech",
+  "Global Times (outbrain, общий фид с техно-пунктом)",
+  "TechCrunch",
+  "The Verge",
+  "Tom's Hardware",
+  "TechRadar",
+  "Phys.org",
+  "IEEE Spectrum AI"
+ ],
+ "feeds_fail": [
+  "TechNode (China Tech)",
+  "VentureBeat"
+ ]
+}
