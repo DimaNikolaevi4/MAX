@@ -7,6 +7,8 @@ published_at: 2026-11-13T06:17:08+03:00
 message_id: mid.ffffba0066fb9aa301a1d2e8aeca42cd
 channel_id: -76964086179165
 url: https://max.ru/channel_ainow/AaHS6K7KQs0
+edited_at: 2026-11-13T06:28:34+03:00
+edited_note: 13.11 (утро) — пункт 6 заменён по указанию владельца: Kandinsky (fusionbrain.ai) → Z.ai (бывшая Zhipu AI), формулировка владельца; правка опубликованного поста через PUT /messages
 image_file: local/images/2026-11-13-cover.png
 image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCR7t7BfAozjRr8s1pMOUqpEPlRhqJA1c1PYD7STcM_-HLpV2UIiKbCzcNXoX5GRrGUpkmt4hfpWt29ufujYMfc
 ---
@@ -29,7 +31,7 @@ image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCR7t7BfAozjRr8s1pMOUqpEPlRhqJA1c1
 
 5️⃣ Шедеврум от Яндекса — генерация картинок без оплаты, в приложении и в вебе.
 
-6️⃣ Kandinsky (fusionbrain.ai) — российская генерация изображений с контролем стиля, бесплатно.
+6️⃣ Z.ai (бывшая Zhipu AI) — китайская компания на базе моделей GLM. В одном интерфейсе — генерация текста, кода, изображений и презентаций, создание сайтов и анализ документов.
 
 7️⃣ Stable Diffusion на своём компьютере — отдельный случай: если есть видеокарта, получаете полный безлимит, приватность и никакой регистрации.
 
