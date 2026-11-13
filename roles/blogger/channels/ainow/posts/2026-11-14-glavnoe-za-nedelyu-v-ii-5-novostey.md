@@ -1,6 +1,6 @@
 ---
 channel: ainow
-status: draft
+status: approved
 format: markdown
 notify: true
 image_file: local/images/digest-saturday-cover.png
