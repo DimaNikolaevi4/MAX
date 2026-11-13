@@ -1,9 +1,14 @@
 ---
 channel: ainow
-status: approved
+status: published
 format: markdown
 notify: true
+published_at: 2026-11-13T06:17:08+03:00
+message_id: mid.ffffba0066fb9aa301a1d2e8aeca42cd
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaHS6K7KQs0
 image_file: local/images/2026-11-13-cover.png
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCR7t7BfAozjRr8s1pMOUqpEPlRhqJA1c1PYD7STcM_-HLpV2UIiKbCzcNXoX5GRrGUpkmt4hfpWt29ufujYMfc
 ---
 
 **10 бесплатных нейросетей, доступных из России**
