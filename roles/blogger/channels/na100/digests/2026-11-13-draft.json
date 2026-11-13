@@ -1,141 +1,119 @@
 {
  "date": "2026-11-13",
- "generated_at": "2026-11-13T06:12:21.198938+03:00",
+ "generated_at": "2026-11-13T06:30:17.535408+03:00",
  "formula": "свежесть*0.3 + влияние*0.4 + новизна*0.2 + авторитет*0.1 (0-10, порог 5.0); шаг 4 — обложка/текст у агента",
  "notes": [],
  "proposed": [
   {
-   "title": "Nvidia объявила об отставке Дженсена Хуанга с поста генерального директора",
-   "link": "https://habr.com/ru/articles/1107234/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107234",
-   "dt": "2026-11-12T18:18:26+03:00",
+   "title": "Релиз Red Hat Enterprise Linux 10.3",
+   "link": "https://habr.com/ru/articles/1107248/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107248",
+   "dt": "2026-11-13T05:15:28+03:00",
    "region": "ru",
    "feeds": [
-    "Habr news"
+    "Habr news",
+    "Opennet"
    ],
-   "hours": 11.9,
-   "fresh": 8,
-   "influence": 4,
+   "hours": 1.2,
+   "fresh": 10,
+   "influence": 2,
    "novelty": 10,
    "authority": 7,
-   "total": 6.7,
+   "total": 6.5,
    "signals": [
-    "игрок/государство",
     "анонс/первый запуск"
    ],
    "sources": [
-    "https://habr.com/ru/articles/1107234/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107234"
+    "https://habr.com/ru/articles/1107248/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107248",
+    "https://www.opennet.ru/opennews/art.shtml?num=66674"
    ]
   },
   {
-   "title": "Nvidia’s hunt for Jensen Huang’s successor: insiders, rivals and a Trump pick",
-   "link": "https://www.scmp.com/news/china/diplomacy/article/3374268/nvidias-hunt-jensen-huangs-successor-insiders-rivals-and-trump-pick",
-   "dt": "2026-11-13T00:08:47+03:00",
+   "title": "Why Hong Kong is losing ground in AI data centre race as Malaysia, Singapore advance",
+   "link": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3374262/why-hong-kong-losing-ground-ai-data-centre-race-malaysia-singapore-advance",
+   "dt": "2026-11-13T03:30:05+03:00",
    "region": "cn",
    "feeds": [
     "SCMP Tech"
    ],
-   "hours": 6.1,
-   "fresh": 8,
-   "influence": 2,
+   "hours": 3.0,
+   "fresh": 10,
+   "influence": 0,
    "novelty": 10,
    "authority": 8,
-   "total": 6.0,
-   "signals": [
-    "игрок/государство"
-   ],
+   "total": 5.8,
+   "signals": [],
    "sources": [
-    "https://www.scmp.com/news/china/diplomacy/article/3374268/nvidias-hunt-jensen-huangs-successor-insiders-rivals-and-trump-pick"
+    "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3374262/why-hong-kong-losing-ground-ai-data-centre-race-malaysia-singapore-advance"
    ]
   },
   {
-   "title": "Democrats launch Nvidia investigation, write scathing letter on Huang’s ‘scheme’ with Trump",
-   "link": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
-   "dt": "2026-11-13T01:42:51+03:00",
+   "title": "I wasn't expecting these Ninja Black Friday deals so early — Amazon's already slashed prices by up to 57%",
+   "link": "https://www.techradar.com/home/small-appliances/i-wasnt-expecting-these-ninja-black-friday-deals-so-early-amazons-already-slashed-prices-by-up-to-57-percent",
+   "dt": "2026-11-13T01:46:28+03:00",
    "region": "world",
    "feeds": [
-    "TechCrunch"
+    "TechRadar"
    ],
-   "hours": 4.5,
+   "hours": 4.7,
    "fresh": 8,
    "influence": 4,
    "novelty": 10,
-   "authority": 8,
-   "total": 6.8,
+   "authority": 6,
+   "total": 6.6,
    "signals": [
     "игрок/государство",
-    "анонс/первый запуск"
+    "цена/регулирование/доступность"
    ],
    "sources": [
-    "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/"
+    "https://www.techradar.com/home/small-appliances/i-wasnt-expecting-these-ninja-black-friday-deals-so-early-amazons-already-slashed-prices-by-up-to-57-percent"
    ]
   },
   {
-   "title": "Donald Trump really wants Tim Cook to run Nvidia",
-   "link": "https://www.theverge.com/tech/1032774/president-donald-trump-tim-cook-nvidia-jensen-huang",
-   "dt": "2026-11-13T03:46:07+03:00",
+   "title": "Apple TV 4K (2026) review: great device, rough price",
+   "link": "https://www.techradar.com/televisions/streaming-devices/apple-tv-4k-4th-gen-review",
+   "dt": "2026-11-12T19:43:58+03:00",
    "region": "world",
    "feeds": [
-    "The Verge"
+    "TechRadar"
    ],
-   "hours": 2.4,
+   "hours": 10.8,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 6,
+   "total": 6.6,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://www.techradar.com/televisions/streaming-devices/apple-tv-4k-4th-gen-review"
+   ]
+  },
+  {
+   "title": "Microsoft Outlook is down for many: Here's what we know",
+   "link": "https://www.techradar.com/news/live/outlook-outage-nov-2026",
+   "dt": "2026-11-13T02:38:07+03:00",
+   "region": "world",
+   "feeds": [
+    "TechRadar"
+   ],
+   "hours": 3.9,
    "fresh": 10,
    "influence": 2,
    "novelty": 10,
-   "authority": 8,
-   "total": 6.6,
+   "authority": 6,
+   "total": 6.4,
    "signals": [
     "игрок/государство"
    ],
    "sources": [
-    "https://www.theverge.com/tech/1032774/president-donald-trump-tim-cook-nvidia-jensen-huang"
-   ]
-  },
-  {
-   "title": "Microsoft Outlook is still down",
-   "link": "https://www.theverge.com/tech/1032226/microsoft-outlook-is-down",
-   "dt": "2026-11-13T02:24:13+03:00",
-   "region": "world",
-   "feeds": [
-    "The Verge"
-   ],
-   "hours": 3.8,
-   "fresh": 10,
-   "influence": 2,
-   "novelty": 10,
-   "authority": 8,
-   "total": 6.6,
-   "signals": [
-    "игрок/государство"
-   ],
-   "sources": [
-    "https://www.theverge.com/tech/1032226/microsoft-outlook-is-down"
+    "https://www.techradar.com/news/live/outlook-outage-nov-2026"
    ]
   }
  ],
  "candidates": {
   "ru": [
-   {
-    "title": "Nvidia объявила об отставке Дженсена Хуанга с поста генерального директора",
-    "link": "https://habr.com/ru/articles/1107234/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107234",
-    "dt": "2026-11-12T18:18:26+03:00",
-    "region": "ru",
-    "feeds": [
-     "Habr news"
-    ],
-    "hours": 11.9,
-    "fresh": 8,
-    "influence": 4,
-    "novelty": 10,
-    "authority": 7,
-    "total": 6.7,
-    "signals": [
-     "игрок/государство",
-     "анонс/первый запуск"
-    ],
-    "sources": [
-     "https://habr.com/ru/articles/1107234/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107234"
-    ]
-   },
    {
     "title": "Релиз Red Hat Enterprise Linux 10.3",
     "link": "https://habr.com/ru/articles/1107248/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107248",
@@ -145,7 +123,7 @@
      "Habr news",
      "Opennet"
     ],
-    "hours": 0.9,
+    "hours": 1.2,
     "fresh": 10,
     "influence": 2,
     "novelty": 10,
@@ -167,7 +145,7 @@
     "feeds": [
      "Habr news"
     ],
-    "hours": 1.4,
+    "hours": 1.7,
     "fresh": 10,
     "influence": 2,
     "novelty": 10,
@@ -188,7 +166,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 16.4,
+    "hours": 16.7,
     "fresh": 6,
     "influence": 4,
     "novelty": 10,
@@ -210,7 +188,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 16.9,
+    "hours": 17.2,
     "fresh": 6,
     "influence": 4,
     "novelty": 10,
@@ -232,7 +210,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 17.2,
+    "hours": 17.5,
     "fresh": 6,
     "influence": 4,
     "novelty": 10,
@@ -254,7 +232,7 @@
     "feeds": [
      "Habr news"
     ],
-    "hours": 6.5,
+    "hours": 6.8,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -275,7 +253,7 @@
     "feeds": [
      "Habr news"
     ],
-    "hours": 7.3,
+    "hours": 7.6,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -296,7 +274,7 @@
     "feeds": [
      "Habr news"
     ],
-    "hours": 7.7,
+    "hours": 8.0,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -317,49 +295,7 @@
     "feeds": [
      "Habr news"
     ],
-    "hours": 11.9,
-    "fresh": 8,
-    "influence": 2,
-    "novelty": 10,
-    "authority": 7,
-    "total": 5.9,
-    "signals": [
-     "цена/регулирование/доступность"
-    ],
-    "sources": [
-     "https://habr.com/ru/companies/runity/articles/1107190/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107190"
-    ]
-   },
-   {
-    "title": "«Яндекс» инвестировал в безопасность поездок на самокатах 1 млрд рублей за пять лет",
-    "link": "https://www.cnews.ru/news/line/2026-11-12_yandeks_investiroval_v",
-    "dt": "2026-11-12T18:27:00+03:00",
-    "region": "ru",
-    "feeds": [
-     "CNews"
-    ],
-    "hours": 11.8,
-    "fresh": 8,
-    "influence": 2,
-    "novelty": 10,
-    "authority": 6,
-    "total": 5.8,
-    "signals": [
-     "игрок/государство"
-    ],
-    "sources": [
-     "https://www.cnews.ru/news/line/2026-11-12_yandeks_investiroval_v"
-    ]
-   },
-   {
-    "title": "Власти Нью‑Йорка обвинили T‑Mobile в незаконном ограничении трафика домашнего интернета для малоимущих на уровне 50 ГБ",
-    "link": "https://habr.com/ru/articles/1107220/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107220",
-    "dt": "2026-11-12T17:27:01+03:00",
-    "region": "ru",
-    "feeds": [
-     "Habr news"
-    ],
-    "hours": 12.8,
+    "hours": 12.2,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -369,7 +305,7 @@
      "цена/регулирование/доступность"
     ],
     "sources": [
-     "https://habr.com/ru/articles/1107220/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107220"
+     "https://habr.com/ru/companies/runity/articles/1107190/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107190"
     ]
    },
    {
@@ -380,7 +316,7 @@
     "feeds": [
      "Opennet"
     ],
-    "hours": 21.5,
+    "hours": 21.8,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -394,6 +330,27 @@
     ]
    },
    {
+    "title": "«Яндекс» инвестировал в безопасность поездок на самокатах 1 млрд рублей за пять лет",
+    "link": "https://www.cnews.ru/news/line/2026-11-12_yandeks_investiroval_v",
+    "dt": "2026-11-12T18:27:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 12.1,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-12_yandeks_investiroval_v"
+    ]
+   },
+   {
     "title": "VK заподозрила подрядчиков в обучении ИИ на ее данных",
     "link": "https://www.cnews.ru/news/top/2026-11-10_vk_menyaet_it-partnera_dlya",
     "dt": "2026-11-12T17:04:00+03:00",
@@ -401,7 +358,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 13.1,
+    "hours": 13.4,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -422,7 +379,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 15.1,
+    "hours": 15.4,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -434,30 +391,51 @@
     "sources": [
      "https://www.cnews.ru/news/top/2026-11-12_kitaj_ustroil_massovuyu_ii-slezhku"
     ]
+   },
+   {
+    "title": "«ЭР-Телеком Холдинг» объявил финансовые результаты за 9 месяцев 2026 года",
+    "link": "https://www.cnews.ru/news/line/2026-11-12_er-telekom_holding_obyavil",
+    "dt": "2026-11-12T13:28:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 17.0,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-12_er-telekom_holding_obyavil"
+    ]
+   },
+   {
+    "title": "В Astra Automation ИИ-агенты могут запускать сценарии автоматизации",
+    "link": "https://www.cnews.ru/news/line/2026-11-12_v_astra_automation_ii-agenty_mogut",
+    "dt": "2026-11-12T13:05:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 17.4,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-12_v_astra_automation_ii-agenty_mogut"
+    ]
    }
   ],
   "cn": [
-   {
-    "title": "Nvidia’s hunt for Jensen Huang’s successor: insiders, rivals and a Trump pick",
-    "link": "https://www.scmp.com/news/china/diplomacy/article/3374268/nvidias-hunt-jensen-huangs-successor-insiders-rivals-and-trump-pick",
-    "dt": "2026-11-13T00:08:47+03:00",
-    "region": "cn",
-    "feeds": [
-     "SCMP Tech"
-    ],
-    "hours": 6.1,
-    "fresh": 8,
-    "influence": 2,
-    "novelty": 10,
-    "authority": 8,
-    "total": 6.0,
-    "signals": [
-     "игрок/государство"
-    ],
-    "sources": [
-     "https://www.scmp.com/news/china/diplomacy/article/3374268/nvidias-hunt-jensen-huangs-successor-insiders-rivals-and-trump-pick"
-    ]
-   },
    {
     "title": "Why Hong Kong is losing ground in AI data centre race as Malaysia, Singapore advance",
     "link": "https://www.scmp.com/news/hong-kong/hong-kong-economy/article/3374262/why-hong-kong-losing-ground-ai-data-centre-race-malaysia-singapore-advance",
@@ -466,7 +444,7 @@
     "feeds": [
      "SCMP Tech"
     ],
-    "hours": 2.7,
+    "hours": 3.0,
     "fresh": 10,
     "influence": 0,
     "novelty": 10,
@@ -485,7 +463,7 @@
     "feeds": [
      "SCMP Tech"
     ],
-    "hours": 13.1,
+    "hours": 13.4,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -506,7 +484,7 @@
     "feeds": [
      "SCMP Tech"
     ],
-    "hours": 16.7,
+    "hours": 17.0,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -527,7 +505,7 @@
     "feeds": [
      "SCMP Tech"
     ],
-    "hours": 16.7,
+    "hours": 17.0,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -548,7 +526,7 @@
     "feeds": [
      "SCMP Tech"
     ],
-    "hours": 17.2,
+    "hours": 17.5,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -569,7 +547,7 @@
     "feeds": [
      "SCMP Tech"
     ],
-    "hours": 4.6,
+    "hours": 4.9,
     "fresh": 8,
     "influence": 0,
     "novelty": 10,
@@ -583,70 +561,6 @@
   ],
   "world": [
    {
-    "title": "Democrats launch Nvidia investigation, write scathing letter on Huang’s ‘scheme’ with Trump",
-    "link": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
-    "dt": "2026-11-13T01:42:51+03:00",
-    "region": "world",
-    "feeds": [
-     "TechCrunch"
-    ],
-    "hours": 4.5,
-    "fresh": 8,
-    "influence": 4,
-    "novelty": 10,
-    "authority": 8,
-    "total": 6.8,
-    "signals": [
-     "игрок/государство",
-     "анонс/первый запуск"
-    ],
-    "sources": [
-     "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/"
-    ]
-   },
-   {
-    "title": "Donald Trump really wants Tim Cook to run Nvidia",
-    "link": "https://www.theverge.com/tech/1032774/president-donald-trump-tim-cook-nvidia-jensen-huang",
-    "dt": "2026-11-13T03:46:07+03:00",
-    "region": "world",
-    "feeds": [
-     "The Verge"
-    ],
-    "hours": 2.4,
-    "fresh": 10,
-    "influence": 2,
-    "novelty": 10,
-    "authority": 8,
-    "total": 6.6,
-    "signals": [
-     "игрок/государство"
-    ],
-    "sources": [
-     "https://www.theverge.com/tech/1032774/president-donald-trump-tim-cook-nvidia-jensen-huang"
-    ]
-   },
-   {
-    "title": "Microsoft Outlook is still down",
-    "link": "https://www.theverge.com/tech/1032226/microsoft-outlook-is-down",
-    "dt": "2026-11-13T02:24:13+03:00",
-    "region": "world",
-    "feeds": [
-     "The Verge"
-    ],
-    "hours": 3.8,
-    "fresh": 10,
-    "influence": 2,
-    "novelty": 10,
-    "authority": 8,
-    "total": 6.6,
-    "signals": [
-     "игрок/государство"
-    ],
-    "sources": [
-     "https://www.theverge.com/tech/1032226/microsoft-outlook-is-down"
-    ]
-   },
-   {
     "title": "I wasn't expecting these Ninja Black Friday deals so early — Amazon's already slashed prices by up to 57%",
     "link": "https://www.techradar.com/home/small-appliances/i-wasnt-expecting-these-ninja-black-friday-deals-so-early-amazons-already-slashed-prices-by-up-to-57-percent",
     "dt": "2026-11-13T01:46:28+03:00",
@@ -654,7 +568,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 4.4,
+    "hours": 4.7,
     "fresh": 8,
     "influence": 4,
     "novelty": 10,
@@ -676,7 +590,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 10.5,
+    "hours": 10.8,
     "fresh": 8,
     "influence": 4,
     "novelty": 10,
@@ -698,7 +612,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 3.6,
+    "hours": 3.9,
     "fresh": 10,
     "influence": 2,
     "novelty": 10,
@@ -719,7 +633,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 16.7,
+    "hours": 17.0,
     "fresh": 6,
     "influence": 4,
     "novelty": 10,
@@ -741,7 +655,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 7.7,
+    "hours": 8.0,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -762,7 +676,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 8.0,
+    "hours": 8.3,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -783,7 +697,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 8.1,
+    "hours": 8.4,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -804,7 +718,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 8.5,
+    "hours": 8.8,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -825,7 +739,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 10.2,
+    "hours": 10.5,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -846,7 +760,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 10.7,
+    "hours": 11.0,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -867,7 +781,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 11.0,
+    "hours": 11.3,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -888,7 +802,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 11.6,
+    "hours": 11.9,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -909,7 +823,7 @@
     "feeds": [
      "The Verge"
     ],
-    "hours": 5.3,
+    "hours": 5.6,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -930,7 +844,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 6.2,
+    "hours": 6.5,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -951,7 +865,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 10.9,
+    "hours": 11.2,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -972,7 +886,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 11.1,
+    "hours": 11.4,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -994,7 +908,7 @@
      "TechRadar",
      "Tom's Hardware"
     ],
-    "hours": 11.4,
+    "hours": 11.7,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -1016,7 +930,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 11.1,
+    "hours": 11.4,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -1037,7 +951,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 10.6,
+    "hours": 10.9,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -1058,7 +972,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 4.9,
+    "hours": 5.2,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -1079,7 +993,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 9.6,
+    "hours": 9.9,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -1100,7 +1014,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 10.4,
+    "hours": 10.7,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -1121,7 +1035,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 10.5,
+    "hours": 10.8,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -1142,7 +1056,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 11.6,
+    "hours": 11.9,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -1163,7 +1077,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 9.5,
+    "hours": 9.8,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -1184,7 +1098,7 @@
     "feeds": [
      "Phys.org"
     ],
-    "hours": 2.9,
+    "hours": 3.2,
     "fresh": 10,
     "influence": 0,
     "novelty": 10,
@@ -1203,7 +1117,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 0.5,
+    "hours": 0.8,
     "fresh": 10,
     "influence": 0,
     "novelty": 10,
@@ -1213,12 +1127,78 @@
     "sources": [
      "https://www.techradar.com/pro/speed-is-not-a-creative-strategy-adobe-execs-say-that-while-ai-is-delivering-results-faster-its-humans-who-still-bring-the-quality"
     ]
+   },
+   {
+    "title": "Cyberattack on Fireworks AI allowed hackers to access Notion customers’ chat transcripts",
+    "link": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/",
+    "dt": "2026-11-12T18:02:28+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 12.5,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/"
+    ]
+   },
+   {
+    "title": "Democrats launch Nvidia investigation, write scathing letter on Huang’s ‘scheme’ with Trump",
+    "link": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
+    "dt": "2026-11-13T01:42:51+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 4.8,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 2,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/"
+    ]
+   },
+   {
+    "title": "Hugging Face CEO vows to keep fighting for open source AI after Jensen Huang’s exit",
+    "link": "https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit/",
+    "dt": "2026-11-12T20:36:40+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 9.9,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://techcrunch.com/2026/11/12/hugging-face-ceo-vows-to-keep-fighting-for-open-source-ai-after-jensen-huangs-exit/"
+    ]
    }
   ]
  },
  "dropped": {
   "count": 186,
   "examples": [
+   {
+    "title": "Выпуск обновления открытого проекта RustDesk 1.5.3",
+    "reason": "не тех-тема"
+   },
    {
     "title": "Рисуем шестерни и не только, в программе OpenSCAD",
     "reason": "не тех-тема"
@@ -1261,10 +1241,6 @@
    },
    {
     "title": "VPN Admin: от панели для AmneziaWG к визуальному управлению VPN-инфраструктурой",
-    "reason": "не тех-тема"
-   },
-   {
-    "title": "Портируем прошивку PCAN на китайскую плату",
     "reason": "не тех-тема"
    }
   ]
