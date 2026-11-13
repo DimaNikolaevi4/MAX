@@ -19,6 +19,13 @@
 утренний запуск — один pending за день. Правило 13.11.2026 (владелец): план
 можно заполнять на несколько дней вперёд, очередь расходуется по одному
 посту в день; zabava_random_plan.py при наличии pending ничего не добавляет.
+
+Date-gate (правило владельца 13.11.2026, день тишины): запись плана может
+содержать поле `date` (ISO YYYY-MM-DD) — пост выходит в первый запуск с
+датой ≥ значения. Публикуется первый pending без `date` или с `date` ≤
+сегодняшнего дня. Если очередь не пуста, но все pending с датами в будущем —
+сообщение «не время» и код 0 (штатное завершение, обёртка не считает это
+ошибкой). Дни с пустым слотом (день тишины) просто пропускаются.
 """
 
 import json
@@ -88,6 +95,16 @@ def read_front_matter(path: Path) -> dict:
     return data
 
 
+def parse_date(value):
+    """ISO-дата из записи плана (YYYY-MM-DD) или None, если даты нет/она битая."""
+    if not value:
+        return None
+    try:
+        return datetime.strptime(str(value), "%Y-%m-%d").date()
+    except ValueError:
+        return None
+
+
 def main() -> None:
     args = sys.argv[1:]
     plan_path = PLAN
@@ -114,8 +131,10 @@ def main() -> None:
     for item in posts:
         mark = {"pending": " ", "published": "x", "skipped": "-"}.get(item.get("status"), "?")
         extra = ""
+        if item.get("date"):
+            extra += f" (date: {item['date']})"
         if item.get("url"):
-            extra = " " + item["url"]
+            extra += " " + item["url"]
         say(f"  [{mark}] {item.get('id')}. {Path(item.get('file', '')).name} "
             f"({item.get('status')}){extra}")
 
@@ -123,13 +142,31 @@ def main() -> None:
         flush()
         return
 
-    pending = next((p for p in posts if p.get("status") == "pending"), None)
-    if not pending:
+    now = datetime.now(MSK)
+    today = now.date()
+    pendings = [p for p in posts if p.get("status") == "pending"]
+    if not pendings:
         say("все посты плана опубликованы — новых задач нет")
         flush()
         return
 
-    now = datetime.now(MSK)
+    # Date-gate: первый pending без даты или с датой <= сегодня.
+    pending = None
+    for p in pendings:
+        d = parse_date(p.get("date"))
+        if d is None or d <= today:
+            pending = p
+            break
+    if pending is None:
+        nearest = min((d for d in (parse_date(p.get("date")) for p in pendings) if d))
+        say("")
+        say(f"сейчас: {now.strftime('%Y-%m-%d %H:%M:%S MSK')}")
+        say(f"очередь не пуста ({len(pendings)} pending), но ближайший пост "
+            f"запланирован на {nearest.isoformat()} — сегодня не публикуем "
+            f"(день тишины / будущая дата), код 0")
+        flush()
+        return
+
     say("")
     say(f"сейчас:         {now.strftime('%Y-%m-%d %H:%M:%S MSK')}")
     say(f"следующий пост: {Path(pending['file']).name}")
