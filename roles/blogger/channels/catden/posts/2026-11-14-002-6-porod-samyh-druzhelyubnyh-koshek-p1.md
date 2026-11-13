@@ -3,6 +3,7 @@ channel: catden
 status: approved
 format: markdown
 notify: true
+image_file: nev/posting/images/002-6-porod-samyh-druzhelyubnyh-koshek-p1.png
 source: nev/6 пород самых дружелюбных кошек.docx
 series: 002
 part: 1/1
