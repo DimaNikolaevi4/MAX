@@ -1,9 +1,14 @@
 ---
 channel: na100
-status: approved
+status: published
 format: markdown
 notify: true
+published_at: 2026-11-13T06:26:23+03:00
+message_id: mid.ffffba08e9ee9aa301a1d2f127f22d70
+channel_id: -76927529477469
+url: https://max.ru/channel_na100/AaHS8SfyLXA
 image_file: local/digest/cover-2026-11-13-pyaterka-tehnologij.png
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCSUX--SXTvO00T5MsGcA-DRtQj9GiqnpQekm4p9vb7IGAaC-4cuuyBA2Io4_AZN4hm1DLhw5q97Orh7rwERJXg
 ---
 
 **Nvidia без Хуанга, сбой Outlook и чипы Google для агентов**
