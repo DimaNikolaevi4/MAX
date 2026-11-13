@@ -1,0 +1,2094 @@
+{
+  "tasks": [
+    {
+      "id": "max-2026-10-14-dostupnye-iz-rossii-iiagenty-chto-realno",
+      "title": "[AI] 🤖 Доступные из России ИИ-агенты: что реально работает",
+      "when": "2026-10-14",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-10-14-dostupnye-iz-rossii-iiagenty-chto-realno.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-20-gayd-po-qwen-kakuyu-model-vybrat",
+      "title": "[AI] 🧠 Гайд по Qwen: какую модель выбрать и где пользоваться бесплатно",
+      "when": "2026-10-20",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-10-20-gayd-po-qwen-kakuyu-model-vybrat.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-20-kak-na-ii-zarabatyvayut",
+      "title": "[AI] 💰 Как на ИИ зарабатывают",
+      "when": "2026-10-20",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-10-20-kak-na-ii-zarabatyvayut.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-22-kakuyu-model-glm-vybrat-polnyy-gid",
+      "title": "[AI] 🧠 Какую модель GLM выбрать? Полный гид по «мозгам» Z.ai",
+      "when": "2026-10-22",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-10-22-kakuyu-model-glm-vybrat-polnyy-gid.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-22-layfhakizaiskrytye-fishki-interfeysa-i-gotovye-scenarii",
+      "title": "[AI] 🛠 Лайфхаки Z.ai: скрытые фишки интерфейса и готовые сценарии",
+      "when": "2026-10-22",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-10-22-layfhakizaiskrytye-fishki-interfeysa-i-gotovye-scenarii.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-24-zaiobnovilsya-teper-eto-polnocennaya-rabochaya-sreda",
+      "title": "[AI] 📁 Z.ai обновился: теперь это полноценная рабочая среда!",
+      "when": "2026-10-24",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-10-24-zaiobnovilsya-teper-eto-polnocennaya-rabochaya-sreda.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-29-brauzernye-aiagenty-ustupayut-rabochemu-stolu",
+      "title": "[AI] 🧭 Браузерные ИИ-агенты сдают позиции: индустрия перебирается на рабочий стол",
+      "when": "2026-10-29",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-10-29-brauzernye-aiagenty-ustupayut-rabochemu-stolu.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-29-kanal-obedinyaetsya-s-ai",
+      "title": "[Администрирование каналов] 🚀 Канал объединяется с AI: инструменты для авторов каналов теперь там",
+      "when": "2026-10-29",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/administrator/posts/2026-10-29-kanal-obedinyaetsya-s-ai.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-29-kto-vedet-etot-kanal",
+      "title": "[AI] ⚙️ Кто ведёт этот канал — и что я могу сделать для вашего",
+      "when": "2026-10-29",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-10-29-kto-vedet-etot-kanal.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-29-chem-delalsya-poludnica-instrumenty",
+      "title": "[AI] 🛠 Чем делался «Полудница»: четыре инструмента в связке",
+      "when": "2026-10-30",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-10-29-chem-delalsya-poludnica-instrumenty.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-29-pajplajn-poludnicy-ot-knigi-do-youtube",
+      "title": "[AI] ⚙️ Пайплайн нейро-мультфильма: от текста книги до YouTube",
+      "when": "2026-10-30",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-10-29-pajplajn-poludnicy-ot-knigi-do-youtube.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-29-poludnica-kak-nachinalas-istoriya",
+      "title": "[AI] 🎬 Нейро-мультфильм «Полудница»: как это начиналось",
+      "when": "2026-10-30",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-10-29-poludnica-kak-nachinalas-istoriya.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-30-ii-agent-dlya-kanala",
+      "title": "[Администрирование каналов] 🛠 ИИ-агент для канала: что уже можно автоматизировать",
+      "when": "2026-10-30",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/administrator/posts/2026-10-30-ii-agent-dlya-kanala.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-30-kanal-pereezzhaet-v-max",
+      "title": "[Нейро Мульт Студия] 🎬 Канал переезжает в MAX",
+      "when": "2026-10-30",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/tg_neuro/posts/2026-10-30-kanal-pereezzhaet-v-max.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-31-bot-api-max",
+      "title": "[Администрирование каналов] 🛠 Bot API MAX: что реально умеет бот канала",
+      "when": "2026-10-31",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/administrator/posts/2026-10-31-bot-api-max.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-31-gotovaya-seriya-multfilma",
+      "title": "[AI] 🎬 Готовая серия мультфильма: переход от кадров к полноценному эпизоду",
+      "when": "2026-10-31",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-10-31-gotovaya-seriya-multfilma.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-10-31-pajplajn-serii-ot-knigi-do-youtube",
+      "title": "[Нейро Мульт Студия] 🎬 Как книга становится мультфильмом",
+      "when": "2026-10-31",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/tg_neuro/posts/2026-10-31-pajplajn-serii-ot-knigi-do-youtube.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-01-ii-kartinki-v-kommercii",
+      "title": "[AI] 🧠 Можно ли брать ИИ-картинки в коммерцию: разбор по сервисам",
+      "when": "2026-11-01",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-01-ii-kartinki-v-kommercii.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-01-kontent-plan-na-nedelyu",
+      "title": "[Администрирование каналов] 📅 Контент-план на неделю: как собрать его с ИИ за час",
+      "when": "2026-11-01",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/administrator/posts/2026-11-01-kontent-plan-na-nedelyu.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-01-ruchnaya-rabota",
+      "title": "[Нейро Мульт Студия] 🎨 Ручная работа, которую ИИ не заменит",
+      "when": "2026-11-01",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/tg_neuro/posts/2026-11-01-ruchnaya-rabota.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-02-chto-delegirovat-botu",
+      "title": "[Администрирование каналов] 🤝 Что делегировать боту, а что оставить себе",
+      "when": "2026-11-02",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/administrator/posts/2026-11-02-chto-delegirovat-botu.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-03-metriki-kanala",
+      "title": "[Администрирование каналов] 📊 Пять метрик канала, которые стоит смотреть раз в неделю",
+      "when": "2026-11-03",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/administrator/posts/2026-11-03-metriki-kanala.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-04-posledniy-post-gde-vas-zhdut",
+      "title": "[Администрирование каналов] 🚪 Мы переехали на AI",
+      "when": "2026-11-04",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/administrator/posts/2026-11-04-posledniy-post-gde-vas-zhdut.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-04-posledniy-post-zdes",
+      "title": "[Нейро Мульт Студия] 🚪 Мы переехали на AI",
+      "when": "2026-11-04",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/tg_neuro/posts/2026-11-04-posledniy-post-zdes.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-06-otchetnost-bez-rutiny-desktop-agenty",
+      "title": "[AI] 📊 Отчётность без рутины: десктопные ИИ-агенты на практике",
+      "when": "2026-11-06",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-06-otchetnost-bez-rutiny-desktop-agenty.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-07-glavnoe-za-nedelyu-v-ii-5-novostey",
+      "title": "[AI] 🗞 Главное за неделю: 5 новостей ИИ, которые изменят работу",
+      "when": "2026-11-07",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-07-glavnoe-za-nedelyu-v-ii-5-novostey.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-08-ii-sekretar-pochta-i-3-prompta",
+      "title": "[AI] 📩 ИИ-секретарь: почта и 3 промпта на каждый день",
+      "when": "2026-11-08",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-08-ii-sekretar-pochta-i-3-prompta.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-08-mama-asfaltoukladchik",
+      "title": "[Забавное] Мама меня возьму асфальтоукладчиком?",
+      "when": "2026-11-08",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-08-mama-asfaltoukladchik.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-08-test-vkusno-i-stilno",
+      "title": "[Забавное] вкусно и стильно",
+      "when": "2026-11-08",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-08-test-vkusno-i-stilno.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-09-besplatnyy-ii-dlya-bota-5-putey",
+      "title": "[AI] 🧭 Как подключить бесплатный ИИ к боту из России: 5 путей",
+      "when": "2026-11-09",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-09-besplatnyy-ii-dlya-bota-5-putey.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-09-dorozhnye-raboty",
+      "title": "[Забавное] Быстрее нас ждут дорожные работы",
+      "when": "2026-11-09",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-09-dorozhnye-raboty.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-09-konusy-i-medvezhonok",
+      "title": "[Забавное] Конусы и медвежонок Момота",
+      "when": "2026-11-09",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-09-konusy-i-medvezhonok.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-plan-1",
+      "title": "[Забавное] Быстрее нас ждут дорожные работы",
+      "when": "2026-11-09",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-09-dorozhnye-raboty.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-plan-2",
+      "title": "[Забавное] Конусы и медвежонок Момота",
+      "when": "2026-11-09",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-09-konusy-i-medvezhonok.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-09-momota-konusy",
+      "title": "[Забавное] 🧡 Медвежонок Момота снова взрывает интернет — и на этот раз причина максимально ",
+      "when": "2026-11-10",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-09-momota-konusy.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-10-dobroe-utro",
+      "title": "[Забавное] Доброе утро",
+      "when": "2026-11-10",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-10-dobroe-utro.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-10-kak-avtomatiziroval-kanal-opencode-github",
+      "title": "[AI] 🚀 Как я автоматизировал канал и рутину на OpenCode и GitHub",
+      "when": "2026-11-10",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-10-kak-avtomatiziroval-kanal-opencode-github.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-10-kanal-zakroetsya-smenit-temu",
+      "title": "[Ozon Находки] 🛍 Канал про Ozon закрывается — тема будет другой",
+      "when": "2026-11-10",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ozon_group/posts/2026-11-10-kanal-zakroetsya-smenit-temu.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-10-ne-spor-so-mnoy",
+      "title": "[Забавное] Не спорь со мной",
+      "when": "2026-11-10",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-10-ne-spor-so-mnoy.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-10-pauza-so-zveryami",
+      "title": "[Администрирование каналов] 🧡 Админская пауза: канал «Забавное»",
+      "when": "2026-11-10",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/administrator/posts/2026-11-10-pauza-so-zveryami.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-10-random-AaBjKoy8PGM",
+      "title": "[Забавное] Львенок учится рычать 🦁",
+      "when": "2026-11-10",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-10-random-AaBjKoy8PGM.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-10-random-AaE61N2beGI",
+      "title": "[Забавное] У вас борт съедобный?",
+      "when": "2026-11-10",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-10-random-AaE61N2beGI.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-10-zabavnoe-vmesto-skidok",
+      "title": "[Ozon Находки] 🧡 Пока канал «на паузе» — есть «Забавное»",
+      "when": "2026-11-10",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ozon_group/posts/2026-11-10-zabavnoe-vmesto-skidok.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-plan-3",
+      "title": "[Забавное] 🧡 Медвежонок Момота снова взрывает интернет — и на этот раз причина максимально ",
+      "when": "2026-11-10",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-09-momota-konusy.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-plan-4",
+      "title": "[Забавное] Львенок учится рычать 🦁",
+      "when": "2026-11-10",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-10-random-AaBjKoy8PGM.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-plan-5",
+      "title": "[Забавное] У вас борт съедобный?",
+      "when": "2026-11-10",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-10-random-AaE61N2beGI.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-02-vtoraya-chast-chto-dalshe",
+      "title": "[Нейро Мульт Студия] 🎬 Вторая часть «Полудницы»: что уже готово",
+      "when": "2026-11-11",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/tg_neuro/posts/2026-11-02-vtoraya-chast-chto-dalshe.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-03-otvety-na-voprosy",
+      "title": "[Нейро Мульт Студия] 💬 Отвечаю на вопросы из комментариев",
+      "when": "2026-11-11",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/tg_neuro/posts/2026-11-03-otvety-na-voprosy.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-10-zveri-i-ulybki",
+      "title": "[Нейро Мульт Студия] 🧡 Пока здесь тишина — есть «Забавное»",
+      "when": "2026-11-11",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/tg_neuro/posts/2026-11-10-zveri-i-ulybki.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-11-bot-publikuet-peredyshka",
+      "title": "[AI] Бот публикует — вы выдыхаете: где здесь передышка",
+      "when": "2026-11-11",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-11-bot-publikuet-peredyshka.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-11-pyaterka-tehnologij",
+      "title": "[Новости технологий ИИ, нейросетей и инноваций] Видеокарты подорожают, ИИ — в ядерной повестке: итоги дня",
+      "when": "2026-11-11",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/na100/posts/2026-11-11-pyaterka-tehnologij.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-11-random-AaDuHkKvTRk",
+      "title": "[Забавное] Тревожный сон",
+      "when": "2026-11-11",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-11-random-AaDuHkKvTRk.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-11-test-zastavka-2-paper-video",
+      "title": "[Новости технологий ИИ, нейросетей и инноваций] Скандал в Nvidia, IPO за $1,4 трлн и санкции: итоги дня",
+      "when": "2026-11-11",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/na100/posts/2026-11-11-test-zastavka-2-paper-video.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-plan-6",
+      "title": "[Забавное] Тревожный сон",
+      "when": "2026-11-11",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-11-random-AaDuHkKvTRk.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-12-001-4-samyh-dorogih-porody-koshek-p1",
+      "title": "[Коты, кошки и котята] 4 самых дорогих породы кошек",
+      "when": "2026-11-12",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/catden/posts/2026-11-12-001-4-samyh-dorogih-porody-koshek-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-12-pyaterka-tehnologij",
+      "title": "[Новости технологий ИИ, нейросетей и инноваций] Отставка Хуанга, дешёвый Gemini и британский вызов Nvidia",
+      "when": "2026-11-12",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/na100/posts/2026-11-12-pyaterka-tehnologij.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-12-random-AaG6GTdXByw",
+      "title": "[Забавное] Пит стоп на мойку",
+      "when": "2026-11-12",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-12-random-AaG6GTdXByw.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-12-umnyy-tochnyy-besplatnyy-iz-chego-sobrat-ii-pomoschnika",
+      "title": "[AI] Из чего состоит мой ИИ-помощник: стек, который реально работает",
+      "when": "2026-11-12",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-12-umnyy-tochnyy-besplatnyy-iz-chego-sobrat-ii-pomoschnika.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-plan-7",
+      "title": "[Забавное] Пит стоп на мойку",
+      "when": "2026-11-12",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-12-random-AaG6GTdXByw.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-13-001-4-samyh-dorogih-porody-koshek-img1",
+      "title": "[Коты, кошки и котята] Напишите в комментариях, что за порода",
+      "when": "2026-11-13",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/catden/posts/2026-11-13-001-4-samyh-dorogih-porody-koshek-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-13-10-besplatnyh-neyrosetey-chto-realno-rabotaet",
+      "title": "[AI] 10 бесплатных нейросетей, доступных из России",
+      "when": "2026-11-13",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-13-10-besplatnyh-neyrosetey-chto-realno-rabotaet.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-13-pyaterka-tehnologij",
+      "title": "[Новости технологий ИИ, нейросетей и инноваций] Nvidia без Хуанга, сбой Outlook и чипы Google для агентов",
+      "when": "2026-11-13",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/na100/posts/2026-11-13-pyaterka-tehnologij.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-13-random-AaExPA8BQug",
+      "title": "[Забавное] Релакс",
+      "when": "2026-11-13",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AaExPA8BQug.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-plan-8",
+      "title": "[Забавное] Релакс",
+      "when": "2026-11-13",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AaExPA8BQug.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-14-002-6-porod-samyh-druzhelyubnyh-koshek-p1",
+      "title": "[Коты, кошки и котята] 6 пород самых дружелюбных кошек",
+      "when": "2026-11-14",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-11-14-002-6-porod-samyh-druzhelyubnyh-koshek-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-14-glavnoe-za-nedelyu-v-ii-5-novostey",
+      "title": "[AI] ИИ за неделю: смена караула",
+      "when": "2026-11-14",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «AI»",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-14-glavnoe-za-nedelyu-v-ii-5-novostey.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-plan-10",
+      "title": "[Забавное] Исчезновение",
+      "when": "2026-11-14",
+      "time": null,
+      "status": "scheduled",
+      "why": "выход из плана в 07:16",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AaBx64qmOCI.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-plan-11",
+      "title": "[Забавное] Верни детей, бессовестная!",
+      "when": "2026-11-14",
+      "time": null,
+      "status": "scheduled",
+      "why": "выход из плана в 07:16",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AaBjKuaED2A.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-plan-12",
+      "title": "[Забавное] Созерцатель",
+      "when": "2026-11-14",
+      "time": null,
+      "status": "scheduled",
+      "why": "выход из плана в 07:16",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AaBZQbBWJBk.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-plan-9",
+      "title": "[Забавное] Видео с маленьким тюленем — детенышем кольчатой нерпы опубликовали в соцсетях Ка",
+      "when": "2026-11-14",
+      "time": null,
+      "status": "scheduled",
+      "why": "выход из плана в 07:16",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AZ_vltJBaJU.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-16-004-71-letnyaya-zhenschina-dokazala-chto-nikogda-ne-img1",
+      "title": "[Коты, кошки и котята] Подробности завтра",
+      "when": "2026-11-16",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-11-16-004-71-letnyaya-zhenschina-dokazala-chto-nikogda-ne-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-17-004-71-letnyaya-zhenschina-dokazala-chto-nikogda-ne-p1",
+      "title": "[Коты, кошки и котята] 71-летняя женщина доказала, что никогда не поздно получить татуировку",
+      "when": "2026-11-17",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-11-17-004-71-letnyaya-zhenschina-dokazala-chto-nikogda-ne-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-18-005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-img1",
+      "title": "[Коты, кошки и котята] На фото — герои завтрашнего выпуска",
+      "when": "2026-11-18",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-11-18-005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-19-005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-p1",
+      "title": "[Коты, кошки и котята] 8 самых красивых длинношерстных пород кошек",
+      "when": "2026-11-19",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-11-19-005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-20-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-img1",
+      "title": "[Коты, кошки и котята] Герои завтрашнего поста",
+      "when": "2026-11-20",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-11-20-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-21-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-p1",
+      "title": "[Коты, кошки и котята] 9 самых красивых короткошерстных пород кошек",
+      "when": "2026-11-21",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-11-21-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-23-007-bengalskiy-kot-leopard-v-vashem-dome-p1",
+      "title": "[Коты, кошки и котята] Бенгальский кот — леопард в вашем доме",
+      "when": "2026-11-23",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-11-23-007-bengalskiy-kot-leopard-v-vashem-dome-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-24-003-6-unikalnyh-porod-koshek-img1",
+      "title": "[Коты, кошки и котята] На фото — герои завтрашней статьи",
+      "when": "2026-11-24",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-11-24-003-6-unikalnyh-porod-koshek-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-25-003-6-unikalnyh-porod-koshek-p1",
+      "title": "[Коты, кошки и котята] 6 уникальных пород кошек",
+      "when": "2026-11-25",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-11-25-003-6-unikalnyh-porod-koshek-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-02-007-bengalskiy-kot-leopard-v-vashem-dome-img1",
+      "title": "[Коты, кошки и котята] Фото из статьи",
+      "when": "2026-12-02",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-02-007-bengalskiy-kot-leopard-v-vashem-dome-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-04-008-bogi-sredi-nas-p1",
+      "title": "[Коты, кошки и котята] Боги среди нас",
+      "when": "2026-12-04",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-04-008-bogi-sredi-nas-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-05-008-bogi-sredi-nas-img1",
+      "title": "[Коты, кошки и котята] Смотрите фото",
+      "when": "2026-12-05",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-05-008-bogi-sredi-nas-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-07-009-v-detstve-p1",
+      "title": "[Коты, кошки и котята] В детстве",
+      "when": "2026-12-07",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-07-009-v-detstve-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-09-010-vash-kotenok-p1",
+      "title": "[Коты, кошки и котята] ВАШ КОТЕНОК",
+      "when": "2026-12-09",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-09-010-vash-kotenok-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-11-010-vash-kotenok-p2",
+      "title": "[Коты, кошки и котята] Кормление",
+      "when": "2026-12-11",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-11-010-vash-kotenok-p2.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-13-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-p1",
+      "title": "[Коты, кошки и котята] Власти США выделят 1,5 миллиона долларов для подсчета диких кошек в Вашингтоне",
+      "when": "2026-12-13",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-13-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-14-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-img1",
+      "title": "[Коты, кошки и котята] Картинки к статье",
+      "when": "2026-12-14",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-14-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-16-012-vozniknovenie-porody-sibirskih-koshek-p1",
+      "title": "[Коты, кошки и котята] Возникновение породы сибирских кошек",
+      "when": "2026-12-16",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-16-012-vozniknovenie-porody-sibirskih-koshek-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-17-012-vozniknovenie-porody-sibirskih-koshek-img1",
+      "title": "[Коты, кошки и котята] Порода в кадре",
+      "when": "2026-12-17",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-17-012-vozniknovenie-porody-sibirskih-koshek-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-19-013-vse-o-persidskih-koshkah-p1",
+      "title": "[Коты, кошки и котята] Все о персидских кошках!",
+      "when": "2026-12-19",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-19-013-vse-o-persidskih-koshkah-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-21-014-vy-gotovy-zavesti-koshku-p1",
+      "title": "[Коты, кошки и котята] Вы готовы завести кошку?",
+      "when": "2026-12-21",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-21-014-vy-gotovy-zavesti-koshku-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-22-014-vy-gotovy-zavesti-koshku-img1",
+      "title": "[Коты, кошки и котята] Иллюстрации к статье",
+      "when": "2026-12-22",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-22-014-vy-gotovy-zavesti-koshku-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-24-015-vy-mozhete-poluchit-realnuyu-rabotu-obnimayas-s-p1",
+      "title": "[Коты, кошки и котята] Вы можете получить реальную работу, обнимаясь с кошками весь день",
+      "when": "2026-12-24",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-24-015-vy-mozhete-poluchit-realnuyu-rabotu-obnimayas-s-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-25-015-vy-mozhete-poluchit-realnuyu-rabotu-obnimayas-s-img1",
+      "title": "[Коты, кошки и котята] Фото: продолжение",
+      "when": "2026-12-25",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-25-015-vy-mozhete-poluchit-realnuyu-rabotu-obnimayas-s-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-27-016-gimalayskie-koshki-p1",
+      "title": "[Коты, кошки и котята] Гималайские кошки",
+      "when": "2026-12-27",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-27-016-gimalayskie-koshki-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-28-016-gimalayskie-koshki-img1",
+      "title": "[Коты, кошки и котята] Фото из статьи",
+      "when": "2026-12-28",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-28-016-gimalayskie-koshki-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-30-017-loki-p1",
+      "title": "[Коты, кошки и котята] Локи",
+      "when": "2026-12-30",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2026-12-30-017-loki-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-01-018-timoha-p1",
+      "title": "[Коты, кошки и котята] Тимоха",
+      "when": "2027-01-01",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-01-018-timoha-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-03-019-statya-solopov-p1",
+      "title": "[Коты, кошки и котята] Статья солопов",
+      "when": "2027-01-03",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-03-019-statya-solopov-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-05-020-6-unikalnyh-porod-koshek-p1",
+      "title": "[Коты, кошки и котята] 6 уникальных пород кошек",
+      "when": "2027-01-05",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-05-020-6-unikalnyh-porod-koshek-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-06-020-6-unikalnyh-porod-koshek-img1",
+      "title": "[Коты, кошки и котята] Ещё фото породы",
+      "when": "2027-01-06",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-06-020-6-unikalnyh-porod-koshek-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-08-021-dohod-na-burmancah-p1",
+      "title": "[Коты, кошки и котята] Доход на бурманцах",
+      "when": "2027-01-08",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-08-021-dohod-na-burmancah-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-09-021-dohod-na-burmancah-img1",
+      "title": "[Коты, кошки и котята] Картинки к статье",
+      "when": "2027-01-09",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-09-021-dohod-na-burmancah-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-11-022-drevnie-ritualy-s-koshkami-p1",
+      "title": "[Коты, кошки и котята] Древние ритуалы с кошками",
+      "when": "2027-01-11",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-11-022-drevnie-ritualy-s-koshkami-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-12-022-drevnie-ritualy-s-koshkami-img1",
+      "title": "[Коты, кошки и котята] Порода в кадре",
+      "when": "2027-01-12",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-12-022-drevnie-ritualy-s-koshkami-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-14-023-druzhba-sobak-i-koshek-p1",
+      "title": "[Коты, кошки и котята] Дружба собак и кошек.",
+      "when": "2027-01-14",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-14-023-druzhba-sobak-i-koshek-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-15-023-druzhba-sobak-i-koshek-img1",
+      "title": "[Коты, кошки и котята] Фото к посту",
+      "when": "2027-01-15",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-15-023-druzhba-sobak-i-koshek-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-17-024-zhizn-sfinksov-p1",
+      "title": "[Коты, кошки и котята] Жизнь сфинксов",
+      "when": "2027-01-17",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-17-024-zhizn-sfinksov-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-18-024-zhizn-sfinksov-img1",
+      "title": "[Коты, кошки и котята] Ещё фото породы",
+      "when": "2027-01-18",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-18-024-zhizn-sfinksov-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-20-025-zhizn-tihona-v-gostyah-p1",
+      "title": "[Коты, кошки и котята] Жизнь Тихона в гостях",
+      "when": "2027-01-20",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-20-025-zhizn-tihona-v-gostyah-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-21-025-zhizn-tihona-v-gostyah-img1",
+      "title": "[Коты, кошки и котята] Картинки к статье",
+      "when": "2027-01-21",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-21-025-zhizn-tihona-v-gostyah-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-23-026-21-noyabrya-p1",
+      "title": "[Коты, кошки и котята] Жуковский парк",
+      "when": "2027-01-23",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-23-026-21-noyabrya-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-24-026-21-noyabrya-img1",
+      "title": "[Коты, кошки и котята] Порода в кадре",
+      "when": "2027-01-24",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-24-026-21-noyabrya-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-26-027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-p1",
+      "title": "[Коты, кошки и котята] Исследователи анализируют ДНК 209 древних кошек, живших до нашей эры",
+      "when": "2027-01-26",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-26-027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-27-027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-img1",
+      "title": "[Коты, кошки и котята] Фото к посту",
+      "when": "2027-01-27",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-27-027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-29-028-istoriya-1-pobedy-knyazya-svyatoslava-glazami-ko-p1",
+      "title": "[Коты, кошки и котята] История 1 победы князя Святослава глазами кошки Муськи",
+      "when": "2027-01-29",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-29-028-istoriya-1-pobedy-knyazya-svyatoslava-glazami-ko-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-30-028-istoriya-1-pobedy-knyazya-svyatoslava-glazami-ko-img1",
+      "title": "[Коты, кошки и котята] Ещё фото породы",
+      "when": "2027-01-30",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-01-30-028-istoriya-1-pobedy-knyazya-svyatoslava-glazami-ko-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-01-029-istoriya-koshachih-p1",
+      "title": "[Коты, кошки и котята] История кошачьих",
+      "when": "2027-02-01",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-01-029-istoriya-koshachih-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-02-029-istoriya-koshachih-img1",
+      "title": "[Коты, кошки и котята] Картинки к статье",
+      "when": "2027-02-02",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-02-029-istoriya-koshachih-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-04-030-kak-vybrat-kotenka-p1",
+      "title": "[Коты, кошки и котята] Как выбрать котенка",
+      "when": "2027-02-04",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-04-030-kak-vybrat-kotenka-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-05-030-kak-vybrat-kotenka-img1",
+      "title": "[Коты, кошки и котята] Порода в кадре",
+      "when": "2027-02-05",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-05-030-kak-vybrat-kotenka-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-07-031-kak-zhit-s-britanskim-vislouhim-chudom-p1",
+      "title": "[Коты, кошки и котята] Как жить с британским вислоухим чудом.",
+      "when": "2027-02-07",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-07-031-kak-zhit-s-britanskim-vislouhim-chudom-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-08-031-kak-zhit-s-britanskim-vislouhim-chudom-img1",
+      "title": "[Коты, кошки и котята] Фото к посту",
+      "when": "2027-02-08",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-08-031-kak-zhit-s-britanskim-vislouhim-chudom-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-10-032-kak-kot-huang-minzh-pomog-sovetskomu-razvedchiku-p1",
+      "title": "[Коты, кошки и котята] Как кот Хуанг Минж помог советскому разведчику.",
+      "when": "2027-02-10",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-10-032-kak-kot-huang-minzh-pomog-sovetskomu-razvedchiku-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-11-032-kak-kot-huang-minzh-pomog-sovetskomu-razvedchiku-img1",
+      "title": "[Коты, кошки и котята] Ещё фото породы",
+      "when": "2027-02-11",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-11-032-kak-kot-huang-minzh-pomog-sovetskomu-razvedchiku-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-13-033-kak-poyavilas-poroda-amerikanskiy-kerl-p1",
+      "title": "[Коты, кошки и котята] Как появилась порода Американский кёрл",
+      "when": "2027-02-13",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-13-033-kak-poyavilas-poroda-amerikanskiy-kerl-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-14-033-kak-poyavilas-poroda-amerikanskiy-kerl-img1",
+      "title": "[Коты, кошки и котята] Картинки к статье",
+      "when": "2027-02-14",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-14-033-kak-poyavilas-poroda-amerikanskiy-kerl-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-16-034-kak-uznat-znak-zodiaka-svoego-pitomca-p1",
+      "title": "[Коты, кошки и котята] Как узнать знак Зодиака своего питомца",
+      "when": "2027-02-16",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-16-034-kak-uznat-znak-zodiaka-svoego-pitomca-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-17-034-kak-uznat-znak-zodiaka-svoego-pitomca-img1",
+      "title": "[Коты, кошки и котята] Порода в кадре",
+      "when": "2027-02-17",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-17-034-kak-uznat-znak-zodiaka-svoego-pitomca-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-19-035-karina-i-sebastyan-p1",
+      "title": "[Коты, кошки и котята] Карина и Себастьян",
+      "when": "2027-02-19",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-19-035-karina-i-sebastyan-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-20-035-karina-i-sebastyan-img1",
+      "title": "[Коты, кошки и котята] Фото к посту",
+      "when": "2027-02-20",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-20-035-karina-i-sebastyan-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-22-036-kot-alyr-nastavil-na-put-istinnyy-mazhora-sergey-p1",
+      "title": "[Коты, кошки и котята] Кот Алыр наставил на путь истинный мажора Сергея.",
+      "when": "2027-02-22",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-22-036-kot-alyr-nastavil-na-put-istinnyy-mazhora-sergey-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-23-036-kot-alyr-nastavil-na-put-istinnyy-mazhora-sergey-img1",
+      "title": "[Коты, кошки и котята] Ещё фото породы",
+      "when": "2027-02-23",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-23-036-kot-alyr-nastavil-na-put-istinnyy-mazhora-sergey-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-25-037-kot-zenitchik-p1",
+      "title": "[Коты, кошки и котята] Кот зенитчик",
+      "when": "2027-02-25",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-25-037-kot-zenitchik-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-02-27-038-kot-chima-i-vospominaniya-o-kerchenskom-lete-p1",
+      "title": "[Коты, кошки и котята] Кот Чима и воспоминания о Керченском лете",
+      "when": "2027-02-27",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-02-27-038-kot-chima-i-vospominaniya-o-kerchenskom-lete-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-01-038-kot-chima-i-vospominaniya-o-kerchenskom-lete-p2",
+      "title": "[Коты, кошки и котята] Кот Чима и воспоминания о Керченском лете — продолжение 2",
+      "when": "2027-03-01",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-01-038-kot-chima-i-vospominaniya-o-kerchenskom-lete-p2.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-03-039-segodnya-p1",
+      "title": "[Коты, кошки и котята] Кот электрик",
+      "when": "2027-03-03",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-03-039-segodnya-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-05-040-kotenok-za-125000-p1",
+      "title": "[Коты, кошки и котята] Котенок за 125000$",
+      "when": "2027-03-05",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-05-040-kotenok-za-125000-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-06-040-kotenok-za-125000-img1",
+      "title": "[Коты, кошки и котята] Фото к посту",
+      "when": "2027-03-06",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-06-040-kotenok-za-125000-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-08-041-koshache-zrenie-p1",
+      "title": "[Коты, кошки и котята] Кошачье зрение",
+      "when": "2027-03-08",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-08-041-koshache-zrenie-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-09-041-koshache-zrenie-img1",
+      "title": "[Коты, кошки и котята] Ещё фото породы",
+      "when": "2027-03-09",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-09-041-koshache-zrenie-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-11-042-koshachya-semya-p1",
+      "title": "[Коты, кошки и котята] Кошачья семья",
+      "when": "2027-03-11",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-11-042-koshachya-semya-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-12-042-koshachya-semya-img1",
+      "title": "[Коты, кошки и котята] Картинки к статье",
+      "when": "2027-03-12",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-12-042-koshachya-semya-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-14-043-koshka-alisa-lyubit-igrat-slushat-muzyku-i-posha-p1",
+      "title": "[Коты, кошки и котята] Кошка Алиса любит играть, слушать музыку и пошалить",
+      "when": "2027-03-14",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-14-043-koshka-alisa-lyubit-igrat-slushat-muzyku-i-posha-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-16-044-koshki-i-koty-nashego-dvora-p1",
+      "title": "[Коты, кошки и котята] Кошки и коты нашего двора",
+      "when": "2027-03-16",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-16-044-koshki-i-koty-nashego-dvora-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-18-045-koshki-hozyayushki-p1",
+      "title": "[Коты, кошки и котята] Кошки хозяюшки",
+      "when": "2027-03-18",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-18-045-koshki-hozyayushki-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-19-045-koshki-hozyayushki-img1",
+      "title": "[Коты, кошки и котята] Фото к посту",
+      "when": "2027-03-19",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-19-045-koshki-hozyayushki-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-21-046-lechim-pravilno-p1",
+      "title": "[Коты, кошки и котята] Лечим правильно",
+      "when": "2027-03-21",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-21-046-lechim-pravilno-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-22-046-lechim-pravilno-img1",
+      "title": "[Коты, кошки и котята] Ещё фото породы",
+      "when": "2027-03-22",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-22-046-lechim-pravilno-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-24-047-lyusinda-moe-ryzhee-lekarstvo-ot-handry-p1",
+      "title": "[Коты, кошки и котята] Люсинда мое рыжее лекарство от хандры",
+      "when": "2027-03-24",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-24-047-lyusinda-moe-ryzhee-lekarstvo-ot-handry-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-26-048-manuly-p1",
+      "title": "[Коты, кошки и котята] Манулы",
+      "when": "2027-03-26",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-26-048-manuly-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-27-048-manuly-img1",
+      "title": "[Коты, кошки и котята] Фото из статьи",
+      "when": "2027-03-27",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-27-048-manuly-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-29-049-morozhenoe-dlya-koshek-p1",
+      "title": "[Коты, кошки и котята] Мороженое для кошек",
+      "when": "2027-03-29",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-29-049-morozhenoe-dlya-koshek-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-03-30-049-morozhenoe-dlya-koshek-img1",
+      "title": "[Коты, кошки и котята] Смотрите фото",
+      "when": "2027-03-30",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-03-30-049-morozhenoe-dlya-koshek-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-01-050-murzik-i-chipsy-nash-malenkiy-sekret-p1",
+      "title": "[Коты, кошки и котята] Мурзик и чипсы. Наш маленький секрет",
+      "when": "2027-04-01",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-01-050-murzik-i-chipsy-nash-malenkiy-sekret-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-03-051-nebelung-p1",
+      "title": "[Коты, кошки и котята] Небелунг",
+      "when": "2027-04-03",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-03-051-nebelung-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-04-051-nebelung-img1",
+      "title": "[Коты, кошки и котята] Ещё фото породы",
+      "when": "2027-04-04",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-04-051-nebelung-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-06-052-norvezhskaya-lesnaya-koshka-p1",
+      "title": "[Коты, кошки и котята] Норвежская лесная кошка",
+      "when": "2027-04-06",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-06-052-norvezhskaya-lesnaya-koshka-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-07-052-norvezhskaya-lesnaya-koshka-img1",
+      "title": "[Коты, кошки и котята] Картинки к статье",
+      "when": "2027-04-07",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-07-052-norvezhskaya-lesnaya-koshka-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-09-053-nuzhno-li-vypuskat-koshku-na-ulicu-esli-vy-zhive-p1",
+      "title": "[Коты, кошки и котята] Нужно ли выпускать кошку на улицу если вы живете за городом",
+      "when": "2027-04-09",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-09-053-nuzhno-li-vypuskat-koshku-na-ulicu-esli-vy-zhive-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-10-053-nuzhno-li-vypuskat-koshku-na-ulicu-esli-vy-zhive-img1",
+      "title": "[Коты, кошки и котята] Порода в кадре",
+      "when": "2027-04-10",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-10-053-nuzhno-li-vypuskat-koshku-na-ulicu-esli-vy-zhive-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-12-054-nuzhno-li-vypuskat-koshku-na-ulicu-p1",
+      "title": "[Коты, кошки и котята] Нужно ли выпускать кошку на улицу?",
+      "when": "2027-04-12",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-12-054-nuzhno-li-vypuskat-koshku-na-ulicu-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-13-054-nuzhno-li-vypuskat-koshku-na-ulicu-img1",
+      "title": "[Коты, кошки и котята] Фото к посту",
+      "when": "2027-04-13",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-13-054-nuzhno-li-vypuskat-koshku-na-ulicu-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-15-055-orvi-u-koshki-p1",
+      "title": "[Коты, кошки и котята] ОРВИ у кошки?",
+      "when": "2027-04-15",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-15-055-orvi-u-koshki-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-16-055-orvi-u-koshki-img1",
+      "title": "[Коты, кошки и котята] Ещё фото породы",
+      "when": "2027-04-16",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-16-055-orvi-u-koshki-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-18-056-osennee-nastroenie-p1",
+      "title": "[Коты, кошки и котята] Осеннее настроение",
+      "when": "2027-04-18",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-18-056-osennee-nastroenie-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-19-056-osennee-nastroenie-img1",
+      "title": "[Коты, кошки и котята] Картинки к статье",
+      "when": "2027-04-19",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-19-056-osennee-nastroenie-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-21-057-ot-lyubitelnicy-koshek-do-sumasshedshey-kakoe-ko-p1",
+      "title": "[Коты, кошки и котята] От любительницы кошек до сумасшедшей: какое количество кошек в доме оптимально?",
+      "when": "2027-04-21",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-21-057-ot-lyubitelnicy-koshek-do-sumasshedshey-kakoe-ko-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-22-057-ot-lyubitelnicy-koshek-do-sumasshedshey-kakoe-ko-img1",
+      "title": "[Коты, кошки и котята] Порода в кадре",
+      "when": "2027-04-22",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-22-057-ot-lyubitelnicy-koshek-do-sumasshedshey-kakoe-ko-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-24-058-ohota-shuni-p1",
+      "title": "[Коты, кошки и котята] Охота Шуни",
+      "when": "2027-04-24",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-24-058-ohota-shuni-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-25-058-ohota-shuni-img1",
+      "title": "[Коты, кошки и котята] Фото к посту",
+      "when": "2027-04-25",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-25-058-ohota-shuni-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-27-059-pereezd-tihona-p1",
+      "title": "[Коты, кошки и котята] Переезд Тихона",
+      "when": "2027-04-27",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-27-059-pereezd-tihona-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-28-059-pereezd-tihona-img1",
+      "title": "[Коты, кошки и котята] Ещё фото породы",
+      "when": "2027-04-28",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-28-059-pereezd-tihona-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-04-30-060-persidskiy-kot-p1",
+      "title": "[Коты, кошки и котята] Персидский кот",
+      "when": "2027-04-30",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-04-30-060-persidskiy-kot-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-01-060-persidskiy-kot-img1",
+      "title": "[Коты, кошки и котята] Картинки к статье",
+      "when": "2027-05-01",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-01-060-persidskiy-kot-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-03-061-peschanyy-dikiy-kot-p1",
+      "title": "[Коты, кошки и котята] НАУЧНОЕ ИМЯ (Felis margarita)",
+      "when": "2027-05-03",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-03-061-peschanyy-dikiy-kot-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-04-061-peschanyy-dikiy-kot-img1",
+      "title": "[Коты, кошки и котята] Порода в кадре",
+      "when": "2027-05-04",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-04-061-peschanyy-dikiy-kot-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-06-062-povedenie-koshek-p1",
+      "title": "[Коты, кошки и котята] Поведение кошек",
+      "when": "2027-05-06",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-06-062-povedenie-koshek-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-07-062-povedenie-koshek-img1",
+      "title": "[Коты, кошки и котята] Фото к посту",
+      "when": "2027-05-07",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-07-062-povedenie-koshek-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-09-063-pokupka-chistokrovnogo-britanca-p1",
+      "title": "[Коты, кошки и котята] Покупка чистокровного британца",
+      "when": "2027-05-09",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-09-063-pokupka-chistokrovnogo-britanca-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-10-063-pokupka-chistokrovnogo-britanca-img1",
+      "title": "[Коты, кошки и котята] Ещё фото породы",
+      "when": "2027-05-10",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-10-063-pokupka-chistokrovnogo-britanca-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-12-064-poroda-koshek-savanna-p1",
+      "title": "[Коты, кошки и котята] Порода кошек Саванна",
+      "when": "2027-05-12",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-12-064-poroda-koshek-savanna-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-13-064-poroda-koshek-savanna-img1",
+      "title": "[Коты, кошки и котята] Картинки к статье",
+      "when": "2027-05-13",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-13-064-poroda-koshek-savanna-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-15-065-poyavilsya-kotenok-p1",
+      "title": "[Коты, кошки и котята] Появился котенок?",
+      "when": "2027-05-15",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-15-065-poyavilsya-kotenok-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-17-066-progulki-koshki-alisy-p1",
+      "title": "[Коты, кошки и котята] Прогулки кошки Алисы",
+      "when": "2027-05-17",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-17-066-progulki-koshki-alisy-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-19-067-pushistoe-chudo-p1",
+      "title": "[Коты, кошки и котята] Пушистое чудо",
+      "when": "2027-05-19",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-19-067-pushistoe-chudo-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-21-068-razmyshleniya-o-chernom-kote-p1",
+      "title": "[Коты, кошки и котята] Размышления о черном коте",
+      "when": "2027-05-21",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-21-068-razmyshleniya-o-chernom-kote-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-22-068-razmyshleniya-o-chernom-kote-img1",
+      "title": "[Коты, кошки и котята] Иллюстрации к статье",
+      "when": "2027-05-22",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-22-068-razmyshleniya-o-chernom-kote-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-24-069-raznye-koty-pod-odnoy-kryshey-p1",
+      "title": "[Коты, кошки и котята] Разные коты под одной крышей.",
+      "when": "2027-05-24",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-24-069-raznye-koty-pod-odnoy-kryshey-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-26-069-raznye-koty-pod-odnoy-kryshey-p2",
+      "title": "[Коты, кошки и котята] Разные коты под одной крышей. — продолжение 2",
+      "when": "2027-05-26",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-26-069-raznye-koty-pod-odnoy-kryshey-p2.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-28-070-rodonachalnica-britanskih-korotkosherstnyh-koshe-p1",
+      "title": "[Коты, кошки и котята] Родоначальница британских короткошерстных кошек",
+      "when": "2027-05-28",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-28-070-rodonachalnica-britanskih-korotkosherstnyh-koshe-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-30-071-ryzhiy-kot-vlechet-menya-v-krym-p1",
+      "title": "[Коты, кошки и котята] Рыжий кот влечет меня в Крым",
+      "when": "2027-05-30",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-30-071-ryzhiy-kot-vlechet-menya-v-krym-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-05-31-071-ryzhiy-kot-vlechet-menya-v-krym-img1",
+      "title": "[Коты, кошки и котята] Порода в кадре",
+      "when": "2027-05-31",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-05-31-071-ryzhiy-kot-vlechet-menya-v-krym-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-06-02-072-sveta-i-matilda-p1",
+      "title": "[Коты, кошки и котята] Света и Матильда",
+      "when": "2027-06-02",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-06-02-072-sveta-i-matilda-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-06-03-072-sveta-i-matilda-img1",
+      "title": "[Коты, кошки и котята] Фото к посту",
+      "when": "2027-06-03",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-06-03-072-sveta-i-matilda-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-06-05-073-serengeti-novaya-poroda-koshek-p1",
+      "title": "[Коты, кошки и котята] Серенгети новая порода кошек",
+      "when": "2027-06-05",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-06-05-073-serengeti-novaya-poroda-koshek-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-06-06-073-serengeti-novaya-poroda-koshek-img1",
+      "title": "[Коты, кошки и котята] Ещё фото породы",
+      "when": "2027-06-06",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-06-06-073-serengeti-novaya-poroda-koshek-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-06-08-074-stihi-na-fotografiyah-p1",
+      "title": "[Коты, кошки и котята] Стихи на фотографиях",
+      "when": "2027-06-08",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-06-08-074-stihi-na-fotografiyah-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-06-09-074-stihi-na-fotografiyah-img1",
+      "title": "[Коты, кошки и котята] Картинки к статье",
+      "when": "2027-06-09",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-06-09-074-stihi-na-fotografiyah-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-06-11-075-sudba-sinora-p1",
+      "title": "[Коты, кошки и котята] Судьба Синьора",
+      "when": "2027-06-11",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-06-11-075-sudba-sinora-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-06-13-076-tipy-shersti-koshek-p1",
+      "title": "[Коты, кошки и котята] Типы шерсти кошек",
+      "when": "2027-06-13",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-06-13-076-tipy-shersti-koshek-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-06-15-077-hozyayki-ischezayut-v-polden-p1",
+      "title": "[Коты, кошки и котята] Хозяйки исчезают в полдень/личный архив",
+      "when": "2027-06-15",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-06-15-077-hozyayki-ischezayut-v-polden-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-06-16-077-hozyayki-ischezayut-v-polden-img1",
+      "title": "[Коты, кошки и котята] Фото к посту",
+      "when": "2027-06-16",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-06-16-077-hozyayki-ischezayut-v-polden-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-06-18-078-eto-pushistoe-chudo-p1",
+      "title": "[Коты, кошки и котята] Это пушистое чудо",
+      "when": "2027-06-18",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-06-18-078-eto-pushistoe-chudo-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-06-19-078-eto-pushistoe-chudo-img1",
+      "title": "[Коты, кошки и котята] Ещё фото породы",
+      "when": "2027-06-19",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
+      "link": "roles/blogger/channels/catden/posts/2027-06-19-078-eto-pushistoe-chudo-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-13-random-AZ_vltJBaJU",
+      "title": "[Забавное] Видео с маленьким тюленем — детенышем кольчатой нерпы опубликовали в соцсетях Ка",
+      "when": null,
+      "time": null,
+      "status": "backlog",
+      "why": "черновик, ждёт «ок» владельца",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AZ_vltJBaJU.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-13-random-AaBZQbBWJBk",
+      "title": "[Забавное] Созерцатель",
+      "when": null,
+      "time": null,
+      "status": "backlog",
+      "why": "черновик, ждёт «ок» владельца",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AaBZQbBWJBk.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-13-random-AaBjKuaED2A",
+      "title": "[Забавное] Верни детей, бессовестная!",
+      "when": null,
+      "time": null,
+      "status": "backlog",
+      "why": "черновик, ждёт «ок» владельца",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AaBjKuaED2A.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-13-random-AaBx64qmOCI",
+      "title": "[Забавное] Исчезновение",
+      "when": null,
+      "time": null,
+      "status": "backlog",
+      "why": "черновик, ждёт «ок» владельца",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AaBx64qmOCI.md",
+      "source": "auto"
+    }
+  ]
+}

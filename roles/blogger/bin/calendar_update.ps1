@@ -21,4 +21,8 @@ if ($now.Hour -lt 7 -or $now.Hour -ge 10) {
 
 & py 'roles\blogger\tools\build_calendar.py' --push 2>&1 |
     Out-File -Append -Encoding UTF8 $log
+& py 'roles\blogger\tools\export_plan.py' 2>&1 |
+    Out-File -Append -Encoding UTF8 $log
+& py 'E:\github\Календарь\drop.py' 'MAX' 2>&1 |
+    Out-File -Append -Encoding UTF8 $log
 exit $LASTEXITCODE
