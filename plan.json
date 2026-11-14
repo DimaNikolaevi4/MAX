@@ -1,16 +1,6 @@
 {
   "tasks": [
     {
-      "id": "max-2026-10-14-dostupnye-iz-rossii-iiagenty-chto-realno",
-      "title": "[AI] 🤖 Доступные из России ИИ-агенты: что реально работает",
-      "when": "2026-10-14",
-      "time": null,
-      "status": "done",
-      "why": "",
-      "link": "roles/blogger/channels/ainow/posts/2026-10-14-dostupnye-iz-rossii-iiagenty-chto-realno.md",
-      "source": "auto"
-    },
-    {
       "id": "max-2026-10-20-gayd-po-qwen-kakuyu-model-vybrat",
       "title": "[AI] 🧠 Гайд по Qwen: какую модель выбрать и где пользоваться бесплатно",
       "when": "2026-10-20",
@@ -641,6 +631,16 @@
       "source": "auto"
     },
     {
+      "id": "max-2026-11-13-random-AZ_vltJBaJU",
+      "title": "[Забавное] Видео с маленьким тюленем — детенышем кольчатой нерпы опубликовали в соцсетях Ка",
+      "when": "2026-11-14",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AZ_vltJBaJU.md",
+      "source": "auto"
+    },
+    {
       "id": "max-2026-11-14-002-6-porod-samyh-druzhelyubnyh-koshek-p1",
       "title": "[Коты, кошки и котята] 6 пород самых дружелюбных кошек",
       "when": "2026-11-14",
@@ -655,15 +655,35 @@
       "title": "[AI] ИИ за неделю: смена караула",
       "when": "2026-11-14",
       "time": null,
-      "status": "scheduled",
-      "why": "публикация по Планировщику, канал «AI»",
+      "status": "done",
+      "why": "",
       "link": "roles/blogger/channels/ainow/posts/2026-11-14-glavnoe-za-nedelyu-v-ii-5-novostey.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-14-pyaterka-tehnologij",
+      "title": "[Новости технологий ИИ, нейросетей и инноваций] OpenAI за контроль чипов, цветной Kindle, литровый ИИ-сервер",
+      "when": "2026-11-14",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Новости технологий ИИ, нейросетей и инноваций»",
+      "link": "roles/blogger/channels/na100/posts/2026-11-14-pyaterka-tehnologij.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-plan-9",
+      "title": "[Забавное] Видео с маленьким тюленем — детенышем кольчатой нерпы опубликовали в соцсетях Ка",
+      "when": "2026-11-14",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AZ_vltJBaJU.md",
       "source": "auto"
     },
     {
       "id": "max-plan-10",
       "title": "[Забавное] Исчезновение",
-      "when": "2026-11-14",
+      "when": "2026-11-15",
       "time": null,
       "status": "scheduled",
       "why": "выход из плана в 07:16",
@@ -673,7 +693,7 @@
     {
       "id": "max-plan-11",
       "title": "[Забавное] Верни детей, бессовестная!",
-      "when": "2026-11-14",
+      "when": "2026-11-15",
       "time": null,
       "status": "scheduled",
       "why": "выход из плана в 07:16",
@@ -683,21 +703,11 @@
     {
       "id": "max-plan-12",
       "title": "[Забавное] Созерцатель",
-      "when": "2026-11-14",
+      "when": "2026-11-15",
       "time": null,
       "status": "scheduled",
       "why": "выход из плана в 07:16",
       "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AaBZQbBWJBk.md",
-      "source": "auto"
-    },
-    {
-      "id": "max-plan-9",
-      "title": "[Забавное] Видео с маленьким тюленем — детенышем кольчатой нерпы опубликовали в соцсетях Ка",
-      "when": "2026-11-14",
-      "time": null,
-      "status": "scheduled",
-      "why": "выход из плана в 07:16",
-      "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AZ_vltJBaJU.md",
       "source": "auto"
     },
     {
@@ -2048,16 +2058,6 @@
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
       "link": "roles/blogger/channels/catden/posts/2027-06-19-078-eto-pushistoe-chudo-img1.md",
-      "source": "auto"
-    },
-    {
-      "id": "max-2026-11-13-random-AZ_vltJBaJU",
-      "title": "[Забавное] Видео с маленьким тюленем — детенышем кольчатой нерпы опубликовали в соцсетях Ка",
-      "when": null,
-      "time": null,
-      "status": "backlog",
-      "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/zabava/posts/2026-11-13-random-AZ_vltJBaJU.md",
       "source": "auto"
     },
     {
