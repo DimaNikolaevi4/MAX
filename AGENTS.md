@@ -19,6 +19,7 @@
 | `shared/` | Общие модули для всех ролей: `paths.py` (корень репозитория), `post_guard.py` (запрет диалогов). |
 | `shared/verify_layout.py` | Проверка структуры после переносов: пути, конфиги, компиляция, безопасные прогоны. `py shared/verify_layout.py`. |
 | `docs/layout-verification.md` | Что проверяет `shared/verify_layout.py`, когда запускать и какие ограничения. |
+| Бот «Кросс Автопостинг» | Отдельный репозиторий `DimaNikolaevi4/cross-autoposting` (локально `E:\github\cross-autoposting`): сервисный бот для пользовательских каналов MAX, этапы в `docs/roadmap.md` того репо. Сюда можно заглядывать за наработками, менять — по согласованию. |
 | `roles/blogger/config/channels.json` | Реестр каналов: `slug`, название, описание, `cta_label`/`cta_url` для призыва. Сначала посмотрите сюда. |
 | `roles/blogger/channels/<slug>/style.md` | Стиль канала: тон, темы, оформление, что запрещено. Обязательно прочитайте перед написанием поста. |
 | `roles/blogger/channels/<slug>/cta-phrases.json` | Реестр использованных фраз призыва (CTA) — фразы не должны повторяться. |
