@@ -1,9 +1,14 @@
 ---
 channel: na100
-status: approved
+status: published
 format: markdown
 notify: true
+published_at: 2026-11-14T07:30:16+03:00
+message_id: mid.ffffba08e9ee9aa301a1d851fdf731a7
+channel_id: -76927529477469
+url: https://max.ru/channel_na100/AaHYUf33Mac
 image_file: local/digest/cover-2026-11-14-pyaterka-tehnologij.png
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTqyoTCNRCEVwit2KcM7FiskHTGEx7PQsw2h8IYp4aUQAQRR282PrLnctYyIXaiOCahL17RVaKGWFrv_1_IRH4
 ---
 
 **OpenAI за контроль чипов, цветной Kindle, литровый ИИ-сервер**
