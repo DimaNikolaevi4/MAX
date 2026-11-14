@@ -1,0 +1,1345 @@
+{
+ "date": "2026-11-14",
+ "generated_at": "2026-11-14T06:12:32.517064+03:00",
+ "formula": "свежесть*0.3 + влияние*0.4 + новизна*0.2 + авторитет*0.1 (0-10, порог 5.0); шаг 4 — обложка/текст у агента",
+ "notes": [],
+ "proposed": [
+  {
+   "title": "OpenAI поддержала ограничения на поставки ИИ‑чипов в Китай после отставки Дженсена Хуанга",
+   "link": "https://habr.com/ru/articles/1107650/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107650",
+   "dt": "2026-11-13T18:59:34+03:00",
+   "region": "ru",
+   "feeds": [
+    "Habr news"
+   ],
+   "hours": 11.2,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 7,
+   "total": 6.7,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://habr.com/ru/articles/1107650/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107650"
+   ]
+  },
+  {
+   "title": "Bessent blames US Commerce Department for not restricting Nvidia chip exports to China",
+   "link": "https://www.scmp.com/news/china/diplomacy/article/3374409/bessent-blames-us-commerce-department-not-restricting-nvidia-chip-exports-china",
+   "dt": "2026-11-13T23:20:33+03:00",
+   "region": "cn",
+   "feeds": [
+    "SCMP Tech"
+   ],
+   "hours": 6.9,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.8,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://www.scmp.com/news/china/diplomacy/article/3374409/bessent-blames-us-commerce-department-not-restricting-nvidia-chip-exports-china"
+   ]
+  },
+  {
+   "title": "Gigabyte unveils its Nvidia Spark-powered AI workstation — AI TOP AERO combines Blackwell architecture GPU and up to 128 GB memory, if you can get one",
+   "link": "https://www.techradar.com/pro/gigabyte-unveils-its-nvidia-spark-powered-ai-workstation-ai-top-aero-combines-blackwell-architecture-gpu-and-up-to-128-gb-memory-if-you-can-get-one",
+   "dt": "2026-11-14T04:25:00+03:00",
+   "region": "world",
+   "feeds": [
+    "TechRadar"
+   ],
+   "hours": 1.8,
+   "fresh": 10,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 6,
+   "total": 7.2,
+   "signals": [
+    "игрок/государство",
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://www.techradar.com/pro/gigabyte-unveils-its-nvidia-spark-powered-ai-workstation-ai-top-aero-combines-blackwell-architecture-gpu-and-up-to-128-gb-memory-if-you-can-get-one"
+   ]
+  },
+  {
+   "title": "Amazon’s new Kindle Colorsoft is a premium e-reader with a premium price",
+   "link": "https://techcrunch.com/2026/11/13/amazons-new-kindle-colorsoft-is-a-premium-e-reader-with-a-premium-price/",
+   "dt": "2026-11-14T02:00:00+03:00",
+   "region": "world",
+   "feeds": [
+    "TechCrunch"
+   ],
+   "hours": 4.2,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.8,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/11/13/amazons-new-kindle-colorsoft-is-a-premium-e-reader-with-a-premium-price/"
+   ]
+  },
+  {
+   "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!",
+   "link": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+   "dt": "2026-11-13T21:40:30+03:00",
+   "region": "world",
+   "feeds": [
+    "TechCrunch"
+   ],
+   "hours": 8.5,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.8,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/"
+   ]
+  }
+ ],
+ "candidates": {
+  "ru": [
+   {
+    "title": "OpenAI поддержала ограничения на поставки ИИ‑чипов в Китай после отставки Дженсена Хуанга",
+    "link": "https://habr.com/ru/articles/1107650/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107650",
+    "dt": "2026-11-13T18:59:34+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 11.2,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 7,
+    "total": 6.7,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1107650/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107650"
+    ]
+   },
+   {
+    "title": "Google выпустила Gemini 4 Hydrogen для агентов",
+    "link": "https://habr.com/ru/companies/selectel/articles/1107582/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107582",
+    "dt": "2026-11-13T18:40:12+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 11.5,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 7,
+    "total": 6.7,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/companies/selectel/articles/1107582/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107582"
+    ]
+   },
+   {
+    "title": "Yandex B2B Tech выпустила новое поколение речевых моделей для создания голосовых ИИ-агентов",
+    "link": "https://www.cnews.ru/news/line/2026-11-13_yandex_b2b_tech_vypustila_novoe",
+    "dt": "2026-11-13T11:23:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 18.8,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-13_yandex_b2b_tech_vypustila_novoe"
+    ]
+   },
+   {
+    "title": "«Сбер» снова у отметки 300: что стоит за новой стратегией и верят ли в неё инвесторы",
+    "link": "https://habr.com/ru/companies/finam_broker/articles/1107558/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107558",
+    "dt": "2026-11-13T19:30:14+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 10.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://habr.com/ru/companies/finam_broker/articles/1107558/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107558"
+    ]
+   },
+   {
+    "title": "От чата до тёмной фабрики: шесть уровней ИИ в разработке и почему мы остановились на L4",
+    "link": "https://habr.com/ru/articles/1106718/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1106718",
+    "dt": "2026-11-14T05:20:32+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 0.9,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1106718/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1106718"
+    ]
+   },
+   {
+    "title": "TSMC: о чем молчит логотип и что он видит",
+    "link": "https://habr.com/ru/articles/1107448/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107448",
+    "dt": "2026-11-13T18:02:27+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 12.2,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1107448/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1107448"
+    ]
+   },
+   {
+    "title": "Из 7349 раскрытых Anthropic уязвимостей лишь 217 помечены как исправленные",
+    "link": "https://www.opennet.ru/opennews/art.shtml?num=66678",
+    "dt": "2026-11-13T10:02:38+03:00",
+    "region": "ru",
+    "feeds": [
+     "Opennet"
+    ],
+    "hours": 20.2,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.opennet.ru/opennews/art.shtml?num=66678"
+    ]
+   },
+   {
+    "title": "Сбербанк в 3 раза увеличил найм на направления, связанные с ИИ",
+    "link": "https://www.cnews.ru/news/line/2026-11-13_sberbank_v_3_raza_uvelichil",
+    "dt": "2026-11-13T17:33:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 12.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-13_sberbank_v_3_raza_uvelichil"
+    ]
+   },
+   {
+    "title": "Взломан судоходный гигант Maersk. Хакеры требуют грандиозный выкуп",
+    "link": "https://www.cnews.ru/news/top/2026-11-13_vzloman_sudohodnyj_gigant",
+    "dt": "2026-11-13T14:31:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 15.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-13_vzloman_sudohodnyj_gigant"
+    ]
+   },
+   {
+    "title": "В чате поддержки Сбербанка теперь можно решать сразу несколько вопросов одновременно — каждый в своей ветке",
+    "link": "https://www.cnews.ru/news/line/2026-11-13_v_chate_podderzhki_sberbanka",
+    "dt": "2026-11-13T14:06:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 16.1,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-13_v_chate_podderzhki_sberbanka"
+    ]
+   },
+   {
+    "title": "В «Росатоме» научили нейросети контролировать работу инженерных систем в условиях ограничений интернета и связи",
+    "link": "https://www.cnews.ru/news/line/2026-11-13_v_rosatome_nauchili_nejroseti",
+    "dt": "2026-11-13T13:57:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 16.3,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-13_v_rosatome_nauchili_nejroseti"
+    ]
+   },
+   {
+    "title": "MWS Cloud запустила ночные тарифы на LLM в GPT Model Hub",
+    "link": "https://www.cnews.ru/news/line/2026-11-13_mws_cloud_zapustila_nochnye_tarify",
+    "dt": "2026-11-13T13:43:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 16.5,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-13_mws_cloud_zapustila_nochnye_tarify"
+    ]
+   },
+   {
+    "title": "Роботы «Яндекса» начали доставлять лекарства в Москве",
+    "link": "https://www.cnews.ru/news/line/2026-11-13_roboty_yandeksa_nachali",
+    "dt": "2026-11-13T13:40:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 16.5,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-13_roboty_yandeksa_nachali"
+    ]
+   },
+   {
+    "title": "«Лаборатория Касперского» обнаружила мошенническую рассылку о компенсационных выплатах через сервис Google",
+    "link": "https://www.cnews.ru/news/line/2026-11-13_laboratoriya_kasperskogo",
+    "dt": "2026-11-13T13:01:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 17.2,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-13_laboratoriya_kasperskogo"
+    ]
+   },
+   {
+    "title": "Российские промышленные компании получили возможность бесплатно протестировать автономный облет объектов дронами",
+    "link": "https://www.cnews.ru/news/line/2026-11-13_rossijskie_promyshlennye",
+    "dt": "2026-11-13T11:11:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 19.0,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-13_rossijskie_promyshlennye"
+    ]
+   }
+  ],
+  "cn": [
+   {
+    "title": "Bessent blames US Commerce Department for not restricting Nvidia chip exports to China",
+    "link": "https://www.scmp.com/news/china/diplomacy/article/3374409/bessent-blames-us-commerce-department-not-restricting-nvidia-chip-exports-china",
+    "dt": "2026-11-13T23:20:33+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 6.9,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.8,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/china/diplomacy/article/3374409/bessent-blames-us-commerce-department-not-restricting-nvidia-chip-exports-china"
+    ]
+   },
+   {
+    "title": "Don’t take Nvidia CEO Jensen Huang’s ‘sex’ scandal at face value",
+    "link": "https://www.scmp.com/opinion/china-opinion/article/3374017/dont-take-nvidia-ceo-jensen-huangs-sex-scandal-face-value",
+    "dt": "2026-11-14T04:30:08+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 1.7,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/opinion/china-opinion/article/3374017/dont-take-nvidia-ceo-jensen-huangs-sex-scandal-face-value"
+    ]
+   },
+   {
+    "title": "Jensen Huang’s exit tests Nvidia’s supply chain clout, ability to bankroll AI buildout",
+    "link": "https://www.scmp.com/tech/big-tech/article/3374357/jensen-huangs-exit-tests-nvidias-supply-chain-clout-ability-bankroll-ai-buildout",
+    "dt": "2026-11-13T14:00:10+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 16.2,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.2,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.scmp.com/tech/big-tech/article/3374357/jensen-huangs-exit-tests-nvidias-supply-chain-clout-ability-bankroll-ai-buildout"
+    ]
+   },
+   {
+    "title": "US Congress widens Nvidia probe, seeking testimony from Jensen Huang and Trump officials",
+    "link": "https://www.scmp.com/news/china/diplomacy/article/3374412/us-congress-widens-nvidia-probe-seeking-testimony-jensen-huang-and-trump-officials",
+    "dt": "2026-11-14T01:16:27+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 4.9,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/china/diplomacy/article/3374412/us-congress-widens-nvidia-probe-seeking-testimony-jensen-huang-and-trump-officials"
+    ]
+   },
+   {
+    "title": "Microsoft ‘deeply sorry’ for global outage, says issue not caused by cyber or AI agents",
+    "link": "https://www.scmp.com/news/world/article/3374408/microsoft-deeply-sorry-global-outage-says-issue-not-caused-cyber-or-ai-agents",
+    "dt": "2026-11-13T21:43:24+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 8.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/world/article/3374408/microsoft-deeply-sorry-global-outage-says-issue-not-caused-cyber-or-ai-agents"
+    ]
+   },
+   {
+    "title": "US-China AI safety talks face hurdle over how to define ‘serious’ incidents: analysts",
+    "link": "https://www.scmp.com/news/china/diplomacy/article/3374381/us-china-ai-safety-talks-face-hurdle-over-how-define-serious-incidents-analysts",
+    "dt": "2026-11-13T16:00:11+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 14.2,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/china/diplomacy/article/3374381/us-china-ai-safety-talks-face-hurdle-over-how-define-serious-incidents-analysts"
+    ]
+   },
+   {
+    "title": "China could tighten rare earths exports if US escalates chip curbs over Nvidia: analysts",
+    "link": "https://www.scmp.com/economy/global-economy/article/3374328/china-could-tighten-rare-earths-exports-if-us-escalates-chip-curbs-over-nvidia-analysts",
+    "dt": "2026-11-13T16:00:08+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 14.2,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/economy/global-economy/article/3374328/china-could-tighten-rare-earths-exports-if-us-escalates-chip-curbs-over-nvidia-analysts"
+    ]
+   },
+   {
+    "title": "Could Nvidia scandal put Malaysia’s AI boom in US crosshairs?",
+    "link": "https://www.scmp.com/week-asia/economics/article/3374351/could-nvidia-scandal-put-malaysias-ai-boom-us-crosshairs",
+    "dt": "2026-11-13T13:00:17+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 17.2,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/week-asia/economics/article/3374351/could-nvidia-scandal-put-malaysias-ai-boom-us-crosshairs"
+    ]
+   },
+   {
+    "title": "Jensen Huang’s fall sparks dismay in Asia over Nvidia ex-CEO’s family man image",
+    "link": "https://www.scmp.com/week-asia/people/article/3374337/jensen-huangs-fall-sparks-dismay-asia-over-nvidia-ex-ceos-family-man-image",
+    "dt": "2026-11-13T11:28:53+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 18.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/week-asia/people/article/3374337/jensen-huangs-fall-sparks-dismay-asia-over-nvidia-ex-ceos-family-man-image"
+    ]
+   },
+   {
+    "title": "EU leaders told to ‘act now’ to stay in AI race with US and China",
+    "link": "https://www.scmp.com/news/world/europe/article/3374405/eu-leaders-told-act-now-stay-ai-race-us-and-china",
+    "dt": "2026-11-13T20:20:31+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 9.9,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://www.scmp.com/news/world/europe/article/3374405/eu-leaders-told-act-now-stay-ai-race-us-and-china"
+    ]
+   }
+  ],
+  "world": [
+   {
+    "title": "Gigabyte unveils its Nvidia Spark-powered AI workstation — AI TOP AERO combines Blackwell architecture GPU and up to 128 GB memory, if you can get one",
+    "link": "https://www.techradar.com/pro/gigabyte-unveils-its-nvidia-spark-powered-ai-workstation-ai-top-aero-combines-blackwell-architecture-gpu-and-up-to-128-gb-memory-if-you-can-get-one",
+    "dt": "2026-11-14T04:25:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 1.8,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 7.2,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/gigabyte-unveils-its-nvidia-spark-powered-ai-workstation-ai-top-aero-combines-blackwell-architecture-gpu-and-up-to-128-gb-memory-if-you-can-get-one"
+    ]
+   },
+   {
+    "title": "Amazon’s new Kindle Colorsoft is a premium e-reader with a premium price",
+    "link": "https://techcrunch.com/2026/11/13/amazons-new-kindle-colorsoft-is-a-premium-e-reader-with-a-premium-price/",
+    "dt": "2026-11-14T02:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 4.2,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.8,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/13/amazons-new-kindle-colorsoft-is-a-premium-e-reader-with-a-premium-price/"
+    ]
+   },
+   {
+    "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!",
+    "link": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+    "dt": "2026-11-13T21:40:30+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 8.5,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.8,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/"
+    ]
+   },
+   {
+    "title": "Unannounced Intel Core Ultra 7 260K CPU surfaces in Newegg prebuilt gaming PCs",
+    "link": "https://www.tomshardware.com/pc-components/cpus/unannounced-intel-core-ultra-7-260k-cpu-surfaces-in-newegg-prebuilt-gaming-pcs-intel-doesnt-have-official-specs-list-available-for-exclusive-arrow-lake-chip",
+    "dt": "2026-11-13T21:26:10+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 8.8,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.8,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/cpus/unannounced-intel-core-ultra-7-260k-cpu-surfaces-in-newegg-prebuilt-gaming-pcs-intel-doesnt-have-official-specs-list-available-for-exclusive-arrow-lake-chip"
+    ]
+   },
+   {
+    "title": "Amazon has a plan to index the world’s online shopping data",
+    "link": "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search",
+    "dt": "2026-11-14T02:49:11+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 3.4,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search"
+    ]
+   },
+   {
+    "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
+    "dt": "2026-11-13T23:45:10+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 6.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet"
+    ]
+   },
+   {
+    "title": "The new Apple TV has a YouTube problem",
+    "link": "https://www.theverge.com/tech/1033076/apple-tv-4k-youtube-error",
+    "dt": "2026-11-13T19:55:57+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 10.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1033076/apple-tv-4k-youtube-error"
+    ]
+   },
+   {
+    "title": "Microsoft&#8217;s massive Outlook outage might be over",
+    "link": "https://www.theverge.com/tech/1032862/microsoft-outlook-down-outage",
+    "dt": "2026-11-13T19:17:11+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 10.9,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1032862/microsoft-outlook-down-outage"
+    ]
+   },
+   {
+    "title": "Nvidia board reportedly approached Arm CEO Rene Haas during replacement search",
+    "link": "https://www.tomshardware.com/pc-components/gpus/nvidia-board-reportedly-approached-arm-ceo-rene-haas-during-replacement-search-jensen-huangs-transgressions-leave-nvidia-scrambling-to-fill-a-massive-void",
+    "dt": "2026-11-14T00:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 6.2,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/gpus/nvidia-board-reportedly-approached-arm-ceo-rene-haas-during-replacement-search-jensen-huangs-transgressions-leave-nvidia-scrambling-to-fill-a-massive-void"
+    ]
+   },
+   {
+    "title": "Malaysia and Singapore step up Nvidia AI chip probes amidst Jensen Huang controversy",
+    "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/malaysia-and-singapore-step-up-nvidia-ai-chip-probes-as-charges-brought-against-chinese-national-over-917-smuggled-servers-firm-at-center-of-jensen-huang-controversy-announces-inventory-audit-to-account-for-all-restricted-gpus",
+    "dt": "2026-11-14T00:45:30+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 5.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/artificial-intelligence/malaysia-and-singapore-step-up-nvidia-ai-chip-probes-as-charges-brought-against-chinese-national-over-917-smuggled-servers-firm-at-center-of-jensen-huang-controversy-announces-inventory-audit-to-account-for-all-restricted-gpus"
+    ]
+   },
+   {
+    "title": "‘Broken and shattered’ Nvidia CEO Jensen Huang surrendered during resignation meeting, report claims",
+    "link": "https://www.tomshardware.com/tech-industry/broken-and-shattered-nvidia-ceo-jensen-huang-surrendered-during-resignation-meeting-report-claims-thousands-of-employees-rally-calling-for-reinstatement-on-internal-forum",
+    "dt": "2026-11-14T00:46:17+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 5.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/broken-and-shattered-nvidia-ceo-jensen-huang-surrendered-during-resignation-meeting-report-claims-thousands-of-employees-rally-calling-for-reinstatement-on-internal-forum"
+    ]
+   },
+   {
+    "title": "There's no faster laptop under $700 than this $560 Core i9 monster with a CPU that rivals the M5 in the $1,099 Apple MacBook Air",
+    "link": "https://www.techradar.com/pro/theres-no-faster-laptop-under-usd700-than-this-usd560-core-i9-monster-with-a-cpu-that-rivals-the-m5-in-the-usd1-099-apple-macbook-air",
+    "dt": "2026-11-13T23:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 7.2,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/theres-no-faster-laptop-under-usd700-than-this-usd560-core-i9-monster-with-a-cpu-that-rivals-the-m5-in-the-usd1-099-apple-macbook-air"
+    ]
+   },
+   {
+    "title": "Democrats launch Nvidia investigation, write scathing letter on Huang’s ‘scheme’ with Trump",
+    "link": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
+    "dt": "2026-11-13T01:42:51+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 28.5,
+    "fresh": 4,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.6,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/"
+    ]
+   },
+   {
+    "title": "Microsoft’s latest email outage turned into a full-blown global cloud crisis",
+    "link": "https://techcrunch.com/2026/11/13/microsoft-latest-email-outage-turned-into-a-full-blown-global-cloud-crisis/",
+    "dt": "2026-11-13T16:15:20+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 14.0,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/13/microsoft-latest-email-outage-turned-into-a-full-blown-global-cloud-crisis/"
+    ]
+   },
+   {
+    "title": "Israel’s VCs see opportunity for challengers in Nvidia’s turmoil",
+    "link": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/",
+    "dt": "2026-11-13T15:52:19+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 14.3,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/"
+    ]
+   },
+   {
+    "title": "Japanese workers return to fax machines during ongoing Microsoft 365 outage",
+    "link": "https://www.tomshardware.com/software/japanese-workers-return-to-fax-machines-during-ongoing-microsoft-365-outage-were-going-full-analog-say-workers-forced-to-ditch-pdfs",
+    "dt": "2026-11-13T16:28:16+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 13.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/software/japanese-workers-return-to-fax-machines-during-ongoing-microsoft-365-outage-were-going-full-analog-say-workers-forced-to-ditch-pdfs"
+    ]
+   },
+   {
+    "title": "Mass smuggling of up to 1.5 million Nvidia AI GPUs could be the underlying cause of Jensen Huang's departure, analysts claim",
+    "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/mass-smuggling-of-nvidia-ai-gpus-could-be-the-underlying-cause-of-jensen-huangs-departure-analysts-claim-more-than-1-5-gigawatts-of-banned-chips-tracked-to-china-despite-export-controls",
+    "dt": "2026-11-13T16:28:16+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 13.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/artificial-intelligence/mass-smuggling-of-nvidia-ai-gpus-could-be-the-underlying-cause-of-jensen-huangs-departure-analysts-claim-more-than-1-5-gigawatts-of-banned-chips-tracked-to-china-despite-export-controls"
+    ]
+   },
+   {
+    "title": "How Shanghai fund manager Kang Wei introduced his wife Alice Huang to Jensen and built $7.5 billion Nvidia AI GPU smuggling operation",
+    "link": "https://www.tomshardware.com/tech-industry/how-shanghai-fund-manager-kang-wei-introduced-his-wife-alice-huang-to-jensen-and-built-usd7-5-billion-nvidia-ai-gpu-smuggling-operation-mistresss-husband-joked-she-was-the-ceos-personal-assistant",
+    "dt": "2026-11-13T16:28:17+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 13.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/how-shanghai-fund-manager-kang-wei-introduced-his-wife-alice-huang-to-jensen-and-built-usd7-5-billion-nvidia-ai-gpu-smuggling-operation-mistresss-husband-joked-she-was-the-ceos-personal-assistant"
+    ]
+   },
+   {
+    "title": "1994 Jeep Cherokee owner hacks 32-year-old car with Claude AI to pass California smog tests",
+    "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/1994-jeep-cherokee-owner-hacks-32-year-old-car-with-claude-ai-to-pass-california-smog-tests-enthusiast-reverse-engineered-the-ancient-ecu-for-diagnostics-and-control",
+    "dt": "2026-11-13T16:34:16+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 13.6,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/artificial-intelligence/1994-jeep-cherokee-owner-hacks-32-year-old-car-with-claude-ai-to-pass-california-smog-tests-enthusiast-reverse-engineered-the-ancient-ecu-for-diagnostics-and-control"
+    ]
+   },
+   {
+    "title": "macOS on PC becomes possible again thanks to Apple Silicon translator for x86-64",
+    "link": "https://www.tomshardware.com/software/macos/macos-on-pc-becomes-possible-again-thanks-to-apple-silicon-translator-for-x86-64-hackintosh-revival-project-currently-slow-and-not-very-stable",
+    "dt": "2026-11-13T16:28:17+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 13.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/software/macos/macos-on-pc-becomes-possible-again-thanks-to-apple-silicon-translator-for-x86-64-hackintosh-revival-project-currently-slow-and-not-very-stable"
+    ]
+   },
+   {
+    "title": "Google reworks TPU silicon into specialized systems for agents and security",
+    "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-adds-two-new-specialized-chips-for-ai-agents-and-security-to-8th-gen-tpu-lineup-tpu-8i-max-puts-two-chips-on-one-package-for-long-context-work-tpu-8tx-swaps-arm-hosts-for-amd-epyc",
+    "dt": "2026-11-13T16:22:29+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 13.8,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-adds-two-new-specialized-chips-for-ai-agents-and-security-to-8th-gen-tpu-lineup-tpu-8i-max-puts-two-chips-on-one-package-for-long-context-work-tpu-8tx-swaps-arm-hosts-for-amd-epyc"
+    ]
+   },
+   {
+    "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+    "link": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
+    "dt": "2026-11-14T01:43:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 4.5,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/"
+    ]
+   },
+   {
+    "title": "AI agent startup LangChain hits $3B valuation",
+    "link": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+    "dt": "2026-11-13T22:37:57+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 7.6,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/"
+    ]
+   },
+   {
+    "title": "ChatGPT’s new Wallet lets AI agents shop and check out for you",
+    "link": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+    "dt": "2026-11-13T19:00:12+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 11.2,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/"
+    ]
+   },
+   {
+    "title": "ExpressVPN looks better Black Friday value than NordVPN – get a private AI, burner email addresses, and tracker blocking for the same $2.99 per month price",
+    "link": "https://www.techradar.com/vpn/vpn-services/expressvpn-looks-better-black-friday-value-than-nordvpn-get-a-private-ai-burner-email-addresses-and-tracker-blocking-for-the-same-usd2-99-per-month-price",
+    "dt": "2026-11-13T18:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 12.2,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/vpn/vpn-services/expressvpn-looks-better-black-friday-value-than-nordvpn-get-a-private-ai-burner-email-addresses-and-tracker-blocking-for-the-same-usd2-99-per-month-price"
+    ]
+   },
+   {
+    "title": "‘The vault for which no one has a key’ — Apple reveals the engineering secrets behind HomeView",
+    "link": "https://www.techradar.com/home/smart-home/a-really-fun-hard-fought-journey-i-spoke-with-apple-about-the-engineering-behind-homeview-and-why-it-took-so-long",
+    "dt": "2026-11-13T17:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 13.2,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/home/smart-home/a-really-fun-hard-fought-journey-i-spoke-with-apple-about-the-engineering-behind-homeview-and-why-it-took-so-long"
+    ]
+   },
+   {
+    "title": "SpaceX and Tesla’s $3tn merger is weeks away as ‘sentient sun’ plan evolves",
+    "link": "https://www.techradar.com/science/space/spacex-and-tesla-mega-merger-could-happen-within-weeks-report-claims-usd3tn-deal-is-on-track-as-elon-musks-sentient-sun-plan-gets-100gw-boost",
+    "dt": "2026-11-13T16:16:56+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 13.9,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/science/space/spacex-and-tesla-mega-merger-could-happen-within-weeks-report-claims-usd3tn-deal-is-on-track-as-elon-musks-sentient-sun-plan-gets-100gw-boost"
+    ]
+   },
+   {
+    "title": "Self-learning AI separates particle jets from background noise in simulated heavy-ion collisions",
+    "link": "https://phys.org/news/2026-11-ai-particle-jets-background-noise.html",
+    "dt": "2026-11-13T20:40:07+03:00",
+    "region": "world",
+    "feeds": [
+     "Phys.org"
+    ],
+    "hours": 9.5,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://phys.org/news/2026-11-ai-particle-jets-background-noise.html"
+    ]
+   },
+   {
+    "title": "These 6 AI robot pets might be the cutest gifts of 2026",
+    "link": "https://www.techradar.com/ai-platforms-assistants/forget-getting-a-puppy-for-christmas-these-9-ai-robot-pets-might-be-the-cutest-gifts-of-2026",
+    "dt": "2026-11-14T00:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 6.2,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.0,
+    "signals": [],
+    "sources": [
+     "https://www.techradar.com/ai-platforms-assistants/forget-getting-a-puppy-for-christmas-these-9-ai-robot-pets-might-be-the-cutest-gifts-of-2026"
+    ]
+   },
+   {
+    "title": "Younger workers are hiding AI usage from bosses as they try to hold on to jobs",
+    "link": "https://www.techradar.com/pro/younger-workers-are-hiding-ai-usage-from-bosses-as-they-try-to-hold-on-to-jobs",
+    "dt": "2026-11-13T22:05:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 8.1,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.0,
+    "signals": [],
+    "sources": [
+     "https://www.techradar.com/pro/younger-workers-are-hiding-ai-usage-from-bosses-as-they-try-to-hold-on-to-jobs"
+    ]
+   }
+  ]
+ },
+ "dropped": {
+  "count": 182,
+  "examples": [
+   {
+    "title": "[Перевод] The history of Kubernetes",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Жизнь не должна оправдывать своё существование полезностью",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Vibe‑hacking Wi‑Fi камеры с помощью Claude",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "3 базы данных в Docker за один вечер: PostgreSQL 18 + ClickHouse 26.8 + Qdrant 1.19",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Мы проверили 500 сайтов малого бизнеса Перми и Екатеринбурга: что ломают зарубежные сервисы",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Клодизмы. Часть 1. Классификация ошибок, которые языковая модель допускает в связном тексте",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Делаю аналог codespell для русского языка",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Как мы возрождаем Ксин: восстанавливаем боёвку по архивам и собираем бестиарий из Wayback Machine",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Вывод масс кварков и лептонов (продолжая Койде)",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Paprium: почему я считаю его посредственной поделкой, раздутой маркетингом (мое субъективное мнение, прошу это учесть)",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Как мне прислали предложение о работе, а внутри ZIP спрятали запуск вредоносного кода через Git",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "«Уязвимости нет, и мы её исправили»: первая неделя HTML-виджетов в Telegram",
+    "reason": "не тех-тема"
+   }
+  ]
+ },
+ "feeds_ok": [
+  "Habr news",
+  "Opennet",
+  "CNews",
+  "SCMP Tech",
+  "Global Times (outbrain, общий фид с техно-пунктом)",
+  "TechCrunch",
+  "The Verge",
+  "Tom's Hardware",
+  "TechRadar",
+  "Phys.org",
+  "IEEE Spectrum AI"
+ ],
+ "feeds_fail": [
+  "TechNode (China Tech)",
+  "VentureBeat"
+ ]
+}
