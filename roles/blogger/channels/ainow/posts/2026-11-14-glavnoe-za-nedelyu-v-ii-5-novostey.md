@@ -1,9 +1,14 @@
 ---
 channel: ainow
-status: approved
+status: published
 format: markdown
 notify: true
+published_at: 2026-11-14T07:15:23+03:00
+message_id: mid.ffffba0066fb9aa301a1d8445dad319d
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaHYRF2tMZ0
 image_file: local/images/digest-saturday-cover.png
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQjnH94exFlWloaZ1RL6G1qEiARgZ1bFffAWttpC5JLo9a4K8M3A50eiXVDWZNFSw-gXRNqzw2ruWEJMT41zZo
 ---
 
 **ИИ за неделю: смена караула**
