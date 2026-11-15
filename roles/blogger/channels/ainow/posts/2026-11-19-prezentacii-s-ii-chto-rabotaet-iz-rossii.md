@@ -1,10 +1,12 @@
 ---
 channel: ainow
-status: draft
+status: approved
 format: markdown
 notify: true
 topic: нейросети для презентаций (СЯ гипотеза 5)
-alice_note: 14.11 — проход через Алису (режим «Эксперт»), правки интегрированы; протокол local/alice/ainow-2026-11-15-20.md
+alice_note: 14.11 — проход через Алису (режим «Эксперт»); 15.11 — заход без цифр + gamma.press убран по правке владельца; протокол local/alice/ainow-2026-11-15-20.md
+approved_note: 15.11 — одобрен владельцем (текст+обложка), публикация 19.11 07:15
+image_file: local/images/2026-11-19-cover.png
 ---
 
 **Презентации с ИИ: что работает из России**
