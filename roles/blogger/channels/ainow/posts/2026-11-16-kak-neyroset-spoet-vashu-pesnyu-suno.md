@@ -1,10 +1,12 @@
 ---
 channel: ainow
-status: draft
+status: approved
 format: markdown
 notify: true
 topic: песни через ИИ (СЯ гипотеза 4)
 alice_note: 14.11 — проход через Алису; 15.11 — перепрогон по правке владельца (лексика/логика), правки интегрированы; протокол local/alice/ainow-2026-11-15-20.md
+approved_note: 15.11 — одобрен владельцем (текст+обложка в сообщении), публикация 16.11 07:15
+image_file: local/images/2026-11-16-cover.png
 ---
 
 **Как нейросеть споёт вашу песню: 5 фактов о Suno**
