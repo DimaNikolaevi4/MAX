@@ -1,10 +1,14 @@
 ---
 channel: na100
-status: approved
+status: published
 format: markdown
 notify: true
-approved_note: 16.11 — сборка агентом из digests/2026-11-16-draft.json; проход через Алису выполнен (local/alice/2026-11-16-na100.md); чек-лист слоя 4 выполнен; фото Wikimedia Commons PD
+published_at: 2026-11-16T07:05:59+03:00
+message_id: mid.ffffba08e9ee9aa301a1e28880be109c
+channel_id: -76927529477469
+url: https://max.ru/channel_na100/AaHiiIC-EJw
 image_file: local/digest/cover-2026-11-16-pyaterka-tehnologij.png
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCSNGuvcS4wJLessc6_5jJ1STJ-AhgaFYX2-cLOY34QxfoA78nsd3SU67TAmMVgWVJhXpTDaRXtqUjExvXzrKfc
 ---
 
 **Apple пускает ИИ в здоровье, поставщиков памяти — под суд**
