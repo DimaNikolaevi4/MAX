@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-16",
+  "release": "2026-11-16-pyaterka-tehnologij.md",
+  "chain_level": "documentary",
+  "story": "Блок 3: Vulcan потеряла 40 спутников Amazon (SCMP, The Verge)",
+  "source_type": "wikimedia_commons",
+  "file_title": "File:ULA's Vulcan VC2S rocket launch (8192439).jpg",
+  "photo_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/ULA%27s_Vulcan_VC2S_rocket_launch_%288192439%29.jpg",
+  "page_url": "https://commons.wikimedia.org/wiki/File:ULA%27s_Vulcan_VC2S_rocket_launch_(8192439).jpg",
+  "rules_page_url": null,
+  "author": "U.S. Space Force photo by DeAnna Murano (dvidshub.net/portfolio/1789117)",
+  "license": "Public domain",
+  "datetime_original": "2024-01-08",
+  "documentary": true,
+  "note": "Документальный снимок старта Vulcan VC2S (январь 2024, пусковая SLC-3); иллюстрирует носитель Vulcan из выпуска, не момент аварии. Подпись честная: без привязки к дате события. Кроп до 16:9, поверх — стандартная заставка digest_cover_photo.py (решение владельца 11.11.2026).",
+  "cover": "local/digest/cover-2026-11-16-pyaterka-tehnologij.png",
+  "local_original": "local/digest/2026-11-16/vulcan-vc2s-8192439-original.jpg",
+  "local_169": "local/digest/2026-11-16/vulcan-vc2s-8192439-169.jpg"
+}
