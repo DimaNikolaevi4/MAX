@@ -1,0 +1,1032 @@
+{
+ "date": "2026-11-16",
+ "generated_at": "2026-11-16T06:30:32.843815+03:00",
+ "formula": "свежесть*0.3 + влияние*0.4 + новизна*0.2 + авторитет*0.1 (0-10, порог 5.0); шаг 4 — обложка/текст у агента",
+ "notes": [],
+ "proposed": [
+  {
+   "title": "Представлена утилита Roomy для поиска на ПК с Windows наиболее потребляемых ресурсы хранилища компонентов",
+   "link": "https://habr.com/ru/articles/1108012/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1108012",
+   "dt": "2026-11-16T05:17:11+03:00",
+   "region": "ru",
+   "feeds": [
+    "Habr news"
+   ],
+   "hours": 1.2,
+   "fresh": 10,
+   "influence": 0,
+   "novelty": 10,
+   "authority": 7,
+   "total": 5.7,
+   "signals": [],
+   "sources": [
+    "https://habr.com/ru/articles/1108012/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1108012"
+   ]
+  },
+  {
+   "title": "Rocket launch in US fails, destroying payload of 40 Amazon satellites",
+   "link": "https://www.scmp.com/news/world/united-states-canada/article/3374525/rocket-launch-us-fails-destroying-payload-40-amazon-satellites",
+   "dt": "2026-11-16T04:32:37+03:00",
+   "region": "cn",
+   "feeds": [
+    "SCMP Tech"
+   ],
+   "hours": 2.0,
+   "fresh": 10,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 7.4,
+   "signals": [
+    "игрок/государство",
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://www.scmp.com/news/world/united-states-canada/article/3374525/rocket-launch-us-fails-destroying-payload-40-amazon-satellites"
+   ]
+  },
+  {
+   "title": "Apple launches new app to study how people use AI for health",
+   "link": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
+   "dt": "2026-11-16T04:30:00+03:00",
+   "region": "world",
+   "feeds": [
+    "TechCrunch"
+   ],
+   "hours": 2.0,
+   "fresh": 10,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 7.4,
+   "signals": [
+    "игрок/государство",
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/"
+   ]
+  },
+  {
+   "title": "Judge denies motion to dismiss DRAM price-fixing lawsuit against Micron, Samsung, and SK hynix, finds evidence of DRAM collusion plausible after 500% price surge",
+   "link": "https://www.tomshardware.com/tech-industry/big-tech/judge-denies-motion-to-dismiss-dram-price-fixing-lawsuit-against-micron-samsung-and-sk-hynix-says-chipmakers-acted-like-hawks-flying-in-formation-finds-evidence-of-dram-collusion-plausible-after-500-percent-price-surge",
+   "dt": "2026-11-15T18:45:06+03:00",
+   "region": "world",
+   "feeds": [
+    "Tom's Hardware"
+   ],
+   "hours": 11.8,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.8,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://www.tomshardware.com/tech-industry/big-tech/judge-denies-motion-to-dismiss-dram-price-fixing-lawsuit-against-micron-samsung-and-sk-hynix-says-chipmakers-acted-like-hawks-flying-in-formation-finds-evidence-of-dram-collusion-plausible-after-500-percent-price-surge"
+   ]
+  },
+  {
+   "title": "Apple’s new study looks to improve the effectiveness of AI health tools",
+   "link": "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools",
+   "dt": "2026-11-16T04:26:56+03:00",
+   "region": "world",
+   "feeds": [
+    "The Verge"
+   ],
+   "hours": 2.1,
+   "fresh": 10,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.6,
+   "signals": [
+    "игрок/государство"
+   ],
+   "sources": [
+    "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools"
+   ]
+  }
+ ],
+ "candidates": {
+  "ru": [
+   {
+    "title": "Представлена утилита Roomy для поиска на ПК с Windows наиболее потребляемых ресурсы хранилища компонентов",
+    "link": "https://habr.com/ru/articles/1108012/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1108012",
+    "dt": "2026-11-16T05:17:11+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 1.2,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1108012/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1108012"
+    ]
+   },
+   {
+    "title": "Тихая делегация: карта рисков агентного ИИ на реальных примерах",
+    "link": "https://habr.com/ru/articles/1108122/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1108122",
+    "dt": "2026-11-16T01:06:19+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 5.4,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1108122/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1108122"
+    ]
+   },
+   {
+    "title": "Наблюдаем, как Windows XP разговаривает с железом: эмулятор x86 в одном HTML-файле",
+    "link": "https://habr.com/ru/articles/1108150/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1108150",
+    "dt": "2026-11-16T00:52:06+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 5.6,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1108150/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1108150"
+    ]
+   },
+   {
+    "title": "AI Resist List: список тех, кто бросает вызов ИИ",
+    "link": "https://habr.com/ru/articles/1108152/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1108152",
+    "dt": "2026-11-16T00:44:59+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 5.8,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1108152/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1108152"
+    ]
+   },
+   {
+    "title": "Slyber SFU Server — WebRTC медиароутер для звонков, вебинаров и ИИ ботов",
+    "link": "https://habr.com/ru/articles/1108112/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1108112",
+    "dt": "2026-11-15T21:14:27+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 9.3,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1108112/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1108112"
+    ]
+   },
+   {
+    "title": "ИИ за неделю — Claude Fable 5.2, Gemini и новые бенчмарки: 9–15 ноября",
+    "link": "https://habr.com/ru/companies/bothub/articles/1108060/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1108060",
+    "dt": "2026-11-15T18:37:50+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 11.9,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/companies/bothub/articles/1108060/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1108060"
+    ]
+   },
+   {
+    "title": "Выпуск eCat 4.5.0, эмулятора советских ретрокомпьютеров",
+    "link": "https://www.opennet.ru/opennews/art.shtml?num=66696",
+    "dt": "2026-11-15T21:31:43+03:00",
+    "region": "ru",
+    "feeds": [
+     "Opennet"
+    ],
+    "hours": 9.0,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://www.opennet.ru/opennews/art.shtml?num=66696"
+    ]
+   }
+  ],
+  "cn": [
+   {
+    "title": "Rocket launch in US fails, destroying payload of 40 Amazon satellites",
+    "link": "https://www.scmp.com/news/world/united-states-canada/article/3374525/rocket-launch-us-fails-destroying-payload-40-amazon-satellites",
+    "dt": "2026-11-16T04:32:37+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 2.0,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 7.4,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/world/united-states-canada/article/3374525/rocket-launch-us-fails-destroying-payload-40-amazon-satellites"
+    ]
+   },
+   {
+    "title": "Jensen Huang discusses comeback as Nvidia CEO with allies: report",
+    "link": "https://www.scmp.com/news/world/united-states-canada/article/3374512/bessent-says-nvidia-must-go-outside-company-find-new-ceo",
+    "dt": "2026-11-15T19:31:45+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 11.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/world/united-states-canada/article/3374512/bessent-says-nvidia-must-go-outside-company-find-new-ceo"
+    ]
+   },
+   {
+    "title": "Premier Li Qiang hails resilient Asean ties, sees growth in digital economy, AI",
+    "link": "https://www.scmp.com/news/china/diplomacy/article/3374527/chinese-premier-li-qiang-addresses-asean-summit-manila",
+    "dt": "2026-11-16T05:15:26+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 1.3,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.8,
+    "signals": [],
+    "sources": [
+     "https://www.scmp.com/news/china/diplomacy/article/3374527/chinese-premier-li-qiang-addresses-asean-summit-manila"
+    ]
+   },
+   {
+    "title": "China influencer slammed for using AI to ‘resurrect’ grandpa on hit fashion account to grieve",
+    "link": "https://www.scmp.com/news/people-culture/china-personalities/article/3374524/china-influencer-slammed-using-ai-resurrect-grandpa-hit-fashion-account-grieve",
+    "dt": "2026-11-16T05:00:38+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 1.5,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.8,
+    "signals": [],
+    "sources": [
+     "https://www.scmp.com/news/people-culture/china-personalities/article/3374524/china-influencer-slammed-using-ai-resurrect-grandpa-hit-fashion-account-grieve"
+    ]
+   },
+   {
+    "title": "South Korea calms fears over 260,000 Nvidia chip order after Jensen Huang’s exit",
+    "link": "https://www.scmp.com/news/asia/east-asia/article/3374477/south-korea-calms-fears-over-260000-nvidia-chip-order-after-jensen-huangs-exit",
+    "dt": "2026-11-15T10:13:34+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 20.3,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/asia/east-asia/article/3374477/south-korea-calms-fears-over-260000-nvidia-chip-order-after-jensen-huangs-exit"
+    ]
+   }
+  ],
+  "world": [
+   {
+    "title": "Apple launches new app to study how people use AI for health",
+    "link": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
+    "dt": "2026-11-16T04:30:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 2.0,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 7.4,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/"
+    ]
+   },
+   {
+    "title": "Judge denies motion to dismiss DRAM price-fixing lawsuit against Micron, Samsung, and SK hynix, finds evidence of DRAM collusion plausible after 500% price surge",
+    "link": "https://www.tomshardware.com/tech-industry/big-tech/judge-denies-motion-to-dismiss-dram-price-fixing-lawsuit-against-micron-samsung-and-sk-hynix-says-chipmakers-acted-like-hawks-flying-in-formation-finds-evidence-of-dram-collusion-plausible-after-500-percent-price-surge",
+    "dt": "2026-11-15T18:45:06+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 11.8,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.8,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/big-tech/judge-denies-motion-to-dismiss-dram-price-fixing-lawsuit-against-micron-samsung-and-sk-hynix-says-chipmakers-acted-like-hawks-flying-in-formation-finds-evidence-of-dram-collusion-plausible-after-500-percent-price-surge"
+    ]
+   },
+   {
+    "title": "Apple’s new study looks to improve the effectiveness of AI health tools",
+    "link": "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools",
+    "dt": "2026-11-16T04:26:56+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 2.1,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools"
+    ]
+   },
+   {
+    "title": "The Apple AirPods Pro 3 plummet to their lowest-ever Aussie price — now just AU$289 for today only",
+    "link": "https://www.techradar.com/audio/earbuds-airpods/the-apple-airpods-pro-3-plummet-to-their-lowest-ever-aussie-price-now-just-aud289-for-today-only",
+    "dt": "2026-11-16T02:17:14+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 4.2,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/audio/earbuds-airpods/the-apple-airpods-pro-3-plummet-to-their-lowest-ever-aussie-price-now-just-aud289-for-today-only"
+    ]
+   },
+   {
+    "title": "Your next desktop PC for the price of a Ferrari? HP ZGX Fury packs in 748GB RAM and Nvidia GB300 — but prices start at $132,000",
+    "link": "https://www.techradar.com/pro/your-next-desktop-pc-for-the-price-of-a-ferrari-hp-zgx-fury-packs-in-748gb-ram-and-nvidia-gb300-but-starts-at-usd132-000",
+    "dt": "2026-11-15T22:15:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 8.3,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/your-next-desktop-pc-for-the-price-of-a-ferrari-hp-zgx-fury-packs-in-748gb-ram-and-nvidia-gb300-but-starts-at-usd132-000"
+    ]
+   },
+   {
+    "title": "Samsung S85H review: a great OLED TV for a lower price",
+    "link": "https://www.techradar.com/televisions/i-tested-the-samsung-s85h-and-its-a-brilliant-cheaper-oled-tv-that-holds-its-own-against-the-rival-lg-b6",
+    "dt": "2026-11-16T01:13:07+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.3,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/televisions/i-tested-the-samsung-s85h-and-its-a-brilliant-cheaper-oled-tv-that-holds-its-own-against-the-rival-lg-b6"
+    ]
+   },
+   {
+    "title": "Why a former OpenAI alumnus is building Mac data centres for AI agents",
+    "link": "https://www.techradar.com/pro/making-apples-operating-system-and-silicon-available-at-datacenter-scale-is-a-massive-untapped-opportunity-in-ai-infrastructure-why-a-former-openai-alumnus-is-building-mac-data-centres-for-ai-agents",
+    "dt": "2026-11-16T04:05:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 2.4,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/making-apples-operating-system-and-silicon-available-at-datacenter-scale-is-a-massive-untapped-opportunity-in-ai-infrastructure-why-a-former-openai-alumnus-is-building-mac-data-centres-for-ai-agents"
+    ]
+   },
+   {
+    "title": "Black Friday Apple deals 2026",
+    "link": "https://www.techradar.com/seasonal-sales/apple-black-friday-au-deals",
+    "dt": "2026-11-16T03:56:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 2.6,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/seasonal-sales/apple-black-friday-au-deals"
+    ]
+   },
+   {
+    "title": "Soundpeats' latest AirPods Pro 3 rival brings a few key improvements over Apple's buds",
+    "link": "https://www.techradar.com/audio/earbuds-airpods/one-of-our-favorite-cheap-earbuds-brands-just-launched-airpods-pro-3-rivals-costing-half-as-much-as-apples-buds-but-with-decent-battery-life",
+    "dt": "2026-11-16T03:05:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 3.4,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/audio/earbuds-airpods/one-of-our-favorite-cheap-earbuds-brands-just-launched-airpods-pro-3-rivals-costing-half-as-much-as-apples-buds-but-with-decent-battery-life"
+    ]
+   },
+   {
+    "title": "TechCrunch Mobility: The Nvidia backup plan for China’s self-driving industry",
+    "link": "https://techcrunch.com/2026/11/15/techcrunch-mobility-the-nvidia-backup-plan-for-chinas-self-driving-industry/",
+    "dt": "2026-11-15T20:05:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 10.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/15/techcrunch-mobility-the-nvidia-backup-plan-for-chinas-self-driving-industry/"
+    ]
+   },
+   {
+    "title": "Vulcan rocket fails, destroying 40 Amazon Leo satellites",
+    "link": "https://www.theverge.com/science/1034006/vulcan-rocket-fails-destroying-40-amazon-leo-satellites",
+    "dt": "2026-11-16T00:05:02+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 6.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/science/1034006/vulcan-rocket-fails-destroying-40-amazon-leo-satellites"
+    ]
+   },
+   {
+    "title": "Jensen Huang might be plotting a return and more of the latest Nvidia drama",
+    "link": "https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed",
+    "dt": "2026-11-15T23:43:49+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 6.8,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed"
+    ]
+   },
+   {
+    "title": "Congress wants to tighten export rules on AI chips after Nvidia spy scandal",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
+    "dt": "2026-11-15T22:15:43+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 8.2,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china"
+    ]
+   },
+   {
+    "title": "Apple’s first smart glasses are coming together",
+    "link": "https://www.theverge.com/tech/1033968/apples-first-smart-glasses-are-coming-together",
+    "dt": "2026-11-15T19:59:16+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 10.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1033968/apples-first-smart-glasses-are-coming-together"
+    ]
+   },
+   {
+    "title": "Nvidia engineer leaves company over lack of transparency around Jensen Huang’s exit, details decision",
+    "link": "https://www.tomshardware.com/tech-industry/robotics-engineer-leaves-nvidia-over-lack-of-transparency-around-jensen-huangs-exit-details-decision-joins-chorus-of-disgruntled-staff-as-petition-to-reinstate-former-ceo-passes-150-000-signatures",
+    "dt": "2026-11-15T21:11:14+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 9.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/robotics-engineer-leaves-nvidia-over-lack-of-transparency-around-jensen-huangs-exit-details-decision-joins-chorus-of-disgruntled-staff-as-petition-to-reinstate-former-ceo-passes-150-000-signatures"
+    ]
+   },
+   {
+    "title": "Nvidia RTX 5090 stock returns to Newegg with 21 models",
+    "link": "https://www.tomshardware.com/pc-components/gpus/nvidia-rtx-5090-stock-returns-to-newegg-with-21-models-but-scarcity-pricing-keeps-the-cheapest-air-cooled-cards-at-least-three-times-msrp",
+    "dt": "2026-11-15T20:08:15+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 10.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/gpus/nvidia-rtx-5090-stock-returns-to-newegg-with-21-models-but-scarcity-pricing-keeps-the-cheapest-air-cooled-cards-at-least-three-times-msrp"
+    ]
+   },
+   {
+    "title": "Microsoft 365 outage leads to chlorine gas poisoning of 15 hotel guests",
+    "link": "https://www.tomshardware.com/tech-industry/data-centers/microsoft-365-outage-leads-to-chlorine-gas-poisoning-of-15-hotel-guests-email-warning-system-fails-40-first-responders-deployed-for-triage-four-hospitalized",
+    "dt": "2026-11-15T18:45:06+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 11.8,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/data-centers/microsoft-365-outage-leads-to-chlorine-gas-poisoning-of-15-hotel-guests-email-warning-system-fails-40-first-responders-deployed-for-triage-four-hospitalized"
+    ]
+   },
+   {
+    "title": "Samsung's 1TB 990 SSD drops to 19 cents per GB amid the memory crisis",
+    "link": "https://www.tomshardware.com/pc-components/samsungs-1tb-990-ssd-drops-to-19-cents-per-gb-amid-the-memory-crisis-grab-it-for-usd40-off",
+    "dt": "2026-11-15T21:02:20+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 9.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/samsungs-1tb-990-ssd-drops-to-19-cents-per-gb-amid-the-memory-crisis-grab-it-for-usd40-off"
+    ]
+   },
+   {
+    "title": "Tesla opens Cybercab pre-orders ‘for personal use,’ with geo restrictions and a $299 monthly fee",
+    "link": "https://techcrunch.com/2026/11/14/tesla-opens-cybercab-pre-orders-for-personal-use-with-geo-restrictions-and-a-299-monthly-fee/",
+    "dt": "2026-11-14T23:04:44+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 31.4,
+    "fresh": 4,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.6,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/14/tesla-opens-cybercab-pre-orders-for-personal-use-with-geo-restrictions-and-a-299-monthly-fee/"
+    ]
+   },
+   {
+    "title": "Nvidia board director cashed out $1 billion in stock before Jensen Huang scandal",
+    "link": "https://www.tomshardware.com/tech-industry/nvidia-board-director-cashed-out-usd1-billion-in-stock-before-jensen-huang-scandal-mark-stevens-sold-4-2-million-shares-without-a-trading-plan",
+    "dt": "2026-11-15T17:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 13.5,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/nvidia-board-director-cashed-out-usd1-billion-in-stock-before-jensen-huang-scandal-mark-stevens-sold-4-2-million-shares-without-a-trading-plan"
+    ]
+   },
+   {
+    "title": "Intel reclaims overall CPU market share for the first time since 2025",
+    "link": "https://www.tomshardware.com/pc-components/cpus/intel-reclaims-overall-cpu-market-share-for-the-first-time-since-2025-massive-desktop-gains-offset-amds-record-server-and-mobile-growth",
+    "dt": "2026-11-15T16:38:34+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 13.9,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/cpus/intel-reclaims-overall-cpu-market-share-for-the-first-time-since-2025-massive-desktop-gains-offset-amds-record-server-and-mobile-growth"
+    ]
+   },
+   {
+    "title": "Elon Musk signs petition to reinstate Jensen Huang as Nvidia CEO",
+    "link": "https://www.tomshardware.com/tech-industry/elon-musk-signs-petition-to-reinstate-jensen-huang-as-nvidia-ceo-over-130-000-sign-online-petition-but-not-all-nvidians-support-jensens-return",
+    "dt": "2026-11-15T16:38:34+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 13.9,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/elon-musk-signs-petition-to-reinstate-jensen-huang-as-nvidia-ceo-over-130-000-sign-online-petition-but-not-all-nvidians-support-jensens-return"
+    ]
+   },
+   {
+    "title": "Commemorative plaque at Denny’s booth where Nvidia was born has been removed (Update: Plaque Now Restored)",
+    "link": "https://www.tomshardware.com/tech-industry/commemorative-plaque-at-dennys-booth-where-nvidia-was-born-has-been-removed-sign-removed-in-wake-of-jensens-scandals-marked-the-booth-that-launched-a-usd1-trillion-company",
+    "dt": "2026-11-15T17:47:49+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 12.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/commemorative-plaque-at-dennys-booth-where-nvidia-was-born-has-been-removed-sign-removed-in-wake-of-jensens-scandals-marked-the-booth-that-launched-a-usd1-trillion-company"
+    ]
+   },
+   {
+    "title": "Indian chip startup Bharat Semi lands $24M seed round as it eyes global AI sensor market",
+    "link": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/",
+    "dt": "2026-11-16T02:30:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 4.0,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/"
+    ]
+   },
+   {
+    "title": "Is bad news for Jensen Huang also bad news for the AI industry?",
+    "link": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/",
+    "dt": "2026-11-16T00:56:35+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 5.6,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/"
+    ]
+   },
+   {
+    "title": "357 detailed CPU die shots spanning 1971 to 2024 crammed into a new gallery",
+    "link": "https://www.tomshardware.com/pc-components/cpus/357-detailed-cpu-die-shots-spanning-1971-to-2024-crammed-into-a-new-gallery-motorola-68000-intel-486dx2-amd-athlon-xp-apple-m1-and-many-more-in-beautiful-detail",
+    "dt": "2026-11-15T19:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 11.5,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/cpus/357-detailed-cpu-die-shots-spanning-1971-to-2024-crammed-into-a-new-gallery-motorola-68000-intel-486dx2-amd-athlon-xp-apple-m1-and-many-more-in-beautiful-detail"
+    ]
+   },
+   {
+    "title": "Tesla’s Cybercab goes on sale for ‘personal use’ but there are caveats",
+    "link": "https://www.techradar.com/vehicle-tech/self-driving-vehicles/teslas-cybercab-goes-on-sale-for-personal-use-but-elon-musk-admits-the-monthly-cost-of-ownership-is-too-high",
+    "dt": "2026-11-15T16:30:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 14.0,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/vehicle-tech/self-driving-vehicles/teslas-cybercab-goes-on-sale-for-personal-use-but-elon-musk-admits-the-monthly-cost-of-ownership-is-too-high"
+    ]
+   },
+   {
+    "title": "The iPhone 18 Pro's C2 modem has transformed my terrible signal",
+    "link": "https://www.techradar.com/phones/iphone/the-iphone-18-pros-c2-modem-has-transformed-my-terrible-signal-and-im-not-the-only-one-whos-noticed-the-benefits",
+    "dt": "2026-11-16T01:13:07+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.3,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.0,
+    "signals": [],
+    "sources": [
+     "https://www.techradar.com/phones/iphone/the-iphone-18-pros-c2-modem-has-transformed-my-terrible-signal-and-im-not-the-only-one-whos-noticed-the-benefits"
+    ]
+   },
+   {
+    "title": "Gamers may hate AI, but some are hooked on DLSS 5 — here's why that matters",
+    "link": "https://www.techradar.com/computing/gpu/its-a-new-world-and-im-loving-it-some-gamers-are-now-hooked-on-dlss-5-and-cant-game-without-it-and-i-think-this-shows-nvidias-escape-plan-in-the-gpu-crisis",
+    "dt": "2026-11-16T01:13:33+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.3,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.0,
+    "signals": [],
+    "sources": [
+     "https://www.techradar.com/computing/gpu/its-a-new-world-and-im-loving-it-some-gamers-are-now-hooked-on-dlss-5-and-cant-game-without-it-and-i-think-this-shows-nvidias-escape-plan-in-the-gpu-crisis"
+    ]
+   }
+  ]
+ },
+ "dropped": {
+  "count": 166,
+  "examples": [
+   {
+    "title": "Рейтинг языков программирования TIOBE в ноябре 2026 года: Rust уступал место Go в топ-10, а Dart вытеснил Julia в топ-20",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Вышло обновление Phiola 2.15 — открытого портативного мультиплатформенного аудиоплеера с поддержкой скриптов",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Хватит жечь токены на поиск файлов: как QMD помогает кодинг-агентам экономить до 40%",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Изъяны маркетолога — Какие они бывают и что с ними делать",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Счётчик Гейгера и космические лучи: 46 суток наблюдений за редким эффектом",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Вороны справляются с визуальной задачей на движение в два раза быстрее, чем люди и обезьяны",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Вселенные — ловушки, и нарушение антропного принципа",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Имитационное моделирование (DES), часть 2: как очереди съедают прибыль",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Массовая декомпиляция игр и ПО",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Пассворк сравнил себя с ОднимКлючом. Что пошло не так?",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Четыре символа мимо SSRF-фильтра: зона IPv6 и netip.Prefix.Contains в Go",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "[Перевод] Как выглядит новый офис Databricks в Амстердаме: фоторепортаж 2026",
+    "reason": "не тех-тема"
+   }
+  ]
+ },
+ "feeds_ok": [
+  "Habr news",
+  "Opennet",
+  "CNews",
+  "SCMP Tech",
+  "Global Times (outbrain, общий фид с техно-пунктом)",
+  "TechCrunch",
+  "The Verge",
+  "Tom's Hardware",
+  "TechRadar",
+  "Phys.org",
+  "IEEE Spectrum AI"
+ ],
+ "feeds_fail": [
+  "TechNode (China Tech)",
+  "VentureBeat"
+ ]
+}
