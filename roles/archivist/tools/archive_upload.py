@@ -54,12 +54,19 @@ def now() -> str:
     return datetime.now(MSK).isoformat(timespec="seconds")
 
 
+_TOKENS = None
+
+
 def load_tokens():
-    data = json.loads((REPO / "local" / "tokens.json").read_text(encoding="utf-8"))
-    return data["archive"]["token"], data["archive"]["chat_id"]
-
-
-TOKEN, CHAT = load_tokens()
+    """Токены архива нужны только при реальной отправке, не при --dry-run."""
+    global _TOKENS
+    if _TOKENS is None:
+        data = json.loads((REPO / "local" / "tokens.json").read_text(encoding="utf-8"))
+        archive = data.get("archive") or {}
+        if not archive.get("token") or archive.get("chat_id") is None:
+            raise RuntimeError("в local/tokens.json нет ключа archive (token/chat_id)")
+        _TOKENS = (archive["token"], archive["chat_id"])
+    return _TOKENS
 
 
 def curl(args, timeout=7200):
@@ -73,7 +80,7 @@ def curl(args, timeout=7200):
 
 
 def api(method: str, path: str, payload: dict | None = None):
-    args = ["-X", method, "-H", f"Authorization: {TOKEN}"]
+    args = ["-X", method, "-H", f"Authorization: {load_tokens()[0]}"]
     if payload is not None:
         tmp = REPO / "local" / "archive-payload.json"
         tmp.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
@@ -163,7 +170,7 @@ def post_message(text: str, attachment_token: str | None = None, kind: str = "fi
     payload = {"text": text, "format": "markdown", "notify": True}
     if attachment_token:
         payload["attachments"] = [{"type": kind, "payload": {"token": attachment_token}}]
-    body, code = api("POST", f"/messages?chat_id={CHAT}", payload)
+    body, code = api("POST", f"/messages?chat_id={load_tokens()[1]}", payload)
     try:
         msg = json.loads(body)
     except Exception:  # noqa: BLE001
@@ -457,6 +464,11 @@ def main() -> None:
     stop_on_error = "--stop-on-error" in args
     want_sha = "--sha" in args
 
+    if dry and not plan_path.exists():
+        # план архива — локальный файл, в git не хранится; на машине без него
+        # безопасный прогон должен проходить, а не падать (проверка структуры)
+        print(f"ok: 0 done, 0 failed (нет плана {plan_path.name})")
+        return
     plan = json.loads(plan_path.read_text(encoding="utf-8"))
     entries = plan["entries"]
     done = journal_done()
@@ -551,7 +563,7 @@ def main() -> None:
             if not mid:
                 raise RuntimeError(f"POST: {err}")
             if kind == "index_pin":
-                api("PUT", f"/chats/{CHAT}/pin", {"message_id": mid})
+                api("PUT", f"/chats/{load_tokens()[1]}/pin", {"message_id": mid})
             journal_add({"i": i, "kind": kind, "status": "done", "mid": mid,
                          "year": e.get("year"), "text": (e.get("text") or "")[:200],
                          "ts": now()})
