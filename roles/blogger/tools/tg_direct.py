@@ -18,6 +18,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
 from shared.paths import REPO, CONFIG  # noqa: E402
+from shared.forbidden_orgs import assert_no_forbidden_orgs  # noqa: E402
 
 spec = importlib.util.spec_from_file_location(
     "pt", Path(__file__).resolve().parent / "publish_telegram.py")
@@ -39,6 +40,10 @@ def main() -> None:
     fm = dict(l.split(":", 1) for l in m.group(1).splitlines() if ":" in l)
     fm = {k.strip(): v.strip() for k, v in fm.items()}
     body = m.group(2).strip()
+
+    # --- упоминания запрещённых организаций (все каналы) ---
+    # Правило владельца 12.11.2026: единый гейт shared/forbidden_orgs.py.
+    assert_no_forbidden_orgs(body)
 
     tok = json.loads((REPO / "local" / "tokens.json").read_text(encoding="utf-8"))["tg_neuro"]
     chat_id, token = tok["chat_id"], tok["token"]

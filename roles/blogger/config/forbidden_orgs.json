@@ -13,12 +13,33 @@
     }
   ],
   "patterns": [
-    { "pattern": "meta", "note": "Meta Platforms Inc. — в перечне Минюста; латиница, слово целиком" },
-    { "pattern": "facebook", "note": "продукт Meta Platforms Inc." },
-    { "pattern": "instagram", "note": "продукт Meta Platforms Inc." },
-    { "pattern": "whatsapp", "note": "продукт Meta Platforms Inc." },
-    { "pattern": "фейсбук", "note": "руслитерация Facebook" },
-    { "pattern": "инстаграм", "note": "руслитерация Instagram" },
-    { "pattern": "ватсап", "note": "руслитерация WhatsApp" }
+    {
+      "pattern": "meta",
+      "note": "Meta Platforms Inc. — в перечне Минюста; латиница, слово целиком"
+    },
+    {
+      "pattern": "re:facebook\\w*",
+      "note": "Meta Platforms Inc. — любые формы и составные (facebook-аккаунт)"
+    },
+    {
+      "pattern": "re:instagram\\w*",
+      "note": "Meta Platforms Inc. — любые формы (instagram-профиль)"
+    },
+    {
+      "pattern": "re:whatsapp\\w*",
+      "note": "Meta Platforms Inc. — любые формы (whatsapp-группа)"
+    },
+    {
+      "pattern": "re:фейсбук\\w*",
+      "note": "Meta Platforms Inc. — руслитерация со склонениями (в фейсбуке)"
+    },
+    {
+      "pattern": "re:инстаграм\\w*",
+      "note": "Meta Platforms Inc. — руслитерация со склонениями (в инстаграме)"
+    },
+    {
+      "pattern": "re:ватсап\\w*",
+      "note": "Meta Platforms Inc. — руслитерация со склонениями (в ватсапе)"
+    }
   ]
 }

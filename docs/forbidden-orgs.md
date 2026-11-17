@@ -2,10 +2,14 @@
 
 > Правило владельца 12.11.2026. Действует во **ВСЕХ каналах** проекта —
 > активных и ещё не открытых (`ainow`, `na100`, `zabava`, `administrator`,
-> `tg_neuro`, `ozon_group`, любые будущие). Автоматика: `publish_post.py`
-> (гейт перед публикацией, все каналы) и `digest_build.py` (отсев новостей
-> на сборке дайджеста). Список паттернов —
-> `roles/blogger/config/forbidden_orgs.json`.
+> `tg_neuro`, `ozon_group`, любые будущие). Автоматика — единый гейт
+> `shared/forbidden_orgs.py` (`assert_no_forbidden_orgs`), вызывается на
+> ВСЕХ путях публикации: `publish_post.py` (MAX, текстовые посты), 
+> `publish_video.py` (MAX, zabava-медиа), `publish_telegram.py` и 
+> `tg_direct.py` (Telegram). Плюс отсев на сборке дайджеста:
+> `digest_build.py`. Список паттернов —
+> `roles/blogger/config/forbidden_orgs.json` (префикс `re:` — сырой regex,
+> для склонений: «в фейсбуке», «в инстаграме»; без префикса — слово целиком).
 
 ## Правило
 

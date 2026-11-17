@@ -35,6 +35,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
 from shared.paths import REPO, CONFIG, ensure_publish_allowed  # noqa: E402
+from shared.forbidden_orgs import assert_no_forbidden_orgs  # noqa: E402
 REPORT = []
 
 
@@ -88,6 +89,10 @@ def main() -> None:
     cta_url = (ch or {}).get("cta_url") or fm.get("button_url")
     if not cta_url:
         raise SystemExit("нет cta_url канала и button_url в front matter")
+
+    # --- упоминания запрещённых организаций (все каналы) ---
+    # Правило владельца 12.11.2026: единый гейт shared/forbidden_orgs.py.
+    assert_no_forbidden_orgs(body)
 
     html = md_to_html(body)
     if len(html) > 1024 and not fm.get("image_file"):

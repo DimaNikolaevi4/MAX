@@ -49,6 +49,7 @@ from shared.post_guard import assert_channel_chat_id  # noqa: E402
 from shared.text_check import check_text, format_issue  # noqa: E402
 from shared.readability import check_readability, format_issue as format_read_issue  # noqa: E402
 from shared.lexicon import check_lexicon  # noqa: E402
+from shared.forbidden_orgs import assert_no_forbidden_orgs  # noqa: E402
 API = "https://platform-api2.max.ru"
 REPORT = []
 
@@ -206,21 +207,8 @@ def main() -> None:
                 "вычищается до публикации: " + ", ".join(bad[:3]))
 
     # --- упоминания запрещённых организаций (все каналы) ---
-    # Правило владельца 12.11.2026: любое упоминание организации из реестров
-    # (Минюст — экстремистские, ФСБ — террористические; см.
-    # docs/forbidden-orgs.md) запрещено: весь связанный контекст удаляется,
-    # новость заменяется другой. Дисклеймер «организация запрещена в РФ»
-    # не применяется. Гейт блокирует публикацию/правку до вычистки.
-    fob_path = CONFIG / "forbidden_orgs.json"
-    if fob_path.exists():
-        fob_cfg = json.loads(fob_path.read_text(encoding="utf-8"))
-        for p in fob_cfg.get("patterns", []):
-            pat = (p.get("pattern", "") if isinstance(p, dict) else str(p)).strip()
-            if pat and re.search(rf"\b{re.escape(pat)}\b", text, re.I):
-                raise SystemExit(
-                    f"запрещённая организация: упоминание {pat!r} — весь "
-                    "связанный контекст удаляется, новость заменяется другой "
-                    "(правило владельца 12.11.2026, docs/forbidden-orgs.md)")
+    # Правило владельца 12.11.2026: единый гейт shared/forbidden_orgs.py.
+    assert_no_forbidden_orgs(text)
 
     # --- проверка русского языка (LanguageTool) ---
     spellcheck = "--no-spellcheck" not in args

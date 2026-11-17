@@ -264,8 +264,15 @@ def load_forbidden_patterns() -> list[tuple[str, re.Pattern]]:
     for p in cfg.get("patterns", []):
         pat = p.get("pattern", "") if isinstance(p, dict) else str(p)
         pat = pat.strip()
-        if pat:
-            out.append((pat, re.compile(rf"\b{re.escape(pat)}\b", re.I)))
+        if not pat:
+            continue
+        # префикс "re:" — сырой regex (склонения: «в фейсбуке», «инстаграме»);
+        # синхронно с shared/forbidden_orgs.py (гейт публикации)
+        if pat.startswith("re:"):
+            rx = re.compile(pat[3:], re.I)
+        else:
+            rx = re.compile(rf"\b{re.escape(pat)}\b", re.I)
+        out.append((pat, rx))
     return out
 
 
