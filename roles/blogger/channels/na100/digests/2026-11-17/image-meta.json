@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-17",
+  "release": "2026-11-17-pyaterka-tehnologij.md",
+  "chain_level": "documentary",
+  "story": "Блок 1: США ввели лицензии на поставку ИИ-чипов в Юго-Восточную Азию (SCMP, AFP)",
+  "source_type": "flickr_cc",
+  "file_title": "Skyline at night",
+  "photo_url": "https://live.staticflickr.com/4084/5087135517_8e33d72bb5_b.jpg",
+  "page_url": "https://www.flickr.com/photos/15411972@N00/5087135517",
+  "author": "Jo@net",
+  "license": "CC BY 2.0",
+  "datetime_original": "2010",
+  "documentary": true,
+  "note": "Панорама вечернего Сингапура (Marina Bay) — город сити-стейт в центре сюжета блока 1 (лицензии на ИИ-чипы, Megaspeed). Альтернатива по Альтману (Wikimedia, Village Global CC BY) недоступна: upload.wikimedia.org отдавал HTTP 429 весь интервал сборки. Flickr найден через Openverse, лицензия CC BY 2.0. Исходник 1024x608, кроп до 16:9 (1024x576), поверх — стандартная заставка digest_cover_photo.py. Атрибуция в посте: «Фото: Flickr / Jo@net (CC BY 2.0)».",
+  "cover": "local/digest/cover-2026-11-17-pyaterka-tehnologij.png",
+  "local_original": "local/digest/2026-11-17/singapore-skyline-night-flickr.jpg",
+  "local_169": "local/digest/2026-11-17/singapore-skyline-night-169.jpg"
+}
