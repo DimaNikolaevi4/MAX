@@ -72,6 +72,7 @@ def main() -> None:
     title_of = {c["slug"]: c.get("title") or c["slug"] for c in cfg["channels"]}
 
     tasks: list[dict] = []
+    added_files: set[str] = set()  # посты, уже попавшие в план (дедуп с планом «Забавного»)
 
     def add(task_id: str, title: str, when: str | None, status: str,
             why: str = "", link: str = "", source: str = "auto") -> None:
@@ -94,6 +95,7 @@ def main() -> None:
             title = f"[{channel}] {body_title(body)}"
             tid = f"max-{md.stem}"
             link = str(md.relative_to(REPO)).replace("\\", "/")
+            added_files.add(link)
             if status == "approved":
                 add(tid, title, post_date(fm, md) or None, "scheduled",
                     f"публикация по Планировщику, канал «{channel}»", link)
@@ -110,6 +112,9 @@ def main() -> None:
     if plan_path.is_file():
         plan = json.loads(plan_path.read_text(encoding="utf-8"))
         for entry in plan.get("posts") or []:
+            rel = str(entry.get("file") or "").replace("\\", "/")
+            if rel and rel in added_files:
+                continue  # этот пост уже добавлен из front matter — не дублируем
             st = (entry.get("status") or "").lower()
             post = REPO / (entry.get("file") or "")
             title = body_title(post.read_text(encoding="utf-8", errors="replace")

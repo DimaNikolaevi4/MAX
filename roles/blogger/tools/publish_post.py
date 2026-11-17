@@ -455,5 +455,18 @@ def main() -> None:
     print("ok")
 
 
+
+
+def _refresh_calendar_plan() -> None:
+    """Пересобрать plan.json для общего календаря: опубликованные посты -> done."""
+    try:
+        import subprocess, sys
+        subprocess.run(
+            [sys.executable, str(REPO / "roles" / "blogger" / "tools" / "export_plan.py")],
+            cwd=str(REPO), capture_output=True, timeout=120)
+    except Exception:
+        pass
+
 if __name__ == "__main__":
     main()
+    _refresh_calendar_plan()

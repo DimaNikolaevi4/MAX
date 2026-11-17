@@ -256,5 +256,19 @@ def run(args, now):
     return 0 if published or args.dry_run else 1
 
 
+
+
+def _refresh_calendar_plan() -> None:
+    """Пересобрать plan.json для общего календаря: опубликованные посты -> done."""
+    try:
+        import subprocess, sys
+        subprocess.run(
+            [sys.executable, str(REPO / "roles" / "blogger" / "tools" / "export_plan.py")],
+            cwd=str(REPO), capture_output=True, timeout=120)
+    except Exception:
+        pass
+
 if __name__ == "__main__":
-    sys.exit(main())
+    rc = main()
+    _refresh_calendar_plan()
+    sys.exit(rc)
