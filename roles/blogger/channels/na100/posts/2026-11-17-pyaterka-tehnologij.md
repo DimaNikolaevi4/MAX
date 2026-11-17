@@ -1,10 +1,14 @@
 ---
 channel: na100
-status: approved
+status: published
 format: markdown
 notify: true
-approved_note: 17.11 — сборка агентом из digests/2026-11-17-draft.json; проход через Алису (local/alice/2026-11-17-na100.md); редактура владельца 17.11 утро — принята как канон
+published_at: 2026-11-17T07:03:48+03:00
+message_id: mid.ffffba08e9ee9aa301a1e7acd9044c41
+channel_id: -76927529477469
+url: https://max.ru/channel_na100/AaHnrNkETEE
 image_file: local/digest/cover-2026-11-17-pyaterka-tehnologij.png
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCRYTUO9Fs8RYF59mQJBPKjLlkZQV6RcTgEXqGeqAONrNZ0oAkvqP5RADOBYhd9heVtXTrn97jVJR0ewK5F8A54
 ---
 
 **США закручивают чиповые гайки, Альтман успокаивает индустрию**
