@@ -29,12 +29,22 @@
 | Задача | Когда (МСК) | Что делает |
 |---|---|---|
 | `MAX na100 - build digest` | ежедневно 06:30 | детерминированная сборка выпуска na100: RSS → фильтр → скоринг → черновик-шортлист + обложка для approved-поста без медиа + dry-run (`digest_build_na100.ps1`) |
-| `MAX stats snapshot` | ежедневно 07:00 | снимает подписчиков и просмотры для ainow и zabava, отчёт за предыдущие сутки |
-| `MAX ainow - publish approved` | ежедневно 07:15 | публикует все посты со `status: approved`, дата из имени файла ≤ сегодня |
+| ~~`MAX stats snapshot`~~ | **отключена 17.11** | статистика переехала на хостинг: `stats_cron.php` (07:45, все 4 канала), снапшоты и отчёты в `/0s3/blogger-data/stats/` |
+| ~~`MAX ainow - publish approved`~~ | **отключена 16.11** | публикация ainow переехала на хостинг (`post_cron.php`, 07:15) |
 | `MAX zabava - publish plan` | ежедневно 07:16 | публикует ОДИН `pending` пост из `local/zabava-plan.json` (date-gate: записи с будущей датой пропускаются; без поста с датой ≤ сегодня — холостой запуск, код 0) |
 | `MAX blogger calendar` | ежедневно 07:20 | пересобирает `docs/blogger-calendar.md` (публикации, план, удаления) и пушит его |
 | `MAX na100 - publish approved` | ежедневно 07:30 | публикует `approved`-выпуск дайджеста na100 (обёртка `publish_scheduled_na100.ps1`) |
-| `MAX catden - publish approved` | ежедневно 07:32 | публикует посты `catden` со `status: approved`, дата из имени файла ≤ сегодня (обёртка `publish_scheduled_catden.ps1`; зарегистрирована 12.11.2026) |
+| ~~`MAX catden - publish approved`~~ | **отключена 17.11** | публикация catden переехала на хостинг (`post_cron.php`, 07:32; медиа — FTP `/0s3/blogger-data/media/catden/<дата>/`) |
+
+**Перенос на хостинг 16–17.11.2026 (решение владельца).** Автопубликация
+ainow и catden + сбор статистики по всем каналам работают на Beget
+(`post_cron.php` + `stats_cron.php` в `/0s3/blogger-cron/`, крон 07:15,
+07:32, 07:45). Медиа catden не в git (gitignored `nev/**`) — заранее
+заливаются на FTP (`local/blogger-hosting/deploy_catden_stats.py`, пачка
+за месяц вперёд). Гейт запрещённых организаций дублирован в PHP
+(`forbidden_orgs.json` на FTP, fail-closed). Локальные задачи отключены
+(`/DISABLE`). Снапшот-задача локально больше не запускается: журнал
+подписок/отписок (`pnews_churn.jsonl`) остаётся только локальным.
 
 **День тишины 15.11.2026 (решение владельца 13.11.2026).** На всех каналах
 публикаций нет: na100 не выходит, ainow не публикуется, zabava пропускает

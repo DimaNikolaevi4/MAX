@@ -1,7 +1,10 @@
 ---
 channel: catden
-status: approved
+status: published
 format: markdown
+published_at: 2026-11-17T07:49:38+03:00
+message_id: mid.ffffb62cfe529aa301a1e7d2a199299e
+chat_id: -81170615067997
 notify: true
 approved_note: 17.11 — механический фикс пунктуации «, -» → «, —» (гейт LanguageTool), текст дословно
 image_file: nev/posting/images/004-71-letnyaya-zhenschina-dokazala-chto-nikogda-ne-p1.jpeg
