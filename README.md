@@ -239,7 +239,7 @@ front matter или `cta_url` канала).
 | --- | --- | --- |
 | `MAX stats snapshot` | 07:00 | снимок подписчиков и просмотров ainow и zabava |
 | `MAX ainow - publish approved` | 07:15 | публикует посты `status: approved` с датой ≤ сегодня |
-| `MAX zabava - publish plan` | 07:16 | публикует `pending`-посты из `local/zabava-plan.json` |
+| `MAX zabava - publish plan` | 19:30 (локально, если включена; активная публикация zabava — хостинг 19:30 МСК) | публикует `pending`-посты из `local/zabava-plan.json` |
 | `MAX blogger calendar` | 07:20 | пересобирает календарь `docs/blogger-calendar.md` и пушит его |
 
 Настройка задач и логи — `docs/scheduled-tasks.md`, `local/logs/`.
