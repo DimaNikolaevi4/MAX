@@ -1,10 +1,11 @@
 ---
 channel: ainow
-status: draft
+status: approved
 format: markdown
 notify: true
 topic: суббота, «что не сработало»: браузерный ИИ-редактор (первый пост нового формата)
 image_file: local/images/ainow/2026-08-12-languagetool-besplatnyy-aiagent-kotoryy-zamenit-platnyy.jpg
+approved_note: 18.11 — текст одобрен владельцем, публикация 28.11 07:15; обложка — резервная из архива, можно заменить
 alice_note: 18.11 — черновик первого субботнего поста формата «один опыт → один приём». Материал — инцидент 18.11 (сессия Алисы отвязалась на середине прохода поста 21.11) и два прохода через Qwen; факты сверены с docs/alice-browser-editing.md, docs/qwen-literary-editing.md и local/qwen/2026-11-21-ainow-final.check.txt. Обложка — резервная из архива (pick_image.py --channel ainow), можно заменить на свою.
 ---
 
