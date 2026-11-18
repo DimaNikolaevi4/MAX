@@ -90,7 +90,7 @@ MAX/
 ├── shared/                   # paths.py, post_guard.py, text_check.py, verify_layout.py
 ├── deploy/tg-relay.php       # релей публикации в Telegram (хостинг 0s3.ru)
 ├── archive/review.php        # устаревшая методика: отправка в личку бота
-├── nev/                      # материалы канала «Нев»: посты и manifest.json
+├── nev/                      # исходные материалы/заготовки (намеренно в корне), см. nev/README.md
 └── local/                    # токены, CA-бандл, логи, статистика, планы
                               # (в git не попадает, кроме tokens.example.json)
 ```
