@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Выбирает изображение из архива AI для поста закрывающегося канала.
+"""Выбирает изображение из архива AI для поста (ainow — резерв субботнего поста с 28.11.2026).
 
     python roles/blogger/tools/pick_image.py --channel na100
     python roles/blogger/tools/pick_image.py --channel administrator --topic дашборд
@@ -30,7 +30,7 @@ def load_used() -> dict:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--channel", required=True, choices=["na100", "administrator", "tg_neuro"])
+    ap.add_argument("--channel", required=True, choices=["ainow", "na100", "administrator", "tg_neuro"])
     ap.add_argument("--topic", default=None, help="подстрока в имени файла (пост AI-источника)")
     ap.add_argument("--show", action="store_true", help="не записывать выбор")
     a = ap.parse_args()
