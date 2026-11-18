@@ -4,10 +4,10 @@
 
 | Дата | Пост | Статус | Медиа-файлы (из front matter) |
 |---|---|---|---|
-| 2026-11-19 | `2026-11-19-008-bogi-sredi-nas-p1.md` | approved | `nev/posting/images/008-bogi-sredi-nas-p1.jpeg` |
-| 2026-11-20 | `2026-11-20-008-bogi-sredi-nas-img1.md` | approved | `nev/posting/images/008-bogi-sredi-nas-i1.jpeg`<br>`nev/posting/images/008-bogi-sredi-nas-i2.jpeg`<br>`nev/posting/images/008-bogi-sredi-nas-i3.jpeg`<br>`nev/posting/images/008-bogi-sredi-nas-i4.jpeg` |
-| 2026-11-21 | `2026-11-21-005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-p1.md` | approved | `nev/posting/images/005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-p1.png` |
-| 2026-11-22 | `2026-11-22-005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-img1.md` | approved | `nev/posting/images/005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-i1.png`<br>`nev/posting/images/005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-i2.png`<br>`nev/posting/images/005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-i3.png`<br>`nev/posting/images/005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-i4.png`<br>`nev/posting/images/005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-i5.png`<br>`nev/posting/images/005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-i6.png` |
+| 2026-11-19 | `2026-11-19-005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-p1.md` | approved | `nev/posting/images/005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-p1.png` |
+| 2026-11-20 | `2026-11-20-008-bogi-sredi-nas-p1.md` | approved | `nev/posting/images/008-bogi-sredi-nas-p1.jpeg` |
+| 2026-11-21 | `2026-11-21-008-bogi-sredi-nas-img1.md` | approved | `nev/posting/images/008-bogi-sredi-nas-i1.jpeg`<br>`nev/posting/images/008-bogi-sredi-nas-i2.jpeg`<br>`nev/posting/images/008-bogi-sredi-nas-i3.jpeg`<br>`nev/posting/images/008-bogi-sredi-nas-i4.jpeg` |
+| 2026-11-22 | `2026-11-22-074-stihi-na-fotografiyah-img2.md` | approved | `nev/posting/images/074-stihi-na-fotografiyah-i1.jpeg`<br>`nev/posting/images/074-stihi-na-fotografiyah-i2.jpeg` |
 | 2026-11-23 | `2026-11-23-003-6-unikalnyh-porod-koshek-p1.md` | approved | `nev/posting/images/003-6-unikalnyh-porod-koshek-p1.png` |
 | 2026-11-24 | `2026-11-24-003-6-unikalnyh-porod-koshek-img1.md` | approved | `nev/posting/images/003-6-unikalnyh-porod-koshek-i1.png`<br>`nev/posting/images/003-6-unikalnyh-porod-koshek-i2.png`<br>`nev/posting/images/003-6-unikalnyh-porod-koshek-i3.png`<br>`nev/posting/images/003-6-unikalnyh-porod-koshek-i4.png`<br>`nev/posting/images/003-6-unikalnyh-porod-koshek-i5.png` |
 | 2026-11-25 | `2026-11-25-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-p1.md` | approved | `nev/posting/images/006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-p1.png` |
