@@ -2179,6 +2179,16 @@
       "why": "черновик, ждёт «ок» владельца",
       "link": "roles/blogger/channels/catden/posts/2027-01-07-holiday-xmas-p1.md",
       "source": "auto"
+    },
+    {
+      "id": "orch-catden-autopilot",
+      "title": "[catden] Служебная команда автопилота: четверг медиа (11д), пятница стилистика+слои 1-3+превью 10д в календарь",
+      "when": null,
+      "time": null,
+      "status": "in-progress",
+      "why": "Оркестрация kalendar↔MAX: синхронизация по команде, отчёт в календарь, публикация catden 20:00 МСК по графику",
+      "link": "roles/blogger/config/catden-automation.json",
+      "source": "kalendar"
     }
   ]
 }

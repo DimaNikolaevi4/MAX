@@ -137,6 +137,27 @@ def main() -> None:
                 f"Удаление канала «{ch.get('title') or ch['slug']}» целиком",
                 ch["delete_on"], "todo", "решение владельца зафиксировано в реестре")
 
+    # --- служебные/оркестраторские задачи (не перегенерируются из постов) ---
+    # export_plan строит plan.json с нуля; задачи с source in {kalendar,orchestrator}
+    # или id с префиксом orch- сохраняются из существующего plan.json, чтобы
+    # «служебная команда в плане» (оркестрация kalendar↔MAX) переживала экспорт.
+    preserved: list[dict] = []
+    if OUT.is_file():
+        try:
+            old = json.loads(OUT.read_text(encoding="utf-8"))
+            known = {t["id"] for t in tasks if t.get("id")}
+            for t in old.get("tasks") or []:
+                tid = str(t.get("id") or "")
+                src = str(t.get("source") or "")
+                if tid in known:
+                    continue
+                if src in {"kalendar", "orchestrator"} or tid.startswith("orch-"):
+                    preserved.append(t)
+        except Exception:
+            preserved = []
+    if preserved:
+        tasks.extend(preserved)
+
     tasks.sort(key=lambda t: (t.get("when") or "9999", t["id"]))
     out = {"tasks": tasks}
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n",
@@ -144,8 +165,9 @@ def main() -> None:
     counts = {}
     for t in tasks:
         counts[t["status"]] = counts.get(t["status"], 0) + 1
+    extra = f", сохранено служебных {len(preserved)}" if preserved else ""
     print(f"plan.json: задач {len(tasks)} "
-          f"({', '.join(f'{k}={v}' for k, v in sorted(counts.items()))})")
+          f"({', '.join(f'{k}={v}' for k, v in sorted(counts.items()))}){extra}")
 
 
 if __name__ == "__main__":
