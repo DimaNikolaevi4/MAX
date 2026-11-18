@@ -1,6 +1,8 @@
 ---
 channel: ainow
-status: approved
+status: published
+published_at: 2026-11-18T07:15:00+03:00
+published_note: 18.11.2026 - владельцем подтверждено, что пост вышел
 format: markdown
 notify: true
 topic: создать нейросеть/бота без кода (СЯ гипотеза 3)
