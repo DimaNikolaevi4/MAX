@@ -1,33 +1,33 @@
 {
-  "_": "Служебная команда оркестрации catden (MAX ↔ kalendar). Читается при команде синхронизации в E:\\github\\kalendar. Не перегенерируется export_plan.py; факты публикации/согласования обновляются агентом после вычитки и автопубликаций.",
-  "id": "orch-catden-autopilot",
-  "channel": "catden",
-  "enabled": true,
-  "timezone": "Europe/Moscow",
-  "publish_time": "20:00",
-  "cycle": {
-    "thursday": {
-      "action": "media_to_hosting",
-      "window_days_ahead": 11,
-      "description": "Сверка уже загруженного на хостинге, заливка недостающего на 11 дней вперёд, удаление отработавшего. Источник истины по медиа — front matter постов; хостинг /0s3/blogger-data/media/catden/<дата>/."
-    },
-    "friday": {
-      "action": "agent_review_and_calendar_preview",
-      "window_days_ahead": 10,
-      "description": "Стилистическая шлифовка кандидатов через ИИ (агент) + слои 1-3 до отправки, затем превью 10 дней в канал «календарь» (текст + медиа как будет публиковаться, без дат, без notify). Слой 4 — вычитка владельца в «календаре»."
-    }
+ "_": "Служебная команда оркестрации catden (MAX ↔ kalendar). Читается при команде синхронизации в E:\\github\\kalendar. Не перегенерируется export_plan.py; факты публикации/согласования обновляются агентом после вычитки и автопубликаций.",
+ "id": "orch-catden-autopilot",
+ "channel": "catden",
+ "enabled": true,
+ "timezone": "Europe/Moscow",
+ "publish_time": "20:00",
+ "cycle": {
+  "thursday": {
+   "action": "media_to_hosting",
+   "window_days_ahead": 11,
+   "description": "Сверка уже загруженного на хостинге, заливка недостающего на 11 дней вперёд, удаление отработавшего. Источник истины по медиа — front matter постов; хостинг /0s3/blogger-data/media/catden/<дата>/."
   },
-  "state": {
-    "agreed_until": "2026-11-20",
-    "review_candidate_date": null,
-    "review_candidate_sent_to_calendar_mid": "mid.ffffb629582f9aa301a1ee5319f00279",
-    "last_sync_report": null,
-    "notes": "18.11.2026: 19.11 согласовано; кандидат 20.11 (008-p1) утверждён владельцем в «календаре», agreed_until=2026-11-20. 18.11 утренний пост уже вышел (mid.ffffb62cfe529aa301a1eced19f4022d), файла 2026-11-18-* в posts нет — запуск 20:00 МСК 18.11 публиковать нечего."
-  },
-  "reporting": {
-    "hub_repo": "E:\\github\\kalendar",
-    "ok_template": "всё хорошо, посты до {agreed_until} готовы",
-    "auto_published_template": "{date} пост вышел на автомате",
-    "calendar_channel_key": "calendar"
+  "friday": {
+   "action": "agent_review_and_calendar_preview",
+   "window_days_ahead": 10,
+   "description": "Стилистическая шлифовка кандидатов через ИИ (агент) + слои 1-3 до отправки, затем превью 10 дней в канал «календарь» (текст + медиа как будет публиковаться, без дат, без notify). Слой 4 — вычитка владельца в «календаре»."
   }
+ },
+ "state": {
+  "agreed_until": "2026-11-20",
+  "review_candidate_date": null,
+  "review_candidate_sent_to_calendar_mid": "mid.ffffb629582f9aa301a1ee5319f00279",
+  "last_sync_report": "18.11 17:30: media_to_hosting выполнено по front matter за 19–29.11 (11 дат): залито недостающее (008 p1 20.11, 008 i1-i4 21.11, 074 i1-i2 22.11, 003 p1 23.11, 006 p1 25.11, 006 i1-i6 26.11, 007 p1 27.11, 007 i1-i4 28.11, 011 p1 29.11), удалено отработавшее (006-фото 20.11, 006-p1 21.11, 007-p1 23.11, 003-p1 25.11, дубли 005-фото 19.11 после утренней публикации). DRY 17:28: 19.11 — catden p1 (1 медиа), ainow prezentacii (обложка), zabava видео; 18.11 — кандидатов 0.",
+  "notes": "18.11.2026: 19.11 согласовано; кандидат 20.11 (008-p1) утверждён владельцем в «календаре», agreed_until=2026-11-20. 18.11 утренний пост уже вышел (mid.ffffb62cfe529aa301a1eced19f4022d), файла 2026-11-18-* в posts нет — запуск 20:00 МСК 18.11 публиковать нечего."
+ },
+ "reporting": {
+  "hub_repo": "E:\\github\\kalendar",
+  "ok_template": "всё хорошо, посты до {agreed_until} готовы",
+  "auto_published_template": "{date} пост вышел на автомате",
+  "calendar_channel_key": "calendar"
+ }
 }
