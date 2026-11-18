@@ -1,10 +1,14 @@
 ---
 channel: na100
-status: draft
+status: published
 format: markdown
 notify: true
-spell_ignore: GPT-6.2, H200
+published_at: 2026-11-18T07:32:37+03:00
+message_id: mid.ffffba08e9ee9aa301a1eced99913eac
+channel_id: -76927529477469
+url: https://max.ru/channel_na100/AaHs7ZmRPqw
 image_file: local/digest/cover-2026-11-18-pyaterka-tehnologij.png
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCRAd8qrCW0gdL6DerS8LC0XmCeRVhCJOdfvamUT0Btrna81Z1jWtRJ2D8Vv-LHfshjpKsEvrzu2WXrlWWawDI8
 ---
 
 **GPT-6.2 дешевле Claude, Apple лежит, Nvidia уходит из Китая**
