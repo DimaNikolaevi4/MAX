@@ -1,0 +1,1304 @@
+{
+ "date": "2026-11-18",
+ "generated_at": "2026-11-18T06:30:54.894396+03:00",
+ "formula": "свежесть*0.3 + влияние*0.4 + новизна*0.2 + авторитет*0.1 (0-10, порог 5.0); шаг 4 — обложка/текст у агента",
+ "notes": [],
+ "proposed": [
+  {
+   "title": "OpenAI выпустила GPT-6.2: обгоняет Claude Opus 5.5 и стоит в разы дешевле. Но есть нюансы",
+   "link": "https://habr.com/ru/articles/1109080/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109080",
+   "dt": "2026-11-17T22:47:58+03:00",
+   "region": "ru",
+   "feeds": [
+    "Habr news"
+   ],
+   "hours": 7.7,
+   "fresh": 8,
+   "influence": 6,
+   "novelty": 10,
+   "authority": 7,
+   "total": 7.5,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность",
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://habr.com/ru/articles/1109080/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109080"
+   ]
+  },
+  {
+   "title": "Group emerges from isolation in Brazil’s Amazon in ‘historic encounter’",
+   "link": "https://www.scmp.com/news/world/americas/article/3374818/isolated-group-emerges-brazils-amazon-historic-encounter",
+   "dt": "2026-11-18T05:16:30+03:00",
+   "region": "cn",
+   "feeds": [
+    "SCMP Tech"
+   ],
+   "hours": 1.2,
+   "fresh": 10,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.6,
+   "signals": [
+    "игрок/государство"
+   ],
+   "sources": [
+    "https://www.scmp.com/news/world/americas/article/3374818/isolated-group-emerges-brazils-amazon-historic-encounter"
+   ]
+  },
+  {
+   "title": "Nvidia is abandoning China after Jensen Huang’s ouster",
+   "link": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/",
+   "dt": "2026-11-18T02:37:48+03:00",
+   "region": "world",
+   "feeds": [
+    "TechCrunch"
+   ],
+   "hours": 3.9,
+   "fresh": 10,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 7.4,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/"
+   ]
+  },
+  {
+   "title": "Bookmark this — Amazon Australia just discounted a bunch of Kindle e-readers for Black Friday, and they're hitting all-time low prices",
+   "link": "https://www.techradar.com/tablets/ereaders/bookmark-this-amazon-australia-just-discounted-a-bunch-of-kindle-e-readers-for-black-friday-and-theyre-hitting-all-time-low-prices",
+   "dt": "2026-11-18T03:16:35+03:00",
+   "region": "world",
+   "feeds": [
+    "TechRadar"
+   ],
+   "hours": 3.2,
+   "fresh": 10,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 6,
+   "total": 7.2,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://www.techradar.com/tablets/ereaders/bookmark-this-amazon-australia-just-discounted-a-bunch-of-kindle-e-readers-for-black-friday-and-theyre-hitting-all-time-low-prices"
+   ]
+  },
+  {
+   "title": "Google joins the tech outage trend by announcing it’s not having one",
+   "link": "https://techcrunch.com/2026/11/17/google-joins-the-tech-outage-trend-by-announcing-its-not-having-one/",
+   "dt": "2026-11-18T00:34:50+03:00",
+   "region": "world",
+   "feeds": [
+    "TechCrunch"
+   ],
+   "hours": 5.9,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.8,
+   "signals": [
+    "игрок/государство",
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/11/17/google-joins-the-tech-outage-trend-by-announcing-its-not-having-one/"
+   ]
+  }
+ ],
+ "candidates": {
+  "ru": [
+   {
+    "title": "OpenAI выпустила GPT-6.2: обгоняет Claude Opus 5.5 и стоит в разы дешевле. Но есть нюансы",
+    "link": "https://habr.com/ru/articles/1109080/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109080",
+    "dt": "2026-11-17T22:47:58+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 7.7,
+    "fresh": 8,
+    "influence": 6,
+    "novelty": 10,
+    "authority": 7,
+    "total": 7.5,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1109080/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109080"
+    ]
+   },
+   {
+    "title": "OpenAI выпустили GPT-6.2 Astra и Sol и снизили цену флагмана на 20%",
+    "link": "https://habr.com/ru/articles/1109054/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109054",
+    "dt": "2026-11-17T21:19:12+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 9.2,
+    "fresh": 8,
+    "influence": 6,
+    "novelty": 10,
+    "authority": 7,
+    "total": 7.5,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1109054/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109054"
+    ]
+   },
+   {
+    "title": "Nvidia представила кластер из четырёх DGX Spark с 512 ГБ для запуска AI‑моделей размером до 700 млрд параметров",
+    "link": "https://habr.com/ru/articles/1109072/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109072",
+    "dt": "2026-11-17T22:24:32+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 8.1,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 7,
+    "total": 6.7,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1109072/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109072"
+    ]
+   },
+   {
+    "title": "В России стартовал предзаказ смартфонов серии Xiaomi 18 Pro: второй дисплей на задней панели и флагманская система камер",
+    "link": "https://www.cnews.ru/news/line/2026-11-17_v_rossii_startoval_predzakaz",
+    "dt": "2026-11-17T17:34:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 12.9,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-17_v_rossii_startoval_predzakaz"
+    ]
+   },
+   {
+    "title": "«СберСтрахование» запустила мгновенный расчёт выплаты по ОСАГО через «СберБанк Онлайн»",
+    "link": "https://www.cnews.ru/news/line/2026-11-17_sberstrahovanie_zapustila",
+    "dt": "2026-11-17T15:51:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 14.7,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-17_sberstrahovanie_zapustila"
+    ]
+   },
+   {
+    "title": "Nodul запустила DeepSeek V4.1 Flash на 2 видеокартах вместо 8",
+    "link": "https://www.cnews.ru/news/line/2026-11-17_nodul_zapustila_deepseek_v41_flash",
+    "dt": "2026-11-17T14:16:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 16.2,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-17_nodul_zapustila_deepseek_v41_flash"
+    ]
+   },
+   {
+    "title": "Из совета директоров «Яндекса» под давлением санкций ЕС вышел ИТ-бизнесмен Чачава",
+    "link": "https://www.cnews.ru/news/top/2026-11-17_sovladelets_yandeksa_pokinul",
+    "dt": "2026-11-17T13:08:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 17.4,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-17_sovladelets_yandeksa_pokinul"
+    ]
+   },
+   {
+    "title": "Сбербанк выпустил умную колонку с «ГигаЧатом», которой не нужны интернет и розетка. Подсмотрели у «Яндекса». Опрос",
+    "link": "https://www.cnews.ru/news/top/2026-11-17_sberbank_vypustil_umnuyu",
+    "dt": "2026-11-17T11:50:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 18.7,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-17_sberbank_vypustil_umnuyu"
+    ]
+   },
+   {
+    "title": "Framework представила беспроводную клавиатуру с тачпадом и сменным аккумулятором",
+    "link": "https://habr.com/ru/articles/1109062/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109062",
+    "dt": "2026-11-17T21:47:47+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 8.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1109062/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109062"
+    ]
+   },
+   {
+    "title": "Глобальный сбой в работе сервисов Apple, включая App Store и iCloud",
+    "link": "https://habr.com/ru/articles/1109058/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109058",
+    "dt": "2026-11-17T21:42:11+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 8.8,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1109058/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109058"
+    ]
+   },
+   {
+    "title": "Рисую сцены Wallpaper Engine на Linux своим рендерером на Rust",
+    "link": "https://habr.com/ru/articles/1109022/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109022",
+    "dt": "2026-11-17T19:48:16+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 10.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1109022/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109022"
+    ]
+   },
+   {
+    "title": "Запретный плод: возвращаем на iOS делистнутые из App Store приложения без кабеля",
+    "link": "https://habr.com/ru/articles/1109020/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109020",
+    "dt": "2026-11-17T19:38:46+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 10.9,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1109020/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109020"
+    ]
+   },
+   {
+    "title": "Прибыль совладельца «Яндекса» растет, несмотря на убытки от новых направлений",
+    "link": "https://www.cnews.ru/news/top/2026-11-17_pribyl_sovladeltsa_yandeksa",
+    "dt": "2026-11-17T19:27:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 11.1,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-17_pribyl_sovladeltsa_yandeksa"
+    ]
+   },
+   {
+    "title": "Россия заработает 2,56 триллиона на своих чипах",
+    "link": "https://www.cnews.ru/news/top/2026-10-03_megakorporatsiya_rossii_mozhet",
+    "dt": "2026-11-17T16:56:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 13.6,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-10-03_megakorporatsiya_rossii_mozhet"
+    ]
+   },
+   {
+    "title": "Кристаллы NAND для смартфонов и ПК подешевели на 32% за квартал",
+    "link": "https://www.cnews.ru/news/top/2026-11-17_flesh-pamyat_dlya_pk_i_smartfonov",
+    "dt": "2026-11-17T16:28:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 14.0,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-17_flesh-pamyat_dlya_pk_i_smartfonov"
+    ]
+   }
+  ],
+  "cn": [
+   {
+    "title": "Group emerges from isolation in Brazil’s Amazon in ‘historic encounter’",
+    "link": "https://www.scmp.com/news/world/americas/article/3374818/isolated-group-emerges-brazils-amazon-historic-encounter",
+    "dt": "2026-11-18T05:16:30+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 1.2,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/world/americas/article/3374818/isolated-group-emerges-brazils-amazon-historic-encounter"
+    ]
+   },
+   {
+    "title": "Nvidia results beat expectations, as ousted CEO Huang told no way back",
+    "link": "https://www.scmp.com/news/world/united-states-canada/article/3374805/nvidia-results-beat-expectations-ousted-ceo-huang-told-no-way-back",
+    "dt": "2026-11-18T01:47:11+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 4.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/world/united-states-canada/article/3374805/nvidia-results-beat-expectations-ousted-ceo-huang-told-no-way-back"
+    ]
+   },
+   {
+    "title": "Jensen Huang agrees to face Congress over Nvidia scandal",
+    "link": "https://www.scmp.com/news/us/economy-trade-business/article/3374798/jensen-huang-agrees-face-congress-over-nvidia-scandal",
+    "dt": "2026-11-17T19:51:00+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 10.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/us/economy-trade-business/article/3374798/jensen-huang-agrees-face-congress-over-nvidia-scandal"
+    ]
+   },
+   {
+    "title": "Heavy metal in an EV hub: Trump’s ‘Beast’ and new Air Force One to touch down in Shenzhen",
+    "link": "https://www.scmp.com/news/china/diplomacy/article/3374825/heavy-metal-ev-hub-trumps-beast-and-new-air-force-one-touch-down-shenzhen",
+    "dt": "2026-11-18T05:58:30+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 0.5,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.8,
+    "signals": [],
+    "sources": [
+     "https://www.scmp.com/news/china/diplomacy/article/3374825/heavy-metal-ev-hub-trumps-beast-and-new-air-force-one-touch-down-shenzhen"
+    ]
+   },
+   {
+    "title": "‘China question’: Nvidia crisis and new US chip curbs split Washington and Silicon Valley",
+    "link": "https://www.scmp.com/tech/tech-war/article/3374770/china-question-nvidia-crisis-and-new-us-chip-curbs-split-washington-and-silicon-valley",
+    "dt": "2026-11-17T18:00:09+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 12.5,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/tech/tech-war/article/3374770/china-question-nvidia-crisis-and-new-us-chip-curbs-split-washington-and-silicon-valley"
+    ]
+   },
+   {
+    "title": "Baidu, Xiaomi CEOs warn of growing gap between AI hype and returns",
+    "link": "https://www.scmp.com/tech/big-tech/article/3374774/baidu-xiaomi-ceos-warn-growing-gap-between-ai-hype-and-returns",
+    "dt": "2026-11-17T15:30:09+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 15.0,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/tech/big-tech/article/3374774/baidu-xiaomi-ceos-warn-growing-gap-between-ai-hype-and-returns"
+    ]
+   },
+   {
+    "title": "Trump eyes China after brief Manila stop, seeking chemistry with Xi amid fresh AI strains",
+    "link": "https://www.scmp.com/news/china/diplomacy/article/3374795/trump-eyes-china-after-brief-manila-stop-seeking-chemistry-xi-amid-fresh-ai-strains",
+    "dt": "2026-11-17T18:39:39+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 11.9,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://www.scmp.com/news/china/diplomacy/article/3374795/trump-eyes-china-after-brief-manila-stop-seeking-chemistry-xi-amid-fresh-ai-strains"
+    ]
+   }
+  ],
+  "world": [
+   {
+    "title": "Nvidia is abandoning China after Jensen Huang’s ouster",
+    "link": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/",
+    "dt": "2026-11-18T02:37:48+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 3.9,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 7.4,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/"
+    ]
+   },
+   {
+    "title": "Bookmark this — Amazon Australia just discounted a bunch of Kindle e-readers for Black Friday, and they're hitting all-time low prices",
+    "link": "https://www.techradar.com/tablets/ereaders/bookmark-this-amazon-australia-just-discounted-a-bunch-of-kindle-e-readers-for-black-friday-and-theyre-hitting-all-time-low-prices",
+    "dt": "2026-11-18T03:16:35+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 3.2,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 7.2,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/tablets/ereaders/bookmark-this-amazon-australia-just-discounted-a-bunch-of-kindle-e-readers-for-black-friday-and-theyre-hitting-all-time-low-prices"
+    ]
+   },
+   {
+    "title": "Google joins the tech outage trend by announcing it’s not having one",
+    "link": "https://techcrunch.com/2026/11/17/google-joins-the-tech-outage-trend-by-announcing-its-not-having-one/",
+    "dt": "2026-11-18T00:34:50+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 5.9,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.8,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/17/google-joins-the-tech-outage-trend-by-announcing-its-not-having-one/"
+    ]
+   },
+   {
+    "title": "Nvidia claims its Vera CPU can gain up to 39% performance boost via software optimization at SC26 — architectural fine-tuning is needed to fully unleash custom Olympus cores",
+    "link": "https://www.tomshardware.com/pc-components/cpus/nvidia-claims-its-vera-cpu-can-gain-up-to-39-percent-performance-boost-via-software-optimization-at-sc26-architectural-fine-tuning-is-needed-to-fully-unleash-custom-olympus-cores",
+    "dt": "2026-11-17T20:30:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 10.0,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.8,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/cpus/nvidia-claims-its-vera-cpu-can-gain-up-to-39-percent-performance-boost-via-software-optimization-at-sc26-architectural-fine-tuning-is-needed-to-fully-unleash-custom-olympus-cores"
+    ]
+   },
+   {
+    "title": "Nvidia’s startup stakes ballooned to $65B, but Huang’s exit puts future  deals in doubt",
+    "link": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/",
+    "dt": "2026-11-18T04:44:21+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 1.8,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/"
+    ]
+   },
+   {
+    "title": "Nvidia promises that revenue will keep soaring — for now",
+    "link": "https://techcrunch.com/2026/11/17/nvidia-promises-that-revenue-will-keep-soaring-for-now/",
+    "dt": "2026-11-18T03:16:50+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 3.2,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/17/nvidia-promises-that-revenue-will-keep-soaring-for-now/"
+    ]
+   },
+   {
+    "title": "OpenAI just unveiled GPT-6.2 Astra and Sol",
+    "link": "https://www.techradar.com/tech/openai-just-launched-gpt-6-2-and-its-powerful-enough-to-recreate-the-whole-of-paris-as-a-virtual-world-you-can-explore-in-your-browser",
+    "dt": "2026-11-18T01:23:41+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.1,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.techradar.com/tech/openai-just-launched-gpt-6-2-and-its-powerful-enough-to-recreate-the-whole-of-paris-as-a-virtual-world-you-can-explore-in-your-browser"
+    ]
+   },
+   {
+    "title": "The major Microsoft 365 outage saw Japanese workers fire up their fax machines for the first time in years",
+    "link": "https://www.techradar.com/pro/microsoft-365-outage-saw-japanese-workers-fire-up-their-fax-machines",
+    "dt": "2026-11-18T03:10:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 3.3,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/microsoft-365-outage-saw-japanese-workers-fire-up-their-fax-machines"
+    ]
+   },
+   {
+    "title": "The vintage-style ACEMAGIC X3 mini PC is $69 cheaper on Amazon right now ahead of Black Friday",
+    "link": "https://www.techradar.com/pro/the-vintage-style-acemagic-x3-mini-pc-is-usd69-cheaper-on-amazon-right-now-ahead-of-black-friday",
+    "dt": "2026-11-18T03:05:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 3.4,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/the-vintage-style-acemagic-x3-mini-pc-is-usd69-cheaper-on-amazon-right-now-ahead-of-black-friday"
+    ]
+   },
+   {
+    "title": "Nvidia warns customers of new US rule that could expose them to lawsuits for serving Chinese clients",
+    "link": "https://www.tomshardware.com/tech-industry/policy/nvidia-warns-customers-of-new-us-rule-that-could-expose-them-to-lawsuits-for-serving-chinese-clients-commerce-department-releases-interim-regulations-preventing-foreign-actors-from-using-advanced-compute-based-on-american-tech",
+    "dt": "2026-11-17T17:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 13.5,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.2,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/policy/nvidia-warns-customers-of-new-us-rule-that-could-expose-them-to-lawsuits-for-serving-chinese-clients-commerce-department-releases-interim-regulations-preventing-foreign-actors-from-using-advanced-compute-based-on-american-tech"
+    ]
+   },
+   {
+    "title": "Razer's lightweight DeathAdder V3 Pro price is slashed 57% at Amazon",
+    "link": "https://www.tomshardware.com/peripherals/gaming-mice/razers-lightweight-deathadder-v3-pro-price-is-slashed-57-percent-at-amazon-elite-wireless-gaming-mouse-is-now-only-usd64-its-lowest-ever-price",
+    "dt": "2026-11-17T15:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 15.5,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.2,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/peripherals/gaming-mice/razers-lightweight-deathadder-v3-pro-price-is-slashed-57-percent-at-amazon-elite-wireless-gaming-mouse-is-now-only-usd64-its-lowest-ever-price"
+    ]
+   },
+   {
+    "title": "Nvidia says its open source AI strategy remains intact after Jensen Huang’s exit",
+    "link": "https://techcrunch.com/2026/11/17/nvidia-says-its-open-source-ai-strategy-remains-intact-after-jensen-huangs-exit/",
+    "dt": "2026-11-18T02:04:35+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 4.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/17/nvidia-says-its-open-source-ai-strategy-remains-intact-after-jensen-huangs-exit/"
+    ]
+   },
+   {
+    "title": "Nvidia says it doesn’t plan to reappoint Jensen Huang as CEO",
+    "link": "https://techcrunch.com/2026/11/17/nvidia-says-it-doesnt-plan-to-reappoint-jensen-huang-as-ceo/",
+    "dt": "2026-11-18T01:42:27+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 4.8,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/17/nvidia-says-it-doesnt-plan-to-reappoint-jensen-huang-as-ceo/"
+    ]
+   },
+   {
+    "title": "Amazon and Google will together own nearly 30% of Anthropic after its IPO",
+    "link": "https://techcrunch.com/2026/11/17/amazon-and-google-will-together-own-nearly-30-of-anthropic-after-its-ipo/",
+    "dt": "2026-11-18T01:29:05+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 5.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/17/amazon-and-google-will-together-own-nearly-30-of-anthropic-after-its-ipo/"
+    ]
+   },
+   {
+    "title": "SEC reportedly investigating Nvidia amid Huang exit",
+    "link": "https://techcrunch.com/2026/11/17/sec-reportedly-investigating-nvidia-amid-huang-exit/",
+    "dt": "2026-11-18T00:48:07+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 5.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/17/sec-reportedly-investigating-nvidia-amid-huang-exit/"
+    ]
+   },
+   {
+    "title": "Google expands access to Gemini Tasks, which can help with calls, purchases",
+    "link": "https://techcrunch.com/2026/11/17/google-expands-access-to-gemini-tasks-which-can-help-with-calls-purchases/",
+    "dt": "2026-11-17T22:02:20+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 8.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/17/google-expands-access-to-gemini-tasks-which-can-help-with-calls-purchases/"
+    ]
+   },
+   {
+    "title": "Apple services, including iCloud, App Store, Apple Music, and more, hit by outage",
+    "link": "https://techcrunch.com/2026/11/17/apple-services-including-icloud-app-store-and-apple-music-hit-by-outage/",
+    "dt": "2026-11-17T21:55:40+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 8.6,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/17/apple-services-including-icloud-app-store-and-apple-music-hit-by-outage/"
+    ]
+   },
+   {
+    "title": "Google to keep Gemini chats for 2 months, up from 72 hours, even with history off",
+    "link": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/",
+    "dt": "2026-11-17T21:48:23+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 8.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/"
+    ]
+   },
+   {
+    "title": "Jensen Huang says he would be ‘honored’ if allowed to return as Nvidia CEO",
+    "link": "https://techcrunch.com/2026/11/17/jensen-huang-says-he-would-be-honored-if-allowed-to-return-as-nvidia-ceo/",
+    "dt": "2026-11-17T19:44:15+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch",
+     "Tom's Hardware"
+    ],
+    "hours": 10.8,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/17/jensen-huang-says-he-would-be-honored-if-allowed-to-return-as-nvidia-ceo/",
+     "https://www.tomshardware.com/tech-industry/big-tech/jensen-huang-says-he-would-be-honored-to-return-as-nvidia-ceo-first-statement-since-resignation-follows-support-from-billionaires-investors-and-some-employees"
+    ]
+   },
+   {
+    "title": "Read everything that Nvidia’s board chair had to say about Jensen Huang",
+    "link": "https://www.theverge.com/tech/1036160/nvidia-earnings-harvey-c-jones-jensen-huang",
+    "dt": "2026-11-18T01:32:50+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 5.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1036160/nvidia-earnings-harvey-c-jones-jensen-huang"
+    ]
+   },
+   {
+    "title": "iFixit’s Apple HomeView teardown reveals a device that will be difficult to repair",
+    "link": "https://www.theverge.com/tech/1036045/ifixit-teardown-apple-homeview-smart-home-hub",
+    "dt": "2026-11-18T01:25:41+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 5.1,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1036045/ifixit-teardown-apple-homeview-smart-home-hub"
+    ]
+   },
+   {
+    "title": "Nvidia says it does not intend to reinstate Jensen Huang as CEO",
+    "link": "https://www.theverge.com/report/1035465/nvidia-says-it-will-not-reinstate-jensen-huang-as-ceo",
+    "dt": "2026-11-18T01:05:05+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 5.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/report/1035465/nvidia-says-it-will-not-reinstate-jensen-huang-as-ceo"
+    ]
+   },
+   {
+    "title": "Nvidia’s Q3 earnings hit the mark, without mentioning the whole Jensen Huang thing",
+    "link": "https://www.theverge.com/tech/1036032/nvidia-q3-2027-jensen-huang",
+    "dt": "2026-11-18T00:40:59+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 5.8,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1036032/nvidia-q3-2027-jensen-huang"
+    ]
+   },
+   {
+    "title": "Nvidia employee warns of 'irreplaceable' talent exodus if Jensen Huang not reinstated",
+    "link": "https://www.tomshardware.com/tech-industry/big-tech/nvidia-employee-warns-of-irreplaceable-talent-exodus-if-jensen-huang-not-reinstated-cautions-board-and-top-brass-that-talent-at-nvidia-is-now-contemplating-departing",
+    "dt": "2026-11-18T00:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 6.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/big-tech/nvidia-employee-warns-of-irreplaceable-talent-exodus-if-jensen-huang-not-reinstated-cautions-board-and-top-brass-that-talent-at-nvidia-is-now-contemplating-departing"
+    ]
+   },
+   {
+    "title": "Former Nvidia CEO Jensen Huang will appear before a House Foreign Affairs panel amid concerns over his affair with a suspected Chinese spy",
+    "link": "https://www.tomshardware.com/tech-industry/data-centers/former-nvidia-ceo-jensen-huang-will-appear-before-a-house-foreign-affairs-panel-amid-concerns-over-his-affair-with-a-suspected-chinese-spy-will-testify-behind-closed-doors-december-1-nvidia-lawyer-will-also-appear",
+    "dt": "2026-11-17T19:43:52+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 10.8,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/data-centers/former-nvidia-ceo-jensen-huang-will-appear-before-a-house-foreign-affairs-panel-amid-concerns-over-his-affair-with-a-suspected-chinese-spy-will-testify-behind-closed-doors-december-1-nvidia-lawyer-will-also-appear"
+    ]
+   },
+   {
+    "title": "AMD attacks Nvidia's FP64 emulation at SC26, touts native double-precision on Instinct MI430X",
+    "link": "https://www.tomshardware.com/pc-components/gpus/amd-attacks-nvidias-fp64-emulation-at-sc26-touts-native-double-precision-on-instinct-mi430x-says-ozaki-schemes-fit-less-than-10-percent-of-hpc-workloads-and-triple-memory-use-and-emulated-fp64-is-a-poor-fit-for-many-hpc-workloads",
+    "dt": "2026-11-17T19:47:47+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 10.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/gpus/amd-attacks-nvidias-fp64-emulation-at-sc26-touts-native-double-precision-on-instinct-mi430x-says-ozaki-schemes-fit-less-than-10-percent-of-hpc-workloads-and-triple-memory-use-and-emulated-fp64-is-a-poor-fit-for-many-hpc-workloads"
+    ]
+   },
+   {
+    "title": "Intel bets on Classiq acquisition to turn Quantum efforts into commercially viable business",
+    "link": "https://www.tomshardware.com/tech-industry/quantum-computing/intel-bets-on-classiq-acquisition-to-turn-quantum-efforts-into-commercially-viable-business-deal-positions-company-as-leading-vendor-of-qubit-chips-acquisition-to-close-by-the-first-half-of-2027",
+    "dt": "2026-11-17T19:41:34+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 10.8,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/quantum-computing/intel-bets-on-classiq-acquisition-to-turn-quantum-efforts-into-commercially-viable-business-deal-positions-company-as-leading-vendor-of-qubit-chips-acquisition-to-close-by-the-first-half-of-2027"
+    ]
+   },
+   {
+    "title": "The Xiaomi Clip earbuds have been unveiled, offering a small form factor, long battery life and extra useful features",
+    "link": "https://www.techradar.com/audio/earbuds-airpods/these-new-open-earbuds-might-be-the-best-clip-on-buds-ive-tested-yet-but-one-big-question-remains-before-i-can-recommend-them",
+    "dt": "2026-11-17T17:30:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 13.0,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.techradar.com/audio/earbuds-airpods/these-new-open-earbuds-might-be-the-best-clip-on-buds-ive-tested-yet-but-one-big-question-remains-before-i-can-recommend-them"
+    ]
+   },
+   {
+    "title": "Google exec runs Windows 11 on a $1,999 iPhone Duo with Gemini 4 Carbon, but it might not be the easiest way to go about it",
+    "link": "https://www.techradar.com/pro/google-exec-runs-windows-11-on-a-usd1-999-iphone-duo-with-gemini-4-carbon-but-it-might-not-be-the-easiest-way-to-go-about-it",
+    "dt": "2026-11-18T02:05:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 4.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/google-exec-runs-windows-11-on-a-usd1-999-iphone-duo-with-gemini-4-carbon-but-it-might-not-be-the-easiest-way-to-go-about-it"
+    ]
+   },
+   {
+    "title": "The KAMRUI Pinova P2 is an affordable, compact PC that’s now $40 cheaper at Amazon ahead of Black Friday",
+    "link": "https://www.techradar.com/pro/the-kamrui-pinova-p2-is-an-affordable-compact-pc-thats-now-usd40-cheaper-at-amazon-ahead-of-black-friday",
+    "dt": "2026-11-18T01:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/the-kamrui-pinova-p2-is-an-affordable-compact-pc-thats-now-usd40-cheaper-at-amazon-ahead-of-black-friday"
+    ]
+   }
+  ]
+ },
+ "dropped": {
+  "count": 190,
+  "examples": [
+   {
+    "title": "Релиз AlmaLinux 10.3",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Выпуск видеоредактора с открытым исходным кодом Shotcut 26.11",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Вышло обновление RapidRAW 1.7.0 — открытого редактора изображений RAW",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Не Клодом единым — как после бана я переписал командный плагин на разные хосты моделей",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "«Процесс» Франц Кафка",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Мы каждый день разговариваем со всеми знаниями человечества. Но становимся ли мы умнее?",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "[Перевод] Мы всё охотнее миримся с медленной работой программ",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Палеокомпьютинг, часть 4. Ещё две Ады: восстанавливаем языки, которые Пентагон не допустил к финалу своего тендера",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "KeenProxy 0.9.0: singbox‑lx и все вытекающие последствия",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Mercedes‑Benz показала две технологии, которые превращают стёкла автомобиля в дисплеи для пассажиров и других водителей",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "uv.lock не менялся, Dockerfile не менялся, а образ перестал собираться",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Активация Matrix Access Monitor на китайском микроконтроллере (или MPU для периферии)",
+    "reason": "не тех-тема"
+   }
+  ]
+ },
+ "feeds_ok": [
+  "Habr news",
+  "Opennet",
+  "CNews",
+  "SCMP Tech",
+  "Global Times (outbrain, общий фид с техно-пунктом)",
+  "TechCrunch",
+  "The Verge",
+  "Tom's Hardware",
+  "TechRadar",
+  "Phys.org",
+  "IEEE Spectrum AI"
+ ],
+ "feeds_fail": [
+  "TechNode (China Tech)",
+  "VentureBeat"
+ ]
+}
