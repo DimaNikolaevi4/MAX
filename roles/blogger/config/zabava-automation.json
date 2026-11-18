@@ -1,0 +1,23 @@
+{
+ "_": "Служебная команда оркестрации zabava (MAX ↔ kalendar). Читается при команде синхронизации в E:\\github\\kalendar. Не перегенерируется export_plan.py; факты публикации обновляются агентом после автопубликаций.",
+ "id": "orch-zabava-autopilot",
+ "channel": "zabava",
+ "enabled": true,
+ "timezone": "Europe/Moscow",
+ "publish_time": "19:30",
+ "cycle": {
+  "description": "Партия постов (видео из архива + CTA из пула без повторов) готовится локально и заливается на FTP /0s3/blogger-data/media/zabava/<дата>/; хостинг публикует approved-посты ежедневно в 19:30 МСК (перенесено с 07:16 18.11.2026). Пополнение партии — по мере расхода; держать не меньше 7 дней вперёд.",
+  "replenish_threshold_days": 7
+ },
+ "state": {
+  "ready_until": "2026-11-25",
+  "ready_days": 7,
+  "notes": "18.11.2026: партия 19–25.11 готова — 7 постов (планы в local/zabava-plan.json, CTA в cta-phrases.json), видео на FTP проверены. 18.11 пост вышел утром 07:16 (последний утренний слот), с 19.11 — вечерний слот 19:30."
+ },
+ "reporting": {
+  "hub_repo": "E:\\github\\kalendar",
+  "ok_template": "автопубликация готова на {ready_days} дней (посты до {ready_until})",
+  "auto_published_template": "{date} пост вышел на автомате",
+  "calendar_channel_key": "calendar"
+ }
+}
