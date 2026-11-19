@@ -4,6 +4,7 @@ status: draft
 format: markdown
 notify: true
 topic: OpenCode и бесплатные нейросети: подробный гайд по выживанию в лимитах
+image_file: 2026-11-29-cover.png
 alice_note: 19.11 — добавлен в свободный слот канала (29.11) по запросу владельца
 ---
 
