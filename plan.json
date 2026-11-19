@@ -761,13 +761,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-20-chto-takoe-promt-6-shablonov",
+      "id": "max-2026-11-21-chto-takoe-promt-6-shablonov",
       "title": "[AI] Что такое промт: 6 шаблонов на каждый день",
-      "when": "2026-11-20",
+      "when": "2026-11-21",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «AI»",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-20-chto-takoe-promt-6-shablonov.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-21-chto-takoe-promt-6-shablonov.md",
       "source": "auto"
     },
     {
@@ -791,13 +791,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-21-novostnaya-za-nedelyu",
+      "id": "max-2026-11-22-novostnaya-za-nedelyu",
       "title": "[AI] Новостная за неделю: Nvidia без Хуанга, чиповые гайки и подорожавшая память",
-      "when": "2026-11-21",
+      "when": "2026-11-22",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «AI»",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-21-novostnaya-za-nedelyu.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-22-novostnaya-za-nedelyu.md",
       "source": "auto"
     },
     {
@@ -821,13 +821,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-22-ii-instrumenty-dlya-programmirovaniya",
+      "id": "max-2026-11-23-ii-instrumenty-dlya-programmirovaniya",
       "title": "[AI] ИИ-инструменты для программирования: что попробовать бесплатно",
-      "when": "2026-11-22",
+      "when": "2026-11-23",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «AI»",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-22-ii-instrumenty-dlya-programmirovaniya.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-23-ii-instrumenty-dlya-programmirovaniya.md",
       "source": "auto"
     },
     {
@@ -851,13 +851,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-23-neyroset-bez-registracii-proverili-kto-puskaet",
+      "id": "max-2026-11-24-neyroset-bez-registracii-proverili-kto-puskaet",
       "title": "[AI] Нейросеть без регистрации: проверили, кто пускает без входа",
-      "when": "2026-11-23",
+      "when": "2026-11-24",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «AI»",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-23-neyroset-bez-registracii-proverili-kto-puskaet.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-24-neyroset-bez-registracii-proverili-kto-puskaet.md",
       "source": "auto"
     },
     {
@@ -961,13 +961,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-28-chto-ne-srabotalo-ii-redaktor-v-brauzere",
+      "id": "max-2026-11-29-chto-ne-srabotalo-ii-redaktor-v-brauzere",
       "title": "[AI] Что не сработало: ИИ-редактор в браузере",
-      "when": "2026-11-28",
+      "when": "2026-11-29",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «AI»",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-28-chto-ne-srabotalo-ii-redaktor-v-brauzere.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-29-chto-ne-srabotalo-ii-redaktor-v-brauzere.md",
       "source": "auto"
     },
     {
@@ -2251,63 +2251,63 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-24-kak-otlichit-ii-video-6-detektorov",
+      "id": "max-2026-11-25-kak-otlichit-ii-video-6-detektorov",
       "title": "[AI] Как отличить ИИ-видео: 6 детекторов и 5 признаков",
       "when": null,
       "time": null,
       "status": "backlog",
       "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-24-kak-otlichit-ii-video-6-detektorov.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-25-kak-otlichit-ii-video-6-detektorov.md",
       "source": "auto"
     },
     {
-      "id": "max-2026-11-25-chat-bot-v-max-5-proverok",
+      "id": "max-2026-11-26-chat-bot-v-max-5-proverok",
       "title": "[AI] Чат-бот в MAX: 5 проверок перед доступом",
       "when": null,
       "time": null,
       "status": "backlog",
       "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-25-chat-bot-v-max-5-proverok.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-26-chat-bot-v-max-5-proverok.md",
       "source": "auto"
     },
     {
-      "id": "max-2026-11-26-ii-dlya-uchitelya-5-priemov",
+      "id": "max-2026-11-27-ii-dlya-uchitelya-5-priemov",
       "title": "[AI] ИИ для учителя: 5 приёмов, которые экономят вечер",
       "when": null,
       "time": null,
       "status": "backlog",
       "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-26-ii-dlya-uchitelya-5-priemov.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-27-ii-dlya-uchitelya-5-priemov.md",
       "source": "auto"
     },
     {
-      "id": "max-2026-11-27-ozhivit-staroe-foto-5-servisov",
+      "id": "max-2026-11-28-ozhivit-staroe-foto-5-servisov",
       "title": "[AI] Оживить старое фото: 5 сервисов и подвохи",
       "when": null,
       "time": null,
       "status": "backlog",
       "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-27-ozhivit-staroe-foto-5-servisov.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-28-ozhivit-staroe-foto-5-servisov.md",
       "source": "auto"
     },
     {
-      "id": "max-2026-12-05-tri-filtra-kotorye-lovyat-ii-tekst",
+      "id": "max-2026-12-06-tri-filtra-kotorye-lovyat-ii-tekst",
       "title": "[AI] Три фильтра, которые ловят ИИ-текст",
       "when": null,
       "time": null,
       "status": "backlog",
       "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/ainow/posts/2026-12-05-tri-filtra-kotorye-lovyat-ii-tekst.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-12-06-tri-filtra-kotorye-lovyat-ii-tekst.md",
       "source": "auto"
     },
     {
-      "id": "max-2026-12-12-iz-570-zagolovkov-pyat-novostey",
+      "id": "max-2026-12-13-iz-570-zagolovkov-pyat-novostey",
       "title": "[AI] Из 570 заголовков — пять новостей",
       "when": null,
       "time": null,
       "status": "backlog",
       "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/ainow/posts/2026-12-12-iz-570-zagolovkov-pyat-novostey.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-12-13-iz-570-zagolovkov-pyat-novostey.md",
       "source": "auto"
     },
     {
@@ -2351,13 +2351,13 @@
       "source": "kalendar"
     },
     {
-      "id": "max-2026-11-29-opencode-besplatnyy-gaid-po-neyrosetyam",
+      "id": "max-2026-11-20-opencode-besplatnyy-gaid-po-neyrosetyam",
       "title": "[AI] 💻 OpenCode и бесплатные нейросети: подробный гайд по выживанию в лимитах",
-      "when": "2026-11-29",
+      "when": "2026-11-20",
       "time": null,
-      "status": "todo",
-      "why": "добавлен владельцем в свободный слот канала (29.11) — черновик, гейты пройдены",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-29-opencode-besplatnyy-gaid-po-neyrosetyam.md",
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «AI» (финальный текст владельца)",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-20-opencode-besplatnyy-gaid-po-neyrosetyam.md",
       "source": "auto"
     }
   ]
