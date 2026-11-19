@@ -2349,6 +2349,16 @@
       "why": "Оркестрация kalendar↔MAX: синхронизация по команде, отчёт в календарь, публикация catden 20:00 МСК по графику",
       "link": "roles/blogger/config/catden-automation.json",
       "source": "kalendar"
+    },
+    {
+      "id": "max-2026-11-29-opencode-besplatnyy-gaid-po-neyrosetyam",
+      "title": "[AI] 💻 OpenCode и бесплатные нейросети: подробный гайд по выживанию в лимитах",
+      "when": "2026-11-29",
+      "time": null,
+      "status": "todo",
+      "why": "добавлен владельцем в свободный слот канала (29.11) — черновик, гейты пройдены",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-29-opencode-besplatnyy-gaid-po-neyrosetyam.md",
+      "source": "auto"
     }
   ]
 }
