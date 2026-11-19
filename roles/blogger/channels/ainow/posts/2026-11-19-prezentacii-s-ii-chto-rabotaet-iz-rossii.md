@@ -1,12 +1,15 @@
 ---
 channel: ainow
-status: approved
+status: published
 format: markdown
 notify: true
 topic: нейросети для презентаций (СЯ гипотеза 5)
 alice_note: 14.11 — проход через Алису (режим «Эксперт»); 15.11 — заход без цифр + gamma.press убран по правке владельца; протокол local/alice/ainow-2026-11-15-20.md
 approved_note: 15.11 — одобрен владельцем (текст+обложка), публикация 19.11 07:15
 image_file: 2026-11-19-cover.png
+published_at: 2026-11-19T07:15:02+03:00
+message_id: mid.ffffba0066fb9aa301a1f203dfcc48d2
+url: https://max.ru/channel_ainow/AaHyA9_MSNI
 ---
 
 **Презентации с ИИ: что работает из России**
