@@ -1,0 +1,1197 @@
+{
+ "date": "2026-11-19",
+ "generated_at": "2026-11-19T06:30:22.523540+03:00",
+ "formula": "свежесть*0.3 + влияние*0.4 + новизна*0.2 + авторитет*0.1 (0-10, порог 5.0); шаг 4 — обложка/текст у агента",
+ "notes": [],
+ "proposed": [
+  {
+   "title": "Хакеры из The Gentlemen заявили о взломе Nvidia",
+   "link": "https://habr.com/ru/articles/1109554/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109554",
+   "dt": "2026-11-18T19:15:05+03:00",
+   "region": "ru",
+   "feeds": [
+    "Habr news"
+   ],
+   "hours": 11.3,
+   "fresh": 8,
+   "influence": 6,
+   "novelty": 10,
+   "authority": 7,
+   "total": 7.5,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность",
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://habr.com/ru/articles/1109554/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109554"
+   ]
+  },
+  {
+   "title": "‘Natural enemies’: Trump on China-Russia ties as he plays down Nvidia ‘tragedy’",
+   "link": "https://www.scmp.com/news/china/diplomacy/article/3374980/natural-enemies-trump-china-russia-ties-he-plays-down-nvidia-tragedy",
+   "dt": "2026-11-19T04:38:23+03:00",
+   "region": "cn",
+   "feeds": [
+    "SCMP Tech"
+   ],
+   "hours": 1.9,
+   "fresh": 10,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.6,
+   "signals": [
+    "игрок/государство"
+   ],
+   "sources": [
+    "https://www.scmp.com/news/china/diplomacy/article/3374980/natural-enemies-trump-china-russia-ties-he-plays-down-nvidia-tragedy"
+   ]
+  },
+  {
+   "title": "Anthropic reportedly prices IPO at $83 a share, above projected range",
+   "link": "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/",
+   "dt": "2026-11-19T01:11:15+03:00",
+   "region": "world",
+   "feeds": [
+    "TechCrunch"
+   ],
+   "hours": 5.3,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.8,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/"
+   ]
+  },
+  {
+   "title": "Microsoft CEO Satya Nadella explains why he asked 60K employees to quit",
+   "link": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/",
+   "dt": "2026-11-19T03:42:56+03:00",
+   "region": "world",
+   "feeds": [
+    "TechCrunch"
+   ],
+   "hours": 2.8,
+   "fresh": 10,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.6,
+   "signals": [
+    "игрок/государство"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/"
+   ]
+  },
+  {
+   "title": "Google’s leaked Android Fast Switch feature may soon allow one number on two phones",
+   "link": "https://www.techradar.com/phones/android/google-preps-android-fast-switch-feature-iphone-handoff-rival-could-let-you-share-one-number-across-two-phones",
+   "dt": "2026-11-18T20:49:37+03:00",
+   "region": "world",
+   "feeds": [
+    "TechRadar"
+   ],
+   "hours": 9.7,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 6,
+   "total": 6.6,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://www.techradar.com/phones/android/google-preps-android-fast-switch-feature-iphone-handoff-rival-could-let-you-share-one-number-across-two-phones"
+   ]
+  }
+ ],
+ "candidates": {
+  "ru": [
+   {
+    "title": "Хакеры из The Gentlemen заявили о взломе Nvidia",
+    "link": "https://habr.com/ru/articles/1109554/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109554",
+    "dt": "2026-11-18T19:15:05+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 11.3,
+    "fresh": 8,
+    "influence": 6,
+    "novelty": 10,
+    "authority": 7,
+    "total": 7.5,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1109554/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109554"
+    ]
+   },
+   {
+    "title": "Google представила Gemini 4 Neon — модель для кодинга и агентных задач",
+    "link": "https://habr.com/ru/companies/bothub/articles/1109644/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109644",
+    "dt": "2026-11-19T04:39:32+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 1.8,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 7,
+    "total": 7.3,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/companies/bothub/articles/1109644/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109644"
+    ]
+   },
+   {
+    "title": "В России впервые запустили связку беспилотных катков на строительстве ВСМ Москва — Санкт-Петербург",
+    "link": "https://www.cnews.ru/news/line/2026-11-18_v_rossii_vpervye_zapustili",
+    "dt": "2026-11-18T18:33:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 12.0,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-18_v_rossii_vpervye_zapustili"
+    ]
+   },
+   {
+    "title": "«Сетере» выпустила расширение для работы с PDF в «Яндекс Браузере для организаций»",
+    "link": "https://www.cnews.ru/news/line/2026-11-18_setere_vypustila_rasshirenie",
+    "dt": "2026-11-18T17:20:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 13.2,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-18_setere_vypustila_rasshirenie"
+    ]
+   },
+   {
+    "title": "iFixit: ремонт Apple HomeView оказался «неоправданно сложным»",
+    "link": "https://habr.com/ru/articles/1109636/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109636",
+    "dt": "2026-11-19T01:11:32+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 5.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1109636/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109636"
+    ]
+   },
+   {
+    "title": "Представлен открытый проект Framecalm — это утилита для оптимизации Windows 10/11 под игры",
+    "link": "https://habr.com/ru/articles/1109254/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109254",
+    "dt": "2026-11-19T05:33:20+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 1.0,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1109254/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109254"
+    ]
+   },
+   {
+    "title": "Выпуск обновления открытого инструмента для сетевого мониторинга Sniffnet 1.6.0",
+    "link": "https://habr.com/ru/articles/1109584/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109584",
+    "dt": "2026-11-19T05:14:23+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 1.3,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1109584/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109584"
+    ]
+   },
+   {
+    "title": "Вышла версия Glow 26.15 — инструмента для системного анализа аппаратных и программных возможностей ПК на Windows 10/11",
+    "link": "https://habr.com/ru/articles/1109568/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109568",
+    "dt": "2026-11-19T05:02:03+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 1.5,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1109568/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109568"
+    ]
+   },
+   {
+    "title": "Smart Plant OS: первый корпус и электроника автономного датчика",
+    "link": "https://habr.com/ru/articles/1109538/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109538",
+    "dt": "2026-11-18T18:28:22+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 12.0,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1109538/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109538"
+    ]
+   },
+   {
+    "title": "Вредоносные выпуски PyPI-пакета agent-framework, развиваемого Microsoft. Отключение git-репозитория ONNX Runtime",
+    "link": "https://www.opennet.ru/opennews/art.shtml?num=66714",
+    "dt": "2026-11-18T15:46:49+03:00",
+    "region": "ru",
+    "feeds": [
+     "Opennet"
+    ],
+    "hours": 14.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.opennet.ru/opennews/art.shtml?num=66714"
+    ]
+   },
+   {
+    "title": "Astra Server Core заменит ключевые серверные функции Microsoft в корпоративной ИТ-инфраструктуре",
+    "link": "https://www.cnews.ru/news/line/2026-11-18_astra_server_core_zamenit_klyuchevye",
+    "dt": "2026-11-18T18:06:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 12.4,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-18_astra_server_core_zamenit_klyuchevye"
+    ]
+   },
+   {
+    "title": "«Ростелеком» оштрафован за срыв реконструкции региональной системы оповещения о ЧС",
+    "link": "https://www.cnews.ru/news/top/2026-11-18_rostelekom_oshtrafovan",
+    "dt": "2026-11-18T16:55:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 13.6,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-18_rostelekom_oshtrafovan"
+    ]
+   },
+   {
+    "title": "ИИ-модели OpenAI, Anthropic и Google при тестировании наводили дроны на скорую, сдающихся солдат и гражданских, их отмечали как военные цели",
+    "link": "https://www.cnews.ru/news/top/2026-11-18_ii-modeli_openaianthropic_i_google",
+    "dt": "2026-11-18T15:46:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 14.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-18_ii-modeli_openaianthropic_i_google"
+    ]
+   },
+   {
+    "title": "В «СберБанк Онлайн» появится сервис «Умная парковка» с автоматической оплатой",
+    "link": "https://www.cnews.ru/news/line/2026-11-18_v_sberbank_onlajn_poyavitsya",
+    "dt": "2026-11-18T15:06:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 15.4,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-18_v_sberbank_onlajn_poyavitsya"
+    ]
+   },
+   {
+    "title": "Любимые миллионами программы массово перестанут запускаться в Windows 11. Виновата Microsoft",
+    "link": "https://www.cnews.ru/news/top/2026-11-18_lyubimye_millionami_programmy",
+    "dt": "2026-11-18T15:02:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 15.5,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-18_lyubimye_millionami_programmy"
+    ]
+   }
+  ],
+  "cn": [
+   {
+    "title": "‘Natural enemies’: Trump on China-Russia ties as he plays down Nvidia ‘tragedy’",
+    "link": "https://www.scmp.com/news/china/diplomacy/article/3374980/natural-enemies-trump-china-russia-ties-he-plays-down-nvidia-tragedy",
+    "dt": "2026-11-19T04:38:23+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 1.9,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/china/diplomacy/article/3374980/natural-enemies-trump-china-russia-ties-he-plays-down-nvidia-tragedy"
+    ]
+   },
+   {
+    "title": "Trump claims US dominance in AI, opposes regulation to ‘control or stifle’ development",
+    "link": "https://www.scmp.com/news/china/diplomacy/article/3374977/world-leaders-gather-talk-trade-and-investment-apec-chinas-tech-hub-shenzhen",
+    "dt": "2026-11-19T04:32:46+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 2.0,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/china/diplomacy/article/3374977/world-leaders-gather-talk-trade-and-investment-apec-chinas-tech-hub-shenzhen"
+    ]
+   },
+   {
+    "title": "Huawei case enters jury deliberations after 2-month battle in US courtroom",
+    "link": "https://www.scmp.com/news/us/article/3374967/huawei-case-enters-jury-deliberations-after-2-month-battle-us-courtroom",
+    "dt": "2026-11-19T00:02:10+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 6.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/us/article/3374967/huawei-case-enters-jury-deliberations-after-2-month-battle-us-courtroom"
+    ]
+   }
+  ],
+  "world": [
+   {
+    "title": "Anthropic reportedly prices IPO at $83 a share, above projected range",
+    "link": "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/",
+    "dt": "2026-11-19T01:11:15+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 5.3,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.8,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/18/anthropic-reportedly-prices-ipo-at-83-a-share-above-projected-range/"
+    ]
+   },
+   {
+    "title": "Microsoft CEO Satya Nadella explains why he asked 60K employees to quit",
+    "link": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/",
+    "dt": "2026-11-19T03:42:56+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 2.8,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/"
+    ]
+   },
+   {
+    "title": "Google’s leaked Android Fast Switch feature may soon allow one number on two phones",
+    "link": "https://www.techradar.com/phones/android/google-preps-android-fast-switch-feature-iphone-handoff-rival-could-let-you-share-one-number-across-two-phones",
+    "dt": "2026-11-18T20:49:37+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 9.7,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/phones/android/google-preps-android-fast-switch-feature-iphone-handoff-rival-could-let-you-share-one-number-across-two-phones"
+    ]
+   },
+   {
+    "title": "The best Black Friday deals at Amazon UK — 28 top offers on Kindles, Ninja, PlayStation 5, De'Longhi, Oral-B, and more",
+    "link": "https://www.techradar.com/live/news/amazon-uk-black-friday-deals-2026-november-18",
+    "dt": "2026-11-19T05:08:39+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 1.4,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/live/news/amazon-uk-black-friday-deals-2026-november-18"
+    ]
+   },
+   {
+    "title": "Best Amazon early Black Friday deals — Fire Sticks, AirPods, LEGO, Ring Doorbells and more",
+    "link": "https://www.techradar.com/live/news/amazon-black-friday-deals-2026-november-18",
+    "dt": "2026-11-19T05:08:42+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 1.4,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/live/news/amazon-black-friday-deals-2026-november-18"
+    ]
+   },
+   {
+    "title": "Microsoft CEO Satya Nadella remains confident in Nvidia after Huang’s exit",
+    "link": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-remains-confident-in-nvidia-after-huangs-exit/",
+    "dt": "2026-11-19T02:17:28+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 4.2,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-remains-confident-in-nvidia-after-huangs-exit/"
+    ]
+   },
+   {
+    "title": "Nvidia created a weird bit of intrigue by not filing a routine SEC report",
+    "link": "https://techcrunch.com/2026/11/18/nvidia-created-a-weird-bit-of-intrigue-by-not-filing-a-routine-sec-report/",
+    "dt": "2026-11-19T00:57:40+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 5.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/18/nvidia-created-a-weird-bit-of-intrigue-by-not-filing-a-routine-sec-report/"
+    ]
+   },
+   {
+    "title": "Palmer Luckey thinks China is ‘thrilled to have Jensen out,’ so he wants the ousted Nvidia CEO reinstated",
+    "link": "https://techcrunch.com/2026/11/18/palmer-luckey-thinks-china-is-thrilled-to-have-jensen-out-so-he-wants-the-ousted-nvidia-ceo-reinstated/",
+    "dt": "2026-11-19T00:31:21+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 6.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/18/palmer-luckey-thinks-china-is-thrilled-to-have-jensen-out-so-he-wants-the-ousted-nvidia-ceo-reinstated/"
+    ]
+   },
+   {
+    "title": "Google’s AI feature in Search gets its own incognito mode",
+    "link": "https://techcrunch.com/2026/11/18/googles-ai-feature-in-search-gets-its-own-incognito-mode/",
+    "dt": "2026-11-18T21:04:05+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 9.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/18/googles-ai-feature-in-search-gets-its-own-incognito-mode/"
+    ]
+   },
+   {
+    "title": "More banks say customers using AI agents are on their own — even if they get hacked",
+    "link": "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/",
+    "dt": "2026-11-18T20:32:10+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 10.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/"
+    ]
+   },
+   {
+    "title": "OpenAI CEO Sam Altman says it’s ‘hard to imagine the AI industry without Jensen’",
+    "link": "https://techcrunch.com/2026/11/18/openai-ceo-sam-altman-says-its-hard-to-imagine-the-ai-industry-without-jensen/",
+    "dt": "2026-11-18T19:14:09+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 11.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/18/openai-ceo-sam-altman-says-its-hard-to-imagine-the-ai-industry-without-jensen/"
+    ]
+   },
+   {
+    "title": "The nation’s largest school districts consider ditching Google Search",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
+    "dt": "2026-11-19T02:18:35+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 4.2,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google"
+    ]
+   },
+   {
+    "title": "Nvidia’s rise, visualized",
+    "link": "https://www.theverge.com/tech/1035924/nvidia-visualized-revenue-profit-earnings-after-huang",
+    "dt": "2026-11-18T22:30:00+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 8.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1035924/nvidia-visualized-revenue-profit-earnings-after-huang"
+    ]
+   },
+   {
+    "title": "AMD’s Twitter brag that it ‘loves gamers’ met with savage Community Note",
+    "link": "https://www.tomshardware.com/pc-components/amds-twitter-brag-that-it-loves-gamers-met-with-savage-community-note-post-met-with-backlash-over-the-companys-pivot-to-ai",
+    "dt": "2026-11-19T00:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 6.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/amds-twitter-brag-that-it-loves-gamers-met-with-savage-community-note-post-met-with-backlash-over-the-companys-pivot-to-ai"
+    ]
+   },
+   {
+    "title": "Nvidia GeForce driver bug reportedly hammers SSDs with up to 30GB of writes per hour",
+    "link": "https://www.tomshardware.com/pc-components/gpu-drivers/nvidia-geforce-driver-bug-reportedly-hammers-ssds-with-up-to-30gb-of-writes-per-hour-users-trace-massive-idle-wear-to-background-service-newer-driver-reportedly-still-affected",
+    "dt": "2026-11-19T00:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 6.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/gpu-drivers/nvidia-geforce-driver-bug-reportedly-hammers-ssds-with-up-to-30gb-of-writes-per-hour-users-trace-massive-idle-wear-to-background-service-newer-driver-reportedly-still-affected"
+    ]
+   },
+   {
+    "title": "Nvidia promises employee pay raises, equity before December to quell unrest in wake of Jensen Huang scandal",
+    "link": "https://www.tomshardware.com/tech-industry/big-tech/nvidia-promises-employee-pay-raises-equity-before-december-to-quell-unrest-in-wake-of-jensen-huang-scandal-at-first-all-hands-meeting-since-ceos-departure-staff-offered-perks-told-were-going-to-be-fine",
+    "dt": "2026-11-18T22:04:53+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 8.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/big-tech/nvidia-promises-employee-pay-raises-equity-before-december-to-quell-unrest-in-wake-of-jensen-huang-scandal-at-first-all-hands-meeting-since-ceos-departure-staff-offered-perks-told-were-going-to-be-fine"
+    ]
+   },
+   {
+    "title": "Nvidia says it’s ‘absurd’ to assume it predicted the agentic moment during Vera’s development",
+    "link": "https://www.tomshardware.com/pc-components/cpus/nvidia-says-its-absurd-to-assume-it-predicted-the-agentic-moment-during-veras-development-product-intuition-helped-drive-cpu-design-superior-memory-bandwidth-will-play-critical-role-in-future-ai-agents-cpu-boss-claims",
+    "dt": "2026-11-18T18:49:42+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 11.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/cpus/nvidia-says-its-absurd-to-assume-it-predicted-the-agentic-moment-during-veras-development-product-intuition-helped-drive-cpu-design-superior-memory-bandwidth-will-play-critical-role-in-future-ai-agents-cpu-boss-claims"
+    ]
+   },
+   {
+    "title": "Amidst fears of AI cyberattacks, Satya Nadella says lots of critical infrastructure is ‘unpatchable’",
+    "link": "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/",
+    "dt": "2026-11-19T02:45:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 3.8,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.8,
+    "signals": [],
+    "sources": [
+     "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/"
+    ]
+   },
+   {
+    "title": "Today I learned a single Google Gemini query uses about five drops of water, but that's not the whole truth",
+    "link": "https://www.techradar.com/pro/today-i-learned-a-single-google-gemini-query-uses-about-five-drops-of-water-but-thats-not-the-whole-truth",
+    "dt": "2026-11-19T02:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 4.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/today-i-learned-a-single-google-gemini-query-uses-about-five-drops-of-water-but-thats-not-the-whole-truth"
+    ]
+   },
+   {
+    "title": "The five-star Samsung 990 PRO 2TB SSD gets a massive $250 discount at Newegg ahead of Black Friday",
+    "link": "https://www.techradar.com/pro/the-five-star-samsung-990-pro-2tb-ssd-gets-a-massive-usd250-discount-at-newegg-ahead-of-black-friday",
+    "dt": "2026-11-19T01:15:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/the-five-star-samsung-990-pro-2tb-ssd-gets-a-massive-usd250-discount-at-newegg-ahead-of-black-friday"
+    ]
+   },
+   {
+    "title": "Voltage glitch unlocks 80GB on Nvidia's CMP 170HX, but 'faster than an A100' rests on a single benchmark",
+    "link": "https://www.techradar.com/pro/voltage-glitch-unlocks-80gb-on-nvidias-cmp-170hx-but-faster-than-an-a100-rests-on-a-single-benchmark",
+    "dt": "2026-11-19T00:05:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 6.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/voltage-glitch-unlocks-80gb-on-nvidias-cmp-170hx-but-faster-than-an-a100-rests-on-a-single-benchmark"
+    ]
+   },
+   {
+    "title": "Over half of Android and iOS banking apps have serious security flaws — 2,686 apps across top global banks expose bypassable biometric logins and hardcoded secret keys",
+    "link": "https://www.techradar.com/pro/security/over-half-of-android-and-ios-banking-apps-have-serious-security-flaws-2-686-apps-across-top-global-banks-expose-bypassable-biometric-logins-and-hardcoded-secret-keys",
+    "dt": "2026-11-18T23:35:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 6.9,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/security/over-half-of-android-and-ios-banking-apps-have-serious-security-flaws-2-686-apps-across-top-global-banks-expose-bypassable-biometric-logins-and-hardcoded-secret-keys"
+    ]
+   },
+   {
+    "title": "Microsoft shows off Copilot fixing Windows 11 — but doubters remain",
+    "link": "https://www.techradar.com/computing/windows/microsoft-shows-off-copilot-troubleshooting-windows-11-but-this-will-be-for-copilot-pcs-only-and-heres-why-thats-a-good-thing",
+    "dt": "2026-11-19T01:04:51+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/computing/windows/microsoft-shows-off-copilot-troubleshooting-windows-11-but-this-will-be-for-copilot-pcs-only-and-heres-why-thats-a-good-thing"
+    ]
+   },
+   {
+    "title": "9 best iPhone, iPad, and Apple Watch apps of 2026, according to Apple",
+    "link": "https://www.techradar.com/phones/iphone/these-are-the-best-iphone-ipad-and-apple-watch-apps-of-2026-according-to-apple",
+    "dt": "2026-11-18T19:53:07+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 10.6,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/phones/iphone/these-are-the-best-iphone-ipad-and-apple-watch-apps-of-2026-according-to-apple"
+    ]
+   },
+   {
+    "title": "More Google Home updates arrive, with Nest Thermostats benefitting most",
+    "link": "https://www.techradar.com/home/smart-thermostats/another-batch-of-google-home-updates-are-arriving-and-nest-thermostat-owners-get-the-biggest-new-features",
+    "dt": "2026-11-19T01:04:51+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/home/smart-thermostats/another-batch-of-google-home-updates-are-arriving-and-nest-thermostat-owners-get-the-biggest-new-features"
+    ]
+   },
+   {
+    "title": "The philosophical reason AI Christmas ads leave audiences feeling cold",
+    "link": "https://phys.org/news/2026-11-philosophical-ai-christmas-ads-audiences.html",
+    "dt": "2026-11-19T03:30:01+03:00",
+    "region": "world",
+    "feeds": [
+     "Phys.org"
+    ],
+    "hours": 3.0,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://phys.org/news/2026-11-philosophical-ai-christmas-ads-audiences.html"
+    ]
+   },
+   {
+    "title": "Even AI thinks it's a man's job: Models reveal gender bias in resumes and hiring assessments",
+    "link": "https://phys.org/news/2026-11-ai-job-reveal-gender-bias.html",
+    "dt": "2026-11-19T02:40:02+03:00",
+    "region": "world",
+    "feeds": [
+     "Phys.org"
+    ],
+    "hours": 3.8,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://phys.org/news/2026-11-ai-job-reveal-gender-bias.html"
+    ]
+   },
+   {
+    "title": "Nvidia claims its Vera CPU can gain up to 39% performance boost via software optimization at SC26 — architectural fine-tuning is needed to fully unleash custom Olympus cores",
+    "link": "https://www.tomshardware.com/pc-components/cpus/nvidia-claims-its-vera-cpu-can-gain-up-to-39-percent-performance-boost-via-software-optimization-at-sc26-architectural-fine-tuning-is-needed-to-fully-unleash-custom-olympus-cores",
+    "dt": "2026-11-17T20:30:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 34.0,
+    "fresh": 4,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.6,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/cpus/nvidia-claims-its-vera-cpu-can-gain-up-to-39-percent-performance-boost-via-software-optimization-at-sc26-architectural-fine-tuning-is-needed-to-fully-unleash-custom-olympus-cores"
+    ]
+   },
+   {
+    "title": "This GMKtec Ryzen-powered mini PC is a solid daily driver with an $80 discount ahead of Black Friday",
+    "link": "https://www.techradar.com/pro/this-gmktec-ryzen-powered-mini-pc-is-a-solid-daily-driver-with-an-usd80-discount-ahead-of-black-friday",
+    "dt": "2026-11-19T03:25:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 3.1,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.6,
+    "signals": [],
+    "sources": [
+     "https://www.techradar.com/pro/this-gmktec-ryzen-powered-mini-pc-is-a-solid-daily-driver-with-an-usd80-discount-ahead-of-black-friday"
+    ]
+   },
+   {
+    "title": "Leaked Ohio bill could allow AI data center companies to seize private land for their buildouts using eminent domain law",
+    "link": "https://www.tomshardware.com/tech-industry/data-centers/leaked-ohio-bill-could-allow-ai-data-center-companies-to-seize-private-land-for-their-buildouts-using-eminent-domain-law-proposed-law-would-expand-list-of-beneficiaries",
+    "dt": "2026-11-18T18:30:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 12.0,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/data-centers/leaked-ohio-bill-could-allow-ai-data-center-companies-to-seize-private-land-for-their-buildouts-using-eminent-domain-law-proposed-law-would-expand-list-of-beneficiaries"
+    ]
+   }
+  ]
+ },
+ "dropped": {
+  "count": 198,
+  "examples": [
+   {
+    "title": "XXII конференция «Свободное ПО в высшей школе» (OSEDUCONF-2027) состоится в февраля 2027 года в Переславле-Залесском",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Карманный сэнсэй: как заставить мини-читалку на ESP32 учить вас японскому",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "PHP снова готовит критические патчи для всех поддерживаемых версий спустя месяц после экстренного обновления",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "[Перевод] Как выбрать алгоритм рендеринга текста: SDF, MSDF, Slug, текстурный атлас или Rive?",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Мир глазами цыплёнка. Часть первая, про цвет и восприятие",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Grid и Layout + контроль в Figma",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Управление памятью в контейнерах STL. Ускоряем код с помощью кастомных аллокаторов",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Сайт вашего бизнеса не работает из‑за кибератаки: объясняю, как взыскать убытки с хостинг‑провайдера",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Click SHOP API: подпись, Prepare и Complete, и ночная сверка, которая ловит «оплачено, а заказа нет»",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Payme Merchant API: песочница шлёт каждый запрос дважды, и это лучший тест вашей интеграции",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Как я с помощью Claude Fable 5.2 отправил своего 3D-персонажа кататься на лыжах под северным сиянием",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "[Перевод] DataFusion — не только для аналитики: как ускорить точечные запросы почти в 8 раз",
+    "reason": "не тех-тема"
+   }
+  ]
+ },
+ "feeds_ok": [
+  "Habr news",
+  "Opennet",
+  "CNews",
+  "SCMP Tech",
+  "Global Times (outbrain, общий фид с техно-пунктом)",
+  "TechCrunch",
+  "The Verge",
+  "Tom's Hardware",
+  "TechRadar",
+  "Phys.org",
+  "IEEE Spectrum AI"
+ ],
+ "feeds_fail": [
+  "TechNode (China Tech)",
+  "VentureBeat"
+ ]
+}
