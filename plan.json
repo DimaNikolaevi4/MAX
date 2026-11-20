@@ -2359,6 +2359,16 @@
       "why": "черновик готов: posts/2026-11-20-cifra-nedeli.md, обложка 16:9 в local/admin/; нужен прогон media_aspect + публикация в 09:00",
       "link": "docs/methodology/admin-channel-strategy.md",
       "source": "orchestrator"
+    },
+    {
+      "id": "orch-crosspost-funnels",
+      "title": "[crosspost] Воронки служебных каналов в ainow: ТЗ, чек-лист, коммит, реализация",
+      "when": null,
+      "time": null,
+      "status": "todo",
+      "why": "оформили ТЗ коллеги (20.11): na100→ainow (форматы 1-2, формат 3 отвергнут), administrator→B2B, tg_neuro→миграция; +4h через cron; перенос ainow на лучшее вечернее время. Чек-лист: 1) оформить задачу; 2) коммит plan.json + push; 3) kalendar drop/sync; 4) реализация кросс-постинга (Format 1 — тест на na100 20.11).",
+      "link": "docs/methodology/channels-classification.md",
+      "source": "orchestrator"
     }
   ]
 }
