@@ -30,7 +30,7 @@
 |---|---|---|
 | `MAX na100 - build digest` | ежедневно 06:30 | детерминированная сборка выпуска na100: RSS → фильтр → скоринг → черновик-шортлист + обложка для approved-поста без медиа + dry-run (`digest_build_na100.ps1`) |
 | ~~`MAX stats snapshot`~~ | **отключена 17.11** | статистика переехала на хостинг: `stats_cron.php` (07:45, все 4 канала), снапшоты и отчёты в `/0s3/blogger-data/stats/` |
-| ~~`MAX ainow - publish approved`~~ | **отключена 16.11** | публикация ainow переехала на хостинг (`post_cron.php`, 07:15) |
+| ~~`MAX ainow - publish approved`~~ | **отключена 16.11** | публикация ainow переехала на хостинг (`post_cron.php`, 21:30) |
 | ~~`MAX zabava - publish plan`~~ | **отключена 17.11** | публикация zabava переехала на хостинг (`post_cron.php`, 19:30 МСК, перенесено с 07:16 18.11.2026; видео — FTP `/0s3/blogger-data/media/zabava/<дата>/`; подготовка поста локально: гейты, CTA, `approved`) |
 | `MAX blogger calendar` | ежедневно 07:20 | пересобирает `docs/blogger-calendar.md` (публикации, план, удаления) и пушит его |
 | `MAX na100 - publish approved` | ежедневно 07:30 | публикует `approved`-выпуск дайджеста na100 (обёртка `publish_scheduled_na100.ps1`) |
