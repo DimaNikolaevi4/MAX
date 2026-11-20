@@ -1,0 +1,1236 @@
+{
+ "date": "2026-11-20",
+ "generated_at": "2026-11-20T06:30:24.086392+03:00",
+ "formula": "свежесть*0.3 + влияние*0.4 + новизна*0.2 + авторитет*0.1 (0-10, порог 5.0); шаг 4 — обложка/текст у агента",
+ "notes": [],
+ "proposed": [
+  {
+   "title": "Производитель первого российского литографа оштрафован на сотню миллионов за срыв сроков",
+   "link": "https://www.cnews.ru/news/top/2026-11-19_proizvoditel_pervogo_rossijskogo",
+   "dt": "2026-11-19T17:24:00+03:00",
+   "region": "ru",
+   "feeds": [
+    "CNews"
+   ],
+   "hours": 13.1,
+   "fresh": 6,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 6,
+   "total": 6.0,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://www.cnews.ru/news/top/2026-11-19_proizvoditel_pervogo_rossijskogo"
+   ]
+  },
+  {
+   "title": "US Congress releases list of Chinese firms seeking Nvidia chips",
+   "link": "https://www.scmp.com/news/china/diplomacy/article/3375135/us-congress-releases-list-chinese-firms-seeking-nvidia-chips",
+   "dt": "2026-11-20T02:46:10+03:00",
+   "region": "cn",
+   "feeds": [
+    "SCMP Tech"
+   ],
+   "hours": 3.7,
+   "fresh": 10,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 7.4,
+   "signals": [
+    "игрок/государство",
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://www.scmp.com/news/china/diplomacy/article/3375135/us-congress-releases-list-chinese-firms-seeking-nvidia-chips"
+   ]
+  },
+  {
+   "title": "Anthropic rival says companies can (mostly) skip the pricey models",
+   "link": "https://techcrunch.com/2026/11/19/anthropic-rival-says-companies-can-mostly-skip-the-pricey-models/",
+   "dt": "2026-11-20T03:26:03+03:00",
+   "region": "world",
+   "feeds": [
+    "TechCrunch"
+   ],
+   "hours": 3.1,
+   "fresh": 10,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 7.4,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/11/19/anthropic-rival-says-companies-can-mostly-skip-the-pricey-models/"
+   ]
+  },
+  {
+   "title": "Anthropic hits Nasdaq exchanges at $111, 33% above IPO price",
+   "link": "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/",
+   "dt": "2026-11-19T19:59:23+03:00",
+   "region": "world",
+   "feeds": [
+    "TechCrunch"
+   ],
+   "hours": 10.5,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.8,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/"
+   ]
+  },
+  {
+   "title": "Apple may be developing its own AI agent that runs your Mac",
+   "link": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+   "dt": "2026-11-20T03:56:01+03:00",
+   "region": "world",
+   "feeds": [
+    "TechCrunch"
+   ],
+   "hours": 2.6,
+   "fresh": 10,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.6,
+   "signals": [
+    "игрок/государство"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/"
+   ]
+  }
+ ],
+ "candidates": {
+  "ru": [
+   {
+    "title": "Производитель первого российского литографа оштрафован на сотню миллионов за срыв сроков",
+    "link": "https://www.cnews.ru/news/top/2026-11-19_proizvoditel_pervogo_rossijskogo",
+    "dt": "2026-11-19T17:24:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 13.1,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-19_proizvoditel_pervogo_rossijskogo"
+    ]
+   },
+   {
+    "title": "Рой дронов держит строй без GPS: адаптивный консенсус и цена его точности",
+    "link": "https://habr.com/ru/articles/1110098/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110098",
+    "dt": "2026-11-20T00:46:32+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 5.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1110098/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110098"
+    ]
+   },
+   {
+    "title": "IT‑директор Омского завода перевез серверную в свой офис. Как логи Huawei повлияли на исход уголовного дела",
+    "link": "https://habr.com/ru/articles/1110040/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110040",
+    "dt": "2026-11-19T20:18:47+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 10.2,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1110040/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110040"
+    ]
+   },
+   {
+    "title": "В Ленинградской области 210 учителей получили доступ к «Ассистенту преподавателя» от Сбербанка",
+    "link": "https://www.cnews.ru/news/line/2026-11-19_v_leningradskoj_oblasti",
+    "dt": "2026-11-19T18:31:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 12.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-19_v_leningradskoj_oblasti"
+    ]
+   },
+   {
+    "title": "Выпуск GPU-Z 2.72.0",
+    "link": "https://habr.com/ru/articles/1110042/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110042",
+    "dt": "2026-11-20T06:20:24+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 0.2,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1110042/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110042"
+    ]
+   },
+   {
+    "title": "За любую ссылку на «Википедию», которую вы оставляли когда‑либо в интернете, могут начать штрафовать",
+    "link": "https://habr.com/ru/articles/1109992/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109992",
+    "dt": "2026-11-19T18:16:44+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 12.2,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1109992/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109992"
+    ]
+   },
+   {
+    "title": "Microsoft опубликовал стабильный выпуск дистрибутива Azure Linux 4.0",
+    "link": "https://www.opennet.ru/opennews/art.shtml?num=66719",
+    "dt": "2026-11-19T09:04:23+03:00",
+    "region": "ru",
+    "feeds": [
+     "Opennet"
+    ],
+    "hours": 21.4,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.opennet.ru/opennews/art.shtml?num=66719"
+    ]
+   },
+   {
+    "title": "«ВкусВилл» и «Обед.ру» запустили новый инструмент для оплаты корпоративного питания через партнёрские приложения",
+    "link": "https://www.cnews.ru/news/line/2026-11-19_vkusvill_i_obedru_zapustili",
+    "dt": "2026-11-19T16:57:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 13.6,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-19_vkusvill_i_obedru_zapustili"
+    ]
+   },
+   {
+    "title": "YADRO подтвердила лидерство среди российских производителей серверов и СХД по уровню доверия клиентов",
+    "link": "https://www.cnews.ru/news/line/2026-11-19_yadro_podtverdila_liderstvo",
+    "dt": "2026-11-19T16:47:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 13.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-19_yadro_podtverdila_liderstvo"
+    ]
+   },
+   {
+    "title": "Microsoft убивает сверхполезное приложение, у которого нет аналогов. На покупку его конкурентов потрачены сотни миллионов",
+    "link": "https://www.cnews.ru/news/top/2026-11-19_microsoft_ubivaet_sverhpoleznoe",
+    "dt": "2026-11-19T16:18:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 14.2,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-19_microsoft_ubivaet_sverhpoleznoe"
+    ]
+   },
+   {
+    "title": "На «корейском ЕГЭ» хитрым способом пойманы десятки учеников, пронесших запрещенные смартфоны. Досмотр не понадобился",
+    "link": "https://www.cnews.ru/news/top/2026-11-19_na_korejskom_ege_hitrym",
+    "dt": "2026-11-19T14:46:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 15.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-19_na_korejskom_ege_hitrym"
+    ]
+   },
+   {
+    "title": "«ТрансТелеКом» представила «Квант ВПН»: квантовую защиту для корпоративных сетей",
+    "link": "https://www.cnews.ru/news/line/2026-11-19_transtelekom_predstavila",
+    "dt": "2026-11-19T14:42:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 15.8,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-19_transtelekom_predstavila"
+    ]
+   },
+   {
+    "title": "«Яндекс» восстановил доступ к 99,55% данных на «Диске»",
+    "link": "https://www.cnews.ru/news/line/2026-11-19_yandeks_vosstanovil_dostup",
+    "dt": "2026-11-19T13:38:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 16.9,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-19_yandeks_vosstanovil_dostup"
+    ]
+   },
+   {
+    "title": "Исследование Axenix: российские финансовые организации потратят до 20 млрд рублей на ИИ-агентов в 2026 году",
+    "link": "https://www.cnews.ru/news/line/2026-11-19_issledovanie_axenix_rossijskie",
+    "dt": "2026-11-19T13:20:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 17.2,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-19_issledovanie_axenix_rossijskie"
+    ]
+   },
+   {
+    "title": "VK Tech добавила в VK AI Space библиотеку готовых ИИ-агентов, навыков и хуков",
+    "link": "https://www.cnews.ru/news/line/2026-11-19_vk_tech_dobavila_v_vk_ai_space_biblioteku",
+    "dt": "2026-11-19T13:13:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 17.3,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-19_vk_tech_dobavila_v_vk_ai_space_biblioteku"
+    ]
+   }
+  ],
+  "cn": [
+   {
+    "title": "US Congress releases list of Chinese firms seeking Nvidia chips",
+    "link": "https://www.scmp.com/news/china/diplomacy/article/3375135/us-congress-releases-list-chinese-firms-seeking-nvidia-chips",
+    "dt": "2026-11-20T02:46:10+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 3.7,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 7.4,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/china/diplomacy/article/3375135/us-congress-releases-list-chinese-firms-seeking-nvidia-chips"
+    ]
+   },
+   {
+    "title": "Trump bought up to US$265,000 of Nvidia stock in September, disclosure shows",
+    "link": "https://www.scmp.com/news/world/united-states-canada/article/3375129/trump-bought-us265000-nvidia-stock-september-disclosure-shows",
+    "dt": "2026-11-19T21:57:18+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 8.6,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/world/united-states-canada/article/3375129/trump-bought-us265000-nvidia-stock-september-disclosure-shows"
+    ]
+   },
+   {
+    "title": "Hong Kong Baptist University academics create trustworthy AI-driven digital networks",
+    "link": "https://www.scmp.com/native/news/hong-kong/education/topics/research-real-world-impact/article/3374666/hong-kong-baptist-university-academics-create-trustworthy-ai-driven-digital-networks",
+    "dt": "2026-11-20T05:00:07+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 1.5,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.8,
+    "signals": [],
+    "sources": [
+     "https://www.scmp.com/native/news/hong-kong/education/topics/research-real-world-impact/article/3374666/hong-kong-baptist-university-academics-create-trustworthy-ai-driven-digital-networks"
+    ]
+   },
+   {
+    "title": "Alibaba accelerates pivot to in-house chips after reporting jump in sales",
+    "link": "https://www.scmp.com/tech/big-tech/article/3375093/alibabas-ai-bet-paying-cloud-services-drive-10-revenue-jump",
+    "dt": "2026-11-19T14:00:22+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 16.5,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/tech/big-tech/article/3375093/alibabas-ai-bet-paying-cloud-services-drive-10-revenue-jump"
+    ]
+   },
+   {
+    "title": "AI models favour US and UK accents, score Chinese and Nigerian ones lowest, study finds",
+    "link": "https://www.scmp.com/news/world/united-states-canada/article/3375132/ai-models-favour-us-and-uk-accents-score-chinese-and-nigerian-ones-lowest-study-finds",
+    "dt": "2026-11-19T23:31:24+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 7.0,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://www.scmp.com/news/world/united-states-canada/article/3375132/ai-models-favour-us-and-uk-accents-score-chinese-and-nigerian-ones-lowest-study-finds"
+    ]
+   }
+  ],
+  "world": [
+   {
+    "title": "Anthropic rival says companies can (mostly) skip the pricey models",
+    "link": "https://techcrunch.com/2026/11/19/anthropic-rival-says-companies-can-mostly-skip-the-pricey-models/",
+    "dt": "2026-11-20T03:26:03+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 3.1,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 7.4,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/19/anthropic-rival-says-companies-can-mostly-skip-the-pricey-models/"
+    ]
+   },
+   {
+    "title": "Anthropic hits Nasdaq exchanges at $111, 33% above IPO price",
+    "link": "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/",
+    "dt": "2026-11-19T19:59:23+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 10.5,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.8,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/"
+    ]
+   },
+   {
+    "title": "Apple may be developing its own AI agent that runs your Mac",
+    "link": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+    "dt": "2026-11-20T03:56:01+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 2.6,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/"
+    ]
+   },
+   {
+    "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
+    "link": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+    "dt": "2026-11-20T03:43:50+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 2.8,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/"
+    ]
+   },
+   {
+    "title": "Putting Google's AI hurricane model to the test",
+    "link": "https://phys.org/news/2026-11-google-ai-hurricane.html",
+    "dt": "2026-11-20T03:40:01+03:00",
+    "region": "world",
+    "feeds": [
+     "Phys.org"
+    ],
+    "hours": 2.8,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 6.5,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://phys.org/news/2026-11-google-ai-hurricane.html"
+    ]
+   },
+   {
+    "title": "'Intel’s commitment to the HPC community is grounded in a pragmatic reality': Intel affirms its backing for the next generation of high-powered computing to push the boundaries of AI",
+    "link": "https://www.techradar.com/pro/intels-commitment-to-the-hpc-community-is-grounded-in-a-pragmatic-reality-intel-affirms-its-backing-for-the-next-generation-of-high-powered-computing-to-push-the-boundaries-of-ai",
+    "dt": "2026-11-20T02:45:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 3.8,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/intels-commitment-to-the-hpc-community-is-grounded-in-a-pragmatic-reality-intel-affirms-its-backing-for-the-next-generation-of-high-powered-computing-to-push-the-boundaries-of-ai"
+    ]
+   },
+   {
+    "title": "All the best Black Friday deals at Amazon UK — 35 top offers on Switch 2, Kindles, Lego, Sony, Philips, Ninja, and more",
+    "link": "https://www.techradar.com/live/news/amazon-uk-black-friday-deals-2026-november-19",
+    "dt": "2026-11-20T06:01:31+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 0.5,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/live/news/amazon-uk-black-friday-deals-2026-november-19"
+    ]
+   },
+   {
+    "title": "Anthropic’s IPO could deliver $156B to charity",
+    "link": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+    "dt": "2026-11-19T22:10:45+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 8.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/"
+    ]
+   },
+   {
+    "title": "Google gives Gemini the ability to use your Mac for you",
+    "link": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
+    "dt": "2026-11-19T21:09:11+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 9.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/"
+    ]
+   },
+   {
+    "title": "Former Alibaba exec’s Everful raises $48.5M to connect retailers with Chinese factories",
+    "link": "https://techcrunch.com/2026/11/19/former-alibaba-execs-everful-raises-48-5m-to-connect-retailers-with-chinese-factories/",
+    "dt": "2026-11-19T20:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 10.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/19/former-alibaba-execs-everful-raises-48-5m-to-connect-retailers-with-chinese-factories/"
+    ]
+   },
+   {
+    "title": "At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development",
+    "link": "https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/",
+    "dt": "2026-11-19T19:19:41+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 11.2,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/"
+    ]
+   },
+   {
+    "title": "UK government forced to disclose secret Apple backdoor order",
+    "link": "https://techcrunch.com/2026/11/19/u-k-government-forced-to-disclose-secret-apple-backdoor-order/",
+    "dt": "2026-11-19T18:32:20+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 12.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/19/u-k-government-forced-to-disclose-secret-apple-backdoor-order/"
+    ]
+   },
+   {
+    "title": "Apple is hiring engineers to build its own AI agent",
+    "link": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+    "dt": "2026-11-20T01:31:41+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 5.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing"
+    ]
+   },
+   {
+    "title": "A brief history of Nvidia’s recent stock fluctuations",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings",
+    "dt": "2026-11-20T00:59:35+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 5.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings"
+    ]
+   },
+   {
+    "title": "Google is putting AI chats right on the homepage",
+    "link": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
+    "dt": "2026-11-19T23:05:06+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 7.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats"
+    ]
+   },
+   {
+    "title": "Intel continues layoffs with cuts to its IT department, hundreds of employees reportedly affected",
+    "link": "https://www.tomshardware.com/pc-components/cpus/intel-continues-layoffs-with-cuts-to-its-it-department-hundreds-of-employees-reportedly-affected-companys-workforce-reduced-by-27-800-under-lip-bu-tan",
+    "dt": "2026-11-19T18:37:32+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 11.9,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/cpus/intel-continues-layoffs-with-cuts-to-its-it-department-hundreds-of-employees-reportedly-affected-companys-workforce-reduced-by-27-800-under-lip-bu-tan"
+    ]
+   },
+   {
+    "title": "Supermicro sued by shareholders over claims Nvidia executive’s wife knew about illicit China sales",
+    "link": "https://www.tomshardware.com/tech-industry/big-tech/supermicro-sued-by-shareholders-over-claims-nvidia-executives-wife-must-have-known-about-illicit-china-sales-former-chief-growth-officer-cenly-chen-is-married-to-outgoing-nvidia-vp-jay-puri",
+    "dt": "2026-11-19T19:29:02+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 11.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/big-tech/supermicro-sued-by-shareholders-over-claims-nvidia-executives-wife-must-have-known-about-illicit-china-sales-former-chief-growth-officer-cenly-chen-is-married-to-outgoing-nvidia-vp-jay-puri"
+    ]
+   },
+   {
+    "title": "Save 36% on this 4TB Samsung 990 Pro SSD upgrade for your gaming PC, now just 17.5 cents per GB",
+    "link": "https://www.tomshardware.com/pc-components/ssds/save-36-percent-on-this-4tb-samsung-990-pro-ssd-upgrade-for-your-gaming-pc-now-just-17-5-cents-per-gb-our-top-gen-4-drive-recommendation-is-now-usd100-cheaper-than-last-week",
+    "dt": "2026-11-19T18:43:35+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 11.8,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/ssds/save-36-percent-on-this-4tb-samsung-990-pro-ssd-upgrade-for-your-gaming-pc-now-just-17-5-cents-per-gb-our-top-gen-4-drive-recommendation-is-now-usd100-cheaper-than-last-week"
+    ]
+   },
+   {
+    "title": "'COLD RELIC remains an active threat': Google warns Russian hackers are hitting public sector firms with sophisticated phishing and malware campaigns",
+    "link": "https://www.techradar.com/pro/security/cold-relic-remains-an-active-threat-google-warns-russian-hackers-are-hitting-public-sector-firms-with-sophisticated-phishing-and-malware-campaigns",
+    "dt": "2026-11-19T18:25:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 12.1,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/security/cold-relic-remains-an-active-threat-google-warns-russian-hackers-are-hitting-public-sector-firms-with-sophisticated-phishing-and-malware-campaigns"
+    ]
+   },
+   {
+    "title": "Get an RTX 5070 for just $839.99, a rare savings in the GPU wasteland",
+    "link": "https://www.tomshardware.com/pc-components/get-an-rtx-5070-for-just-usd839-99-a-rare-savings-in-the-gpu-wasteland-msi-geforce-rtx-5070-ventus-2x-oc-12-gb-is-currently-on-sale-at-newegg",
+    "dt": "2026-11-20T03:59:02+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 2.5,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.8,
+    "signals": [],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/get-an-rtx-5070-for-just-usd839-99-a-rare-savings-in-the-gpu-wasteland-msi-geforce-rtx-5070-ventus-2x-oc-12-gb-is-currently-on-sale-at-newegg"
+    ]
+   },
+   {
+    "title": "Intel claims CPU top spot for the first time for over a year — now can it stay there as AMD fights back?",
+    "link": "https://www.techradar.com/pro/intel-claims-cpu-top-spot-for-the-first-time-for-over-a-year-now-can-it-stay-there-as-amd-fights-back",
+    "dt": "2026-11-20T01:10:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/intel-claims-cpu-top-spot-for-the-first-time-for-over-a-year-now-can-it-stay-there-as-amd-fights-back"
+    ]
+   },
+   {
+    "title": "The AMD Ryzen 7 5800X3D CPU comes with a free 850W PSU thanks to Newegg’s Black Friday sale",
+    "link": "https://www.techradar.com/pro/the-amd-ryzen-7-5800x3d-cpu-comes-with-a-free-850w-psu-thanks-to-neweggs-black-friday-sale",
+    "dt": "2026-11-20T00:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 6.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/the-amd-ryzen-7-5800x3d-cpu-comes-with-a-free-850w-psu-thanks-to-neweggs-black-friday-sale"
+    ]
+   },
+   {
+    "title": "Hackers steal over 1 million credit card details across 20 countries — attackers hit old Windows bug to infect over 700 point-of-sale terminals",
+    "link": "https://www.techradar.com/pro/security/hackers-steal-over-1-million-credit-card-details-across-20-countries-attackers-hit-old-windows-bug-to-infect-over-700-point-of-sale-terminals",
+    "dt": "2026-11-19T20:20:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 10.2,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/security/hackers-steal-over-1-million-credit-card-details-across-20-countries-attackers-hit-old-windows-bug-to-infect-over-700-point-of-sale-terminals"
+    ]
+   },
+   {
+    "title": "Gemini can now analyze your spending through Google Wallet",
+    "link": "https://www.techradar.com/ai-platforms-assistants/google-gemini-can-now-see-where-your-money-goes-analyze-your-spending-and-even-find-your-tickets-so-i-connected-my-bank-account-to-see-how-useful-it-really-is",
+    "dt": "2026-11-20T01:23:18+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.1,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/ai-platforms-assistants/google-gemini-can-now-see-where-your-money-goes-analyze-your-spending-and-even-find-your-tickets-so-i-connected-my-bank-account-to-see-how-useful-it-really-is"
+    ]
+   },
+   {
+    "title": "Sansui's 32-inch 240Hz curved gaming monitor is just $169.99 at Amazon",
+    "link": "https://www.techradar.com/pro/sansuis-32-inch-curved-creative-monitor-packs-a-240hz-refresh-rate-and-freesync-support-for-just-usd259-99",
+    "dt": "2026-11-19T19:23:32+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 11.1,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/sansuis-32-inch-curved-creative-monitor-packs-a-240hz-refresh-rate-and-freesync-support-for-just-usd259-99"
+    ]
+   },
+   {
+    "title": "AI virtual cell technology could reveal how genetic changes and drugs alter cells",
+    "link": "https://phys.org/news/2026-11-ai-virtual-cell-technology-reveal.html",
+    "dt": "2026-11-20T06:00:06+03:00",
+    "region": "world",
+    "feeds": [
+     "Phys.org"
+    ],
+    "hours": 0.5,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://phys.org/news/2026-11-ai-virtual-cell-technology-reveal.html"
+    ]
+   },
+   {
+    "title": "AI companions could help reduce loneliness, study finds",
+    "link": "https://phys.org/news/2026-11-ai-companions-loneliness.html",
+    "dt": "2026-11-20T03:20:06+03:00",
+    "region": "world",
+    "feeds": [
+     "Phys.org"
+    ],
+    "hours": 3.2,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://phys.org/news/2026-11-ai-companions-loneliness.html"
+    ]
+   },
+   {
+    "title": "Can AI save peer review from AI?",
+    "link": "https://phys.org/news/2026-11-ai-peer.html",
+    "dt": "2026-11-20T03:10:01+03:00",
+    "region": "world",
+    "feeds": [
+     "Phys.org"
+    ],
+    "hours": 3.3,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://phys.org/news/2026-11-ai-peer.html"
+    ]
+   },
+   {
+    "title": "Anthropic’s IPO puts AI’s circular financing boom to the test",
+    "link": "https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/",
+    "dt": "2026-11-19T17:54:39+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 12.6,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/"
+    ]
+   },
+   {
+    "title": "Intel 18A yields hit 70% as company signs Microsoft as EMIB customer",
+    "link": "https://www.tomshardware.com/tech-industry/semiconductors/intel-18a-yields-hit-70-percent-as-company-signs-microsoft-as-emib-customer-the-first-company-to-publicly-commit-to-intels-new-packaging-technology",
+    "dt": "2026-11-19T16:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 14.5,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/semiconductors/intel-18a-yields-hit-70-percent-as-company-signs-microsoft-as-emib-customer-the-first-company-to-publicly-commit-to-intels-new-packaging-technology"
+    ]
+   }
+  ]
+ },
+ "dropped": {
+  "count": 190,
+  "examples": [
+   {
+    "title": "Представлено обновление Wireshark 4.6.10",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Релиз PostgreSQL 19",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Cisco представила выпуск свободного антивирусного инструментария ClamAV 1.5.5",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "[Перевод] Следующий флагманский космический телескоп (возможно) ответит на главный вопрос: «Одни ли мы во Вселенной?»",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Ещё 6 SQL‑тренажёров для самостоятельной практики. Что посоветовали на Хабре",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Реабилитация дотера: как человеку, потратившему всю жизнь на Dota 2 получить новую профессию",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Я установил ulimit 65536, но ничего не работает",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Пайплайн «текст → голос» для эфира: как за день добавить игровые новости в рацию‑компаньон",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "«Мы прогорели» — еще одна история «story stock»",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Дружим OAuth и PDP",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Еще одна звонилка или как я создал Nimbo",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Цена ошибки: паддинг, чекпоинты на сетевом диске и сторож, который гасил здоровое обучение",
+    "reason": "не тех-тема"
+   }
+  ]
+ },
+ "feeds_ok": [
+  "Habr news",
+  "Opennet",
+  "CNews",
+  "SCMP Tech",
+  "Global Times (outbrain, общий фид с техно-пунктом)",
+  "TechCrunch",
+  "The Verge",
+  "Tom's Hardware",
+  "TechRadar",
+  "Phys.org",
+  "IEEE Spectrum AI"
+ ],
+ "feeds_fail": [
+  "TechNode (China Tech)",
+  "VentureBeat"
+ ]
+}
