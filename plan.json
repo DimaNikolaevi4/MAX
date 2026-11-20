@@ -2349,6 +2349,16 @@
       "why": "перезапуск канала: тексты названия/описания готовы в docs/methodology/admin-channel-strategy.md; ник не меняем (в MAX не гарантирован)",
       "link": "docs/methodology/admin-channel-strategy.md",
       "source": "owner"
+    },
+    {
+      "id": "orch-admin-pilot",
+      "title": "Канал administrator: опубликовать пилот «Цифра недели» (вторник, 09:00)",
+      "when": "2026-11-24",
+      "time": null,
+      "status": "todo",
+      "why": "черновик готов: posts/2026-11-20-cifra-nedeli.md, обложка 16:9 в local/admin/; нужен прогон media_aspect + публикация в 09:00",
+      "link": "docs/methodology/admin-channel-strategy.md",
+      "source": "orchestrator"
     }
   ]
 }
