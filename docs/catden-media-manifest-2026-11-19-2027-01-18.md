@@ -58,3 +58,13 @@
 | 2027-01-16 | `2027-01-16-025-zhizn-tihona-v-gostyah-p1.md` | approved | `nev/posting/images/025-zhizn-tihona-v-gostyah-p1.jpeg` |
 | 2027-01-17 | `2027-01-17-025-zhizn-tihona-v-gostyah-img1.md` | approved | `nev/posting/images/025-zhizn-tihona-v-gostyah-i1.jpeg`<br>`nev/posting/images/025-zhizn-tihona-v-gostyah-i2.jpeg` |
 | 2027-01-18 | `2027-01-18-027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-img1.md` | approved | `nev/posting/images/027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-i1.jpeg`<br>`nev/posting/images/027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-i2.jpeg`<br>`nev/posting/images/027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-i3.jpeg`<br>`nev/posting/images/027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-i4.jpeg`<br>`nev/posting/images/027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-i5.jpeg`<br>`nev/posting/images/027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-i6.png`<br>`nev/posting/images/027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-i1.png` |
+
+## Обмен кадрами 20.11.2026 (правило 16:9, AGENTS.md раздел 5д)
+
+Правило касается постов с одним изображением; кадры берутся из альбома той же серии,
+прежний кадр поста уходит в альбом. Имена слотов не меняются, меняется содержимое.
+
+- **2026-11-23 `p1`** — кадр из альбома 24.11 (слот `i1`, 600×353, 1,70) → в `p1`;
+  прежний `p1` (600×400, 1,50) → слот `i1` альбома 24.11.
+- **2026-11-27 `p1`** — кадр из альбома 28.11 (слот `i2`, 600×365, 1,64) → в `p1`;
+  прежний `p1` (600×400, 1,50) → слот `i2` альбома 28.11.

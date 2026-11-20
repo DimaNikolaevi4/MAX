@@ -4,11 +4,11 @@ status: approved
 format: markdown
 notify: true
 image_file: nev/posting/images/003-6-unikalnyh-porod-koshek-p1.png
+media_note: "20.11.2026: кадр 16:9 взят из альбома серии (пост 24.11, слот i1 — 600x353, 1,70); прежний кадр поста (600x400, 1,50) перенесён в альбом на место i1. Имена слотов не менялись — заменено содержимое на хостинге и в превью."
 source: nev/6 уникальных пород кошек.docx
 series: 003
 part: 1/1
 ---
-
 
 **6 уникальных пород кошек**
 
