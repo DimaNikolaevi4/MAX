@@ -2319,6 +2319,16 @@
       "why": "Оркестрация kalendar↔MAX: синхронизация по команде, отчёт в календарь, публикация catden 20:00 МСК по графику",
       "link": "roles/blogger/config/catden-automation.json",
       "source": "kalendar"
+    },
+    {
+      "id": "orch-habr-article-draft",
+      "title": "Статья «Автопилот каналов в MAX»: прочитать черновик и утвердить",
+      "when": "2026-12-01",
+      "time": null,
+      "status": "backlog",
+      "why": "черновики готовы: docs/articles/habr-avtopilot-kanala.md и vc-korotkaya-versiya.md; нужна вычитка владельца и правка фактов от первого лица",
+      "link": "docs/articles/README.md",
+      "source": "orchestrator"
     }
   ]
 }
