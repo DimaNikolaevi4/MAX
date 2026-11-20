@@ -1,13 +1,14 @@
 ---
 channel: ainow
-status: approved
+status: published
 format: markdown
 notify: true
-topic: OpenCode Zen: честный обзор бесплатных нейросетей и стратегия выживания
+published_at: 2026-11-20T06:29:07+03:00
+message_id: mid.ffffba0066fb9aa301a1f7002b250068
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaH3ACslAGg
 image_file: 2026-11-20-cover.png
-alice_note: 19.11 — текст владельца (финальная версия), переносим в слот 20.11
-approved_note: 19.11 — финальный текст владельца, гейты пройдены (3887 знаков, ошибок нет), публикация 20.11 07:15; перенесён из слота 29.11
-
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTotre-9SJJM4d4puqFo2pMQh4yRmV-43HenIuw-Z5tjNoKkMG_bc-OEJDZrNHtvW3w8rTDb_50VN6fyp0j5nM
 ---
 
 💻 **OpenCode Zen: честный обзор бесплатных нейросетей и стратегия выживания**
