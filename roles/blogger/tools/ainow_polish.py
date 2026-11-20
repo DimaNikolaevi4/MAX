@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Чек-лист публикации ainow (методика: docs/ainow-editorial-style.md).
+"""Чек-лист публикации ainow (методика: docs/methodology/ainow-editorial-style.md).
 
 Только проверка и отчёт; текст не правит.
 
