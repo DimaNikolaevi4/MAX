@@ -4,6 +4,7 @@ status: approved
 format: markdown
 notify: true
 image_file: nev/posting/images/019-statya-solopov-p1.jpeg
+media_note: "20.11.2026: владелец прислал новый кадр 2578x1412 (1,826) — заменил обложку в посте, на хостинге и в превью «календаря» (было 200x300, портрет)."
 source: nev/Статья солопов.docx
 series: 019
 part: 1/1

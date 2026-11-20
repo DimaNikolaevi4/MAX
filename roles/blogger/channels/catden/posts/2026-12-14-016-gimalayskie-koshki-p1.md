@@ -4,6 +4,8 @@ status: approved
 format: markdown
 notify: true
 image_file: nev/posting/images/016-gimalayskie-koshki-p1.png
+media_aspect_exempt: true
+media_note: "20.11.2026: владелец разрешил оставить исходный кадр (600x401, 1,496) — согласованное исключение из правила 5д"
 source: nev/Гималайские кошки.docx
 series: 016
 part: 1/1

@@ -155,13 +155,16 @@ def resolve_media(name: str):
     return None
 
 
-def check_header_aspect(path: Path) -> None:
+def check_header_aspect(path: Path, exempt: bool = False) -> None:
     """Правило 5д (AGENTS.md): одиночное изображение поста — 16:9 или шире.
 
     Порог — не уже 3:2 (соотношение >= 1,50): квадрат, портрет и 4:3 занимают
     узкое окно, и текст поста встаёт в узкую колонку. Альбомы (image_files)
     под правило не попадают. Осознанный обход — флаг --allow-narrow.
     """
+    if exempt:
+        REPORT.append(f"WARN (5д): исключение владельца — формат не проверяется: {path.name}")
+        return
     try:
         from media_aspect import MIN_AR, measure
     except Exception:  # инструмент недоступен — не блокируем публикацию
@@ -374,7 +377,7 @@ def main() -> None:
         if not media_path or not media_path.exists():
             raise SystemExit(f"медиа не найдено: {video_file or image_file}")
         if media_kind == "image":
-            check_header_aspect(media_path)
+            check_header_aspect(media_path, bool(fm.get("media_aspect_exempt")))
         mime = MIME.get(media_path.suffix.lower(), "application/octet-stream")
         up_resp = api(tok, "POST", f"/uploads?type={media_kind}")
         up_json_head = json.loads(up_resp)
