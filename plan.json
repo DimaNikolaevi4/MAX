@@ -1,26 +1,6 @@
 {
   "tasks": [
     {
-      "id": "max-2026-10-20-gayd-po-qwen-kakuyu-model-vybrat",
-      "title": "[AI] 🧠 Гайд по Qwen: какую модель выбрать и где пользоваться бесплатно",
-      "when": "2026-10-20",
-      "time": null,
-      "status": "done",
-      "why": "",
-      "link": "roles/blogger/channels/ainow/posts/2026-10-20-gayd-po-qwen-kakuyu-model-vybrat.md",
-      "source": "auto"
-    },
-    {
-      "id": "max-2026-10-20-kak-na-ii-zarabatyvayut",
-      "title": "[AI] 💰 Как на ИИ зарабатывают",
-      "when": "2026-10-20",
-      "time": null,
-      "status": "done",
-      "why": "",
-      "link": "roles/blogger/channels/ainow/posts/2026-10-20-kak-na-ii-zarabatyvayut.md",
-      "source": "auto"
-    },
-    {
       "id": "max-2026-10-22-kakuyu-model-glm-vybrat-polnyy-gid",
       "title": "[AI] 🧠 Какую модель GLM выбрать? Полный гид по «мозгам» Z.ai",
       "when": "2026-10-22",
@@ -761,13 +741,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-21-chto-takoe-promt-6-shablonov",
-      "title": "[AI] Что такое промт: 6 шаблонов на каждый день",
-      "when": "2026-11-21",
+      "id": "max-2026-11-20-opencode-besplatnyy-gaid-po-neyrosetyam",
+      "title": "[AI] 💻 OpenCode Zen: честный обзор бесплатных нейросетей и стратегия выживания",
+      "when": "2026-11-20",
       "time": null,
-      "status": "scheduled",
-      "why": "публикация по Планировщику, канал «AI»",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-21-chto-takoe-promt-6-shablonov.md",
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-20-opencode-besplatnyy-gaid-po-neyrosetyam.md",
       "source": "auto"
     },
     {
@@ -791,13 +771,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-22-novostnaya-za-nedelyu",
-      "title": "[AI] Новостная за неделю: Nvidia без Хуанга, чиповые гайки и подорожавшая память",
-      "when": "2026-11-22",
+      "id": "max-2026-11-21-chto-takoe-promt-6-shablonov",
+      "title": "[AI] Что такое промт: 6 шаблонов на каждый день",
+      "when": "2026-11-21",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «AI»",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-22-novostnaya-za-nedelyu.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-21-chto-takoe-promt-6-shablonov.md",
       "source": "auto"
     },
     {
@@ -821,13 +801,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-23-ii-instrumenty-dlya-programmirovaniya",
-      "title": "[AI] ИИ-инструменты для программирования: что попробовать бесплатно",
-      "when": "2026-11-23",
+      "id": "max-2026-11-22-novostnaya-za-nedelyu",
+      "title": "[AI] Новостная за неделю: Nvidia без Хуанга, чиповые гайки и подорожавшая память",
+      "when": "2026-11-22",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «AI»",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-23-ii-instrumenty-dlya-programmirovaniya.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-22-novostnaya-za-nedelyu.md",
       "source": "auto"
     },
     {
@@ -851,13 +831,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-24-neyroset-bez-registracii-proverili-kto-puskaet",
-      "title": "[AI] Нейросеть без регистрации: проверили, кто пускает без входа",
-      "when": "2026-11-24",
+      "id": "max-2026-11-23-ii-instrumenty-dlya-programmirovaniya",
+      "title": "[AI] ИИ-инструменты для программирования: что попробовать бесплатно",
+      "when": "2026-11-23",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «AI»",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-24-neyroset-bez-registracii-proverili-kto-puskaet.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-23-ii-instrumenty-dlya-programmirovaniya.md",
       "source": "auto"
     },
     {
@@ -878,6 +858,16 @@
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
       "link": "roles/blogger/channels/catden/posts/2026-11-24-003-6-unikalnyh-porod-koshek-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-24-neyroset-bez-registracii-proverili-kto-puskaet",
+      "title": "[AI] Нейросеть без регистрации: проверили, кто пускает без входа",
+      "when": "2026-11-24",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «AI»",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-24-neyroset-bez-registracii-proverili-kto-puskaet.md",
       "source": "auto"
     },
     {
@@ -961,16 +951,6 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-29-chto-ne-srabotalo-ii-redaktor-v-brauzere",
-      "title": "[AI] Что не сработало: ИИ-редактор в браузере",
-      "when": "2026-11-29",
-      "time": null,
-      "status": "scheduled",
-      "why": "публикация по Планировщику, канал «AI»",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-29-chto-ne-srabotalo-ii-redaktor-v-brauzere.md",
-      "source": "auto"
-    },
-    {
       "id": "max-2026-11-28-random-AZ-4SS26T7w",
       "title": "[Забавное] Панда с малышами",
       "when": "2026-11-28",
@@ -988,6 +968,16 @@
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
       "link": "roles/blogger/channels/catden/posts/2026-11-29-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-29-chto-ne-srabotalo-ii-redaktor-v-brauzere",
+      "title": "[AI] Что не сработало: ИИ-редактор в браузере",
+      "when": "2026-11-29",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «AI»",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-29-chto-ne-srabotalo-ii-redaktor-v-brauzere.md",
       "source": "auto"
     },
     {
@@ -2349,16 +2339,6 @@
       "why": "Оркестрация kalendar↔MAX: синхронизация по команде, отчёт в календарь, публикация catden 20:00 МСК по графику",
       "link": "roles/blogger/config/catden-automation.json",
       "source": "kalendar"
-    },
-    {
-      "id": "max-2026-11-20-opencode-besplatnyy-gaid-po-neyrosetyam",
-      "title": "[AI] 💻 OpenCode Zen: честный обзор бесплатных нейросетей и стратегия выживания",
-      "when": "2026-11-20",
-      "time": null,
-      "status": "scheduled",
-      "why": "публикация по Планировщику, канал «AI» (финальный текст владельца)",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-20-opencode-besplatnyy-gaid-po-neyrosetyam.md",
-      "source": "auto"
     }
   ]
 }

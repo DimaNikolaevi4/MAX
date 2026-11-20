@@ -133,6 +133,28 @@ def plain_text(md: str) -> str:
     return t
 
 
+def resolve_media(name: str):
+    """Абсолютный путь к файлу медиа по значению image_file/video_file.
+
+    Методика (явная, без пробелов и неоднозначностей):
+      1) имя с префиксом (local/...) — путь от корня репозитория;
+      2) bare-имя — сначала корень репозитория, затем локализация инструментов
+         (local/images/<имя>, local/media-cache/<имя>).
+    Возвращает None, если файл нигде не найден.
+    """
+    if not name:
+        return None
+    cand = REPO / name
+    if cand.exists():
+        return cand
+    if "/" not in name:
+        for sub in ("local/images", "local/media-cache"):
+            alt = REPO / sub / name
+            if alt.exists():
+                return alt
+    return None
+
+
 def main() -> None:
     args = sys.argv[1:]
     channel = "ainow"
@@ -290,7 +312,7 @@ def main() -> None:
         raise SystemExit("укажите что-то одно: image_file или video_file")
     attachments = []
     media_kind = ""
-    if video_file and not (REPO / video_file).exists() and fm.get("video_source"):
+    if video_file and resolve_media(video_file) is None and fm.get("video_source"):
         # файла нет на этой машине: берём ссылку на файл из поста-источника
         src_channel, _, src_mid = fm["video_source"].partition(":")
         src_token = tokens.get(src_channel, {}).get("token")
@@ -323,9 +345,9 @@ def main() -> None:
         REPORT.append(f"видео скачано из {fm['video_source']}: {src_file.stat().st_size} Б")
     if image_file or video_file:
         media_kind = "video" if video_file else "image"
-        media_path = REPO / (video_file or image_file)
-        if not media_path.exists():
-            raise SystemExit(f"медиа не найдено: {media_path}")
+        media_path = resolve_media(video_file or image_file)
+        if not media_path or not media_path.exists():
+            raise SystemExit(f"медиа не найдено: {video_file or image_file}")
         mime = MIME.get(media_path.suffix.lower(), "application/octet-stream")
         up_resp = api(tok, "POST", f"/uploads?type={media_kind}")
         up_json_head = json.loads(up_resp)

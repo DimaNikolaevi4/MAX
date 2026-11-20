@@ -87,6 +87,28 @@ def acquire_lock():
         return False
 
 
+def resolve_media(name: str):
+    """Абсолютный путь к файлу медиа по значению image_file/video_file.
+
+    Методика (явная, без пробелов и неоднозначностей):
+      1) имя с префиксом (local/...) — путь от корня репозитория;
+      2) bare-имя — сначала корень репозитория, затем локализация инструментов
+         (local/images/<имя>, local/media-cache/<имя>).
+    Возвращает None, если файл нигде не найден.
+    """
+    if not name:
+        return None
+    cand = REPO / name
+    if cand.exists():
+        return cand
+    if "/" not in name:
+        for sub in ("local/images", "local/media-cache"):
+            alt = REPO / sub / name
+            if alt.exists():
+                return alt
+    return None
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--channel", default="ainow")
@@ -180,12 +202,12 @@ def run(args, now):
         image_files = [x.strip() for x in (fm.get("image_files") or "").split("|") if x.strip()]
         # медиа: один файл (image_file/video_file), альбом (image_files) или
         # пост-текст без вложений (допустимо для catden, решение владельца 12.11.2026)
-        missing_media = [f for f in image_files if not (REPO / f).exists()]
+        missing_media = [f for f in image_files if resolve_media(f) is None]
         if image_files and missing_media:
             say(f"FAIL: {path.name} — нет картинок альбома: {missing_media[:2]}")
             continue
         elif not image_files and not fm.get("video_source") \
-                and (not media or not (REPO / media).exists()):
+                and (not media or resolve_media(media) is None):
             say(f"FAIL: {path.name} — нет медиа ({media!r})")
             continue
         m = cta_re.search(body)
