@@ -2339,6 +2339,16 @@
       "why": "публикация от имени владельца; после выхода — анонс в канале AI со ссылкой и вопросом; ссылку на канал в тексте Хабра не давать (самореклама)",
       "link": "docs/articles/README.md",
       "source": "orchestrator"
+    },
+    {
+      "id": "orch-admin-rename",
+      "title": "Канал administrator: переименовать в «Каналы в MAX: рост и автопилот» и обновить описание",
+      "when": "2026-11-21",
+      "time": null,
+      "status": "todo",
+      "why": "перезапуск канала: тексты названия/описания готовы в docs/methodology/admin-channel-strategy.md; ник не меняем (в MAX не гарантирован)",
+      "link": "docs/methodology/admin-channel-strategy.md",
+      "source": "owner"
     }
   ]
 }
