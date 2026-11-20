@@ -3,7 +3,7 @@ channel: catden
 status: approved
 format: markdown
 notify: true
-image_files: nev/posting/images/074-stihi-na-fotografiyah-i1.jpeg | nev/posting/images/074-stihi-na-fotografiyah-i2.jpeg | nev/posting/images/074-stihi-na-fotografiyah-i3.jpeg | nev/posting/images/074-stihi-na-fotografiyah-i4.jpeg | nev/posting/images/074-stihi-na-fotografiyah-i5.jpeg | nev/posting/images/074-stihi-na-fotografiyah-i6.jpeg | nev/posting/images/074-stihi-na-fotografiyah-i1.jpeg | nev/posting/images/074-stihi-na-fotografiyah-i2.jpeg
+image_files: nev/posting/images/074-stihi-na-fotografiyah-i1.jpeg | nev/posting/images/074-stihi-na-fotografiyah-i2.jpeg | nev/posting/images/074-stihi-na-fotografiyah-i3.jpeg | nev/posting/images/074-stihi-na-fotografiyah-i4.jpeg | nev/posting/images/074-stihi-na-fotografiyah-i5.jpeg | nev/posting/images/074-stihi-na-fotografiyah-i6.jpeg
 source: nev/Стихи на фотографиях.docx
 series: 074
 

@@ -18,9 +18,9 @@
 | Дата | Событие | Решение | Файл |
 |---|---|---|---|
 | 2026-11-30 | День домашних животных (неофиц.) | обычный контент по сетке | по календарю |
-| 2026-12-31 | Новый год (канун), **значимый** | **тематический черновик** (окно) | `2026-12-31-holiday-ny-eve-p1.md` (draft) |
-| 2027-01-01 | Новый год, **значимый** | **тематический черновик** (окно) | `2027-01-01-holiday-ny-day-p1.md` (draft) |
-| 2027-01-07 | Рождество Христово, **значимый** | **тематический черновик** (окно) | `2027-01-07-holiday-xmas-p1.md` (draft) |
+| 2026-12-31 | holiday-ny | пост | text | draft |  | `2026-12-31-holiday-ny-eve-p1.md` |
+| 2027-01-01 | holiday-ny | пост | text | draft |  | `2027-01-01-holiday-ny-day-p1.md` |
+| 2027-01-07 | holiday-xmas | пост | text | draft |  | `2027-01-07-holiday-xmas-p1.md` |
 | 2027-01-13 | Канун Старого Нового года | обычный контент по сетке | по календарю |
 | 2027-01-14 | Старый Новый год | обычный контент по сетке | по календарю |
 
@@ -48,49 +48,49 @@
 | 2026-11-26 | 006 | пост | img | approved |  | `2026-11-26-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-p1.md` |
 | 2026-11-27 | 007 | анонс-карусель (тизер следующего) | album | approved |  | `2026-11-27-007-bengalskiy-kot-leopard-v-vashem-dome-img1.md` |
 | 2026-11-28 | 007 | пост | img | approved |  | `2026-11-28-007-bengalskiy-kot-leopard-v-vashem-dome-p1.md` |
-| 2026-11-29 | 011 | пост | img | approved |  | `2026-11-29-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-p1.md` |
-| 2026-11-30 | 011 | анонс-карусель (тизер следующего) | album | approved | День домашних животных (неофиц.) | `2026-11-30-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-img1.md` |
-| 2026-12-01 | 012 | пост | img | approved |  | `2026-12-01-012-vozniknovenie-porody-sibirskih-koshek-p1.md` |
-| 2026-12-02 | 012 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-02-012-vozniknovenie-porody-sibirskih-koshek-img1.md` |
+| 2026-11-29 | 011 | анонс-карусель (тизер следующего) | album | approved |  | `2026-11-29-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-img1.md` |
+| 2026-11-30 | 011 | пост | img | approved |  | `2026-11-30-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-p1.md` |
+| 2026-12-01 | 012 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-01-012-vozniknovenie-porody-sibirskih-koshek-img1.md` |
+| 2026-12-02 | 012 | пост | img | approved |  | `2026-12-02-012-vozniknovenie-porody-sibirskih-koshek-p1.md` |
 | 2026-12-03 | 010 | пост | img | approved |  | `2026-12-03-010-vash-kotenok-p1.md` |
 | 2026-12-05 | 010 | пост | text | approved |  | `2026-12-05-010-vash-kotenok-p2.md` |
 | 2026-12-07 | 013 | пост | img | approved |  | `2026-12-07-013-vse-o-persidskih-koshkah-p1.md` |
 | 2026-12-09 | 009 | пост | img | approved |  | `2026-12-09-009-v-detstve-p1.md` |
 | 2026-12-11 | 017 | пост | text | approved |  | `2026-12-11-017-loki-p1.md` |
-| 2026-12-13 | 016 | пост | img | approved |  | `2026-12-13-016-gimalayskie-koshki-p1.md` |
-| 2026-12-14 | 016 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-14-016-gimalayskie-koshki-img1.md` |
-| 2026-12-15 | 014 | пост | img | approved |  | `2026-12-15-014-vy-gotovy-zavesti-koshku-p1.md` |
-| 2026-12-16 | 014 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-16-014-vy-gotovy-zavesti-koshku-img1.md` |
-| 2026-12-17 | 015 | пост | img | approved |  | `2026-12-17-015-vy-mozhete-poluchit-realnuyu-rabotu-obnimayas-s-p1.md` |
-| 2026-12-18 | 015 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-18-015-vy-mozhete-poluchit-realnuyu-rabotu-obnimayas-s-img1.md` |
+| 2026-12-13 | 016 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-13-016-gimalayskie-koshki-img1.md` |
+| 2026-12-14 | 016 | пост | img | approved |  | `2026-12-14-016-gimalayskie-koshki-p1.md` |
+| 2026-12-15 | 014 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-15-014-vy-gotovy-zavesti-koshku-img1.md` |
+| 2026-12-16 | 014 | пост | img | approved |  | `2026-12-16-014-vy-gotovy-zavesti-koshku-p1.md` |
+| 2026-12-17 | 015 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-17-015-vy-mozhete-poluchit-realnuyu-rabotu-obnimayas-s-img1.md` |
+| 2026-12-18 | 015 | пост | img | approved |  | `2026-12-18-015-vy-mozhete-poluchit-realnuyu-rabotu-obnimayas-s-p1.md` |
 | 2026-12-19 | 018 | пост | text | approved |  | `2026-12-19-018-timoha-p1.md` |
-| 2026-12-21 | 020 | пост | img | approved |  | `2026-12-21-020-6-unikalnyh-porod-koshek-p1.md` |
-| 2026-12-22 | 020 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-22-020-6-unikalnyh-porod-koshek-img1.md` |
-| 2026-12-23 | 021 | пост | img | approved |  | `2026-12-23-021-dohod-na-burmancah-p1.md` |
-| 2026-12-24 | 021 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-24-021-dohod-na-burmancah-img1.md` |
+| 2026-12-21 | 020 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-21-020-6-unikalnyh-porod-koshek-img1.md` |
+| 2026-12-22 | 020 | пост | img | approved |  | `2026-12-22-020-6-unikalnyh-porod-koshek-p1.md` |
+| 2026-12-23 | 021 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-23-021-dohod-na-burmancah-img1.md` |
+| 2026-12-24 | 021 | пост | img | approved |  | `2026-12-24-021-dohod-na-burmancah-p1.md` |
 | 2026-12-25 | 019 | пост | img | approved |  | `2026-12-25-019-statya-solopov-p1.md` |
-| 2026-12-27 | 023 | пост | img | approved |  | `2026-12-27-023-druzhba-sobak-i-koshek-p1.md` |
-| 2026-12-28 | 023 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-28-023-druzhba-sobak-i-koshek-img1.md` |
-| 2026-12-29 | 022 | пост | img | approved |  | `2026-12-29-022-drevnie-ritualy-s-koshkami-p1.md` |
-| 2026-12-30 | 022 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-30-022-drevnie-ritualy-s-koshkami-img1.md` |
-| 2026-12-31 | holiday-ny | пост (тематический черновик) | img | draft | Новый год (канун) — тематический черновик ⚑ | `2026-12-31-holiday-ny-eve-p1.md` |
-| 2027-01-01 | holiday-ny | пост (тематический черновик) | img | draft | Новый год — тематический черновик ⚑ | `2027-01-01-holiday-ny-day-p1.md` |
-| 2027-01-02 | 026 | пост | img | approved | Новогодние каникулы | `2027-01-02-026-21-noyabrya-p1.md` |
-| 2027-01-03 | 026 | анонс-карусель (тизер следующего) | album | approved | Новогодние каникулы | `2027-01-03-026-21-noyabrya-img1.md` |
-| 2027-01-04 | 028 | пост | img | approved | Новогодние каникулы | `2027-01-04-028-istoriya-1-pobedy-knyazya-svyatoslava-glazami-ko-p1.md` |
-| 2027-01-05 | 028 | анонс-карусель (тизер следующего) | album | approved | Новогодние каникулы | `2027-01-05-028-istoriya-1-pobedy-knyazya-svyatoslava-glazami-ko-img1.md` |
-| 2027-01-06 | 027 | пост | img | approved | Новогодние каникулы | `2027-01-06-027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-p1.md` |
-| 2027-01-07 | holiday-xmas | пост (тематический черновик) | img | draft | Рождество Христово — тематический черновик ⚑ | `2027-01-07-holiday-xmas-p1.md` |
-| 2027-01-08 | 024 | пост | img | approved | Новогодние каникулы | `2027-01-08-024-zhizn-sfinksov-p1.md` |
-| 2027-01-09 | 024 | анонс-карусель (тизер следующего) | album | approved |  | `2027-01-09-024-zhizn-sfinksov-img1.md` |
-| 2027-01-10 | 032 | пост | img | approved |  | `2027-01-10-032-kak-kot-huang-minzh-pomog-sovetskomu-razvedchiku-p1.md` |
-| 2027-01-11 | 032 | анонс-карусель (тизер следующего) | album | approved |  | `2027-01-11-032-kak-kot-huang-minzh-pomog-sovetskomu-razvedchiku-img1.md` |
-| 2027-01-12 | 033 | пост | img | approved |  | `2027-01-12-033-kak-poyavilas-poroda-amerikanskiy-kerl-p1.md` |
-| 2027-01-13 | 033 | анонс-карусель (тизер следующего) | album | approved | Канун Старого Нового года | `2027-01-13-033-kak-poyavilas-poroda-amerikanskiy-kerl-img1.md` |
-| 2027-01-14 | 031 | пост | img | approved | Старый Новый год | `2027-01-14-031-kak-zhit-s-britanskim-vislouhim-chudom-p1.md` |
-| 2027-01-15 | 031 | анонс-карусель (тизер следующего) | album | approved |  | `2027-01-15-031-kak-zhit-s-britanskim-vislouhim-chudom-img1.md` |
-| 2027-01-16 | 025 | пост | img | approved |  | `2027-01-16-025-zhizn-tihona-v-gostyah-p1.md` |
-| 2027-01-17 | 025 | анонс-карусель (тизер следующего) | album | approved |  | `2027-01-17-025-zhizn-tihona-v-gostyah-img1.md` |
+| 2026-12-27 | 023 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-27-023-druzhba-sobak-i-koshek-img1.md` |
+| 2026-12-28 | 023 | пост | img | approved |  | `2026-12-28-023-druzhba-sobak-i-koshek-p1.md` |
+| 2026-12-29 | 022 | анонс-карусель (тизер следующего) | album | approved |  | `2026-12-29-022-drevnie-ritualy-s-koshkami-img1.md` |
+| 2026-12-30 | 022 | пост | img | approved |  | `2026-12-30-022-drevnie-ritualy-s-koshkami-p1.md` |
+| 2026-12-31 | holiday-ny | пост | text | draft |  | `2026-12-31-holiday-ny-eve-p1.md` |
+| 2027-01-01 | holiday-ny | пост | text | draft |  | `2027-01-01-holiday-ny-day-p1.md` |
+| 2027-01-02 | 026 | анонс-карусель (тизер следующего) | album | approved |  | `2027-01-02-026-21-noyabrya-img1.md` |
+| 2027-01-03 | 026 | пост | img | approved |  | `2027-01-03-026-21-noyabrya-p1.md` |
+| 2027-01-04 | 028 | анонс-карусель (тизер следующего) | album | approved |  | `2027-01-04-028-istoriya-1-pobedy-knyazya-svyatoslava-glazami-ko-img1.md` |
+| 2027-01-05 | 028 | пост | img | approved |  | `2027-01-05-028-istoriya-1-pobedy-knyazya-svyatoslava-glazami-ko-p1.md` |
+| 2027-01-06 | 027 | пост | img | approved |  | `2027-01-06-027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-p1.md` |
+| 2027-01-07 | holiday-xmas | пост | text | draft |  | `2027-01-07-holiday-xmas-p1.md` |
+| 2027-01-08 | 024 | анонс-карусель (тизер следующего) | album | approved |  | `2027-01-08-024-zhizn-sfinksov-img1.md` |
+| 2027-01-09 | 024 | пост | img | approved |  | `2027-01-09-024-zhizn-sfinksov-p1.md` |
+| 2027-01-10 | 032 | анонс-карусель (тизер следующего) | album | approved |  | `2027-01-10-032-kak-kot-huang-minzh-pomog-sovetskomu-razvedchiku-img1.md` |
+| 2027-01-11 | 032 | пост | img | approved |  | `2027-01-11-032-kak-kot-huang-minzh-pomog-sovetskomu-razvedchiku-p1.md` |
+| 2027-01-12 | 033 | анонс-карусель (тизер следующего) | album | approved |  | `2027-01-12-033-kak-poyavilas-poroda-amerikanskiy-kerl-img1.md` |
+| 2027-01-13 | 033 | пост | img | approved |  | `2027-01-13-033-kak-poyavilas-poroda-amerikanskiy-kerl-p1.md` |
+| 2027-01-14 | 031 | анонс-карусель (тизер следующего) | album | approved |  | `2027-01-14-031-kak-zhit-s-britanskim-vislouhim-chudom-img1.md` |
+| 2027-01-15 | 031 | пост | img | approved |  | `2027-01-15-031-kak-zhit-s-britanskim-vislouhim-chudom-p1.md` |
+| 2027-01-16 | 025 | анонс-карусель (тизер следующего) | album | approved |  | `2027-01-16-025-zhizn-tihona-v-gostyah-img1.md` |
+| 2027-01-17 | 025 | пост | img | approved |  | `2027-01-17-025-zhizn-tihona-v-gostyah-p1.md` |
 | 2027-01-18 | 027 | анонс-карусель (тизер следующего) | album | approved |  | `2027-01-18-027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-img1.md` |
 
 ## Операционный регламент

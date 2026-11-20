@@ -155,8 +155,33 @@ def resolve_media(name: str):
     return None
 
 
+def check_header_aspect(path: Path) -> None:
+    """Правило 5д (AGENTS.md): одиночное изображение поста — 16:9 или шире.
+
+    Порог — не уже 3:2 (соотношение >= 1,50): квадрат, портрет и 4:3 занимают
+    узкое окно, и текст поста встаёт в узкую колонку. Альбомы (image_files)
+    под правило не попадают. Осознанный обход — флаг --allow-narrow.
+    """
+    try:
+        from media_aspect import MIN_AR, measure
+    except Exception:  # инструмент недоступен — не блокируем публикацию
+        return
+    w, h, ar = measure(path)
+    if ar < MIN_AR:
+        raise SystemExit(
+            f"медиа уже 16:9 (правило 5д): {path.name} — {w}x{h}, соотношение {ar:.3f}, "
+            f"порог {MIN_AR:.2f} (3:2). Квадрат/портрет/4:3 запрещены: текст встаёт "
+            f"в узкую колонку. Нужен кадр 16:9 или шире (можно из альбома серии); "
+            f"обход — --allow-narrow")
+    REPORT.append(f"формат медиа ok (5д): {path.name} — {ar:.3f}")
+
 def main() -> None:
     args = sys.argv[1:]
+    allow_narrow = "--allow-narrow" in args
+    if allow_narrow:
+        args.remove("--allow-narrow")
+        sys.argv = [a for a in sys.argv if a != "--allow-narrow"]
+        REPORT.append("WARN (5д): проверка формата медиа отключена --allow-narrow")
     channel = "ainow"
     if "--channel" in args:
         i = args.index("--channel")
@@ -348,6 +373,8 @@ def main() -> None:
         media_path = resolve_media(video_file or image_file)
         if not media_path or not media_path.exists():
             raise SystemExit(f"медиа не найдено: {video_file or image_file}")
+        if media_kind == "image":
+            check_header_aspect(media_path)
         mime = MIME.get(media_path.suffix.lower(), "application/octet-stream")
         up_resp = api(tok, "POST", f"/uploads?type={media_kind}")
         up_json_head = json.loads(up_resp)
