@@ -30,21 +30,21 @@
       "sent_at": "2026-11-20",
       "window": [
         "2026-11-20",
-        "2026-11-29"
+        "2026-11-30"
       ],
       "channel": "calendar",
       "with_media": true,
       "posts": {
         "2026-11-20": "mid.ffffb629582f9aa301a1f78dffc6703b",
         "2026-11-21": "mid.ffffb629582f9aa301a1f78e12bc160b",
-        "2026-11-22": "mid.ffffb629582f9aa301a1f78e20fe49af",
         "2026-11-23": "mid.ffffb629582f9aa301a1f78e2bfe7059",
         "2026-11-24": "mid.ffffb629582f9aa301a1f78e4086187c",
         "2026-11-25": "mid.ffffb629582f9aa301a1f78e4b065db5",
         "2026-11-26": "mid.ffffb629582f9aa301a1f78e680e18a2",
         "2026-11-27": "mid.ffffb629582f9aa301a1f78e71d9379b",
         "2026-11-28": "mid.ffffb629582f9aa301a1f78e85ed7a4f",
-        "2026-11-29": "mid.ffffb629582f9aa301a1f78e8fda6bad"
+        "2026-11-29": "mid.ffffb629582f9aa301a1f78e8fda6bad",
+        "2026-11-30": "mid.ffffb629582f9aa301a1f83f1ccb592b"
       }
     }
   },
