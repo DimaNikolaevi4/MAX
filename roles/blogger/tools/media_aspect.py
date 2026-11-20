@@ -1,25 +1,27 @@
 # -*- coding: utf-8 -*-
 """Проверка формата одиночного изображения поста (правило AGENTS.md, раздел 5д).
 
-Правило касается только постов с ОДНИМ изображением (текстовые p1/p2); посты-
-альбомы (image_files: несколько файлов) под него не попадают — их кадры идут
-в авторском порядке.
+Правило асимметричное (уточнение владельца 20.11.2026):
+  • 16:9 или ШИРЕ — допустимо (панораму MAX центр-кропит под карточку);
+  • УЖЕ 16:9 — брак: квадрат, портрет, 4:3 занимают узкое окно, и текст поста
+    встаёт в узкую колонку.
+Нижняя граница — не уже 3:2, то есть соотношение сторон >= 1,50
+(это 16:9 с допуском -15 %). Верхней границы нет.
 
-Целевое соотношение — 16:9 (эталон 1920x1080 / 1980x1114), допуск ±15 %.
+Правило касается только постов с ОДНИМ изображением (текстовые p1/p2); посты-
+альбомы (image_files: несколько файлов) под него не попадают.
 
 Использование:
-    py roles/blogger/tools/media_aspect.py <файл|папка> [ещё ...] [--tol 0.15]
+    py roles/blogger/tools/media_aspect.py <файл|папка> [ещё ...] [--min 1.50]
     py roles/blogger/tools/media_aspect.py <файл|папка> --pick
 
-Что делает:
-  • без --pick — по каждому изображению печатает размеры, соотношение сторон
-    и вердикт «ok» / «outside»; код выхода 1, если хотя бы один кадр вне допуска;
-  • c --pick — из переданного набора выбирает кадр, ближайший к 16:9
-    (утилита на случай ручного выбора; правилом 5д не требуется — альбомы
-    публикуются как есть).
+  • без --pick — по каждому изображению печатает размеры, соотношение и вердикт;
+    код выхода 1, если хотя бы один кадр уже порога;
+  • c --pick — выбирает лучший кадр: среди проходящих — ближайший к 16:9,
+    если проходящих нет — самый широкий (утилита, правилом не требуется).
 
-Границы: только измерение и выбор, ничего не режет и не генерирует —
-решение «переделать кадр» остаётся за владельцем (раздел 5д, пункт 3).
+Границы: только измерение и выбор. Ничего не режет и не генерирует — решение
+«переделать кадр» остаётся за владельцем (раздел 5д, пункт 4).
 """
 from __future__ import annotations
 
@@ -29,7 +31,8 @@ from pathlib import Path
 
 from PIL import Image
 
-TARGET = 16 / 9
+TARGET = 16 / 9          # эталон 1,778
+MIN_AR = 3 / 2           # порог: не уже 3:2 (16:9 с допуском -15 %)
 EXTS = {".jpg", ".jpeg", ".png", ".webp"}
 
 
@@ -37,7 +40,7 @@ def measure(path: Path):
     with Image.open(path) as im:
         w, h = im.size
     ar = w / h
-    return w, h, ar, ar / TARGET
+    return w, h, ar
 
 
 def collect(paths: list[Path]) -> list[Path]:
@@ -52,11 +55,19 @@ def collect(paths: list[Path]) -> list[Path]:
     return files
 
 
+def verdict(ar: float, min_ar: float) -> str:
+    if ar < min_ar:
+        return "уже порога — брак"
+    if ar >= TARGET:
+        return "ok (16:9 или шире)"
+    return f"ok, но уже 16:9 (порог {min_ar:.2f})"
+
+
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description="Проверка медиа поста на 16:9")
+    ap = argparse.ArgumentParser(description="Медиа поста: 16:9 или шире (не уже 3:2)")
     ap.add_argument("paths", nargs="+", type=Path)
-    ap.add_argument("--tol", type=float, default=0.15, help="допуск, доля (по умолчанию 0,15)")
-    ap.add_argument("--pick", action="store_true", help="выбрать ближайший к 16:9 кадр")
+    ap.add_argument("--min", type=float, default=MIN_AR, help="нижний порог соотношения (по умолчанию 1.50)")
+    ap.add_argument("--pick", action="store_true", help="выбрать лучший кадр из набора")
     a = ap.parse_args(argv)
 
     files = collect(a.paths)
@@ -66,23 +77,24 @@ def main(argv: list[str] | None = None) -> int:
 
     rows = []
     for f in files:
-        w, h, ar, rel = measure(f)
-        ok = abs(rel - 1) <= a.tol
-        rows.append({"path": f, "w": w, "h": h, "ar": ar, "rel": rel, "ok": ok})
+        w, h, ar = measure(f)
+        rows.append({"path": f, "w": w, "h": h, "ar": ar, "ok": ar >= a.min})
 
     if a.pick:
-        best = min(rows, key=lambda r: abs(r["rel"] - 1))
-        mark = "ok" if best["ok"] else "OUTSIDE"
-        print(f"{best['path']}\t{best['w']}x{best['h']}\t{best['ar']:.3f}\t{mark}")
+        passing = [r for r in rows if r["ok"]]
+        pool = passing or rows
+        best = min(pool, key=lambda r: abs(r["ar"] / TARGET - 1)) if passing else max(
+            pool, key=lambda r: r["ar"])
+        print(f"{best['path']}\t{best['w']}x{best['h']}\t{best['ar']:.3f}\t"
+              f"{'ok' if best['ok'] else 'OUTSIDE'}")
         return 0 if best["ok"] else 1
 
     bad = 0
     for r in rows:
-        mark = "ok" if r["ok"] else "outside"
         if not r["ok"]:
             bad += 1
-        print(f"{r['path']}\t{r['w']}x{r['h']}\t{r['ar']:.3f}\t{r['rel']:.2f}x of 16:9\t{mark}")
-    print(f"\nвсего {len(rows)}, вне допуска ±{a.tol:.0%}: {bad}")
+        print(f"{r['path']}\t{r['w']}x{r['h']}\t{r['ar']:.3f}\t{verdict(r['ar'], a.min)}")
+    print(f"\nвсего {len(rows)}, уже порога {a.min:.2f}: {bad}")
     return 0 if bad == 0 else 1
 
 
