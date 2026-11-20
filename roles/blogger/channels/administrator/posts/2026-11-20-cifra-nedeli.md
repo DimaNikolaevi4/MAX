@@ -3,12 +3,12 @@ channel: administrator
 status: published
 format: markdown
 notify: true
-series: cifra-nedeli
-created_at: 2026-11-20T15:13:53
+published_at: 2026-11-20T16:58:16+03:00
+message_id: mid.ffffba0776009aa301a1f9402f324c16
+channel_id: -76933769422173
+url: https://max.ru/channel_administrator/AaH5QC8yTBY
 image_file: local/admin/cifra-nedeli-2026-11-20.png
-published_at: 2026-11-20T15:17:04+03:00
-message_id: mid.ffffba0776009aa301a1f8e278244ef7
-url: https://max.ru/channel_administrator/AaH44ngkTvc
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQd8vWjRfpl2BSAuR0BOEifbJC6dktu7tiRMPT2mvr_-c3pqHlZKMjqZH3qn0XlAV71bAOtvry9hdcTKjTQfbo
 ---
 
 **📊 Цифра недели: что показали наши каналы**
