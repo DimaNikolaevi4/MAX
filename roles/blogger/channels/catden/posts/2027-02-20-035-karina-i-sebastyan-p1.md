@@ -4,6 +4,7 @@ status: approved
 format: markdown
 notify: true
 image_file: nev/posting/images/035-karina-i-sebastyan-p1.jpeg
+media_note: "20.11.2026: обложка 16:9 взята из альбома серии (слот i1); прежний кадр поста перенесён в альбом на место i1. Имена слотов сохранены, заменено содержимое на хостинге."
 source: nev/Карина и Себастьян.docx
 series: 035
 part: 1/1

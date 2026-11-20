@@ -4,6 +4,7 @@ status: approved
 format: markdown
 notify: true
 image_file: nev/posting/images/046-lechim-pravilno-p1.jpeg
+media_note: "20.11.2026: обложка 16:9 взята из альбома серии (слот i2); прежний кадр поста перенесён в альбом на место i2. Имена слотов сохранены, заменено содержимое на хостинге."
 source: nev/Лечим правильно.docx
 series: 046
 part: 1/1

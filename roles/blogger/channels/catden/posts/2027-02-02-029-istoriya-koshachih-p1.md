@@ -4,6 +4,7 @@ status: approved
 format: markdown
 notify: true
 image_file: nev/posting/images/029-istoriya-koshachih-p1.jpeg
+media_note: "20.11.2026: обложка 16:9 взята из альбома серии (слот i3); прежний кадр поста перенесён в альбом на место i3. Имена слотов сохранены, заменено содержимое на хостинге."
 source: nev/История кошачьих.docx
 series: 029
 part: 1/1

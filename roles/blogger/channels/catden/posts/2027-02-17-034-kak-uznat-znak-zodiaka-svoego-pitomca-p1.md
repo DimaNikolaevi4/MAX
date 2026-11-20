@@ -4,6 +4,7 @@ status: approved
 format: markdown
 notify: true
 image_file: nev/posting/images/034-kak-uznat-znak-zodiaka-svoego-pitomca-p1.jpeg
+media_note: "20.11.2026: обложка 16:9 взята из альбома серии (слот i1); прежний кадр поста перенесён в альбом на место i1. Имена слотов сохранены, заменено содержимое на хостинге."
 source: nev/Как узнать знак Зодиака своего питомца.docx
 series: 034
 part: 1/1

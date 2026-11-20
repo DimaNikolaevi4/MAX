@@ -4,6 +4,7 @@ status: approved
 format: markdown
 notify: true
 image_files: nev/posting/images/042-koshachya-semya-i1.jpeg | nev/posting/images/042-koshachya-semya-i2.jpeg | nev/posting/images/042-koshachya-semya-i3.jpeg | nev/posting/images/042-koshachya-semya-i4.jpeg | nev/posting/images/042-koshachya-semya-i5.jpeg
+media_note: "20.11.2026: обмен кадрами с текстовым постом серии — слот i4 получил прежний кадр поста, кадр i4 ушёл в пост как обложка 16:9. Альбом вне правила 16:9."
 source: nev/Кошачья семья.docx
 series: 042
 

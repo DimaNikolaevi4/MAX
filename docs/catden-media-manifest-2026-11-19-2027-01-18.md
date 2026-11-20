@@ -22,7 +22,7 @@
 | 2026-12-07 | `2026-12-07-013-vse-o-persidskih-koshkah-p1.md` | approved | `nev/posting/images/013-vse-o-persidskih-koshkah-p1.jpeg` |
 | 2026-12-09 | `2026-12-09-009-v-detstve-p1.md` | approved | `nev/posting/images/009-v-detstve-p1.jpeg` |
 | 2026-12-11 | `2026-12-11-017-loki-p1.md` | approved |  |
-| 2026-12-13 | `2026-12-13-016-gimalayskie-koshki-img1.md` | approved | `nev/posting/images/016-gimalayskie-koshki-i1.png`<br>`nev/posting/images/016-gimalayskie-koshki-i2.png`<br>`nev/posting/images/016-gimalayskie-koshki-i3.png`<br>`nev/posting/images/016-gimalayskie-koshki-i4.png`<br>`nev/posting/images/016-gimalayskie-koshki-i5.png`<br>`nev/posting/images/016-gimalayskie-koshki-i6.png`<br>`nev/posting/images/016-gimalayskie-koshki-i1.png`<br>`nev/posting/images/016-gimalayskie-koshki-i2.png` |
+| 2026-12-13 | `2026-12-13-016-gimalayskie-koshki-img1.md` | approved | `nev/posting/images/016-gimalayskie-koshki-i1.png`<br>`nev/posting/images/016-gimalayskie-koshki-i2.png`<br>`nev/posting/images/016-gimalayskie-koshki-i3.png`<br>`nev/posting/images/016-gimalayskie-koshki-i4.png`<br>`nev/posting/images/016-gimalayskie-koshki-i5.png`<br>`nev/posting/images/016-gimalayskie-koshki-i6.png` |
 | 2026-12-14 | `2026-12-14-016-gimalayskie-koshki-p1.md` | approved | `nev/posting/images/016-gimalayskie-koshki-p1.png` |
 | 2026-12-15 | `2026-12-15-014-vy-gotovy-zavesti-koshku-img1.md` | approved | `nev/posting/images/014-vy-gotovy-zavesti-koshku-i1.jpeg`<br>`nev/posting/images/014-vy-gotovy-zavesti-koshku-i2.jpeg`<br>`nev/posting/images/014-vy-gotovy-zavesti-koshku-i3.jpeg` |
 | 2026-12-16 | `2026-12-16-014-vy-gotovy-zavesti-koshku-p1.md` | approved | `nev/posting/images/014-vy-gotovy-zavesti-koshku-p1.jpeg` |

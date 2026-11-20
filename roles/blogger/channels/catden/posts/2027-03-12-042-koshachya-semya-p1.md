@@ -4,6 +4,7 @@ status: approved
 format: markdown
 notify: true
 image_file: nev/posting/images/042-koshachya-semya-p1.png
+media_note: "20.11.2026: обложка 16:9 взята из альбома серии (слот i4); прежний кадр поста перенесён в альбом на место i4. Имена слотов сохранены, заменено содержимое на хостинге."
 source: nev/Кошачья семья.docx
 series: 042
 part: 1/1
