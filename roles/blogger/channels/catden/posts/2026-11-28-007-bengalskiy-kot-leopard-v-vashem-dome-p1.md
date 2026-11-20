@@ -4,7 +4,7 @@ status: approved
 format: markdown
 notify: true
 image_file: nev/posting/images/007-bengalskiy-kot-leopard-v-vashem-dome-p1.png
-media_note: "20.11.2026: кадр 16:9 взят из альбома серии (пост 28.11, слот i2 — 600x365, 1,64); прежний кадр поста (600x400, 1,50) перенесён в альбом на место i2."
+media_note: "20.11.2026: кадр 16:9 взят из альбома этой же серии (слот i2 — 600x365, 1,64); прежний кадр поста (600x400, 1,50) перенесён в альбом на место i2."
 source: nev/Бенгальский кот.docx
 series: 007
 part: 1/1

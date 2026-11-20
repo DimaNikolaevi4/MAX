@@ -731,13 +731,13 @@
       "source": "orchestrator"
     },
     {
-      "id": "max-2026-11-20-008-bogi-sredi-nas-p1",
-      "title": "[Коты, кошки и котята] Боги среди нас: абиссинская кошка",
+      "id": "max-2026-11-20-008-bogi-sredi-nas-img1",
+      "title": "[Коты, кошки и котята] На фото — герои завтрашней статьи",
       "when": "2026-11-20",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
-      "link": "roles/blogger/channels/catden/posts/2026-11-20-008-bogi-sredi-nas-p1.md",
+      "link": "roles/blogger/channels/catden/posts/2026-11-20-008-bogi-sredi-nas-img1.md",
       "source": "auto"
     },
     {
@@ -771,13 +771,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-21-008-bogi-sredi-nas-img1",
-      "title": "[Коты, кошки и котята] На фото — герои завтрашней статьи",
+      "id": "max-2026-11-21-008-bogi-sredi-nas-p1",
+      "title": "[Коты, кошки и котята] Боги среди нас: абиссинская кошка",
       "when": "2026-11-21",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
-      "link": "roles/blogger/channels/catden/posts/2026-11-21-008-bogi-sredi-nas-img1.md",
+      "link": "roles/blogger/channels/catden/posts/2026-11-21-008-bogi-sredi-nas-p1.md",
       "source": "auto"
     },
     {
@@ -831,13 +831,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-23-003-6-unikalnyh-porod-koshek-p1",
-      "title": "[Коты, кошки и котята] 6 уникальных пород кошек",
+      "id": "max-2026-11-23-003-6-unikalnyh-porod-koshek-img1",
+      "title": "[Коты, кошки и котята] На фото — герои завтрашнего выпуска",
       "when": "2026-11-23",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
-      "link": "roles/blogger/channels/catden/posts/2026-11-23-003-6-unikalnyh-porod-koshek-p1.md",
+      "link": "roles/blogger/channels/catden/posts/2026-11-23-003-6-unikalnyh-porod-koshek-img1.md",
       "source": "auto"
     },
     {
@@ -861,13 +861,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-24-003-6-unikalnyh-porod-koshek-img1",
-      "title": "[Коты, кошки и котята] На фото — герои завтрашнего выпуска",
+      "id": "max-2026-11-24-003-6-unikalnyh-porod-koshek-p1",
+      "title": "[Коты, кошки и котята] 6 уникальных пород кошек",
       "when": "2026-11-24",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
-      "link": "roles/blogger/channels/catden/posts/2026-11-24-003-6-unikalnyh-porod-koshek-img1.md",
+      "link": "roles/blogger/channels/catden/posts/2026-11-24-003-6-unikalnyh-porod-koshek-p1.md",
       "source": "auto"
     },
     {
@@ -891,13 +891,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-25-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-p1",
-      "title": "[Коты, кошки и котята] 9 самых красивых короткошерстных пород кошек",
+      "id": "max-2026-11-25-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-img1",
+      "title": "[Коты, кошки и котята] Герои завтрашней статьи — на фото",
       "when": "2026-11-25",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
-      "link": "roles/blogger/channels/catden/posts/2026-11-25-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-p1.md",
+      "link": "roles/blogger/channels/catden/posts/2026-11-25-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-img1.md",
       "source": "auto"
     },
     {
@@ -911,13 +911,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-26-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-img1",
-      "title": "[Коты, кошки и котята] Герои завтрашней статьи — на фото",
+      "id": "max-2026-11-26-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-p1",
+      "title": "[Коты, кошки и котята] 9 самых красивых короткошерстных пород кошек",
       "when": "2026-11-26",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
-      "link": "roles/blogger/channels/catden/posts/2026-11-26-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-img1.md",
+      "link": "roles/blogger/channels/catden/posts/2026-11-26-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-p1.md",
       "source": "auto"
     },
     {
@@ -931,13 +931,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-27-007-bengalskiy-kot-leopard-v-vashem-dome-p1",
-      "title": "[Коты, кошки и котята] Бенгальский кот — леопард в вашем доме",
+      "id": "max-2026-11-27-007-bengalskiy-kot-leopard-v-vashem-dome-img1",
+      "title": "[Коты, кошки и котята] На фото — герои завтрашней статьи",
       "when": "2026-11-27",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
-      "link": "roles/blogger/channels/catden/posts/2026-11-27-007-bengalskiy-kot-leopard-v-vashem-dome-p1.md",
+      "link": "roles/blogger/channels/catden/posts/2026-11-27-007-bengalskiy-kot-leopard-v-vashem-dome-img1.md",
       "source": "auto"
     },
     {
@@ -951,13 +951,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-28-007-bengalskiy-kot-leopard-v-vashem-dome-img1",
-      "title": "[Коты, кошки и котята] На фото — герои завтрашней статьи",
+      "id": "max-2026-11-28-007-bengalskiy-kot-leopard-v-vashem-dome-p1",
+      "title": "[Коты, кошки и котята] Бенгальский кот — леопард в вашем доме",
       "when": "2026-11-28",
       "time": null,
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
-      "link": "roles/blogger/channels/catden/posts/2026-11-28-007-bengalskiy-kot-leopard-v-vashem-dome-img1.md",
+      "link": "roles/blogger/channels/catden/posts/2026-11-28-007-bengalskiy-kot-leopard-v-vashem-dome-p1.md",
       "source": "auto"
     },
     {

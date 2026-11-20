@@ -39,15 +39,15 @@
 | Дата | Серия | Тип | Медиа | Статус | Праздник/пометка | Файл |
 |---|---:|---|---|---|---|---|
 | 2026-11-19 | 005 | пост | img | approved |  | `2026-11-19-005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-p1.md` |
-| 2026-11-20 | 008 | пост | img | approved |  | `2026-11-20-008-bogi-sredi-nas-p1.md` |
-| 2026-11-21 | 008 | анонс-карусель (тизер следующего) | album | approved |  | `2026-11-21-008-bogi-sredi-nas-img1.md` |
+| 2026-11-20 | 008 | анонс-карусель (тизер следующего) | album | approved |  | `2026-11-20-008-bogi-sredi-nas-img1.md` |
+| 2026-11-21 | 008 | пост | img | approved |  | `2026-11-21-008-bogi-sredi-nas-p1.md` |
 | 2026-11-22 | 074 | анонс-карусель (тизер следующего) | album | approved |  | `2026-11-22-074-stihi-na-fotografiyah-img2.md` |
-| 2026-11-23 | 003 | пост | img | approved |  | `2026-11-23-003-6-unikalnyh-porod-koshek-p1.md` |
-| 2026-11-24 | 003 | анонс-карусель (тизер следующего) | album | approved |  | `2026-11-24-003-6-unikalnyh-porod-koshek-img1.md` |
-| 2026-11-25 | 006 | пост | img | approved |  | `2026-11-25-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-p1.md` |
-| 2026-11-26 | 006 | анонс-карусель (тизер следующего) | album | approved |  | `2026-11-26-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-img1.md` |
-| 2026-11-27 | 007 | пост | img | approved |  | `2026-11-27-007-bengalskiy-kot-leopard-v-vashem-dome-p1.md` |
-| 2026-11-28 | 007 | анонс-карусель (тизер следующего) | album | approved |  | `2026-11-28-007-bengalskiy-kot-leopard-v-vashem-dome-img1.md` |
+| 2026-11-23 | 003 | анонс-карусель (тизер следующего) | album | approved |  | `2026-11-23-003-6-unikalnyh-porod-koshek-img1.md` |
+| 2026-11-24 | 003 | пост | img | approved |  | `2026-11-24-003-6-unikalnyh-porod-koshek-p1.md` |
+| 2026-11-25 | 006 | анонс-карусель (тизер следующего) | album | approved |  | `2026-11-25-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-img1.md` |
+| 2026-11-26 | 006 | пост | img | approved |  | `2026-11-26-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-p1.md` |
+| 2026-11-27 | 007 | анонс-карусель (тизер следующего) | album | approved |  | `2026-11-27-007-bengalskiy-kot-leopard-v-vashem-dome-img1.md` |
+| 2026-11-28 | 007 | пост | img | approved |  | `2026-11-28-007-bengalskiy-kot-leopard-v-vashem-dome-p1.md` |
 | 2026-11-29 | 011 | пост | img | approved |  | `2026-11-29-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-p1.md` |
 | 2026-11-30 | 011 | анонс-карусель (тизер следующего) | album | approved | День домашних животных (неофиц.) | `2026-11-30-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-img1.md` |
 | 2026-12-01 | 012 | пост | img | approved |  | `2026-12-01-012-vozniknovenie-porody-sibirskih-koshek-p1.md` |
