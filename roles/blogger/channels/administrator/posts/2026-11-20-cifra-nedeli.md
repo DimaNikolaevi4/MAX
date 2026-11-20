@@ -1,11 +1,14 @@
 ---
 channel: administrator
-status: draft
+status: published
 format: markdown
 notify: true
 series: cifra-nedeli
 created_at: 2026-11-20T15:13:53
 image_file: local/admin/cifra-nedeli-2026-11-20.png
+published_at: 2026-11-20T15:17:04+03:00
+message_id: mid.ffffba0776009aa301a1f8e278244ef7
+url: https://max.ru/channel_administrator/AaH44ngkTvc
 ---
 
 **📊 Цифра недели: что показали наши каналы**
