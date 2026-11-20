@@ -1031,16 +1031,6 @@
       "source": "auto"
     },
     {
-      "id": "orch-habr-article-draft",
-      "title": "Статья «Автопилот каналов в MAX»: прочитать черновик и утвердить",
-      "when": "2026-12-01",
-      "time": null,
-      "status": "backlog",
-      "why": "черновики готовы: docs/articles/habr-avtopilot-kanala.md и vc-korotkaya-versiya.md; нужна вычитка владельца и правка фактов от первого лица",
-      "link": "docs/articles/README.md",
-      "source": "orchestrator"
-    },
-    {
       "id": "max-2026-12-02-012-vozniknovenie-porody-sibirskih-koshek-p1",
       "title": "[Коты, кошки и котята] Возникновение породы сибирских кошек",
       "when": "2026-12-02",
