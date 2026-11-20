@@ -94,7 +94,7 @@
 | --- | --- | --- | --- |
 | 20.11 | `2026-11-20-008-bogi-sredi-nas-p1.md` | `mid.ffffb629582f9aa301a1f78dffc6703b` | 1 |
 | 21.11 | `2026-11-21-008-bogi-sredi-nas-img1.md` | `mid.ffffb629582f9aa301a1f78e12bc160b` | 4 |
-| 22.11 | `2026-11-22-074-stihi-na-fotografiyah-img2.md` | `mid.ffffb629582f9aa301a1f78e20fe49af` | 2 |
+| ~~22.11~~ | пост удалён 20.11.2026 (материал признан непригодным); превью `mid…e20fe49af` удалено, 22.11 — пропуск | — | — |
 | 23.11 | `2026-11-23-003-6-unikalnyh-porod-koshek-p1.md` | `mid.ffffb629582f9aa301a1f78e2bfe7059` | 1 |
 | 24.11 | `2026-11-24-003-6-unikalnyh-porod-koshek-img1.md` | `mid.ffffb629582f9aa301a1f78e4086187c` | 5 |
 | 25.11 | `2026-11-25-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-p1.md` | `mid.ffffb629582f9aa301a1f78e4b065db5` | 1 |
@@ -102,6 +102,7 @@
 | 27.11 | `2026-11-27-007-bengalskiy-kot-leopard-v-vashem-dome-p1.md` | `mid.ffffb629582f9aa301a1f78e71d9379b` | 1 |
 | 28.11 | `2026-11-28-007-bengalskiy-kot-leopard-v-vashem-dome-img1.md` | `mid.ffffb629582f9aa301a1f78e85ed7a4f` | 4 |
 | 29.11 | `2026-11-29-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-p1.md` | `mid.ffffb629582f9aa301a1f78e8fda6bad` | 1 |
+| 30.11 | `2026-11-30-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-p1.md` | `mid.ffffb629582f9aa301a1f83f1ccb592b` | 1 |
 
 ## 7. Результаты слоёв 1–3 (на момент передачи)
 
