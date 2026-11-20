@@ -1317,31 +1317,6 @@
     "chars_total": 1804
   },
   {
-    "series": "074",
-    "source": "Стихи на фотографиях.docx",
-    "title": "Стихи на фотографиях",
-    "posts": [
-      {
-        "file": "074-stihi-na-fotografiyah-p1.md",
-        "chars": 595,
-        "images": 1
-      },
-      {
-        "file": "074-stihi-na-fotografiyah-img1.md",
-        "chars": 148,
-        "images": 6,
-        "album": true
-      },
-      {
-        "file": "074-stihi-na-fotografiyah-img2.md",
-        "chars": 148,
-        "images": 2,
-        "album": true
-      }
-    ],
-    "chars_total": 891
-  },
-  {
     "series": "075",
     "source": "Судьба Синьора.docx",
     "title": "Судьба Синьора",
