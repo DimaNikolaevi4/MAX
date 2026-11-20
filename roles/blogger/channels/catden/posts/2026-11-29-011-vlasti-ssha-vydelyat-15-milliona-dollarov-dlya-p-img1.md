@@ -1,6 +1,7 @@
 ---
 channel: catden
 status: approved
+approved_at: "2026-11-20"
 format: markdown
 notify: true
 image_files: nev/posting/images/011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-i1.jpeg | nev/posting/images/011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-i2.png | nev/posting/images/011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-i3.jpeg

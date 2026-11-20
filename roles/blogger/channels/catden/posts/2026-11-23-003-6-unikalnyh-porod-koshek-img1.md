@@ -1,6 +1,7 @@
 ---
 channel: catden
 status: approved
+approved_at: "2026-11-20"
 format: markdown
 notify: true
 image_files: nev/posting/images/003-6-unikalnyh-porod-koshek-i1.png | nev/posting/images/003-6-unikalnyh-porod-koshek-i2.png | nev/posting/images/003-6-unikalnyh-porod-koshek-i3.png | nev/posting/images/003-6-unikalnyh-porod-koshek-i4.png | nev/posting/images/003-6-unikalnyh-porod-koshek-i5.png

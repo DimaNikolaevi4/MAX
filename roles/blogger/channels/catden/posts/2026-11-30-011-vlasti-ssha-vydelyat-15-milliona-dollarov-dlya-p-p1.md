@@ -1,6 +1,7 @@
 ---
 channel: catden
 status: approved
+approved_at: "2026-11-20"
 format: markdown
 notify: true
 image_file: nev/posting/images/011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-p1.jpeg

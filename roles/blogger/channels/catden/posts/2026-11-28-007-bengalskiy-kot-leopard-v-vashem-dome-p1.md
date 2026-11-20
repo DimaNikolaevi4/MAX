@@ -1,6 +1,7 @@
 ---
 channel: catden
 status: approved
+approved_at: "2026-11-20"
 format: markdown
 notify: true
 image_file: nev/posting/images/007-bengalskiy-kot-leopard-v-vashem-dome-p1.png

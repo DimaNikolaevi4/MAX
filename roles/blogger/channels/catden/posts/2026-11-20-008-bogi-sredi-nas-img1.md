@@ -1,6 +1,7 @@
 ---
 channel: catden
 status: approved
+approved_at: "2026-11-20"
 format: markdown
 notify: true
 image_files: nev/posting/images/008-bogi-sredi-nas-i1.jpeg | nev/posting/images/008-bogi-sredi-nas-i2.jpeg | nev/posting/images/008-bogi-sredi-nas-i3.jpeg | nev/posting/images/008-bogi-sredi-nas-i4.jpeg
