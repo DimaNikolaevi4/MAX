@@ -24,10 +24,16 @@
       "slug": "administrator",
       "header_media_aspect": "16:9",
       "platform": "max",
-      "title": "Администрирование каналов",
-      "description": "Закрывающийся канал (https://max.ru/channel_administrator), объединяется с ainow. Аудитория — авторы и админы каналов MAX. Задача — перелинковка подписчиков на основной канал. CTA всех постов ведёт на https://max.ru/channel_ainow",
+      "title": "Каналы в MAX: рост и автопилот",
+      "description": "Как вести канал в MAX: форматы, метрики, автоматизация публикаций. Показываем на своих четырёх каналах, что работает, а что нет. Услуги администрирования и автопостинга — по запросу. https://max.ru/channel_administrator (перезапуск 20.11.2026, прежнее название «Администрирование каналов»; ник не менялся)",
       "cta_label": "AI",
-      "cta_url": "https://max.ru/channel_ainow"
+      "cta_url": "https://max.ru/channel_ainow",
+      "status": "relaunch",
+      "rubrics": [
+        "cifra-nedeli",
+        "chto-pochinili",
+        "priem"
+      ]
     },
     {
       "slug": "tg_neuro",
