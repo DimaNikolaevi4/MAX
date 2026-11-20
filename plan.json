@@ -42,7 +42,7 @@
     },
     {
       "id": "max-2026-10-29-kanal-obedinyaetsya-s-ai",
-      "title": "[Администрирование каналов] 🚀 Канал объединяется с AI: инструменты для авторов каналов теперь там",
+      "title": "[Каналы в MAX: рост и автопилот] 🚀 Канал объединяется с AI: инструменты для авторов каналов теперь там",
       "when": "2026-10-29",
       "time": null,
       "status": "done",
@@ -92,7 +92,7 @@
     },
     {
       "id": "max-2026-10-30-ii-agent-dlya-kanala",
-      "title": "[Администрирование каналов] 🛠 ИИ-агент для канала: что уже можно автоматизировать",
+      "title": "[Каналы в MAX: рост и автопилот] 🛠 ИИ-агент для канала: что уже можно автоматизировать",
       "when": "2026-10-30",
       "time": null,
       "status": "done",
@@ -112,7 +112,7 @@
     },
     {
       "id": "max-2026-10-31-bot-api-max",
-      "title": "[Администрирование каналов] 🛠 Bot API MAX: что реально умеет бот канала",
+      "title": "[Каналы в MAX: рост и автопилот] 🛠 Bot API MAX: что реально умеет бот канала",
       "when": "2026-10-31",
       "time": null,
       "status": "done",
@@ -152,7 +152,7 @@
     },
     {
       "id": "max-2026-11-01-kontent-plan-na-nedelyu",
-      "title": "[Администрирование каналов] 📅 Контент-план на неделю: как собрать его с ИИ за час",
+      "title": "[Каналы в MAX: рост и автопилот] 📅 Контент-план на неделю: как собрать его с ИИ за час",
       "when": "2026-11-01",
       "time": null,
       "status": "done",
@@ -172,7 +172,7 @@
     },
     {
       "id": "max-2026-11-02-chto-delegirovat-botu",
-      "title": "[Администрирование каналов] 🤝 Что делегировать боту, а что оставить себе",
+      "title": "[Каналы в MAX: рост и автопилот] 🤝 Что делегировать боту, а что оставить себе",
       "when": "2026-11-02",
       "time": null,
       "status": "done",
@@ -182,7 +182,7 @@
     },
     {
       "id": "max-2026-11-03-metriki-kanala",
-      "title": "[Администрирование каналов] 📊 Пять метрик канала, которые стоит смотреть раз в неделю",
+      "title": "[Каналы в MAX: рост и автопилот] 📊 Пять метрик канала, которые стоит смотреть раз в неделю",
       "when": "2026-11-03",
       "time": null,
       "status": "done",
@@ -192,7 +192,7 @@
     },
     {
       "id": "max-2026-11-04-posledniy-post-gde-vas-zhdut",
-      "title": "[Администрирование каналов] 🚪 Мы переехали на AI",
+      "title": "[Каналы в MAX: рост и автопилот] 🚪 Мы переехали на AI",
       "when": "2026-11-04",
       "time": null,
       "status": "done",
@@ -342,7 +342,7 @@
     },
     {
       "id": "max-2026-11-10-pauza-so-zveryami",
-      "title": "[Администрирование каналов] 🧡 Админская пауза: канал «Забавное»",
+      "title": "[Каналы в MAX: рост и автопилот] 🧡 Админская пауза: канал «Забавное»",
       "when": "2026-11-10",
       "time": null,
       "status": "done",
@@ -741,6 +741,16 @@
       "source": "auto"
     },
     {
+      "id": "max-2026-11-20-cifra-nedeli",
+      "title": "[Каналы в MAX: рост и автопилот] 📊 Цифра недели: что показали наши каналы",
+      "when": "2026-11-20",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/administrator/posts/2026-11-20-cifra-nedeli.md",
+      "source": "auto"
+    },
+    {
       "id": "max-2026-11-20-opencode-besplatnyy-gaid-po-neyrosetyam",
       "title": "[AI] 💻 OpenCode Zen: честный обзор бесплатных нейросетей и стратегия выживания",
       "when": "2026-11-20",
@@ -799,6 +809,16 @@
       "why": "публикация по Планировщику, канал «Забавное»",
       "link": "roles/blogger/channels/zabava/posts/2026-11-21-random-20758878292603.md",
       "source": "auto"
+    },
+    {
+      "id": "orch-admin-rename",
+      "title": "Канал administrator: переименовать в «Каналы в MAX: рост и автопилот» и обновить описание",
+      "when": "2026-11-21",
+      "time": null,
+      "status": "done",
+      "why": "перезапуск канала: тексты названия/описания готовы в docs/methodology/admin-channel-strategy.md; ник не меняем (в MAX не гарантирован)",
+      "link": "docs/methodology/admin-channel-strategy.md",
+      "source": "owner"
     },
     {
       "id": "max-2026-11-22-novostnaya-za-nedelyu",
@@ -879,6 +899,16 @@
       "why": "публикация по Планировщику, канал «Забавное»",
       "link": "roles/blogger/channels/zabava/posts/2026-11-24-random-20758878095995.md",
       "source": "auto"
+    },
+    {
+      "id": "orch-admin-pilot",
+      "title": "Канал administrator: опубликовать пилот «Цифра недели» (вторник, 09:00)",
+      "when": "2026-11-24",
+      "time": null,
+      "status": "done",
+      "why": "черновик готов: posts/2026-11-20-cifra-nedeli.md, обложка 16:9 в local/admin/; нужен прогон media_aspect + публикация в 09:00",
+      "link": "docs/methodology/admin-channel-strategy.md",
+      "source": "orchestrator"
     },
     {
       "id": "max-2026-11-25-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-img1",
@@ -992,7 +1022,7 @@
     },
     {
       "id": "max-2026-11-30-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-p1",
-      "title": "[Коты, кошки и котята] Власти США выделят 1,5 млн долларов на оценку популяции бездомных кошек в Вашингтоне",
+      "title": "[Коты, кошки и котята] Власти США выделят 1,5 млн долларов на оценку популяции бездомных кошек в Вашинг",
       "when": "2026-11-30",
       "time": null,
       "status": "scheduled",
@@ -1029,6 +1059,16 @@
       "why": "публикация по Планировщику, канал «Забавное»",
       "link": "roles/blogger/channels/zabava/posts/2026-12-01-random-AaDpA01fcXY.md",
       "source": "auto"
+    },
+    {
+      "id": "orch-habr-article-draft",
+      "title": "Статья «Автопилот каналов в MAX»: прочитать черновик и утвердить",
+      "when": "2026-12-01",
+      "time": null,
+      "status": "backlog",
+      "why": "черновики готовы: docs/articles/habr-avtopilot-kanala.md и vc-korotkaya-versiya.md; нужна вычитка владельца и правка фактов от первого лица",
+      "link": "docs/articles/README.md",
+      "source": "orchestrator"
     },
     {
       "id": "max-2026-12-02-012-vozniknovenie-porody-sibirskih-koshek-p1",
@@ -1079,6 +1119,16 @@
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
       "link": "roles/blogger/channels/catden/posts/2026-12-07-013-vse-o-persidskih-koshkah-p1.md",
       "source": "auto"
+    },
+    {
+      "id": "orch-habr-article-publish",
+      "title": "Опубликовать статью «Автопилот каналов в MAX» на Хабре/VC и анонсировать в канале AI",
+      "when": "2026-12-08",
+      "time": null,
+      "status": "backlog",
+      "why": "публикация от имени владельца; после выхода — анонс в канале AI со ссылкой и вопросом; ссылку на канал в тексте Хабра не давать (самореклама)",
+      "link": "docs/articles/README.md",
+      "source": "orchestrator"
     },
     {
       "id": "max-2026-12-09-009-v-detstve-p1",
@@ -1261,26 +1311,6 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-12-31-holiday-ny-eve-p1",
-      "title": "[Коты, кошки и котята] Кот, ёлка и последняя ночь года",
-      "when": "2026-12-31",
-      "time": null,
-      "status": "backlog",
-      "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/catden/posts/2026-12-31-holiday-ny-eve-p1.md",
-      "source": "auto"
-    },
-    {
-      "id": "max-2027-01-01-holiday-ny-day-p1",
-      "title": "[Коты, кошки и котята] Первое утро нового года",
-      "when": "2027-01-01",
-      "time": null,
-      "status": "backlog",
-      "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/catden/posts/2027-01-01-holiday-ny-day-p1.md",
-      "source": "auto"
-    },
-    {
       "id": "max-2027-01-02-026-21-noyabrya-img1",
       "title": "[Коты, кошки и котята] На фото — герои завтрашнего выпуска",
       "when": "2027-01-02",
@@ -1328,16 +1358,6 @@
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
       "link": "roles/blogger/channels/catden/posts/2027-01-06-027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-p1.md",
-      "source": "auto"
-    },
-    {
-      "id": "max-2027-01-07-holiday-xmas-p1",
-      "title": "[Коты, кошки и котята] Рождественский уют на четырёх лапах",
-      "when": "2027-01-07",
-      "time": null,
-      "status": "backlog",
-      "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/catden/posts/2027-01-07-holiday-xmas-p1.md",
       "source": "auto"
     },
     {
@@ -2311,6 +2331,36 @@
       "source": "auto"
     },
     {
+      "id": "max-2026-12-31-holiday-ny-eve-p1",
+      "title": "[Коты, кошки и котята] Кот, ёлка и последняя ночь года",
+      "when": null,
+      "time": null,
+      "status": "backlog",
+      "why": "черновик, ждёт «ок» владельца",
+      "link": "roles/blogger/channels/catden/posts/2026-12-31-holiday-ny-eve-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-01-holiday-ny-day-p1",
+      "title": "[Коты, кошки и котята] Первое утро нового года",
+      "when": null,
+      "time": null,
+      "status": "backlog",
+      "why": "черновик, ждёт «ок» владельца",
+      "link": "roles/blogger/channels/catden/posts/2027-01-01-holiday-ny-day-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-07-holiday-xmas-p1",
+      "title": "[Коты, кошки и котята] Рождественский уют на четырёх лапах",
+      "when": null,
+      "time": null,
+      "status": "backlog",
+      "why": "черновик, ждёт «ок» владельца",
+      "link": "roles/blogger/channels/catden/posts/2027-01-07-holiday-xmas-p1.md",
+      "source": "auto"
+    },
+    {
       "id": "orch-catden-autopilot",
       "title": "[catden] Служебная команда автопилота: четверг медиа (11д), пятница стилистика+слои 1-3+превью 10д в календарь",
       "when": null,
@@ -2319,46 +2369,6 @@
       "why": "Оркестрация kalendar↔MAX: синхронизация по команде, отчёт в календарь, публикация catden 20:00 МСК по графику",
       "link": "roles/blogger/config/catden-automation.json",
       "source": "kalendar"
-    },
-    {
-      "id": "orch-habr-article-draft",
-      "title": "Статья «Автопилот каналов в MAX»: прочитать черновик и утвердить",
-      "when": "2026-12-01",
-      "time": null,
-      "status": "backlog",
-      "why": "черновики готовы: docs/articles/habr-avtopilot-kanala.md и vc-korotkaya-versiya.md; нужна вычитка владельца и правка фактов от первого лица",
-      "link": "docs/articles/README.md",
-      "source": "orchestrator"
-    },
-    {
-      "id": "orch-habr-article-publish",
-      "title": "Опубликовать статью «Автопилот каналов в MAX» на Хабре/VC и анонсировать в канале AI",
-      "when": "2026-12-08",
-      "time": null,
-      "status": "backlog",
-      "why": "публикация от имени владельца; после выхода — анонс в канале AI со ссылкой и вопросом; ссылку на канал в тексте Хабра не давать (самореклама)",
-      "link": "docs/articles/README.md",
-      "source": "orchestrator"
-    },
-    {
-      "id": "orch-admin-rename",
-      "title": "Канал administrator: переименовать в «Каналы в MAX: рост и автопилот» и обновить описание",
-      "when": "2026-11-21",
-      "time": null,
-      "status": "done",
-      "why": "перезапуск канала: тексты названия/описания готовы в docs/methodology/admin-channel-strategy.md; ник не меняем (в MAX не гарантирован)",
-      "link": "docs/methodology/admin-channel-strategy.md",
-      "source": "owner"
-    },
-    {
-      "id": "orch-admin-pilot",
-      "title": "Канал administrator: опубликовать пилот «Цифра недели» (вторник, 09:00)",
-      "when": "2026-11-24",
-      "time": null,
-      "status": "done",
-      "why": "черновик готов: posts/2026-11-20-cifra-nedeli.md, обложка 16:9 в local/admin/; нужен прогон media_aspect + публикация в 09:00",
-      "link": "docs/methodology/admin-channel-strategy.md",
-      "source": "orchestrator"
     },
     {
       "id": "orch-crosspost-funnels",
