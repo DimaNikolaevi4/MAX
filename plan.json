@@ -1031,6 +1031,16 @@
       "source": "auto"
     },
     {
+      "id": "orch-habr-article-draft",
+      "title": "Статья «Автопилот каналов в MAX»: прочитать черновик и утвердить",
+      "when": "2026-12-01",
+      "time": null,
+      "status": "backlog",
+      "why": "черновики готовы: docs/articles/habr-avtopilot-kanala.md и vc-korotkaya-versiya.md; нужна вычитка владельца и правка фактов от первого лица",
+      "link": "docs/articles/README.md",
+      "source": "orchestrator"
+    },
+    {
       "id": "max-2026-12-02-012-vozniknovenie-porody-sibirskih-koshek-p1",
       "title": "[Коты, кошки и котята] Возникновение породы сибирских кошек",
       "when": "2026-12-02",
@@ -1079,6 +1089,16 @@
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
       "link": "roles/blogger/channels/catden/posts/2026-12-07-013-vse-o-persidskih-koshkah-p1.md",
       "source": "auto"
+    },
+    {
+      "id": "orch-habr-article-publish",
+      "title": "Опубликовать статью на Хабре/VC и анонсировать в канале AI",
+      "when": "2026-12-08",
+      "time": null,
+      "status": "backlog",
+      "why": "публикация от имени владельца; после выхода — пост-анонс в канале AI со ссылкой и вопросом; ссылку на канал в тексте Хабра не давать (самореклама)",
+      "link": "docs/articles/README.md",
+      "source": "orchestrator"
     },
     {
       "id": "max-2026-12-09-009-v-detstve-p1",
@@ -1261,6 +1281,26 @@
       "source": "auto"
     },
     {
+      "id": "max-2026-12-31-holiday-ny-eve-p1",
+      "title": "[Коты, кошки и котята] Кот, ёлка и последняя ночь года",
+      "when": "2026-12-31",
+      "time": null,
+      "status": "backlog",
+      "why": "черновик, ждёт «ок» владельца",
+      "link": "roles/blogger/channels/catden/posts/2026-12-31-holiday-ny-eve-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-01-holiday-ny-day-p1",
+      "title": "[Коты, кошки и котята] Первое утро нового года",
+      "when": "2027-01-01",
+      "time": null,
+      "status": "backlog",
+      "why": "черновик, ждёт «ок» владельца",
+      "link": "roles/blogger/channels/catden/posts/2027-01-01-holiday-ny-day-p1.md",
+      "source": "auto"
+    },
+    {
       "id": "max-2027-01-02-026-21-noyabrya-img1",
       "title": "[Коты, кошки и котята] На фото — герои завтрашнего выпуска",
       "when": "2027-01-02",
@@ -1308,6 +1348,16 @@
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «Коты, кошки и котята»",
       "link": "roles/blogger/channels/catden/posts/2027-01-06-027-issledovateli-analiziruyut-dnk-209-drevnih-koshe-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2027-01-07-holiday-xmas-p1",
+      "title": "[Коты, кошки и котята] Рождественский уют на четырёх лапах",
+      "when": "2027-01-07",
+      "time": null,
+      "status": "backlog",
+      "why": "черновик, ждёт «ок» владельца",
+      "link": "roles/blogger/channels/catden/posts/2027-01-07-holiday-xmas-p1.md",
       "source": "auto"
     },
     {
@@ -2278,36 +2328,6 @@
       "status": "backlog",
       "why": "черновик, ждёт «ок» владельца",
       "link": "roles/blogger/channels/ainow/posts/2026-12-13-iz-570-zagolovkov-pyat-novostey.md",
-      "source": "auto"
-    },
-    {
-      "id": "max-2026-12-31-holiday-ny-eve-p1",
-      "title": "[Коты, кошки и котята] Кот, ёлка и последняя ночь года",
-      "when": "2026-12-31",
-      "time": null,
-      "status": "backlog",
-      "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/catden/posts/2026-12-31-holiday-ny-eve-p1.md",
-      "source": "auto"
-    },
-    {
-      "id": "max-2027-01-01-holiday-ny-day-p1",
-      "title": "[Коты, кошки и котята] Первое утро нового года",
-      "when": "2027-01-01",
-      "time": null,
-      "status": "backlog",
-      "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/catden/posts/2027-01-01-holiday-ny-day-p1.md",
-      "source": "auto"
-    },
-    {
-      "id": "max-2027-01-07-holiday-xmas-p1",
-      "title": "[Коты, кошки и котята] Рождественский уют на четырёх лапах",
-      "when": "2027-01-07",
-      "time": null,
-      "status": "backlog",
-      "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/catden/posts/2027-01-07-holiday-xmas-p1.md",
       "source": "auto"
     },
     {
