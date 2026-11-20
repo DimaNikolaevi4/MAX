@@ -2345,7 +2345,7 @@
       "title": "Канал administrator: переименовать в «Каналы в MAX: рост и автопилот» и обновить описание",
       "when": "2026-11-21",
       "time": null,
-      "status": "todo",
+      "status": "done",
       "why": "перезапуск канала: тексты названия/описания готовы в docs/methodology/admin-channel-strategy.md; ник не меняем (в MAX не гарантирован)",
       "link": "docs/methodology/admin-channel-strategy.md",
       "source": "owner"
