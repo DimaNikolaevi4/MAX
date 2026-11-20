@@ -4,6 +4,7 @@ status: approved
 format: markdown
 notify: true
 image_file: nev/posting/images/008-bogi-sredi-nas-p1.jpeg
+media_note: "20.11.2026 владелец заменил изображение: было 480x600 (0,80, портрет), стало 1980x864 (2,29:1 — шире 16:9, MAX центр-кропит); файл на хостинге /0s3/blogger-data/media/catden/2026-11-20/ заменён, превью в «календаре» обновлено (PUT)"
 source: nev/Боги среди нас.docx
 series: 008
 part: 1/1
