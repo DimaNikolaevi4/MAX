@@ -15,6 +15,12 @@
 Инструменты проверки: `roles/blogger/tools/ainow_polish.py`, `digest_polish.py`,
 `media_aspect.py`, `plan_rhythm.py`.
 
+## Каналы
+
+| Документ | Что внутри |
+| --- | --- |
+| [`channels-classification.md`](channels-classification.md) | итоговая классификация каналов: основные, служебные, закрывающиеся; перелинковка между каналами; CTA-перенаправления |
+
 ## Продвижение
 
 | Документ | Что внутри |

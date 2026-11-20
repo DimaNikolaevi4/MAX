@@ -31,15 +31,24 @@ Bot API и коммитит результат в git.
 Реестр — `roles/blogger/config/channels.json` (токенов там нет). Папка канала:
 `roles/blogger/channels/<slug>/`.
 
-| slug | площадка | канал | назначение |
-| --- | --- | --- | --- |
-| `ainow` | MAX | AI — https://max.ru/channel_ainow | основной: нейросети, промпты, кейсы |
-| `catden` | MAX | Коты, кошки и котята — https://max.ru/channel_catden | запущен 12.11.2026: породы кошек, истории о котах, уход |
-| `na100` | MAX | Нейросети и ИИ | закрывается, подписчики переливаются в `ainow` |
-| `administrator` | MAX | Администрирование каналов | закрывается, перелив в `ainow` |
-| `ozon_group` | MAX | Ozon Находки | удалён 12.11.2026, слот отдал каналу `catden` |
-| `zabava` | MAX | Забавное — https://max.ru/channel_zabava | юмор, короткие видео |
-| `tg_neuro` | Telegram | Нейро Мульт Студия — https://t.me/Neuro_Animation_Studio | закрывается, перелив в `ainow` |
+| # | Канал | Тип | Тема / назначение | Площадка | URL | Статус |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | `ainow` | 🏛️ Основной | AI: обзоры, кейсы, дайджесты, инструменты — **главный канал** автопилота | MAX | https://max.ru/channel_ainow | ✅ активен, публикации идут |
+| 2 | `na100` | 🧰 Служебный | Утренний дайджест технологий ИИ (06:30 → 07:30) | MAX | https://max.ru/channel_na100 | ✅ активен (автопубликация — исключение владельца, 12.11.2026) |
+| 3 | `catden` | 🏛️ Основной | Коты, кошки и котята: породы, уход, здоровье | MAX | https://max.ru/channel_catden | ✅ активен (autopilot in-progress) |
+| 4 | `zabava` | 🏛️ Основной | Забавное: юмор и короткие видео | MAX | https://max.ru/channel_zabava | ✅ активен (слот 20.11 — scheduled) |
+| 5 | `administrator` | 🧰 Служебный | Канал-отчёт: форматы, метрики, автопилот | MAX | https://max.ru/channel_administrator | 🔄 relaunch (20.11, пилот «Цифра недели») |
+| 6 | `tg_neuro` | 🧰 Служебный (Telegram) | «Нейро Мульт Студия»; закрыается, аудитория → ainow (перелинковка) | Telegram | https://t.me/Neuro_Animation_Studio | ⚠️ closing |
+| 7 | `ozon_group` | ❌ Удалён | «Ozon Находки» — закрыт 12.11.2026, слот отдан `catden` | MAX | https://max.ru/channel_ozon_group | ❌ deleted |
+
+Служебные каналы обслуживают основные: `na100` — утренний дайджест, `administrator`
+— канал-отчёт об управлении, `tg_neuro` — телеграм-канал. Основные контентные:
+`ainow`, `catden`, `zabava`.
+
+## Перелинковка между каналами
+
+- **tg_neuro → ainow** — актуальный поток (телеграм → MAX, релей `deploy/tg-relay.php`).
+- Единичные переливки между основными каналами — норма.
 
 У закрывающихся каналов призыв (CTA) ведёт на основной канал `ainow`
 (`cta_label`/`cta_url` в реестре). У `ainow`, `zabava` и `catden` — на себя.
