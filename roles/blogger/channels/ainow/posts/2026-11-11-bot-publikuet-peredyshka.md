@@ -7,11 +7,14 @@ published_at: 2026-11-11T07:15:11+03:00
 message_id: mid.ffffba0066fb9aa301a1c8d11dbd2c34
 channel_id: -76964086179165
 url: https://max.ru/channel_ainow/AaHI0R29LDQ
-video_file: local/media-cache/mid_ffffbf6800678aa301a1c4e957a82749.mp4
-video: https://maxvd345.okcdn.ru/?expires=1794456911377&srcIp=10.219.7.163&pr=112&srcAg=UNKNOWN&ms=130.49.232.90&type=4&sig=jebZspuGcgU&ct=27&urls=130.49.226.71&clientType=51&id=19638674393739&scl=1
-video_duration: 26
+video_file: E:\Загрузки Яндекс\19659399891595.mp4
+video: https://maxvd630.okcdn.ru/?expires=1795352376247&srcIp=10.201.79.238&pr=112&srcAg=UNKNOWN&ms=130.49.232.16&type=4&sig=XFlYF-t2Drc&ct=27&urls=130.49.229.14&clientType=51&id=19864748821131&scl=1
 media_count: 1
+edited_at: 2026-11-21T15:59:36+03:00
+edit_note: замена видео по команде владельца 21.11.2026
 ---
+
+
 
 **Бот публикует — вы выдыхаете: где здесь передышка**
 

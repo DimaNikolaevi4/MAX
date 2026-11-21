@@ -7,8 +7,13 @@ published_at: 2026-11-09T07:03:33+03:00
 message_id: mid.ffffba0066fb9aa301a1be79babb1ff8
 channel_id: -76964086179165
 url: https://max.ru/channel_ainow/AaG-ebq7H_g
-image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQaAHMOqs9uEDvdXlwfz7Ru7qrupAOu6mHZMtAIdtQQCOdeuADKzjXfrs3y5F9sSZzopT9abC3uYfDPe7Y8w94
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTihqCjN57edPv2k6xfUBN6FP-k-7wjdVW-OFZ2oTtDWF5qk4f6xCIgpR2XWjZ3XJeudUX_ANXxUI_vwbX24z4
+image_file: E:\Загрузки Яндекс\fe6cfd04-3e7d-4394-8e14-c7c86c9059d6.jpg
+edited_at: 2026-11-21T15:59:54+03:00
+edit_note: замена изображения по команде владельца 21.11.2026
 ---
+
+
 
 🧭 **Как подключить бесплатный ИИ к боту из России: 5 путей**
 
