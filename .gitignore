@@ -6,6 +6,10 @@ local/*
 .env
 .env.*
 
+# Локальные профили машин и секреты
+machine_profile.json
+*.local
+
 # Служебные файлы
 *.log
 vendor/
