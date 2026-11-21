@@ -9,6 +9,8 @@ channel_id: -76964086179165
 url: https://max.ru/channel_ainow/AaH3ACslAGg
 image_file: 2026-11-20-cover.png
 image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTotre-9SJJM4d4puqFo2pMQh4yRmV-43HenIuw-Z5tjNoKkMG_bc-OEJDZrNHtvW3w8rTDb_50VN6fyp0j5nM
+edit_note: автосверка 21.11 — текст без изменений, проставлен маркер approved_by_owner
+approved_by_owner: true
 ---
 
 **💻 OpenCode Zen: честный обзор бесплатных нейросетей и стратегия выживания**

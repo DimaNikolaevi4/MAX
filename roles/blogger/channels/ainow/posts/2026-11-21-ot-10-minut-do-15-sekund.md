@@ -6,8 +6,9 @@ published_at: 2026-11-21T12:24:30+03:00
 message_id: mid.ffffba0066fb9aa301a1fd6bebe33288
 channel_id: -76964086179165
 url: https://max.ru/channel_ainow/AaH9a-vjMog
-edited_at: 2026-11-21T13:38:27+03:00
-edit_note: финальная правка по style.md: без воздуха под заголовками, двойная пустая строка перед кодом
+edited_at: 2026-11-21T13:52:24+03:00
+edit_note: автосверка 21.11 — текст без изменений, проставлен маркер approved_by_owner
+approved_by_owner: true
 ---
 
 **От 10 минут до 15 секунд: как ускорить ИИ-агента**

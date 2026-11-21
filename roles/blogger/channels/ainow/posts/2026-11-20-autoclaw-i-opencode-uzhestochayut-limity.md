@@ -6,8 +6,9 @@ published_at: 2026-11-20T17:51:03+03:00
 message_id: mid.ffffba0066fb9aa301a1f97087442cd9
 channel_id: -76964086179165
 url: https://max.ru/channel_ainow/AaH5cIdELNk
-edited_at: 2026-11-21T12:33:15+03:00
-edit_note: вычитка 4 слоя + style.md, PUT с сохранением вложений
+edited_at: 2026-11-21T13:52:24+03:00
+edit_note: автосверка 21.11 — текст без изменений, проставлен маркер approved_by_owner
+approved_by_owner: true
 ---
 
 **🤖 AutoClaw и OpenCode ужесточают лимиты. Пора считать токены?**

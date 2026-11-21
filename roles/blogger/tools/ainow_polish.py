@@ -71,7 +71,7 @@ def main(argv: list[str] | None = None) -> int:
     inline_bold = 0
     for line in body.splitlines():
         s = line.strip()
-        s2 = re.sub(r"^[^\w]+", "", s)
+        s2 = re.sub(r"^[^\w*]+", "", s)
         if s2.startswith("**") and s2.endswith("**") and s2.count("**") == 2:
             continue  # подзаголовок (в т.ч. с эмодзи-рубрикой впереди)
         inline_bold += len(re.findall(r"\*\*[^*]+\*\*", line))
