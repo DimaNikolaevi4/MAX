@@ -5,7 +5,7 @@
 
     py roles/blogger/tools/ainow_polish.py <пост.md> [--check]
 
-Проверки:
+Проверки (только для неопубликованных; `status: published` пропускаются):
   1. длина ≤ 4000 (комфорт ≤ 3600);
   2. нет литеральных списков (`* `, `- `, `1. `), таблиц `|` и `###`;
   3. жирных выделений внутри абзацев ≤ 6 (подзаголовки не считаются);
@@ -44,6 +44,11 @@ def main(argv: list[str] | None = None) -> int:
     a = ap.parse_args(argv)
 
     fm, body = parse(a.post)
+    if fm.get("status") == "published":
+        print(f"=== {a.post.name} ===")
+        print("  пост опубликован — утверждён владельцем, проверка стиля не применяется")
+        print("  правка — только по отдельной команде владельца")
+        return 0
     ok, bad = [], []
 
     length = len(body)
