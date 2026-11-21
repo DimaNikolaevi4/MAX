@@ -71,8 +71,9 @@ def main(argv: list[str] | None = None) -> int:
     inline_bold = 0
     for line in body.splitlines():
         s = line.strip()
-        if s.startswith("**") and s.endswith("**") and s.count("**") == 2:
-            continue  # подзаголовок
+        s2 = re.sub(r"^[^\w]+", "", s)
+        if s2.startswith("**") and s2.endswith("**") and s2.count("**") == 2:
+            continue  # подзаголовок (в т.ч. с эмодзи-рубрикой впереди)
         inline_bold += len(re.findall(r"\*\*[^*]+\*\*", line))
     if inline_bold > 6:
         bad.append(f"жирных выделений в абзацах: {inline_bold} — бюджет ≤6")
