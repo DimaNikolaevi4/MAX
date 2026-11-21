@@ -10,8 +10,8 @@
   2. нет литеральных списков (`* `, `- `, `1. `), таблиц `|` и `###`;
   3. жирных выделений внутри абзацев ≤ 6 (подзаголовки не считаются);
   4. перелинковка: 1–2 ссылки на прошлые посты канала;
-  5. вопрос в конце (перед CTA);
-  6. CTA-цитата со ссылкой на канал;
+  5. CTA-цитата со ссылкой на канал (предпоследний блок);
+  6. вопрос к комментариям последним блоком, после CTA;
   7. картинка в front matter;
   8. «выход»: промпт / чек-лист / шаги;
   9. предупреждения об ограничениях (⚠ / лимит / не работает).
@@ -88,13 +88,20 @@ def main(argv: list[str] | None = None) -> int:
     else:
         ok.append(f"перелинковка: {len(links)}")
 
-    tail = body.split("> **Подписывайтесь")[0].strip()
-    if "?" in tail[-400:]:
-        ok.append("вопрос в конце есть")
+    raw_lines = body.rstrip().splitlines()
+    cta_pos = next((i for i, ln in enumerate(raw_lines)
+                    if ln.lstrip().startswith("> **Подписывайтесь")), None)
+    last_pos = max((i for i, ln in enumerate(raw_lines) if ln.strip()), default=-1)
+    blank_after_cta = (cta_pos is not None and cta_pos + 1 < len(raw_lines)
+                       and raw_lines[cta_pos + 1].strip() == "")
+    question_last = (cta_pos is not None and last_pos > cta_pos
+                     and "?" in raw_lines[last_pos])
+    if cta_pos is not None and blank_after_cta and question_last:
+        ok.append("вопрос последним блоком после CTA")
     else:
-        bad.append("нет вопроса к читателю в конце (правило тона)")
+        bad.append("нет вопроса последним блоком после CTA-цитаты")
 
-    if "> **Подписывайтесь" in body and "https://max.ru/channel_ainow" in body:
+    if cta_pos is not None and "https://max.ru/channel_ainow" in body:
         ok.append("CTA-цитата со ссылкой на канал")
     else:
         bad.append("нет CTA-цитаты со ссылкой на канал")
