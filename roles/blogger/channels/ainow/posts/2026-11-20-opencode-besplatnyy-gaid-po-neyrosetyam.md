@@ -11,7 +11,7 @@ image_file: 2026-11-20-cover.png
 image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTotre-9SJJM4d4puqFo2pMQh4yRmV-43HenIuw-Z5tjNoKkMG_bc-OEJDZrNHtvW3w8rTDb_50VN6fyp0j5nM
 ---
 
-💻 **OpenCode Zen: честный обзор бесплатных нейросетей и стратегия выживания**
+**💻 OpenCode Zen: честный обзор бесплатных нейросетей и стратегия выживания**
 
 Если вы ищете мощный AI-инструмент для программирования, но не готовы платить, OpenCode — отличный выбор: open-source агент, не привязанный к одному вендору. Через его шлюз OpenCode Zen доступен постоянно меняющийся пул бесплатных LLM — часть из них мы уже отбирали в [подборке 10 бесплатных нейросетей](https://max.ru/channel_ainow/AaHS6K7KQs0).
 
