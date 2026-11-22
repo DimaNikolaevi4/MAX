@@ -5,7 +5,8 @@
 
 Читает поле `image:` из roles/blogger/channels/ainow/posts/*.md и складывает файлы
 в local/images/ainow/<имя поста>.jpg. Библиотека — источник изображений
-для постов закрывающихся каналов (na100, administrator, tg_neuro).
+для tg_neuro и резервных обложек ainow. na100 и administrator активны;
+их заставки/карточки создаются по §5б.
 """
 import re
 import subprocess
