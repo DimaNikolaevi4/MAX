@@ -1,0 +1,12 @@
+{
+  "_": "Реестр учёта реакций. min_gap=2 — минимум два поста без реакций между (не чаще 1 раза в 3 поста). Факт публикации проверяется перед авто-блоком и записывается после публикации; для zabava факт дополнительно пишется в front matter reactions: true.",
+  "min_gap": 2,
+  "channels": {
+    "ainow": { "last_reaction_post": null, "history": [] },
+    "na100": { "last_reaction_post": null, "history": [] },
+    "catden": { "last_reaction_post": null, "history": [] },
+    "administrator": { "last_reaction_post": null, "history": [] },
+    "tg_neuro": { "last_reaction_post": null, "history": [] },
+    "zabava": { "last_reaction_post": null, "history": [] }
+  }
+}
