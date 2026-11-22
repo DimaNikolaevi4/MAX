@@ -855,8 +855,8 @@
       "title": "[Новости технологий ИИ, нейросетей и инноваций] Агенты читают экран, а Signal закрывает скриншоты",
       "when": "2026-11-22",
       "time": null,
-      "status": "scheduled",
-      "why": "публикация по Планировщику, канал «Новости технологий ИИ, нейросетей и инноваций»",
+      "status": "done",
+      "why": "",
       "link": "roles/blogger/channels/na100/posts/2026-11-22-pyaterka-tehnologij.md",
       "source": "auto"
     },
