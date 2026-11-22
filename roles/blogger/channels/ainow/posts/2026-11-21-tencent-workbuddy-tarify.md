@@ -1,8 +1,12 @@
 ---
 channel: ainow
-status: approved
+status: published
 format: markdown
 notify: true
+published_at: 2026-11-21T21:30:04+03:00
+message_id: mid.ffffba0066fb9aa301a1ff5f646f4cde
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaH_X2RvTN4
 publish_time: 21:30
 image_file: 2026-11-21-cover.png
 topic: Tencent WorkBuddy — ИИ-агент и тарифы в рублях

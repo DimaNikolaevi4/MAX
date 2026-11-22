@@ -2,7 +2,8 @@
 channel: na100
 status: approved
 format: markdown
-notify: trueimage_file: local/digest/cover-2026-11-22-pyaterka-tehnologij.png
+notify: true
+image_file: local/digest/cover-2026-11-22-pyaterka-tehnologij.png
 ---
 
 **Агенты читают экран, а Signal закрывает скриншоты**

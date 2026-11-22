@@ -1,26 +1,6 @@
 {
   "tasks": [
     {
-      "id": "max-2026-10-22-kakuyu-model-glm-vybrat-polnyy-gid",
-      "title": "[AI] 🧠 Какую модель GLM выбрать? Полный гид по «мозгам» Z.ai",
-      "when": "2026-10-22",
-      "time": null,
-      "status": "done",
-      "why": "",
-      "link": "roles/blogger/channels/ainow/posts/2026-10-22-kakuyu-model-glm-vybrat-polnyy-gid.md",
-      "source": "auto"
-    },
-    {
-      "id": "max-2026-10-22-layfhakizaiskrytye-fishki-interfeysa-i-gotovye-scenarii",
-      "title": "[AI] 🛠 Лайфхаки Z.ai: скрытые фишки интерфейса и готовые сценарии",
-      "when": "2026-10-22",
-      "time": null,
-      "status": "done",
-      "why": "",
-      "link": "roles/blogger/channels/ainow/posts/2026-10-22-layfhakizaiskrytye-fishki-interfeysa-i-gotovye-scenarii.md",
-      "source": "auto"
-    },
-    {
       "id": "max-2026-10-24-zaiobnovilsya-teper-eto-polnocennaya-rabochaya-sreda",
       "title": "[AI] 📁 Z.ai обновился: теперь это полноценная рабочая среда!",
       "when": "2026-10-24",
@@ -741,6 +721,16 @@
       "source": "auto"
     },
     {
+      "id": "max-2026-11-20-autoclaw-i-opencode-uzhestochayut-limity",
+      "title": "[AI] 🤖 AutoClaw и OpenCode ужесточают лимиты. Пора считать токены?",
+      "when": "2026-11-20",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-20-autoclaw-i-opencode-uzhestochayut-limity.md",
+      "source": "auto"
+    },
+    {
       "id": "max-2026-11-20-cifra-nedeli",
       "title": "[Каналы в MAX: рост и автопилот] 📊 Цифра недели: что показали наши каналы",
       "when": "2026-11-20",
@@ -748,6 +738,16 @@
       "status": "done",
       "why": "",
       "link": "roles/blogger/channels/administrator/posts/2026-11-20-cifra-nedeli.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-20-crosspost-na100",
+      "title": "[AI] Anthropic на Nasdaq: рекордное IPO и новая планка для ИИ",
+      "when": "2026-11-20",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-20-crosspost-na100.md",
       "source": "auto"
     },
     {
@@ -792,12 +792,22 @@
     },
     {
       "id": "max-2026-11-21-chto-takoe-promt-6-shablonov",
-      "title": "[AI] Что такое промт: 6 шаблонов на каждый день",
+      "title": "[AI] Что такое промпт: 6 шаблонов на каждый день",
       "when": "2026-11-21",
       "time": null,
-      "status": "scheduled",
-      "why": "публикация по Планировщику, канал «AI»",
+      "status": "done",
+      "why": "",
       "link": "roles/blogger/channels/ainow/posts/2026-11-21-chto-takoe-promt-6-shablonov.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-21-ot-10-minut-do-15-sekund",
+      "title": "[AI] От 10 минут до 15 секунд: как ускорить ИИ-агента",
+      "when": "2026-11-21",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-21-ot-10-minut-do-15-sekund.md",
       "source": "auto"
     },
     {
@@ -808,6 +818,16 @@
       "status": "scheduled",
       "why": "публикация по Планировщику, канал «Забавное»",
       "link": "roles/blogger/channels/zabava/posts/2026-11-21-random-20758878292603.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-21-tencent-workbuddy-tarify",
+      "title": "[AI] 🔥 Tencent WorkBuddy: рабочее место будущего и его цена",
+      "when": "2026-11-21",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-21-tencent-workbuddy-tarify.md",
       "source": "auto"
     },
     {
@@ -825,9 +845,19 @@
       "title": "[AI] Новостная за неделю: Nvidia без Хуанга, чиповые гайки и подорожавшая память",
       "when": "2026-11-22",
       "time": null,
-      "status": "scheduled",
-      "why": "публикация по Планировщику, канал «AI»",
+      "status": "done",
+      "why": "",
       "link": "roles/blogger/channels/ainow/posts/2026-11-22-novostnaya-za-nedelyu.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-22-pyaterka-tehnologij",
+      "title": "[Новости технологий ИИ, нейросетей и инноваций] Агенты читают экран, а Signal закрывает скриншоты",
+      "when": "2026-11-22",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация по Планировщику, канал «Новости технологий ИИ, нейросетей и инноваций»",
+      "link": "roles/blogger/channels/na100/posts/2026-11-22-pyaterka-tehnologij.md",
       "source": "auto"
     },
     {

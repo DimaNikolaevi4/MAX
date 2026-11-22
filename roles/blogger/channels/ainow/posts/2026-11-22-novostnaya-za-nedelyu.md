@@ -1,13 +1,19 @@
 ---
 channel: ainow
-status: approved
+status: published
 format: markdown
 notify: true
-topic: общая новостная за неделю (задание владельца 17.11)
+published_at: 2026-11-22T09:16:41+03:00
+message_id: mid.ffffba0066fb9aa301a201e64d095769
+channel_id: -76964086179165
+url: https://max.ru/channel_ainow/AaIB5k0JV2k
 image_file: 2026-11-22-cover.png
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCQSVuVAze3PKFFtUUKkd8dd8cJXeEKj4SbsVi896sEWpb-6MPCZNo3cuwPvlm3XeY_gIT9A9vth_6xvELPRhv8
+topic: общая новостная за неделю (задание владельца 17.11)
 alice_note: 17.11 — черновик написан по фактам owner-vetted выпусков na100 за 13-17.11; проход через Алису 18.11 сорвался (браузер отвязался), решением владельца выполнен проход через Qwen
 qwen_note: 18.11 — два прохода через chat.qwen.ai (Яндекс Браузер): лит-правка (local/qwen/2026-11-21-ainow-qwen-answer.md) и «шедевр»-версия по запросу владельца (local/qwen/2026-11-21-ainow-qwen-answer-2-masterpiece.md); правки интегрированы выборочно, фантомные ссылки Qwen отброшены; проверки — local/qwen/2026-11-21-ainow-final.check.txt
-approved_note: 18.11 — «шедевр»-версия одобрена владельцем (3751 знаков, три слоя проверки — ноль замечаний), публикация 22.11 07:15
+approved_note: 18.11 — «шедевр»-версия одобрена владельцем (3751 знаков, три слоя проверки — ноль замечаний), публикация 22.11 07:15; 22.11 — опубликован вручную по указанию владельца (планировщик Windows был отключён)
+approved_by_owner: true
 ---
 
 **Новостная за неделю: Nvidia без Хуанга, чиповые гайки и подорожавшая память**
