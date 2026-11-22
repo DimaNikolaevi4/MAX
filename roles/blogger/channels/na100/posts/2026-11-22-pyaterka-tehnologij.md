@@ -1,9 +1,14 @@
 ---
 channel: na100
-status: approved
+status: published
 format: markdown
 notify: true
+published_at: 2026-11-22T09:32:37+03:00
+message_id: mid.ffffba08e9ee9aa301a201f4dddc30cf
+channel_id: -76927529477469
+url: https://max.ru/channel_na100/AaIB9N3cMM8
 image_file: local/digest/cover-2026-11-22-pyaterka-tehnologij.png
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTR-GvHhlgkgoQdHyvn86W0ughulon0YLmI_Wu7MrHL8RescdPW5HckvG88FAFOXSUjR6kdDvRo6jPdbNoWHJs
 ---
 
 **Агенты читают экран, а Signal закрывает скриншоты**
