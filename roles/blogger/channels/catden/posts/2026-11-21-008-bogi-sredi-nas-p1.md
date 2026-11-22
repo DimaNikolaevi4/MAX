@@ -1,6 +1,6 @@
 ---
 channel: catden
-status: approved
+status: published
 approved_at: "2026-11-20"
 format: markdown
 notify: true
@@ -9,6 +9,11 @@ media_note: "20.11.2026 владелец заменил изображение: 
 source: nev/Боги среди нас.docx
 series: 008
 part: 1/1
+published_at: 2026-11-21T20:00:03+03:00
+message_id: mid.ffffb62cfe529aa301a1ff0cfd7263e6
+channel_id: -81170615067997
+url: https://max.ru/channel_catden/AaH_DP1yY-Y
+media_count: 1
 ---
 
 **Боги среди нас: абиссинская кошка**

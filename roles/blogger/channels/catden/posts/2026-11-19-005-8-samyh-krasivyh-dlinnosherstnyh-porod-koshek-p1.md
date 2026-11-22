@@ -1,12 +1,17 @@
 ---
 channel: catden
-status: approved
+status: published
 format: markdown
 notify: true
 image_file: nev/posting/images/005-8-samyh-krasivyh-dlinnosherstnyh-porod-koshek-p1.png
 source: nev/8 самых красивых длинношерстных пород кошек.docx
 series: 005
 part: 1/1
+published_at: 2026-11-19T20:00:02+03:00
+message_id: mid.ffffb62cfe529aa301a1f4c0401a6653
+channel_id: -81170615067997
+url: https://max.ru/channel_catden/AaH0wEAaZlM
+media_count: 1
 ---
 
 **8 самых красивых длинношерстных пород кошек**
