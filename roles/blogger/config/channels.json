@@ -9,7 +9,25 @@
       "title": "AI",
       "description": "Обзоры лучших нейросетей для работы, бизнеса и творчества. AI-инструменты, готовые промпты, реальные кейсы. https://max.ru/channel_ainow",
       "cta_label": "AI",
-      "cta_url": "https://max.ru/channel_ainow"
+      "cta_url": "https://max.ru/channel_ainow",
+      "format_profile": "core",
+      "cta_target_mode": "self",
+      "max_images": 12,
+      "interlink": {
+        "min": 1,
+        "max": 2
+      },
+      "daily_cap": 0,
+      "headline_max": 60,
+      "bold_budget": 6,
+      "length_hard": 4000,
+      "length_soft": 3600,
+      "media_aspect_min": 1.5,
+      "reactions_min_gap": 2,
+      "publish_window": "12:00,21:30",
+      "buffer_days": 0,
+      "buffer_check_weekday": null,
+      "status": "active"
     },
     {
       "slug": "na100",
@@ -18,7 +36,25 @@
       "title": "Новости технологий ИИ, нейросетей и инноваций",
       "description": "Главное из мира техники за сутки: Россия, Китай, мир. Каждое утро. https://max.ru/channel_na100 (12.11.2026 канал переименован из «Новости мира техники», ссылка прежняя)",
       "cta_label": "Новости технологий ИИ, нейросетей и инноваций",
-      "cta_url": "https://max.ru/channel_na100"
+      "cta_url": "https://max.ru/channel_na100",
+      "format_profile": "core",
+      "cta_target_mode": "alternate",
+      "max_images": 12,
+      "interlink": {
+        "min": 0,
+        "max": 0
+      },
+      "daily_cap": 0,
+      "headline_max": 60,
+      "bold_budget": 6,
+      "length_hard": 4000,
+      "length_soft": 3600,
+      "media_aspect_min": 1.5,
+      "reactions_min_gap": 2,
+      "publish_window": "07:30",
+      "buffer_days": 0,
+      "buffer_check_weekday": null,
+      "status": "active"
     },
     {
       "slug": "administrator",
@@ -28,12 +64,29 @@
       "description": "Как вести канал в MAX: форматы, метрики, автоматизация публикаций. Показываем на своих четырёх каналах, что работает, а что нет. Услуги администрирования и автопостинга — по запросу. https://max.ru/channel_administrator (перезапуск 20.11.2026, прежнее название «Администрирование каналов»; ник не менялся)",
       "cta_label": "AI",
       "cta_url": "https://max.ru/channel_ainow",
-      "status": "relaunch",
+      "status": "active",
       "rubrics": [
         "cifra-nedeli",
         "chto-pochinili",
         "priem"
-      ]
+      ],
+      "format_profile": "core",
+      "cta_target_mode": "alternate",
+      "max_images": 12,
+      "interlink": {
+        "min": 0,
+        "max": 1
+      },
+      "daily_cap": 0,
+      "headline_max": 60,
+      "bold_budget": 6,
+      "length_hard": 4000,
+      "length_soft": 3600,
+      "media_aspect_min": 1.5,
+      "reactions_min_gap": 2,
+      "publish_window": "09:00 Tue/Thu",
+      "buffer_days": 0,
+      "buffer_check_weekday": null
     },
     {
       "slug": "tg_neuro",
@@ -42,7 +95,25 @@
       "title": "Нейро Мульт Студия",
       "description": "Telegram-канал https://t.me/Neuro_Animation_Studio (chat_id -1002087111322), закрывается: аудитория переливается в ainow (MAX). Публикация — через релей на хостинге 0s3.ru (deploy/tg-relay.php), т.к. api.telegram.org из локальной среды недоступен.",
       "cta_label": "AI в MAX",
-      "cta_url": "https://max.ru/channel_ainow"
+      "cta_url": "https://max.ru/channel_ainow",
+      "format_profile": "telegram",
+      "cta_target_mode": "self",
+      "max_images": 6,
+      "interlink": {
+        "min": 1,
+        "max": 1
+      },
+      "daily_cap": 0,
+      "headline_max": 60,
+      "bold_budget": 6,
+      "length_hard": 4000,
+      "length_soft": 3600,
+      "media_aspect_min": 1.5,
+      "reactions_min_gap": 2,
+      "publish_window": "manual",
+      "buffer_days": 0,
+      "buffer_check_weekday": null,
+      "status": "active"
     },
     {
       "slug": "catden",
@@ -51,7 +122,25 @@
       "title": "Коты, кошки и котята",
       "description": "Породы кошек, истории о котах и котятах, уход и здоровье. Как назвать котёнка, чем кормить, все породы — с фото. https://max.ru/channel_catden",
       "cta_label": "Коты, кошки и котята",
-      "cta_url": "https://max.ru/channel_catden"
+      "cta_url": "https://max.ru/channel_catden",
+      "format_profile": "core",
+      "cta_target_mode": "self",
+      "max_images": 9,
+      "interlink": {
+        "min": 1,
+        "max": 1
+      },
+      "daily_cap": 0,
+      "headline_max": 60,
+      "bold_budget": 6,
+      "length_hard": 4000,
+      "length_soft": 3600,
+      "media_aspect_min": 1.5,
+      "reactions_min_gap": 2,
+      "publish_window": "20:00",
+      "buffer_days": 0,
+      "buffer_check_weekday": null,
+      "status": "active"
     },
     {
       "slug": "zabava",
@@ -60,7 +149,25 @@
       "title": "Забавное",
       "description": "Юмор и забавные моменты из жизни домашних питомцев и диких животных. Короткие видео для хорошего настроения. https://max.ru/channel_zabava",
       "cta_label": "Забавное",
-      "cta_url": "https://max.ru/channel_zabava"
+      "cta_url": "https://max.ru/channel_zabava",
+      "format_profile": "zabava",
+      "cta_target_mode": "self",
+      "max_images": 6,
+      "interlink": {
+        "min": 0,
+        "max": 0
+      },
+      "daily_cap": 1,
+      "headline_max": 60,
+      "bold_budget": 6,
+      "length_hard": 4000,
+      "length_soft": 3600,
+      "media_aspect_min": null,
+      "reactions_min_gap": 2,
+      "publish_window": "19:30",
+      "buffer_days": 10,
+      "buffer_check_weekday": "wed",
+      "status": "active"
     },
     {
       "slug": "ozon_group",
@@ -69,7 +176,24 @@
       "title": "Ozon Находки",
       "status": "deleted",
       "delete_on": "2026-11-12",
-      "description": "Удалено: канал https://max.ru/channel_ozon_group закрыт и удалён владельцем 12.11.2026 (график освобождения слота). Публикация не ведётся, токен не нужен. Слот отдан каналу catden («Коты, кошки и котята»)."
+      "description": "Удалено: канал https://max.ru/channel_ozon_group закрыт и удалён владельцем 12.11.2026 (график освобождения слота). Публикация не ведётся, токен не нужен. Слот отдан каналу catden («Коты, кошки и котята»).",
+      "format_profile": "core",
+      "cta_target_mode": "self",
+      "max_images": 12,
+      "interlink": {
+        "min": 0,
+        "max": 0
+      },
+      "daily_cap": 0,
+      "headline_max": 60,
+      "bold_budget": 6,
+      "length_hard": 4000,
+      "length_soft": 3600,
+      "media_aspect_min": 1.5,
+      "reactions_min_gap": 2,
+      "publish_window": "none",
+      "buffer_days": 0,
+      "buffer_check_weekday": null
     }
   ]
 }
