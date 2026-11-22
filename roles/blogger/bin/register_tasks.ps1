@@ -5,7 +5,13 @@
 #   Get-ScheduledTask -TaskName 'MAX*' | Unregister-ScheduledTask -Confirm:$false
 # Идемпотентно: повторный запуск перезаписывает задачи с теми же именами.
 # Запуск: powershell -NoProfile -ExecutionPolicy Bypass -File roles\blogger\bin\register_tasks.ps1
-# Перерегистрировать только часть задач: ... register_tasks.ps1 -Only 'MAX stats snapshot','MAX ainow - publish approved'
+# Перерегистрировать только часть задач: ... register_tasks.ps1 -Only 'MAX stats snapshot','MAX na100 - publish approved'
+#
+# АКТИВНЫ только три локальные задачи: na100 build 06:30, blogger calendar 07:20,
+# na100 publish 07:30. Задачи ainow 07:15, stats 07:00, zabava 19:30 и catden
+# регистрируются ЯВНО ОТКЛЮЧЁННЫМИ: публикация на хостинге (post_cron.php),
+# статистика — stats_cron.php (07:45). Включение ainow 07:15 даст дубль с
+# хостингом — этого нельзя допускать (комментарий «публикация на хостинге»).
 #
 # Почему не schtasks: /tr чувствителен к кавычкам и кириллице в путях,
 # а StartWhenAvailable через schtasks не выставить (см. cover-method.md, «Ловушки»).
@@ -24,14 +30,15 @@ $user = "$env:USERDOMAIN\$env:USERNAME"
 $wscript = Join-Path $env:SystemRoot 'System32\wscript.exe'
 $hidden = Join-Path $bin 'hidden_run.vbs'
 
-# имя задачи, время, скрипт-обёртка
+# имя задачи, время, скрипт-обёртка, Disabled (true = публикация на хостинге)
 $tasks = @(
-    @{ Name = 'MAX na100 - build digest';      At = '06:30'; File = 'digest_build_na100.ps1' },
-    @{ Name = 'MAX stats snapshot';            At = '07:00'; File = 'stats_snapshot.ps1' },
-    @{ Name = 'MAX ainow - publish approved';  At = '07:15'; File = 'publish_scheduled.ps1' },
-    @{ Name = 'MAX zabava - publish plan';     At = '19:30'; File = 'zabava_publish.ps1' },
-    @{ Name = 'MAX blogger calendar';          At = '07:20'; File = 'calendar_update.ps1' },
-    @{ Name = 'MAX na100 - publish approved';  At = '07:30'; File = 'publish_scheduled_na100.ps1' }
+    @{ Name = 'MAX na100 - build digest';      At = '06:30'; File = 'digest_build_na100.ps1';     Disabled = $false },
+    @{ Name = 'MAX stats snapshot';            At = '07:00'; File = 'stats_snapshot.ps1';         Disabled = $true },  # публикация на хостинге; статистика — stats_cron.php (07:45)
+    @{ Name = 'MAX ainow - publish approved';  At = '07:15'; File = 'publish_scheduled.ps1';      Disabled = $true },  # публикация на хостинге (post_cron.php 12:00/21:30); включение даст дубль
+    @{ Name = 'MAX zabava - publish plan';     At = '19:30'; File = 'zabava_publish.ps1';         Disabled = $true },  # публикация на хостинге (post_cron.php 19:30)
+    # MAX catden - publish approved: локальная задача не регистрируется — публикация на хостинге (post_cron.php 07:32/20:00)
+    @{ Name = 'MAX blogger calendar';          At = '07:20'; File = 'calendar_update.ps1';        Disabled = $false },
+    @{ Name = 'MAX na100 - publish approved';  At = '07:30'; File = 'publish_scheduled_na100.ps1'; Disabled = $false }
 )
 
 $settings = New-ScheduledTaskSettingsSet `
@@ -55,13 +62,23 @@ foreach ($t in $tasks) {
     $trigger = New-ScheduledTaskTrigger -Daily -At $t.At
     # ровные секунды: -At берёт текущие секунды, из-за чего старт смещается
     $trigger.StartBoundary = '{0}T{1}:00' -f (Get-Date -Format 'yyyy-MM-dd'), $t.At
-    Register-ScheduledTask -TaskName $t.Name -Action $action -Trigger $trigger `
-        -Settings $settings -Principal $principal -Description 'Публикации каналов MAX (см. docs/scheduled-tasks.md)' `
-        -Force | Out-Null
-    $registered++
+    # -Disabled обязателен: -Force перезаписывает задачу и снимал бы флаг отключения
+    # у ainow 07:15 — запуск воскресил бы локальную публикацию и дал дубль с хостингом.
+    $reg = @{
+        TaskName    = $t.Name
+        Action      = $action
+        Trigger     = $trigger
+        Settings    = $settings
+        Principal   = $principal
+        Description = 'Публикации каналов MAX (см. docs/scheduled-tasks.md)'
+        Force       = $true
+    }
+    if ($t.Disabled) { $reg['Disabled'] = $true }
+    Register-ScheduledTask @reg | Out-Null
+    if (-not $t.Disabled) { $registered++ }
 
     $info = Get-ScheduledTask -TaskName $t.Name | Get-ScheduledTaskInfo
     '{0,-28} {1}  state={2}  next={3}' -f $t.Name, $t.At, (Get-ScheduledTask -TaskName $t.Name).State, $info.NextRunTime
 }
 
-'готово: задач зарегистрировано {0}' -f $registered
+'готово: активных локальных задач {0} (остальные отключены: публикация на хостинге)' -f $registered

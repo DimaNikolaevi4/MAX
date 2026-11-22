@@ -4,7 +4,7 @@
 
 ## 1. Контекст и текущее состояние
 
-- Канал: `catden` («Коты, кошки и котята», MAX, https://max.ru/channel_catden). Конфиг: `roles/blogger/config/channels.json`, стиль: `roles/blogger/channels/catden/style.md`.
+- Канал: `catden` («Коты, кошки и котята», MAX, https://max.ru/channel_catden). Конфиг: `roles/blogger/config/channels.json`. Формат текста — `AGENTS.md` §0, дельты — `roles/blogger/channels/catden/style.md` (в плейбуке каркас не дублируется).
 - План V1: [docs/catden-plan-to-2027-01-15.md](catden-plan-to-2027-01-15.md), медиаманифест: [docs/catden-media-manifest-2026-11-19-2027-01-18.md](catden-media-manifest-2026-11-19-2027-01-18.md). Горизонт 19.11.2026–18.01.2027, 54 публикации (51 `approved` + 3 `draft` на 31.12/01.01/07.01).
 - Время публикации: **20:00 МСК** (единый слот, настроен на хостинге; cron/`post_cron.php`).
 - Ритм/сетки/праздники В1 — по плану. Имя файла = дата публикации. Публикуются посты `status: approved` с датой ≤ сегодня (`publish_scheduled.py` / `post_cron.php`).

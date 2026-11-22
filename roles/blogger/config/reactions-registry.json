@@ -1,6 +1,7 @@
 {
   "_": "Реестр учёта реакций. min_gap=2 — минимум два поста без реакций между (не чаще 1 раза в 3 поста). Факт публикации проверяется перед авто-блоком и записывается после публикации; для zabava факт дополнительно пишется в front matter reactions: true.",
   "min_gap": 2,
+  "_schema": "ЕДИНАЯ СХЕМА (этот файл — единственный источник для проверки интервала реакций; код читает reactions): reactions = {slug: {имя_файла_поста: true|false}}, где true = в посте был призыв/реакции, false = реакций не было. Допустима запись с датой: {slug: {имя_файла: {\"date\": \"YYYY-MM-DD\", \"reactions\": true}}}. Ключ — имя файла поста из roles/blogger/channels/<slug>/posts/. Интервал считается по последовательности постов канала в реестре: между двумя true должно быть не меньше min_gap записей false. Поля channels (last_reaction_post/history) и min_gap сохранены для обратной совместимости; новая запись идёт в reactions.",
   "channels": {
     "ainow": { "last_reaction_post": null, "history": [] },
     "na100": { "last_reaction_post": null, "history": [] },
@@ -8,5 +9,13 @@
     "administrator": { "last_reaction_post": null, "history": [] },
     "tg_neuro": { "last_reaction_post": null, "history": [] },
     "zabava": { "last_reaction_post": null, "history": [] }
+  },
+  "reactions": {
+    "ainow": {},
+    "na100": {},
+    "catden": {},
+    "administrator": {},
+    "tg_neuro": {},
+    "zabava": {}
   }
 }

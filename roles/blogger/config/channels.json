@@ -1,6 +1,8 @@
 {
   "_": "Реестр каналов проекта. slug должен совпадать с именем папки в roles/blogger/channels/ и записью в local/tokens.json. Токены здесь НЕ хранятся! platform — max или telegram (способ публикации). cta_label/cta_url — куда ведёт призыв в постах ЭТОГО канала (у закрывающихся каналов это основной канал ainow).",
   "_media": "header_media_aspect — формат одиночного изображения поста (текстовые посты p1/p2): 16:9 или шире (нижняя граница — не уже 3:2, соотношение ≥ 1,50); уже 16:9 (квадрат, портрет, 4:3) нельзя — текст встаёт в узкую колонку. Проверка roles/blogger/tools/media_aspect.py, во всех каналах, кроме zabava («Забавное», там free). Посты-альбомы с несколькими изображениями (img1, i1…iN) под правило не попадают. Правило — AGENTS.md, раздел 5д (введено 20.11.2026, уточнено в тот же день).",
+  "_publish_window": "ОКНО ДОГОНА запуска локальной задачи: [start_hour,end_hour] (например [7,10]) или null. НЕ времена слотов публикации! Конкретные времена слотов — в docs/scheduled-tasks.md (единая таблица); schedule.json появится позже.",
+  "_body_budget": "body_max / body_lines_max — бюджет только тела поста (zabava); CTA и блок реакций в бюджет не входят.",
   "channels": [
     {
       "slug": "ainow",
@@ -24,7 +26,7 @@
       "length_soft": 3600,
       "media_aspect_min": 1.5,
       "reactions_min_gap": 2,
-      "publish_window": "12:00,21:30",
+      "publish_window": null,
       "buffer_days": 0,
       "buffer_check_weekday": null,
       "status": "active"
@@ -51,7 +53,7 @@
       "length_soft": 3600,
       "media_aspect_min": 1.5,
       "reactions_min_gap": 2,
-      "publish_window": "07:30",
+      "publish_window": [7, 10],
       "buffer_days": 0,
       "buffer_check_weekday": null,
       "status": "active"
@@ -84,7 +86,7 @@
       "length_soft": 3600,
       "media_aspect_min": 1.5,
       "reactions_min_gap": 2,
-      "publish_window": "09:00 Tue/Thu",
+      "publish_window": null,
       "buffer_days": 0,
       "buffer_check_weekday": null
     },
@@ -101,16 +103,16 @@
       "max_images": 6,
       "interlink": {
         "min": 1,
-        "max": 1
+        "max": 2
       },
       "daily_cap": 0,
       "headline_max": 60,
       "bold_budget": 6,
-      "length_hard": 4000,
-      "length_soft": 3600,
+      "length_hard": 1000,
+      "length_soft": 900,
       "media_aspect_min": 1.5,
       "reactions_min_gap": 2,
-      "publish_window": "manual",
+      "publish_window": null,
       "buffer_days": 0,
       "buffer_check_weekday": null,
       "status": "active"
@@ -137,7 +139,7 @@
       "length_soft": 3600,
       "media_aspect_min": 1.5,
       "reactions_min_gap": 2,
-      "publish_window": "20:00",
+      "publish_window": null,
       "buffer_days": 0,
       "buffer_check_weekday": null,
       "status": "active"
@@ -162,9 +164,11 @@
       "bold_budget": 6,
       "length_hard": 4000,
       "length_soft": 3600,
+      "body_max": 200,
+      "body_lines_max": 2,
       "media_aspect_min": null,
       "reactions_min_gap": 2,
-      "publish_window": "19:30",
+      "publish_window": null,
       "buffer_days": 10,
       "buffer_check_weekday": "wed",
       "status": "active"
@@ -176,24 +180,7 @@
       "title": "Ozon Находки",
       "status": "deleted",
       "delete_on": "2026-11-12",
-      "description": "Удалено: канал https://max.ru/channel_ozon_group закрыт и удалён владельцем 12.11.2026 (график освобождения слота). Публикация не ведётся, токен не нужен. Слот отдан каналу catden («Коты, кошки и котята»).",
-      "format_profile": "core",
-      "cta_target_mode": "self",
-      "max_images": 12,
-      "interlink": {
-        "min": 0,
-        "max": 0
-      },
-      "daily_cap": 0,
-      "headline_max": 60,
-      "bold_budget": 6,
-      "length_hard": 4000,
-      "length_soft": 3600,
-      "media_aspect_min": 1.5,
-      "reactions_min_gap": 2,
-      "publish_window": "none",
-      "buffer_days": 0,
-      "buffer_check_weekday": null
+      "description": "Удалено: канал https://max.ru/channel_ozon_group закрыт и удалён владельцем 12.11.2026 (график освобождения слота). Публикация не ведётся, токен не нужен. Слот отдан каналу catden («Коты, кошки и котята»)."
     }
   ]
 }

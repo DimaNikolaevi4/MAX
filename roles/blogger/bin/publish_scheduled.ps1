@@ -1,5 +1,7 @@
-﻿# Планировщик Windows: публикация approved-постов ainow (07:15 МСК).
-# Логи — local/logs/.
+﻿# Обёртка НЕ активна: задача 'MAX ainow - publish approved' (07:15) отключена —
+# публикация на хостинге (post_cron.php: ainow 12:00 Format 1 / 21:30 план).
+# Включение локальной задачи даст дубль с хостингом. Скрипт сохранён только как
+# резерв по прямой команде владельца. Логи — local/logs/.
 $ErrorActionPreference = 'Stop'
 Set-Location -LiteralPath 'E:\github\MAX'
 $OutputEncoding = [Console]::OutputEncoding = New-Object System.Text.UTF8Encoding $false
