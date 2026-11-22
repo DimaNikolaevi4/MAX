@@ -219,7 +219,7 @@ py roles\blogger\tools\digest_cover_video.py --theme light --src <фон.mp4> `
 2. Копия поста с текстом выпуска (`status: draft`, `image_file:` или
    `video_file:`) кладётся в `roles/blogger/channels/na100/posts/`
    с именем вида `2026-11-11-test-zastavka-N-<имя>.md` — draft не
-   подхватывает планировщик.
+   публикуется хостинг-кроном; локальные задачи Windows не используются.
 3. Публикация: `py roles\blogger\tools\publish_post.py --channel na100 <файл>`
    (env: `MAX_HTTP=python`, `MAX_CA_CERT=local/russian_ca_bundle.pem`).
 4. Ссылки на все варианты собираются в ответе пользователю; закреплять
@@ -245,8 +245,7 @@ py roles\blogger\tools\digest_cover_video.py --theme light --src <фон.mp4> `
   передавать в одинарных кавычках или из файла-скрипта.
 - **Кириллица в консоли**: PowerShell ломает inline-python с кириллицей —
   сложные скрипты писать в файл и запускать `py file.py`.
-- **Планировщик**: `schtasks` из PowerShell чувствителен к кавычкам в
-  `/tr` — команду обернуть в `cmd /c '...'`.
+- **Публикация**: только через хостинг-крон; локальные задачи Windows не используются.
 - **Мусорные символы при записи md/json**: после записи проверять файл
   на `[\u4e00-\u9fff]` и нестандартные слова.
 

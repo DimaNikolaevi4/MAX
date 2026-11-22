@@ -1,7 +1,7 @@
 # Календарь блогера
 
-> Файл собирается автоматически: Планировщик Windows, задача «MAX blogger calendar», ежедневно в 07:20 МСК.
-> Ручные правки бессмысленны — при следующем запуске файл перезаписывается. Источники: front matter постов `roles/blogger/channels/*/posts/`, план «Забавного» `local/zabava-plan.json`, реестр `roles/blogger/config/channels.json`.
+> Файл собирает агент по просьбе владельца: `py roles/blogger/tools/build_calendar.py --push`.
+> Локальных задач и таймеров нет. Источники: front matter постов `roles/blogger/channels/*/posts/`, план «Забавного» `local/zabava-plan.json`, реестр `roles/blogger/config/channels.json`.
 
 Обновлено: **20.11.2026 07:20 МСК** · горизонт: последние 30 дней и всё запланированное
 

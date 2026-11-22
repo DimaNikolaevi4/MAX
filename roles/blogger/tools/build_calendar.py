@@ -12,8 +12,7 @@
   * реестр каналов `roles/blogger/config/channels.json` (каналы под удаление).
 
 Результат — `docs/blogger-calendar.md`. С `--push` скрипт коммитит и пушит
-календарь, как остальные задачи Планировщика Windows (задача «MAX blogger
-calendar», ежедневно 07:20 МСК).
+календарь; файл обновляется агентом по просьбе владельца.
 
 Дата поста: `published_at`, иначе префикс YYYY-MM-DD в имени файла.
 """
@@ -194,8 +193,7 @@ def render(posts: list[dict], channels: list[dict], plan: list[dict], days: int)
     out: list[str] = []
     out.append("# Календарь блогера")
     out.append("")
-    out.append("> Файл собирается автоматически: Планировщик Windows, задача "
-               "«MAX blogger calendar», ежедневно в 07:20 МСК.")
+    out.append("> Файл обновляется агентом по просьбе владельца.")
     out.append("> Ручные правки бессмысленны — при следующем запуске файл перезаписывается. "
                "Источники: front matter постов `roles/blogger/channels/*/posts/`, план "
                "«Забавного» `local/zabava-plan.json`, реестр `roles/blogger/config/channels.json`.")

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Детерминированная сборка выпуска na100 — задача Планировщика 06:30 МСК.
+"""Детерминированная сборка выпуска na100. Публикация только через
+хостинг-крон; локальные задачи Windows не используются.
 
 Разделение труда (решение 10.11.2026, docs/archive/na100-relaunch-2026-11-10.md §6.2):
   * скрипт — сбор RSS, фильтр, скоринг, дедупликация, черновик-шортлист,
@@ -31,8 +32,7 @@
      дописывается, коммит и пуш.
   7. Проверка готовности: publish_scheduled.py --channel na100 --dry-run.
 
-Отчёт — local/digest-build.txt; лог — local/logs/digest-build-na100.console.log
-(пишет обёртка digest_build_na100.ps1).
+Отчёт — local/digest-build.txt; лог — local/logs/digest-build-na100.console.log.
 
 Ручной запуск:
   py roles\\blogger\\tools\\digest_build.py --channel na100

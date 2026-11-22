@@ -98,7 +98,7 @@ def main() -> None:
             added_files.add(link)
             if status == "approved":
                 add(tid, title, post_date(fm, md) or None, "scheduled",
-                    f"публикация по Планировщику, канал «{channel}»", link)
+                    f"публикация только через хостинг-крон; локальные задачи Windows не используются, канал «{channel}»", link)
             elif status == "draft":
                 add(tid, title, None, "backlog", "черновик, ждёт «ок» владельца",
                     link)
