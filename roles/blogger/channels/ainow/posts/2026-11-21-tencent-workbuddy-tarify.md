@@ -8,9 +8,14 @@ message_id: mid.ffffba0066fb9aa301a1ff5f646f4cde
 channel_id: -76964086179165
 url: https://max.ru/channel_ainow/AaH_X2RvTN4
 publish_time: 21:30
-image_file: 2026-11-21-cover.png
+image_file: E:\github\MAX\local\replace-image-from-url.webp
 topic: Tencent WorkBuddy — ИИ-агент и тарифы в рублях
+image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCTbulY_Ar--aQYhm1g1KwJaPtg4xEZd2NU26qlCmm6QTbHeC-IC0TeK_g4zfVbt2MTF_tti2HarSj1DNcRLk0s
+edited_at: 2026-11-22T10:19:00+03:00
+edit_note: замена изображения по команде владельца 22.11.2026
 ---
+
+
 
 🔥 **Tencent WorkBuddy: рабочее место будущего и его цена**
 
