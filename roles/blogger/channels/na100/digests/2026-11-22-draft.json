@@ -1,0 +1,966 @@
+{
+ "date": "2026-11-22",
+ "generated_at": "2026-11-22T09:17:59.362880+03:00",
+ "formula": "свежесть*0.3 + влияние*0.4 + новизна*0.2 + авторитет*0.1 (0-10, порог 5.0); шаг 4 — обложка/текст у агента",
+ "notes": [
+  "в китайском сегменте тихо — 1 РФ + 4 мира"
+ ],
+ "proposed": [
+  {
+   "title": "Релиз Microsoft Edge 158",
+   "link": "https://habr.com/ru/articles/1110710/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110710",
+   "dt": "2026-11-22T07:52:03+03:00",
+   "region": "ru",
+   "feeds": [
+    "Habr news"
+   ],
+   "hours": 1.4,
+   "fresh": 10,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 7,
+   "total": 7.3,
+   "signals": [
+    "игрок/государство",
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://habr.com/ru/articles/1110710/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110710"
+   ]
+  },
+  {
+   "title": "Act fast to score Intel's Core i7-14700K for its lowest price ever at $249.99",
+   "link": "https://www.tomshardware.com/pc-components/cpus/act-fast-to-score-intels-core-i7-14700k-for-its-lowest-price-ever-at-usd249-99-raptor-lake-refresh-cpu-is-a-bargain-that-supports-ddr5-and-ddr4-motherboards",
+   "dt": "2026-11-21T23:00:22+03:00",
+   "region": "world",
+   "feeds": [
+    "Tom's Hardware"
+   ],
+   "hours": 10.3,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.8,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://www.tomshardware.com/pc-components/cpus/act-fast-to-score-intels-core-i7-14700k-for-its-lowest-price-ever-at-usd249-99-raptor-lake-refresh-cpu-is-a-bargain-that-supports-ddr5-and-ddr4-motherboards"
+   ]
+  },
+  {
+   "title": "All the best Black Friday deals at Amazon UK — our 25 top offers this weekend",
+   "link": "https://www.techradar.com/live/news/amazon-uk-black-friday-deals-2026-november-21",
+   "dt": "2026-11-22T06:36:38+03:00",
+   "region": "world",
+   "feeds": [
+    "TechRadar"
+   ],
+   "hours": 2.7,
+   "fresh": 10,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 6,
+   "total": 6.4,
+   "signals": [
+    "игрок/государство"
+   ],
+   "sources": [
+    "https://www.techradar.com/live/news/amazon-uk-black-friday-deals-2026-november-21"
+   ]
+  },
+  {
+   "title": "SanDisk 512GB MicroSD Express deal slashes Switch 2 storage by 24% in Amazon Black Friday offer  — price hits under $100 amid storage squeeze",
+   "link": "https://www.tomshardware.com/pc-components/microsd-cards/sandisk-512gb-microsd-express-deal-slashes-switch-2-storage-by-24-percent-in-amazon-black-friday-offer-price-hits-under-usd100-amid-storage-squeeze",
+   "dt": "2026-11-21T13:32:35+03:00",
+   "region": "world",
+   "feeds": [
+    "Tom's Hardware"
+   ],
+   "hours": 19.8,
+   "fresh": 6,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.2,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://www.tomshardware.com/pc-components/microsd-cards/sandisk-512gb-microsd-express-deal-slashes-switch-2-storage-by-24-percent-in-amazon-black-friday-offer-price-hits-under-usd100-amid-storage-squeeze"
+   ]
+  },
+  {
+   "title": "Razer's MMO mouse hits all-time low price at under $60 at Amazon in Black Friday deal — Naga V2 Hyperspeed price craters by 42% in stellar gaming mouse offer",
+   "link": "https://www.tomshardware.com/peripherals/gaming-mice/razers-mmo-mouse-hits-all-time-low-price-at-under-usd60-at-amazon-in-black-friday-deal-naga-v2-hyperspeed-price-craters-by-42-percent-in-stellar-gaming-mouse-offer",
+   "dt": "2026-11-21T12:04:58+03:00",
+   "region": "world",
+   "feeds": [
+    "Tom's Hardware"
+   ],
+   "hours": 21.2,
+   "fresh": 6,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.2,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://www.tomshardware.com/peripherals/gaming-mice/razers-mmo-mouse-hits-all-time-low-price-at-under-usd60-at-amazon-in-black-friday-deal-naga-v2-hyperspeed-price-craters-by-42-percent-in-stellar-gaming-mouse-offer"
+   ]
+  }
+ ],
+ "candidates": {
+  "ru": [
+   {
+    "title": "Релиз Microsoft Edge 158",
+    "link": "https://habr.com/ru/articles/1110710/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110710",
+    "dt": "2026-11-22T07:52:03+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 1.4,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 7,
+    "total": 7.3,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1110710/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110710"
+    ]
+   },
+   {
+    "title": "Месяц разработки Geo Collector: офлайн-карты России и Армении, 94 настройки карты и первая версия для Android",
+    "link": "https://habr.com/ru/articles/1110786/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110786",
+    "dt": "2026-11-22T05:22:12+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 3.9,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 7,
+    "total": 7.3,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1110786/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110786"
+    ]
+   },
+   {
+    "title": "Как Nvidia и Toshiba кинули всех: разыскивается O2 Xda Flame для хардкорного моддерского проекта",
+    "link": "https://habr.com/ru/articles/1110788/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110788",
+    "dt": "2026-11-22T05:23:48+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 3.9,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 6.5,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1110788/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110788"
+    ]
+   },
+   {
+    "title": "ИИ‑агенты, работающие в России",
+    "link": "https://habr.com/ru/articles/1110764/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110764",
+    "dt": "2026-11-21T22:50:15+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 10.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1110764/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110764"
+    ]
+   },
+   {
+    "title": "Вышел AnyDesk 9.8.4 для Windows, AnyDesk 9.1.0 для Android и AnyDesk 8.1.1 для Linux и Raspberry Pi",
+    "link": "https://habr.com/ru/articles/1110524/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110524",
+    "dt": "2026-11-22T07:24:22+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 1.9,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1110524/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110524"
+    ]
+   },
+   {
+    "title": "Еще один пример пресс-релиза про созданные ИИ процессоры, со старыми приемчиками пиара",
+    "link": "https://habr.com/ru/articles/1110736/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110736",
+    "dt": "2026-11-21T19:44:16+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 13.6,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1110736/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110736"
+    ]
+   },
+   {
+    "title": "Представлен веб‑проект Twoyi — полноценный Android 13 в браузере без установки и эмуляторов",
+    "link": "https://habr.com/ru/articles/1110724/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110724",
+    "dt": "2026-11-21T18:20:25+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 15.0,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1110724/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110724"
+    ]
+   },
+   {
+    "title": "Проект Libreboot отменил полный запрет на код, созданный при помощи AI",
+    "link": "https://www.opennet.ru/opennews/art.shtml?num=66737",
+    "dt": "2026-11-21T20:15:49+03:00",
+    "region": "ru",
+    "feeds": [
+     "Opennet"
+    ],
+    "hours": 13.0,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.opennet.ru/opennews/art.shtml?num=66737"
+    ]
+   },
+   {
+    "title": "Amazon опубликовал AWS Emulator, эмулятор сервисов AWS",
+    "link": "https://www.opennet.ru/opennews/art.shtml?num=66733",
+    "dt": "2026-11-21T10:44:18+03:00",
+    "region": "ru",
+    "feeds": [
+     "Opennet"
+    ],
+    "hours": 22.6,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.opennet.ru/opennews/art.shtml?num=66733"
+    ]
+   },
+   {
+    "title": "Как научить AI-агента проверять Windows-приложение через настоящий GUI: архитектура Deskcheck",
+    "link": "https://habr.com/ru/articles/1110776/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110776",
+    "dt": "2026-11-22T02:57:50+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 6.3,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1110776/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110776"
+    ]
+   },
+   {
+    "title": "Восход солнца вручную: создание минисервера с собственным вариантом Линукса",
+    "link": "https://habr.com/ru/articles/1110782/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110782",
+    "dt": "2026-11-22T02:42:12+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 6.6,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1110782/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110782"
+    ]
+   },
+   {
+    "title": "Как дать ИИ доступ к серверным логам по SSH и не давать доступ к SSH ключу",
+    "link": "https://habr.com/ru/articles/1110756/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110756",
+    "dt": "2026-11-21T21:50:56+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 11.5,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1110756/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110756"
+    ]
+   }
+  ],
+  "cn": [],
+  "world": [
+   {
+    "title": "Act fast to score Intel's Core i7-14700K for its lowest price ever at $249.99",
+    "link": "https://www.tomshardware.com/pc-components/cpus/act-fast-to-score-intels-core-i7-14700k-for-its-lowest-price-ever-at-usd249-99-raptor-lake-refresh-cpu-is-a-bargain-that-supports-ddr5-and-ddr4-motherboards",
+    "dt": "2026-11-21T23:00:22+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 10.3,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.8,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/cpus/act-fast-to-score-intels-core-i7-14700k-for-its-lowest-price-ever-at-usd249-99-raptor-lake-refresh-cpu-is-a-bargain-that-supports-ddr5-and-ddr4-motherboards"
+    ]
+   },
+   {
+    "title": "All the best Black Friday deals at Amazon UK — our 25 top offers this weekend",
+    "link": "https://www.techradar.com/live/news/amazon-uk-black-friday-deals-2026-november-21",
+    "dt": "2026-11-22T06:36:38+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 2.7,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/live/news/amazon-uk-black-friday-deals-2026-november-21"
+    ]
+   },
+   {
+    "title": "SanDisk 512GB MicroSD Express deal slashes Switch 2 storage by 24% in Amazon Black Friday offer  — price hits under $100 amid storage squeeze",
+    "link": "https://www.tomshardware.com/pc-components/microsd-cards/sandisk-512gb-microsd-express-deal-slashes-switch-2-storage-by-24-percent-in-amazon-black-friday-offer-price-hits-under-usd100-amid-storage-squeeze",
+    "dt": "2026-11-21T13:32:35+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 19.8,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.2,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/microsd-cards/sandisk-512gb-microsd-express-deal-slashes-switch-2-storage-by-24-percent-in-amazon-black-friday-offer-price-hits-under-usd100-amid-storage-squeeze"
+    ]
+   },
+   {
+    "title": "Razer's MMO mouse hits all-time low price at under $60 at Amazon in Black Friday deal — Naga V2 Hyperspeed price craters by 42% in stellar gaming mouse offer",
+    "link": "https://www.tomshardware.com/peripherals/gaming-mice/razers-mmo-mouse-hits-all-time-low-price-at-under-usd60-at-amazon-in-black-friday-deal-naga-v2-hyperspeed-price-craters-by-42-percent-in-stellar-gaming-mouse-offer",
+    "dt": "2026-11-21T12:04:58+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 21.2,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.2,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/peripherals/gaming-mice/razers-mmo-mouse-hits-all-time-low-price-at-under-usd60-at-amazon-in-black-friday-deal-naga-v2-hyperspeed-price-craters-by-42-percent-in-stellar-gaming-mouse-offer"
+    ]
+   },
+   {
+    "title": "Samsung’s gorgeous 49-inch Odyssey OLED G9 hits a new all-time low price of $854 — Amazon Black Friday deal slashes 33% off gaming monitor upgrade",
+    "link": "https://www.tomshardware.com/monitors/gaming-monitors/samsungs-gorgeous-49-inch-odyssey-oled-g9-hits-a-new-all-time-low-price-of-usd854-amazon-black-friday-deal-slashes-33-percent-off-gaming-monitor-upgrade",
+    "dt": "2026-11-21T11:02:41+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 22.3,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.2,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/monitors/gaming-monitors/samsungs-gorgeous-49-inch-odyssey-oled-g9-hits-a-new-all-time-low-price-of-usd854-amazon-black-friday-deal-slashes-33-percent-off-gaming-monitor-upgrade"
+    ]
+   },
+   {
+    "title": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
+    "link": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
+    "dt": "2026-11-22T00:37:10+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 8.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/"
+    ]
+   },
+   {
+    "title": "Amazon is complaining about NYC Council on shipping labels, too",
+    "link": "https://www.theverge.com/tech/1039564/amazon-nyc-council-packages-shipping-label",
+    "dt": "2026-11-22T00:59:31+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 8.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1039564/amazon-nyc-council-packages-shipping-label"
+    ]
+   },
+   {
+    "title": "Amazon just released one of the best Android tablets this year, and now it's massively discounted in the early Black Friday deals",
+    "link": "https://www.techradar.com/seasonal-sales/amazon-just-released-one-of-the-best-android-tablets-this-year-and-now-its-massively-discounted-in-early-black-friday-deals",
+    "dt": "2026-11-21T19:52:20+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 13.4,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.techradar.com/seasonal-sales/amazon-just-released-one-of-the-best-android-tablets-this-year-and-now-its-massively-discounted-in-early-black-friday-deals"
+    ]
+   },
+   {
+    "title": "'I leaked secrets': An AI agent confessed to its own data leak — but others got around corporate protections",
+    "link": "https://www.techradar.com/pro/security/i-leaked-secrets-an-ai-agent-confessed-to-its-own-data-leak-but-others-got-around-corporate-protections",
+    "dt": "2026-11-22T05:10:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 4.1,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/security/i-leaked-secrets-an-ai-agent-confessed-to-its-own-data-leak-but-others-got-around-corporate-protections"
+    ]
+   },
+   {
+    "title": "Nvidia finally reveals new Rubin GPU with almost 3X more CUDA cores than the Nvidia RTX 5090 — but you will have to wait till 2028 to grab it",
+    "link": "https://www.techradar.com/pro/nvidia-finally-reveals-new-rubin-gpu-with-almost-3x-more-cuda-cores-than-the-nvidia-rtx-5090-but-you-will-have-to-wait-till-2028-to-grab-it",
+    "dt": "2026-11-22T03:25:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.9,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/nvidia-finally-reveals-new-rubin-gpu-with-almost-3x-more-cuda-cores-than-the-nvidia-rtx-5090-but-you-will-have-to-wait-till-2028-to-grab-it"
+    ]
+   },
+   {
+    "title": "Days after Nvidia CEO Jensen Huang resigned, journalists unearth covert influence operation using right-wing outlets to promote Nvidia AI chip export to...China",
+    "link": "https://www.techradar.com/pro/days-after-nvidia-ceo-resigned-journalists-unearth-covert-influence-operation-using-right-wing-outlets-to-promote-nvidia-ai-chip-export-to-china",
+    "dt": "2026-11-21T22:15:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 11.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/days-after-nvidia-ceo-resigned-journalists-unearth-covert-influence-operation-using-right-wing-outlets-to-promote-nvidia-ai-chip-export-to-china"
+    ]
+   },
+   {
+    "title": "Best Black Friday streaming deals are live: Apple TV, Paramount+, Crunchyroll, and more from as low as $1.50 a month",
+    "link": "https://www.techradar.com/live/news/black-friday-streaming-deals-2026-november-21",
+    "dt": "2026-11-22T03:00:38+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 6.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/live/news/black-friday-streaming-deals-2026-november-21"
+    ]
+   },
+   {
+    "title": "90+ best Black Friday deals in the UK — Sony headphones, Switch 2, Kindles, Shark vacuums, Lego, Samsung, and more",
+    "link": "https://www.techradar.com/live/news/black-friday-deals-uk-2026-november-21",
+    "dt": "2026-11-22T03:02:47+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 6.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/live/news/black-friday-deals-uk-2026-november-21"
+    ]
+   },
+   {
+    "title": "Amazon’s first digital photo frame is up to 50 percent off for Black Friday",
+    "link": "https://www.theverge.com/gadgets/1038762/amazon-alexa-photo-frame-black-friday-2026-deal-sale",
+    "dt": "2026-11-21T19:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 14.3,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/gadgets/1038762/amazon-alexa-photo-frame-black-friday-2026-deal-sale"
+    ]
+   },
+   {
+    "title": "Can Anthropic afford to put safety first?",
+    "link": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+    "dt": "2026-11-21T18:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 15.3,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure"
+    ]
+   },
+   {
+    "title": "The Xiaomi 18 Pro proves two screens aren’t better than one",
+    "link": "https://www.theverge.com/tech/1038562/xiaomi-18-pro-max-review",
+    "dt": "2026-11-21T16:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 17.3,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1038562/xiaomi-18-pro-max-review"
+    ]
+   },
+   {
+    "title": "MSI Crosshair A16 HX RTX 5070, Ryzen 9-equipped gaming laptop gets $400 discount at Amazon",
+    "link": "https://www.tomshardware.com/laptops/gaming-laptops/msi-crosshair-a16-hx-rtx-5070-ryzen-9-equipped-gaming-laptop-gets-usd400-discount-at-amazon-system-comes-with-a-free-game-in-early-black-friday-offer",
+    "dt": "2026-11-21T16:09:17+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 17.1,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/laptops/gaming-laptops/msi-crosshair-a16-hx-rtx-5070-ryzen-9-equipped-gaming-laptop-gets-usd400-discount-at-amazon-system-comes-with-a-free-game-in-early-black-friday-offer"
+    ]
+   },
+   {
+    "title": "Get 38% off this 20TB WD Elements external HDD in Amazon Black Friday offer — pay just 2.75 cents per GB as drive drops to $549",
+    "link": "https://www.tomshardware.com/pc-components/external-hdds/get-38-percent-off-this-20tb-wd-elements-external-hdd-in-amazon-black-friday-offer-pay-just-2-75-cents-per-gb-as-drive-drops-to-usd549",
+    "dt": "2026-11-21T15:17:02+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 18.0,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/external-hdds/get-38-percent-off-this-20tb-wd-elements-external-hdd-in-amazon-black-friday-offer-pay-just-2-75-cents-per-gb-as-drive-drops-to-usd549"
+    ]
+   },
+   {
+    "title": "The MSI Claw 8 EX AI+ is hands down the best handheld console I’ve ever tested — and while there’s usually a premium to pay for its staggering performance, this new price makes it much easier to recommend",
+    "link": "https://www.techradar.com/gaming/consoles-pc/the-msi-claw-8-ex-ai-is-hands-down-the-best-handheld-console-ive-ever-tested-and-while-theres-usually-a-premium-to-pay-for-its-staggering-performance-this-new-price-makes-it-much-easier-to-recommend",
+    "dt": "2026-11-21T19:15:37+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 14.0,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/gaming/consoles-pc/the-msi-claw-8-ex-ai-is-hands-down-the-best-handheld-console-ive-ever-tested-and-while-theres-usually-a-premium-to-pay-for-its-staggering-performance-this-new-price-makes-it-much-easier-to-recommend"
+    ]
+   },
+   {
+    "title": "OpenAI claims AI agents now complete nearly half of two-to-four-hour research tasks on their own — but says 'humans are still central to AI development'",
+    "link": "https://www.techradar.com/pro/openai-claims-ai-agents-now-complete-nearly-half-of-two-to-four-hour-research-tasks-on-their-own-but-says-humans-are-still-central-to-ai-development",
+    "dt": "2026-11-21T17:15:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 16.0,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/openai-claims-ai-agents-now-complete-nearly-half-of-two-to-four-hour-research-tasks-on-their-own-but-says-humans-are-still-central-to-ai-development"
+    ]
+   },
+   {
+    "title": "I spent two weeks with Amazon’s Alexa Tablet 12 Pro, and it’s a stellar all-rounder with a gorgeous nanomatte display — but it needs a clearer reason to be",
+    "link": "https://www.techradar.com/alexa-tablet-12-pro-review",
+    "dt": "2026-11-21T18:14:32+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 15.1,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/alexa-tablet-12-pro-review"
+    ]
+   },
+   {
+    "title": "Microsoft Surface Laptop Ultra review: does the Nvidia RTX Spark help make this a MacBook Pro killer?",
+    "link": "https://www.techradar.com/computing/windows-laptops/microsoft-surface-laptop-ultra",
+    "dt": "2026-11-21T19:54:02+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 13.4,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/computing/windows-laptops/microsoft-surface-laptop-ultra"
+    ]
+   },
+   {
+    "title": "Smuggling AI into a national exam room: A South Korean candidate used a pinhole camera and concealed earpiece to score 159/160 before turning himself in",
+    "link": "https://www.techradar.com/pro/smuggling-ai-into-a-national-exam-room-a-south-korean-candidate-used-a-pinhole-camera-and-concealed-earpiece-to-score-159-160-before-turning-himself-in",
+    "dt": "2026-11-22T02:35:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 6.7,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.0,
+    "signals": [],
+    "sources": [
+     "https://www.techradar.com/pro/smuggling-ai-into-a-national-exam-room-a-south-korean-candidate-used-a-pinhole-camera-and-concealed-earpiece-to-score-159-160-before-turning-himself-in"
+    ]
+   },
+   {
+    "title": "Future generations of AI systems will continue to accelerate': New report claims that by 2030, the world could generate approximately 317 billion AI tokens every second",
+    "link": "https://www.techradar.com/pro/future-generations-of-ai-systems-will-continue-to-accelerate-new-report-claims-that-by-2030-the-world-could-generate-approximately-317-billion-ai-tokens-every-second",
+    "dt": "2026-11-22T01:50:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 7.5,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.0,
+    "signals": [],
+    "sources": [
+     "https://www.techradar.com/pro/future-generations-of-ai-systems-will-continue-to-accelerate-new-report-claims-that-by-2030-the-world-could-generate-approximately-317-billion-ai-tokens-every-second"
+    ]
+   },
+   {
+    "title": "Nearly all software teams admit to shipping AI-generated code as study finds verification 'has not kept pace with that shift'",
+    "link": "https://www.techradar.com/pro/nearly-all-software-teams-admit-to-shipping-ai-generated-code-as-study-finds-verification-has-not-kept-pace-with-that-shift",
+    "dt": "2026-11-21T23:05:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 10.2,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.0,
+    "signals": [],
+    "sources": [
+     "https://www.techradar.com/pro/nearly-all-software-teams-admit-to-shipping-ai-generated-code-as-study-finds-verification-has-not-kept-pace-with-that-shift"
+    ]
+   }
+  ]
+ },
+ "dropped": {
+  "count": 161,
+  "examples": [
+   {
+    "title": "Обзор дисплея ILI9341",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "[Перевод] Передача незаглушаемого сигнала с помощью гравитации: полный перевод статьи в Science",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Я знаю, но рассказать не могу",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "СССР и микроэлектроника: анатомия отставания. Часть образовательная",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "«Наши две флагманские языковые модели входят в число лучших в мире». Проверяем по открытому рейтингу",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Недостающий кусок Databricks Bundles: таблицы Unity Catalog как код",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Что происходит с профессией разработчика: мой опыт и данные индустрии",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "15 субагентов Claude Code писали систему. Принял её по уликам, а не по отчётам",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Запас на ошибку",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Подготовленное продолжение цифровой среды и другой ход: EXIT-0",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Dyson CameraJet: разбор провала",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Говорят «Реактивность не бесплатна»",
+    "reason": "не тех-тема"
+   }
+  ]
+ },
+ "feeds_ok": [
+  "Habr news",
+  "Opennet",
+  "CNews",
+  "SCMP Tech",
+  "Global Times (outbrain, общий фид с техно-пунктом)",
+  "TechCrunch",
+  "The Verge",
+  "Tom's Hardware",
+  "TechRadar",
+  "Phys.org",
+  "IEEE Spectrum AI"
+ ],
+ "feeds_fail": [
+  "TechNode (China Tech)",
+  "VentureBeat"
+ ]
+}
