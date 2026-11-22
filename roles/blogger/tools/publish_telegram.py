@@ -20,10 +20,17 @@
     "chat_id": "@username_канала"
   }
 
-Front matter поста: channel, status: draft, image_file (карточка),
+Front matter поста: channel, status: approved, image_file (карточка),
 button_url (необязательно; по умолчанию cta_url канала), pin (true для
-первого поста). После публикации дописываются: status: published,
-published_at, message_id.
+первого поста), hold (пауза — публикация запрещена). После публикации
+дописываются: status: published, published_at, message_id. Все неизвестные
+поля front matter сохраняются (format_core round-trip).
+
+Профиль — telegram (roles/blogger/channels/tg_neuro/style.md): подпись ≤1000, жирный
+заголовок с эмодзи, ≥1 ссылка на пост ainow, CTA последней строкой без '> '
+с inline-кнопкой, реакции по общему интервалу. Новый пост ядра оформляется
+с format_core: 1; telegram-профиль живёт по своему канону.
+Проверка текста — через shared/format_core.py, без вторых копий правил.
 """
 import json
 import re
@@ -35,8 +42,19 @@ from pathlib import Path
 
 sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
 from shared.paths import REPO, CONFIG, ensure_publish_allowed  # noqa: E402
-from shared.forbidden_orgs import assert_no_forbidden_orgs  # noqa: E402
+from shared import format_core  # noqa: E402
 REPORT = []
+
+
+def flush_report(channel: str) -> None:
+    (REPO / "local" / f"publish-{channel}.txt").write_text(
+        "\n".join(REPORT), encoding="utf-8")
+
+
+def fail(message: str, channel: str) -> None:
+    REPORT.append("FAIL: " + message)
+    flush_report(channel)
+    raise SystemExit(message)
 
 
 def md_to_html(text: str) -> str:
@@ -59,22 +77,13 @@ def main() -> None:
     if not post_path.is_absolute():
         post_path = REPO / post_path
 
-    raw = post_path.read_text(encoding="utf-8")
-    m = re.match(r"\A---\r?\n(.*?)\r?\n---\r?\n?(.*)", raw, re.S)
-    fm_text, body = m.group(1), m.group(2).strip()
-    fm = {}
-    for line in fm_text.splitlines():
-        if ":" in line:
-            k, v = line.split(":", 1)
-            fm[k.strip()] = v.strip()
+    fm, body = format_core.split_post(post_path.read_text(encoding="utf-8"))
+    body = body.strip()
     channel = channel or fm.get("channel")
     if not channel:
-        raise SystemExit("не определён канал (front matter channel или --channel)")
+        fail("не определён канал (front matter channel или --channel)", "tg_neuro")
     if fm.get("hold"):
-        raise SystemExit(
-            "пост на паузе до команды владельца: " + fm["hold"] +
-            " — снимите hold в front matter, когда канал будет доступен"
-        )
+        fail("пост на паузе до команды владельца: " + str(fm["hold"]), channel)
 
     tokens = json.loads((REPO / "local" / "tokens.json").read_text(encoding="utf-8"))
     entry = tokens.get(channel, {})
@@ -86,13 +95,27 @@ def main() -> None:
     cfg = json.loads((CONFIG / "channels.json").read_text(encoding="utf-8"))
     ch = next((c for c in cfg["channels"] if c["slug"] == channel), None)
     ensure_publish_allowed(channel, tool="publish_telegram")
-    cta_url = (ch or {}).get("cta_url") or fm.get("button_url")
-    if not cta_url:
-        raise SystemExit("нет cta_url канала и button_url в front matter")
+    if not ch:
+        fail(f"канал {channel!r} не найден в channels.json", channel)
+    if format_core.profile_of(ch) != "telegram":
+        fail(f"канал {channel!r} не имеет профиль telegram", channel)
+    status = (fm.get("status") or "").strip().lower()
+    if status != "approved":
+        fail(f"статус {status or 'не задан'!r}: публикация возможна только из approved", channel)
 
-    # --- упоминания запрещённых организаций (все каналы) ---
-    # Правило владельца 12.11.2026: единый гейт shared/forbidden_orgs.py.
-    assert_no_forbidden_orgs(body)
+    cta = format_core.resolve_cta(channel, fm, ch)
+    cta_url = cta["url"] or fm.get("button_url")
+    if not cta_url:
+        fail("нет cta_url канала и button_url в front matter", channel)
+
+    # --- единый движок формата (профиль telegram, реакции, CTA и т.д.) ---
+    core_result = format_core.check_post(
+        post_path, channel=channel, fm=fm, text=body,
+        for_publish=True, check_spellcheck=False)
+    for issue in core_result.issues:
+        REPORT.append(str(issue))
+    if not core_result.ok:
+        fail("format_core: " + "; ".join(i.message for i in core_result.errors), channel)
 
     html = md_to_html(body)
     if len(html) > 1024 and not fm.get("image_file"):
@@ -167,8 +190,9 @@ def main() -> None:
     now = datetime.now(timezone(timedelta(hours=3))).strftime("%Y-%m-%dT%H:%M:%S+03:00")
     fm_out = {"channel": channel, "status": "published", "format": "html",
               "published_at": now, "message_id": str(mid), "chat_id": chat_id}
-    fm_lines = "\n".join(f"{k}: {v}" for k, v in fm_out.items())
-    post_path.write_text(f"---\n{fm_lines}\n---\n\n{body}\n", encoding="utf-8", newline="\n")
+    fm.update(fm_out)  # round-trip: неизвестные поля и порядок сохраняются
+    post_path.write_text(fm.render() + ("\n" if not body.startswith("\n") else "") + body,
+                         encoding="utf-8", newline="\n")
 
     REPORT.append(f"OK: {post_path.name} -> message_id {mid}")
     (REPO / "local" / f"publish-{channel}.txt").write_text("\n".join(REPORT), encoding="utf-8")

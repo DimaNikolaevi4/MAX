@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Публикация следующего поста из плана «Забавное» — без интервалов и лимитов.
+"""Публикация следующего поста из плана «Забавное» — 1 пост в сутки МСК.
 
 Использование:
   python roles/blogger/tools/publish_plan.py [--plan local/zabava-plan.json]
@@ -7,8 +7,12 @@
 
 Логика запуска:
   * берётся первый пост со статусом pending;
-  * никаких проверок интервала и дневного лимита нет: если пост pending —
-    он публикуется;
+  * дневной лимит zabava — строго 1 пост в сутки МСК (published_at
+    в файлах канала и в записях local/zabava-plan.json);
+  * один пост на дату: если для даты уже есть опубликованный пост,
+    запись с той же датой пропускается;
+  * новый пост zabava создаётся по канону channels/zabava/style.md
+    (поле format_core не ставится: у канала собственный формат);
   * запускается roles/blogger/tools/publish_video.py, который сам делает
     проверку текста, загрузку медиа, POST и GET-контроль;
   * при успехе в план дописываются статус, время и ссылка;
@@ -35,7 +39,10 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-REPO = Path(r"E:\github\MAX")
+sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+from shared import format_core  # noqa: E402
+
+REPO = format_core.REPO
 PLAN = REPO / "local" / "zabava-plan.json"
 REPORT = REPO / "local" / "publish-plan.txt"
 MSK = timezone(timedelta(hours=3))
@@ -83,16 +90,9 @@ def commit_published(post_path: Path) -> None:
 
 
 def read_front_matter(path: Path) -> dict:
-    text = path.read_text(encoding="utf-8")
-    m = re.match(r"^---\n(.*?)\n---\n", text, re.S)
-    if not m:
-        return {}
-    data = {}
-    for line in m.group(1).splitlines():
-        if ":" in line and not line.startswith(" "):
-            key, value = line.split(":", 1)
-            data[key.strip()] = value.strip()
-    return data
+    """Все поля front matter, разобранные единым движком."""
+    fm, _ = format_core.split_post(path.read_text(encoding="utf-8"))
+    return fm.values
 
 
 def parse_date(value):
@@ -150,20 +150,40 @@ def main() -> None:
         flush()
         return
 
+    # Дневной лимит: 1 пост zabava в сутки МСК.
+    already_today = format_core.published_today(channel, plan_path, now)
+    if already_today:
+        say("")
+        say(f"сегодня: {now.strftime('%Y-%m-%d %H:%M:%S MSK')}")
+        say(f"дневной лимит {channel}: уже опубликовано {len(already_today)} пост(ов) "
+            f"({already_today[0].get('published_at', '')}) — следующий запуск завтра, код 0")
+        flush()
+        return
+
+    # Один пост на дату: даты уже опубликованных записей плана заняты.
+    published_dates = {str(p.get("date")) for p in posts
+                       if p.get("status") == "published" and p.get("date")}
+    published_file_dates = {Path(p.get("file", "")).name[:10] for p in posts
+                            if p.get("status") == "published" and p.get("file")}
+
     # Date-gate: первый pending без даты или с датой <= сегодня.
     pending = None
     for p in pendings:
         d = parse_date(p.get("date"))
+        pdate = str(p.get("date") or "") or Path(p.get("file", "")).name[:10]
+        if pdate in published_dates or pdate in published_file_dates:
+            continue
         if d is None or d <= today:
             pending = p
             break
     if pending is None:
-        nearest = min((d for d in (parse_date(p.get("date")) for p in pendings) if d))
+        nearest_values = [d for d in (parse_date(p.get("date")) for p in pendings) if d]
+        nearest = min(nearest_values) if nearest_values else None
         say("")
         say(f"сейчас: {now.strftime('%Y-%m-%d %H:%M:%S MSK')}")
         say(f"очередь не пуста ({len(pendings)} pending), но ближайший пост "
-            f"запланирован на {nearest.isoformat()} — сегодня не публикуем "
-            f"(день тишины / будущая дата), код 0")
+            f"запланирован на {nearest.isoformat() if nearest else 'дату не вперёд'} "
+            f"— сегодня не публикуем (день тишины / занятая дата), код 0")
         flush()
         return
 
@@ -230,6 +250,15 @@ def main() -> None:
 
     fm = read_front_matter(post_path)
     pending["status"] = "published"
+    # Один пост на дату: остальные pending с этой датой больше не выходят.
+    current_date = str(pending.get("date") or "") or Path(pending.get("file", "")).name[:10]
+    for other in posts:
+        if other is pending or other.get("status") != "pending":
+            continue
+        other_date = str(other.get("date") or "") or Path(other.get("file", "")).name[:10]
+        if other_date == current_date:
+            other["status"] = "skipped"
+            other["skip_reason"] = "один пост на дату"
     pending["published_at"] = fm.get("published_at") or now.strftime("%Y-%m-%dT%H:%M:%S+03:00")
     if fm.get("url"):
         pending["url"] = fm["url"]

@@ -58,11 +58,23 @@ def channels_config() -> dict:
 
 
 def ensure_publish_allowed(slug: str, tool: str = "публикатор") -> None:
-    """Запрет публикации в канал со `status: to_delete` (канал закрыт, ждёт удаления)."""
+    """Запрет публикации в каналы со `status: to_delete` или `deleted`.
+
+    Каналы под удаление закрыты и ждут физического удаления; удалённые каналы
+    не существуют. Оба статуса блокируются всеми публикаторами.
+    """
     for record in channels_config().get("channels", []):
-        if record.get("slug") == slug and record.get("status") == "to_delete":
+        if record.get("slug") != slug:
+            continue
+        status = record.get("status")
+        if status == "to_delete":
             raise SystemExit(
                 f"{tool}: канал {slug!r} под удаление "
+                f"({record.get('delete_on', 'дата не указана')}) — публикация запрещена"
+            )
+        if status == "deleted":
+            raise SystemExit(
+                f"{tool}: канал {slug!r} удалён "
                 f"({record.get('delete_on', 'дата не указана')}) — публикация запрещена"
             )
 

@@ -1,27 +1,17 @@
 # -*- coding: utf-8 -*-
-"""Проверка формата одиночного изображения поста (правило AGENTS.md, раздел 5д).
+"""Тонкая обёртка над общим движком пропорций shared/format_core.py.
 
-Правило асимметричное (уточнение владельца 20.11.2026):
-  • 16:9 или ШИРЕ — допустимо (панораму MAX центр-кропит под карточку);
-  • УЖЕ 16:9 — брак: квадрат, портрет, 4:3 занимают узкое окно, и текст поста
-    встаёт в узкую колонку.
-Нижняя граница — не уже 3:2, то есть соотношение сторон >= 1,50
-(это 16:9 с допуском -15 %). Верхней границы нет.
+Правило AGENTS.md §0.3 / §5д: одиночное изображение ИЛИ видео —
+соотношение сторон >= media_aspect_min из channels.json (по умолчанию 1.50),
+верхней границы нет. Альбомы от 2 файлов под правило не попадают;
+media_aspect_exempt: true во front matter разрешает исключение.
 
-Правило касается только постов с ОДНИМ изображением (текстовые p1/p2); посты-
-альбомы (image_files: несколько файлов) под него не попадают.
-
-Использование:
     py roles/blogger/tools/media_aspect.py <файл|папка> [ещё ...] [--min 1.50]
     py roles/blogger/tools/media_aspect.py <файл|папка> --pick
+    py roles/blogger/tools/media_aspect.py <файл> --channel catden
 
-  • без --pick — по каждому изображению печатает размеры, соотношение и вердикт;
-    код выхода 1, если хотя бы один кадр уже порога;
-  • c --pick — выбирает лучший кадр: среди проходящих — ближайший к 16:9,
-    если проходящих нет — самый широкий (утилита, правилом не требуется).
-
-Границы: только измерение и выбор. Ничего не режет и не генерирует — решение
-«переделать кадр» остаётся за владельцем (раздел 5д, пункт 4).
+Измерение (PIL для картинок, ffprobe для видео), порог и вердикт живут
+только в format_core; здесь нет второй копии правил. Код 1 — нарушение.
 """
 from __future__ import annotations
 
@@ -29,18 +19,19 @@ import argparse
 import sys
 from pathlib import Path
 
-from PIL import Image
+REPO = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(REPO))
+from shared import format_core  # noqa: E402
 
-TARGET = 16 / 9          # эталон 1,778
-MIN_AR = 3 / 2           # порог: не уже 3:2 (16:9 с допуском -15 %)
-EXTS = {".jpg", ".jpeg", ".png", ".webp"}
+MIN_AR = format_core.DEFAULT_MEDIA_MIN
+TARGET = 16 / 9
+EXTS = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".bmp",
+        ".mp4", ".mov", ".mkv", ".webm"}
 
 
 def measure(path: Path):
-    with Image.open(path) as im:
-        w, h = im.size
-    ar = w / h
-    return w, h, ar
+    """Обратная совместимость: (w, h, aspect) или None."""
+    return format_core.measure_media(path)
 
 
 def collect(paths: list[Path]) -> list[Path]:
@@ -51,50 +42,67 @@ def collect(paths: list[Path]) -> list[Path]:
         elif p.is_file():
             files.append(p)
         else:
-            print(f"нет файла: {p}", file=sys.stderr)
+            print(f"NO_FILE {p}", file=sys.stderr)
     return files
 
 
 def verdict(ar: float, min_ar: float) -> str:
     if ar < min_ar:
-        return "уже порога — брак"
+        return "FAIL aspect below minimum"
     if ar >= TARGET:
-        return "ok (16:9 или шире)"
-    return f"ok, но уже 16:9 (порог {min_ar:.2f})"
+        return "OK 16:9 or wider"
+    return f"OK but narrower than 16:9 (min {min_ar:.2f})"
 
 
 def main(argv: list[str] | None = None) -> int:
-    ap = argparse.ArgumentParser(description="Медиа поста: 16:9 или шире (не уже 3:2)")
+    ap = argparse.ArgumentParser(description="Media aspect check (format_core)")
     ap.add_argument("paths", nargs="+", type=Path)
-    ap.add_argument("--min", type=float, default=MIN_AR, help="нижний порог соотношения (по умолчанию 1.50)")
-    ap.add_argument("--pick", action="store_true", help="выбрать лучший кадр из набора")
+    ap.add_argument("--min", type=float, default=None,
+                    help="lower aspect bound (default: media_aspect_min from config)")
+    ap.add_argument("--channel", default="", help="channel slug to read media_aspect_min")
+    ap.add_argument("--pick", action="store_true", help="pick the best frame")
     a = ap.parse_args(argv)
+
+    min_ar = a.min
+    if min_ar is None:
+        if a.channel:
+            try:
+                min_ar = format_core.float_param(
+                    format_core.channel_config(a.channel),
+                    "media_aspect_min", format_core.DEFAULT_MEDIA_MIN)
+            except KeyError:
+                min_ar = format_core.DEFAULT_MEDIA_MIN
+        else:
+            min_ar = format_core.DEFAULT_MEDIA_MIN
 
     files = collect(a.paths)
     if not files:
-        print("нечего проверять", file=sys.stderr)
+        print("NOTHING_TO_CHECK", file=sys.stderr)
         return 2
 
     rows = []
     for f in files:
-        w, h, ar = measure(f)
-        rows.append({"path": f, "w": w, "h": h, "ar": ar, "ok": ar >= a.min})
+        measured = measure(f)
+        if measured is None:
+            print(f"{f}\tUNMEASURABLE")
+            continue
+        w, h, ar = measured
+        rows.append({"path": f, "w": w, "h": h, "ar": ar, "ok": ar >= min_ar})
 
     if a.pick:
-        passing = [r for r in rows if r["ok"]]
-        pool = passing or rows
-        best = min(pool, key=lambda r: abs(r["ar"] / TARGET - 1)) if passing else max(
-            pool, key=lambda r: r["ar"])
+        passing = [r for r in rows if r["ok"]] or rows
+        best = (min(passing, key=lambda r: abs(r["ar"] / TARGET - 1)) if any(
+            r["ok"] for r in rows) else max(passing, key=lambda r: r["ar"]))
         print(f"{best['path']}\t{best['w']}x{best['h']}\t{best['ar']:.3f}\t"
-              f"{'ok' if best['ok'] else 'OUTSIDE'}")
+              f"{'OK' if best['ok'] else 'OUTSIDE'}")
         return 0 if best["ok"] else 1
 
     bad = 0
     for r in rows:
         if not r["ok"]:
             bad += 1
-        print(f"{r['path']}\t{r['w']}x{r['h']}\t{r['ar']:.3f}\t{verdict(r['ar'], a.min)}")
-    print(f"\nвсего {len(rows)}, уже порога {a.min:.2f}: {bad}")
+        print(f"{r['path']}\t{r['w']}x{r['h']}\t{r['ar']:.3f}\t{verdict(r['ar'], min_ar)}")
+    print(f"TOTAL {len(rows)}, BELOW {min_ar:.2f}: {bad}")
     return 0 if bad == 0 else 1
 
 

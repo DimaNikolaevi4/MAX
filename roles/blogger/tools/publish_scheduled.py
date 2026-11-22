@@ -9,6 +9,9 @@
   * проверки: медиа (картинка или видео) существует, CTA-цитата в формате
     канала, фраза
     призыва не дублирует `cta-phrases.json`;
+   * общий движок проверки — shared/format_core.py (FORMAT CORE v1);
+   * publish_window — окно догона [start_hour, end_hour] или null;
+   * текстовые посты catden проходят без медиа; новый пост ядра — с format_core: 1;
   * публикация — через `publish_post.py` (он делает upload, POST и GET-контроль);
   * после успеха CTA-фраза дописывается в реестр, пост и реестр коммитятся
     и пушатся;
@@ -30,6 +33,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(REPO))
 from shared.paths import CONFIG  # noqa: E402
+from shared import format_core  # noqa: E402
 
 MSK = timezone(timedelta(hours=3))
 LOCK = REPO / "local" / "publish-scheduled.lock"
@@ -56,16 +60,12 @@ def flush():
 
 
 def read_front_matter(path):
+    """Front matter с сохранением всех полей (format_core) + тело поста."""
     raw = path.read_text(encoding="utf-8")
-    m = re.match(r"\A---\r?\n(.*?)\r?\n---\r?\n?(.*)\Z", raw, re.S)
-    if not m:
+    if not re.match(r"\A---\r?\n", raw):
         raise ValueError(f"нет front matter: {path.name}")
-    fm = {}
-    for line in m.group(1).splitlines():
-        if ":" in line:
-            k, v = line.split(":", 1)
-            fm[k.strip()] = v.strip()
-    return fm, m.group(2)
+    fm, body = format_core.split_post(raw)
+    return fm, body
 
 
 def git(*args):
@@ -142,10 +142,8 @@ def run(args, now):
         say(f"FAIL: канал {args.channel!r} не найден в channels.json")
         flush()
         return 1
-    cta_label, cta_url = ch["cta_label"], ch["cta_url"]
-    cta_re = re.compile(
-        rf"^> \*\*Подписывайтесь на \[{re.escape(cta_label)}\]"
-        rf"\({re.escape(cta_url)}\)\*\* — (.+)$", re.M)
+    # CTA-адресат может отличаться у поста (cta_target: self|ainow) — см.
+    # format_core.resolve_cta; реестр фраз проверяется ниже по тексту поста.
 
     posts_dir = REPO / "roles" / "blogger" / "channels" / args.channel / "posts"
     candidates = []
@@ -176,6 +174,14 @@ def run(args, now):
     limit_text = "без ограничения" if not args.limit else str(args.limit)
     say(f"кандидатов: {len(candidates)}; лимит за запуск: {limit_text}")
 
+    # publish_window — окно догона, а не жёсткое время публикации.
+    window = format_core.parse_publish_window(ch.get("publish_window"))
+    if window and not (window[0] <= now.hour <= window[1]):
+        say(f"вне окна догона {window[0]:02d}:00-{window[1]:02d}:00 "
+            f"({now:%Y-%m-%d %H:%M MSK}) — публикация отложена")
+        flush()
+        return 0
+
     reg_path = posts_dir.parent / "cta-phrases.json"
     registry = json.loads(reg_path.read_text(encoding="utf-8"))
 
@@ -198,21 +204,38 @@ def run(args, now):
         if args.limit and published >= args.limit:
             break
 
+        # Единый движок формата: заголовок, воздух, CTA адресату, вопрос,
+        # реакции, лимиты, вёрстка, перелинковка, медиа и запрещённые орги.
+        core_result = format_core.check_post(
+            path, channel=args.channel, for_publish=True,
+            check_spellcheck=False, resolve_media_path_fn=resolve_media)
+        for issue in core_result.issues:
+            say(str(issue))
+        if not core_result.ok:
+            say(f"FAIL: {path.name} — format_core не прошёл")
+            continue
+
         media = fm.get("image_file") or fm.get("video_file")
         image_files = [x.strip() for x in (fm.get("image_files") or "").split("|") if x.strip()]
-        # медиа: один файл (image_file/video_file), альбом (image_files) или
-        # пост-текст без вложений (допустимо для catden, решение владельца 12.11.2026)
         missing_media = [f for f in image_files if resolve_media(f) is None]
         if image_files and missing_media:
             say(f"FAIL: {path.name} — нет картинок альбома: {missing_media[:2]}")
             continue
-        elif not image_files and not fm.get("video_source") \
-                and (not media or resolve_media(media) is None):
-            say(f"FAIL: {path.name} — нет медиа ({media!r})")
-            continue
+        if not image_files and not media and not fm.get("video_source"):
+            # Текстовые посты разрешены профилем (catden); для остальных
+            # каналов отсутствие медиа — ошибка.
+            text_only = bool(ch.get("allow_text_only")) or args.channel == "catden"
+            if not text_only:
+                say(f"FAIL: {path.name} — нет медиа ({media!r})")
+                continue
+
+        cta = format_core.resolve_cta(args.channel, fm, ch)
+        cta_re = re.compile(
+            rf"^> \*\*Подписывайтесь на \[{re.escape(cta['label'])}\]"
+            rf"\({re.escape(cta['url'])}\)\*\* — (.+)$", re.M)
         m = cta_re.search(body)
         if not m:
-            say(f"FAIL: {path.name} — нет CTA-цитаты в формате канала")
+            say(f"FAIL: {path.name} — нет CTA-цитаты для адресата {cta['target']}")
             continue
         phrase = m.group(1).strip()
         # окно 6 (правило zabava 08.11, расширено на все каналы 12.11.2026):
@@ -292,5 +315,7 @@ def _refresh_calendar_plan() -> None:
 
 if __name__ == "__main__":
     rc = main()
-    _refresh_calendar_plan()
+    # DRY-RUN не должен пересобирать общий календарь: это побочная запись.
+    if "--dry-run" not in sys.argv:
+        _refresh_calendar_plan()
     sys.exit(rc)

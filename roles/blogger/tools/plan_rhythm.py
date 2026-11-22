@@ -1,94 +1,53 @@
 # -*- coding: utf-8 -*-
-"""Проверка ритма пар: альбом серии должен выходить ДО её текстового поста.
+"""Тонкая обёртка проверки ритма пар catden над shared/format_core.py.
 
-Правило владельца 20.11.2026 (AGENTS.md, раздел 5д + catden/style.md):
-  день 1 — альбом-карусель серии, день 2 — текстовый пост этой же серии.
+Правило владельца 20.11.2026 (AGENTS.md §5д, catden/style.md):
+день 1 — альбом-карусель серии, день 2 — текстовый пост этой же серии.
 
-Использование:
-    py roles/blogger/tools/plan_rhythm.py [--channel catden] [--from 2026-11-20] [--to 2027-01-18]
+    py roles/blogger/tools/plan_rhythm.py [--channel catden] [--from DATE] [--to DATE]
 
-Печатает: серии, где пост стоит раньше альбома (нарушение), серии без пары,
-и сводку. Код выхода 1, если нарушения есть.
+Разбор front matter, конфиг канала и сама проверка ритма живут в format_core;
+здесь только CLI и печать отчёта. Код 1 — нарушения есть.
 """
 from __future__ import annotations
 
 import argparse
-import re
+import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(REPO))
+from shared import format_core  # noqa: E402
 
 
-def front_matter(raw: str) -> dict:
-    m = re.match(r"\A---\r?\n(.*?)\r?\n---", raw, re.S)
-    fm = {}
-    if not m:
-        return fm
-    for line in m.group(1).splitlines():
-        if ":" in line and not line.startswith(" "):
-            k, v = line.split(":", 1)
-            fm[k.strip()] = v.strip().strip('"')
-    return fm
-
-
-def main(argv=None) -> int:
-    ap = argparse.ArgumentParser(description="Ритм пар catden: альбом → пост")
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser(description="catden series rhythm (format_core)")
     ap.add_argument("--channel", default="catden")
     ap.add_argument("--from", dest="d1", default="")
     ap.add_argument("--to", dest="d2", default="")
     a = ap.parse_args(argv)
 
-    base = REPO / "roles" / "blogger" / "channels" / a.channel / "posts"
-    series: dict[str, list] = {}
-    for p in sorted(base.glob("*.md")):
-        date = p.name[:10]
-        if a.d1 and date < a.d1:
-            continue
-        if a.d2 and date > a.d2:
-            continue
-        fm = front_matter(p.read_text(encoding="utf-8"))
-        ser = fm.get("series") or p.stem.split("-")[3]
-        files = fm.get("image_files") or fm.get("image_file") or ""
-        names = [x.strip() for x in files.split("|") if x.strip()]
-        album = bool(fm.get("image_files")) or bool(re.search(r"-img\d+$", p.stem))
-        series.setdefault(ser, []).append({"date": date, "file": p.name, "album": album,
-                                           "images": len(names),
-                                           "status": fm.get("status", "")})
-
-    bad, lonely, ok = [], [], 0
-    for ser, posts in sorted(series.items()):
-        albums = sorted([x for x in posts if x["album"]], key=lambda x: x["date"])
-        texts = sorted([x for x in posts if not x["album"]], key=lambda x: x["date"])
-        if not albums:
-            lonely.append((ser, [t["date"] for t in texts]))
-            continue
-        if not texts:
-            continue
-        first_album, first_text = albums[0]["date"], texts[0]["date"]
-        if first_album < first_text:
-            ok += 1
-        else:
-            bad.append({
-                "series": ser,
-                "album": albums[0],
-                "post": texts[0],
-                "extra_albums": [x["date"] for x in albums[1:]],
-            })
-
-    print(f"канал: {a.channel}; серий с парой: {ok + len(bad)}; в правильном порядке: {ok}")
-    if bad:
-        print("\nНАРУШЕНИЕ (пост раньше альбома):")
-        for b in bad:
-            print(f"  серия {b['series']}: пост {b['post']['date']} ({b['post']['file']}) "
-                  f"← альбом {b['album']['date']} ({b['album']['file']})")
-            if b["extra_albums"]:
-                print(f"    доп. альбомы: {', '.join(b['extra_albums'])}")
-    if lonely:
-        print("\nсерии без альбома (только текстовые посты):")
-        for ser, dates in lonely:
-            print(f"  серия {ser}: {', '.join(dates)}")
-    print(f"\nитог: нарушений {len(bad)}")
-    return 0 if not bad else 1
+    result = format_core.check_series_rhythm(a.channel, a.d1, a.d2)
+    lines = [f"channel: {result['channel']}",
+             f"pairs: {result['pairs']}, correct: {result['ok']}"]
+    if result["bad"]:
+        lines.append("VIOLATIONS (post before album):")
+        for item in result["bad"]:
+            lines.append(f"  {item['series']}: post {item['post']['date']} "
+                         f"({item['post']['file']}) <- album {item['album']['date']} "
+                         f"({item['album']['file']})")
+            if item["extra_albums"]:
+                lines.append("    extra albums: " + ", ".join(item["extra_albums"]))
+    if result["lonely"]:
+        lines.append("SERIES WITHOUT ALBUM:")
+        for series, dates in result["lonely"]:
+            lines.append(f"  {series}: {', '.join(dates)}")
+    lines.append(f"TOTAL violations: {len(result['bad'])}")
+    report = REPO / "local" / f"plan-rhythm-{a.channel}.txt"
+    report.parent.mkdir(parents=True, exist_ok=True)
+    report.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print("\n".join(lines))
+    return 0 if not result["bad"] else 1
 
 
 if __name__ == "__main__":

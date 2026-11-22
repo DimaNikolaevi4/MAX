@@ -6,12 +6,21 @@
 
 Файл поста: front matter + короткий текст.
   channel: <slug>            — должен совпадать с --channel (или папкой)
+  status: approved           — только approved; draft/hold/published — отказ
   video_file: <путь>         — одно видео; абсолютный путь или от корня репозитория
-  image_files: <п1>|<п2>     — фото или альбом до 6 штук, пути через «|»
+  image_files: <п1>|<п2>     — фото или альбом (лимит из channels.json), пути через «|»
   max_text: <число>          — необязательное исключение из лимита 200 символов
   spell_ignore: <слова>      — необязательный список слов через запятую
-  notify: true|false         — пуш-уведомление (в каналах всегда true)
-  status: draft              — опубликованный пост повторно не отправляется
+  notify: true|false         — пуш-уведомление (по умолчанию true)
+  reactions: true            — пишется после публикации с авто-блоком реакций
+
+Канонический формат zabava задан channels/zabava/style.md; поле format_core
+ему НЕ ставится. Все неизвестные поля front matter сохраняются при записи.
+Строго 1 пост в сутки МСК (проверяются published_at постов и local/zabava-plan.json).
+Авто-блок реакций из reactions-phrases.json вставляется только если у двух
+предыдущих опубликованных постов реакций не было; фраза не повторяется в окне 6.
+Итог: текст → пустая строка → [реакция] → пустая строка → CTA последней строкой.
+Проверка текста и CTA — через shared/format_core.py (никаких вторых копий правил).
 
 Что делает:
   * проверяет медиа (формат, размер, число файлов), длину и стиль текста;
@@ -47,9 +56,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
 from shared.paths import REPO, CONFIG, ensure_publish_allowed  # noqa: E402
+from shared import format_core  # noqa: E402
 from shared.post_guard import assert_channel_chat_id  # noqa: E402
 from shared.text_check import check_text, format_issue  # noqa: E402
-from shared.forbidden_orgs import assert_no_forbidden_orgs  # noqa: E402
+
 
 API = "https://platform-api2.max.ru"
 MSK = timezone(timedelta(hours=3))
@@ -198,17 +208,10 @@ def write_report(channel: str) -> None:
         "\n".join(REPORT), encoding="utf-8")
 
 
-def parse_post(path: Path) -> tuple[dict, str]:
-    raw = path.read_text(encoding="utf-8")
-    m = re.match(r"\A---\r?\n(.*?)\r?\n---\r?\n?", raw, re.S)
-    if not m:
-        raise SystemExit("нет front matter")
-    fm = {}
-    for line in m.group(1).splitlines():
-        if ":" in line:
-            k, v = line.split(":", 1)
-            fm[k.strip()] = v.strip()
-    return fm, raw[m.end():].strip()
+def parse_post(path: Path) -> tuple[object, str]:
+    """Front matter с сохранением всех полей и порядка (format_core)."""
+    fm, body = format_core.split_post(path.read_text(encoding="utf-8"))
+    return fm, body.strip()
 
 
 def resolve_path(value: str) -> Path:
@@ -239,6 +242,45 @@ def build_cta(phrase: str, cfg: dict) -> str:
     return phrase.replace(label, f"**[{label}]({url})**", 1)
 
 
+def pick_reaction(channel: str, post_path: Path, plan_path: Path) -> str | None:
+    """Авто-блок реакций по интервалу и окну повтора (правило zabava).
+
+    Блок вставляется, только если у двух предыдущих опубликованных постов
+    реакций не было и фраза не встречалась в последних 6 реакциях канала.
+    """
+    phrases = format_core.reaction_phrases(channel)
+    if not phrases:
+        REPORT.append("WARN: пул фраз реакций пуст — авто-блок не добавлен")
+        return None
+    allowed, reason = format_core.can_use_reaction(channel)
+    if not allowed:
+        REPORT.append(f"реакция не добавлена: {reason}")
+        return None
+    previous = format_core.recent_published(channel, limit=2, plan_path=plan_path)
+    if len(previous) < 2:
+        REPORT.append("реакция не добавлена: меньше двух предыдущих опубликованных постов")
+        return None
+    if any(p["reactions"] for p in previous):
+        REPORT.append("реакция не добавлена: у одного из двух предыдущих постов реакция была")
+        return None
+    blocked = format_core.recent_reaction_phrases(channel, window=6)
+    available = [p for p in phrases if p not in blocked] or phrases
+    phrase = random.SystemRandom().choice(available)
+    REPORT.append(f"авто-блок реакций: {phrase}")
+    return phrase
+
+
+def check_daily_cap(channel: str, plan_path: Path, post_path: Path) -> None:
+    """Строго один пост zabava в сутки МСК."""
+    today = format_core.published_today(channel, plan_path)
+    today = [item for item in today
+             if Path(item.get("file") or "").name != post_path.name]
+    if today:
+        raise SystemExit(
+            f"дневной лимит {channel}: сегодня уже опубликовано {len(today)} пост(ов) "
+            f"({today[0].get('published_at', '')})")
+
+
 def validate_body(body: str, max_text: int = MAX_TEXT) -> None:
     if not body:
         raise SystemExit("пустой текст поста")
@@ -255,12 +297,15 @@ def validate_body(body: str, max_text: int = MAX_TEXT) -> None:
         raise SystemExit("хештеги запрещены")
     if "каждый день" in body.lower():
         raise SystemExit("обещание «каждый день» запрещено")
-    if "**" in body or "](" in body:
+    if "**" in body or "](" in body or "`" in body:
         raise SystemExit("разметка в тексте не нужна — призыв добавляется автоматически")
+    emojis = len(format_core.EMOJI_RE.findall(body.replace("\ufe0f", "")))
+    if emojis > 2:
+        raise SystemExit(f"эмодзи в теле: {emojis}, максимум 2")
 
 
 def verify(token: str, mid: str, body: str, phrase: str, cfg: dict,
-           expected_types: list[str]) -> tuple[dict, dict]:
+           expected_types: list[str], reaction: str | None = None) -> tuple[dict, dict]:
     get_body, code = http(f"/messages/{mid}", "GET", token=token)
     try:
         msg = json.loads(get_body)
@@ -270,7 +315,7 @@ def verify(token: str, mid: str, body: str, phrase: str, cfg: dict,
     text = b.get("text") or ""
     atts = b.get("attachments") or []
     markup = b.get("markup") or []
-    expected = f"{body}\n\n{phrase}"
+    expected = f"{body}\n\n{(reaction + chr(10) + chr(10)) if reaction else ''}{phrase}"
     label = cfg["cta_label"]
     label_at = text.rfind(label)
 
@@ -354,11 +399,24 @@ def main() -> None:
     assert_channel_chat_id(chat_id, tool="publish_video")
 
     fm, body = parse_post(post_path)
+    # В файле может уже лежать CTA/реакция от черновика: публикатор создаёт
+    # их заново, поэтому убираем старые блоки до проверки бюджета тела.
+    body, generated = format_core.strip_generated_blocks(body, "zabava")
+    if generated["cta"] or generated["reaction"]:
+        REPORT.append("в файле были готовые блоки CTA/реакции — они заменены автоматически")
     if fm.get("channel") != channel:
         raise SystemExit(f"front matter channel={fm.get('channel')!r} != --channel {channel!r}")
-    status = fm.get("status", "draft")
-    if status == "published" and not dry_run:
-        raise SystemExit("пост уже опубликован (status: published)")
+    status = (fm.get("status") or "").strip().lower()
+    if status != "approved":
+        raise SystemExit(f"статус {status or 'не задан'!r}: публикация zabava возможна только из approved")
+    if fm.get("hold"):
+        raise SystemExit("пост на паузе (hold) — снятие только по команде владельца")
+    plan_path = REPO / "local" / "zabava-plan.json"
+    if dry_run:
+        today = format_core.published_today(channel, plan_path)
+        REPORT.append(f"DRY-RUN: публикаций сегодня {len(today)} (лимит 1)")
+    else:
+        check_daily_cap(channel, plan_path, post_path)
 
     try:
         max_text = int(fm.get("max_text") or MAX_TEXT)
@@ -384,8 +442,9 @@ def main() -> None:
         media = [("video", video_path)]
     elif images_value:
         raw_paths = [p.strip() for p in images_value.split("|") if p.strip()]
-        if not 1 <= len(raw_paths) <= MAX_IMAGES:
-            raise SystemExit(f"фото должно быть от 1 до {MAX_IMAGES}, сейчас {len(raw_paths)}")
+        max_images = int(cfg.get("max_images", MAX_IMAGES))
+        if not 1 <= len(raw_paths) <= max_images:
+            raise SystemExit(f"фото должно быть от 1 до {max_images}, сейчас {len(raw_paths)}")
         for raw in raw_paths:
             img_path = resolve_path(raw)
             if not img_path.exists():
@@ -402,13 +461,20 @@ def main() -> None:
 
     phrase, cta_path, cta_data = pick_cta(channel, cfg)
     cta_md = build_cta(phrase, cfg)
-    text = f"{body}\n\n{cta_md}"
+    reaction = pick_reaction(channel, post_path, plan_path)
+    text = f"{body}\n\n{(reaction + chr(10) + chr(10)) if reaction else ''}{cta_md}"
     if len(text) > 4000:
         raise SystemExit(f"итоговый текст {len(text)} > 4000")
 
-    # --- упоминания запрещённых организаций (все каналы) ---
-    # Правило владельца 12.11.2026: единый гейт shared/forbidden_orgs.py.
-    assert_no_forbidden_orgs(text)
+    # --- единый движок формата (CTA последней строкой, бюджет тела, запрет оргов) ---
+    core_result = format_core.check_post(
+        post_path, channel=channel, fm=fm, text=text,
+        for_publish=True, check_spellcheck=False)
+    for issue in core_result.issues:
+        REPORT.append(str(issue))
+    if not core_result.ok:
+        write_report(channel)
+        raise SystemExit("format_core: " + "; ".join(i.message for i in core_result.errors))
 
     REPORT.append(f"канал: {channel} ({cfg.get('title', '')}), chat_id={chat_id}")
     REPORT.append(f"пост: {post_path.name}, статус: {status}")
@@ -460,7 +526,7 @@ def main() -> None:
         write_report(channel)
         raise SystemExit("POST /messages не удался, см. отчёт")
 
-    checks, got = verify(token, mid, body, phrase, cfg, expected_types)
+    checks, got = verify(token, mid, body, phrase, cfg, expected_types, reaction=reaction)
 
     duration = None
     media_urls = []
@@ -498,8 +564,14 @@ def main() -> None:
         fm_out["images"] = " | ".join(media_urls)
     fm_out["media_count"] = str(len(got["attachments"]))
     fm_out["cta"] = phrase
-    fm_lines = "\n".join(f"{k}: {v}" for k, v in fm_out.items())
-    post_path.write_text(f"---\n{fm_lines}\n---\n\n{body}\n", encoding="utf-8", newline="\n")
+    if reaction:
+        fm_out["reactions"] = "true"  # факт авто-блока, вне бюджета тела
+    # Сохраняем все неизвестные поля исходного front matter и их порядок.
+    fm.update(fm_out)
+    post_path.write_text(fm.render() + ("\n" if not body.startswith("\n") else "") + body,
+                         encoding="utf-8", newline="\n")
+    if reaction:
+        format_core.mark_reaction_used(channel, post_path.name, reaction)
 
     recent = list(cta_data.get("recent") or []) + [phrase]
     cta_data["recent"] = recent[-RECENT_KEEP:]

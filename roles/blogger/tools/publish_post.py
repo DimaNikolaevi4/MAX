@@ -18,14 +18,20 @@
                                или video_file); видео и есть обложка поста
   video_source: <канал>:<mid> — откуда взять видео, если файла нет на этой
                                машине (скачивание с CDN по GET /messages/{mid})
-  notify: true|false         — пуш-уведомление подписчикам
+  notify: true|false         — пуш-уведомление (по умолчанию true)
+  status: approved           — черновики, hold, published и удалённые не идут
+  format_core: 1             — НОВЫЕ посты ядра создаются с этим полем;
+                               старые посты без поля живут в legacy-режиме
+  cta_target: self|ainow     — адресат CTA (чередование в cta-history.json)
 Поля, дописываемые после публикации: status: published, published_at,
 message_id, channel_id, url, image.
 
-Проверки перед POST: длина <= 4000; последний блок — CTA-цитата
-`> **Подписывайтесь на [<метка>](<url>)** — ...`; конфиг канала —
-roles/blogger/config/channels.json (cta_label/cta_url).
-После POST: GET-контроль (вложение, ссылки, длина) и запись архива.
+Проверки перед POST делегированы shared/format_core.py (AGENTS.md §0):
+длина, заголовок, воздух, CTA-цитата со ссылкой адресату, вопрос, реакции,
+медиа (включая видео), вёрстка, перелинковка, запрещённые организации.
+Параметры канала — roles/blogger/config/channels.json. Все неизвестные поля
+front matter сохраняются при перезаписи архива.
+После POST: GET-контроль (вложение, CTA, вопрос, ссылки) и запись архива.
 
 Отчёт: local/publish-<канал>.txt (UTF-8, читать инструментом чтения файлов —
 консоль в cp1251).
@@ -45,13 +51,21 @@ from pathlib import Path
 
 sys.path.insert(0, str(next(p for p in Path(__file__).resolve().parents if (p / ".git").exists())))
 from shared.paths import REPO, CONFIG, ensure_publish_allowed  # noqa: E402
+from shared import format_core  # noqa: E402
 from shared.post_guard import assert_channel_chat_id  # noqa: E402
 from shared.text_check import check_text, format_issue  # noqa: E402
 from shared.readability import check_readability, format_issue as format_read_issue  # noqa: E402
 from shared.lexicon import check_lexicon  # noqa: E402
-from shared.forbidden_orgs import assert_no_forbidden_orgs  # noqa: E402
 API = "https://platform-api2.max.ru"
 REPORT = []
+
+
+def fail(message: str, channel: str = "common") -> None:
+    """Записывает отчёт и отказывает в публикации."""
+    REPORT.append("FAIL: " + message)
+    (REPO / f"local/publish-{channel}.txt").write_text(
+        "\n".join(REPORT), encoding="utf-8")
+    raise SystemExit(message)
 
 
 MIME = {".mp4": "video/mp4", ".mov": "video/quicktime",
@@ -155,28 +169,21 @@ def resolve_media(name: str):
     return None
 
 
-def check_header_aspect(path: Path, exempt: bool = False) -> None:
-    """Правило 5д (AGENTS.md): одиночное изображение поста — 16:9 или шире.
-
-    Порог — не уже 3:2 (соотношение >= 1,50): квадрат, портрет и 4:3 занимают
-    узкое окно, и текст поста встаёт в узкую колонку. Альбомы (image_files)
-    под правило не попадают. Осознанный обход — флаг --allow-narrow.
-    """
+def check_header_aspect(fm, ch: dict, exempt: bool = False) -> None:
+    """Тонкий вызов format_core: проверка одиночного изображения и видео."""
     if exempt:
-        REPORT.append(f"WARN (5д): исключение владельца — формат не проверяется: {path.name}")
+        REPORT.append("WARN (медиа): media_aspect_exempt — проверка отключена")
         return
-    try:
-        from media_aspect import MIN_AR, measure
-    except Exception:  # инструмент недоступен — не блокируем публикацию
-        return
-    w, h, ar = measure(path)
-    if ar < MIN_AR:
-        raise SystemExit(
-            f"медиа уже 16:9 (правило 5д): {path.name} — {w}x{h}, соотношение {ar:.3f}, "
-            f"порог {MIN_AR:.2f} (3:2). Квадрат/портрет/4:3 запрещены: текст встаёт "
-            f"в узкую колонку. Нужен кадр 16:9 или шире (можно из альбома серии); "
-            f"обход — --allow-narrow")
-    REPORT.append(f"формат медиа ok (5д): {path.name} — {ar:.3f}")
+    result = format_core.CheckResult(
+        channel=ch.get("slug", ""), profile=format_core.profile_of(ch), mode="CORE")
+    format_core.check_media_aspect(fm, ch, result, require_exists=False)
+    for issue in result.issues:
+        REPORT.append(str(issue))
+    if not result.ok:
+        (REPO / f"local/publish-{ch.get('slug', 'common')}.txt").write_text(
+            "\n".join(REPORT), encoding="utf-8")
+        raise SystemExit("пропорции медиа: " + "; ".join(i.message for i in result.errors))
+
 
 def main() -> None:
     args = sys.argv[1:]
@@ -210,60 +217,46 @@ def main() -> None:
     # Сторож: каналы — только отрицательный chat_id (диалоги/группы запрещены).
     assert_channel_chat_id(chat_id, tool="publish_post")
 
-    raw = post_path.read_text(encoding="utf-8")
-    m = re.match(r"\A---\r?\n(.*?)\r?\n---\r?\n?", raw, re.S)
-    if not m:
-        raise SystemExit("нет front matter")
-    fm_text = m.group(1)
-    fm = {}
-    for line in fm_text.splitlines():
-        if ":" in line:
-            k, v = line.split(":", 1)
-            fm[k.strip()] = v.strip()
-    text = raw[m.end():].strip()
-    # CTA можно переопределить во front matter поста (рекламные посты).
-    cta_label = fm.get("cta_label") or ch.get("cta_label")
-    cta_url = fm.get("cta_url") or ch.get("cta_url")
+    fm, text = format_core.split_post(post_path.read_text(encoding="utf-8"))
+    text = text.strip()
 
     if fm.get("channel") != channel:
-        raise SystemExit(f"front matter channel={fm.get('channel')!r} != --channel {channel!r}")
+        fail(f"front matter channel={fm.get('channel')!r} != --channel {channel!r}", channel)
+    # Статус: публикуем только approved. Остальные состояния — отказ.
+    status = (fm.get("status") or "").strip().lower()
+    if status in ("published", "deleted", "to_delete", "draft", "hold", ""):
+        fail(f"статус {status or 'не задан'!r}: публикация возможна только из approved", channel)
 
-    # --- проверки перед отправкой ---
-    if len(text) > 4000:
-        raise SystemExit(f"длина текста {len(text)} > 4000")
-    cta_re = re.compile(
-        rf"^> \*\*Подписывайтесь на \[{re.escape(cta_label)}\]\({re.escape(cta_url)}\)\*\* — .+$",
-        re.M)
-    if not cta_re.search(text):
-        raise SystemExit("нет CTA-цитаты в требуемом формате")
-    # '>' допустим только в CTA-строке
-    stray = [ln for ln in text.splitlines() if ln.startswith(">") and not cta_re.match(ln)]
-    if stray:
-        raise SystemExit(f"литеральные '>' вне CTA: {stray[:2]}")
+    # CTA-адресат: self/ainow, чередование пишется в cta-history.json.
+    if fm.get("cta_target") and fm.get("cta_target") not in ("self", "ainow"):
+        fail(f"cta_target={fm.get('cta_target')!r}, допустимо self или ainow", channel)
+    target, cta_warning = format_core.choose_cta_target(channel, fm, ch)
+    expected_label, cta_url = format_core.cta_for_target(channel, target, fm=None, ch=ch)
+    if fm.get("cta_url") and fm.get("cta_url") != cta_url:
+        fail(f"cta_url во front matter ({fm.get('cta_url')!r}) не соответствует "
+             f"адресату {target!r} ({cta_url!r})", channel)
+    if fm.get("cta_label") and fm.get("cta_label") != expected_label:
+        fail(f"cta_label во front matter ({fm.get('cta_label')!r}) не соответствует "
+             f"адресату {target!r} ({expected_label!r})", channel)
+    cta_label = expected_label
+    if cta_warning:
+        REPORT.append("WARN: " + format_core.CTA_MISSING_WARNING)
+    fm.set("cta_target", target)
 
-    # --- na100: атрибуция/ссылки на источники в пост не попадают ---
-    # Полная (проверяемая) атрибуция живёт только в черновике выпуска
-    # (channels/<slug>/digests/<дата>-draft.json, лежит в git); публикуемый
-    # текст её не содержит и на последнем этапе вычищается; лимит 4000
-    # считается без неё (решение владельца 12.11.2026). Гейт: в тексте
-    # допустима единственная ссылка — CTA на канал.
-    if channel == "na100":
-        links = re.findall(r"\[[^\]]+\]\(([^)\s]+)\)", text)
-        bad = sorted({u for u in links if u != cta_url})
-        if bad:
-            raise SystemExit(
-                "в тексте есть ссылки не из CTA — по методологии na100 "
-                "полная атрибуция живёт в черновике выпуска и из текста "
-                "вычищается до публикации: " + ", ".join(bad[:3]))
-
-    # --- упоминания запрещённых организаций (все каналы) ---
-    # Правило владельца 12.11.2026: единый гейт shared/forbidden_orgs.py.
-    assert_no_forbidden_orgs(text)
-
-    # --- проверка русского языка (LanguageTool) ---
+    # --- единый движок формата перед POST ---
     spellcheck = "--no-spellcheck" not in args
     if not spellcheck:
         args.remove("--no-spellcheck")
+    core_result = format_core.check_post(
+        post_path, channel=channel, fm=fm, text=text,
+        for_publish=True, check_spellcheck=False,  # слой 1 ниже, без второго вызова API
+        check_media=not allow_narrow, resolve_media_path_fn=resolve_media)
+    for issue in core_result.issues:
+        REPORT.append(str(issue))
+    if not core_result.ok:
+        fail("format_core: " + "; ".join(i.message for i in core_result.errors), channel)
+
+    # --- проверка русского языка (LanguageTool) ---
     if spellcheck:
         spell_ignore = [w.strip() for w in (fm.get("spell_ignore") or "").split(",") if w.strip()]
         # канальный список исключений: channels/<slug>/spell-ignore.json
@@ -376,8 +369,7 @@ def main() -> None:
         media_path = resolve_media(video_file or image_file)
         if not media_path or not media_path.exists():
             raise SystemExit(f"медиа не найдено: {video_file or image_file}")
-        if media_kind == "image":
-            check_header_aspect(media_path, bool(fm.get("media_aspect_exempt")))
+        # Пропорции изображения и видео уже проверены format_core перед POST.
         mime = MIME.get(media_path.suffix.lower(), "application/octet-stream")
         up_resp = api(tok, "POST", f"/uploads?type={media_kind}")
         up_json_head = json.loads(up_resp)
@@ -426,7 +418,8 @@ def main() -> None:
             REPORT.append(f"картинка загружена: {media_path.name}")
 
     # --- POST /messages ---
-    payload = {"text": text, "format": "markdown", "notify": fm.get("notify") == "true"}
+    payload = {"text": text, "format": "markdown",
+               "notify": not (fm.get("notify") or "").lower() == "false"}
     if attachments:
         payload["attachments"] = attachments
     pay_f = REPO / "local" / f"publish-payload-{channel}.json"
@@ -457,12 +450,17 @@ def main() -> None:
     body = json.loads(get_f.read_text(encoding="utf-8"))["body"]
     t2 = body["text"]
     markup = body.get("markup") or []
+    tail = t2[-300:]
+    last_line = t2.strip().splitlines()[-1] if t2.strip() else ""
+    core_mode = format_core.mode_of(fm)
     checks = {
         "вложения": len(body.get("attachments") or []) == (
             len(image_files) if image_files else (1 if media_kind else 0)),
-        "длина <=4000": len(t2) <= 4000,
-        "CTA в конце": f"Подписывайтесь на {cta_label}" in t2[-200:],
-        "нет '>' в тексте": ">" not in t2,
+        "длина в лимите": len(t2) <= int(ch.get("length_hard", 4000)),
+        "CTA в конце": (f"Подписывайтесь на {cta_label}" in tail
+                        and (cta_url in tail or cta_url in
+                             [x.get("url") for x in markup])),
+        "вопрос последним": (core_mode != "CORE") or "?" in last_line,
         "все ссылки на месте": all(
             u in [x.get("url") for x in markup]
             for u in re.findall(r"\]\((https?://[^)]+)\)", text)),
@@ -484,9 +482,13 @@ def main() -> None:
             if atts[0].get("duration"):
                 media_extra["video_duration"] = atts[0]["duration"]
             media_extra["media_count"] = 1
+    # Сохраняем ВСЕ поля исходного front matter (format_core, cta_target,
+    # reactions, approved_by_owner, spell_ignore, media_note,
+    # media_aspect_exempt, publish_time и любые другие) и их порядок.
     fm_out = {"channel": channel, "status": "published", "format": "markdown",
               "notify": fm.get("notify", "true"), "published_at": now,
-              "message_id": mid, "channel_id": str(chat_id)}
+              "message_id": mid, "channel_id": str(chat_id),
+              "cta_target": target}
     if url:
         fm_out["url"] = url
     if video_file:
@@ -498,8 +500,10 @@ def main() -> None:
     if media_url:
         fm_out["video" if media_kind == "video" else "image"] = media_url
     fm_out.update(media_extra)
-    fm_lines = "\n".join(f"{k}: {v}" for k, v in fm_out.items())
-    post_path.write_text(f"---\n{fm_lines}\n---\n\n{text}\n", encoding="utf-8", newline="\n")
+    fm.update(fm_out)
+    post_path.write_text(fm.render() + ("\n" if not text.startswith("\n") else "") + text,
+                         encoding="utf-8", newline="\n")
+    format_core.record_cta_target(channel, post_path.name, target, cta_url, now)
 
     REPORT.append(f"OK: {post_path.name} -> {url or mid}")
     REPORT.append(f"текст {len(t2)} симв., разметка {len(markup)}")
