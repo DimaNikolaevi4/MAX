@@ -1,331 +1,132 @@
 # MAX — методика ведения каналов в MAX и Telegram
 
-Репозиторий — это **методика ведения нескольких каналов** через Bot API: MAX —
-основная площадка, Telegram — закрывающийся канал `tg_neuro`. Проект
-спроектирован так, чтобы с ним одинаково комфортно работал любой ИИ-агент:
-локальный (OpenCode и подобные) или онлайн. Агент готовит посты, изучает архив
-опубликованных материалов для соблюдения стиля канала, отправляет их через
-Bot API и коммитит результат в git.
+Репозиторий — методика ведения каналов через Bot API MAX и релей Telegram.
+Главный нормативный документ — `AGENTS.md` (особенно §0 FORMAT CORE v1).
+Этот файл — обзор для человека, не источник правил.
 
-Главный документ для агента — **`AGENTS.md`**: методика, правила, ограничения.
-Этот файл — обзор для человека.
+## Каналы и профили
 
-## Роли бота
+Реестр — `roles/blogger/config/channels.json` (токенов там нет). Поля профиля:
+`format_profile` (`core|zabava|telegram`), `cta_target_mode` (`self|alternate`),
+лимиты медиа, длины, реакций и слота публикации.
 
-Бот AI Now (`@se14808890_bot`) и методика разделены на три независимые роли:
+| Канал | Профиль | Статус | Слот | CTA |
+| --- | --- | --- | --- | --- |
+| `ainow` | core | активен | 12:00 (Format 1), 21:30 (план) | self |
+| `na100` | core | активен, автопилот по утренней команде | 07:30 | чередование self ↔ ainow |
+| `catden` | core | активен | 20:00 | self |
+| `administrator` | core | активен, перезапуск 20.11 | 09:00 вт/чт | чередование self ↔ ainow |
+| `zabava` | zabava | активен | строго 1 пост/сутки, 19:30 | self, призыв без кавычек |
+| `tg_neuro` | telegram | активен, миграция аудитории в ainow | по команде | ainow, inline-кнопка |
+| `ozon_group` | — | удалён 12.11 | — | — |
 
-| Роль | Папка | Что делает |
-| --- | --- | --- |
-| **Архивариус** | `roles/archivist/` | личные фото и видео → приватный «архив изображения»; в каналы блогера не публикует |
-| **Блогер** | `roles/blogger/` | посты в каналы MAX и Telegram. Согласование постов — в рабочем чате с агентом, не в MAX |
-| **Новостной бот** | `roles/newsbot/` | личные дайджесты по расписанию. Единственная роль, которой разрешён диалог с ботом |
+Ядро формата действует только на посты с `format_core: 1`; существующие посты
+без поля — legacy и не переписываются массовой доводкой. `zabava` и `tg_neuro`
+имеют канонические исключительные стили.
 
-Общее для всех ролей — `shared/`: `paths.py` (пути репозитория), `post_guard.py`
-(запрет публикации в диалоги и группы), `text_check.py` (орфография и
-пунктуация через LanguageTool), `verify_layout.py` (проверка структуры).
-Личный диалог бота закреплён за новостным ботом; публикация в него остальным
-запрещена — см. `docs/bot-publications-archive.md`.
+## Перелинковка
 
-## Каналы
-
-Реестр — `roles/blogger/config/channels.json` (токенов там нет). Папка канала:
-`roles/blogger/channels/<slug>/`.
-
-| # | Канал | Тип | Тема / назначение | Площадка | URL | Статус |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1 | `ainow` | 🏛️ Основной | AI: обзоры, кейсы, дайджесты, инструменты — **главный канал** автопилота | MAX | https://max.ru/channel_ainow | ✅ активен, публикации идут |
-| 2 | `na100` | 🧰 Служебный | Утренний дайджест технологий ИИ (06:30 → 07:30) | MAX | https://max.ru/channel_na100 | ✅ активен (автопубликация — исключение владельца, 12.11.2026) |
-| 3 | `catden` | 🏛️ Основной | Коты, кошки и котята: породы, уход, здоровье | MAX | https://max.ru/channel_catden | ✅ активен (autopilot in-progress) |
-| 4 | `zabava` | 🏛️ Основной | Забавное: юмор и короткие видео | MAX | https://max.ru/channel_zabava | ✅ активен (слот 20.11 — scheduled) |
-| 5 | `administrator` | 🧰 Служебный | Канал-отчёт: форматы, метрики, автопилот | MAX | https://max.ru/channel_administrator | 🔄 relaunch (20.11, пилот «Цифра недели») |
-| 6 | `tg_neuro` | 🧰 Служебный (Telegram) | «Нейро Мульт Студия»; закрыается, аудитория → ainow (перелинковка) | Telegram | https://t.me/Neuro_Animation_Studio | ⚠️ closing |
-| 7 | `ozon_group` | ❌ Удалён | «Ozon Находки» — закрыт 12.11.2026, слот отдан `catden` | MAX | https://max.ru/channel_ozon_group | ❌ deleted |
-
-Служебные каналы обслуживают основные: `na100` — утренний дайджест, `administrator`
-— канал-отчёт об управлении, `tg_neuro` — телеграм-канал. Основные контентные:
-`ainow`, `catden`, `zabava`.
-
-## Перелинковка между каналами
-
-- **tg_neuro → ainow** — актуальный поток (телеграм → MAX, релей `deploy/tg-relay.php`).
-- Единичные переливки между основными каналами — норма.
-
-У закрывающихся каналов призыв (CTA) ведёт на основной канал `ainow`
-(`cta_label`/`cta_url` в реестре). У `ainow`, `zabava` и `catden` — на себя.
+- `ainow` — 1–2 ссылки на прошлые посты канала.
+- `catden` — ровно 1 ссылка на прошлый пост канала.
+- `na100` — 0 внешних ссылок, кроме CTA.
+- `administrator` — 0–1 ссылка на `ainow`.
+- `tg_neuro` — минимум 1 ссылка на конкретный опубликованный пост `ainow`.
 
 ## Карта репозитория
 
 ```
 MAX/
-├── AGENTS.md                 # методика и правила для ИИ-агентов (главный файл)
-├── README.md                 # этот файл
-├── docs/                     # 17 документов методики
-│   ├── bot-setup.md              # настройка бота с нуля (проверено на практике)
-│   ├── blogger-calendar.md       # календарь: что вышло, что в плане, что удалено (собирается 07:20)
-│   ├── agent-onboarding.md       # вход для нового ИИ-агента
-│   ├── blogger-ainow-prompt.md   # промт ИИ-блогера канала AI
-│   ├── layout-verification.md    # что проверяет shared/verify_layout.py
-│   ├── scheduled-tasks.md        # задачи Планировщика Windows
-│   ├── stats-analysis.md         # анализ утренних снимков статистики
-│   ├── migration-plan.md         # план миграции закрывающихся каналов
-│   ├── closure-2026-11-05.md     # итог закрытия каналов 05.11.2026
-│   ├── na100-relaunch-2026-11-10.md  # перезапуск na100 как дайджеста
-│   ├── forbidden-orgs.md         # правило: запрещённые организации (удаление контекста целиком)
-│   ├── techdigest-methodology.md # методология дайджеста na100
-│   ├── alice-browser-editing.md  # правка постов через ИИ «Алиса» в браузере
-│   ├── qwen-literary-editing.md  # литературно-философская правка через Qwen (ручной режим)
-│   ├── bot-hosting-webhook-plan.md   # план переезда поллера на хостинг
-│   ├── bot-publications-archive.md   # архив методики публикации в личку бота
-│   └── handoff-2026-11-12.md     # сводка передачи между машинами от 12.11.2026
-├── roles/
-│   ├── archivist/
-│   │   ├── docs/archive-channel.md   # лимиты и схема наполнения архива
-│   │   └── tools/                   # archive_plan.py, archive_upload.py,
-│   │                                # inbox_batch_*.py, collect_devices.py…
-│   ├── blogger/
-│   │   ├── bin/                     # post.php (PHP-публикатор) и задачи
-│   │   │                            # Планировщика: publish_scheduled.ps1,
-│   │   │                            # publish_scheduled_catden.ps1,
-│   │   │                            # publish_scheduled_na100.ps1,
-│   │   │                            # stats_snapshot.ps1, zabava_publish.ps1
-│   │   ├── config/channels.json     # реестр каналов (без токенов)
-│   │   ├── channels/<slug>/         # style.md, cta-phrases.json, posts/;
-│   │   │                            # proofread.md — статус вычитки (ainow)
-│   │   └── tools/                   # 24 инструмента — см. ниже
-│   └── newsbot/
-│       ├── TASK.md                  # правила и состояние эксперимента
-│       └── src/                     # digest_bot.py, brief.py, news_digest.py,
-│                                    # send_msg.py, updates_once.py
-├── shared/                   # paths.py, post_guard.py, text_check.py, verify_layout.py
-├── deploy/tg-relay.php       # релей публикации в Telegram (хостинг 0s3.ru)
-├── archive/review.php        # устаревшая методика: отправка в личку бота
-├── nev/                      # исходные материалы/заготовки (намеренно в корне), см. nev/README.md
-└── local/                    # токены, CA-бандл, логи, статистика, планы
-                              # (в git не попадает, кроме tokens.example.json)
+├── AGENTS.md                  # §0 FORMAT CORE v1 — главный формат
+├── README.md                  # этот файл (обзор)
+├── docs/
+│   ├── methodology/           # методологии каналов, в т.ч. channels-classification.md
+│   ├── agent-onboarding.md    # вход для агента
+│   ├── blogger-calendar.md    # автокалендарь (07:20)
+│   ├── scheduled-tasks.md     # cron Beget и задачи
+│   ├── stats-analysis.md      # выводы по статистике
+│   ├── catden-*.md            # план, медиа-манифест, execution playbook
+│   └── archive/               # устаревшие протоколы, не нормативно
+├── roles/blogger/
+│   ├── channels/<slug>/       # style.md, cta-phrases.json, posts/, digests/
+│   ├── config/channels.json   # реестр каналов и параметры формата
+│   └── tools/                 # 27 инструментов — см. ниже
+├── shared/                    # paths.py, post_guard.py, text_check.py, verify_layout.py
+├── local/                     # токены, CA, логи, медиа, временные отчёты (gitignored)
+└── archive/                   # устаревшие скрипты
 ```
 
-Картинки и исходники статей (`nev/**/*.docx`, `nev/posting/images/`) в git не
-хранятся — только локально, см. `AGENTS.md`, раздел 2в.
-
-## Инструменты блогера
-
-`roles/blogger/tools/`, запуск из корня репозитория.
+## Инструменты блогера (27 строк, 30 скриптов)
 
 | Скрипт | Назначение |
 | --- | --- |
-| `publish_post.py` | пост в канал MAX: текст, обложка (`image_file`), альбом (`image_files`, до 12), видео (`video_file`/`video_source`), CTA |
-| `publish_video.py` | пост с медиа (формат «Забавное»): видео или альбом до 6 фото (`image_files`) |
-| `publish_plan.py` | следующий `pending`-пост из плана «Забавного» (`local/zabava-plan.json`) |
-| `publish_scheduled.py` | все посты `status: approved` с датой из имени ≤ сегодня (для Планировщика) |
-| `publish_telegram.py` | пост в Telegram через релей `deploy/tg-relay.php` |
-| `tg_direct.py` | резервная отправка в Telegram напрямую (`--ip`), если релей недоступен |
-| `digest_build.py` | детерминированная сборка выпуска na100 (06:30): фиды → скоринг → черновик |
-| `digest_cover*.py`, `pick_fallback.py`, `cover_theme.py` | обложки дайджеста: сборка из заголовков, фоновые пулы |
-| `pick_image.py` | подбор картинки из архива AI для поста закрывающегося канала |
-| `fetch_images.py` | выгрузка обложек постов AI в локальную библиотеку |
-| `make_card.py` | титульная карточка поста — только по прямому указанию владельца |
-| `ensure_cta_quote.py` | пакетная правка CTA и текстовые замены в опубликованных постах |
-| `build_markdown.py` | сборка текста точными заменами с контролем числа вхождений |
-| `markup_fragments.py` | снятие фрагментов разметки из ответа `GET /messages` (UTF-16) |
-| `delete_post_by_slug.py` | удаление поста канала по короткому URL |
-| `stats_snapshot.py` | снимок статистики: подписчики, просмотры, прирост |
-| `build_calendar.py` | сборка `docs/blogger-calendar.md`: публикации, план, удаления (`--push` — коммит и пуш) |
-| `lexicon_calibrate.py`, `pool_add.py` | калибровка лексикона чистоты; добавление обложек в пул |
-| `zabava_random_plan.py` | случайный старый видео-пост «Забавного» → в план публикации |
+| `publish_post.py` | Пост в MAX: текст, image_file/image_files, видео, CTA |
+| `publish_video.py` | Публикация с видео/фото (канон zabava) |
+| `publish_plan.py` | Следующий pending-пост из local/zabava-plan.json |
+| `publish_scheduled.py` | Все approved-посты с датой ≤ сегодня |
+| `publish_telegram.py` | Пост в Telegram через релей |
+| `tg_direct.py` | Резервная отправка в Telegram напрямую |
+| `digest_build.py` | Детерминированная сборка дайджеста na100 |
+| `digest_cover*.py` | Три скрипта обложек: digest_cover, digest_cover_photo, digest_cover_video |
+| `digest_polish.py` | Чек-лист выпуска na100 |
+| `pick_fallback.py` | Выбор фона из пула na100 |
+| `cover_theme.py` | Тема/контраст для обложек |
+| `pick_image.py` | Подбор изображения из архива AI |
+| `fetch_images.py` | Выгрузка обложек AI в локальную библиотеку |
+| `make_card.py` | Титульная карточка — только по прямой команде владельца |
+| `ensure_cta_quote.py` | Пакетные правки CTA |
+| `build_markdown.py` | Сборка текста точными заменами |
+| `markup_fragments.py` | Фрагменты разметки из GET /messages |
+| `delete_post_by_slug.py` | Удаление поста по короткой ссылке |
+| `stats_snapshot.py` | Снимок подписчиков и просмотров |
+| `build_calendar.py` | Сборка docs/blogger-calendar.md |
+| `lexicon_calibrate.py`, `pool_add.py` | Калибровка штампов и пул обложек |
+| `ainow_polish.py` | Чек-лист поста ainow |
+| `media_aspect.py` | Проверка пропорций медиа |
+| `plan_rhythm.py` | Проверка ритма пар «альбом → пост» |
+| `admin_digest_build.py` | Пост «Цифра недели» для administrator |
+| `export_plan.py` | Экспорт плана в канал-календарь |
+| `zabava_random_plan.py` | Рандом-повтор старого ролика в план |
 
-## Формат поста
+Запуск — из корня репозитория, `py roles/blogger/tools/<скрипт>.py`.
 
-Каждый пост — отдельный Markdown-файл с front matter:
+## Front matter поста
 
-```markdown
----
-channel: ainow            # slug канала: совпадает с папкой и с --channel
+```yaml
+channel: ainow            # slug канала
 status: draft             # draft -> approved -> published
-format: markdown          # markdown | html
-notify: true              # push-уведомления (для каналов должно быть true)
-image_file: local/images/ainow/2026-11-10/cover.png   # обложка (необязательно)
-video_file: local/video/zabava/AaE61N2beGI-1.mp4       # видео вместо обложки
-video_source: zabava:AaHDr80pbqA                        # или взять видео из поста-источника
-image_files: "путь1.png | путь2.png"                    # альбом до 6 фото
-cta_label: AI                                           # переопределение призыва
-cta_url: https://max.ru/channel_ainow
-spell_ignore: "слово, ещё-слово"                        # не считать ошибками
-published_at: null        # поля ниже дописывают скрипты, вручную не заполнять
-message_id: null
-channel_id: null
-url: null
-views: null
-edited_at: null
----
-
-Текст поста...
+format: markdown
+notify: true
+format_core: 1            # ядро §0; только для новых постов core-каналов
+cta_target: self          # self | ainow — для na100/administrator
+reactions: true           # факт авто-блока реакций, пишется публикатором
+publish_time: 09:00       # МСК; слот поста, если отличается от слота канала
+hold: причина             # пауза до прямой команды владельца
+image_file: local/images/ainow/.../cover.png
+video_file: local/video/zabava/....mp4
+spell_ignore: "слово, ещё-слово"
 ```
 
-Служебные поля (`published_at`, `message_id`, `channel_id`, `url`, `views`,
-`edited_at`, `media_count`, `images`, `imported`) заполняют публикаторы и
-скрипты статистики. Поле `status` читают все публикаторы: `published` —
-повторно не отправляется.
+`published_at`, `message_id`, `channel_id`, `url`, `views`, `edited_at`,
+`media_count`, `images` дописывают публикаторы и статистика. `draft` без «ок»
+не публикуется; `published` повторно не отправляется.
 
-Поле `hold: <причина>` ставит пост на паузу: `publish_telegram.py` откажется
-его отправлять, пока поле не снято, а календарь покажет причину в разделе
-«Черновики». Так лежат три черновика `tg_neuro` — ждут команды владельца.
+## Публикация и отложенные слоты
 
-Статусы (жизненный цикл):
+API MAX не умеет отложенную отправку — расписание делает хостинговый cron
+(`post_cron.php`) с слотами 12:00, 19:30, 20:00, 21:30 и утренние задачи.
+Время конкретного поста задаётся `publish_time`; дата — именем файла.
+Публикация вручную — только по прямой команде владельца.
 
-- `draft` — черновик, публике не виден, бот его **не отправит**;
-- `approved` — человек подтвердил публикацию, Планировщик может отправлять;
-- `published` — отправлено, файл хранится как архив с ID и ссылкой.
+## Статистика и проверки
 
-## Как опубликовать пост
+Актуальные снимки собирает `stats_cron.php` на хостинге в
+`/0s3/blogger-data/stats/`; сводные отчёты — `docs/stats-analysis.md`.
+`py shared/verify_layout.py` — норма 0 ошибок, 0 предупреждений.
+`shared/text_check.py` — LanguageTool, канальные чекеры перечислены в `style.md`.
 
-### PHP (хостинг или машина с PHP 8.1+ и curl)
+## Безопасность
 
-```bash
-php roles/blogger/bin/post.php roles/blogger/channels/ainow/posts/<файл>.md
-php roles/blogger/bin/post.php <файл> --dry-run          # показать payload, не отправляя
-php roles/blogger/bin/post.php <файл> --chat-id=123456   # временно переопределить chat_id
-```
-
-Переменные окружения PHP-публикатора: `MAX_TOKENS_FILE` (по умолчанию
-`local/tokens.json`), `MAX_API_BASE` (по умолчанию `https://platform-api2.max.ru`),
-`MAX_CA_CERT` (CA-сертификат, например Минцифры), `MAX_INSECURE=1` (отключить
-проверку TLS — только для отладки).
-
-### Python (рабочая машина на Windows)
-
-```powershell
-$env:MAX_HTTP='python'
-$env:MAX_CA_CERT=(Resolve-Path local/russian_ca_bundle.pem).Path
-py roles/blogger/tools/publish_post.py --channel ainow roles/blogger/channels/ainow/posts/<файл>.md
-```
-
-`MAX_HTTP=python` переводит транспорт на stdlib urllib: TLS curl/schannel не
-принимает российские цепочки сертификатов CDN `iu.oneme.ru` (см. AGENTS.md,
-раздел 5). `MAX_CA_CERT` — бандл «корень + промежуточный Минцифры»
-(`local/russian_ca_bundle.pem`), добавляется в доверие и к `--cacert` для curl.
-`MAX_INSECURE=1` — отключить проверку TLS (только отладка).
-
-### Пост с медиа
-
-```powershell
-py roles/blogger/tools/publish_video.py --channel zabava --dry-run roles/blogger/channels/zabava/posts/<файл>.md
-py roles/blogger/tools/publish_video.py --channel zabava <файл>.md
-```
-
-Видео берётся из `video_file` (или `--video <файл>`), альбом — из `image_files`
-(до 6 фото). Если файла нет на машине, `video_source: <канал>:<mid>` заставляет
-публикатор скачать видео из поста-источника.
-
-### План «Забавного»
-
-```powershell
-py roles/blogger/tools/publish_plan.py --status
-py roles/blogger/tools/publish_plan.py --dry-run
-py roles/blogger/tools/publish_plan.py
-```
-
-Берётся первый `pending`-пост из `local/zabava-plan.json`; интервалов и дневных
-лимитов нет — публикуется всё, что готово.
-
-### Telegram (`tg_neuro`)
-
-```powershell
-py roles/blogger/tools/publish_telegram.py --channel tg_neuro roles/blogger/channels/tg_neuro/posts/<файл>.md
-```
-
-Транспорт — POST на релей `deploy/tg-relay.php` (хостинг 0s3.ru): api.telegram.org
-из локальной среды недоступен. Резервный путь при недоступном релее —
-`tg_direct.py --ip <IP>`. Под постом ставится inline-кнопка (`button_url` из
-front matter или `cta_url` канала).
-
-## Планировщик Windows
-
-Задачи работают под текущим пользователем (ПК выключен — запуск пропускается,
-при следующем входе срабатывает `StartWhenAvailable`). Вне окна 07:00–10:00
-публикатор ничего не делает, чтобы догоняющий запуск не вышел днём.
-
-| Задача | Когда (МСК) | Что делает |
-| --- | --- | --- |
-| `MAX stats snapshot` | 07:00 | снимок подписчиков и просмотров ainow и zabava |
-| `MAX ainow - publish approved` | 07:15 | публикует посты `status: approved` с датой ≤ сегодня |
-| `MAX zabava - publish plan` | 19:30 (локально, если включена; активная публикация zabava — хостинг 19:30 МСК) | публикует `pending`-посты из `local/zabava-plan.json` |
-| `MAX blogger calendar` | 07:20 | пересобирает календарь `docs/blogger-calendar.md` и пушит его |
-
-Настройка задач и логи — `docs/scheduled-tasks.md`, `local/logs/`.
-`publish_scheduled.py` перед публикацией делает `git fetch` и отказывается
-работать, если `origin/main` ушёл вперёд: сначала `git pull --rebase`.
-
-## Календарь блогера
-
-`docs/blogger-calendar.md` — сводка по всем каналам: что вышло за последние 30
-дней (с просмотрами и ссылками), что стоит в плане, что удалено, какие каналы
-ждут удаления. Файл пересобирается каждый день в 07:20 (`build_calendar.py`) и
-пушится; вручную его править не нужно — данные берутся из front matter постов,
-плана «Забавного» и реестра каналов.
-
-```powershell
-py roles/blogger/tools/build_calendar.py                 # пересобрать локально
-py roles/blogger/tools/build_calendar.py --days 7        # короткий горизонт
-py roles/blogger/tools/build_calendar.py --push          # пересобрать, закоммитить, запушить
-```
-
-## Статистика
-
-`stats_snapshot.py` снимает подписчиков и просмотры постов, кладёт
-`local/stats/<канал>-<дата>.json` и сравнивает с предыдущим снимком. Выводы —
-`docs/stats-analysis.md`. Сырые данные в git не попадают.
-
-## Проверка текста и структуры
-
-- `shared/text_check.py` — орфография, пунктуация и грамматика через публичный
-  API LanguageTool; публикаторы вызывают его перед отправкой. Слова из
-  `spell_ignore` в посте не считаются ошибками.
-- `shared/verify_layout.py` — проверка структуры после переносов и
-  переименований: пути, конфиги, компиляция, безопасные прогоны. Норма — 0
-  ошибок, 0 предупреждений. Описание — `docs/layout-verification.md`.
-
-## Правила безопасности
-
-1. **Токены и ключи никогда не попадают в git.** Храним локально в
-   `local/tokens.json` (скопируйте из `local/tokens.example.json`), путь закрыт
-   `.gitignore`.
-2. Публикация только в каналы (`chat_id < 0`). Диалоги и группы запрещены —
-   сторож `shared/post_guard.py`, архив старой методики — `archive/review.php`
-   и `docs/bot-publications-archive.md`.
-3. Для GitHub Actions токен кладём в Secrets репозитория, а не в файл.
-
-## Ограничения API MAX
-
-- Домен: `https://platform-api2.max.ru`, токен в заголовке `Authorization`
-  (не в query-параметрах).
-- Лимит: **не более 2 сообщений в секунду** в один канал. Лимит редактирования
-  тот же — при массовой правке ставьте паузу 0,5–1 сек на пост.
-- Лимит текста поста: **4000 символов**.
-- В каналы отправка только с `notify = true` (или без параметра).
-- Отложенной публикации в API нет — расписание делает внешний Планировщик
-  (раздел выше), а не сам API.
-- Загрузка изображения: `POST /uploads?type=image` → одноразовый URL → загрузка
-  файла → токен вложения в `POST /messages`. На Windows надёжнее
-  `MAX_HTTP=python` (TLS к `iu.oneme.ru`).
-- Видео: `POST /uploads?type=video`; пока `attachment.not.ready`, публикатор
-  повторяет отправку. Видео заменяет обложку.
-
-Стратегия отладки: сначала `--dry-run`, затем отправка. Подробности и
-постмортемы — `AGENTS.md`.
-
-
-## Протокол автоисправления постов (AI Orchestration)
-
-Для поддержания качества контента агент выполняет автоматическую сверку и исправление постов канала `ainow` **за последние 2 дня**, если владелец создал или отредактировал их вручную.
-
-### 🔑 Главное правило маркера
-Если в локальном `.md` файле поста **нет** явной пометки об утверждении (например, в YAML front matter: `approved_by_owner: true` или комментарием: `<!-- ИЗМЕНЕНИЯ УТВЕРЖДЕНЫ ВЛАДЕЛЬЦЕМ -->`), агент **обязан** считать этот пост "сырым" и автоматически привести его к идеалу.
-
-### Алгоритм действий агента при обнаружении поста без маркера:
-1. **Получение:** Получить актуальные данные поста из канала через `GET /messages/{messageId}`.
-2. **Обработка:** Прогнать текст через **4 слоя вычитки** и строго применить форматирование из `roles/blogger/channels/ainow/style.md`.
-3. **Безопасное редактирование (PUT):** Отправить запрос `PUT /messages` для обновления текста и разметки поста в канале. *Примечание: при формировании запроса строго следуй протоколу сохранения медиафайлов и вложений, описанному в `AGENTS.md` §9.*
-4. **Обновление архива:** Перезаписать локальный `.md` файл исправленным текстом и **добавить в него маркер** `approved_by_owner: true`, чтобы в следующий раз не трогать этот пост.
-5. **Dry-run (Обязательно):** Перед любым применением изменений агент обязан показать владельцу четкий `DIFF` (Было -> Стало) и дождаться явной команды "ОК".
-
-*Запрещено:* Утверждать, что API возвращает только plain-text. Игнорировать 4 слоя вычитки. Менять посты, которые уже имеют маркер утверждения владельцем.
+1. Токены и ключи — только в gitignored `local/tokens.json`.
+2. Публикация только в каналы (`chat_id < 0`); диалоги запрещены.
+3. Соседние репозитории (`kalendar`, `Konkurs`, `vol`, `cross-autoposting`) — вне
+   скоупа без отдельной прямой команды владельца.

@@ -39,7 +39,7 @@
 **Перенос на хостинг 16–17.11.2026 (решение владельца).** Автопубликация
 ainow, catden и zabava + сбор статистики по всем каналам работают на
 Beget (`post_cron.php` + `stats_cron.php` в `/0s3/blogger-cron/`, крон
-07:15–07:45, 12:00 (Format 1), 19:30 (zabava), 20:00 (catden), 21:30 (посты плана ainow) — добавлено 21.11.2026). Модель «catden»: подготовка поста локально
+12:00 (Format 1 ainow), 19:30 (zabava), 20:00 (catden), 21:30 (посты плана ainow); статистика — 07:45). Модель «catden»: подготовка поста локально
 (гейты, CTA, статус approved), медиа не в git — заливаются на FTP
 (`deploy_catden_stats.py` / `deploy_zabava.py`, пачка за месяц), PHP
 публикует из GitHub raw. Конвенция: имя файла поста = дата публикации.
@@ -272,9 +272,11 @@ py roles\blogger\tools\stats_snapshot.py --channel zabava --weekly
 powershell -NoProfile -ExecutionPolicy Bypass -File roles\blogger\bin\register_tasks.ps1
 ```
 
-Скрипт создаёт все шесть задач с `LogonType Interactive`, `RunLevel Limited`,
-`StartWhenAvailable` и границами старта ровно в 06:30 / 07:00 / 07:15 / 07:20 / 07:30 / 19:30
-без случайной задержки (время zabava обновлено 18.11.2026; локальная задача zabava по-прежнему может быть отключена на машине, где публикация ведётся с хостинга).
+Скрипт создаёт шесть задач с `LogonType Interactive`, `RunLevel Limited`,
+`StartWhenAvailable` и фиксированными границами 06:30 / 07:00 / 07:15 / 07:20 /
+07:30 / 19:30 — это **исторический набор**. Все задачи отключены (`Disabled`)
+и локальный Планировщик не используется; активная публикация идёт через
+хостинговый cron. Включать задачи только по прямой команде владельца.
 
 **Ловушки:**
 

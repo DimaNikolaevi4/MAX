@@ -19,7 +19,7 @@
 
 | Документ | Что внутри |
 | --- | --- |
-| [`channels-classification.md`](channels-classification.md) | итоговая классификация каналов: основные, служебные, закрывающиеся; перелинковка между каналами; CTA-перенаправления |
+| [`channels-classification.md`](channels-classification.md) | классификация каналов: профили core/zabava/telegram, статусы, слоты; перелинковка; CTA-чередование `self ↔ ainow` |
 
 ## Продвижение
 
