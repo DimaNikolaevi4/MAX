@@ -10,8 +10,8 @@
  *
  * Режимы:
  *   CLI (cron): php post_cron.php            — крон запускает в минуты публикаций
- *              (crontab: 07:15–07:45 — утренний прогон и статистика; 12:00 — Format 1;
- *              19:30 — zabava; 20:00 — catden; 21:30 — посты плана ainow);
+ *              (crontab: 07:15–07:45 — утренний прогон и статистика; 09:00 вт — administrator;
+ *              12:00 — Format 1; 19:30 — zabava; 20:00 — catden; 21:30 — посты плана ainow);
  *              gate: gate_time (ранний слот) и publish_time поста/канала
  *   web (обёртка post_web.php, секрет):      ?s=<секрет>       — DRY: сводка без отправок
  *                                            ?s=<секрет>&go=1  — реальный запуск вне расписания
@@ -71,6 +71,15 @@ $CHANNELS = [
         'media_dir' => $DATA_DIR . '/media/zabava', // видео/фото из архива (FTP)
         'state_file' => $DATA_DIR . '/state/zabava_state.json',
         'publish_time' => '19:30', // 18.11.2026: ?????????? ? 07:16 (??????? ?????????)
+    ],    'administrator' => [
+        'enabled' => true,
+        'token_file' => $DATA_DIR . '/administrator_token.txt',
+        'chat_id' => -76933769422173,
+        'posts_path' => 'roles/blogger/channels/administrator/posts',
+        'cover_dir' => '/home/m/mitiba/0s3/public_html/blogger/covers/administrator',
+        'media_dir' => $DATA_DIR . '/media/administrator', // /media/administrator/<дата>/<файл> (FTP)
+        'state_file' => $DATA_DIR . '/state/administrator_state.json',
+        'publish_time' => '09:00', // вторник 09:00 МСК — рубрика «Цифра недели»
     ],
 ];
 
