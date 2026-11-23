@@ -273,9 +273,11 @@ class FormatCoreNegativeTest(unittest.TestCase):
         result = check(text, "ainow", fm())
         self.assertIn("BOLD_BUDGET", codes(result))
 
-    def test_08_reaction_gap_two_consecutive_fail(self):
+    def test_08_reaction_gap_configurable(self):
+        # Политика 23.11.2026: призыв к реакциям обязателен в каждом посте,
+        # поэтому по умолчанию (reactions_min_gap: 0) ограничения частоты нет.
         registry = {
-            "min_gap": 2,
+            "min_gap": 0,
             "channels": {"ainow": {
                 "last_reaction_post": "post-b.md",
                 "history": [
@@ -285,7 +287,12 @@ class FormatCoreNegativeTest(unittest.TestCase):
             }},
         }
         allowed, reason = fc.can_use_reaction("ainow", registry=registry)
-        self.assertFalse(allowed, reason)
+        self.assertTrue(allowed, reason)
+
+        # Явно заданный gap продолжает работать: 2 поста между реакциями.
+        allowed_strict, reason_strict = fc.can_use_reaction(
+            "ainow", ch={"reactions_min_gap": 2}, registry=registry)
+        self.assertFalse(allowed_strict, reason_strict)
 
     def test_09_cta_target_self_self_link_pass(self):
         text = NA100.format(label="Новости технологий ИИ, нейросетей и инноваций",

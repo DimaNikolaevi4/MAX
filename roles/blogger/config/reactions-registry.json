@@ -1,21 +1,72 @@
 {
-  "_": "Реестр учёта реакций. min_gap=2 — минимум два поста без реакций между (не чаще 1 раза в 3 поста). Факт публикации проверяется перед авто-блоком и записывается после публикации; для zabava факт дополнительно пишется в front matter reactions: true.",
-  "min_gap": 2,
-  "_schema": "ЕДИНАЯ СХЕМА (этот файл — единственный источник для проверки интервала реакций; код читает reactions): reactions = {slug: {имя_файла_поста: true|false}}, где true = в посте был призыв/реакции, false = реакций не было. Допустима запись с датой: {slug: {имя_файла: {\"date\": \"YYYY-MM-DD\", \"reactions\": true}}}. Ключ — имя файла поста из roles/blogger/channels/<slug>/posts/. Интервал считается по последовательности постов канала в реестре: между двумя true должно быть не меньше min_gap записей false. Поля channels (last_reaction_post/history) и min_gap сохранены для обратной совместимости; новая запись идёт в reactions.",
-  "channels": {
-    "ainow": { "last_reaction_post": null, "history": [] },
-    "na100": { "last_reaction_post": null, "history": [] },
-    "catden": { "last_reaction_post": null, "history": [] },
-    "administrator": { "last_reaction_post": null, "history": [] },
-    "tg_neuro": { "last_reaction_post": null, "history": [] },
-    "zabava": { "last_reaction_post": null, "history": [] }
+ "_": "Реестр учёта реакций. min_gap=2 — минимум два поста без реакций между (не чаще 1 раза в 3 поста). Факт публикации проверяется перед авто-блоком и записывается после публикации; для zabava факт дополнительно пишется в front matter reactions: true.",
+ "min_gap": 0,
+ "_schema": "ЕДИНАЯ СХЕМА (этот файл — единственный источник для проверки интервала реакций; код читает reactions): reactions = {slug: {имя_файла_поста: true|false}}, где true = в посте был призыв/реакции, false = реакций не было. Допустима запись с датой: {slug: {имя_файла: {\"date\": \"YYYY-MM-DD\", \"reactions\": true}}}. Ключ — имя файла поста из roles/blogger/channels/<slug>/posts/. Интервал считается по последовательности постов канала в реестре: между двумя true должно быть не меньше min_gap записей false. Поля channels (last_reaction_post/history) и min_gap сохранены для обратной совместимости; новая запись идёт в reactions.",
+ "channels": {
+  "ainow": {
+   "last_reaction_post": null,
+   "history": []
   },
-  "reactions": {
-    "ainow": {},
-    "na100": {},
-    "catden": {},
-    "administrator": {},
-    "tg_neuro": {},
-    "zabava": {}
+  "na100": {
+   "last_reaction_post": null,
+   "history": []
+  },
+  "catden": {
+   "last_reaction_post": null,
+   "history": []
+  },
+  "administrator": {
+   "last_reaction_post": null,
+   "history": []
+  },
+  "tg_neuro": {
+   "last_reaction_post": null,
+   "history": []
+  },
+  "zabava": {
+   "last_reaction_post": null,
+   "history": []
   }
+ },
+ "reactions": {
+  "ainow": {
+   "2026-11-23-ii-instrumenty-dlya-programmirovaniya.md": {
+    "date": "2026-11-23",
+    "reactions": true
+   },
+   "2026-11-24-neyroset-bez-registracii-proverili-kto-puskaet.md": {
+    "date": "2026-11-24",
+    "reactions": true
+   },
+   "2026-11-25-kak-otlichit-ii-video-6-detektorov.md": {
+    "date": "2026-11-25",
+    "reactions": true
+   },
+   "2026-11-26-chat-bot-v-max-5-proverok.md": {
+    "date": "2026-11-26",
+    "reactions": true
+   },
+   "2026-11-27-ii-dlya-uchitelya-5-priemov.md": {
+    "date": "2026-11-27",
+    "reactions": true
+   },
+   "2026-11-28-sem-ai-agentov-dlya-pk.md": {
+    "date": "2026-11-28",
+    "reactions": true
+   },
+   "2026-11-30-ii-agregatory-odin-koshelek-vmesto-podpisok.md": {
+    "date": "2026-11-30",
+    "reactions": true
+   },
+   "2026-12-01-chto-ne-srabotalo-ii-redaktor-v-brauzere.md": {
+    "date": "2026-12-01",
+    "reactions": true
+   }
+  },
+  "na100": {},
+  "catden": {},
+  "administrator": {},
+  "tg_neuro": {},
+  "zabava": {}
+ }
 }

@@ -911,6 +911,9 @@ def check_cta_position(text: str, fm: FrontMatter, ch: dict, result: CheckResult
         result.warning("QUESTION_CLICHE", "дежурный вопрос «а вы что думаете?» не приветствуется")
     if reaction_between:
         check_reaction_interval(group_list[cta_idx + 1], fm, ch, result)
+    else:
+        result.warning("REACTION_MISSING",
+                       "нет призыва к реакциям: по §0.7 он обязателен в каждом посте")
     return {"label": label, "url": url, "phrase": phrase,
             "reaction": group_list[cta_idx + 1][0] if reaction_between else None}
 
