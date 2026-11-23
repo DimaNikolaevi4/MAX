@@ -366,6 +366,22 @@ class FormatCoreNegativeTest(unittest.TestCase):
         result = check(text, "ainow", fm())
         self.assertIn("CTA_FORMAT", codes(result))
 
+    def test_33_reaction_line_stuck_to_cta_fail(self):
+        text = AINOW.replace(
+            "— neyroseti i instrumenty\n\nKakoy",
+            "— neyroseti i instrumenty\n🔥 Polezno — postavte reakciyu.\n\nKakoy")
+        result = check(text, "ainow", fm())
+        self.assertIn("CTA_STICKY", codes(result))
+
+    def test_34_reaction_line_with_air_pass(self):
+        text = AINOW.replace(
+            "— neyroseti i instrumenty\n\nKakoy",
+            "— neyroseti i instrumenty\n\n🔥 Polezno — postavte reakciyu.\n\nKakoy")
+        registry = {"min_gap": 2, "channels": {}}
+        with mock.patch.object(fc, "load_reactions_registry", return_value=registry):
+            result = check(text, "ainow", fm())
+        self.assertNotIn("CTA_STICKY", codes(result))
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -879,6 +879,10 @@ def check_cta_position(text: str, fm: FrontMatter, ch: dict, result: CheckResult
                      "нет CTA-цитаты вида > **Подписывайтесь на [метка](url)** — фраза")
         return {}
     label, url, phrase = cta_match.group(1), cta_match.group(2), cta_match.group(3).strip()
+    if len(group_list[cta_idx]) > 1:
+        result.error("CTA_STICKY",
+                     "после CTA-цитаты нужна пустая строка: следующая строка "
+                     "слипается с блоком цитаты")
     expected_label, expected_url = expect.get("label"), expect.get("url")
     if expected_label and label != expected_label:
         result.error("CTA_LABEL", f"метка CTA {label!r} != {expected_label!r}")
