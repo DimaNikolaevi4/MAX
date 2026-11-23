@@ -1,0 +1,946 @@
+{
+ "date": "2026-11-23",
+ "generated_at": "2026-11-23T06:34:00.921928+03:00",
+ "formula": "свежесть*0.3 + влияние*0.4 + новизна*0.2 + авторитет*0.1 (0-10, порог 5.0); шаг 4 — обложка/текст у агента",
+ "notes": [],
+ "proposed": [
+  {
+   "title": "KDE выпустила Kwi 0.1 — новый эмулятор терминала с аппаратным ускорением на GPU",
+   "link": "https://habr.com/ru/articles/1110930/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110930",
+   "dt": "2026-11-23T05:42:10+03:00",
+   "region": "ru",
+   "feeds": [
+    "Habr news"
+   ],
+   "hours": 0.9,
+   "fresh": 10,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 7,
+   "total": 6.5,
+   "signals": [
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://habr.com/ru/articles/1110930/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110930"
+   ]
+  },
+  {
+   "title": "US seeks answers on Nvidia’s sale of chips to China, Bessent says",
+   "link": "https://www.scmp.com/news/world/united-states-canada/article/3375404/us-seeks-answers-nvidias-sale-chips-china-bessent-says",
+   "dt": "2026-11-22T23:03:17+03:00",
+   "region": "cn",
+   "feeds": [
+    "SCMP Tech"
+   ],
+   "hours": 7.5,
+   "fresh": 8,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.0,
+   "signals": [
+    "игрок/государство"
+   ],
+   "sources": [
+    "https://www.scmp.com/news/world/united-states-canada/article/3375404/us-seeks-answers-nvidias-sale-chips-china-bessent-says"
+   ]
+  },
+  {
+   "title": "How Notable Capital, GIC, and Baillie Gifford bet big on Anthropic before its IPO",
+   "link": "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/",
+   "dt": "2026-11-23T04:25:53+03:00",
+   "region": "world",
+   "feeds": [
+    "TechCrunch"
+   ],
+   "hours": 2.1,
+   "fresh": 10,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.6,
+   "signals": [
+    "игрок/государство"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/"
+   ]
+  },
+  {
+   "title": "It finally happened! Apple AirPods Pro 3 have plummeted to their lowest-ever UK price at Amazon — now just £165",
+   "link": "https://www.techradar.com/audio/earbuds-airpods/it-finally-happened-apple-airpods-pro-3-have-plummeted-to-their-lowest-ever-uk-price-at-amazon-now-just-gbp165",
+   "dt": "2026-11-23T01:31:20+03:00",
+   "region": "world",
+   "feeds": [
+    "TechRadar"
+   ],
+   "hours": 5.0,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 6,
+   "total": 6.6,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://www.techradar.com/audio/earbuds-airpods/it-finally-happened-apple-airpods-pro-3-have-plummeted-to-their-lowest-ever-uk-price-at-amazon-now-just-gbp165"
+   ]
+  },
+  {
+   "title": "Best Black Friday streaming deals: 10+ offers from 99 cents on Apple TV, Paramount+, Crunchyroll, and more",
+   "link": "https://www.techradar.com/live/news/black-friday-streaming-deals-2026-november-22",
+   "dt": "2026-11-23T03:03:20+03:00",
+   "region": "world",
+   "feeds": [
+    "TechRadar"
+   ],
+   "hours": 3.5,
+   "fresh": 10,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 6,
+   "total": 6.4,
+   "signals": [
+    "игрок/государство"
+   ],
+   "sources": [
+    "https://www.techradar.com/live/news/black-friday-streaming-deals-2026-november-22"
+   ]
+  }
+ ],
+ "candidates": {
+  "ru": [
+   {
+    "title": "KDE выпустила Kwi 0.1 — новый эмулятор терминала с аппаратным ускорением на GPU",
+    "link": "https://habr.com/ru/articles/1110930/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110930",
+    "dt": "2026-11-23T05:42:10+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 0.9,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 6.5,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1110930/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110930"
+    ]
+   },
+   {
+    "title": "«Ваш разговор стал слишком длинным»: как Google Antigravity неожиданно режет контекст и как Gemini это решил",
+    "link": "https://habr.com/ru/articles/1111006/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111006",
+    "dt": "2026-11-23T02:08:19+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 4.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1111006/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111006"
+    ]
+   },
+   {
+    "title": "«Ростелеком» представил мобильное приложение «Тест скорости» для измерения скорости интернета",
+    "link": "https://habr.com/ru/articles/1110868/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110868",
+    "dt": "2026-11-22T16:54:33+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 13.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1110868/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110868"
+    ]
+   },
+   {
+    "title": "Доверяй, но запрещай — или как ограничивать полномочия AI‑агента на разных уровнях",
+    "link": "https://habr.com/ru/companies/magnit/articles/1110850/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110850",
+    "dt": "2026-11-22T16:31:57+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 14.0,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://habr.com/ru/companies/magnit/articles/1110850/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110850"
+    ]
+   },
+   {
+    "title": "Куда я потратил грант Яндекса: пишем с нуля C++/CUDA‑движок для LLM, который обгоняет llama.cpp на старой RTX 2080 Ti",
+    "link": "https://habr.com/ru/articles/1110758/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110758",
+    "dt": "2026-11-22T14:48:33+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 15.8,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1110758/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110758"
+    ]
+   },
+   {
+    "title": "Ролевая игра с RAG: как нейросеть стала библиотекарем",
+    "link": "https://habr.com/ru/articles/1110956/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110956",
+    "dt": "2026-11-22T22:22:10+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 8.2,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1110956/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110956"
+    ]
+   },
+   {
+    "title": "Три моих кейса, где экономия времени с ИИ‑автоматизациями обернулась постоянными переделками и фиксами",
+    "link": "https://habr.com/ru/articles/1109850/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109850",
+    "dt": "2026-11-22T21:52:19+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 8.7,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1109850/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1109850"
+    ]
+   },
+   {
+    "title": "Каждый sudo ждал 10 секунд: имя сервера, которого не было в /etc/hosts",
+    "link": "https://habr.com/ru/articles/1110818/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110818",
+    "dt": "2026-11-22T19:17:40+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 11.3,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1110818/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110818"
+    ]
+   },
+   {
+    "title": "Как выбирать площадки для упоминаний бренда в ответах ИИ — я прошерстил исследование от Ahrefs",
+    "link": "https://habr.com/ru/articles/1110916/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110916",
+    "dt": "2026-11-22T18:48:40+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 11.8,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1110916/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1110916"
+    ]
+   }
+  ],
+  "cn": [
+   {
+    "title": "US seeks answers on Nvidia’s sale of chips to China, Bessent says",
+    "link": "https://www.scmp.com/news/world/united-states-canada/article/3375404/us-seeks-answers-nvidias-sale-chips-china-bessent-says",
+    "dt": "2026-11-22T23:03:17+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 7.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/world/united-states-canada/article/3375404/us-seeks-answers-nvidias-sale-chips-china-bessent-says"
+    ]
+   },
+   {
+    "title": "India’s tech talent meets Singapore’s capital: match made in AI heaven?",
+    "link": "https://www.scmp.com/week-asia/economics/article/3375271/indias-tech-talent-meets-singapores-capital-match-made-ai-heaven",
+    "dt": "2026-11-23T04:00:09+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 2.6,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.8,
+    "signals": [],
+    "sources": [
+     "https://www.scmp.com/week-asia/economics/article/3375271/indias-tech-talent-meets-singapores-capital-match-made-ai-heaven"
+    ]
+   },
+   {
+    "title": "Tencent touts latest AI model Hy4’s performance on independent safety assessments",
+    "link": "https://www.scmp.com/tech/tech-trends/article/3375374/tencent-touts-latest-ai-model-hy4s-performance-independent-safety-assessment",
+    "dt": "2026-11-22T16:30:07+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 14.1,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/tech/tech-trends/article/3375374/tencent-touts-latest-ai-model-hy4s-performance-independent-safety-assessment"
+    ]
+   },
+   {
+    "title": "Has AI solved the Riemann hypothesis? Claim makes waves at 200th birthday event in China",
+    "link": "https://www.scmp.com/news/china/science/article/3375386/has-ai-solved-riemann-hypothesis-claim-makes-waves-200th-birthday-event-china",
+    "dt": "2026-11-22T19:01:05+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 11.5,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://www.scmp.com/news/china/science/article/3375386/has-ai-solved-riemann-hypothesis-claim-makes-waves-200th-birthday-event-china"
+    ]
+   }
+  ],
+  "world": [
+   {
+    "title": "How Notable Capital, GIC, and Baillie Gifford bet big on Anthropic before its IPO",
+    "link": "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/",
+    "dt": "2026-11-23T04:25:53+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 2.1,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/"
+    ]
+   },
+   {
+    "title": "It finally happened! Apple AirPods Pro 3 have plummeted to their lowest-ever UK price at Amazon — now just £165",
+    "link": "https://www.techradar.com/audio/earbuds-airpods/it-finally-happened-apple-airpods-pro-3-have-plummeted-to-their-lowest-ever-uk-price-at-amazon-now-just-gbp165",
+    "dt": "2026-11-23T01:31:20+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.0,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/audio/earbuds-airpods/it-finally-happened-apple-airpods-pro-3-have-plummeted-to-their-lowest-ever-uk-price-at-amazon-now-just-gbp165"
+    ]
+   },
+   {
+    "title": "Best Black Friday streaming deals: 10+ offers from 99 cents on Apple TV, Paramount+, Crunchyroll, and more",
+    "link": "https://www.techradar.com/live/news/black-friday-streaming-deals-2026-november-22",
+    "dt": "2026-11-23T03:03:20+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 3.5,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/live/news/black-friday-streaming-deals-2026-november-22"
+    ]
+   },
+   {
+    "title": "OLED gaming laptop with RTX 5060 and Intel Core Ultra 7 CPU price crashes by $650 in Black Friday offer",
+    "link": "https://www.tomshardware.com/laptops/gaming-laptops/oled-gaming-laptop-with-rtx-5060-and-intel-core-ultra-7-cpu-price-crashes-by-usd650-in-black-friday-offer-lenovo-legion-5i-laptop-drops-to-usd1-349-with-free-games-at-b-and-h",
+    "dt": "2026-11-22T14:51:04+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 15.7,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.2,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/laptops/gaming-laptops/oled-gaming-laptop-with-rtx-5060-and-intel-core-ultra-7-cpu-price-crashes-by-usd650-in-black-friday-offer-lenovo-legion-5i-laptop-drops-to-usd1-349-with-free-games-at-b-and-h"
+    ]
+   },
+   {
+    "title": "OpenAI’s chief scientist has thoughts on how to limit AI development",
+    "link": "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/",
+    "dt": "2026-11-23T00:14:07+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 6.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/"
+    ]
+   },
+   {
+    "title": "TSMC reportedly pauses shipments to Chinese designers after U.S. export rules flag decade-old 16nm and 14nm nodes",
+    "link": "https://www.tomshardware.com/tech-industry/policy/tsmc-reportedly-pauses-shipments-to-chinese-designers-after-u-s-export-rules-flag-decade-old-16nm-and-14nm-nodes-new-bis-controls-threaten-smartphone-tv-and-automotive-chips",
+    "dt": "2026-11-22T19:18:11+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 11.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/policy/tsmc-reportedly-pauses-shipments-to-chinese-designers-after-u-s-export-rules-flag-decade-old-16nm-and-14nm-nodes-new-bis-controls-threaten-smartphone-tv-and-automotive-chips"
+    ]
+   },
+   {
+    "title": "'Remember, there is a lot of stuff in our critical infrastructure that’s unpatchable': Microsoft CEO Satya Nadella warns more outages of key networks could be coming",
+    "link": "https://www.techradar.com/pro/security/remember-there-is-a-lot-of-stuff-in-our-critical-infrastructure-thats-unpatchable-microsoft-ceo-satya-nadella-warns-more-outages-of-key-networks-could-be-coming",
+    "dt": "2026-11-22T22:30:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 8.1,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/security/remember-there-is-a-lot-of-stuff-in-our-critical-infrastructure-thats-unpatchable-microsoft-ceo-satya-nadella-warns-more-outages-of-key-networks-could-be-coming"
+    ]
+   },
+   {
+    "title": "Google claims it has seen the first fully autonomous cyberattack — and says a 'significant threshold' has been crossed in terms of cybersecurity",
+    "link": "https://www.techradar.com/pro/security/google-says-it-just-saw-the-first-fully-autonomous-cyberattack-and-says-a-significant-threshold-has-been-crossed-in-terms-of-cybersecurity",
+    "dt": "2026-11-22T20:05:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 10.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/security/google-says-it-just-saw-the-first-fully-autonomous-cyberattack-and-says-a-significant-threshold-has-been-crossed-in-terms-of-cybersecurity"
+    ]
+   },
+   {
+    "title": "I tested three 5-star OLED TVs from LG and Samsung — here’s my pick for Black Friday",
+    "link": "https://www.techradar.com/televisions/i-tested-three-new-5-star-oled-tvs-from-lg-and-samsung-side-by-side-and-i-know-which-is-my-top-pick-for-black-friday-2026",
+    "dt": "2026-11-23T00:49:13+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/televisions/i-tested-three-new-5-star-oled-tvs-from-lg-and-samsung-side-by-side-and-i-know-which-is-my-top-pick-for-black-friday-2026"
+    ]
+   },
+   {
+    "title": "Act fast to score Intel's Core i7-14700K for its lowest price ever at $249.99",
+    "link": "https://www.tomshardware.com/pc-components/cpus/act-fast-to-score-intels-core-i7-14700k-for-its-lowest-price-ever-at-usd249-99-raptor-lake-refresh-cpu-is-a-bargain-that-supports-ddr5-and-ddr4-motherboards",
+    "dt": "2026-11-21T23:00:22+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 31.6,
+    "fresh": 4,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.6,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/cpus/act-fast-to-score-intels-core-i7-14700k-for-its-lowest-price-ever-at-usd249-99-raptor-lake-refresh-cpu-is-a-bargain-that-supports-ddr5-and-ddr4-motherboards"
+    ]
+   },
+   {
+    "title": "One of the best gaming headsets plummets to just $78 at Amazon in unmissable Black Friday deal",
+    "link": "https://www.tomshardware.com/peripherals/gaming-headsets/one-of-the-best-gaming-headsets-plummets-to-just-usd78-at-amazon-in-unmissable-black-friday-deal-razer-blackshark-v2-pro-outshines-its-successor-at-less-than-half-the-price",
+    "dt": "2026-11-22T15:20:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 15.2,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/peripherals/gaming-headsets/one-of-the-best-gaming-headsets-plummets-to-just-usd78-at-amazon-in-unmissable-black-friday-deal-razer-blackshark-v2-pro-outshines-its-successor-at-less-than-half-the-price"
+    ]
+   },
+   {
+    "title": "Lenders back SpaceX's $43 billion Nvidia GPU deal but worry the collateral could end up in orbit, making them impossible to reclaim if Musk defaults",
+    "link": "https://www.tomshardware.com/tech-industry/data-centers/lenders-back-spacexs-usd43-billion-nvidia-gpu-deal-but-worry-the-collateral-could-end-up-in-orbit-making-it-impossible-to-reclaim-if-musk-defaults-five-year-hell-or-high-water-lease-may-lack-a-written-earth-only-guarantee",
+    "dt": "2026-11-22T15:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 15.6,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/data-centers/lenders-back-spacexs-usd43-billion-nvidia-gpu-deal-but-worry-the-collateral-could-end-up-in-orbit-making-it-impossible-to-reclaim-if-musk-defaults-five-year-hell-or-high-water-lease-may-lack-a-written-earth-only-guarantee"
+    ]
+   },
+   {
+    "title": "Ditch cloud subscriptions with a $132 discount on a 4-Bay NAS enclosure in Amazon Black Friday deal",
+    "link": "https://www.tomshardware.com/pc-components/nas/ditch-cloud-subscriptions-with-a-usd132-discount-on-a-4-bay-ugreen-dxp4800-gt-nas-enclosure-in-amazon-black-friday-deal-offers-dual-10gbe-ports-and-supports-up-to-144tb-of-storage",
+    "dt": "2026-11-22T14:52:29+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 15.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/nas/ditch-cloud-subscriptions-with-a-usd132-discount-on-a-4-bay-ugreen-dxp4800-gt-nas-enclosure-in-amazon-black-friday-deal-offers-dual-10gbe-ports-and-supports-up-to-144tb-of-storage"
+    ]
+   },
+   {
+    "title": "Alienware Aurora PC with RTX 5070, 32GB of RAM drops to $1,899 in Amazon Black Friday offer",
+    "link": "https://www.tomshardware.com/desktops/gaming-pcs/alienware-aurora-pc-with-rtx-5070-32gb-of-ram-drops-to-usd1-899-in-amazon-black-friday-offer-core-ultra-7-equipped-pc-is-one-of-the-best-value-prebuilt-deals-weve-seen-so-far",
+    "dt": "2026-11-22T14:51:39+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 15.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/desktops/gaming-pcs/alienware-aurora-pc-with-rtx-5070-32gb-of-ram-drops-to-usd1-899-in-amazon-black-friday-offer-core-ultra-7-equipped-pc-is-one-of-the-best-value-prebuilt-deals-weve-seen-so-far"
+    ]
+   },
+   {
+    "title": "Binding of Isaac developer removes AI music from Repentance Plus",
+    "link": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
+    "dt": "2026-11-22T20:25:20+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 10.1,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music"
+    ]
+   },
+   {
+    "title": "17-year-old Windows 7 gets unofficial DirectX 12 and Vulkan 1.4 support",
+    "link": "https://www.tomshardware.com/software/windows/17-year-old-windows-7-gets-unofficial-directx-12-and-vulkan-1-4-support-enthusiasts-bring-nvidia-rtx-50-amd-rx-9000-and-intel-arc-gpus-to-the-aging-os",
+    "dt": "2026-11-22T23:03:52+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 7.5,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://www.tomshardware.com/software/windows/17-year-old-windows-7-gets-unofficial-directx-12-and-vulkan-1-4-support-enthusiasts-bring-nvidia-rtx-50-amd-rx-9000-and-intel-arc-gpus-to-the-aging-os"
+    ]
+   },
+   {
+    "title": "Lenovo Pro 9n review: 18-core RTX Spark in a fancy chassis",
+    "link": "https://www.tomshardware.com/laptops/lenovo-pro-9n-review",
+    "dt": "2026-11-22T19:16:01+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 11.3,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://www.tomshardware.com/laptops/lenovo-pro-9n-review"
+    ]
+   },
+   {
+    "title": "AI agents design an entirely new CPU architecture from scratch, startup claims",
+    "link": "https://www.tomshardware.com/tech-industry/semiconductors/ai-agents-design-an-entirely-new-cpu-architecture-from-scratch-startup-claims-frostbite-posts-4-59x-the-performance-per-watt-of-an-in-order-core-in-pre-silicon-tests",
+    "dt": "2026-11-22T19:18:11+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 11.3,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/semiconductors/ai-agents-design-an-entirely-new-cpu-architecture-from-scratch-startup-claims-frostbite-posts-4-59x-the-performance-per-watt-of-an-in-order-core-in-pre-silicon-tests"
+    ]
+   },
+   {
+    "title": "I’d recommend buying the Apple Watch Series 11 over the newer 12 on Black Friday",
+    "link": "https://www.techradar.com/health-fitness/fitness-trackers/ive-been-using-the-apple-watch-series-11-for-a-year-and-id-recommend-buying-it-over-the-series-12-on-black-friday",
+    "dt": "2026-11-22T17:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 13.6,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/health-fitness/fitness-trackers/ive-been-using-the-apple-watch-series-11-for-a-year-and-id-recommend-buying-it-over-the-series-12-on-black-friday"
+    ]
+   },
+   {
+    "title": "26 best deals in the Argos Black Friday sale — Shark vacuums, Samsung TVs, Ninja air fryers, Sonos speakers, Garmin smartwatches, and more",
+    "link": "https://www.techradar.com/seasonal-sales/26-best-deals-in-the-argos-black-friday-sale-shark-vacuums-samsung-tvs-ninja-air-fryers-sonos-speakers-garmin-smartwatches-and-more",
+    "dt": "2026-11-22T15:37:13+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 14.9,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/seasonal-sales/26-best-deals-in-the-argos-black-friday-sale-shark-vacuums-samsung-tvs-ninja-air-fryers-sonos-speakers-garmin-smartwatches-and-more"
+    ]
+   },
+   {
+    "title": "Xiaomi Clip review: simply the best open earbuds you can buy",
+    "link": "https://www.techradar.com/audio/earbuds-airpods/xiaomi-clip-review",
+    "dt": "2026-11-22T16:24:06+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 14.2,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/audio/earbuds-airpods/xiaomi-clip-review"
+    ]
+   },
+   {
+    "title": "JWST finds a possible black hole that grew faster than its host galaxy in the early universe",
+    "link": "https://phys.org/news/2026-11-jwst-black-hole-grew-faster.html",
+    "dt": "2026-11-22T19:40:01+03:00",
+    "region": "world",
+    "feeds": [
+     "Phys.org"
+    ],
+    "hours": 10.9,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.1,
+    "signals": [],
+    "sources": [
+     "https://phys.org/news/2026-11-jwst-black-hole-grew-faster.html"
+    ]
+   },
+   {
+    "title": "'While attackers use AI to create better phishing lures, today's cybercrime tools do much more': Experts warn 'TheMailer' AI phishing kit runs on Claude and ChatGPT — and constantly evolves until it gets past your spam filter",
+    "link": "https://www.techradar.com/pro/security/while-attackers-use-ai-to-create-better-phishing-lures-todays-cybercrime-tools-do-much-more-experts-warn-themailer-ai-phishing-kit-runs-on-claude-and-chatgpt-and-constantly-evolves-until-it-gets-past-your-spam-filter",
+    "dt": "2026-11-23T01:20:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.2,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.0,
+    "signals": [],
+    "sources": [
+     "https://www.techradar.com/pro/security/while-attackers-use-ai-to-create-better-phishing-lures-todays-cybercrime-tools-do-much-more-experts-warn-themailer-ai-phishing-kit-runs-on-claude-and-chatgpt-and-constantly-evolves-until-it-gets-past-your-spam-filter"
+    ]
+   },
+   {
+    "title": "Black Friday iPhone deals: save big on iPhone 18 Pro, iPhone Duo, iPhone Air, and more",
+    "link": "https://www.techradar.com/phones/iphone/black-friday-iphone-deals-record-low-iphone-air-discounts-plus-big-savings-on-iphone-18-pro-iphone-duo-and-more",
+    "dt": "2026-11-23T01:30:18+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 5.1,
+    "fresh": 8,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.0,
+    "signals": [],
+    "sources": [
+     "https://www.techradar.com/phones/iphone/black-friday-iphone-deals-record-low-iphone-air-discounts-plus-big-savings-on-iphone-18-pro-iphone-duo-and-more"
+    ]
+   }
+  ]
+ },
+ "dropped": {
+  "count": 151,
+  "examples": [
+   {
+    "title": "Гравитационная оптика и солнечный парус Славы Турышева: первый шаг к расселению жизни по Галактике",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Выпуск обновления дистрибутива для одноплатных ПК DietPi 10.9",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Модель вселенной как многопоточного гексагонального вычислителя на горизонте событий Белой дыры",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Агентская разработка в геймдеве на Unity, или Как я скормил агенту рекламу мобильной игры",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Гипотеза Римана. Часть вторая: как устроено опубликованное доказательство",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Гипотеза Римана. Часть первая: как мы её не доказали",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "APT‑группировки: тайная война, которую не видно",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Одна генетическая мутация как двигатель эволюции мозга",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Казино в корзине: зачем магазины предлагают нам «выигрывать» скидки",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "База снова отвечает. Значит ли это, что она восстановилась?",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Они были здесь до бомб: что пришельцы делают в мире Fallout",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "630 тем и ноль в топе: что я понял из SEO‑аудита",
+    "reason": "не тех-тема"
+   }
+  ]
+ },
+ "feeds_ok": [
+  "Habr news",
+  "Opennet",
+  "CNews",
+  "SCMP Tech",
+  "Global Times (outbrain, общий фид с техно-пунктом)",
+  "TechCrunch",
+  "The Verge",
+  "Tom's Hardware",
+  "TechRadar",
+  "Phys.org",
+  "IEEE Spectrum AI"
+ ],
+ "feeds_fail": [
+  "TechNode (China Tech)",
+  "VentureBeat"
+ ]
+}
