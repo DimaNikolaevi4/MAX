@@ -1118,7 +1118,35 @@ def check_ainow_extras(text: str, result: CheckResult) -> None:
         result.warning("AINOW_LIMITS", "похоже на обзор инструмента, но нет предупреждения об ограничениях")
 
 
-def check_digest_extras(text: str, result: CheckResult, *, require_question: bool = True) -> None:
+def image_needs_attribution(fm: FrontMatter | dict | None) -> bool:
+    """Нужна ли атрибуция: свои заставки na100 — нет, чужое фото — да.
+
+    Своими считаются сгенерированные обложки ``local/digest/cover-*`` и фоны
+    из пула ``*/images/fallback/*`` (cover-method.md: атрибуция не нужна).
+    Загруженная копия в поле ``image:`` не проверяется — это уже опубликованное
+    медиа, а не источник изображения.
+    """
+    if fm is None:
+        return False
+    values = []
+    for key in ("image_file", "video_file", "image_files"):
+        value = fm.get(key) if isinstance(fm, FrontMatter) else fm.get(key)
+        if value:
+            values.append(str(value))
+    for value in values:
+        for name in re.split(r"[|,]", value):
+            name = name.strip().lower().replace("\\", "/")
+            if not name or name.startswith("http"):
+                continue
+            if "digest/cover" in name or "/images/fallback/" in name:
+                continue
+            return True
+    return False
+
+
+def check_digest_extras(text: str, result: CheckResult, *,
+                        fm: FrontMatter | dict | None = None,
+                        require_question: bool = True) -> None:
     lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
     hook = lines[0].strip("* ") if lines else ""
     if 0 < len(hook) < 40:
@@ -1149,8 +1177,9 @@ def check_digest_extras(text: str, result: CheckResult, *, require_question: boo
             result.warning("DIGEST_SUMMARY_STYLE", "итог похож на перечисление, нужна причинная связка")
     if require_question and not re.search(r"\?\s*$", text.strip()):
         result.error("DIGEST_QUESTION", "в каждом новом выпуске na100 обязателен вопрос последним блоком")
-    if "Фото:" not in text and "Иллюстрация:" not in text:
-        result.error("DIGEST_ATTRIBUTION", "нет атрибуции «Фото:» / «Иллюстрация:»")
+    if image_needs_attribution(fm) and "Фото:" not in text and "Иллюстрация:" not in text:
+        result.error("DIGEST_ATTRIBUTION",
+                     "для чужого фото нужна атрибуция «Фото:» / «Иллюстрация:»")
 
 
 def check_series_rhythm(channel: str = "catden", date_from: str = "",
@@ -1336,7 +1365,7 @@ def check_post(path: str | Path | None = None, *, channel: str | None = None,
             if channel == "ainow":
                 check_ainow_extras(body, result)
             elif channel == "na100":
-                check_digest_extras(body, result, require_question=True)
+                check_digest_extras(body, result, fm=fm_read, require_question=True)
     elif profile == "zabava":
         check_zabava(body, fm_read, ch, result, mode=mode)
     elif profile == "telegram":

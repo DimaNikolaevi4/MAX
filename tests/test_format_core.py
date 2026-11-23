@@ -99,6 +99,42 @@ ZABAVA_CTA_ONLY = (
     "Подпишись на **[Забавное](https://max.ru/channel_zabava)** — esli lyubite, kogda smeshno \U0001F3AC\n"
 )
 
+DIGEST_BODY = (
+    "**Пять новостей за сутки: железо, ИИ и цифры рынка**\n"
+    "\n"
+    "1️⃣ **KDE представила терминал Kwi 0.1 с ускорением**\n"
+    "Что случилось: релиз появился в ленте разработчиков.\n"
+    "\n"
+    "Почему важно: ускорение снимает нагрузку с процессора и ускоряет работу с логами.\n"
+    "\n"
+    "2️⃣ **Nvidia и Китай: спор о поставках чипов**\n"
+    "Что случилось: власти запросили подробности о продажах процессоров.\n"
+    "\n"
+    "Почему важно: детали могут изменить условия доступа к железу.\n"
+    "\n"
+    "3️⃣ **Anthropic получила вложения до IPO**\n"
+    "Что случилось: несколько фондов вошли в капитал компании.\n"
+    "\n"
+    "Почему важно: это сигнал о вере в выручку модельного бизнеса.\n"
+    "\n"
+    "4️⃣ **Цена наушников упала до 165 фунтов**\n"
+    "Что случилось: ритейлер снизил цену до минимума.\n"
+    "\n"
+    "Почему важно: распродажи меняют ориентиры для покупателей.\n"
+    "\n"
+    "5️⃣ **Подписки от 99 центов на неделю**\n"
+    "Что случилось: сервисы запустили акции на первый месяц.\n"
+    "\n"
+    "Почему важно: легко забыть об автопродлении и заплатить позже.\n"
+    "\n"
+    "Итог дня: железо и ИИ задают повестку, поэтому даже распродажи "
+    "выглядят продолжением гонки за внимание.\n"
+    "\n"
+    "> **Подписывайтесь на [AI](https://max.ru/channel_ainow)** — нейросети и инструменты\n"
+    "\n"
+    "Какую новость разобрать подробнее?\n"
+)
+
 TELEGRAM_EMOJI = (
     "\U0001F3AC **Kanal multfilmov**\n"
     "\n"
@@ -167,6 +203,25 @@ class FormatCorePositiveTest(unittest.TestCase):
     def test_29_telegram_headline_with_emoji_pass(self):
         result = check(TELEGRAM_EMOJI, "tg_neuro", fm(), extras=False)
         self.assertTrue(result.ok, str(result.to_dict()))
+
+    def test_31_own_cover_needs_no_attribution(self):
+        result = check(DIGEST_BODY, "na100",
+                       fm(cta_target="ainow",
+                          image_file="local/digest/cover-2026-11-23-test.png"),
+                       extras=True)
+        self.assertTrue(result.ok, str(result.to_dict()))
+        self.assertNotIn("DIGEST_ATTRIBUTION", codes(result))
+
+    def test_32_external_photo_requires_attribution(self):
+        front = fm(cta_target="ainow",
+                   image_file="local/digest/2026-11-23/foreign-photo.jpg")
+        no_credit = check(DIGEST_BODY, "na100", front, extras=True)
+        self.assertIn("DIGEST_ATTRIBUTION", codes(no_credit))
+        credited = DIGEST_BODY.replace(
+            "\n> **Подписывайтесь",
+            "\nФото: сторонний источник\n\n> **Подписывайтесь")
+        with_credit = check(credited, "na100", front, extras=True)
+        self.assertNotIn("DIGEST_ATTRIBUTION", codes(with_credit))
 
     def test_30_front_matter_set_no_duplication(self):
         raw = ("---\nchannel: ainow\nstatus: approved\n"

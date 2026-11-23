@@ -11,6 +11,7 @@ message_id: mid.ffffba08e9ee9aa301a206800bf61c63
 channel_id: -76927529477469
 url: https://max.ru/channel_na100/AaIGgAv2HGM
 image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCRVSY3J0C7Sb4TLESzbjrmOYe8F6v7MkezLE9x6TC85A5pX-hUqgvxMXVFFTcw5ubD8GdtX83-qkkgh_vrs0YE
+edited_at: 2026-11-23T07:03:25+03:00
 ---
 
 **Что важного в технологиях за ночь: чипы, ИИ и распродажи**
@@ -42,7 +43,6 @@ image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCRVSY3J0C7Sb4TLESzbjrmOYe8F6v7Mke
 
 Итог дня: главное за сутки — чипы и ИИ остаются в центре внимания, от GPU-терминалов до экспортных споров, поэтому даже распродажи выглядят продолжением той же гонки за внимание и вычислительные мощности.
 
-Фото: Habr, SCMP, TechCrunch, TechRadar
 
 > **Подписывайтесь на [AI](https://max.ru/channel_ainow)** — нейросети и инструменты без воды
 
