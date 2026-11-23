@@ -163,8 +163,7 @@ class FrontMatter:
             line = self.lines[self.positions[key]]
             m = re.match(r"^(\s*)([\w.-]+)(\s*:\s*)(.*)$", line)
             if m:
-                _, raw_value = _split_comment(m.group(4))
-                comment = m.group(4)[len(raw_value):]
+                raw_value, comment = _split_comment(m.group(4))
                 self.lines[self.positions[key]] = (
                     f"{m.group(1)}{m.group(2)}{m.group(3)}{text}{comment}")
             else:

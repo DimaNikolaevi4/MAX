@@ -168,6 +168,21 @@ class FormatCorePositiveTest(unittest.TestCase):
         result = check(TELEGRAM_EMOJI, "tg_neuro", fm(), extras=False)
         self.assertTrue(result.ok, str(result.to_dict()))
 
+    def test_30_front_matter_set_no_duplication(self):
+        raw = ("---\nchannel: ainow\nstatus: approved\n"
+               "cta_target: self\n# comment\n---\n\nBody\n")
+        front, _ = fc.split_post(raw)
+        front.set("channel", "ainow")
+        front.set("status", "published")
+        front.set("cta_target", "ainow")
+        rendered = front.render()
+        self.assertIn("channel: ainow\n", rendered)
+        self.assertIn("status: published\n", rendered)
+        self.assertIn("cta_target: ainow\n", rendered)
+        self.assertNotIn("ainowainow", rendered)
+        self.assertNotIn("publishedapproved", rendered)
+        self.assertIn("# comment", rendered)
+
 
 class FormatCoreNegativeTest(unittest.TestCase):
     def test_02_no_final_question_fail(self):
