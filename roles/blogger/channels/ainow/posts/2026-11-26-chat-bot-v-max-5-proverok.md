@@ -1,8 +1,9 @@
 ---
 channel: ainow
-status: draft
+status: approved
 format: markdown
 notify: true
+approved_at: "2026-11-23"
 topic: чат-боты в MAX — 5 проверок перед доступом (гипотеза 7 семантического ядра)
 alice_note: 18.11 — черновик по гипотезе 7 («чат бот макс» 41,4 тыс + безопасность 11,4 тыс). Факты про создание бота, права и webhook — из docs/bot-setup.md и docs/bot-hosting-webhook-plan.md (проверены 28.10 и 12.11.2026).
 image_file: 2026-11-26-cover.png

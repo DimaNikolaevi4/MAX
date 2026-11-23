@@ -1,8 +1,9 @@
 ---
 channel: ainow
-status: draft
+status: approved
 format: markdown
 notify: true
+approved_at: "2026-11-23"
 topic: ИИ для учителя — 5 приёмов (гипотеза 8 семантического ядра)
 alice_note: 18.11 — черновик по гипотезе 8 («ии для учителя»): приёмы с промптами, границы ответственности и бесплатные сервисы, доступные из России.
 image_file: 2026-11-27-cover.png
