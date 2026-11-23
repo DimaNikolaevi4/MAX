@@ -1,8 +1,12 @@
 ---
 channel: tg_neuro
-status: approved
+status: published
 image_file: local/images/ainow/2026-07-16-4-aiinstrumenta-kotorye-sekonomyat-vam-5.jpg
 button_url: https://max.ru/channel_ainow
+format: html
+published_at: 2026-11-23T07:28:21+03:00
+message_id: 71
+chat_id: -1002087111322
 ---
 
 🎬 **Почему я переношу мультстудию в MAX**
