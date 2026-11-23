@@ -1041,13 +1041,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-29-chto-ne-srabotalo-ii-redaktor-v-brauzere",
+      "id": "max-2026-12-01-chto-ne-srabotalo-ii-redaktor-v-brauzere",
       "title": "[AI] Что не сработало: ИИ-редактор в браузере",
-      "when": "2026-11-29",
+      "when": "2026-12-01",
       "time": null,
       "status": "scheduled",
       "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «AI»",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-29-chto-ne-srabotalo-ii-redaktor-v-brauzere.md",
+      "link": "roles/blogger/channels/ainow/posts/2026-12-01-chto-ne-srabotalo-ii-redaktor-v-brauzere.md",
       "source": "auto"
     },
     {
@@ -2341,13 +2341,13 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-28-ozhivit-staroe-foto-5-servisov",
-      "title": "[AI] Оживить старое фото: 5 сервисов и подвохи",
-      "when": null,
+      "id": "max-2026-11-30-ii-agregatory-odin-koshelek-vmesto-podpisok",
+      "title": "[AI] ИИ-агрегаторы: один кошелёк вместо десятка подписок",
+      "when": "2026-11-30",
       "time": null,
       "status": "backlog",
-      "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-28-ozhivit-staroe-foto-5-servisov.md",
+      "why": "черновик, ждёт «ок» владельца (тема заменила «Оживить старое фото»)",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-30-ii-agregatory-odin-koshelek-vmesto-podpisok.md",
       "source": "auto"
     },
     {
