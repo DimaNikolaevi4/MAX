@@ -17,7 +17,7 @@
 | ainow | 21:30 | хостинг, `post_cron.php` | посты плана |
 | catden | 07:32 | хостинг, `post_cron.php` | утренний слот (исторический) |
 | catden | 20:00 | хостинг, `post_cron.php` | единый слот сетки 19.11–18.01 |
-| zabava | 19:30 | хостинг, `post_cron.php` | строго 1 пост/сутки (D3) |
+| zabava | 19:30 | хостинг, `post_cron.php` | обычно 1 пост/сутки (D3); второй пост допустим |
 | administrator | вт/чт 09:00 | хостинг, `post_cron.php` | через `publish_time` в посте |
 | Статистика | 07:45 | хостинг, `stats_cron.php` | 4 канала: ainow, na100, zabava, catden |
 

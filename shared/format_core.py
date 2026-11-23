@@ -1058,8 +1058,9 @@ def check_zabava(text: str, fm: FrontMatter, ch: dict, result: CheckResult,
         if not allowed:
             result.error("REACTION_GAP", f"интервал реакций нарушен: {reason}")
     cap = int_param(ch, "daily_cap", 1)
-    if cap > 1:
-        result.warning("ZABAVA_CAP", f"daily_cap={cap} в конфиге, ожидается 1")
+    if cap < 1:
+        result.warning("ZABAVA_CAP", f"daily_cap={cap} в конфиге — ожидается ≥ 1 "
+                                     f"(ориентир, не жёсткий лимит)")
 
 
 def check_telegram(text: str, fm: FrontMatter, ch: dict, result: CheckResult) -> None:

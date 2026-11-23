@@ -16,7 +16,9 @@
 
 Канонический формат zabava задан channels/zabava/style.md; поле format_core
 ему НЕ ставится. Все неизвестные поля front matter сохраняются при записи.
-Строго 1 пост в сутки МСК (проверяются published_at постов и local/zabava-plan.json).
+Обычно 1 пост в сутки МСК (ориентир 19:30, правило 23.11.2026 — без жёсткого
+лимита): повторная публикация того же файла в тот же день запрещена, второй
+пост в сутки допустим.
 Авто-блок реакций из reactions-phrases.json вставляется только если у двух
 предыдущих опубликованных постов реакций не было; фраза не повторяется в окне 6.
 Итог: текст → пустая строка → [реакция] → пустая строка → CTA последней строкой.
@@ -270,15 +272,20 @@ def pick_reaction(channel: str, post_path: Path, plan_path: Path) -> str | None:
     return phrase
 
 
-def check_daily_cap(channel: str, plan_path: Path, post_path: Path) -> None:
-    """Строго один пост zabava в сутки МСК."""
+def check_duplicate_post(channel: str, plan_path: Path, post_path: Path) -> int:
+    """Защита от повторной публикации того же поста в тот же день.
+
+    Дневного лимита нет (правило D3 ослаблено 23.11.2026): второй пост в сутки
+    допустим. Возвращает число постов, уже опубликованных сегодня.
+    """
     today = format_core.published_today(channel, plan_path)
-    today = [item for item in today
-             if Path(item.get("file") or "").name != post_path.name]
-    if today:
+    same = [item for item in today
+            if Path(item.get("file") or "").name == post_path.name]
+    if same:
         raise SystemExit(
-            f"дневной лимит {channel}: сегодня уже опубликовано {len(today)} пост(ов) "
-            f"({today[0].get('published_at', '')})")
+            f"пост {post_path.name} уже опубликован сегодня "
+            f"({same[0].get('published_at', '')}) — повторная публикация запрещена")
+    return len(today)
 
 
 def validate_body(body: str, max_text: int = MAX_TEXT) -> None:
@@ -414,9 +421,13 @@ def main() -> None:
     plan_path = REPO / "local" / "zabava-plan.json"
     if dry_run:
         today = format_core.published_today(channel, plan_path)
-        REPORT.append(f"DRY-RUN: публикаций сегодня {len(today)} (лимит 1)")
+        REPORT.append(f"DRY-RUN: публикаций сегодня {len(today)} "
+                      f"(ориентир 1, жёсткого лимита нет)")
     else:
-        check_daily_cap(channel, plan_path, post_path)
+        published_today = check_duplicate_post(channel, plan_path, post_path)
+        if published_today:
+            REPORT.append(f"сегодня уже опубликовано {published_today} пост(ов) — "
+                          f"второй допустим")
 
     try:
         max_text = int(fm.get("max_text") or MAX_TEXT)
