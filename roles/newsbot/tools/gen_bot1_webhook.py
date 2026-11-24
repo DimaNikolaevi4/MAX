@@ -3,14 +3,19 @@
 
 Читает ключ newsbot из local/tokens.json (токен @se14808890_bot,
 owner_user_id/owner_chat_id если заданы), шаблон
-roles/newsbot/hosting/bot1_webhook_template.php, генерирует случайный
-секрет (только A-Za-z0-9_- по требованиям MAX) и пишет
+roles/newsbot/hosting/bot1_webhook_template.php, и пишет
 local/hosting/bot1_webhook.php — готовый к загрузке на хостинг.
 
-Запуск:  py roles\\newsbot\\tools\\gen_bot1_webhook.py
+Секрет: по умолчанию СОХРАНЯЕТСЯ из существующего рабочего файла (подписка
+активна — перевыпуск секрета оборвёт поток событий). Новый секрет — только
+если файла нет или указан --new-secret (тогда нужен recreate подписки).
+
+Запуск:  py roles\\newsbot\\tools\\gen_bot1_webhook.py [--new-secret]
 """
 import json
+import re
 import secrets
+import sys
 from pathlib import Path
 
 REPO = next(p for p in Path(__file__).resolve().parents
@@ -27,8 +32,20 @@ if not token:
 owner_user = str(entry.get("owner_user_id") or "3623517")
 owner_chat = str(entry.get("owner_chat_id") or "537566305")
 
-# Секрет MAX: 5-256 символов, только A-Za-z0-9_- (token_urlsafe подходит)
-secret = secrets.token_urlsafe(24)
+existing = OUT / "bot1_webhook.php"
+secret = None
+if "--new-secret" not in sys.argv and existing.exists():
+    m = re.search(r"const SECRET\s*=\s*'([^']+)'",
+                  existing.read_text(encoding="utf-8"))
+    if m:
+        secret = m.group(1)
+if secret:
+    print("ok: секрет сохранён из существующего файла (подписка не менялась)")
+else:
+    # Секрет MAX: 5-256 символов, только A-Za-z0-9_- (token_urlsafe подходит)
+    secret = secrets.token_urlsafe(24)
+    print("ok: секрет сгенерирован новый — если подписка уже активна, "
+          "нужен recreate подписки")
 
 tpl = (REPO / "roles" / "newsbot" / "hosting"
        / "bot1_webhook_template.php").read_text(encoding="utf-8")

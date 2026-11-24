@@ -30,6 +30,7 @@
 // =====================================================================
 
 declare(strict_types=1);
+mb_internal_encoding('UTF-8');
 
 const BOT_TOKEN = '{{TOKEN}}';
 const SECRET    = '{{SECRET}}';
@@ -78,6 +79,9 @@ function logline(string $msg): void
     if (!is_dir(DATA_DIR)) {
         @mkdir(DATA_DIR, 0770, true);
     }
+    // гарантия валидного UTF-8: битые байты (обрезка payload'ов и т.п.)
+    // заменяются, чтобы журнал читался целиком
+    $msg = mb_scrub($msg, 'UTF-8');
     @file_put_contents(LOG_PATH, gmdate('Y-m-d H:i:s') . " | " . $msg . "\n", FILE_APPEND);
 }
 
@@ -164,7 +168,7 @@ function api(string $method, string $path, ?array $payload = null): array
     $json = is_string($body) ? json_decode($body, true) : [];
     if ($code !== 200) {
         logline("API FAIL $method $path -> code=$code curl($errno): $errstr "
-            . substr((string)$body, 0, 200));
+            . mb_substr((string)$body, 0, 200));
     }
     return ['code' => $code, 'body' => is_array($json) ? $json : []];
 }
@@ -590,5 +594,5 @@ switch ($type) {
         break;
 
     default:
-        logline("UNHANDLED $type: " . substr((string)$raw, 0, 300));
+        logline("UNHANDLED $type: " . mb_substr((string)$raw, 0, 300));
 }
