@@ -11,7 +11,7 @@ message_id: mid.ffffba08e9ee9aa301a206800bf61c63
 channel_id: -76927529477469
 url: https://max.ru/channel_na100/AaIGgAv2HGM
 image: https://i.oneme.ru/i?r=B0zLc4bX6k8WXSnEyCRVSY3J0C7Sb4TLESzbjrmOYe8F6v7MkezLE9x6TC85A5pX-hUqgvxMXVFFTcw5ubD8GdtX83-qkkgh_vrs0YE
-edited_at: 2026-11-23T07:03:25+03:00
+edited_at: 2026-11-24T06:38:56+03:00
 ---
 
 **Что важного в технологиях за ночь: чипы, ИИ и распродажи**
@@ -45,5 +45,7 @@ edited_at: 2026-11-23T07:03:25+03:00
 
 
 > **Подписывайтесь на [AI](https://max.ru/channel_ainow)** — нейросети и инструменты без воды
+
+🔥 Пригодилось — поставьте реакцию: буду собирать больше разборов по ИИ.
 
 Какую из этих новостей вы бы разобрали подробнее?

@@ -61,12 +61,35 @@
    "2026-12-01-chto-ne-srabotalo-ii-redaktor-v-brauzere.md": {
     "date": "2026-12-01",
     "reactions": true
+   },
+   "2026-11-24-stavki-pered-ipo.md": {
+    "date": "2026-11-24",
+    "reactions": true
    }
   },
-  "na100": {},
+  "na100": {
+   "2026-11-23-pyaterka-tehnologij.md": {
+    "date": "2026-11-23",
+    "reactions": true
+   }
+  },
   "catden": {},
-  "administrator": {},
-  "tg_neuro": {},
+  "administrator": {
+   "2026-11-24-cifra-nedeli.md": {
+    "date": "2026-11-24",
+    "reactions": true
+   },
+   "2026-11-26-chto-pochinili.md": {
+    "date": "2026-11-26",
+    "reactions": true
+   }
+  },
+  "tg_neuro": {
+   "2026-11-26-chto-ostalos-zdes.md": {
+    "date": "2026-11-26",
+    "reactions": true
+   }
+  },
   "zabava": {}
  }
 }
