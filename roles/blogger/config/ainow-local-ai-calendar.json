@@ -1,0 +1,49 @@
+{
+  "_": "Справка для другой машины: факт отправки 7 черновиков серии «Локальные ИИ-инструменты» в приватный канал «календарь» 24.11.2026. Это НЕ публикация в ainow: статус постов остаётся draft, слот не назначен, «ок» владельца не было. Канал «календарь» без поля notify. Публичных URL у сообщений приватного канала нет — сверка только по mid через GET /messages/{mid}. Источник текста: roles/blogger/channels/ainow/materials/local-ai/drafts/*.md (коммит 78cdad9).",
+  "id": "orch-ainow-local-ai-calendar",
+  "kind": "calendar_review_preview",
+  "channel": "calendar",
+  "source_channel": "ainow",
+  "sent_date": "2026-11-24",
+  "format": "markdown",
+  "notify": false,
+  "attachments": 0,
+  "check": "GET /messages/{mid}: заголовок и текст на месте, разметка снята MAX (длина GET меньше за счёт ** и >)",
+  "posts": [
+    {
+      "file": "roles/blogger/channels/ainow/materials/local-ai/drafts/00-local-ai-overview.md",
+      "mid": "mid.ffffb629582f9aa301a20d82dfb63595",
+      "chars": 2613
+    },
+    {
+      "file": "roles/blogger/channels/ainow/materials/local-ai/drafts/01-universal-assistants-overview.md",
+      "mid": "mid.ffffb629582f9aa301a20d8338f63f8e",
+      "chars": 2637
+    },
+    {
+      "file": "roles/blogger/channels/ainow/materials/local-ai/drafts/02-pygpt.md",
+      "mid": "mid.ffffb629582f9aa301a20d8341dc6603",
+      "chars": 2063
+    },
+    {
+      "file": "roles/blogger/channels/ainow/materials/local-ai/drafts/03-flexigpt.md",
+      "mid": "mid.ffffb629582f9aa301a20d834abc71d2",
+      "chars": 2141
+    },
+    {
+      "file": "roles/blogger/channels/ainow/materials/local-ai/drafts/04-jan.md",
+      "mid": "mid.ffffb629582f9aa301a20d8351800975",
+      "chars": 2174
+    },
+    {
+      "file": "roles/blogger/channels/ainow/materials/local-ai/drafts/05-gpt4all.md",
+      "mid": "mid.ffffb629582f9aa301a20d8358df19aa",
+      "chars": 2177
+    },
+    {
+      "file": "roles/blogger/channels/ainow/materials/local-ai/drafts/06-lm-studio.md",
+      "mid": "mid.ffffb629582f9aa301a20d835fe57cc3",
+      "chars": 2129
+    }
+  ]
+}
