@@ -60,6 +60,7 @@ $CHANNELS = [
         'media_dir' => $DATA_DIR . '/media/catden', // /media/catden/<дата>/<файл> (FTP)
         'state_file' => $DATA_DIR . '/state/catden_state.json',
         'publish_time' => '20:00', // 18.11.2026: перенос на 20:00 МСК (решение владельца)
+        'gate_time' => '20:00',    // 24.11.2026: утренний слот 07:32 отменён — один слот в сутки
     ],
     'zabava' => [
         'enabled' => true,

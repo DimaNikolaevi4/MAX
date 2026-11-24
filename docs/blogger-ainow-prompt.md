@@ -133,7 +133,7 @@ py roles\blogger\tools\publish_post.py --channel ainow roles\blogger\channels\ai
 ### 7а. Публикация и статистика
 
 - Активная публикация — хостинговый cron: ainow 12:00 (Format 1) и 21:30 (план),
-  catden 07:32 и 20:00, zabava 19:30 (обычно 1 пост/сутки), статистика 07:45,
+  catden 20:00, zabava 19:30 (обычно 1 пост/сутки), статистика 07:45,
   administrator вт/чт 09:00. Публикация только через хостинг-крон; локальные
   задачи Windows не используются.
 - Статистику собирает `stats_cron.php` на хостинге в `/0s3/blogger-data/stats/`;
