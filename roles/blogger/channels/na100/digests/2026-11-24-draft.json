@@ -1,0 +1,1188 @@
+{
+ "date": "2026-11-24",
+ "generated_at": "2026-11-24T06:55:12.905879+03:00",
+ "formula": "свежесть*0.3 + влияние*0.4 + новизна*0.2 + авторитет*0.1 (0-10, порог 5.0); шаг 4 — обложка/текст у агента",
+ "notes": [],
+ "proposed": [
+  {
+   "title": "Amazon представила AWS Emulator — эмулятор сервисов Amazon Web Services",
+   "link": "https://habr.com/ru/articles/1111056/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111056",
+   "dt": "2026-11-24T05:07:28+03:00",
+   "region": "ru",
+   "feeds": [
+    "Habr news"
+   ],
+   "hours": 1.8,
+   "fresh": 10,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 7,
+   "total": 7.3,
+   "signals": [
+    "игрок/государство",
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://habr.com/ru/articles/1111056/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111056"
+   ]
+  },
+  {
+   "title": "Jensen Huang’s Nvidia return buoys South Korea, Japan stocks",
+   "link": "https://www.scmp.com/news/asia/east-asia/article/3375547/jensen-huangs-nvidia-return-buoys-south-korea-japan-stocks",
+   "dt": "2026-11-24T05:55:06+03:00",
+   "region": "cn",
+   "feeds": [
+    "SCMP Tech"
+   ],
+   "hours": 1.0,
+   "fresh": 10,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.6,
+   "signals": [
+    "игрок/государство"
+   ],
+   "sources": [
+    "https://www.scmp.com/news/asia/east-asia/article/3375547/jensen-huangs-nvidia-return-buoys-south-korea-japan-stocks"
+   ]
+  },
+  {
+   "title": "MacBook Neo falls to all-time low $599 in Amazon Black Friday sale — 256GB Citrus model price matches its original launch (Update: now $649)",
+   "link": "https://www.tomshardware.com/laptops/macbook-neo-falls-to-all-time-low-usd599-in-amazon-black-friday-sale-256gb-citrus-model-price-matches-its-original-launch",
+   "dt": "2026-11-24T01:16:19+03:00",
+   "region": "world",
+   "feeds": [
+    "Tom's Hardware"
+   ],
+   "hours": 5.6,
+   "fresh": 8,
+   "influence": 6,
+   "novelty": 10,
+   "authority": 8,
+   "total": 7.6,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность",
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://www.tomshardware.com/laptops/macbook-neo-falls-to-all-time-low-usd599-in-amazon-black-friday-sale-256gb-citrus-model-price-matches-its-original-launch"
+   ]
+  },
+  {
+   "title": "Google alternative Kagi launches an email service",
+   "link": "https://www.theverge.com/tech/1041000/kagi-mail-email-google-gmail-alternative",
+   "dt": "2026-11-24T03:02:52+03:00",
+   "region": "world",
+   "feeds": [
+    "The Verge"
+   ],
+   "hours": 3.9,
+   "fresh": 10,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 7.4,
+   "signals": [
+    "игрок/государство",
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://www.theverge.com/tech/1041000/kagi-mail-email-google-gmail-alternative"
+   ]
+  },
+  {
+   "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+   "link": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+   "dt": "2026-11-24T01:05:50+03:00",
+   "region": "world",
+   "feeds": [
+    "TechCrunch"
+   ],
+   "hours": 5.8,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.8,
+   "signals": [
+    "игрок/государство",
+    "анонс/первый запуск"
+   ],
+   "sources": [
+    "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/"
+   ]
+  }
+ ],
+ "candidates": {
+  "ru": [
+   {
+    "title": "Amazon представила AWS Emulator — эмулятор сервисов Amazon Web Services",
+    "link": "https://habr.com/ru/articles/1111056/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111056",
+    "dt": "2026-11-24T05:07:28+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 1.8,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 7,
+    "total": 7.3,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1111056/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111056"
+    ]
+   },
+   {
+    "title": "Покупки прямо с баннера: «Яндекс» запустил для рекламодателей новый формат продвижения",
+    "link": "https://www.cnews.ru/news/line/2026-11-23_pokupki_pryamo_s_bannera",
+    "dt": "2026-11-23T18:18:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 12.6,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-23_pokupki_pryamo_s_bannera"
+    ]
+   },
+   {
+    "title": "В «СберУниверситете» оценили ИИ-зрелость финансовых подразделений",
+    "link": "https://www.cnews.ru/news/line/2026-11-23_v_sberuniversitete_otsenili",
+    "dt": "2026-11-23T13:18:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 17.6,
+    "fresh": 6,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-23_v_sberuniversitete_otsenili"
+    ]
+   },
+   {
+    "title": "Я сделал вечернее ток‑шоу, где спорят пять нейросетей. Как устроен первый выпуск и что показала аналитика YouTube",
+    "link": "https://habr.com/ru/articles/1111480/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111480",
+    "dt": "2026-11-23T22:24:31+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 8.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1111480/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111480"
+    ]
+   },
+   {
+    "title": "Совет директоров Nvidia одобрил возвращение Дженсена Хуанга",
+    "link": "https://habr.com/ru/articles/1111444/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111444",
+    "dt": "2026-11-23T19:25:32+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 11.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.9,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1111444/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111444"
+    ]
+   },
+   {
+    "title": "Какие ИИ-боты читают ваш сайт и как ими управлять: GPTBot, ClaudeBot, PerplexityBot, YandexAdditional и другие",
+    "link": "https://habr.com/ru/articles/1111320/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111320",
+    "dt": "2026-11-24T06:04:32+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 0.8,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1111320/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111320"
+    ]
+   },
+   {
+    "title": "К чему нас приведёт полный контроль в руках ИИ?",
+    "link": "https://habr.com/ru/articles/1111538/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111538",
+    "dt": "2026-11-24T05:47:05+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 1.1,
+    "fresh": 10,
+    "influence": 0,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [],
+    "sources": [
+     "https://habr.com/ru/articles/1111538/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111538"
+    ]
+   },
+   {
+    "title": "Конец жирной маржинальности ИИ: как устроено ценообразование и почему модели дешевеют",
+    "link": "https://habr.com/ru/companies/speshu_ai/articles/1111416/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111416",
+    "dt": "2026-11-23T18:27:24+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 12.5,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 7,
+    "total": 5.3,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://habr.com/ru/companies/speshu_ai/articles/1111416/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1111416"
+    ]
+   },
+   {
+    "title": "Из пользовательского соглашения «Яндекс Браузера» исчезли все упоминания про «анонимность» и «обезличенность» данных",
+    "link": "https://www.cnews.ru/news/top/2026-11-23_iz_litsenzionnogo_soglasheniya",
+    "dt": "2026-11-23T17:23:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 13.5,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-23_iz_litsenzionnogo_soglasheniya"
+    ]
+   },
+   {
+    "title": "Сбербанк открыл офис с цифровым сотрудником",
+    "link": "https://www.cnews.ru/news/line/2026-11-23_sberbank_otkryl_ofis_s_tsifrovym",
+    "dt": "2026-11-23T14:34:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 16.4,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-23_sberbank_otkryl_ofis_s_tsifrovym"
+    ]
+   },
+   {
+    "title": "Сервис распознавания речи «1С-Рарус:Эхо» включен в реестр российского ПО",
+    "link": "https://www.cnews.ru/news/line/2026-11-23_servis_raspoznavaniya_rechi",
+    "dt": "2026-11-23T13:31:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 17.4,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-23_servis_raspoznavaniya_rechi"
+    ]
+   },
+   {
+    "title": "МТС впервые запустила в Волжском полностью гигабитную сеть домашнего интернета",
+    "link": "https://www.cnews.ru/news/line/2026-11-23_mts_vpervye_zapustila_v_volzhskom",
+    "dt": "2026-11-23T13:30:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 17.4,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-23_mts_vpervye_zapustila_v_volzhskom"
+    ]
+   },
+   {
+    "title": "Опрос «Просвета»: почти две трети педагогов регулярно используют ИИ",
+    "link": "https://www.cnews.ru/news/line/2026-11-23_opros_prosveta_pochti_dve",
+    "dt": "2026-11-23T13:11:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 17.7,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-23_opros_prosveta_pochti_dve"
+    ]
+   },
+   {
+    "title": "Dell, HPE, Lenovo начали поднимать цены на серверы после подписания договоров на поставку. Клиенты готовы судиться",
+    "link": "https://www.cnews.ru/news/top/2026-11-23_dellhpelenovo_razreshili_sebe_povyshat",
+    "dt": "2026-11-23T12:10:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 18.8,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-23_dellhpelenovo_razreshili_sebe_povyshat"
+    ]
+   },
+   {
+    "title": "Лаборатория «Гемотест» перешла на продукты VK Tech для корпоративных коммуникаций и хранения данных",
+    "link": "https://www.cnews.ru/news/line/2026-11-23_laboratoriya_gemotest_pereshla",
+    "dt": "2026-11-23T12:00:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 18.9,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/line/2026-11-23_laboratoriya_gemotest_pereshla"
+    ]
+   }
+  ],
+  "cn": [
+   {
+    "title": "Jensen Huang’s Nvidia return buoys South Korea, Japan stocks",
+    "link": "https://www.scmp.com/news/asia/east-asia/article/3375547/jensen-huangs-nvidia-return-buoys-south-korea-japan-stocks",
+    "dt": "2026-11-24T05:55:06+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 1.0,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/news/asia/east-asia/article/3375547/jensen-huangs-nvidia-return-buoys-south-korea-japan-stocks"
+    ]
+   },
+   {
+    "title": "Jensen Huang returns to Nvidia to applause from staff, no trademark leather jacket in sight",
+    "link": "https://www.scmp.com/tech/tech-war/article/3375539/jensen-huang-returns-nvidia-applause-staff-no-trademark-leather-jacket-sight",
+    "dt": "2026-11-24T04:45:37+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 2.2,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/tech/tech-war/article/3375539/jensen-huang-returns-nvidia-applause-staff-no-trademark-leather-jacket-sight"
+    ]
+   }
+  ],
+  "world": [
+   {
+    "title": "MacBook Neo falls to all-time low $599 in Amazon Black Friday sale — 256GB Citrus model price matches its original launch (Update: now $649)",
+    "link": "https://www.tomshardware.com/laptops/macbook-neo-falls-to-all-time-low-usd599-in-amazon-black-friday-sale-256gb-citrus-model-price-matches-its-original-launch",
+    "dt": "2026-11-24T01:16:19+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 5.6,
+    "fresh": 8,
+    "influence": 6,
+    "novelty": 10,
+    "authority": 8,
+    "total": 7.6,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/laptops/macbook-neo-falls-to-all-time-low-usd599-in-amazon-black-friday-sale-256gb-citrus-model-price-matches-its-original-launch"
+    ]
+   },
+   {
+    "title": "Google alternative Kagi launches an email service",
+    "link": "https://www.theverge.com/tech/1041000/kagi-mail-email-google-gmail-alternative",
+    "dt": "2026-11-24T03:02:52+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 3.9,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 7.4,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.theverge.com/tech/1041000/kagi-mail-email-google-gmail-alternative"
+    ]
+   },
+   {
+    "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+    "link": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
+    "dt": "2026-11-24T01:05:50+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 5.8,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.8,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/"
+    ]
+   },
+   {
+    "title": "AMD's top-performing Ryzen 9850X3D is now the same price as the 9800X3D, an all-time low",
+    "link": "https://www.tomshardware.com/pc-components/cpus/amds-top-performing-ryzen-9800x3d-is-down-to-its-lowest-price-ever-at-usd399-get-the-fastest-gaming-cpu-and-save-usd80-off-list-price",
+    "dt": "2026-11-23T20:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 10.9,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.8,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/cpus/amds-top-performing-ryzen-9800x3d-is-down-to-its-lowest-price-ever-at-usd399-get-the-fastest-gaming-cpu-and-save-usd80-off-list-price"
+    ]
+   },
+   {
+    "title": "Nvidia confirms it is investigating possible third-party data breach, says it will 'continue to monitor the situation'",
+    "link": "https://www.techradar.com/pro/security/nvidia-confirms-it-is-investigating-possible-third-party-data-breach-says-it-will-continue-to-monitor-the-situation",
+    "dt": "2026-11-23T20:05:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 10.8,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.6,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/security/nvidia-confirms-it-is-investigating-possible-third-party-data-breach-says-it-will-continue-to-monitor-the-situation"
+    ]
+   },
+   {
+    "title": "Black Friday Australia laptop deals for 2026: score up to 52% off Lenovo, Apple, Dell, HP and more",
+    "link": "https://www.techradar.com/seasonal-sales/live/black-friday-australia-laptop-deals-2026-live",
+    "dt": "2026-11-24T06:17:57+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 0.6,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 6.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/seasonal-sales/live/black-friday-australia-laptop-deals-2026-live"
+    ]
+   },
+   {
+    "title": "Elon Musk and others rejoice as Jensen Huang is reinstated at Nvidia amid scandal",
+    "link": "https://techcrunch.com/2026/11/23/elon-musk-and-others-rejoice-as-jensen-huang-is-reinstated-at-nvidia-amid-scandal/",
+    "dt": "2026-11-24T00:47:41+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 6.1,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/23/elon-musk-and-others-rejoice-as-jensen-huang-is-reinstated-at-nvidia-amid-scandal/"
+    ]
+   },
+   {
+    "title": "Nvidia employees greet Jensen Huang like a hero as he returns to company’s HQ",
+    "link": "https://techcrunch.com/2026/11/23/nvidia-employees-greet-jensen-huang-like-a-hero-as-he-returns-to-companys-hq/",
+    "dt": "2026-11-23T23:38:53+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 7.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/23/nvidia-employees-greet-jensen-huang-like-a-hero-as-he-returns-to-companys-hq/"
+    ]
+   },
+   {
+    "title": "‘Outrageous,’ ‘reckless,’ ‘wow’: Here’s what politicians are saying about Jensen Huang’s return to Nvidia",
+    "link": "https://techcrunch.com/2026/11/23/outrageous-reckless-wow-heres-what-politicians-are-saying-about-jensen-huangs-return-to-nvidia/",
+    "dt": "2026-11-23T22:31:41+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 8.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/23/outrageous-reckless-wow-heres-what-politicians-are-saying-about-jensen-huangs-return-to-nvidia/"
+    ]
+   },
+   {
+    "title": "Google Search’s AI Mode can now tap into Drive and Wallet for more personalized responses",
+    "link": "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/",
+    "dt": "2026-11-23T22:14:46+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 8.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/"
+    ]
+   },
+   {
+    "title": "Jensen Huang scheduled to testify next week in Senate following reinstatement as Nvidia CEO",
+    "link": "https://techcrunch.com/2026/11/23/jensen-huang-scheduled-to-testify-next-week-in-senate-following-reinstatement-as-nvidia-ceo/",
+    "dt": "2026-11-23T21:12:22+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 9.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/23/jensen-huang-scheduled-to-testify-next-week-in-senate-following-reinstatement-as-nvidia-ceo/"
+    ]
+   },
+   {
+    "title": "Amazon snaps up Decart’s AI optimization tech for $7.5B as it prepares to sell Trainium chips",
+    "link": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/",
+    "dt": "2026-11-23T20:14:23+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 10.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/"
+    ]
+   },
+   {
+    "title": "Trump reportedly called into Nvidia board meeting to advocate for Huang’s return",
+    "link": "https://techcrunch.com/2026/11/23/trump-reportedly-called-into-nvidia-board-meeting-to-advocate-for-huangs-return/",
+    "dt": "2026-11-23T19:39:10+03:00",
+    "region": "world",
+    "feeds": [
+     "TechCrunch"
+    ],
+    "hours": 11.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://techcrunch.com/2026/11/23/trump-reportedly-called-into-nvidia-board-meeting-to-advocate-for-huangs-return/"
+    ]
+   },
+   {
+    "title": "Nvidia CEO Jensen Huang is back. What happens next?",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+    "dt": "2026-11-24T01:10:32+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 5.7,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang"
+    ]
+   },
+   {
+    "title": "The Apple Watch Series 12 is cheaper than ever ahead of Black Friday",
+    "link": "https://www.theverge.com/gadgets/1034512/apple-watch-series-12-black-friday-deal-sale",
+    "dt": "2026-11-24T00:36:48+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 6.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/gadgets/1034512/apple-watch-series-12-black-friday-deal-sale"
+    ]
+   },
+   {
+    "title": "Apple renews Ted Lasso for season 5",
+    "link": "https://www.theverge.com/entertainment/1040699/ted-lasso-season-5-apple-tv",
+    "dt": "2026-11-23T23:56:00+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 7.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.theverge.com/entertainment/1040699/ted-lasso-season-5-apple-tv"
+    ]
+   },
+   {
+    "title": "Jensen Huang returns to applause from employees at Nvidia HQ",
+    "link": "https://www.tomshardware.com/tech-industry/big-tech/jensen-huang-returns-to-applause-from-employees-at-nvidia-hq-some-employees-reportedly-disgruntled-by-return-saying-this-is-the-worst-outcome",
+    "dt": "2026-11-24T00:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 6.9,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/big-tech/jensen-huang-returns-to-applause-from-employees-at-nvidia-hq-some-employees-reportedly-disgruntled-by-return-saying-this-is-the-worst-outcome"
+    ]
+   },
+   {
+    "title": "Electric Intel Core Ultra 7 270K Plus deal knocks it down to just $232",
+    "link": "https://www.tomshardware.com/pc-components/cpus/electric-intel-core-ultra-7-270k-plus-deal-knocks-it-down-to-just-usd232-25-percent-discount-marks-a-new-all-time-low-for-arrow-lake-refresh",
+    "dt": "2026-11-23T22:24:57+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 8.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/cpus/electric-intel-core-ultra-7-270k-plus-deal-knocks-it-down-to-just-usd232-25-percent-discount-marks-a-new-all-time-low-for-arrow-lake-refresh"
+    ]
+   },
+   {
+    "title": "Crucial’s 1TB P310 SSD plummets to £122 at Amazon for Black Friday",
+    "link": "https://www.tomshardware.com/pc-components/ssds/crucials-1tb-p310-ssd-plummets-to-gbp122-at-amazon-for-black-friday-boost-your-playstation-5-or-pc-storage-for-less",
+    "dt": "2026-11-23T21:07:53+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 9.8,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/ssds/crucials-1tb-p310-ssd-plummets-to-gbp122-at-amazon-for-black-friday-boost-your-playstation-5-or-pc-storage-for-less"
+    ]
+   },
+   {
+    "title": "Alienware Aurora PC with RTX 5070, 32GB of RAM drops to $1,899 in Amazon Black Friday offer",
+    "link": "https://www.tomshardware.com/desktops/gaming-pcs/alienware-aurora-pc-with-rtx-5070-32gb-of-ram-drops-to-usd1-899-in-amazon-black-friday-offer-core-ultra-7-equipped-pc-is-one-of-the-best-value-prebuilt-deals-weve-seen-so-far",
+    "dt": "2026-11-23T23:38:46+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 7.3,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 6.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/desktops/gaming-pcs/alienware-aurora-pc-with-rtx-5070-32gb-of-ram-drops-to-usd1-899-in-amazon-black-friday-offer-core-ultra-7-equipped-pc-is-one-of-the-best-value-prebuilt-deals-weve-seen-so-far"
+    ]
+   },
+   {
+    "title": "Today I learned that Apple's newest iPhone Pro models are cooled using water vapor",
+    "link": "https://www.techradar.com/pro/today-i-learned-that-apples-newest-iphone-pro-models-are-cooled-using-water-vapor",
+    "dt": "2026-11-24T02:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 4.9,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/today-i-learned-that-apples-newest-iphone-pro-models-are-cooled-using-water-vapor"
+    ]
+   },
+   {
+    "title": "This 27-inch 4K 160Hz Asus TUF monitor is $240 at Amazon — and it’s a steal for work",
+    "link": "https://www.techradar.com/pro/id-grab-this-27-inch-4k-160hz-asus-tuf-gaming-monitor-while-its-usd239-99-at-amazon",
+    "dt": "2026-11-24T00:55:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 6.0,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/id-grab-this-27-inch-4k-160hz-asus-tuf-gaming-monitor-while-its-usd239-99-at-amazon"
+    ]
+   },
+   {
+    "title": "Black Friday TV deals: save now on LG and Samsung OLED, TCL and Hisense mini-LED, Sony TVs and more",
+    "link": "https://www.techradar.com/televisions/black-friday-tv-deals-2026-november-23",
+    "dt": "2026-11-24T00:17:48+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 6.6,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/televisions/black-friday-tv-deals-2026-november-23"
+    ]
+   },
+   {
+    "title": "This security company is offering $10,000 to anyone able to hack its AI agent protection tool",
+    "link": "https://www.techradar.com/pro/security/this-security-company-is-offering-usd10-000-to-anyone-able-to-hack-its-ai-agent-protection-tool",
+    "dt": "2026-11-23T23:25:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 7.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/security/this-security-company-is-offering-usd10-000-to-anyone-able-to-hack-its-ai-agent-protection-tool"
+    ]
+   },
+   {
+    "title": "I've tested more gaming laptops and PC gaming handhelds than I can count — here's how to buy a great new machine, to beat the RAM crisis and GPU price despair",
+    "link": "https://www.techradar.com/computing/gaming-laptops/ive-tested-more-gaming-laptops-and-pc-gaming-handhelds-than-i-can-count",
+    "dt": "2026-11-23T23:00:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 7.9,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/computing/gaming-laptops/ive-tested-more-gaming-laptops-and-pc-gaming-handhelds-than-i-can-count"
+    ]
+   },
+   {
+    "title": "The cheapest TB5 docking station just landed on Amazon — with 6,000MB/s NVMe Expansion, dual 8K monitor support, and 13-in-1 connectivity, it's a productivity boosting dream",
+    "link": "https://www.techradar.com/pro/the-cheapest-tb5-docking-station-just-landed-on-amazon-with-6-000mb-s-nvme-expansion-dual-8k-monitor-support-and-13-in-1-connectivity-its-a-productivity-boosting-dream",
+    "dt": "2026-11-23T22:17:22+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 8.6,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/the-cheapest-tb5-docking-station-just-landed-on-amazon-with-6-000mb-s-nvme-expansion-dual-8k-monitor-support-and-13-in-1-connectivity-its-a-productivity-boosting-dream"
+    ]
+   },
+   {
+    "title": "Samsung's 32-inch ViewFinity S7 4K monitor is just $200 at Amazon for Black Friday, and that's a lot of screen for work",
+    "link": "https://www.techradar.com/pro/samsungs-32-inch-viewfinity-s7-4k-monitor-is-just-usd199-99-at-amazon-and-thats-a-lot-of-screen-for-work",
+    "dt": "2026-11-23T21:51:28+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 9.1,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/samsungs-32-inch-viewfinity-s7-4k-monitor-is-just-usd199-99-at-amazon-and-thats-a-lot-of-screen-for-work"
+    ]
+   },
+   {
+    "title": "Samsung's 990 Pro is one of the fastest PCIe 4.0 SSDs you can buy, and now all capacities up to 4TB are discounted for Black Friday",
+    "link": "https://www.techradar.com/pro/the-best-gets-bigger-said-toms-hardware-of-samsungs-4tb-990-pro-ssd-and-its-usd400-off-at-amazon",
+    "dt": "2026-11-23T21:43:58+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 9.2,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/the-best-gets-bigger-said-toms-hardware-of-samsungs-4tb-990-pro-ssd-and-its-usd400-off-at-amazon"
+    ]
+   },
+   {
+    "title": "The best MacBook for Black Friday: pick the right Apple laptop for you",
+    "link": "https://www.techradar.com/computing/macbooks/how-to-pick-the-best-apple-macbook-to-buy-this-black-friday-expert-tips-from-a-pro",
+    "dt": "2026-11-23T21:30:41+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 9.4,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/computing/macbooks/how-to-pick-the-best-apple-macbook-to-buy-this-black-friday-expert-tips-from-a-pro"
+    ]
+   },
+   {
+    "title": "'We're going to keep it all in this country': Trump looks to ban US firms building AI data centers in foreign countries",
+    "link": "https://www.techradar.com/pro/were-going-to-keep-it-all-in-this-country-trump-looks-to-ban-us-firms-building-ai-data-centers-in-foreign-countries",
+    "dt": "2026-11-23T21:25:00+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 9.5,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/were-going-to-keep-it-all-in-this-country-trump-looks-to-ban-us-firms-building-ai-data-centers-in-foreign-countries"
+    ]
+   }
+  ]
+ },
+ "dropped": {
+  "count": 193,
+  "examples": [
+   {
+    "title": "Выпуск Rust Coreutils 0.13.0",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Те же галеры, вид сбоку — наем, KPI и выгорание в кибергруппировках",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Что такое RGB MiniLED и чем телевизор с этой подсветкой отличается от других экранов",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Вышла децентрализованная система отслеживания ошибок git-bug 0.12",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Вышло обновление RapidRAW 1.7.1 — открытого редактора изображений RAW",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "От инженера к клавишенажимателю. История одного профессионального вырождения?",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Планинг‑покер с помидорами: 49 минут от первого коммита до прода с Claude Code, и что было дальше",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "[Перевод] Несколько недель сознания: (1) Может ли физика сказать что‑нибудь о сознании?",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Число статей в год растет, а прогресса нет",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "13 субагентов против голого Codex: потратил 44 миллиона токенов, чтобы выяснить, стоит ли игра свеч",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Obsidian для системного аналитика: требования, открытые вопросы и решения в одном хранилище",
+    "reason": "не тех-тема"
+   },
+   {
+    "title": "Собеседование как первое свидание: злобные бывшие и еще 4 способа все испортить",
+    "reason": "не тех-тема"
+   }
+  ]
+ },
+ "feeds_ok": [
+  "Habr news",
+  "Opennet",
+  "CNews",
+  "SCMP Tech",
+  "Global Times (outbrain, общий фид с техно-пунктом)",
+  "TechCrunch",
+  "The Verge",
+  "Tom's Hardware",
+  "TechRadar",
+  "Phys.org",
+  "IEEE Spectrum AI"
+ ],
+ "feeds_fail": [
+  "TechNode (China Tech)",
+  "VentureBeat"
+ ]
+}
