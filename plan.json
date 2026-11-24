@@ -1,16 +1,6 @@
 {
   "tasks": [
     {
-      "id": "max-2026-10-24-zaiobnovilsya-teper-eto-polnocennaya-rabochaya-sreda",
-      "title": "[AI] 📁 Z.ai обновился: теперь это полноценная рабочая среда!",
-      "when": "2026-10-24",
-      "time": null,
-      "status": "done",
-      "why": "",
-      "link": "roles/blogger/channels/ainow/posts/2026-10-24-zaiobnovilsya-teper-eto-polnocennaya-rabochaya-sreda.md",
-      "source": "auto"
-    },
-    {
       "id": "max-2026-10-29-brauzernye-aiagenty-ustupayut-rabochemu-stolu",
       "title": "[AI] 🧭 Браузерные ИИ-агенты сдают позиции: индустрия перебирается на рабочий стол",
       "when": "2026-10-29",
@@ -865,8 +855,8 @@
       "title": "[Забавное] Подпишись на Забавное — если любите, когда смешно 🎬",
       "when": "2026-11-22",
       "time": null,
-      "status": "scheduled",
-      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Забавное»",
+      "status": "done",
+      "why": "",
       "link": "roles/blogger/channels/zabava/posts/2026-11-22-random-19750541265660.md",
       "source": "auto"
     },
@@ -901,6 +891,16 @@
       "source": "auto"
     },
     {
+      "id": "max-2026-11-23-pyaterka-tehnologij",
+      "title": "[Новости технологий ИИ, нейросетей и инноваций] Что важного в технологиях за ночь: чипы, ИИ и распродажи",
+      "when": "2026-11-23",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/na100/posts/2026-11-23-pyaterka-tehnologij.md",
+      "source": "auto"
+    },
+    {
       "id": "max-2026-11-23-random-19265728809544",
       "title": "[Забавное] Подпишись на Забавное, чтобы не пропустить свежие ролики 🎬",
       "when": "2026-11-23",
@@ -908,6 +908,16 @@
       "status": "scheduled",
       "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Забавное»",
       "link": "roles/blogger/channels/zabava/posts/2026-11-23-random-19265728809544.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-24-iz-telegram-v-max",
+      "title": "[Нейро Мульт Студия] 🎬 Почему я переношу мультстудию в MAX",
+      "when": "2026-11-23",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/tg_neuro/posts/2026-11-24-iz-telegram-v-max.md",
       "source": "auto"
     },
     {
@@ -921,6 +931,16 @@
       "source": "auto"
     },
     {
+      "id": "max-2026-11-24-cifra-nedeli",
+      "title": "[Каналы в MAX: рост и автопилот] 📊 Цифра недели: что показали наши каналы",
+      "when": "2026-11-24",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Каналы в MAX: рост и автопилот»",
+      "link": "roles/blogger/channels/administrator/posts/2026-11-24-cifra-nedeli.md",
+      "source": "auto"
+    },
+    {
       "id": "max-2026-11-24-neyroset-bez-registracii-proverili-kto-puskaet",
       "title": "[AI] Нейросеть без регистрации: проверили, кто пускает без входа",
       "when": "2026-11-24",
@@ -931,6 +951,16 @@
       "source": "auto"
     },
     {
+      "id": "max-2026-11-24-pyaterka-tehnologij",
+      "title": "[Новости технологий ИИ, нейросетей и инноваций] Что важного в технологиях за сутки: облако, чипы и агенты",
+      "when": "2026-11-24",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/na100/posts/2026-11-24-pyaterka-tehnologij.md",
+      "source": "auto"
+    },
+    {
       "id": "max-2026-11-24-random-20758878095995",
       "title": "[Забавное] Подпишись на Забавное — и порция юмора всегда под рукой 🎬",
       "when": "2026-11-24",
@@ -938,6 +968,16 @@
       "status": "scheduled",
       "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Забавное»",
       "link": "roles/blogger/channels/zabava/posts/2026-11-24-random-20758878095995.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-24-stavki-pered-ipo",
+      "title": "[AI] Ставки перед IPO: что читать в чужих оценках",
+      "when": "2026-11-24",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «AI»",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-24-stavki-pered-ipo.md",
       "source": "auto"
     },
     {
@@ -961,6 +1001,16 @@
       "source": "auto"
     },
     {
+      "id": "max-2026-11-25-kak-otlichit-ii-video-6-detektorov",
+      "title": "[AI] Как отличить ИИ-видео: 6 детекторов и 5 признаков",
+      "when": "2026-11-25",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «AI»",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-25-kak-otlichit-ii-video-6-detektorov.md",
+      "source": "auto"
+    },
+    {
       "id": "max-2026-11-25-random-18636718475791",
       "title": "[Забавное] Подпишись на канал Забавное — здесь можно улыбнуться 🎬",
       "when": "2026-11-25",
@@ -981,6 +1031,36 @@
       "source": "auto"
     },
     {
+      "id": "max-2026-11-26-chat-bot-v-max-5-proverok",
+      "title": "[AI] Чат-бот в MAX: 5 проверок перед доступом",
+      "when": "2026-11-26",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «AI»",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-26-chat-bot-v-max-5-proverok.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-26-chto-ostalos-zdes",
+      "title": "[Нейро Мульт Студия] 🎬 Что остаётся в этом канале",
+      "when": "2026-11-26",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Нейро Мульт Студия»",
+      "link": "roles/blogger/channels/tg_neuro/posts/2026-11-26-chto-ostalos-zdes.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-26-chto-pochinili",
+      "title": "[Каналы в MAX: рост и автопилот] 🛠 Что мы починили: формат постов и гейты публикации",
+      "when": "2026-11-26",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Каналы в MAX: рост и автопилот»",
+      "link": "roles/blogger/channels/administrator/posts/2026-11-26-chto-pochinili.md",
+      "source": "auto"
+    },
+    {
       "id": "max-2026-11-26-random-AaB6aufjRI0",
       "title": "[Забавное] В буфете произошла драка — невозмутимость буфетчицы восхищает",
       "when": "2026-11-26",
@@ -998,6 +1078,16 @@
       "status": "scheduled",
       "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Коты, кошки и котята»",
       "link": "roles/blogger/channels/catden/posts/2026-11-27-007-bengalskiy-kot-leopard-v-vashem-dome-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-27-ii-dlya-uchitelya-5-priemov",
+      "title": "[AI] ИИ для учителя: 5 приёмов, которые экономят вечер",
+      "when": "2026-11-27",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «AI»",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-27-ii-dlya-uchitelya-5-priemov.md",
       "source": "auto"
     },
     {
@@ -1031,6 +1121,16 @@
       "source": "auto"
     },
     {
+      "id": "max-2026-11-28-sem-ai-agentov-dlya-pk",
+      "title": "[AI] Семь AI-агентов для ПК: от кода до календаря",
+      "when": "2026-11-28",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «AI»",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-28-sem-ai-agentov-dlya-pk.md",
+      "source": "auto"
+    },
+    {
       "id": "max-2026-11-29-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-img1",
       "title": "[Коты, кошки и котята] Фото героев завтрашней статьи",
       "when": "2026-11-29",
@@ -1038,16 +1138,6 @@
       "status": "scheduled",
       "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Коты, кошки и котята»",
       "link": "roles/blogger/channels/catden/posts/2026-11-29-011-vlasti-ssha-vydelyat-15-milliona-dollarov-dlya-p-img1.md",
-      "source": "auto"
-    },
-    {
-      "id": "max-2026-12-01-chto-ne-srabotalo-ii-redaktor-v-brauzere",
-      "title": "[AI] Что не сработало: ИИ-редактор в браузере",
-      "when": "2026-12-01",
-      "time": null,
-      "status": "scheduled",
-      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «AI»",
-      "link": "roles/blogger/channels/ainow/posts/2026-12-01-chto-ne-srabotalo-ii-redaktor-v-brauzere.md",
       "source": "auto"
     },
     {
@@ -1071,6 +1161,16 @@
       "source": "auto"
     },
     {
+      "id": "max-2026-11-30-ii-agregatory-odin-koshelek-vmesto-podpisok",
+      "title": "[AI] ИИ-агрегаторы: один кошелёк вместо десятка подписок",
+      "when": "2026-11-30",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «AI»",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-30-ii-agregatory-odin-koshelek-vmesto-podpisok.md",
+      "source": "auto"
+    },
+    {
       "id": "max-2026-11-30-random-AZ_aYrh4HL0",
       "title": "[Забавное] Мама с медвежатами на рыбалке",
       "when": "2026-11-30",
@@ -1088,6 +1188,16 @@
       "status": "scheduled",
       "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Коты, кошки и котята»",
       "link": "roles/blogger/channels/catden/posts/2026-12-01-012-vozniknovenie-porody-sibirskih-koshek-img1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-12-01-chto-ne-srabotalo-ii-redaktor-v-brauzere",
+      "title": "[AI] Что не сработало: ИИ-редактор в браузере",
+      "when": "2026-12-01",
+      "time": null,
+      "status": "scheduled",
+      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «AI»",
+      "link": "roles/blogger/channels/ainow/posts/2026-12-01-chto-ne-srabotalo-ii-redaktor-v-brauzere.md",
       "source": "auto"
     },
     {
@@ -2311,46 +2421,6 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-25-kak-otlichit-ii-video-6-detektorov",
-      "title": "[AI] Как отличить ИИ-видео: 6 детекторов и 5 признаков",
-      "when": null,
-      "time": null,
-      "status": "backlog",
-      "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-25-kak-otlichit-ii-video-6-detektorov.md",
-      "source": "auto"
-    },
-    {
-      "id": "max-2026-11-26-chat-bot-v-max-5-proverok",
-      "title": "[AI] Чат-бот в MAX: 5 проверок перед доступом",
-      "when": null,
-      "time": null,
-      "status": "backlog",
-      "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-26-chat-bot-v-max-5-proverok.md",
-      "source": "auto"
-    },
-    {
-      "id": "max-2026-11-27-ii-dlya-uchitelya-5-priemov",
-      "title": "[AI] ИИ для учителя: 5 приёмов, которые экономят вечер",
-      "when": null,
-      "time": null,
-      "status": "backlog",
-      "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-27-ii-dlya-uchitelya-5-priemov.md",
-      "source": "auto"
-    },
-    {
-      "id": "max-2026-11-30-ii-agregatory-odin-koshelek-vmesto-podpisok",
-      "title": "[AI] ИИ-агрегаторы: один кошелёк вместо десятка подписок",
-      "when": "2026-11-30",
-      "time": null,
-      "status": "backlog",
-      "why": "черновик, ждёт «ок» владельца (тема заменила «Оживить старое фото»)",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-30-ii-agregatory-odin-koshelek-vmesto-podpisok.md",
-      "source": "auto"
-    },
-    {
       "id": "max-2026-12-06-tri-filtra-kotorye-lovyat-ii-tekst",
       "title": "[AI] Три фильтра, которые ловят ИИ-текст",
       "when": null,
@@ -2419,16 +2489,6 @@
       "why": "оформили ТЗ коллеги (20.11): na100→ainow (форматы 1-2, формат 3 отвергнут), administrator→B2B, tg_neuro→миграция; +4h через cron; перенос ainow на лучшее вечернее время. Чек-лист: 1) оформить задачу; 2) коммит plan.json + push; 3) kalendar drop/sync; 4) реализация кросс-постинга (Format 1 — тест на na100 20.11). Дополнения от пользователя: Format 2 рабочий, но другая философия (сухая выжимка в ainow, глубина в na100; конфликт со служебным статусом na100 — как воронка норм); administrator: добавить в «Цифру недели» блок B2B-продажи «Как заказать такое же решение для вас»; перенос основного канала на более комфортный слот — не увидел результата. 20.11: Format 1 остаётся (crosspost + авт. адаптация ИИ-агентом); LLM-адаптация Qwen/Alice убрана; draft crosspost восстановлен; медиа пилота для republish — в работе. 20.11: задачи серии завершены — Format 1 остаётся, LLM-адаптация убрана, draft восстановлен, B2B republish пилота OK, слот ainow 21:30.",
       "link": "docs/methodology/channels-classification.md",
       "source": "orchestrator"
-    },
-    {
-      "id": "max-2026-11-28-sem-ai-agentov-dlya-pk",
-      "title": "[AI] Семь AI-агентов для ПК: от кода до календаря",
-      "when": "2026-11-28",
-      "time": null,
-      "status": "backlog",
-      "why": "черновик, ждёт «ок» владельца",
-      "link": "roles/blogger/channels/ainow/posts/2026-11-28-sem-ai-agentov-dlya-pk.md",
-      "source": "auto"
     }
   ]
 }
