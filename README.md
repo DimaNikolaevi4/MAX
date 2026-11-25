@@ -102,6 +102,7 @@ status: draft             # draft -> approved -> published
 format: markdown
 notify: true
 format_core: 1            # ядро §0; только для новых постов core-каналов
+tail_mode: free           # опция §0.11: свободный набор/порядок хвоста
 cta_target: self          # self | ainow — для na100/administrator
 reactions: true           # факт авто-блока реакций, пишется публикатором
 publish_time: 09:00       # МСК; слот поста, если отличается от слота канала

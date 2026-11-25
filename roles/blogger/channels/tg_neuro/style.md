@@ -2,6 +2,8 @@
 
 Канал: https://t.me/Neuro_Animation_Studio
 
+Творческая зона (где применимо в рамках telegram-формата): первый абзац и нижние блоки можно писать свободно, порядок подписки/реакции/вопроса не фиксировать — это защищает от замыливания глаз.
+
 `format_profile: telegram`. Режим миграции: аудитория переливается в `ainow`
 (https://max.ru/channel_ainow). Публикация — через релей
 `deploy/tg-relay.php` инструментом `roles/blogger/tools/publish_telegram.py`.

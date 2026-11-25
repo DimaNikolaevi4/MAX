@@ -922,6 +922,83 @@ def check_cta_position(text: str, fm: FrontMatter, ch: dict, result: CheckResult
             "reaction": group_list[cta_idx + 1][0] if reaction_between else None}
 
 
+def check_creative_tail(text: str, fm: FrontMatter, ch: dict, result: CheckResult,
+                        *, expect: dict | None = None) -> dict:
+    """Свободный хвост (§0.11): подписка/реакция/вопрос — любой набор и порядок.
+
+    Включается полем `tail_mode: free` во front matter. Каждый из трёх блоков —
+    одна строка, блоки разделены пустыми строками. Хвостом считаются последние
+    три смысловых блока; выше — тело с обычными правилами §0.
+    """
+    expect = expect or resolve_cta(ch.get("slug", ""), fm, ch)
+    groups = blocks(text)
+    if not groups:
+        result.error("EMPTY", "пустой текст")
+        return {}
+    tail_start = max(0, len(groups) - 3)
+    found: dict[str, tuple[int, object]] = {}
+    info: dict[str, object] = {}
+
+    for idx in range(tail_start, len(groups)):
+        group = groups[idx]
+        if len(group) > 1:
+            result.error("TAIL_STICKY",
+                         f"блок {idx + 1} в хвосте содержит {len(group)} строки; "
+                         "подписка, реакция и вопрос — по одной строке каждый")
+            continue
+        line = group[0].strip()
+        m = CTA_CORE_RE.match(line)
+        if m:
+            if "cta" in found:
+                result.error("CTA_DUPLICATE", "в хвосте больше одной CTA-цитаты")
+                continue
+            found["cta"] = (idx, m)
+            continue
+        if is_reaction_line(line):
+            if "reaction" in found:
+                result.error("REACTION_DUPLICATE", "в хвосте больше одного призыва к реакциям")
+                continue
+            found["reaction"] = (idx, line)
+            check_reaction_interval(line, fm, ch, result)
+            continue
+        if "?" in line:
+            if "question" in found:
+                result.error("QUESTION_DUPLICATE", "в хвосте больше одного вопроса")
+                continue
+            found["question"] = (idx, line)
+            if re.fullmatch(r"а вы что думаете\??", line, re.I):
+                result.warning("QUESTION_CLICHE", "дежурный вопрос «а вы что думаете?» не приветствуется")
+            elif re.search(r"провер(ить|или|ьте)", line, re.I):
+                result.warning("QUESTION_WORDING",
+                               "в вопросе лучше без «проверить/проверили» — "
+                               "используйте «разобрать подробнее»")
+            continue
+        result.warning("TAIL_EXTRA",
+                       f"блок {idx + 1} в хвосте не распознан как подписка/реакция/вопрос")
+
+    if "cta" in found:
+        m = found["cta"][1]
+        label, url, phrase = m.group(1), m.group(2), m.group(3).strip()
+        expected_label, expected_url = expect.get("label"), expect.get("url")
+        if expected_label and label != expected_label:
+            result.error("CTA_LABEL", f"метка CTA {label!r} != {expected_label!r}")
+        if expected_url and url != expected_url:
+            result.error("CTA_TARGET_URL",
+                         f"ссылка CTA {url!r} не соответствует адресату "
+                         f"{expect.get('target')!r} ({expected_url!r})")
+        if not phrase:
+            result.error("CTA_PHRASE", "пустая фраза CTA")
+        info.update({"label": label, "url": url, "phrase": phrase})
+
+    info["reaction"] = found["reaction"][1] if "reaction" in found else None
+    count = len(found)
+    if count == 0:
+        result.warning("TAIL_EMPTY", "внизу нет ни подписки, ни реакции, ни вопроса")
+    elif count == 1:
+        result.warning("TAIL_THIN", "в хвосте только один блок — добавьте ещё один для живого финала")
+    return info
+
+
 def check_reaction_interval(reaction_block: list[str] | str, fm: FrontMatter,
                             ch: dict, result: CheckResult) -> None:
     text = reaction_block if isinstance(reaction_block, str) else " ".join(reaction_block)
@@ -970,7 +1047,10 @@ def check_core(text: str, fm: FrontMatter, ch: dict, result: CheckResult) -> dic
     check_markup(text, result)
     check_bold(text, ch, result)
     check_cta_target_field(fm, ch, result, expect)
-    info = check_cta_position(text, fm, ch, result, expect=expect)
+    if str(fm.get("tail_mode") or "").strip().lower() in ("free", "creative"):
+        info = check_creative_tail(text, fm, ch, result, expect=expect)
+    else:
+        info = check_cta_position(text, fm, ch, result, expect=expect)
     check_interlinks(text, ch, result, target_url=expect["url"],
                      cta_url=fm.get("cta_url") or "")
     if ch.get("slug") == "na100":

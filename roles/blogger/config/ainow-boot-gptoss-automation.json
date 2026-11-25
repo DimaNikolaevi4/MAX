@@ -1,0 +1,72 @@
+{
+  "_": "Служебная команда оркестрации ainow (MAX ↔ kalendar). Прямое распоряжение владельца 25.11.2026: дневной пост на 12:00 готовится при первом включении машины без отдельного «ок» — агент сам прогоняет четыре слоя вычитки и размещает пост. Исключение из общего цикла согласования действует только для этой задачи. Не перегенерируется export_plan.py (source: kalendar, id: orch-*).",
+  "id": "orch-ainow-boot-gptoss-1200",
+  "channel": "ainow",
+  "enabled": true,
+  "timezone": "Europe/Moscow",
+  "trigger": {
+    "kind": "first_machine_start",
+    "command": "смотри E:\\github\\kalendar",
+    "window": ["06:00", "11:00"],
+    "marker": "E:\\github\\kalendar\\local\\ainow-boot-gptoss-<дата>.done",
+    "state_script": "E:\\github\\kalendar\\bin\\ainow_boot_gptoss.py",
+    "prompt": "E:\\github\\kalendar\\docs\\ai-orchestration\\prompts\\05-ainow-daily-12.md"
+  },
+  "publish_time": "12:00",
+  "format": "Format 1 (кросс-пост ainow, publish_time во front matter)",
+  "news": {
+    "feeds": "roles/blogger/config/techdigest_feeds.json",
+    "discussion_source": "https://habr.com/ru/top/",
+    "window_hours": 24,
+    "raw": "local/gptoss-news/<дата>-news.json",
+    "denied_sources": "roles/blogger/config/image_sources.json → denied"
+  },
+  "model": "@cf/openai/gpt-oss-120b",
+  "provider": "Cloudflare Workers AI",
+  "credentials": "E:\\github\\ai.txt → local/cf_config.json (gitignored, в git не добавлять)",
+  "prompt_template": "roles/blogger/channels/ainow/gptoss-news-prompt.md",
+  "worker": "roles/blogger/tools/gptoss_news_post.py",
+  "raw_post": "local/gptoss-news/<дата>-raw.txt",
+  "draft": "roles/blogger/channels/ainow/posts/<дата>-<slug>.md",
+  "proofreading": {
+    "owner_approval": false,
+    "reason": "прямое распоряжение владельца 25.11.2026",
+    "layers": ["LanguageTool (блокирует)", "readability (WARN)", "lexicon/ru-humanizer (WARN)", "финальная ручная вычитка"],
+    "blocking_fallback": "стоп, отчёт в календарь, метку не ставить",
+    "checkers": ["check_post.py --channel ainow --core", "ainow_polish.py --check"]
+  },
+  "cover": {
+    "min_aspect": 1.5,
+    "pool": "local/images/ainow",
+    "picker": "roles/blogger/tools/pick_image.py --channel ainow",
+    "check": "roles/blogger/tools/media_aspect.py"
+  },
+  "hosting": {
+    "mechanism": "git push в GitHub main → серверный cron deploy/post_cron.php (читает GitHub API + raw-файл, без git pull)",
+    "cover_remote": "/0s3/public_html/blogger/covers/ainow/<дата>-cover.png",
+    "cover_url": "https://0s3.ru/blogger/covers/ainow/<дата>-cover.png",
+    "cover_credentials": "только из gitignored локального файла, в репозиторий не попадают",
+    "cron_runs_proofreading": false,
+    "gate_time": "12:00",
+    "local_scheduler": false,
+    "required_front_matter": {
+      "status": "approved",
+      "publish_time": "12:00",
+      "format_core": 1,
+      "notify": true,
+      "tail_mode": "free"
+    }
+  },
+  "reporting": {
+    "working_chat": true,
+    "calendar_channel_key": "calendar",
+    "calendar_note": "<дата> — 12:00 — <заголовок>: пост готов, залит на хостинг",
+    "notify": false
+  },
+  "state": {
+    "last_run": null,
+    "last_post": null,
+    "last_mid": null,
+    "notes": "Задача создана 25.11.2026. Первый прогон — при следующем включении машины в окне 06:00–11:00 МСК."
+  }
+}
