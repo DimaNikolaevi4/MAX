@@ -1011,6 +1011,16 @@
       "source": "auto"
     },
     {
+      "id": "max-2026-11-25-opencode-cloudflare",
+      "title": "[AI] Бесплатный API ИИ: что реально работает в 2026-м",
+      "when": "2026-11-25",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/ainow/posts/2026-11-25-opencode-cloudflare.md",
+      "source": "auto"
+    },
+    {
       "id": "max-2026-11-25-pyaterka-tehnologij",
       "title": "[Новости технологий ИИ, нейросетей и инноваций] Что важного в технологиях за сутки: Linux, чипы и скидки",
       "when": "2026-11-25",
@@ -2481,6 +2491,16 @@
       "source": "auto"
     },
     {
+      "id": "orch-ainow-boot-gptoss-1200",
+      "title": "[ainow] При включении машины: самая обсуждаемая IT-новость → gpt-oss-120b → сырой пост → четыре слоя вычитки → 12:00 Format 1",
+      "when": null,
+      "time": null,
+      "status": "in-progress",
+      "why": "Оркестрация kalendar↔MAX: первое утреннее включение, отбор самой обсуждаемой IT-новости, промт для Cloudflare Workers AI @cf/openai/gpt-oss-120b, сохранение сырого поста, вычитка агентом и размещение с publish_time 12:00",
+      "link": "roles/blogger/config/ainow-boot-gptoss-automation.json",
+      "source": "kalendar"
+    },
+    {
       "id": "orch-catden-autopilot",
       "title": "[catden] Служебная команда автопилота: четверг медиа (11д), пятница стилистика+слои 1-3+превью 10д в календарь",
       "when": null,
@@ -2499,16 +2519,6 @@
       "why": "оформили ТЗ коллеги (20.11): na100→ainow (форматы 1-2, формат 3 отвергнут), administrator→B2B, tg_neuro→миграция; +4h через cron; перенос ainow на лучшее вечернее время. Чек-лист: 1) оформить задачу; 2) коммит plan.json + push; 3) kalendar drop/sync; 4) реализация кросс-постинга (Format 1 — тест на na100 20.11). Дополнения от пользователя: Format 2 рабочий, но другая философия (сухая выжимка в ainow, глубина в na100; конфликт со служебным статусом na100 — как воронка норм); administrator: добавить в «Цифру недели» блок B2B-продажи «Как заказать такое же решение для вас»; перенос основного канала на более комфортный слот — не увидел результата. 20.11: Format 1 остаётся (crosspost + авт. адаптация ИИ-агентом); LLM-адаптация Qwen/Alice убрана; draft crosspost восстановлен; медиа пилота для republish — в работе. 20.11: задачи серии завершены — Format 1 остаётся, LLM-адаптация убрана, draft восстановлен, B2B republish пилота OK, слот ainow 21:30.",
       "link": "docs/methodology/channels-classification.md",
       "source": "orchestrator"
-    },
-    {
-      "id": "orch-ainow-boot-gptoss-1200",
-      "title": "[ainow] При включении машины: самая обсуждаемая IT-новость → gpt-oss-120b → сырой пост → четыре слоя вычитки → 12:00 Format 1",
-      "when": null,
-      "time": null,
-      "status": "in-progress",
-      "why": "Оркестрация kalendar↔MAX: первое утреннее включение, отбор самой обсуждаемой IT-новости, промт для Cloudflare Workers AI @cf/openai/gpt-oss-120b, сохранение сырого поста, вычитка агентом и размещение с publish_time 12:00",
-      "link": "roles/blogger/config/ainow-boot-gptoss-automation.json",
-      "source": "kalendar"
     }
   ]
 }
