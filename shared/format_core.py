@@ -909,6 +909,10 @@ def check_cta_position(text: str, fm: FrontMatter, ch: dict, result: CheckResult
         result.error("QUESTION", "последний блок — одна строка-вопрос со '?'")
     elif re.fullmatch(r"а вы что думаете\??", question, re.I):
         result.warning("QUESTION_CLICHE", "дежурный вопрос «а вы что думаете?» не приветствуется")
+    elif re.search(r"провер(ить|или|ьте)", question, re.I):
+        result.warning("QUESTION_WORDING",
+                       "в финальном вопросе лучше без «проверить/проверили» — "
+                       "используйте «разобрать подробнее»")
     if reaction_between:
         check_reaction_interval(group_list[cta_idx + 1], fm, ch, result)
     else:

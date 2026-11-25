@@ -223,6 +223,17 @@ class FormatCorePositiveTest(unittest.TestCase):
         with_credit = check(credited, "na100", front, extras=True)
         self.assertNotIn("DIGEST_ATTRIBUTION", codes(with_credit))
 
+    def test_33_question_without_proverili(self):
+        text = DIGEST_BODY.replace(
+            "Какую новость разобрать подробнее?",
+            "Какую новость вы бы проверили первым делом?")
+        result = check(text, "na100",
+                       fm(cta_target="ainow",
+                          image_file="local/digest/cover-2026-11-25-test.png"),
+                       extras=True)
+        self.assertTrue(result.ok, str(result.to_dict()))
+        self.assertIn("QUESTION_WORDING", [i.code for i in result.warnings])
+
     def test_30_front_matter_set_no_duplication(self):
         raw = ("---\nchannel: ainow\nstatus: approved\n"
                "cta_target: self\n# comment\n---\n\nBody\n")
