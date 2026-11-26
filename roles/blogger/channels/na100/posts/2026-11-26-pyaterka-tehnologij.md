@@ -1,9 +1,15 @@
 ---
 channel: na100
-status: approved
+status: published
 format: markdown
 notify: true
 image_file: local/digest/cover-2026-11-26-pyaterka-tehnologij.png
+cta_target: self
+published_at: 2026-11-26T07:23:40+03:00
+message_id: mid.ffffba08e9ee9aa301a21618464e2e11
+channel_id: -76927529477469
+url: https://max.ru/channel_na100/AaIWGEZOLhE
+image: https://i.oneme.ru/i?r=B0xHQN0Qr3SEKX3_pN3cnGD9SUInS7dPfS7iEeExPy6FiG2066nrm_F7oVIMTd7apflo92jR5OwC8i60ETd4H8VCXPEjgcB_NL4S5f8
 ---
 
 **ИИ-агенты чинят ядро, а серверы дорожают на 45%**
