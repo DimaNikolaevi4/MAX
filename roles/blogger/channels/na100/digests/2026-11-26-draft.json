@@ -1,84 +1,18 @@
 {
  "date": "2026-11-26",
- "generated_at": "2026-11-26T07:11:21.501935+03:00",
+ "generated_at": "2026-11-26T07:16:58.774964+03:00",
  "formula": "свежесть*0.3 + влияние*0.4 + новизна*0.2 + авторитет*0.1 (0-10, порог 5.0); шаг 4 — обложка/текст у агента",
  "notes": [],
  "proposed": [
   {
-   "title": "Cisco и OpenAI представили Shirudo — платформу для обеспечения безопасности Linux на базе eBPF",
-   "link": "https://habr.com/ru/articles/1112166/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1112166",
-   "dt": "2026-11-26T05:25:07+03:00",
+   "title": "Сбербанк представил макроэкономическую платформу Data Tracker с ИИ-помощником",
+   "link": "https://www.cnews.ru/news/line/2026-11-26_sberbank_predstavil_makroekonomicheskuyu",
+   "dt": "2026-11-26T06:50:00+03:00",
    "region": "ru",
    "feeds": [
-    "Habr news"
+    "CNews"
    ],
-   "hours": 1.8,
-   "fresh": 10,
-   "influence": 4,
-   "novelty": 10,
-   "authority": 7,
-   "total": 7.3,
-   "signals": [
-    "игрок/государство",
-    "анонс/первый запуск"
-   ],
-   "sources": [
-    "https://habr.com/ru/articles/1112166/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1112166"
-   ]
-  },
-  {
-   "title": "Chinese AI chips to capture 88% of home market by 2028, UBS says, as Nvidia woes mount",
-   "link": "https://www.scmp.com/tech/tech-war/article/3375758/chinese-ai-chips-capture-88-home-market-2028-ubs-says-nvidia-woes-mount",
-   "dt": "2026-11-26T07:00:11+03:00",
-   "region": "cn",
-   "feeds": [
-    "SCMP Tech"
-   ],
-   "hours": 0.2,
-   "fresh": 10,
-   "influence": 2,
-   "novelty": 10,
-   "authority": 8,
-   "total": 6.6,
-   "signals": [
-    "игрок/государство"
-   ],
-   "sources": [
-    "https://www.scmp.com/tech/tech-war/article/3375758/chinese-ai-chips-capture-88-home-market-2028-ubs-says-nvidia-woes-mount"
-   ]
-  },
-  {
-   "title": "The colourful MacBook Neo at £619 brings Apple's budget laptop closer to its launch price",
-   "link": "https://www.techradar.com/pro/the-colourful-macbook-neo-at-gbp619-brings-apples-budget-laptop-closer-to-its-launch-price",
-   "dt": "2026-11-25T19:39:17+03:00",
-   "region": "world",
-   "feeds": [
-    "TechRadar"
-   ],
-   "hours": 11.5,
-   "fresh": 8,
-   "influence": 6,
-   "novelty": 10,
-   "authority": 6,
-   "total": 7.4,
-   "signals": [
-    "игрок/государство",
-    "цена/регулирование/доступность",
-    "анонс/первый запуск"
-   ],
-   "sources": [
-    "https://www.techradar.com/pro/the-colourful-macbook-neo-at-gbp619-brings-apples-budget-laptop-closer-to-its-launch-price"
-   ]
-  },
-  {
-   "title": "Forget pricey iPads: Samsung’s Galaxy Tab A11+ just hit its all-time low price of AU$249 for Black Friday",
-   "link": "https://www.techradar.com/tablets/forget-pricey-ipads-samsungs-galaxy-tab-a11-just-hit-its-all-time-low-price-of-au-usd249-for-black-friday",
-   "dt": "2026-11-26T05:55:55+03:00",
-   "region": "world",
-   "feeds": [
-    "TechRadar"
-   ],
-   "hours": 1.3,
+   "hours": 0.4,
    "fresh": 10,
    "influence": 4,
    "novelty": 10,
@@ -86,21 +20,42 @@
    "total": 7.2,
    "signals": [
     "игрок/государство",
-    "цена/регулирование/доступность"
+    "анонс/первый запуск"
    ],
    "sources": [
-    "https://www.techradar.com/tablets/forget-pricey-ipads-samsungs-galaxy-tab-a11-just-hit-its-all-time-low-price-of-au-usd249-for-black-friday"
+    "https://www.cnews.ru/news/line/2026-11-26_sberbank_predstavil_makroekonomicheskuyu"
    ]
   },
   {
-   "title": "Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future",
-   "link": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
-   "dt": "2026-11-26T00:51:26+03:00",
+   "title": "US finds no evidence China told Alice Huang to spy on Nvidia’s Jensen Huang, report says",
+   "link": "https://www.scmp.com/news/world/united-states-canada/article/3375812/us-finds-no-evidence-china-told-tech-exec-spy-nvidias-jensen-huang-report-says",
+   "dt": "2026-11-25T21:23:37+03:00",
+   "region": "cn",
+   "feeds": [
+    "SCMP Tech"
+   ],
+   "hours": 9.9,
+   "fresh": 8,
+   "influence": 2,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.0,
+   "signals": [
+    "игрок/государство"
+   ],
+   "sources": [
+    "https://www.scmp.com/news/world/united-states-canada/article/3375812/us-finds-no-evidence-china-told-tech-exec-spy-nvidias-jensen-huang-report-says"
+   ]
+  },
+  {
+   "title": "Lawsuit alleges Trump strong-armed Intel",
+   "link": "https://www.tomshardware.com/tech-industry/policy/lawsuit-reveals-trumps-alleged-strong-arming-of-intel-troubled-chipmaker-allegedly-forced-to-give-white-house-10-percent-stake-for-release-of-chips-act-funds",
+   "dt": "2026-11-25T19:48:49+03:00",
    "region": "world",
    "feeds": [
-    "The Verge"
+    "Tom's Hardware"
    ],
-   "hours": 6.3,
+   "hours": 11.5,
    "fresh": 8,
    "influence": 4,
    "novelty": 10,
@@ -111,34 +66,56 @@
     "цена/регулирование/доступность"
    ],
    "sources": [
-    "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent"
+    "https://www.tomshardware.com/tech-industry/policy/lawsuit-reveals-trumps-alleged-strong-arming-of-intel-troubled-chipmaker-allegedly-forced-to-give-white-house-10-percent-stake-for-release-of-chips-act-funds"
+   ]
+  },
+  {
+   "title": "Save $250 on the 2026 M5 MacBook Air right now, undoing Apple's June price hike with a price of $1,049",
+   "link": "https://www.tomshardware.com/laptops/macbooks/save-up-to-usd300-on-the-2026-m5-macbook-air-right-now-deal-nets-you-current-gen-models-with-16gb-or-24gb-ram-and-up-to-1tb-storage",
+   "dt": "2026-11-25T20:37:17+03:00",
+   "region": "world",
+   "feeds": [
+    "Tom's Hardware"
+   ],
+   "hours": 10.7,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 8,
+   "total": 6.8,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://www.tomshardware.com/laptops/macbooks/save-up-to-usd300-on-the-2026-m5-macbook-air-right-now-deal-nets-you-current-gen-models-with-16gb-or-24gb-ram-and-up-to-1tb-storage"
+   ]
+  },
+  {
+   "title": "SSD prices are soaring, so I picked 5 Black Friday NVMe deals actually worth buying from Samsung, Lexar, and Kingston",
+   "link": "https://www.techradar.com/pro/ssd-prices-are-soaring-so-i-picked-4-black-friday-nvme-deals-actually-worth-buying-from-samsung-lexar-and-kingston",
+   "dt": "2026-11-25T22:19:30+03:00",
+   "region": "world",
+   "feeds": [
+    "TechRadar"
+   ],
+   "hours": 9.0,
+   "fresh": 8,
+   "influence": 4,
+   "novelty": 10,
+   "authority": 6,
+   "total": 6.6,
+   "signals": [
+    "игрок/государство",
+    "цена/регулирование/доступность"
+   ],
+   "sources": [
+    "https://www.techradar.com/pro/ssd-prices-are-soaring-so-i-picked-4-black-friday-nvme-deals-actually-worth-buying-from-samsung-lexar-and-kingston"
    ]
   }
  ],
  "candidates": {
   "ru": [
-   {
-    "title": "Cisco и OpenAI представили Shirudo — платформу для обеспечения безопасности Linux на базе eBPF",
-    "link": "https://habr.com/ru/articles/1112166/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1112166",
-    "dt": "2026-11-26T05:25:07+03:00",
-    "region": "ru",
-    "feeds": [
-     "Habr news"
-    ],
-    "hours": 1.8,
-    "fresh": 10,
-    "influence": 4,
-    "novelty": 10,
-    "authority": 7,
-    "total": 7.3,
-    "signals": [
-     "игрок/государство",
-     "анонс/первый запуск"
-    ],
-    "sources": [
-     "https://habr.com/ru/articles/1112166/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1112166"
-    ]
-   },
    {
     "title": "Сбербанк представил макроэкономическую платформу Data Tracker с ИИ-помощником",
     "link": "https://www.cnews.ru/news/line/2026-11-26_sberbank_predstavil_makroekonomicheskuyu",
@@ -212,7 +189,7 @@
     "feeds": [
      "Habr news"
     ],
-    "hours": 4.1,
+    "hours": 4.2,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -233,7 +210,7 @@
     "feeds": [
      "Habr news"
     ],
-    "hours": 5.9,
+    "hours": 6.0,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -254,7 +231,7 @@
     "feeds": [
      "Habr news"
     ],
-    "hours": 5.9,
+    "hours": 6.0,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -268,6 +245,28 @@
     ]
    },
    {
+    "title": "Cisco и OpenAI представили Shirudo — платформу для обеспечения безопасности Linux на базе eBPF",
+    "link": "https://habr.com/ru/articles/1112166/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1112166",
+    "dt": "2026-11-26T05:25:07+03:00",
+    "region": "ru",
+    "feeds": [
+     "Habr news"
+    ],
+    "hours": 1.9,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 2,
+    "authority": 7,
+    "total": 5.7,
+    "signals": [
+     "игрок/государство",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://habr.com/ru/articles/1112166/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1112166"
+    ]
+   },
+   {
     "title": "Бесплатный AI-агент из обычного браузерного чата: как я устал от счетов за токены и правок, ломающих проект",
     "link": "https://habr.com/ru/articles/1112488/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1112488",
     "dt": "2026-11-26T04:58:50+03:00",
@@ -275,7 +274,7 @@
     "feeds": [
      "Habr news"
     ],
-    "hours": 2.2,
+    "hours": 2.3,
     "fresh": 10,
     "influence": 0,
     "novelty": 10,
@@ -294,7 +293,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 15.1,
+    "hours": 15.2,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -336,7 +335,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 16.1,
+    "hours": 16.2,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -357,7 +356,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 16.2,
+    "hours": 16.3,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -378,7 +377,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 17.3,
+    "hours": 17.4,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -399,7 +398,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 17.5,
+    "hours": 17.6,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -420,7 +419,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 18.0,
+    "hours": 18.1,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -436,27 +435,6 @@
   ],
   "cn": [
    {
-    "title": "Chinese AI chips to capture 88% of home market by 2028, UBS says, as Nvidia woes mount",
-    "link": "https://www.scmp.com/tech/tech-war/article/3375758/chinese-ai-chips-capture-88-home-market-2028-ubs-says-nvidia-woes-mount",
-    "dt": "2026-11-26T07:00:11+03:00",
-    "region": "cn",
-    "feeds": [
-     "SCMP Tech"
-    ],
-    "hours": 0.2,
-    "fresh": 10,
-    "influence": 2,
-    "novelty": 10,
-    "authority": 8,
-    "total": 6.6,
-    "signals": [
-     "игрок/государство"
-    ],
-    "sources": [
-     "https://www.scmp.com/tech/tech-war/article/3375758/chinese-ai-chips-capture-88-home-market-2028-ubs-says-nvidia-woes-mount"
-    ]
-   },
-   {
     "title": "US finds no evidence China told Alice Huang to spy on Nvidia’s Jensen Huang, report says",
     "link": "https://www.scmp.com/news/world/united-states-canada/article/3375812/us-finds-no-evidence-china-told-tech-exec-spy-nvidias-jensen-huang-report-says",
     "dt": "2026-11-25T21:23:37+03:00",
@@ -464,7 +442,7 @@
     "feeds": [
      "SCMP Tech"
     ],
-    "hours": 9.8,
+    "hours": 9.9,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -485,7 +463,7 @@
     "feeds": [
      "SCMP Tech"
     ],
-    "hours": 0.2,
+    "hours": 0.3,
     "fresh": 10,
     "influence": 0,
     "novelty": 10,
@@ -504,7 +482,7 @@
     "feeds": [
      "SCMP Tech"
     ],
-    "hours": 2.2,
+    "hours": 2.3,
     "fresh": 10,
     "influence": 0,
     "novelty": 10,
@@ -523,7 +501,7 @@
     "feeds": [
      "SCMP Tech"
     ],
-    "hours": 6.2,
+    "hours": 6.3,
     "fresh": 8,
     "influence": 0,
     "novelty": 10,
@@ -533,76 +511,30 @@
     "sources": [
      "https://www.scmp.com/news/us/economy-trade-business/article/3375810/us-and-china-battle-ai-dominance-small-fry-figure-out-what-works"
     ]
+   },
+   {
+    "title": "Chinese AI chips to capture 88% of home market by 2028, UBS says, as Nvidia woes mount",
+    "link": "https://www.scmp.com/tech/tech-war/article/3375758/chinese-ai-chips-capture-88-home-market-2028-ubs-says-nvidia-woes-mount",
+    "dt": "2026-11-26T07:00:11+03:00",
+    "region": "cn",
+    "feeds": [
+     "SCMP Tech"
+    ],
+    "hours": 0.3,
+    "fresh": 10,
+    "influence": 2,
+    "novelty": 2,
+    "authority": 8,
+    "total": 5.0,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.scmp.com/tech/tech-war/article/3375758/chinese-ai-chips-capture-88-home-market-2028-ubs-says-nvidia-woes-mount"
+    ]
    }
   ],
   "world": [
-   {
-    "title": "The colourful MacBook Neo at £619 brings Apple's budget laptop closer to its launch price",
-    "link": "https://www.techradar.com/pro/the-colourful-macbook-neo-at-gbp619-brings-apples-budget-laptop-closer-to-its-launch-price",
-    "dt": "2026-11-25T19:39:17+03:00",
-    "region": "world",
-    "feeds": [
-     "TechRadar"
-    ],
-    "hours": 11.5,
-    "fresh": 8,
-    "influence": 6,
-    "novelty": 10,
-    "authority": 6,
-    "total": 7.4,
-    "signals": [
-     "игрок/государство",
-     "цена/регулирование/доступность",
-     "анонс/первый запуск"
-    ],
-    "sources": [
-     "https://www.techradar.com/pro/the-colourful-macbook-neo-at-gbp619-brings-apples-budget-laptop-closer-to-its-launch-price"
-    ]
-   },
-   {
-    "title": "Forget pricey iPads: Samsung’s Galaxy Tab A11+ just hit its all-time low price of AU$249 for Black Friday",
-    "link": "https://www.techradar.com/tablets/forget-pricey-ipads-samsungs-galaxy-tab-a11-just-hit-its-all-time-low-price-of-au-usd249-for-black-friday",
-    "dt": "2026-11-26T05:55:55+03:00",
-    "region": "world",
-    "feeds": [
-     "TechRadar"
-    ],
-    "hours": 1.3,
-    "fresh": 10,
-    "influence": 4,
-    "novelty": 10,
-    "authority": 6,
-    "total": 7.2,
-    "signals": [
-     "игрок/государство",
-     "цена/регулирование/доступность"
-    ],
-    "sources": [
-     "https://www.techradar.com/tablets/forget-pricey-ipads-samsungs-galaxy-tab-a11-just-hit-its-all-time-low-price-of-au-usd249-for-black-friday"
-    ]
-   },
-   {
-    "title": "Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future",
-    "link": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
-    "dt": "2026-11-26T00:51:26+03:00",
-    "region": "world",
-    "feeds": [
-     "The Verge"
-    ],
-    "hours": 6.3,
-    "fresh": 8,
-    "influence": 4,
-    "novelty": 10,
-    "authority": 8,
-    "total": 6.8,
-    "signals": [
-     "игрок/государство",
-     "цена/регулирование/доступность"
-    ],
-    "sources": [
-     "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent"
-    ]
-   },
    {
     "title": "Lawsuit alleges Trump strong-armed Intel",
     "link": "https://www.tomshardware.com/tech-industry/policy/lawsuit-reveals-trumps-alleged-strong-arming-of-intel-troubled-chipmaker-allegedly-forced-to-give-white-house-10-percent-stake-for-release-of-chips-act-funds",
@@ -611,7 +543,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 11.4,
+    "hours": 11.5,
     "fresh": 8,
     "influence": 4,
     "novelty": 10,
@@ -633,7 +565,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 10.6,
+    "hours": 10.7,
     "fresh": 8,
     "influence": 4,
     "novelty": 10,
@@ -655,7 +587,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 8.9,
+    "hours": 9.0,
     "fresh": 8,
     "influence": 4,
     "novelty": 10,
@@ -677,7 +609,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 12.7,
+    "hours": 12.8,
     "fresh": 6,
     "influence": 4,
     "novelty": 10,
@@ -699,7 +631,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 5.4,
+    "hours": 5.5,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -720,7 +652,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 7.2,
+    "hours": 7.3,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -741,7 +673,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 8.1,
+    "hours": 8.2,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -762,7 +694,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 8.3,
+    "hours": 8.4,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -783,7 +715,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 8.3,
+    "hours": 8.4,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -804,7 +736,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 8.4,
+    "hours": 8.5,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -825,7 +757,7 @@
     "feeds": [
      "The Verge"
     ],
-    "hours": 4.1,
+    "hours": 4.2,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -846,7 +778,7 @@
     "feeds": [
      "The Verge"
     ],
-    "hours": 4.2,
+    "hours": 4.3,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -867,7 +799,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 11.2,
+    "hours": 11.3,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -888,7 +820,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 4.5,
+    "hours": 4.6,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -909,7 +841,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 5.4,
+    "hours": 5.5,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -930,7 +862,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 6.6,
+    "hours": 6.7,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -972,7 +904,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 10.2,
+    "hours": 10.3,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -993,7 +925,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 10.5,
+    "hours": 10.6,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -1035,7 +967,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 11.1,
+    "hours": 11.2,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -1056,7 +988,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 11.4,
+    "hours": 11.5,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -1077,7 +1009,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 11.4,
+    "hours": 11.5,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -1091,6 +1023,29 @@
     ]
    },
    {
+    "title": "The colourful MacBook Neo at £619 brings Apple's budget laptop closer to its launch price",
+    "link": "https://www.techradar.com/pro/the-colourful-macbook-neo-at-gbp619-brings-apples-budget-laptop-closer-to-its-launch-price",
+    "dt": "2026-11-25T19:39:17+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 11.6,
+    "fresh": 8,
+    "influence": 6,
+    "novelty": 2,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.techradar.com/pro/the-colourful-macbook-neo-at-gbp619-brings-apples-budget-laptop-closer-to-its-launch-price"
+    ]
+   },
+   {
     "title": "From solving to 'digesting': How mathematicians can adapt to the dramatic changes AI has brought to their field",
     "link": "https://phys.org/news/2026-11-digesting-mathematicians-ai-brought-field.html",
     "dt": "2026-11-26T04:40:01+03:00",
@@ -1098,7 +1053,7 @@
     "feeds": [
      "Phys.org"
     ],
-    "hours": 2.5,
+    "hours": 2.6,
     "fresh": 10,
     "influence": 0,
     "novelty": 10,
@@ -1117,7 +1072,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 31.2,
+    "hours": 31.3,
     "fresh": 4,
     "influence": 4,
     "novelty": 10,
@@ -1129,6 +1084,28 @@
     ],
     "sources": [
      "https://www.tomshardware.com/tech-industry/artificial-intelligence/frontier-ai-employees-alarmed-that-unseen-open-ai-and-anthropic-models-are-too-powerful-to-release-report-claims-worry-spreads-that-executives-are-out-of-touch-with-severity-of-risks-will-choose-profit-over-safety"
+    ]
+   },
+   {
+    "title": "Forget pricey iPads: Samsung’s Galaxy Tab A11+ just hit its all-time low price of AU$249 for Black Friday",
+    "link": "https://www.techradar.com/tablets/forget-pricey-ipads-samsungs-galaxy-tab-a11-just-hit-its-all-time-low-price-of-au-usd249-for-black-friday",
+    "dt": "2026-11-26T05:55:55+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 1.4,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 2,
+    "authority": 6,
+    "total": 5.6,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.techradar.com/tablets/forget-pricey-ipads-samsungs-galaxy-tab-a11-just-hit-its-all-time-low-price-of-au-usd249-for-black-friday"
     ]
    },
    {
@@ -1158,7 +1135,7 @@
     "feeds": [
      "TechCrunch"
     ],
-    "hours": 15.2,
+    "hours": 15.3,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -1169,6 +1146,27 @@
     ],
     "sources": [
      "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/"
+    ]
+   },
+   {
+    "title": "Huawei convicted of money laundering, conspiracy to steal trade secrets, and fraud by US jury",
+    "link": "https://www.tomshardware.com/tech-industry/huawei-convicted-of-money-laundering-conspiracy-to-steal-trade-secrets-and-fraud-by-us-jury-fbi-says-chinese-tech-giant-built-its-success-on-deception-and-theft",
+    "dt": "2026-11-25T15:43:50+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 15.6,
+    "fresh": 6,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 8,
+    "total": 5.4,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/tech-industry/huawei-convicted-of-money-laundering-conspiracy-to-steal-trade-secrets-and-fraud-by-us-jury-fbi-says-chinese-tech-giant-built-its-success-on-deception-and-theft"
     ]
    }
   ]
