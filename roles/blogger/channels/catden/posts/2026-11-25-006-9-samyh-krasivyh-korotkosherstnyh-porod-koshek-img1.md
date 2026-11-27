@@ -1,6 +1,6 @@
 ---
 channel: catden
-status: approved
+status: published
 approved_at: "2026-11-20"
 format: markdown
 notify: true
@@ -8,6 +8,11 @@ image_files: nev/posting/images/006-9-samyh-krasivyh-korotkosherstnyh-porod-kosh
 source: nev/9 самых красивых короткошерстных пород кошек.docx
 series: 006
 
+published_at: 2026-11-25T20:00:05+03:00
+message_id: mid.ffffb62cfe529aa301a213a671eb3be2
+channel_id: -81170615067997
+url: https://max.ru/channel_catden/AaITpnHrO-I
+media_count: 6
 ---
 
 Герои завтрашней статьи — на фото

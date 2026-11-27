@@ -1,6 +1,6 @@
 ---
 channel: catden
-status: approved
+status: published
 approved_at: "2026-11-20"
 format: markdown
 notify: true
@@ -9,6 +9,11 @@ media_note: "20.11.2026: обмен кадрами с текстовым пос�
 source: nev/6 уникальных пород кошек.docx
 series: 003
 
+published_at: 2026-11-23T20:00:05+03:00
+message_id: mid.ffffb62cfe529aa301a20959bccd17fa
+channel_id: -81170615067997
+url: https://max.ru/channel_catden/AaIJWbzNF_o
+media_count: 5
 ---
 
 На фото — герои завтрашнего выпуска

@@ -1,6 +1,7 @@
 ---
 channel: catden
 status: approved
+approved_at: "2026-11-27"
 format: markdown
 notify: true
 image_file: nev/posting/images/012-vozniknovenie-porody-sibirskih-koshek-p1.jpeg
