@@ -1,8 +1,12 @@
 ---
 channel: tg_neuro
-status: approved
+status: published
 image_file: local/images/ainow/2026-07-18-znakomtes-qwen-vash-novyy-moschnyy-iiassistent.jpg
 button_url: https://max.ru/channel_ainow
+format: html
+published_at: 2026-11-27T06:50:49+03:00
+message_id: 72
+chat_id: -1002087111322
 ---
 
 🎬 **Что остаётся в этом канале**
