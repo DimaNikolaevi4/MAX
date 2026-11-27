@@ -1061,16 +1061,6 @@
       "source": "auto"
     },
     {
-      "id": "max-2026-11-26-chto-ostalos-zdes",
-      "title": "[Нейро Мульт Студия] 🎬 Что остаётся в этом канале",
-      "when": "2026-11-26",
-      "time": null,
-      "status": "scheduled",
-      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Нейро Мульт Студия»",
-      "link": "roles/blogger/channels/tg_neuro/posts/2026-11-26-chto-ostalos-zdes.md",
-      "source": "auto"
-    },
-    {
       "id": "max-2026-11-26-chto-pochinili",
       "title": "[Каналы в MAX: рост и автопилот] 🛠 Что мы починили: формат постов и гейты публикации",
       "when": "2026-11-26",
@@ -1101,6 +1091,16 @@
       "source": "auto"
     },
     {
+      "id": "max-2026-11-26-chto-ostalos-zdes",
+      "title": "[Нейро Мульт Студия] 🎬 Что остаётся в этом канале",
+      "when": "2026-11-27",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/tg_neuro/posts/2026-11-26-chto-ostalos-zdes.md",
+      "source": "auto"
+    },
+    {
       "id": "max-2026-11-27-007-bengalskiy-kot-leopard-v-vashem-dome-img1",
       "title": "[Коты, кошки и котята] На фото — герои завтрашней статьи",
       "when": "2026-11-27",
@@ -1118,6 +1118,16 @@
       "status": "scheduled",
       "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «AI»",
       "link": "roles/blogger/channels/ainow/posts/2026-11-27-ii-dlya-uchitelya-5-priemov.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-27-pyaterka-tehnologij",
+      "title": "[Новости технологий ИИ, нейросетей и инноваций] Что важного в технологиях за сутки: диски, энергия и чипы",
+      "when": "2026-11-27",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/na100/posts/2026-11-27-pyaterka-tehnologij.md",
       "source": "auto"
     },
     {
