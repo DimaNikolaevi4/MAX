@@ -1,9 +1,15 @@
 ---
 channel: na100
-status: approved
+status: published
 format: markdown
 notify: true
 image_file: local/digest/cover-2026-11-28-pyaterka-tehnologij.png
+cta_target: self
+published_at: 2026-11-28T08:18:44+03:00
+message_id: mid.ffffba08e9ee9aa301a2209768361e4a
+channel_id: -76927529477469
+url: https://max.ru/channel_na100/AaIgl2g2Hko
+image: https://i.oneme.ru/i?r=B0xHQN0Qr3SEKX3_pN3pdR6SCnS4ttE4hGwpRcEF84DytCBxTvSQPz9J3EKC02P-iQF3sQ2qAlZIrIzMj50IXHjuiK-fvMBNqzydyfg
 ---
 
 **Ubuntu зовёт ИИ в лаунчер, а BitLocker взламывают за дни**
