@@ -1,145 +1,115 @@
 {
  "date": "2026-11-28",
- "generated_at": "2026-11-28T08:07:39.702147+03:00",
+ "generated_at": "2026-11-28T08:12:24.709053+03:00",
  "formula": "свежесть*0.3 + влияние*0.4 + новизна*0.2 + авторитет*0.1 (0-10, порог 5.0); шаг 4 — обложка/текст у агента",
  "notes": [],
  "proposed": [
   {
-   "title": "Xiaomi выпустила ультрадешевый телевизор с большим экраном по цене дешевле смартфона",
-   "link": "https://www.cnews.ru/news/top/2026-11-27_xiaomi_vypustila_ultradeshevyj",
-   "dt": "2026-11-27T15:18:00+03:00",
+   "title": "В команде Ubuntu анонсировали приложение Ubuntu Launcher с возможностью ИИ-ассистента",
+   "link": "https://habr.com/ru/articles/1112986/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1112986",
+   "dt": "2026-11-28T06:52:15+03:00",
    "region": "ru",
    "feeds": [
-    "CNews"
+    "Habr news"
    ],
-   "hours": 16.8,
-   "fresh": 6,
-   "influence": 6,
+   "hours": 1.3,
+   "fresh": 10,
+   "influence": 2,
    "novelty": 10,
-   "authority": 6,
-   "total": 6.8,
+   "authority": 7,
+   "total": 6.5,
    "signals": [
-    "игрок/государство",
-    "цена/регулирование/доступность",
     "анонс/первый запуск"
    ],
    "sources": [
-    "https://www.cnews.ru/news/top/2026-11-27_xiaomi_vypustila_ultradeshevyj"
+    "https://habr.com/ru/articles/1112986/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1112986"
    ]
   },
   {
-   "title": "Belgium orders Google to stop work on data centre lacking proper permits",
-   "link": "https://www.scmp.com/news/world/europe/article/3376094/belgium-orders-google-stop-work-data-centre-lacking-proper-permits",
-   "dt": "2026-11-27T16:27:36+03:00",
+   "title": "Philippines could be key player in US-China AI competition",
+   "link": "https://www.scmp.com/opinion/asia-opinion/article/3375746/philippines-could-be-key-player-us-china-ai-competition",
+   "dt": "2026-11-28T00:30:08+03:00",
    "region": "cn",
    "feeds": [
     "SCMP Tech"
    ],
-   "hours": 15.7,
-   "fresh": 6,
-   "influence": 2,
+   "hours": 7.7,
+   "fresh": 8,
+   "influence": 0,
    "novelty": 10,
    "authority": 8,
-   "total": 5.4,
-   "signals": [
-    "игрок/государство"
-   ],
+   "total": 5.2,
+   "signals": [],
    "sources": [
-    "https://www.scmp.com/news/world/europe/article/3376094/belgium-orders-google-stop-work-data-centre-lacking-proper-permits"
+    "https://www.scmp.com/opinion/asia-opinion/article/3375746/philippines-could-be-key-player-us-china-ai-competition"
    ]
   },
   {
-   "title": "The M5 MacBook Air just got its biggest discount since Apple raised the price",
-   "link": "https://www.theverge.com/gadgets/1044771/m5-macbook-air-black-friday-2026-deal-sale",
-   "dt": "2026-11-28T06:30:00+03:00",
+   "title": "The best Black Friday deals you can still get on AirPods, Macs, and other Apple gear",
+   "link": "https://www.theverge.com/gadgets/1043935/best-black-friday-apple-deals-2026",
+   "dt": "2026-11-28T02:53:19+03:00",
    "region": "world",
    "feeds": [
     "The Verge"
    ],
-   "hours": 1.6,
-   "fresh": 10,
-   "influence": 4,
+   "hours": 5.3,
+   "fresh": 8,
+   "influence": 2,
    "novelty": 10,
    "authority": 8,
-   "total": 7.4,
+   "total": 6.0,
    "signals": [
-    "игрок/государство",
-    "цена/регулирование/доступность"
+    "игрок/государство"
    ],
    "sources": [
-    "https://www.theverge.com/gadgets/1044771/m5-macbook-air-black-friday-2026-deal-sale"
+    "https://www.theverge.com/gadgets/1043935/best-black-friday-apple-deals-2026"
    ]
   },
   {
-   "title": "AMD's ultimate Ryzen 9 9950X3D2 CPU is down to its lowest price with $140 savings",
-   "link": "https://www.tomshardware.com/pc-components/cpus/amds-ultimate-ryzen-9-9950x3d2-cpu-is-down-to-its-lowest-price-with-usd140-savings-single-cache-ryzen-9-9950x3d-is-also-on-a-deep-usd115-discount",
-   "dt": "2026-11-28T01:59:59+03:00",
+   "title": "Get 38% off an RTX 5070-powered HP Omen 35L gaming desktop sporting an Intel Core Ultra 7 CPU and 32GB of DDR5",
+   "link": "https://www.tomshardware.com/desktops/gaming-pcs/get-a-staggering-usd1-400-off-an-rtx-5070-powered-hp-omen-35l-gaming-desktop-sporting-an-intel-core-ultra-7-cpu-and-32gb-of-ddr5-at-38-percent-discount-this-performant-mid-tower-prebuilt-pc-packs-a-punch",
+   "dt": "2026-11-27T21:38:35+03:00",
    "region": "world",
    "feeds": [
     "Tom's Hardware"
    ],
-   "hours": 6.1,
+   "hours": 10.6,
    "fresh": 8,
-   "influence": 4,
+   "influence": 2,
    "novelty": 10,
    "authority": 8,
-   "total": 6.8,
+   "total": 6.0,
    "signals": [
-    "игрок/государство",
-    "цена/регулирование/доступность"
+    "игрок/государство"
    ],
    "sources": [
-    "https://www.tomshardware.com/pc-components/cpus/amds-ultimate-ryzen-9-9950x3d2-cpu-is-down-to-its-lowest-price-with-usd140-savings-single-cache-ryzen-9-9950x3d-is-also-on-a-deep-usd115-discount"
+    "https://www.tomshardware.com/desktops/gaming-pcs/get-a-staggering-usd1-400-off-an-rtx-5070-powered-hp-omen-35l-gaming-desktop-sporting-an-intel-core-ultra-7-cpu-and-32gb-of-ddr5-at-38-percent-discount-this-performant-mid-tower-prebuilt-pc-packs-a-punch"
    ]
   },
   {
-   "title": "Samsung's 49-inch OLED gaming monitor drops to a new low price of $854",
-   "link": "https://www.tomshardware.com/monitors/gaming-monitors/samsungs-49-inch-oled-gaming-monitor-returns-to-its-lowest-price-ever-at-amazon-take-your-gpu-on-an-ultrawide-odyssey-for-usd854",
-   "dt": "2026-11-28T00:06:27+03:00",
+   "title": "TSMC gives a sneap peak at AI Design Kit: Agentic AI with foundry expertise",
+   "link": "https://www.tomshardware.com/tech-industry/semiconductors/tsmc-gives-a-sneap-peak-at-ai-design-kit-agentic-ai-with-foundry-expertise",
+   "dt": "2026-11-28T03:50:20+03:00",
    "region": "world",
    "feeds": [
     "Tom's Hardware"
    ],
-   "hours": 8.0,
+   "hours": 4.4,
    "fresh": 8,
-   "influence": 4,
+   "influence": 2,
    "novelty": 10,
    "authority": 8,
-   "total": 6.8,
+   "total": 6.0,
    "signals": [
-    "игрок/государство",
-    "цена/регулирование/доступность"
+    "игрок/государство"
    ],
    "sources": [
-    "https://www.tomshardware.com/monitors/gaming-monitors/samsungs-49-inch-oled-gaming-monitor-returns-to-its-lowest-price-ever-at-amazon-take-your-gpu-on-an-ultrawide-odyssey-for-usd854"
+    "https://www.tomshardware.com/tech-industry/semiconductors/tsmc-gives-a-sneap-peak-at-ai-design-kit-agentic-ai-with-foundry-expertise"
    ]
   }
  ],
  "candidates": {
   "ru": [
-   {
-    "title": "Xiaomi выпустила ультрадешевый телевизор с большим экраном по цене дешевле смартфона",
-    "link": "https://www.cnews.ru/news/top/2026-11-27_xiaomi_vypustila_ultradeshevyj",
-    "dt": "2026-11-27T15:18:00+03:00",
-    "region": "ru",
-    "feeds": [
-     "CNews"
-    ],
-    "hours": 16.8,
-    "fresh": 6,
-    "influence": 6,
-    "novelty": 10,
-    "authority": 6,
-    "total": 6.8,
-    "signals": [
-     "игрок/государство",
-     "цена/регулирование/доступность",
-     "анонс/первый запуск"
-    ],
-    "sources": [
-     "https://www.cnews.ru/news/top/2026-11-27_xiaomi_vypustila_ultradeshevyj"
-    ]
-   },
    {
     "title": "В команде Ubuntu анонсировали приложение Ubuntu Launcher с возможностью ИИ-ассистента",
     "link": "https://habr.com/ru/articles/1112986/?utm_source=habrahabr&utm_medium=rss&utm_campaign=1112986",
@@ -190,7 +160,7 @@
     "feeds": [
      "Habr news"
     ],
-    "hours": 12.5,
+    "hours": 12.6,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -232,7 +202,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 15.6,
+    "hours": 15.7,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -253,7 +223,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 15.9,
+    "hours": 16.0,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -267,6 +237,29 @@
     ]
    },
    {
+    "title": "Xiaomi выпустила ультрадешевый телевизор с большим экраном по цене дешевле смартфона",
+    "link": "https://www.cnews.ru/news/top/2026-11-27_xiaomi_vypustila_ultradeshevyj",
+    "dt": "2026-11-27T15:18:00+03:00",
+    "region": "ru",
+    "feeds": [
+     "CNews"
+    ],
+    "hours": 16.9,
+    "fresh": 6,
+    "influence": 6,
+    "novelty": 2,
+    "authority": 6,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность",
+     "анонс/первый запуск"
+    ],
+    "sources": [
+     "https://www.cnews.ru/news/top/2026-11-27_xiaomi_vypustila_ultradeshevyj"
+    ]
+   },
+   {
     "title": "Сбербанк научил ИИ находить ошибки цифровой доступности в сотни раз быстрее человека",
     "link": "https://www.cnews.ru/news/line/2026-11-27_sberbank_nauchil_ii_nahodit",
     "dt": "2026-11-27T15:14:00+03:00",
@@ -274,7 +267,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 16.9,
+    "hours": 17.0,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -295,7 +288,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 17.1,
+    "hours": 17.2,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -316,7 +309,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 18.0,
+    "hours": 18.1,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -379,7 +372,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 19.8,
+    "hours": 19.9,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -400,7 +393,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 20.0,
+    "hours": 20.1,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -421,7 +414,7 @@
     "feeds": [
      "CNews"
     ],
-    "hours": 20.0,
+    "hours": 20.1,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -437,27 +430,6 @@
   ],
   "cn": [
    {
-    "title": "Belgium orders Google to stop work on data centre lacking proper permits",
-    "link": "https://www.scmp.com/news/world/europe/article/3376094/belgium-orders-google-stop-work-data-centre-lacking-proper-permits",
-    "dt": "2026-11-27T16:27:36+03:00",
-    "region": "cn",
-    "feeds": [
-     "SCMP Tech"
-    ],
-    "hours": 15.7,
-    "fresh": 6,
-    "influence": 2,
-    "novelty": 10,
-    "authority": 8,
-    "total": 5.4,
-    "signals": [
-     "игрок/государство"
-    ],
-    "sources": [
-     "https://www.scmp.com/news/world/europe/article/3376094/belgium-orders-google-stop-work-data-centre-lacking-proper-permits"
-    ]
-   },
-   {
     "title": "Philippines could be key player in US-China AI competition",
     "link": "https://www.scmp.com/opinion/asia-opinion/article/3375746/philippines-could-be-key-player-us-china-ai-competition",
     "dt": "2026-11-28T00:30:08+03:00",
@@ -465,7 +437,7 @@
     "feeds": [
      "SCMP Tech"
     ],
-    "hours": 7.6,
+    "hours": 7.7,
     "fresh": 8,
     "influence": 0,
     "novelty": 10,
@@ -479,94 +451,6 @@
   ],
   "world": [
    {
-    "title": "The M5 MacBook Air just got its biggest discount since Apple raised the price",
-    "link": "https://www.theverge.com/gadgets/1044771/m5-macbook-air-black-friday-2026-deal-sale",
-    "dt": "2026-11-28T06:30:00+03:00",
-    "region": "world",
-    "feeds": [
-     "The Verge"
-    ],
-    "hours": 1.6,
-    "fresh": 10,
-    "influence": 4,
-    "novelty": 10,
-    "authority": 8,
-    "total": 7.4,
-    "signals": [
-     "игрок/государство",
-     "цена/регулирование/доступность"
-    ],
-    "sources": [
-     "https://www.theverge.com/gadgets/1044771/m5-macbook-air-black-friday-2026-deal-sale"
-    ]
-   },
-   {
-    "title": "AMD's ultimate Ryzen 9 9950X3D2 CPU is down to its lowest price with $140 savings",
-    "link": "https://www.tomshardware.com/pc-components/cpus/amds-ultimate-ryzen-9-9950x3d2-cpu-is-down-to-its-lowest-price-with-usd140-savings-single-cache-ryzen-9-9950x3d-is-also-on-a-deep-usd115-discount",
-    "dt": "2026-11-28T01:59:59+03:00",
-    "region": "world",
-    "feeds": [
-     "Tom's Hardware"
-    ],
-    "hours": 6.1,
-    "fresh": 8,
-    "influence": 4,
-    "novelty": 10,
-    "authority": 8,
-    "total": 6.8,
-    "signals": [
-     "игрок/государство",
-     "цена/регулирование/доступность"
-    ],
-    "sources": [
-     "https://www.tomshardware.com/pc-components/cpus/amds-ultimate-ryzen-9-9950x3d2-cpu-is-down-to-its-lowest-price-with-usd140-savings-single-cache-ryzen-9-9950x3d-is-also-on-a-deep-usd115-discount"
-    ]
-   },
-   {
-    "title": "Samsung's 49-inch OLED gaming monitor drops to a new low price of $854",
-    "link": "https://www.tomshardware.com/monitors/gaming-monitors/samsungs-49-inch-oled-gaming-monitor-returns-to-its-lowest-price-ever-at-amazon-take-your-gpu-on-an-ultrawide-odyssey-for-usd854",
-    "dt": "2026-11-28T00:06:27+03:00",
-    "region": "world",
-    "feeds": [
-     "Tom's Hardware"
-    ],
-    "hours": 8.0,
-    "fresh": 8,
-    "influence": 4,
-    "novelty": 10,
-    "authority": 8,
-    "total": 6.8,
-    "signals": [
-     "игрок/государство",
-     "цена/регулирование/доступность"
-    ],
-    "sources": [
-     "https://www.tomshardware.com/monitors/gaming-monitors/samsungs-49-inch-oled-gaming-monitor-returns-to-its-lowest-price-ever-at-amazon-take-your-gpu-on-an-ultrawide-odyssey-for-usd854"
-    ]
-   },
-   {
-    "title": "The best Black Friday TV deals live: save on LG OLED, Samsung, TCL, Roku, Sony and more",
-    "link": "https://www.techradar.com/live/news/black-friday-tv-deals-live-2026-november-27",
-    "dt": "2026-11-28T04:07:41+03:00",
-    "region": "world",
-    "feeds": [
-     "TechRadar"
-    ],
-    "hours": 4.0,
-    "fresh": 10,
-    "influence": 2,
-    "novelty": 10,
-    "authority": 6,
-    "total": 6.4,
-    "signals": [
-     "игрок/государство"
-    ],
-    "sources": [
-     "https://www.techradar.com/live/news/black-friday-tv-deals-live-2026-november-27",
-     "https://www.techradar.com/televisions/black-friday-65-inch-tv-deals-2026-nov-27"
-    ]
-   },
-   {
     "title": "The best Black Friday deals you can still get on AirPods, Macs, and other Apple gear",
     "link": "https://www.theverge.com/gadgets/1043935/best-black-friday-apple-deals-2026",
     "dt": "2026-11-28T02:53:19+03:00",
@@ -574,7 +458,7 @@
     "feeds": [
      "The Verge"
     ],
-    "hours": 5.2,
+    "hours": 5.3,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -595,7 +479,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 10.5,
+    "hours": 10.6,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -616,7 +500,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 4.3,
+    "hours": 4.4,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -630,6 +514,28 @@
     ]
    },
    {
+    "title": "The M5 MacBook Air just got its biggest discount since Apple raised the price",
+    "link": "https://www.theverge.com/gadgets/1044771/m5-macbook-air-black-friday-2026-deal-sale",
+    "dt": "2026-11-28T06:30:00+03:00",
+    "region": "world",
+    "feeds": [
+     "The Verge"
+    ],
+    "hours": 1.7,
+    "fresh": 10,
+    "influence": 4,
+    "novelty": 2,
+    "authority": 8,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.theverge.com/gadgets/1044771/m5-macbook-air-black-friday-2026-deal-sale"
+    ]
+   },
+   {
     "title": "We liked the Samsung Galaxy Watch 8 Classic so much, one writer wore it to his wedding — it’s now 41% off",
     "link": "https://www.techradar.com/health-fitness/smartwatches/we-loved-the-samsung-galaxy-watch-8-classic-so-much-one-reviewer-wore-it-to-his-wedding-now-the-galaxy-watch-thats-dressed-to-impress-is-up-to-41-percent-off-at-amazon-for-black-friday",
     "dt": "2026-11-28T01:45:17+03:00",
@@ -637,7 +543,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 6.4,
+    "hours": 6.5,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -658,7 +564,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 8.9,
+    "hours": 9.0,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -679,7 +585,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 9.0,
+    "hours": 9.1,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -693,6 +599,28 @@
     ]
    },
    {
+    "title": "The best Black Friday TV deals live: save on LG OLED, Samsung, TCL, Roku, Sony and more",
+    "link": "https://www.techradar.com/live/news/black-friday-tv-deals-live-2026-november-27",
+    "dt": "2026-11-28T04:07:41+03:00",
+    "region": "world",
+    "feeds": [
+     "TechRadar"
+    ],
+    "hours": 4.1,
+    "fresh": 8,
+    "influence": 2,
+    "novelty": 10,
+    "authority": 6,
+    "total": 5.8,
+    "signals": [
+     "игрок/государство"
+    ],
+    "sources": [
+     "https://www.techradar.com/live/news/black-friday-tv-deals-live-2026-november-27",
+     "https://www.techradar.com/televisions/black-friday-65-inch-tv-deals-2026-nov-27"
+    ]
+   },
+   {
     "title": "The best Black Friday Apple Watch deals, picked by a smartwatch reviewer",
     "link": "https://www.techradar.com/health-fitness/smartwatches/black-friday-apple-watch-deals-nov-27-2026",
     "dt": "2026-11-27T21:34:48+03:00",
@@ -700,7 +628,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 10.5,
+    "hours": 10.6,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -721,7 +649,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 11.3,
+    "hours": 11.4,
     "fresh": 8,
     "influence": 2,
     "novelty": 10,
@@ -742,7 +670,7 @@
     "feeds": [
      "Phys.org"
     ],
-    "hours": 0.8,
+    "hours": 0.9,
     "fresh": 10,
     "influence": 0,
     "novelty": 10,
@@ -761,7 +689,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 16.3,
+    "hours": 16.4,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -782,7 +710,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 14.7,
+    "hours": 14.8,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -803,7 +731,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 17.6,
+    "hours": 17.7,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -824,7 +752,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 18.6,
+    "hours": 18.7,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -838,6 +766,50 @@
     ]
    },
    {
+    "title": "AMD's ultimate Ryzen 9 9950X3D2 CPU is down to its lowest price with $140 savings",
+    "link": "https://www.tomshardware.com/pc-components/cpus/amds-ultimate-ryzen-9-9950x3d2-cpu-is-down-to-its-lowest-price-with-usd140-savings-single-cache-ryzen-9-9950x3d-is-also-on-a-deep-usd115-discount",
+    "dt": "2026-11-28T01:59:59+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 6.2,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 2,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/pc-components/cpus/amds-ultimate-ryzen-9-9950x3d2-cpu-is-down-to-its-lowest-price-with-usd140-savings-single-cache-ryzen-9-9950x3d-is-also-on-a-deep-usd115-discount"
+    ]
+   },
+   {
+    "title": "Samsung's 49-inch OLED gaming monitor drops to a new low price of $854",
+    "link": "https://www.tomshardware.com/monitors/gaming-monitors/samsungs-49-inch-oled-gaming-monitor-returns-to-its-lowest-price-ever-at-amazon-take-your-gpu-on-an-ultrawide-odyssey-for-usd854",
+    "dt": "2026-11-28T00:06:27+03:00",
+    "region": "world",
+    "feeds": [
+     "Tom's Hardware"
+    ],
+    "hours": 8.1,
+    "fresh": 8,
+    "influence": 4,
+    "novelty": 2,
+    "authority": 8,
+    "total": 5.2,
+    "signals": [
+     "игрок/государство",
+     "цена/регулирование/доступность"
+    ],
+    "sources": [
+     "https://www.tomshardware.com/monitors/gaming-monitors/samsungs-49-inch-oled-gaming-monitor-returns-to-its-lowest-price-ever-at-amazon-take-your-gpu-on-an-ultrawide-odyssey-for-usd854"
+    ]
+   },
+   {
     "title": "Get the cheapest RTX 5070 around this Black Friday with Gigabyte's $839 Gaming OC card",
     "link": "https://www.tomshardware.com/pc-components/gpus/get-the-cheapest-rtx-5070-around-this-black-friday-with-gigabytes-usd839-gaming-oc-card-midrange-blackwell-continues-to-shine-with-dlss-4-5-and-dlss-5",
     "dt": "2026-11-27T22:38:08+03:00",
@@ -845,7 +817,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 9.5,
+    "hours": 9.6,
     "fresh": 8,
     "influence": 0,
     "novelty": 10,
@@ -864,7 +836,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 11.6,
+    "hours": 11.7,
     "fresh": 8,
     "influence": 0,
     "novelty": 10,
@@ -883,7 +855,7 @@
     "feeds": [
      "Tom's Hardware"
     ],
-    "hours": 11.8,
+    "hours": 11.9,
     "fresh": 8,
     "influence": 0,
     "novelty": 10,
@@ -902,7 +874,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 12.0,
+    "hours": 12.1,
     "fresh": 6,
     "influence": 2,
     "novelty": 10,
@@ -942,7 +914,7 @@
     "feeds": [
      "Phys.org"
     ],
-    "hours": 7.8,
+    "hours": 7.9,
     "fresh": 8,
     "influence": 0,
     "novelty": 10,
@@ -980,7 +952,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 4.6,
+    "hours": 4.7,
     "fresh": 8,
     "influence": 0,
     "novelty": 10,
@@ -999,7 +971,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 8.1,
+    "hours": 8.2,
     "fresh": 8,
     "influence": 0,
     "novelty": 10,
@@ -1018,7 +990,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 9.6,
+    "hours": 9.7,
     "fresh": 8,
     "influence": 0,
     "novelty": 10,
@@ -1037,7 +1009,7 @@
     "feeds": [
      "TechRadar"
     ],
-    "hours": 10.1,
+    "hours": 10.2,
     "fresh": 8,
     "influence": 0,
     "novelty": 10,
@@ -1051,8 +1023,12 @@
   ]
  },
  "dropped": {
-  "count": 215,
+  "count": 216,
   "examples": [
+   {
+    "title": "FRIDA V2 — модели мультимодального поиска и принятия решений",
+    "reason": "не тех-тема"
+   },
    {
     "title": "Как Иван-дурак свободное время искал",
     "reason": "не тех-тема"
@@ -1095,10 +1071,6 @@
    },
    {
     "title": "Запускаем UNO R4 (Cortex M4) с моделью",
-    "reason": "не тех-тема"
-   },
-   {
-    "title": "Вайбкодинг для дизайнеров: разрешить нельзя запретить",
     "reason": "не тех-тема"
    }
   ]
