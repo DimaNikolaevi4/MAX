@@ -2,7 +2,8 @@
 channel: na100
 status: approved
 format: markdown
-notify: trueimage_file: local/digest/cover-2026-11-28-pyaterka-tehnologij.png
+notify: true
+image_file: local/digest/cover-2026-11-28-pyaterka-tehnologij.png
 ---
 
 **Ubuntu зовёт ИИ в лаунчер, а BitLocker взламывают за дни**
