@@ -875,8 +875,8 @@
       "title": "[Коты, кошки и котята] На фото — герои завтрашнего выпуска",
       "when": "2026-11-23",
       "time": null,
-      "status": "scheduled",
-      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Коты, кошки и котята»",
+      "status": "done",
+      "why": "",
       "link": "roles/blogger/channels/catden/posts/2026-11-23-003-6-unikalnyh-porod-koshek-img1.md",
       "source": "auto"
     },
@@ -925,8 +925,8 @@
       "title": "[Коты, кошки и котята] 6 уникальных пород кошек",
       "when": "2026-11-24",
       "time": null,
-      "status": "scheduled",
-      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Коты, кошки и котята»",
+      "status": "done",
+      "why": "",
       "link": "roles/blogger/channels/catden/posts/2026-11-24-003-6-unikalnyh-porod-koshek-p1.md",
       "source": "auto"
     },
@@ -995,8 +995,8 @@
       "title": "[Коты, кошки и котята] Герои завтрашней статьи — на фото",
       "when": "2026-11-25",
       "time": null,
-      "status": "scheduled",
-      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Коты, кошки и котята»",
+      "status": "done",
+      "why": "",
       "link": "roles/blogger/channels/catden/posts/2026-11-25-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-img1.md",
       "source": "auto"
     },
@@ -1045,8 +1045,8 @@
       "title": "[Коты, кошки и котята] 9 самых красивых короткошерстных пород кошек",
       "when": "2026-11-26",
       "time": null,
-      "status": "scheduled",
-      "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Коты, кошки и котята»",
+      "status": "done",
+      "why": "",
       "link": "roles/blogger/channels/catden/posts/2026-11-26-006-9-samyh-krasivyh-korotkosherstnyh-porod-koshek-p1.md",
       "source": "auto"
     },
@@ -1148,6 +1148,16 @@
       "status": "scheduled",
       "why": "публикация только через хостинг-крон; локальные задачи Windows не используются, канал «Коты, кошки и котята»",
       "link": "roles/blogger/channels/catden/posts/2026-11-28-007-bengalskiy-kot-leopard-v-vashem-dome-p1.md",
+      "source": "auto"
+    },
+    {
+      "id": "max-2026-11-28-pyaterka-tehnologij",
+      "title": "[Новости технологий ИИ, нейросетей и инноваций] Ubuntu зовёт ИИ в лаунчер, а BitLocker взламывают за дни",
+      "when": "2026-11-28",
+      "time": null,
+      "status": "done",
+      "why": "",
+      "link": "roles/blogger/channels/na100/posts/2026-11-28-pyaterka-tehnologij.md",
       "source": "auto"
     },
     {
@@ -1282,7 +1292,7 @@
     },
     {
       "id": "max-2026-12-03-010-vash-kotenok-p1",
-      "title": "[Коты, кошки и котята] ВАШ КОТЕНОК",
+      "title": "[Коты, кошки и котята] Ваш котенок",
       "when": "2026-12-03",
       "time": null,
       "status": "scheduled",
@@ -1292,7 +1302,7 @@
     },
     {
       "id": "max-2026-12-05-010-vash-kotenok-p2",
-      "title": "[Коты, кошки и котята] Кормление",
+      "title": "[Коты, кошки и котята] Ваш котенок: продолжение",
       "when": "2026-12-05",
       "time": null,
       "status": "scheduled",
