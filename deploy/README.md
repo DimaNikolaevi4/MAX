@@ -19,6 +19,22 @@
 `/0s3/blogger-data/<slug>_token.txt` (вне webroot). **Не добавлять токены и
 `ftp-creds.json` в git.**
 
+## na100 на хостинге (этап 1)
+
+Решением владельца 28.11.2026 утренний na100 переносится на хостинг полностью,
+включая генерацию текста через Cloudflare Workers AI (`@cf/openai/gpt-oss-120b`).
+Прежнее решение 11.11 «LLM в пайплайн не подключать» отменено.
+
+Уже развёрнуто на хостинге:
+
+- `na100_config.php` — конфиг; секреты читаются из `/0s3/blogger-data/`
+  (`cloudflare-token.txt`, `cloudflare-account.txt`), в репозитории их нет;
+- `na100_validator.php` — проверка текста по `AGENTS.md §0` (подмножество
+  `shared/format_core.py`); CLI: `php na100_validator.php <файл>`.
+
+Следующие этапы: `na100_prepare.php` (06:30, RSS + ИИ + обложка GD) и
+`na100_publish.php` (07:30, публикация и state), затем cron и зеркало в GitHub.
+
 ## Слоты
 
 Единственная таблица слотов — `docs/scheduled-tasks.md`. Хостинг-кроны:
